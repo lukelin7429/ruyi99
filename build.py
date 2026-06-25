@@ -449,7 +449,8 @@ def build_news(o):
                  '<div class="cap">%s</div></div>'%(" on" if i==0 else "",u("/"+src),esc(cap)))
     dots=''.join('<button class="dot%s" data-i="%d" aria-label="第%d張"></button>'
                  %(" on" if i==0 else "",i,i+1) for i in range(len(NEWS_PHOTOS)))
-    carousel=('<div class="carousel rvl" id="newsCar"><div class="slides">%s</div>'
+    carousel=('<div class="section-title rvl"><h2>精舍剪影</h2><div class="rule"></div></div>'
+              '<div class="carousel rvl" id="newsCar"><div class="slides">%s</div>'
               '<button class="car-nav prev" data-d="-1" aria-label="上一張">‹</button>'
               '<button class="car-nav next" data-d="1" aria-label="下一張">›</button>'
               '<div class="dots">%s</div></div>'%(slides,dots))
@@ -467,7 +468,7 @@ def build_news(o):
     sched=('<div class="section-title rvl"><h2>法會時間表</h2><div class="rule"></div></div>'
            '<p class="sched-note rvl">歡迎隨喜參加，共沐法喜；實際時間以精舍最新公告為準。</p>'
            '<div class="sched rvl">%s</div>'%cards)
-    body=hdr+'<main class="tintbg"><div class="wrap">'+carousel+sched+'</div></main>'
+    body=hdr+'<main class="tintbg"><div class="wrap">'+sched+carousel+'</div></main>'
     return page(nm,"/news/",body,nm+" · 如意精舍")
 
 # ---------------- generic interior page ----------------
