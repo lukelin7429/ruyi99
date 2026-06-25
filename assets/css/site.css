@@ -244,25 +244,41 @@ main{padding:48px 0 70px}
 .cc-meta .arw{transition:transform .25s}
 .campcard:hover .cc-meta .arw{transform:translateX(5px)}
 
-/* ---------- 法師簡介 兩位法師並列 ---------- */
-.masters{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:780px;margin:8px auto 0}
-.master{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
-  box-shadow:0 6px 24px rgba(40,30,35,.09);
-  transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s}
-.master:hover{transform:translateY(-7px);box-shadow:0 26px 56px rgba(124,41,66,.18)}
-.master .m-photo{aspect-ratio:4/5;background-size:cover;background-position:center 20%}
-.master .m-name{padding:18px 14px;text-align:center;font-size:23px;font-weight:700;
-  letter-spacing:.08em;color:var(--ink);position:relative}
-.master .m-name::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:46px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--plum),var(--gold))}
-.m-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:34px auto 0}
+/* ---------- 法師簡介 兩位法師並列（精緻版） ---------- */
+.masters{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:800px;margin:8px auto 0}
+.master{background:#fff;border-radius:22px;overflow:hidden;position:relative;
+  box-shadow:0 10px 34px rgba(40,30,35,.13);
+  transition:transform .32s cubic-bezier(.22,.61,.36,1),box-shadow .32s}
+.master:hover{transform:translateY(-9px);box-shadow:0 34px 70px rgba(124,41,66,.24)}
+.master .m-photo{aspect-ratio:3/4;overflow:hidden;position:relative;background:#1a1d24}
+.master .m-photo .bg{position:absolute;inset:0;background-size:cover;background-position:center 18%;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.master:hover .m-photo .bg{transform:scale(1.06)}
+.master .m-photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,16,18,0) 60%,rgba(40,20,30,.5) 100%)}
+.m-plate{position:relative;text-align:center;color:#fff;padding:34px 18px 26px;
+  background:linear-gradient(150deg,var(--plum-deep) 0%,#3a1f2c 100%)}
+.m-lotus{position:absolute;top:-30px;left:50%;transform:translateX(-50%);
+  width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;
+  border:2px solid var(--gold);box-shadow:0 8px 22px rgba(124,41,66,.35);
+  color:var(--plum);transition:transform .4s,box-shadow .3s}
+.m-lotus svg{width:34px;height:auto}
+.master:hover .m-lotus{transform:translateX(-50%) translateY(-4px) rotate(-6deg);
+  box-shadow:0 12px 30px rgba(177,137,63,.6)}
+.m-name{font-size:25px;font-weight:700;letter-spacing:.12em}
+.m-en{font-family:var(--serif);font-size:13px;letter-spacing:.22em;color:var(--gold);
+  margin-top:5px;font-weight:600}
+.m-rule{width:40px;height:2px;background:var(--gold);opacity:.7;margin:13px auto}
+.m-role{font-size:13.5px;color:rgba(255,255,255,.78);letter-spacing:.1em}
+.m-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:40px auto 0}
 .m-gallery figure{margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);
   aspect-ratio:3/2;transition:transform .3s}
 .m-gallery figure:hover{transform:translateY(-4px)}
 .m-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .m-gallery figure:hover img{transform:scale(1.06)}
-@media(max-width:560px){.masters{grid-template-columns:1fr 1fr;gap:14px}
-  .master .m-name{font-size:18px;padding:12px 8px}}
+@media(max-width:560px){.masters{gap:14px}
+  .m-name{font-size:19px}.m-lotus{width:50px;height:50px;top:-25px}.m-lotus svg{width:28px}
+  .m-plate{padding:28px 10px 20px}}
 
 /* ---------- 法會 photo carousel ---------- */
 .carousel{position:relative;border-radius:20px;overflow:hidden;max-width:var(--maxw);

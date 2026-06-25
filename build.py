@@ -510,10 +510,25 @@ def build_bhikkhuni(o):
             if b["t"]=="img": gallery.append(b["src"])
             elif b["t"] in ("h","p","li") and b.get("text","")!=nm: bio.append(b["text"])
         i+=1
+    EN={"陽慧法師":"Ven. Master Yang-hui","達慧法師":"Ven. Master Da-hui"}
+    LOTUS=('<svg viewBox="0 0 48 32" fill="currentColor" aria-hidden="true">'
+           '<path d="M24 3 C20 11 20 20 24 27 C28 20 28 11 24 3Z"/>'
+           '<path d="M24 27 C18 23 14 15 13 8 C19 11 23 19 24 27Z"/>'
+           '<path d="M24 27 C30 23 34 15 35 8 C29 11 25 19 24 27Z"/>'
+           '<path d="M24 28 C16 27 8 23 4 17 C12 16 20 20 24 28Z"/>'
+           '<path d="M24 28 C32 27 40 23 44 17 C36 16 28 20 24 28Z"/></svg>')
     pcards=""
-    for src,name in portraits:
-        pcards+=('<div class="master rvl"><div class="m-photo" style="background-image:url(%s)"></div>'
-                 '<div class="m-name">%s</div></div>'%(u("/"+src),esc(name)))
+    for i,(src,name) in enumerate(portraits):
+        en=EN.get(name,"")
+        pcards+=('<div class="master rvl" style="transition-delay:%dms">'
+                 '<div class="m-photo"><div class="bg" style="background-image:url(%s)"></div></div>'
+                 '<div class="m-plate"><span class="m-lotus">%s</span>'
+                 '<div class="m-name">%s</div>'
+                 '%s'
+                 '<div class="m-rule"></div>'
+                 '<div class="m-role">如意精舍 · 共同創辦</div></div></div>'
+                 %(min(i*90,300),u("/"+src),LOTUS,esc(name),
+                   '<div class="m-en">%s</div>'%esc(en) if en else '',))
     hdr=band(crumb_html(o),"法師簡介 · THE MASTERS",nm,
              "兩位法師生長於信義鄉風櫃斗，出家後回鄉弘法、深耕菩提。")
     body=hdr+'<main class="tintbg"><div class="wrap">'
