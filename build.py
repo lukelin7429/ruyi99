@@ -11,6 +11,10 @@ try:
 except Exception:
     VTITLES={}
 content=SITE["content"]; omap=SITE["omap"]; children=SITE["children"]
+try:
+    STUDY_GROUPS=json.load(open(os.path.join(ROOT,"data","study_group.json")))
+except Exception:
+    STUDY_GROUPS=[]
 out2path={}
 for p,o in omap.items():
     if o=="/":
@@ -495,6 +499,47 @@ def build_news(o):
     body=hdr+'<main class="tintbg"><div class="wrap">'+sched+carousel+'</div></main>'
     return page(nm,"/news/",body,nm+" · 如意精舍")
 
+# ---------------- 讀書會 (study-group) ----------------
+SG_ACCENT={"戒律":("#7c2942","#b5446a"),"佛法基礎":("#2f5d52","#43806f"),
+           "淨土":("#274a78","#3f6aa5"),"唯識":("#9a6a1e","#c29a45"),
+           "般若":("#5a3d7a","#7d5aa6")}
+def build_study_group(o):
+    nm=name_of(o)
+    hdr=band(crumb_html(o),"讀書會 · STUDY GROUP",nm,
+             "多聞薰習、深入經藏。利用現代科技，為居家修行者提供一個研讀佛法的清淨空間。")
+    # intro 三欄
+    intro=('<div class="sg-intro rvl">'
+           '<div class="sgi"><h3>核心宗旨</h3>'
+           '<p>打破空間的藩籬。無論身在何處，只要有網路，就能與同修一起深入義理，'
+           '將佛法智慧真正內化為生活的力量。</p></div>'
+           '<div class="sgi"><h3>特色</h3><ul>'
+           '<li>系統導讀 · 深度剖析經論</li><li>雲端共修 · 打破時空限制</li>'
+           '<li>互動討論 · 集思廣益共學</li></ul></div>'
+           '<div class="sgi"><h3>共修時間</h3>'
+           '<p class="sg-time">週一、二、三　20:30 – 21:30</p>'
+           '<p>加入資格：不分背景，對研讀佛法、探索智慧有興趣之人皆可參加，'
+           '歡迎每一顆精進求法的心。</p></div></div>')
+    # 法門分類卡片
+    secs=""
+    for grp in STUDY_GROUPS:
+        cat=grp["cat"]; c1,c2=SG_ACCENT.get(cat,("#7c2942","#b5446a"))
+        cards=""
+        for j,card in enumerate(grp["cards"]):
+            out=card["out"]; n=len(children.get(out,[]))
+            meta=('%d 篇講次 ' % n) if n else ''
+            cards+=('<a class="sgcard rvl" style="transition-delay:%dms" href="%s">'
+                    '<div class="sgcard-head"><span>%s</span></div>'
+                    '<div class="sgcard-body"><p>%s</p>'
+                    '<div class="sgcard-foot"><span class="sgcard-n">%s</span>'
+                    '<span class="sgcard-more">深入研讀 <span class="arw">→</span></span></div>'
+                    '</div></a>'%(min(j*60,360),u(out),esc(card["name"]),esc(card["desc"]),meta))
+        secs+=('<section class="sgcat rvl" style="--ac:%s;--ac2:%s">'
+               '<div class="sgcat-head"><span class="sgcat-zh">%s</span>'
+               '<span class="sgcat-line"></span><span class="sgcat-en">法門</span></div>'
+               '<div class="sgcards">%s</div></section>'%(c1,c2,esc(cat),cards))
+    body=hdr+'<main class="tintbg"><div class="wrap">'+intro+secs+'</div></main>'
+    return page(nm,"/study-group/",body,nm+" · 如意精舍")
+
 # ---------------- 法師簡介 (bhikkhuni) ----------------
 def build_bhikkhuni(o):
     d=content[out2path[o]]; nm=d["name"]; blocks=d["blocks"]
@@ -577,6 +622,8 @@ if __name__=="__main__":
             write(o,build_column(o))
         elif o.startswith("/column/"):
             write(o,build_column_article(o))
+        elif o=="/study-group/":
+            write(o,build_study_group(o))
         elif o=="/bhikkhuni/":
             write(o,build_bhikkhuni(o))
         elif o=="/news/":
