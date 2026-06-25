@@ -201,11 +201,23 @@ def article_excerpt(child_o):
                 return (t[:64]+"…") if len(t)>64 else t
     return ""
 
-def article_card(child_o):
+ORBS='<div class="band-orbs"><span></span><span></span><span></span><span></span><span></span></div>'
+def band(crumb, eyebrow, title, sub="", byline="", slim=False):
+    return ('<section class="band%s">%s<div class="band-inner">%s'
+            '<div class="eyebrow">%s</div><h1>%s</h1>%s%s</div></section>'
+            %(" slim" if slim else "", ORBS, crumb, esc(eyebrow), esc(title),
+              '<p class="sub">%s</p>'%esc(sub) if sub else '',
+              '<p class="byline">%s</p>'%esc(byline) if byline else ''))
+
+def stagger(i):  # inline reveal delay for staggered entrance
+    return ' style="transition-delay:%dms"'%min(i*55,520)
+
+def article_card(child_o, i=0):
     ttl=article_full_title(child_o); ex=article_excerpt(child_o)
-    return ('<a class="acard rvl" href="%s"><h3>%s</h3>%s'
-            '<span class="more">閱讀全文 →</span></a>'
-            %(u(child_o),esc(ttl),('<p>%s</p>'%esc(ex)) if ex else ''))
+    idx='<div class="idx">第 %02d 篇</div>'%(i+1)
+    return ('<a class="acard rvl"%s href="%s">%s<h3>%s</h3>%s'
+            '<span class="more">閱讀全文 <span class="arw">→</span></span></a>'
+            %(stagger(i),u(child_o),idx,esc(ttl),('<p>%s</p>'%esc(ex)) if ex else ''))
 
 def author_teaser(author_o):
     arts=children.get(author_o,[])
@@ -213,11 +225,13 @@ def author_teaser(author_o):
     # author page lists newest first; take first article's title
     return article_full_title(_column_order(author_o)[0]) if arts else ""
 
-def author_card(author_o):
+def author_card(author_o, i=0):
     nm=name_of(author_o); arts=children.get(author_o,[]); teaser=author_teaser(author_o)
-    return ('<a class="card authorcard" href="%s"><div class="k">專欄作者</div>'
+    seal=esc(nm[0]) if nm else "如"
+    return ('<a class="card authorcard rvl"%s href="%s"><div class="seal-lg">%s</div>'
             '<h3>%s</h3>%s<div class="meta">共 %d 篇 · 前往 →</div></a>'
-            %(u(author_o),esc(nm),('<p>最新：%s</p>'%esc(teaser)) if teaser else '',len(arts)))
+            %(stagger(i),u(author_o),seal,esc(nm),
+              ('<p>最新：%s</p>'%esc(teaser)) if teaser else '',len(arts)))
 
 def _column_order(o):
     """Order child articles by the author's manual TOC sequence, then leftovers."""
@@ -235,25 +249,28 @@ def _column_order(o):
     return ordered
 
 def build_column(o):
-    """專欄 listing pages: drop the duplicated plain-text title TOC, show clickable cards."""
+    """專欄 listing pages: themed band header + dynamic clickable cards."""
     nm=name_of(o)
     kids=children.get(o,[])
     authors=[k for k in kids if children.get(k)]
-    body=['<div class="pagehead"><div class="wrap">%s<h1>%s</h1>'
-          '<p class="lead">%s</p></div></div><main><div class="wrap">'
-          %(crumb_html(o),esc(nm),
-            "古典智慧對照現代生活的佛法心得文章。" if authors else "")]
     if authors:  # /column/ overview → author cards
-        body.append('<div class="cards rvl">'+''.join(author_card(k) for k in sorted(authors,key=natkey))+'</div>')
+        hdr=band(crumb_html(o),"如意專欄 · COLUMN",nm,
+                 "古典智慧對照現代生活，三位作者以佛法觀照當代議題、書寫心得。")
+        cards='<div class="cards rvl">'+''.join(
+            author_card(k,i) for i,k in enumerate(sorted(authors,key=natkey)))+'</div>'
     else:        # author page → article cards in TOC order
         arts=_column_order(o)
-        body.append('<div class="acards rvl">'+''.join(article_card(k) for k in arts)+'</div>')
-    body.append('</div></main>')
-    return page(nm,"/column/",''.join(body),nm+" · 如意精舍")
+        hdr=band(crumb_html(o),"專欄作者 · ESSAYS",nm,
+                 "%s 的佛法心得文章，共 %d 篇。"%(nm,len(arts)))
+        cards='<div class="acards rvl">'+''.join(
+            article_card(k,i) for i,k in enumerate(arts))+'</div>'
+    body=hdr+'<main class="tintbg"><div class="wrap">'+cards+'</div></main>'
+    return page(nm,"/column/",body,nm+" · 如意精舍")
 
 def build_column_article(o):
-    """Single 專欄 article: full title as H1, byline, clean body (no duplicate titles)."""
+    """Single 專欄 article: themed slim band, full title, byline, clean body."""
     d=content[out2path[o]]; full=article_full_title(o); byline=""
+    author=name_of("/"+"/".join(o.strip("/").split("/")[:2])+"/")  # /column/<author>
     body_blocks=[]
     for b in d["blocks"]:
         if b["t"] in ("h","p","li"):
@@ -262,11 +279,9 @@ def build_column_article(o):
             if t.startswith("文/") or t.replace(" ","") in BYLINES:
                 byline=byline or t; continue
         body_blocks.append(b)
-    head=('<div class="pagehead"><div class="wrap">%s<h1>%s</h1>%s</div></div>'
-          %(crumb_html(o),esc(full),
-            '<p class="lead">%s</p>'%esc(byline) if byline else ''))
+    hdr=band(crumb_html(o),"如意專欄",full,byline=byline or ("文／"+author),slim=True)
     inner=render_blocks(body_blocks,full)
-    return page(full,"/column/",head+'<main><div class="wrap">'+inner+'</div></main>',full+" · 如意精舍")
+    return page(full,"/column/",hdr+'<main><div class="wrap">'+inner+'</div></main>',full+" · 如意精舍")
 
 # ---------------- HOME (bespoke) ----------------
 HERO_ART=('<svg class="hero-art" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" '
