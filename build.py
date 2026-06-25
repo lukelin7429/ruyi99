@@ -567,6 +567,22 @@ def build_study_group(o):
     body=hdr+'<main class="tintbg"><div class="wrap">'+intro+secs+'</div></main>'
     return page(nm,"/study-group/",body,nm+" · 如意精舍")
 
+def build_study_series(o):
+    """經典頁：去除作者手打的文字目錄，只留章節影音導覽。"""
+    nm=name_of(o); cnt=len(children.get(o,[]))
+    hdr=band(crumb_html(o),"讀書會 · 經典導讀",nm,
+             "共 %d 個講次，點選即可當頁觀看影音。"%cnt)
+    body=hdr+'<main class="tintbg"><div class="wrap">'+child_section(o)+'</div></main>'
+    return page(nm,"/study-group/",body,nm+" · 如意精舍")
+
+def build_study_chapter(o):
+    """講次頁：band header＋影片（去除與標題重複的文字）。"""
+    d=content[out2path[o]]; nm=d["name"]
+    hdr=band(crumb_html(o),"讀書會 · 講次",nm,slim=True)
+    rest=[b for b in d["blocks"] if not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
+    inner=render_blocks(rest,nm)
+    return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
+
 # ---------------- 法師簡介 (bhikkhuni) ----------------
 def build_bhikkhuni(o):
     d=content[out2path[o]]; nm=d["name"]; blocks=d["blocks"]
@@ -651,6 +667,10 @@ if __name__=="__main__":
             write(o,build_column_article(o))
         elif o=="/study-group/":
             write(o,build_study_group(o))
+        elif o.startswith("/study-group/") and children.get(o):
+            write(o,build_study_series(o))
+        elif o.startswith("/study-group/"):
+            write(o,build_study_chapter(o))
         elif o=="/bhikkhuni/":
             write(o,build_bhikkhuni(o))
         elif o=="/news/":
