@@ -221,11 +221,14 @@ def stagger(i):  # inline reveal delay for staggered entrance
     return ' style="transition-delay:%dms"'%min(i*55,520)
 
 def photo_carousel(items):
-    """items: list of (rel_src, caption). Returns a carousel block."""
+    """items: list of (rel_src, caption). Full image shown (contain) over a blurred
+    backdrop so subjects (e.g. Buddha images) are never cropped."""
     slides=""
     for i,(src,cap) in enumerate(items):
-        slides+=('<div class="slide%s" style="background-image:url(%s)">%s</div>'
-                 %(" on" if i==0 else "",u("/"+src),
+        url=u("/"+src)
+        slides+=('<div class="slide%s"><div class="slide-bg" style="background-image:url(%s)"></div>'
+                 '<div class="slide-fg" style="background-image:url(%s)"></div>%s</div>'
+                 %(" on" if i==0 else "",url,url,
                    '<div class="cap">%s</div>'%esc(cap) if cap else ''))
     dots=''.join('<button class="dot%s" data-i="%d" aria-label="第%d張"></button>'
                  %(" on" if i==0 else "",i,i+1) for i in range(len(items)))
@@ -368,18 +371,28 @@ def build_home():
           '帶領大眾聞思修、深植菩提種子。</p></div></div></section>'
           %u("/assets/img/hero-fengguidou.jpg")]
     body.append('<main><div class="prose rvl">'+''.join('<p>%s</p>'%esc(t) for t in intro)+'</div>')
-    # section cards
-    secs=[("法師簡介","/bhikkhuni/","認識回鄉弘法的兩位法師"),
-          ("讀書會","/study-group/","線上研讀經論，聞思修並進"),
-          ("法會資訊","/news/","念佛、浴佛與每月定期法會"),
-          ("影音","/videos/","佛法常識與淨土講座影音"),
-          ("專欄","/column/","三位作者的佛法心得文章"),
-          ("夏令營","/camps/","兒童心靈環保成長營歷年紀錄")]
-    cards=''.join('<a class="card" href="%s"><div class="k">Ru-Yi</div><h3>%s</h3>'
-                  '<p>%s</p><div class="meta">前往 →</div></a>'%(u(o),esc(n),esc(desc))
-                  for n,o,desc in secs)
+    # 度眾事業 — 6 張平衡(3欄)、有圖示與配色、有動感的卡片
+    IC={
+     "masters":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>',
+     "book":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.3 4.4 8 4 5.5 4.2 4.7 4.3 4 5 4 5.8V18c0 .9.8 1.5 1.6 1.4C8 19.2 10.4 19.6 12 20.7"/><path d="M12 5.5C13.7 4.4 16 4 18.5 4.2c.8.1 1.5.8 1.5 1.6V18c0 .9-.8 1.5-1.6 1.4C16 19.2 13.6 19.6 12 20.7"/><path d="M12 5.5v15.2"/></svg>',
+     "cal":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg>',
+     "play":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.3 9.2l4.6 2.8-4.6 2.8z" fill="currentColor" stroke="none"/></svg>',
+     "pen":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 5.5l3 3M4 20l1-4 11-11 3 3-11 11-4 1z"/></svg>',
+     "sun":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2.5M12 18.5V21M4.2 4.2l1.8 1.8M18 18l1.8 1.8M3 12h2.5M18.5 12H21M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>',
+    }
+    secs=[("法師簡介","/bhikkhuni/","認識回鄉弘法的兩位法師","masters","#7c2942","#b5446a"),
+          ("讀書會","/study-group/","線上研讀經論，聞思修並進","book","#2f5d52","#43806f"),
+          ("法會資訊","/news/","念佛、浴佛與每月定期法會","cal","#274a78","#3f6aa5"),
+          ("影音","/videos/","佛法常識與淨土講座影音","play","#9a6a1e","#c29a45"),
+          ("專欄","/column/","三位作者的佛法心得文章","pen","#5a3d7a","#7d5aa6"),
+          ("夏令營","/camps/","兒童心靈環保成長營歷年紀錄","sun","#2f7d77","#3f9d95")]
+    cards=''.join('<a class="hcard rvl" style="--ac:%s;--ac2:%s;transition-delay:%dms" href="%s">'
+                  '<div class="hcard-ic">%s</div><h3>%s</h3><p>%s</p>'
+                  '<span class="hcard-go">前往 <span class="arw">→</span></span></a>'
+                  %(c1,c2,min(i*70,360),u(o),IC[ic],esc(n),esc(desc))
+                  for i,(n,o,desc,ic,c1,c2) in enumerate(secs))
     body.append('<div class="section-title rvl"><h2>度眾事業</h2><div class="rule"></div></div>')
-    body.append('<div class="cards rvl">'+cards+'</div>')
+    body.append('<div class="hcards rvl">'+cards+'</div>')
     # 精選影音 — 3 支放大卡片（夏令營＋佛法影音＋淨土）
     FEATURED=["xtWmje_dBEQ","ft00NuF51Fg","TRRzNYXtHCk"]
     body.append('<div class="section-title rvl"><h2>精選影音</h2><div class="rule"></div></div>')
@@ -493,18 +506,9 @@ def build_news(o):
     nm=name_of(o)
     hdr=band(crumb_html(o),"法會資訊 · DHARMA EVENTS",nm,
              "念佛、浴佛與兒童學佛營——歡迎隨喜參加，共沐法喜。")
-    # carousel
-    slides=""
-    for i,(src,cap) in enumerate(NEWS_PHOTOS):
-        slides+=('<div class="slide%s" style="background-image:url(%s)">'
-                 '<div class="cap">%s</div></div>'%(" on" if i==0 else "",u("/"+src),esc(cap)))
-    dots=''.join('<button class="dot%s" data-i="%d" aria-label="第%d張"></button>'
-                 %(" on" if i==0 else "",i,i+1) for i in range(len(NEWS_PHOTOS)))
+    # carousel (no-crop)
     carousel=('<div class="section-title rvl"><h2>精舍剪影</h2><div class="rule"></div></div>'
-              '<div class="carousel rvl" id="newsCar"><div class="slides">%s</div>'
-              '<button class="car-nav prev" data-d="-1" aria-label="上一張">‹</button>'
-              '<button class="car-nav next" data-d="1" aria-label="下一張">›</button>'
-              '<div class="dots">%s</div></div>'%(slides,dots))
+              +photo_carousel([(src,cap) for src,cap in NEWS_PHOTOS]))
     # schedule
     cards=""
     for solar,sub,name,note,typ in NEWS_EVENTS:
