@@ -66,6 +66,8 @@ a:hover{color:var(--plum-deep)}
 .hero-photo::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(20,16,18,.12) 0%,rgba(20,16,18,0) 30%,rgba(20,16,18,.62) 100%)}
 .hero-designed{background:#2b2030}
+.hero-banner{background-size:cover;background-position:center 44%;background-color:#2b2030}
+.hero-banner::after{background:linear-gradient(180deg,rgba(18,14,16,.22) 0%,rgba(18,14,16,0) 30%,rgba(18,14,16,.74) 100%)}
 .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero-designed::after{background:linear-gradient(180deg,rgba(20,16,18,.1) 0%,rgba(20,16,18,0) 45%,rgba(20,16,18,.5) 100%)}
 .gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));max-width:var(--maxw);margin:6px auto 0}

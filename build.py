@@ -360,11 +360,13 @@ def build_home():
     intro=[b["text"] for b in d["blocks"] if b["t"] in ("h","p") and len(b.get("text",""))>30][:4]
     vids=[b["id"] for b in d["blocks"] if b["t"]=="yt"]
     _=u  # base-aware url helper
-    body=['<section class="hero"><div class="hero-photo hero-designed">%s<div class="hero-text rvl">'
+    body=['<section class="hero"><div class="hero-photo hero-banner" style="background-image:url(%s)">'
+          '<div class="hero-text rvl">'
           '<div class="eyebrow">南投 · 信義 · 風櫃斗</div>'
           '<h1>如意精舍</h1>'
           '<p>海拔約 800 公尺的山上道場，以弘揚正知正見的佛法為理念，'
-          '帶領大眾聞思修、深植菩提種子。</p></div></div></section>'%HERO_ART]
+          '帶領大眾聞思修、深植菩提種子。</p></div></div></section>'
+          %u("/assets/img/hero-fengguidou.jpg")]
     body.append('<main><div class="prose rvl">'+''.join('<p>%s</p>'%esc(t) for t in intro)+'</div>')
     # section cards
     secs=[("法師簡介","/bhikkhuni/","認識回鄉弘法的兩位法師"),
