@@ -166,7 +166,42 @@ main{padding:48px 0 70px}
 .acard .more .arw{transition:transform .25s}
 .acard:hover .more .arw{transform:translateX(5px)}
 
-/* author cards (專欄首頁) */
+/* author panels (專欄首頁) — bold, colorful, content-rich */
+.apanels{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  max-width:var(--maxw);margin:8px auto 0}
+.apanel{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:22px;overflow:hidden;box-shadow:0 8px 30px rgba(40,30,35,.10);
+  transition:transform .32s cubic-bezier(.22,.61,.36,1),box-shadow .32s}
+.apanel:hover{transform:translateY(-8px);box-shadow:0 30px 64px rgba(40,30,35,.20)}
+.ap-top{display:flex;align-items:center;gap:18px;padding:30px 28px 28px;position:relative;
+  background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;overflow:hidden}
+.ap-top::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;
+  border-radius:50%;background:rgba(255,255,255,.10)}
+.ap-seal{width:66px;height:66px;border-radius:18px;flex:0 0 auto;z-index:1;
+  background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:32px;
+  font-weight:700;border:1.5px solid rgba(255,255,255,.45);transition:transform .3s}
+.apanel:hover .ap-seal{transform:rotate(-5deg) scale(1.06)}
+.ap-name{font-size:25px;font-weight:700;letter-spacing:.05em;z-index:1}
+.ap-role{font-size:14px;opacity:.92;margin-top:4px;z-index:1}
+.ap-body{padding:18px 26px 6px;flex:1}
+.ap-label{font-family:var(--serif);font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ac2);font-weight:700;margin-bottom:6px}
+.ap-item{display:flex;gap:11px;align-items:flex-start;padding:11px 0;
+  border-bottom:1px dashed var(--line);color:var(--ink-soft);font-size:16px;line-height:1.5;
+  transition:color .18s,transform .18s}
+.ap-item:last-child{border-bottom:0}
+.ap-item:hover{color:var(--ac2);transform:translateX(4px)}
+.ap-item .ap-dot{width:7px;height:7px;border-radius:50%;background:var(--ac2);
+  margin-top:8px;flex:0 0 auto}
+.ap-cta{margin:10px 26px 26px;text-align:center;color:#fff;font-weight:700;font-size:15.5px;
+  background:linear-gradient(135deg,var(--ac),var(--ac2));padding:14px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;gap:8px;transition:filter .2s,box-shadow .2s;
+  box-shadow:0 10px 22px rgba(0,0,0,.12)}
+.ap-cta:hover{color:#fff;filter:brightness(1.08);box-shadow:0 16px 30px rgba(0,0,0,.2)}
+.ap-cta .arw{transition:transform .25s}
+.ap-cta:hover .arw{transform:translateX(5px)}
+
+/* author cards (legacy small) */
 .authorcard{display:flex;flex-direction:column;align-items:flex-start;padding:30px 28px 26px}
 .authorcard .seal-lg{width:66px;height:66px;border-radius:18px;flex:0 0 auto;
   background:linear-gradient(135deg,var(--plum),var(--plum-deep));color:#fff;

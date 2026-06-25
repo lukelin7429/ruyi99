@@ -225,13 +225,25 @@ def author_teaser(author_o):
     # author page lists newest first; take first article's title
     return article_full_title(_column_order(author_o)[0]) if arts else ""
 
-def author_card(author_o, i=0):
-    nm=name_of(author_o); arts=children.get(author_o,[]); teaser=author_teaser(author_o)
-    seal=esc(nm[0]) if nm else "如"
-    return ('<a class="card authorcard rvl"%s href="%s"><div class="seal-lg">%s</div>'
-            '<h3>%s</h3>%s<div class="meta">共 %d 篇 · 前往 →</div></a>'
-            %(stagger(i),u(author_o),seal,esc(nm),
-              ('<p>最新：%s</p>'%esc(teaser)) if teaser else '',len(arts)))
+AUTHOR_PALETTES=[("#7c2942","#b5446a","#f6ebee"),   # 梅 plum
+                 ("#2f5d52","#43806f","#e8f1ee"),   # 松 pine
+                 ("#9a6a1e","#c29a45","#f7efe0")]    # 金 gold
+def author_panel(author_o, i=0):
+    nm=name_of(author_o); seal=esc(nm[0]) if nm else "如"
+    arts=_column_order(author_o); n=len(arts)
+    c1,c2,cs=AUTHOR_PALETTES[i%len(AUTHOR_PALETTES)]
+    recent=""
+    for k in arts[:3]:
+        t=article_full_title(k); t=(t[:24]+"…") if len(t)>24 else t
+        recent+=('<a class="ap-item" href="%s"><span class="ap-dot"></span>'
+                 '<span>%s</span></a>'%(u(k),esc(t)))
+    delay=min(i*70,520)
+    return ('<div class="apanel rvl" style="transition-delay:%dms;--ac:%s;--ac2:%s;--acs:%s">'
+            '<div class="ap-top"><div class="ap-seal">%s</div>'
+            '<div><div class="ap-name">%s</div><div class="ap-role">專欄作者 · 共 %d 篇</div></div></div>'
+            '<div class="ap-body"><div class="ap-label">近期文章</div>%s</div>'
+            '<a class="ap-cta" href="%s">查看全部 %d 篇 <span class="arw">→</span></a></div>'
+            %(delay,c1,c2,cs,seal,esc(nm),n,recent,u(author_o),n))
 
 def _column_order(o):
     """Order child articles by the author's manual TOC sequence, then leftovers."""
@@ -256,8 +268,10 @@ def build_column(o):
     if authors:  # /column/ overview → author cards
         hdr=band(crumb_html(o),"如意專欄 · COLUMN",nm,
                  "古典智慧對照現代生活，三位作者以佛法觀照當代議題、書寫心得。")
-        cards='<div class="cards rvl">'+''.join(
-            author_card(k,i) for i,k in enumerate(sorted(authors,key=natkey)))+'</div>'
+        # order authors by article count desc (most prolific first), capped to palette
+        auth=sorted(authors,key=lambda k:-len(children.get(k,[])))
+        cards='<div class="apanels rvl">'+''.join(
+            author_panel(k,i) for i,k in enumerate(auth))+'</div>'
     else:        # author page → article cards in TOC order
         arts=_column_order(o)
         hdr=band(crumb_html(o),"專欄作者 · ESSAYS",nm,
