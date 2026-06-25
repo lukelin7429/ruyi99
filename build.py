@@ -575,8 +575,10 @@ def render_audio(o):
     """錄音共修：Drive 音檔列表，點擊當頁內嵌播放（不彈出 Drive）。"""
     a=AUDIO.get(o)
     if not a: return ""
-    items=""
+    items=""; seen=set()
     for it in a["items"]:
+        if it.get("num") in seen: continue   # 去除重複集數
+        seen.add(it.get("num"))
         label="第 %s 集" % it["num"] if it.get("num") else "錄音"
         date=it.get("date","")
         items+=('<button class="aud-item" data-drive="%s">'
@@ -586,7 +588,7 @@ def render_audio(o):
                 '<span class="aud-go">收聽</span></button>'%(it["id"],esc(label),esc(date)))
     return ('<div class="section-title rvl"><h2>%s</h2><div class="rule"></div></div>'
             '<p class="aud-note rvl">點選任一集即可在本頁收聽錄音（共 %d 集）。</p>'
-            '<div class="audlist rvl">%s</div>'%(esc(a.get("title","錄音共修")),len(a["items"]),items))
+            '<div class="audlist rvl">%s</div>'%(esc(a.get("title","錄音共修")),len(seen),items))
 
 def build_study_series(o):
     """經典頁：去除作者手打的文字目錄，只留章節影音導覽。"""
@@ -600,7 +602,9 @@ def build_study_chapter(o):
     """講次頁：band header＋影片／錄音（去除與標題重複的文字）。"""
     d=content[out2path[o]]; nm=d["name"]
     hdr=band(crumb_html(o),"讀書會 · 經典",nm,slim=True)
-    rest=[b for b in d["blocks"] if not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
+    # 去除與標題重複的文字，以及裝飾用圖片(如意精舍紅印)
+    rest=[b for b in d["blocks"] if b["t"]!="img"
+          and not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
     inner=render_blocks(rest,nm)
     return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+render_audio(o)+'</div></main>',nm+" · 如意精舍")
 
