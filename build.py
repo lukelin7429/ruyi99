@@ -363,6 +363,49 @@ def build_home():
     return page("如意精舍 · 南投信義風櫃斗山上的佛教道場","/",''.join(body),
                 "如意精舍位於南投縣信義鄉風櫃斗，海拔約800公尺。兩位法師2017年回鄉弘法，弘揚正知正見的佛法。")
 
+# ---------------- 影音 (videos) ----------------
+VIDEO_PALETTES=[("#7c2942","#b5446a","#f6ebee"),    # 梅 plum — 佛法常識
+                ("#274a78","#3f6aa5","#e8eef6")]    # 琉璃 lapis — 淨土
+def video_thumb_mini(ytid):
+    return ('<button class="vt" data-yt="%s" aria-label="播放影片" '
+            'style="background-image:url(https://i.ytimg.com/vi/%s/hqdefault.jpg)">'
+            '<span class="pl"><i></i></span></button>'%(ytid,ytid))
+
+def video_panel(cat_o, desc, i=0):
+    d=content[out2path[cat_o]]; nm=d["name"]
+    yts=[b["id"] for b in d["blocks"] if b["t"]=="yt"]; n=len(yts)
+    c1,c2,cs=VIDEO_PALETTES[i%len(VIDEO_PALETTES)]
+    thumbs=''.join(video_thumb_mini(v) for v in yts[:3])
+    delay=min(i*70,520)
+    return ('<div class="apanel vpanel rvl" style="transition-delay:%dms;--ac:%s;--ac2:%s;--acs:%s">'
+            '<div class="ap-top"><div class="ap-id"><div class="ap-name">%s</div>'
+            '<div class="ap-role">影音分類</div></div>'
+            '<div class="ap-count"><b>%d</b><span>部影片</span></div></div>'
+            '<div class="ap-body">%s<div class="vp-thumbs">%s</div></div>'
+            '<a class="ap-cta" href="%s">觀看全部影片 <span class="arw">→</span></a></div>'
+            %(delay,c1,c2,cs,esc(nm),n,
+              '<p class="vp-desc">%s</p>'%esc(desc) if desc else '',thumbs,u(cat_o)))
+
+def build_videos(o):
+    """影音 index: themed band + colorful video-category panels."""
+    nm=name_of(o); d=content[out2path[o]]
+    paras=[b["text"] for b in d["blocks"] if b["t"] in ("h","p","li") and len(b.get("text",""))>40]
+    hdr=band(crumb_html(o),"佛法影音 · VIDEOS",nm,
+             "深入淺出的佛學常識與淨土法門講座，撥開迷霧、安頓身心。")
+    kids=children.get(o,[])
+    panels=''.join(video_panel(k,paras[i] if i<len(paras) else "",i) for i,k in enumerate(kids))
+    body=hdr+'<main class="tintbg"><div class="wrap"><div class="apanels rvl">'+panels+'</div></div></main>'
+    return page(nm,"/videos/",body,nm+" · 如意精舍")
+
+def build_video_category(o):
+    """影音 分類頁: themed band + full video wall (titles + inline lightbox)."""
+    d=content[out2path[o]]; nm=d["name"]
+    cnt=sum(1 for b in d["blocks"] if b["t"]=="yt")
+    hdr=band(crumb_html(o),"影音分類",nm,"共 %d 部影片，點選縮圖即可當頁觀看。"%cnt)
+    rest=[b for b in d["blocks"] if not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
+    inner=render_blocks(rest,nm)
+    return page(nm,"/videos/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
+
 # ---------------- generic interior page ----------------
 def build_page(o):
     p=out2path[o]; d=content[p]; nm=d["name"]
@@ -396,6 +439,10 @@ if __name__=="__main__":
             write(o,build_column(o))
         elif o.startswith("/column/"):
             write(o,build_column_article(o))
+        elif o=="/videos/":
+            write(o,build_videos(o))
+        elif o.startswith("/videos/") and not children.get(o):
+            write(o,build_video_category(o))
         else:
             write(o,build_page(o))
         n+=1

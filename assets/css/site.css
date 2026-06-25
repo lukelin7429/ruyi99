@@ -203,6 +203,20 @@ main{padding:48px 0 70px}
 .ap-cta .arw{transition:transform .25s}
 .ap-cta:hover .arw{transform:translateX(5px)}
 
+/* video category panels (影音首頁) */
+.vp-desc{color:var(--ink-soft);font-size:15px;line-height:1.75;margin:0 0 16px}
+.vp-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.vp-thumbs .vt{position:relative;aspect-ratio:16/9;border:0;padding:0;cursor:pointer;
+  border-radius:9px;overflow:hidden;background:#1a1d24 center/cover;transition:transform .2s}
+.vp-thumbs .vt:hover{transform:scale(1.05)}
+.vp-thumbs .vt .pl{position:absolute;inset:0;display:grid;place-items:center;
+  background:rgba(20,15,18,.18);transition:background .2s}
+.vp-thumbs .vt:hover .pl{background:rgba(20,15,18,.05)}
+.vp-thumbs .vt .pl i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.vp-thumbs .vt .pl i::after{content:"";border-left:11px solid var(--ac);border-top:7px solid transparent;
+  border-bottom:7px solid transparent;margin-left:3px}
+
 /* author cards (legacy small) */
 .authorcard{display:flex;flex-direction:column;align-items:flex-start;padding:30px 28px 26px}
 .authorcard .seal-lg{width:66px;height:66px;border-radius:18px;flex:0 0 auto;
