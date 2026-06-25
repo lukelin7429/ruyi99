@@ -467,12 +467,33 @@ main{padding:48px 0 70px}
   box-shadow:var(--shadow);aspect-ratio:16/9;background:#000}
 .video-solo iframe{width:100%;height:100%;border:0}
 
+/* 內文獨立圖片(render_blocks)：置中、不過大 */
+main figure.rvl{max-width:540px;margin:26px auto}
+main figure.rvl img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* 錄音共修 audio list */
+.aud-note{max-width:var(--maxw);margin:0 auto 16px;color:var(--sub);font-size:15px;text-align:center}
+.audlist{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  max-width:var(--maxw);margin:0 auto}
+.aud-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);
+  border-radius:13px;padding:13px 16px;cursor:pointer;text-align:left;width:100%;
+  transition:transform .18s,box-shadow .18s,border-color .18s}
+.aud-item:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(124,41,66,.16);border-color:transparent}
+.aud-play{width:34px;height:34px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--plum),var(--plum-deep));box-shadow:0 4px 10px rgba(124,41,66,.3)}
+.aud-play i::after{content:"";border-left:11px solid #fff;border-top:7px solid transparent;
+  border-bottom:7px solid transparent;margin-left:3px;display:block}
+.aud-num{font-weight:700;color:var(--ink);font-size:16px}
+.aud-date{font-size:13.5px;color:var(--sub);font-family:var(--serif);letter-spacing:.03em}
+.aud-go{margin-left:auto;font-size:13.5px;font-weight:700;color:var(--plum)}
+
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:100;background:rgba(15,10,12,.86);display:none;
   align-items:center;justify-content:center;padding:24px}
 .lb.open{display:flex}
 .lb-box{width:min(960px,100%);aspect-ratio:16/9;background:#000;border-radius:14px;
   overflow:hidden;box-shadow:var(--shadow-lg)}
+.lb.audio .lb-box{width:min(560px,100%);aspect-ratio:auto;height:min(420px,80vh)}
 .lb-box iframe{width:100%;height:100%;border:0}
 .lb-close{position:absolute;top:18px;right:24px;color:#fff;font-size:34px;cursor:pointer;
   background:none;border:0;line-height:1}

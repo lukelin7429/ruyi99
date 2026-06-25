@@ -15,6 +15,10 @@ try:
     STUDY_GROUPS=json.load(open(os.path.join(ROOT,"data","study_group.json")))
 except Exception:
     STUDY_GROUPS=[]
+try:
+    AUDIO=json.load(open(os.path.join(ROOT,"data","audio.json")))
+except Exception:
+    AUDIO={}
 out2path={}
 for p,o in omap.items():
     if o=="/":
@@ -567,21 +571,38 @@ def build_study_group(o):
     body=hdr+'<main class="tintbg"><div class="wrap">'+intro+secs+'</div></main>'
     return page(nm,"/study-group/",body,nm+" · 如意精舍")
 
+def render_audio(o):
+    """錄音共修：Drive 音檔列表，點擊當頁內嵌播放（不彈出 Drive）。"""
+    a=AUDIO.get(o)
+    if not a: return ""
+    items=""
+    for it in a["items"]:
+        label="第 %s 集" % it["num"] if it.get("num") else "錄音"
+        date=it.get("date","")
+        items+=('<button class="aud-item" data-drive="%s">'
+                '<span class="aud-play"><i></i></span>'
+                '<span class="aud-num">%s</span>'
+                '<span class="aud-date">%s</span>'
+                '<span class="aud-go">收聽</span></button>'%(it["id"],esc(label),esc(date)))
+    return ('<div class="section-title rvl"><h2>%s</h2><div class="rule"></div></div>'
+            '<p class="aud-note rvl">點選任一集即可在本頁收聽錄音（共 %d 集）。</p>'
+            '<div class="audlist rvl">%s</div>'%(esc(a.get("title","錄音共修")),len(a["items"]),items))
+
 def build_study_series(o):
     """經典頁：去除作者手打的文字目錄，只留章節影音導覽。"""
     nm=name_of(o); cnt=len(children.get(o,[]))
     hdr=band(crumb_html(o),"讀書會 · 經典導讀",nm,
              "共 %d 個講次，點選即可當頁觀看影音。"%cnt)
-    body=hdr+'<main class="tintbg"><div class="wrap">'+child_section(o)+'</div></main>'
+    body=hdr+'<main class="tintbg"><div class="wrap">'+child_section(o)+render_audio(o)+'</div></main>'
     return page(nm,"/study-group/",body,nm+" · 如意精舍")
 
 def build_study_chapter(o):
-    """講次頁：band header＋影片（去除與標題重複的文字）。"""
+    """講次頁：band header＋影片／錄音（去除與標題重複的文字）。"""
     d=content[out2path[o]]; nm=d["name"]
-    hdr=band(crumb_html(o),"讀書會 · 講次",nm,slim=True)
+    hdr=band(crumb_html(o),"讀書會 · 經典",nm,slim=True)
     rest=[b for b in d["blocks"] if not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
     inner=render_blocks(rest,nm)
-    return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
+    return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+render_audio(o)+'</div></main>',nm+" · 如意精舍")
 
 # ---------------- 法師簡介 (bhikkhuni) ----------------
 def build_bhikkhuni(o):

@@ -21,7 +21,14 @@
   var lb=document.getElementById('lb'), lbBox=document.getElementById('lb-box');
   function openLb(id){
     if(!lb)return;
+    lb.classList.remove('audio');
     lbBox.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+    lb.classList.add('open');document.body.style.overflow='hidden';
+  }
+  function openDrive(id){
+    if(!lb)return;
+    lb.classList.add('audio');
+    lbBox.innerHTML='<iframe src="https://drive.google.com/file/d/'+id+'/preview" allow="autoplay"></iframe>';
     lb.classList.add('open');document.body.style.overflow='hidden';
   }
   function closeLb(){
@@ -30,6 +37,8 @@
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-yt]');
     if(t){e.preventDefault();openLb(t.getAttribute('data-yt'));}
+    var d=e.target.closest('[data-drive]');
+    if(d){e.preventDefault();openDrive(d.getAttribute('data-drive'));}
     if(e.target.closest('#lb-close')||e.target.id==='lb'){closeLb();}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
