@@ -229,7 +229,7 @@ AUTHOR_PALETTES=[("#7c2942","#b5446a","#f6ebee"),   # 梅 plum
                  ("#2f5d52","#43806f","#e8f1ee"),   # 松 pine
                  ("#9a6a1e","#c29a45","#f7efe0")]    # 金 gold
 def author_panel(author_o, i=0):
-    nm=name_of(author_o); seal=esc(nm[0]) if nm else "如"
+    nm=name_of(author_o)
     arts=_column_order(author_o); n=len(arts)
     c1,c2,cs=AUTHOR_PALETTES[i%len(AUTHOR_PALETTES)]
     recent=""
@@ -239,11 +239,12 @@ def author_panel(author_o, i=0):
                  '<span>%s</span></a>'%(u(k),esc(t)))
     delay=min(i*70,520)
     return ('<div class="apanel rvl" style="transition-delay:%dms;--ac:%s;--ac2:%s;--acs:%s">'
-            '<div class="ap-top"><div class="ap-seal">%s</div>'
-            '<div><div class="ap-name">%s</div><div class="ap-role">專欄作者 · 共 %d 篇</div></div></div>'
+            '<div class="ap-top"><div class="ap-id"><div class="ap-name">%s</div>'
+            '<div class="ap-role">專欄作者</div></div>'
+            '<div class="ap-count"><b>%d</b><span>篇文章</span></div></div>'
             '<div class="ap-body"><div class="ap-label">近期文章</div>%s</div>'
-            '<a class="ap-cta" href="%s">查看全部 %d 篇 <span class="arw">→</span></a></div>'
-            %(delay,c1,c2,cs,seal,esc(nm),n,recent,u(author_o),n))
+            '<a class="ap-cta" href="%s">查看全部文章 <span class="arw">→</span></a></div>'
+            %(delay,c1,c2,cs,esc(nm),n,recent,u(author_o)))
 
 def _column_order(o):
     """Order child articles by the author's manual TOC sequence, then leftovers."""
