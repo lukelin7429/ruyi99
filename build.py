@@ -401,14 +401,38 @@ def build_videos(o):
     body=hdr+'<main class="tintbg"><div class="wrap"><div class="apanels rvl">'+panels+'</div></div></main>'
     return page(nm,"/videos/",body,nm+" · 如意精舍")
 
-def build_video_category(o):
-    """影音 分類頁: themed band + full video wall (titles + inline lightbox)."""
+def build_video_wall(o, active_top, eyebrow):
+    """themed band + full video wall (titles + inline lightbox). 影音分類 / 夏令營年度共用。"""
     d=content[out2path[o]]; nm=d["name"]
     cnt=sum(1 for b in d["blocks"] if b["t"]=="yt")
-    hdr=band(crumb_html(o),"影音分類",nm,"共 %d 部影片，點選縮圖即可當頁觀看。"%cnt)
+    hdr=band(crumb_html(o),eyebrow,nm,"共 %d 部影片，點選縮圖即可當頁觀看。"%cnt)
     rest=[b for b in d["blocks"] if not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
     inner=render_blocks(rest,nm)
-    return page(nm,"/videos/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
+    return page(nm,active_top,hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
+
+# ---------------- 夏令營 (camps) ----------------
+def _camp_year(o):
+    m=re.search(r'(\d{4})',o); return int(m.group(1)) if m else 0
+def build_camps(o):
+    """夏令營 index: image-led year cards, newest first."""
+    nm=name_of(o)
+    hdr=band(crumb_html(o),"夏令營 · SUMMER CAMP",nm,
+             "兒童與青少年心靈環保成長營，歷年活動影音紀錄。")
+    kids=sorted(children.get(o,[]),key=_camp_year,reverse=True)
+    cards=""
+    for i,k in enumerate(kids):
+        d=content[out2path[k]]; nmk=d["name"]
+        yts=[b["id"] for b in d["blocks"] if b["t"]=="yt"]; n=len(yts)
+        thumb=yts[0] if yts else ""
+        badge='<span class="cc-badge">最新一屆</span>' if i==0 else ''
+        cards+=('<a class="campcard rvl" style="transition-delay:%dms" href="%s">'
+                '<div class="cc-img"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/%s/hqdefault.jpg)"></div>'
+                '%s<span class="cc-year">%d</span><span class="cc-play"><i></i></span></div>'
+                '<div class="cc-body"><div class="cc-title">%s</div>'
+                '<div class="cc-meta">%d 部影片 <span class="arw">→</span></div></div></a>'
+                %(min(i*70,520),u(k),thumb,badge,_camp_year(k),esc(nmk),n))
+    body=hdr+'<main class="tintbg"><div class="wrap"><div class="campgrid rvl">'+cards+'</div></div></main>'
+    return page(nm,"/camps/",body,nm+" · 如意精舍")
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
@@ -544,7 +568,11 @@ if __name__=="__main__":
         elif o=="/videos/":
             write(o,build_videos(o))
         elif o.startswith("/videos/") and not children.get(o):
-            write(o,build_video_category(o))
+            write(o,build_video_wall(o,"/videos/","影音分類"))
+        elif o=="/camps/":
+            write(o,build_camps(o))
+        elif o.startswith("/camps/") and not children.get(o):
+            write(o,build_video_wall(o,"/camps/","夏令營 · 活動紀錄"))
         else:
             write(o,build_page(o))
         n+=1

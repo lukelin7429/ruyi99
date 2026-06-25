@@ -211,6 +211,39 @@ main{padding:48px 0 70px}
 .ap-cta .arw{transition:transform .25s}
 .ap-cta:hover .arw{transform:translateX(5px)}
 
+/* ---------- 夏令營 年度影像卡 ---------- */
+.campgrid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  max-width:var(--maxw);margin:8px auto 0}
+.campcard{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;
+  overflow:hidden;box-shadow:0 4px 18px rgba(40,30,35,.08);
+  transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s,border-color .3s}
+.campcard:hover{transform:translateY(-8px);box-shadow:0 28px 58px rgba(124,41,66,.20);border-color:transparent}
+.cc-img{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1a1d24}
+.cc-img .bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.campcard:hover .cc-img .bg{transform:scale(1.08)}
+.cc-img::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(20,16,18,.05) 30%,rgba(20,16,18,.72) 100%)}
+.cc-year{position:absolute;left:20px;bottom:14px;z-index:2;font-family:var(--serif);
+  font-size:46px;font-weight:700;color:#fff;letter-spacing:.02em;line-height:1;
+  text-shadow:0 3px 16px rgba(0,0,0,.5)}
+.cc-badge{position:absolute;top:14px;left:14px;z-index:3;background:var(--plum);color:#fff;
+  font-size:12.5px;font-weight:700;padding:6px 13px;border-radius:999px;letter-spacing:.08em;
+  box-shadow:0 4px 12px rgba(124,41,66,.4)}
+.cc-play{position:absolute;inset:0;z-index:2;display:grid;place-items:center;
+  opacity:0;transition:opacity .25s}
+.campcard:hover .cc-play{opacity:1}
+.cc-play i{width:56px;height:56px;border-radius:50%;background:rgba(156,58,85,.94);
+  display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.cc-play i::after{content:"";border-left:18px solid #fff;border-top:11px solid transparent;
+  border-bottom:11px solid transparent;margin-left:5px}
+.cc-body{padding:17px 22px 19px}
+.cc-title{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:.03em}
+.cc-meta{margin-top:7px;color:var(--plum);font-weight:700;font-size:14.5px;
+  display:inline-flex;align-items:center;gap:6px}
+.cc-meta .arw{transition:transform .25s}
+.campcard:hover .cc-meta .arw{transform:translateX(5px)}
+
 /* ---------- 法師簡介 兩位法師並列 ---------- */
 .masters{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:780px;margin:8px auto 0}
 .master{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
