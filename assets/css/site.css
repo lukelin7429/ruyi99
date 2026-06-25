@@ -250,8 +250,8 @@ main{padding:48px 0 70px}
   box-shadow:0 10px 34px rgba(40,30,35,.13);
   transition:transform .32s cubic-bezier(.22,.61,.36,1),box-shadow .32s}
 .master:hover{transform:translateY(-9px);box-shadow:0 34px 70px rgba(124,41,66,.24)}
-.master .m-photo{aspect-ratio:3/4;overflow:hidden;position:relative;background:#1a1d24}
-.master .m-photo .bg{position:absolute;inset:0;background-size:cover;background-position:center 18%;
+.master .m-photo{aspect-ratio:1/1;overflow:hidden;position:relative;background:#1a1d24}
+.master .m-photo .bg{position:absolute;inset:0;background-size:cover;background-position:center center;
   transition:transform .6s cubic-bezier(.22,.61,.36,1)}
 .master:hover .m-photo .bg{transform:scale(1.06)}
 .master .m-photo::after{content:"";position:absolute;inset:0;

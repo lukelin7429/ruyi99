@@ -511,6 +511,7 @@ def build_bhikkhuni(o):
             elif b["t"] in ("h","p","li") and b.get("text","")!=nm: bio.append(b["text"])
         i+=1
     EN={"陽慧法師":"Ven. Master Yang-hui","達慧法師":"Ven. Master Da-hui"}
+    CROP={"陽慧法師":"assets/img/master1.jpg","達慧法師":"assets/img/master2.jpg"}  # 半身置中裁切
     LOTUS=('<svg viewBox="0 0 48 32" fill="currentColor" aria-hidden="true">'
            '<path d="M24 3 C20 11 20 20 24 27 C28 20 28 11 24 3Z"/>'
            '<path d="M24 27 C18 23 14 15 13 8 C19 11 23 19 24 27Z"/>'
@@ -519,7 +520,7 @@ def build_bhikkhuni(o):
            '<path d="M24 28 C32 27 40 23 44 17 C36 16 28 20 24 28Z"/></svg>')
     pcards=""
     for i,(src,name) in enumerate(portraits):
-        en=EN.get(name,"")
+        en=EN.get(name,""); src=CROP.get(name,src)
         pcards+=('<div class="master rvl" style="transition-delay:%dms">'
                  '<div class="m-photo"><div class="bg" style="background-image:url(%s)"></div></div>'
                  '<div class="m-plate"><span class="m-lotus">%s</span>'
