@@ -179,6 +179,95 @@ def child_section(o):
                          '<h3>%s</h3><div class="meta">%s</div></a>'%(u(k),esc(nm),meta))
         return '<div class="cards rvl">'+''.join(items)+'</div>'
 
+# 專欄 helpers ---------------------------------------------------------------
+BYLINES=("文/林吉祥","文/謝呂賢","文/孫一成")
+def article_full_title(child_o):
+    """The real article title = first text block on the article page."""
+    d=content.get(out2path.get(child_o),{})
+    for b in d.get("blocks",[]):
+        if b["t"] in ("h","p","li"):
+            t=b.get("text","").strip()
+            if t and "返回" not in t: return t
+    return name_of(child_o)
+
+def article_excerpt(child_o):
+    d=content.get(out2path.get(child_o),{}); full=article_full_title(child_o)
+    for b in d.get("blocks",[]):
+        if b["t"] in ("h","p","li"):
+            t=b.get("text","").strip()
+            if not t or t==full or t.startswith(full): continue
+            if t.startswith("文/") or t.replace(" ","") in BYLINES: continue
+            if len(t)>14 and "返回" not in t:
+                return (t[:64]+"…") if len(t)>64 else t
+    return ""
+
+def article_card(child_o):
+    ttl=article_full_title(child_o); ex=article_excerpt(child_o)
+    return ('<a class="acard rvl" href="%s"><h3>%s</h3>%s'
+            '<span class="more">閱讀全文 →</span></a>'
+            %(u(child_o),esc(ttl),('<p>%s</p>'%esc(ex)) if ex else ''))
+
+def author_teaser(author_o):
+    arts=children.get(author_o,[])
+    if not arts: return ""
+    # author page lists newest first; take first article's title
+    return article_full_title(_column_order(author_o)[0]) if arts else ""
+
+def author_card(author_o):
+    nm=name_of(author_o); arts=children.get(author_o,[]); teaser=author_teaser(author_o)
+    return ('<a class="card authorcard" href="%s"><div class="k">專欄作者</div>'
+            '<h3>%s</h3>%s<div class="meta">共 %d 篇 · 前往 →</div></a>'
+            %(u(author_o),esc(nm),('<p>最新：%s</p>'%esc(teaser)) if teaser else '',len(arts)))
+
+def _column_order(o):
+    """Order child articles by the author's manual TOC sequence, then leftovers."""
+    kids=children.get(o,[])
+    title2child={}
+    for k in kids: title2child.setdefault(article_full_title(k),k)
+    ordered=[]; used=set()
+    for b in content[out2path[o]]["blocks"]:
+        if b["t"] in ("h","p","li"):
+            t=b.get("text","").strip()
+            if t in title2child and title2child[t] not in used:
+                ck=title2child[t]; ordered.append(ck); used.add(ck)
+    for k in sorted(kids,key=natkey):
+        if k not in used: ordered.append(k)
+    return ordered
+
+def build_column(o):
+    """專欄 listing pages: drop the duplicated plain-text title TOC, show clickable cards."""
+    nm=name_of(o)
+    kids=children.get(o,[])
+    authors=[k for k in kids if children.get(k)]
+    body=['<div class="pagehead"><div class="wrap">%s<h1>%s</h1>'
+          '<p class="lead">%s</p></div></div><main><div class="wrap">'
+          %(crumb_html(o),esc(nm),
+            "古典智慧對照現代生活的佛法心得文章。" if authors else "")]
+    if authors:  # /column/ overview → author cards
+        body.append('<div class="cards rvl">'+''.join(author_card(k) for k in sorted(authors,key=natkey))+'</div>')
+    else:        # author page → article cards in TOC order
+        arts=_column_order(o)
+        body.append('<div class="acards rvl">'+''.join(article_card(k) for k in arts)+'</div>')
+    body.append('</div></main>')
+    return page(nm,"/column/",''.join(body),nm+" · 如意精舍")
+
+def build_column_article(o):
+    """Single 專欄 article: full title as H1, byline, clean body (no duplicate titles)."""
+    d=content[out2path[o]]; full=article_full_title(o); byline=""
+    body_blocks=[]
+    for b in d["blocks"]:
+        if b["t"] in ("h","p","li"):
+            t=b.get("text","").strip()
+            if t==full or t.startswith(full): continue
+            if t.startswith("文/") or t.replace(" ","") in BYLINES:
+                byline=byline or t; continue
+        body_blocks.append(b)
+    head=('<div class="pagehead"><div class="wrap">%s<h1>%s</h1>%s</div></div>'
+          %(crumb_html(o),esc(full),
+            '<p class="lead">%s</p>'%esc(byline) if byline else ''))
+    inner=render_blocks(body_blocks,full)
+    return page(full,"/column/",head+'<main><div class="wrap">'+inner+'</div></main>',full+" · 如意精舍")
+
 # ---------------- HOME (bespoke) ----------------
 HERO_ART=('<svg class="hero-art" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice" '
  'xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
@@ -273,7 +362,13 @@ if __name__=="__main__":
     write("/",build_home()); n+=1
     for o in sorted(out2path):
         if o=="/": continue
-        write(o,build_page(o)); n+=1
+        if o=="/column/" or (o.startswith("/column/") and children.get(o)):
+            write(o,build_column(o))
+        elif o.startswith("/column/"):
+            write(o,build_column_article(o))
+        else:
+            write(o,build_page(o))
+        n+=1
     # CNAME + nojekyll
     open(os.path.join(ROOT,".nojekyll"),"w").write("")
     print("built %d pages"%n)

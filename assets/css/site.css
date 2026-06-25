@@ -112,6 +112,20 @@ main{padding:48px 0 70px}
 .card p{margin:0;color:var(--sub);font-size:15px;line-height:1.7}
 .card .meta{margin-top:12px;font-size:14px;color:var(--plum);font-weight:600}
 
+/* article cards (專欄) */
+.acards{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  max-width:var(--maxw);margin:18px auto 0}
+.acard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px 24px;transition:.2s;position:relative;overflow:hidden}
+.acard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(var(--plum),var(--gold));opacity:0;transition:.2s}
+.acard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.acard:hover::before{opacity:1}
+.acard h3{margin:0 0 10px;font-size:18.5px;line-height:1.55;color:var(--ink);
+  letter-spacing:.02em;font-weight:700}
+.acard p{margin:0 0 16px;color:var(--sub);font-size:15px;line-height:1.78;flex:1}
+.acard .more{color:var(--plum);font-weight:600;font-size:14.5px}
+
 /* chapter list (dense) */
 .chaplist{max-width:860px;margin:8px auto 0;display:grid;gap:10px;
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
