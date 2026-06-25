@@ -471,6 +471,39 @@ def build_news(o):
     body=hdr+'<main class="tintbg"><div class="wrap">'+sched+carousel+'</div></main>'
     return page(nm,"/news/",body,nm+" · 如意精舍")
 
+# ---------------- 法師簡介 (bhikkhuni) ----------------
+def build_bhikkhuni(o):
+    d=content[out2path[o]]; nm=d["name"]; blocks=d["blocks"]
+    portraits=[]; bio=[]; gallery=[]; seen_h2=False; i=0
+    while i < len(blocks):
+        b=blocks[i]
+        if b["t"]=="h" and b.get("level")==2:
+            seen_h2=True; i+=1; continue
+        if (not seen_h2 and b["t"]=="img" and i+1<len(blocks)
+                and blocks[i+1]["t"]=="p" and len(blocks[i+1].get("text",""))<=8):
+            portraits.append((b["src"],blocks[i+1]["text"])); i+=2; continue
+        if seen_h2:
+            if b["t"]=="img": gallery.append(b["src"])
+            elif b["t"] in ("h","p","li") and b.get("text","")!=nm: bio.append(b["text"])
+        i+=1
+    pcards=""
+    for src,name in portraits:
+        pcards+=('<div class="master rvl"><div class="m-photo" style="background-image:url(%s)"></div>'
+                 '<div class="m-name">%s</div></div>'%(u("/"+src),esc(name)))
+    hdr=band(crumb_html(o),"法師簡介 · THE MASTERS",nm,
+             "兩位法師生長於信義鄉風櫃斗，出家後回鄉弘法、深耕菩提。")
+    body=hdr+'<main class="tintbg"><div class="wrap">'
+    body+='<div class="masters rvl">'+pcards+'</div>'
+    if bio:
+        body+=('<div class="section-title rvl"><h2>兩位法師的故事</h2><div class="rule"></div></div>'
+               '<div class="prose rvl">'+''.join('<p>%s</p>'%esc(t) for t in bio)+'</div>')
+    if gallery:
+        body+=('<div class="m-gallery rvl">'
+               +''.join('<figure><img loading="lazy" src="%s" alt="如意精舍"></figure>'%u("/"+g)
+                        for g in gallery)+'</div>')
+    body+='</div></main>'
+    return page(nm,"/bhikkhuni/",body,nm+" · 如意精舍")
+
 # ---------------- generic interior page ----------------
 def build_page(o):
     p=out2path[o]; d=content[p]; nm=d["name"]
@@ -504,6 +537,8 @@ if __name__=="__main__":
             write(o,build_column(o))
         elif o.startswith("/column/"):
             write(o,build_column_article(o))
+        elif o=="/bhikkhuni/":
+            write(o,build_bhikkhuni(o))
         elif o=="/news/":
             write(o,build_news(o))
         elif o=="/videos/":

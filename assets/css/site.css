@@ -211,6 +211,26 @@ main{padding:48px 0 70px}
 .ap-cta .arw{transition:transform .25s}
 .ap-cta:hover .arw{transform:translateX(5px)}
 
+/* ---------- 法師簡介 兩位法師並列 ---------- */
+.masters{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:780px;margin:8px auto 0}
+.master{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  box-shadow:0 6px 24px rgba(40,30,35,.09);
+  transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s}
+.master:hover{transform:translateY(-7px);box-shadow:0 26px 56px rgba(124,41,66,.18)}
+.master .m-photo{aspect-ratio:4/5;background-size:cover;background-position:center 20%}
+.master .m-name{padding:18px 14px;text-align:center;font-size:23px;font-weight:700;
+  letter-spacing:.08em;color:var(--ink);position:relative}
+.master .m-name::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:46px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--plum),var(--gold))}
+.m-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:34px auto 0}
+.m-gallery figure{margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);
+  aspect-ratio:3/2;transition:transform .3s}
+.m-gallery figure:hover{transform:translateY(-4px)}
+.m-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.m-gallery figure:hover img{transform:scale(1.06)}
+@media(max-width:560px){.masters{grid-template-columns:1fr 1fr;gap:14px}
+  .master .m-name{font-size:18px;padding:12px 8px}}
+
 /* ---------- 法會 photo carousel ---------- */
 .carousel{position:relative;border-radius:20px;overflow:hidden;max-width:var(--maxw);
   margin:8px auto 8px;box-shadow:var(--shadow-lg);aspect-ratio:21/9;background:#1a1d24}
