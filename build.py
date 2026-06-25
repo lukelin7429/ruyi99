@@ -416,7 +416,7 @@ NEWS_PHOTOS=[("assets/img/news-chanting.jpg","晨間誦經共修"),
              ("assets/img/news-altar.jpg","大殿三寶佛與供果"),
              ("assets/img/news-talk.png","法師開示講法"),
              ("assets/img/news-bathing.jpg","浴佛法會")]
-NEWS_EVENTS=[  # (solar, lunar/週次, 名稱, 備註, 類型)
+NEWS_EVENTS=[  # (solar, 農曆, 名稱, 備註, 類型) — 依現行站時間表（Luke 截圖核對）
  ("1/10","農曆十一月廿二","回娘家","","home"),
  ("1/11","農曆十一月廿三","念佛法會","","nianfo"),
  ("2/1","農曆十二月十四","念佛法會","","nianfo"),
@@ -425,15 +425,19 @@ NEWS_EVENTS=[  # (solar, lunar/週次, 名稱, 備註, 類型)
  ("5/10","農曆三月廿四","浴佛節","釋迦牟尼佛聖誕","yufo"),
  ("6/7","農曆四月廿二","念佛法會","","nianfo"),
  ("6/28","農曆五月十四","念佛法會","","nianfo"),
+ ("7/4 ～ 7/7","農曆五月廿一～廿三","青少年學佛營","","camp"),
  ("7/8 ～ 7/12","農曆五月廿四～廿八","兒童學佛營","暑期成長活動","camp"),
- ("8/9","週日","念佛法會","","nianfo"),
- ("9/13","週日","念佛法會","","nianfo"),
- ("10/11","週日","念佛法會","","nianfo"),
- ("11/8","週日","念佛法會","","nianfo"),
- ("12/13","週日","念佛法會","","nianfo"),
+ ("8/2","農曆六月二十","念佛法會","","nianfo"),
+ ("8/23","農曆七月初四","念佛法會","","nianfo"),
+ ("9/6","農曆七月廿五","盂蘭盆法會","","ullambana"),
+ ("10/11","農曆九月初一","念佛法會","","nianfo"),
+ ("11/8","農曆九月三十","念佛法會","","nianfo"),
+ ("12/6","農曆十月廿八","念佛法會","","nianfo"),
+ ("1/10","農曆十二月初三","念佛法會","2027 年","nianfo"),
 ]
 EV_ACCENT={"nianfo":("#7c2942","#b5446a"),"yufo":("#9a6a1e","#c29a45"),
-           "camp":("#2f5d52","#43806f"),"home":("#274a78","#3f6aa5")}
+           "camp":("#2f5d52","#43806f"),"home":("#274a78","#3f6aa5"),
+           "ullambana":("#5a3d7a","#7d5aa6")}
 def build_news(o):
     nm=name_of(o)
     hdr=band(crumb_html(o),"法會資訊 · DHARMA EVENTS",nm,
@@ -460,8 +464,8 @@ def build_news(o):
                 '<div class="ssub">%s</div>%s</div></div>'
                 %(c1,c2,esc(solar),esc(name),esc(sub),
                   '<div class="snote">%s</div>'%esc(note) if note else ''))
-    sched=('<div class="section-title rvl"><h2>2026 年法會時間表</h2><div class="rule"></div></div>'
-           '<p class="sched-note rvl">念佛法會於每月第二個週日舉行（20:30 前後，詳情請洽精舍）。</p>'
+    sched=('<div class="section-title rvl"><h2>法會時間表</h2><div class="rule"></div></div>'
+           '<p class="sched-note rvl">歡迎隨喜參加，共沐法喜；實際時間以精舍最新公告為準。</p>'
            '<div class="sched rvl">%s</div>'%cards)
     body=hdr+'<main class="tintbg"><div class="wrap">'+carousel+sched+'</div></main>'
     return page(nm,"/news/",body,nm+" · 如意精舍")
