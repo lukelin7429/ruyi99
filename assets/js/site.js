@@ -34,9 +34,8 @@
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 
-  // 法會 photo carousel
-  var car=document.getElementById('newsCar');
-  if(car){
+  // photo carousels (supports multiple on a page)
+  document.querySelectorAll('.carousel').forEach(function(car){
     var slides=car.querySelectorAll('.slide'),dots=car.querySelectorAll('.dot'),cur=0,timer;
     function go(i){
       cur=(i+slides.length)%slides.length;
@@ -50,5 +49,5 @@
     });
     dots.forEach(function(d){d.addEventListener('click',function(){go(parseInt(d.getAttribute('data-i'),10));reset();});});
     if(slides.length>1)start();
-  }
+  });
 })();

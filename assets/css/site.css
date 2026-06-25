@@ -321,6 +321,25 @@ main{padding:48px 0 70px}
   .m-name{font-size:19px}.m-lotus{width:50px;height:50px;top:-25px}.m-lotus svg{width:28px}
   .m-plate{padding:28px 10px 20px}}
 
+/* ---------- 首頁 精選影音（放大 3 卡） ---------- */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:var(--maxw);margin:6px auto 0}
+.featvid{display:block;cursor:pointer;border:0;background:#fff;padding:0;text-align:left;
+  border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(40,30,35,.10);
+  transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s}
+.featvid:hover{transform:translateY(-8px);box-shadow:0 28px 58px rgba(124,41,66,.22)}
+.fv-thumb{position:relative;aspect-ratio:16/9;background:#1a1d24 center/cover;overflow:hidden}
+.fv-thumb::after{content:"";position:absolute;inset:0;background:rgba(20,15,18,.14);transition:background .25s}
+.featvid:hover .fv-thumb::after{background:rgba(20,15,18,.02)}
+.fv-play{position:absolute;inset:0;z-index:1;display:grid;place-items:center}
+.fv-play i{width:66px;height:66px;border-radius:50%;background:rgba(156,58,85,.94);
+  display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .25s}
+.featvid:hover .fv-play i{transform:scale(1.1)}
+.fv-play i::after{content:"";border-left:22px solid #fff;border-top:13px solid transparent;
+  border-bottom:13px solid transparent;margin-left:5px}
+.fv-cap{padding:16px 20px;font-size:16.5px;font-weight:600;color:var(--ink);line-height:1.5;
+  border:1px solid var(--line);border-top:0;border-radius:0 0 18px 18px}
+@media(max-width:820px){.feat-grid{grid-template-columns:1fr;gap:18px}}
+
 /* ---------- 法會 photo carousel ---------- */
 .carousel{position:relative;border-radius:20px;overflow:hidden;max-width:var(--maxw);
   margin:8px auto 8px;box-shadow:var(--shadow-lg);aspect-ratio:21/9;background:#1a1d24}

@@ -220,6 +220,27 @@ def band(crumb, eyebrow, title, sub="", byline="", slim=False):
 def stagger(i):  # inline reveal delay for staggered entrance
     return ' style="transition-delay:%dms"'%min(i*55,520)
 
+def photo_carousel(items):
+    """items: list of (rel_src, caption). Returns a carousel block."""
+    slides=""
+    for i,(src,cap) in enumerate(items):
+        slides+=('<div class="slide%s" style="background-image:url(%s)">%s</div>'
+                 %(" on" if i==0 else "",u("/"+src),
+                   '<div class="cap">%s</div>'%esc(cap) if cap else ''))
+    dots=''.join('<button class="dot%s" data-i="%d" aria-label="第%d張"></button>'
+                 %(" on" if i==0 else "",i,i+1) for i in range(len(items)))
+    return ('<div class="carousel rvl"><div class="slides">%s</div>'
+            '<button class="car-nav prev" data-d="-1" aria-label="上一張">‹</button>'
+            '<button class="car-nav next" data-d="1" aria-label="下一張">›</button>'
+            '<div class="dots">%s</div></div>'%(slides,dots))
+
+def feat_video(ytid):
+    t=VTITLES.get(ytid,"")
+    return ('<button class="featvid rvl" data-yt="%s">'
+            '<div class="fv-thumb" style="background-image:url(https://i.ytimg.com/vi/%s/hqdefault.jpg)">'
+            '<span class="fv-play"><i></i></span></div>'
+            '<div class="fv-cap">%s</div></button>'%(ytid,ytid,esc(t)))
+
 def article_card(child_o, i=0):
     ttl=article_full_title(child_o); ex=article_excerpt(child_o)
     idx='<div class="idx">第 %02d 篇</div>'%(i+1)
@@ -357,16 +378,16 @@ def build_home():
                   for n,o,desc in secs)
     body.append('<div class="section-title rvl"><h2>度眾事業</h2><div class="rule"></div></div>')
     body.append('<div class="cards rvl">'+cards+'</div>')
-    if vids:
-        body.append('<div class="section-title rvl"><h2>精選影音</h2><div class="rule"></div></div>')
-        body.append('<div class="video-grid">'+''.join(yt_thumb(v) for v in vids)+'</div>')
-    # 精舍剪影 gallery (real photos only — drop small icons/logos)
+    # 精選影音 — 3 支放大卡片（夏令營＋佛法影音＋淨土）
+    FEATURED=["xtWmje_dBEQ","ft00NuF51Fg","TRRzNYXtHCk"]
+    body.append('<div class="section-title rvl"><h2>精選影音</h2><div class="rule"></div></div>')
+    body.append('<div class="feat-grid">'+''.join(feat_video(v) for v in FEATURED)+'</div>')
+    # 精舍剪影 — 放大輪播（real photos only）
     gal=[i for i in imgs if os.path.exists(os.path.join(ROOT,i))
          and os.path.getsize(os.path.join(ROOT,i))>=80*1024]
     if gal:
         body.append('<div class="section-title rvl"><h2>精舍剪影</h2><div class="rule"></div></div>')
-        body.append('<div class="gallery rvl">'+''.join(
-            '<figure><img loading="lazy" src="%s" alt="如意精舍"></figure>'%u("/"+g) for g in gal)+'</div>')
+        body.append(photo_carousel([(g,"") for g in gal]))
     body.append('</main>')
     return page("如意精舍 · 南投信義風櫃斗山上的佛教道場","/",''.join(body),
                 "如意精舍位於南投縣信義鄉風櫃斗，海拔約800公尺。兩位法師2017年回鄉弘法，弘揚正知正見的佛法。")
