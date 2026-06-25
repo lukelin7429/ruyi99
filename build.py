@@ -67,7 +67,7 @@ def topbar(active_top):
         links.append('<a href="%s"%s>%s</a>'%(u(o),cls,esc(n)))
     return (
     '<header class="topbar"><div class="topbar-inner">'
-    '<a class="brand" href="%s"><span class="seal">如</span><span>如意精舍'%u("/")+
+    '<a class="brand" href="%s"><img class="brand-logo" src="%s" alt="如意精舍" width="42" height="42"><span>如意精舍'%(u("/"),u("/assets/img/ruyi-logo.png"))+
     '<small>RU-YI MEDITATION</small></span></a>'
     '<button class="hamb" aria-label="選單">☰</button>'
     '<nav class="nav">'+''.join(links)+'</nav>'
@@ -91,18 +91,22 @@ def footer():
 LIGHTBOX='<div class="lb" id="lb"><button class="lb-close" id="lb-close">×</button><div class="lb-box" id="lb-box"></div></div>'
 
 def page(title, active_top, body, desc=""):
+    icons=('<link rel="icon" href="%s" sizes="any">'
+           '<link rel="icon" type="image/png" href="%s" sizes="32x32">'
+           '<link rel="apple-touch-icon" href="%s">'
+           %(u("/assets/favicon.ico"),u("/assets/favicon-32.png"),u("/assets/apple-touch-icon.png")))
     return (
     '<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">'
     '<meta name="viewport" content="width=device-width,initial-scale=1">'
     '<title>%s · 如意精舍</title>'
-    '<meta name="description" content="%s">'
+    '<meta name="description" content="%s">%s'
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">'
     '<link rel="stylesheet" href="%s">'
     '</head><body>%s%s%s%s'
     '<script src="%s"></script></body></html>'
-    %(esc(title),esc(desc or title),u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
+    %(esc(title),esc(desc or title),icons,u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
 
 def yt_thumb(ytid,cap=""):
     t=VTITLES.get(ytid,cap)
@@ -406,6 +410,62 @@ def build_video_category(o):
     inner=render_blocks(rest,nm)
     return page(nm,"/videos/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
 
+# ---------------- 法會資訊 (news) ----------------
+# 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
+NEWS_PHOTOS=[("assets/img/news-chanting.jpg","晨間誦經共修"),
+             ("assets/img/news-altar.jpg","大殿三寶佛與供果"),
+             ("assets/img/news-talk.png","法師開示講法"),
+             ("assets/img/news-bathing.jpg","浴佛法會")]
+NEWS_EVENTS=[  # (solar, lunar/週次, 名稱, 備註, 類型)
+ ("1/10","農曆十一月廿二","回娘家","","home"),
+ ("1/11","農曆十一月廿三","念佛法會","","nianfo"),
+ ("2/1","農曆十二月十四","念佛法會","","nianfo"),
+ ("3/1","農曆正月十三","念佛法會","","nianfo"),
+ ("4/12","農曆二月廿五","念佛法會","","nianfo"),
+ ("5/10","農曆三月廿四","浴佛節","釋迦牟尼佛聖誕","yufo"),
+ ("6/7","農曆四月廿二","念佛法會","","nianfo"),
+ ("6/28","農曆五月十四","念佛法會","","nianfo"),
+ ("7/8 ～ 7/12","農曆五月廿四～廿八","兒童學佛營","暑期成長活動","camp"),
+ ("8/9","週日","念佛法會","","nianfo"),
+ ("9/13","週日","念佛法會","","nianfo"),
+ ("10/11","週日","念佛法會","","nianfo"),
+ ("11/8","週日","念佛法會","","nianfo"),
+ ("12/13","週日","念佛法會","","nianfo"),
+]
+EV_ACCENT={"nianfo":("#7c2942","#b5446a"),"yufo":("#9a6a1e","#c29a45"),
+           "camp":("#2f5d52","#43806f"),"home":("#274a78","#3f6aa5")}
+def build_news(o):
+    nm=name_of(o)
+    hdr=band(crumb_html(o),"法會資訊 · DHARMA EVENTS",nm,
+             "念佛、浴佛與兒童學佛營——歡迎隨喜參加，共沐法喜。")
+    # carousel
+    slides=""
+    for i,(src,cap) in enumerate(NEWS_PHOTOS):
+        slides+=('<div class="slide%s" style="background-image:url(%s)">'
+                 '<div class="cap">%s</div></div>'%(" on" if i==0 else "",u("/"+src),esc(cap)))
+    dots=''.join('<button class="dot%s" data-i="%d" aria-label="第%d張"></button>'
+                 %(" on" if i==0 else "",i,i+1) for i in range(len(NEWS_PHOTOS)))
+    carousel=('<div class="carousel rvl" id="newsCar"><div class="slides">%s</div>'
+              '<button class="car-nav prev" data-d="-1" aria-label="上一張">‹</button>'
+              '<button class="car-nav next" data-d="1" aria-label="下一張">›</button>'
+              '<div class="dots">%s</div></div>'%(slides,dots))
+    # schedule
+    cards=""
+    for solar,sub,name,note,typ in NEWS_EVENTS:
+        c1,c2=EV_ACCENT.get(typ,EV_ACCENT["nianfo"])
+        mo=solar.split("/")[0] if "/" in solar else solar
+        cards+=('<div class="scard rvl" style="--ac:%s;--ac2:%s">'
+                '<div class="sdate"><span class="dy">%s</span></div>'
+                '<div class="sbody"><div class="sname">%s</div>'
+                '<div class="ssub">%s</div>%s</div></div>'
+                %(c1,c2,esc(solar),esc(name),esc(sub),
+                  '<div class="snote">%s</div>'%esc(note) if note else ''))
+    sched=('<div class="section-title rvl"><h2>2026 年法會時間表</h2><div class="rule"></div></div>'
+           '<p class="sched-note rvl">念佛法會於每月第二個週日舉行（20:30 前後，詳情請洽精舍）。</p>'
+           '<div class="sched rvl">%s</div>'%cards)
+    body=hdr+'<main class="tintbg"><div class="wrap">'+carousel+sched+'</div></main>'
+    return page(nm,"/news/",body,nm+" · 如意精舍")
+
 # ---------------- generic interior page ----------------
 def build_page(o):
     p=out2path[o]; d=content[p]; nm=d["name"]
@@ -439,6 +499,8 @@ if __name__=="__main__":
             write(o,build_column(o))
         elif o.startswith("/column/"):
             write(o,build_column_article(o))
+        elif o=="/news/":
+            write(o,build_news(o))
         elif o=="/videos/":
             write(o,build_videos(o))
         elif o.startswith("/videos/") and not children.get(o):

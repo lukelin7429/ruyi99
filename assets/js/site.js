@@ -33,4 +33,22 @@
     if(e.target.closest('#lb-close')||e.target.id==='lb'){closeLb();}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+
+  // 法會 photo carousel
+  var car=document.getElementById('newsCar');
+  if(car){
+    var slides=car.querySelectorAll('.slide'),dots=car.querySelectorAll('.dot'),cur=0,timer;
+    function go(i){
+      cur=(i+slides.length)%slides.length;
+      slides.forEach(function(s,k){s.classList.toggle('on',k===cur);});
+      dots.forEach(function(d,k){d.classList.toggle('on',k===cur);});
+    }
+    function start(){timer=setInterval(function(){go(cur+1);},5000);}
+    function reset(){clearInterval(timer);start();}
+    car.querySelectorAll('.car-nav').forEach(function(b){
+      b.addEventListener('click',function(){go(cur+parseInt(b.getAttribute('data-d'),10));reset();});
+    });
+    dots.forEach(function(d){d.addEventListener('click',function(){go(parseInt(d.getAttribute('data-i'),10));reset();});});
+    if(slides.length>1)start();
+  }
 })();
