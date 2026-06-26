@@ -573,7 +573,13 @@ def build_study_group(o):
         cat=grp["cat"]; c1,c2=SG_ACCENT.get(cat,("#7c2942","#b5446a"))
         cards=""
         for j,card in enumerate(grp["cards"]):
-            out=card["out"]; n=len(children.get(out,[]))
+            out=card["out"]
+            # 講次數：優先採用錄音集數（去重），其次才是子頁數。
+            # 梵網經菩薩戒等只有 1 篇戒本子頁、卻有多集錄音導讀，
+            # 若只數子頁會誤顯示「1 篇講次」。
+            _au=AUDIO.get(out,{}).get("items",[])
+            _nau=len({i.get("num") for i in _au if i.get("num")})
+            n=_nau if _nau else len(children.get(out,[]))
             meta=('%d 篇講次 ' % n) if n else ''
             cards+=('<a class="sgcard rvl" style="transition-delay:%dms" href="%s">'
                     '<div class="sgcard-head"><span>%s</span></div>'
