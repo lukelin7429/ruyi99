@@ -31,6 +31,7 @@ NAV=[("首頁","/"),("法師簡介","/bhikkhuni/"),("讀書會","/study-group/")
      ("法會資訊","/news/"),("影音","/videos/"),("專欄","/column/"),("夏令營","/camps/")]
 NAVNAME={o:n for n,o in NAV}
 SITE_NAME="如意精舍"
+SITE_URL="https://ruyi99.org"
 ADDR="南投縣信義鄉自強村陽和巷80號"; TEL="049-2791267"
 EMAIL_MASTER="a0909359364@gmail.com"; EMAIL_LUKE="luke@ruyi99.org"
 EMAIL_EN="ruyi@ruyimeditation.org"; EN_SITE="https://ruyimeditation.org"
@@ -103,18 +104,26 @@ def page(title, active_top, body, desc=""):
            '<link rel="icon" type="image/png" href="%s" sizes="32x32">'
            '<link rel="apple-touch-icon" href="%s">'
            %(u("/assets/favicon.ico"),u("/assets/favicon-32.png"),u("/assets/apple-touch-icon.png")))
+    og=('<meta property="og:type" content="website">'
+        '<meta property="og:site_name" content="如意精舍">'
+        '<meta property="og:title" content="%s · 如意精舍">'
+        '<meta property="og:description" content="%s">'
+        '<meta property="og:image" content="%s/assets/img/hero-fengguidou.jpg">'
+        '<meta property="og:locale" content="zh_TW">'
+        '<meta name="twitter:card" content="summary_large_image">'
+        '<!--CANON-->'%(esc(title),esc(desc or title),SITE_URL))
     return (
     '<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">'
     '<meta name="viewport" content="width=device-width,initial-scale=1">'
     '<title>%s · 如意精舍</title>'
-    '<meta name="description" content="%s">%s'
+    '<meta name="description" content="%s">%s%s'
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">'
     '<link rel="stylesheet" href="%s">'
     '</head><body>%s%s%s%s'
     '<script src="%s"></script></body></html>'
-    %(esc(title),esc(desc or title),icons,u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
+    %(esc(title),esc(desc or title),og,icons,u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
 
 def yt_thumb(ytid,cap=""):
     t=VTITLES.get(ytid,cap)
@@ -408,6 +417,14 @@ def build_home():
         body.append('<div class="section-title rvl"><h2>精舍剪影</h2><div class="rule"></div></div>')
         body.append(photo_carousel([(g,"") for g in gal]))
     body.append('</main>')
+    ld={"@context":"https://schema.org","@type":["BuddhistTemple","Organization"],
+        "name":"如意精舍","alternateName":"Ru-Yi Meditation Center","url":SITE_URL,
+        "logo":SITE_URL+"/assets/img/ruyi-logo.png","image":SITE_URL+"/assets/img/hero-fengguidou.jpg",
+        "telephone":"+886-49-2791267","email":EMAIL_LUKE,
+        "address":{"@type":"PostalAddress","streetAddress":"自強村陽和巷80號",
+                   "addressLocality":"信義鄉","addressRegion":"南投縣","postalCode":"556","addressCountry":"TW"},
+        "foundingDate":"2017","sameAs":[YT_CHANNEL,EN_SITE]}
+    body.append('<script type="application/ld+json">%s</script>'%json.dumps(ld,ensure_ascii=False))
     return page("如意精舍 · 南投信義風櫃斗山上的佛教道場","/",''.join(body),
                 "如意精舍位於南投縣信義鄉風櫃斗，海拔約800公尺。兩位法師2017年回鄉弘法，弘揚正知正見的佛法。")
 
@@ -676,6 +693,9 @@ def build_page(o):
     return page(nm,active,''.join(body),nm+" · 如意精舍")
 
 def write(o,htmltext):
+    canon=SITE_URL+(o if o!="/" else "/")
+    seo=('<link rel="canonical" href="%s"><meta property="og:url" content="%s">'%(canon,canon))
+    htmltext=htmltext.replace("<!--CANON-->",seo)
     rel=o.strip("/")
     d=os.path.join(ROOT,rel) if rel else ROOT
     os.makedirs(d,exist_ok=True)
@@ -713,4 +733,15 @@ if __name__=="__main__":
         n+=1
     # CNAME + nojekyll
     open(os.path.join(ROOT,".nojekyll"),"w").write("")
-    print("built %d pages"%n)
+    # sitemap.xml (all pages) + robots.txt — for Google 收錄
+    urls=["/"]+[o for o in sorted(out2path) if o!="/"]
+    sm=['<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for o in urls:
+        pr="1.0" if o=="/" else ("0.8" if o.count("/")<=2 else "0.6")
+        sm.append("<url><loc>%s%s</loc><priority>%s</priority></url>"%(SITE_URL,o if o!="/" else "/",pr))
+    sm.append("</urlset>")
+    open(os.path.join(ROOT,"sitemap.xml"),"w").write("\n".join(sm))
+    open(os.path.join(ROOT,"robots.txt"),"w").write(
+        "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n"%SITE_URL)
+    print("built %d pages + sitemap(%d urls) + robots"%(n,len(urls)))
