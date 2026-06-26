@@ -19,6 +19,17 @@ try:
     AUDIO=json.load(open(os.path.join(ROOT,"data","audio.json")))
 except Exception:
     AUDIO={}
+
+# 合併卡片（如「般若經講記」＝心經＋金剛經）：把多個來源系列收進一張卡、一頁。
+EXTRA_NAMES={}   # out -> 顯示名稱覆寫（讓麵包屑顯示合併後的書名）
+COMBINED=[c for grp in STUDY_GROUPS for c in grp.get("cards",[]) if c.get("combine")]
+REDIRECTS={}     # 舊系列首頁 -> 合併頁，避免重複內容
+for _c in COMBINED:
+    EXTRA_NAMES[_c["out"]]=_c["name"]
+    for _src in _c["combine"]:
+        EXTRA_NAMES[_src]=_c["name"]
+        REDIRECTS[_src]=_c["out"]
+
 out2path={}
 for p,o in omap.items():
     if o=="/":
@@ -51,6 +62,7 @@ def natkey(o):
     return (int(nums[0]) if nums else 0, last)
 
 def name_of(o):
+    if o in EXTRA_NAMES: return EXTRA_NAMES[o]
     if o in NAVNAME: return NAVNAME[o]
     p=out2path.get(o)
     if p and p in content: return content[p]["name"] or o
@@ -574,12 +586,13 @@ def build_study_group(o):
         cards=""
         for j,card in enumerate(grp["cards"]):
             out=card["out"]
-            # 講次數：優先採用錄音集數（去重），其次才是子頁數。
+            # 講次數：優先採用錄音集數（去重），其次才是子頁數，再次才是影片數。
             # 梵網經菩薩戒等只有 1 篇戒本子頁、卻有多集錄音導讀，
-            # 若只數子頁會誤顯示「1 篇講次」。
-            _au=AUDIO.get(out,{}).get("items",[])
-            _nau=len({i.get("num") for i in _au if i.get("num")})
-            n=_nau if _nau else (len(children.get(out,[])) or yt_count(out))
+            # 若只數子頁會誤顯示「1 篇講次」。合併卡片則加總各來源系列。
+            if card.get("combine"):
+                n=sum(series_count(co) for co in card["combine"])
+            else:
+                n=series_count(out)
             meta=('%d 篇講次 ' % n) if n else ''
             cards+=('<a class="sgcard rvl" style="transition-delay:%dms" href="%s">'
                     '<div class="sgcard-head"><span>%s</span></div>'
@@ -625,6 +638,47 @@ def yt_count(out):
     p=out2path.get(out)
     if not p or p not in content: return 0
     return sum(1 for b in content[p]["blocks"] if b["t"]=="yt")
+
+def series_count(out):
+    """單一系列的講次數：錄音 → 子頁 → 影片，依序採計。"""
+    au=AUDIO.get(out,{}).get("items",[])
+    nau=len({i.get("num") for i in au if i.get("num")})
+    return nau if nau else (len(children.get(out,[])) or yt_count(out))
+
+def redirect_html(to,title):
+    url=u(to)
+    return ('<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta http-equiv="refresh" content="0; url=%s">'
+            '<link rel="canonical" href="%s%s"><title>%s · 如意精舍</title>'
+            '<script>location.replace("%s")</script></head>'
+            '<body style="font-family:sans-serif;padding:2rem;text-align:center">'
+            '正在前往 <a href="%s">%s</a>…</body></html>'
+            %(url,SITE_URL,to,esc(title),url,url,esc(title)))
+
+def build_prajna(card):
+    """合併頁：先介紹《心經》《金剛經》兩部經，再列出般若經講記的講課內容。"""
+    o=card["out"]; nm=card["name"]
+    video_o,chap_o=card["combine"][0],card["combine"][1]   # 心經(影音)、金剛經(章節)
+    total=series_count(video_o)+series_count(chap_o)
+    hdr=band(crumb_html(o),"讀書會 · 經典導讀",nm,
+             "印順導師《般若經講記》收錄《心經》與《金剛經》兩部講記，"
+             "共 %d 個講次。先認識這兩部經，再依序研讀。"%total)
+    intro_cards="".join('<div class="sgi rvl"><h3>%s</h3><p>%s</p></div>'
+                        %(esc(it["name"]),esc(it["text"])) for it in card.get("intros",[]))
+    intro=('<div class="section-title rvl"><h2>關於這兩部經</h2><div class="rule"></div></div>'
+           '<div class="sg-intro rvl">'+intro_cards+'</div>')
+    # 心經 · 講課內容（影音格狀清單，點縮圖當頁播放）
+    pairs=_yt_series_pairs(content[out2path[video_o]]["blocks"])
+    vid_grid="".join(yt_thumb(yid,_session_label(cap,i+1),force=True)
+                     for i,(yid,cap) in enumerate(pairs))
+    sec_video=('<div class="section-title rvl"><h2>心經 · 講課內容</h2><div class="rule"></div></div>'
+               '<div class="video-grid">'+vid_grid+'</div>')
+    # 金剛經 · 講課內容（章節清單）
+    sec_chap=('<div class="section-title rvl"><h2>金剛經 · 講課內容</h2><div class="rule"></div></div>'
+              +child_section(chap_o))
+    body=hdr+'<main class="tintbg"><div class="wrap">'+intro+sec_video+sec_chap+'</div></main>'
+    return page(nm,"/study-group/",body,nm+" · 如意精舍")
 
 def _yt_series_pairs(blocks):
     """配對每支 YouTube 與其後方的日期說明 <p>（如「20230816 讀書會錄音檔」）。"""
@@ -746,6 +800,8 @@ if __name__=="__main__":
     write("/",build_home()); n+=1
     for o in sorted(out2path):
         if o=="/": continue
+        if o in REDIRECTS:   # 舊系列首頁 → 合併頁
+            write(o,redirect_html(REDIRECTS[o],EXTRA_NAMES.get(o,""))); n+=1; continue
         if o=="/column/" or (o.startswith("/column/") and children.get(o)):
             write(o,build_column(o))
         elif o.startswith("/column/"):
@@ -777,10 +833,15 @@ if __name__=="__main__":
         else:
             write(o,build_page(o))
         n+=1
+    # 合併頁（不在 omap 內，手動產生）
+    for c in COMBINED:
+        write(c["out"],build_prajna(c)); n+=1
     # CNAME + nojekyll
     open(os.path.join(ROOT,".nojekyll"),"w").write("")
     # sitemap.xml (all pages) + robots.txt — for Google 收錄
-    urls=["/"]+[o for o in sorted(out2path) if o!="/"]
+    # 收錄合併頁、排除已轉址的舊系列首頁
+    urls=["/"]+sorted([o for o in out2path if o!="/" and o not in REDIRECTS]
+                      +[c["out"] for c in COMBINED])
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for o in urls:
