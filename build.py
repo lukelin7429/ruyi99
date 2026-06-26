@@ -19,6 +19,10 @@ try:
     AUDIO=json.load(open(os.path.join(ROOT,"data","audio.json")))
 except Exception:
     AUDIO={}
+try:
+    INTROS=json.load(open(os.path.join(ROOT,"data","intros.json")))
+except Exception:
+    INTROS={}
 
 # 合併卡片（如「般若經講記」＝心經＋金剛經）：把多個來源系列收進一張卡、一頁。
 EXTRA_NAMES={}   # out -> 顯示名稱覆寫（讓麵包屑顯示合併後的書名）
@@ -626,6 +630,27 @@ def render_audio(o):
             '<p class="aud-note rvl">點選任一集即可在本頁收聽錄音（共 %d 集）。</p>'
             '<div class="audlist rvl">%s</div>'%(esc(a.get("title","錄音共修")),len(seen),items))
 
+def render_intro(o):
+    """經典介紹（內容佚失時的詳細導讀）。"""
+    it=INTROS.get(o)
+    if not it: return ""
+    parts=['<div class="intro rvl">']
+    if it.get("byline"):
+        parts.append('<div class="intro-byline">%s</div>'%esc(it["byline"]))
+    if it.get("lead"):
+        parts.append('<p class="intro-lead">%s</p>'%esc(it["lead"]))
+    for sec in it.get("sections",[]):
+        parts.append('<h2 class="intro-h">%s</h2>'%esc(sec["h"]))
+        for p in sec.get("p",[]):
+            parts.append('<p>%s</p>'%esc(p))
+    if it.get("link"):
+        parts.append('<a class="intro-cta" href="%s" target="_blank" rel="noopener">'
+                     '%s <span class="arw">→</span></a>'%(esc(it["link"]["url"]),esc(it["link"]["text"])))
+    if it.get("note"):
+        parts.append('<p class="intro-note">%s</p>'%esc(it["note"]))
+    parts.append('</div>')
+    return ''.join(parts)
+
 def build_study_series(o):
     """經典頁：去除作者手打的文字目錄，只留章節影音導覽。"""
     nm=name_of(o); cnt=len(children.get(o,[]))
@@ -716,8 +741,8 @@ def build_study_chapter(o):
     # 去除與標題重複的文字，以及裝飾用圖片(如意精舍紅印)
     rest=[b for b in d["blocks"] if b["t"]!="img"
           and not (b["t"] in ("h","p","li") and b.get("text","").strip()==nm)]
-    inner=render_blocks(rest,nm)
-    return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+render_audio(o)+'</div></main>',nm+" · 如意精舍")
+    inner=render_intro(o)+render_blocks(rest,nm)+render_audio(o)
+    return page(nm,"/study-group/",hdr+'<main class="tintbg"><div class="wrap">'+inner+'</div></main>',nm+" · 如意精舍")
 
 # ---------------- 法師簡介 (bhikkhuni) ----------------
 def build_bhikkhuni(o):
