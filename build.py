@@ -125,8 +125,8 @@ def page(title, active_top, body, desc=""):
     '<script src="%s"></script></body></html>'
     %(esc(title),esc(desc or title),og,icons,u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
 
-def yt_thumb(ytid,cap=""):
-    t=VTITLES.get(ytid,cap)
+def yt_thumb(ytid,cap="",force=False):
+    t=cap if force else VTITLES.get(ytid,cap)
     capdiv='<div class="cap">%s</div>'%esc(t) if t else ''
     return ('<button class="vthumb rvl" data-yt="%s">'
             '<div class="thumbimg" style="background-image:url(https://i.ytimg.com/vi/%s/hqdefault.jpg)">'
@@ -579,7 +579,7 @@ def build_study_group(o):
             # 若只數子頁會誤顯示「1 篇講次」。
             _au=AUDIO.get(out,{}).get("items",[])
             _nau=len({i.get("num") for i in _au if i.get("num")})
-            n=_nau if _nau else len(children.get(out,[]))
+            n=_nau if _nau else (len(children.get(out,[])) or yt_count(out))
             meta=('%d 篇講次 ' % n) if n else ''
             cards+=('<a class="sgcard rvl" style="transition-delay:%dms" href="%s">'
                     '<div class="sgcard-head"><span>%s</span></div>'
@@ -619,6 +619,40 @@ def build_study_series(o):
     hdr=band(crumb_html(o),"讀書會 · 經典導讀",nm,
              "共 %d 個講次，點選即可當頁觀看影音。"%cnt)
     body=hdr+'<main class="tintbg"><div class="wrap">'+child_section(o)+render_audio(o)+'</div></main>'
+    return page(nm,"/study-group/",body,nm+" · 如意精舍")
+
+def yt_count(out):
+    p=out2path.get(out)
+    if not p or p not in content: return 0
+    return sum(1 for b in content[p]["blocks"] if b["t"]=="yt")
+
+def _yt_series_pairs(blocks):
+    """配對每支 YouTube 與其後方的日期說明 <p>（如「20230816 讀書會錄音檔」）。"""
+    pairs=[]
+    for i,b in enumerate(blocks):
+        if b["t"]=="yt":
+            cap=blocks[i+1]["text"] if i+1<len(blocks) and blocks[i+1]["t"]=="p" else ""
+            pairs.append((b["id"],cap))
+    return pairs
+
+def _session_label(cap,idx):
+    m=re.search(r'(\d{4})(\d{2})(\d{2})',cap or "")
+    lab="第 %02d 集"%idx
+    if m: lab+=" · %s/%s/%s"%(m.group(1),m.group(2),m.group(3))
+    return lab
+
+def build_study_video_series(o):
+    """影音講次系列（YouTube）：與其他經典系列一致的講次格狀清單，點選當頁播放。
+    八識規矩頌、心經等以一支支 YouTube 加日期說明呈現，原本被當成散落的單頁影片，
+    這裡統一成「共 N 個講次」的影音導覽，與錄音／子頁系列外觀一致。"""
+    d=content[out2path[o]]; nm=d["name"]
+    pairs=_yt_series_pairs(d["blocks"])
+    hdr=band(crumb_html(o),"讀書會 · 經典導讀",nm,
+             "共 %d 個講次，點選即可當頁觀看影音。"%len(pairs))
+    thumbs="".join(yt_thumb(yid,_session_label(cap,i+1),force=True)
+                   for i,(yid,cap) in enumerate(pairs))
+    body=hdr+('<main class="tintbg"><div class="wrap">'
+              '<div class="video-grid">'+thumbs+'</div></div></main>')
     return page(nm,"/study-group/",body,nm+" · 如意精舍")
 
 def build_study_chapter(o):
@@ -720,6 +754,12 @@ if __name__=="__main__":
             write(o,build_study_group(o))
         elif o.startswith("/study-group/") and children.get(o):
             write(o,build_study_series(o))
+        elif (o.startswith("/study-group/") and o.strip("/").count("/")==1
+              and yt_count(o)>=2 and not AUDIO.get(o)):
+            # 僅頂層的影音講次系列（八識規矩頌、心經）：整頁就是一支支 YouTube；
+            # 不可套用到底下含文字內容的單篇講次頁（如 Buddhism101/B01 提問），
+            # 否則會吃掉內文。
+            write(o,build_study_video_series(o))
         elif o.startswith("/study-group/"):
             write(o,build_study_chapter(o))
         elif o=="/bhikkhuni/":
