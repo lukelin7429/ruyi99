@@ -4,6 +4,21 @@
   var hamb=document.querySelector('.hamb'), nav=document.querySelector('.nav');
   if(hamb&&nav){hamb.addEventListener('click',function(){nav.classList.toggle('show');});}
 
+  // site-wide motion: make EVERY list/grid cascade its items in (not pop as one block).
+  // Runs before the reveal collector so the existing engine animates the promoted children.
+  var STAGGER='.cards,.chaplist,.video-grid,.feat-grid,.es-grid,.es-learn,.gallery,'+
+              '.m-gallery,.audlist,.tiers,.obj2,.vidwall,.timeline';
+  [].slice.call(document.querySelectorAll(STAGGER)).forEach(function(g){
+    g.classList.remove('rvl'); g.classList.add('in');   // container visible; its children animate
+    var n=0;
+    [].slice.call(g.children).slice(0,24).forEach(function(ch){  // cap for long lists (perf)
+      if(ch.nodeType!==1) return;
+      ch.classList.add('rvl');
+      if(!ch.style.transitionDelay) ch.style.transitionDelay=Math.min(n*55,400)+'ms';
+      n++;
+    });
+  });
+
   // scroll reveal (getBoundingClientRect — robust in preview frames)
   var els=[].slice.call(document.querySelectorAll('.rvl'));
   function reveal(){
