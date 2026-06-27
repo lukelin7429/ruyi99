@@ -403,6 +403,16 @@ def build_home():
           '<p>海拔約 800 公尺的山上道場，以弘揚正知正見的佛法為理念，'
           '帶領大眾聞思修、深植菩提種子。</p></div></div></section>'
           %u("/assets/img/hero-fengguidou.jpg")]
+    # 首頁醒目卡片：週四英語課（讓家長一眼就找到上課資訊）
+    body.append('<section class="home-feat-wrap"><a class="home-feat rvl" href="%s">'
+        '<div class="hf-ic">🍃</div><div class="hf-body">'
+        '<div class="hf-k">學習園地 · 給孩子的課程</div>'
+        '<h3>週四英語課 · 如意英文學校</h3>'
+        '<p>每週四，把英文學習和佛法、一顆柔軟慈悲的心結合在一起。免費課程，'
+        '歡迎國小到青少年的孩子一起來學、來玩——線上還有 24 週的複習：'
+        '單字發音、句型、故事與自我檢測小考。課程由 Teacher Dom 老師設計。</p>'
+        '<span class="hf-go">認識課程・看 24 週複習 <span class="arw">→</span></span>'
+        '</div></a></section>'%u("/english-school/"))
     body.append('<main><div class="prose rvl">'+''.join('<p>%s</p>'%esc(t) for t in intro)+'</div>')
     # 度眾事業 — 6 張平衡(3欄)、有圖示與配色、有動感的卡片
     IC={

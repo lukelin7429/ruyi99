@@ -10,7 +10,12 @@
     var h=window.innerHeight||document.documentElement.clientHeight;
     for(var i=els.length-1;i>=0;i--){
       var el=els[i];
-      if(el.getBoundingClientRect().top < h-60){el.classList.add('in');els.splice(i,1);}
+      if(el.getBoundingClientRect().top < h-60){
+        el.classList.add('in');
+        // clear the stagger delay once revealed, so hover transitions are immediate (no lag)
+        (function(e){setTimeout(function(){e.style.transitionDelay='';},1100);})(el);
+        els.splice(i,1);
+      }
     }
   }
   reveal();
