@@ -189,6 +189,11 @@ def render_blocks(blocks, pagename=""):
         elif b["t"]=="p":
             prose.append('<p>%s</p>'%esc(b["text"]))
         elif b["t"]=="img":
+            fp=os.path.join(ROOT,b["src"].lstrip("/"))
+            try:
+                if os.path.exists(fp) and os.path.getsize(fp)<30*1024:
+                    continue  # 跳過裝飾用小圖(如意精舍紅印等)，不當內容圖渲染
+            except Exception: pass
             flush_prose()
             out.append('<figure class="rvl"><img loading="lazy" src="%s" alt=""></figure>'%u("/"+b["src"]))
     flush_prose(); flush_vids()
