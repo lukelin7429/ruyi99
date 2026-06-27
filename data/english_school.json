@@ -351,13 +351,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the <strong>Present Continuous tense (“I am + V-ing”)</strong> to describe what is happening right now, and learn key vocabulary for calm and mindfulness: <em>stress, calm, deep breathing, peace, mindful, technique</em>."
+    "html": "Use the <strong>Present Continuous tense (“I am + V-ing”)</strong> to describe what is happening right now, and learn key vocabulary for calm and mindfulness: <em>stress, calm, deep breathing, peace, mindful, technique</em>.",
+    "zh_html": "使用「現在進行式（I am + V-ing，我正在……）」來描述此刻正在發生的事情，並學會與平靜和正念有關的重要單字：stress（壓力）、calm（平靜）、deep breathing（深呼吸）、peace（安詳）、mindful（覺察的）、technique（方法）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Mindfulness (Sati)</strong> as paying attention to the present moment without judgment. Practice the <strong>Mind-Body-Heart</strong> connection and deep breathing to settle the restless “Monkey Brain” and ease stress (Dukkha)."
+    "html": "Understand <strong>Mindfulness (Sati)</strong> as paying attention to the present moment without judgment. Practice the <strong>Mind-Body-Heart</strong> connection and deep breathing to settle the restless “Monkey Brain” and ease stress (Dukkha).",
+    "zh_html": "了解「正念（Mindfulness，巴利文 Sati）」就是不帶評判地專注於當下。練習「身心—身體—心」的連結，並用深呼吸安定那隻靜不下來的「猴子腦」，減輕壓力（苦，Dukkha）。"
    }
   ],
   "vocab": [
@@ -411,15 +413,18 @@
     "examples": [
      {
       "html": "<strong>I am breathing slowly.</strong>",
-      "say": "I am breathing slowly."
+      "say": "I am breathing slowly.",
+      "zh": "我正在慢慢呼吸。"
      },
      {
       "html": "<strong>I am sitting quietly.</strong>",
-      "say": "I am sitting quietly."
+      "say": "I am sitting quietly.",
+      "zh": "我正安靜地坐著。"
      },
      {
       "html": "<strong>I am feeling calm now.</strong>",
-      "say": "I am feeling calm now."
+      "say": "I am feeling calm now.",
+      "zh": "我現在覺得很平靜。"
      }
     ]
    },
@@ -429,11 +434,13 @@
     "examples": [
      {
       "html": "<strong>The monkey is jumping.</strong>",
-      "say": "The monkey is jumping."
+      "say": "The monkey is jumping.",
+      "zh": "那隻猴子正在跳。"
      },
      {
       "html": "<strong>My mind is racing today.</strong>",
-      "say": "My mind is racing today."
+      "say": "My mind is racing today.",
+      "zh": "我今天的腦袋轉個不停。"
      }
     ]
    },
@@ -443,18 +450,21 @@
     "examples": [
      {
       "html": "<strong>What are you doing when you feel calm?</strong>",
-      "say": "What are you doing when you feel calm?"
+      "say": "What are you doing when you feel calm?",
+      "zh": "當你覺得平靜時，你正在做什麼？"
      },
      {
       "html": "<strong>I am drawing, and I am taking deep breaths.</strong>",
-      "say": "I am drawing, and I am taking deep breaths."
+      "say": "I am drawing, and I am taking deep breaths.",
+      "zh": "我正在畫畫，而且我正在做深呼吸。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Present Continuous (現在進行式)",
-   "html": "We use the <strong>Present Continuous</strong> to talk about what is happening <em>right now</em> — the present moment. The structure is <strong>Subject + am / is / are + V-ing</strong>: <span class=\"ok\">I am breathing.</span> · <span class=\"ok\">She is sitting.</span> · <span class=\"ok\">The monkey is jumping.</span> The V-ing form means “正在做…”. Use <strong>am</strong> with <em>I</em>, <strong>is</strong> with <em>he / she / it</em>, and <strong>are</strong> with <em>you / we / they</em>."
+   "html": "We use the <strong>Present Continuous</strong> to talk about what is happening <em>right now</em> — the present moment. The structure is <strong>Subject + am / is / are + V-ing</strong>: <span class=\"ok\">I am breathing.</span> · <span class=\"ok\">She is sitting.</span> · <span class=\"ok\">The monkey is jumping.</span> The V-ing form means “正在做…”. Use <strong>am</strong> with <em>I</em>, <strong>is</strong> with <em>he / she / it</em>, and <strong>are</strong> with <em>you / we / they</em>.",
+   "zh_html": "我們用「現在進行式（Present Continuous）」來談此刻正在發生的事——也就是當下。句型是「主詞 + am / is / are + V-ing」：I am breathing.（我正在呼吸。）· She is sitting.（她正坐著。）· The monkey is jumping.（那隻猴子正在跳。）V-ing 這個形式的意思就是「正在做……」。I 用 am，he / she / it 用 is，you / we / they 用 are。"
   },
   "story": {
    "paras": [
@@ -471,7 +481,12 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像你的腦袋裡住著一隻小猴子（心猿意馬）。牠從來坐不住，總是從一根樹枝跳到另一根樹枝——這一刻想著午餐，下一刻想著考試，再下一刻又想著遊戲。這顆靜不下來、跳來跳去的心，就是我們所說的「猴子腦」。",
+    "當猴子跳得太厲害，我們就會感到壓力。胸口變得緊緊的，思緒也跑個不停。但我們不需要跟猴子打架，也不需要追著牠跑。我們只要做一件安靜的事：注意到牠。「喔——我的心現在正在跳來跳去呢。」這種不帶評判的覺察，就是「正念（Mindfulness，Sati）」。",
+    "然後我們慢慢地做一個深呼吸。我們把一隻手放在頭上、一隻手放在身體上、一隻手放在心上，感受它們在當下合而為一。一點一點地，猴子安靜下來，坐了下來，休息了。我們變得平靜——不是因為沒有事情發生，而是因為我們完完全全地待在這裡、就在此刻。"
+   ]
   },
   "principle": {
    "lede": null,
@@ -488,7 +503,8 @@
      "h3": "2 sentences",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>2 sentences</strong>. Use a <strong>V-ing</strong> form once, and use the word <strong>calm</strong> or <strong>peace</strong>. Then draw a picture of your “calm feeling” (or a settled monkey).",
-     "ex": "<b>Example</b>I feel calm now. I am breathing deeply."
+     "ex": "<b>Example</b>I feel calm now. I am breathing deeply.",
+     "req_zh": "寫 2 個句子。其中要用到一次 V-ing 形式，並用到 calm（平靜）或 peace（安詳）這個字。然後畫一張你「平靜感受」的圖（或是一隻安定下來的猴子）。"
     },
     {
      "tier": "t2",
@@ -496,7 +512,8 @@
      "h3": "4–5 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>4–5 sentences</strong> using at least <strong>3 new words</strong> (stress, deep breathing, mindful). Describe one stressor and one calm action with <strong>V-ing</strong>.",
-     "ex": "<b>Example</b>Today, I was feeling stress because I was doing my math homework. Now, I am sitting quietly. I am mindful of my body."
+     "ex": "<b>Example</b>Today, I was feeling stress because I was doing my math homework. Now, I am sitting quietly. I am mindful of my body.",
+     "req_zh": "寫 4–5 個句子，至少用到 3 個新單字（stress 壓力、deep breathing 深呼吸、mindful 覺察的）。用 V-ing 描述一件讓你有壓力的事，和一個讓你平靜的動作。"
     },
     {
      "tier": "t3",
@@ -504,7 +521,8 @@
      "h3": "5+ sentences",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>5+ sentences</strong> with a <strong>complex structure</strong> (<em>when, while, although</em>) and a personal <strong>3-step</strong> calmness strategy. Explain your “Monkey Brain.”",
-     "ex": "<b>Example</b>My Monkey Brain is jumping a lot when I am preparing for tests. First, I am taking deep breaths. Secondly, I am stopping my thoughts. Lastly, I am smiling to release the pressure."
+     "ex": "<b>Example</b>My Monkey Brain is jumping a lot when I am preparing for tests. First, I am taking deep breaths. Secondly, I am stopping my thoughts. Lastly, I am smiling to release the pressure.",
+     "req_zh": "寫 5 句以上，使用複雜句型（when 當、while 當……時、although 雖然），並寫出你個人的「3 步驟」平靜法。說明你的「猴子腦」是什麼樣子。"
     }
    ]
   },
@@ -657,13 +675,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the <strong>simple past tense</strong> to talk about yesterday, and master three key irregular verbs: <strong>sleep → slept</strong>, <strong>eat → ate</strong>, <strong>go → went</strong>. Learn the words <em>intentional, result, cause</em>."
+    "html": "Use the <strong>simple past tense</strong> to talk about yesterday, and master three key irregular verbs: <strong>sleep → slept</strong>, <strong>eat → ate</strong>, <strong>go → went</strong>. Learn the words <em>intentional, result, cause</em>.",
+    "zh_html": "用簡單過去式（simple past tense）來談昨天發生的事，並學會三個重要的不規則動詞：sleep → slept（睡覺）、eat → ate（吃）、go → went（去）。學習這些單字：intentional（有意圖的）、result（結果）、cause（原因）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>karma / Cetanā</strong> — that every action begins with an intention. Learn to look back on the past with <em>wisdom, not worry</em>, so that we can understand our intentions and grow from them."
+    "html": "Understand <strong>karma / Cetanā</strong> — that every action begins with an intention. Learn to look back on the past with <em>wisdom, not worry</em>, so that we can understand our intentions and grow from them.",
+    "zh_html": "了解「業／思」（karma / Cetanā）──每一個行為都從一個意圖開始。學會用智慧而不是擔憂來回顧過去，這樣我們才能明白自己的意圖，並從中成長。"
    }
   ],
   "vocab": [
@@ -717,15 +737,18 @@
     "examples": [
      {
       "html": "<strong>I slept at nine o’clock.</strong>",
-      "say": "I slept at nine o'clock."
+      "say": "I slept at nine o'clock.",
+      "zh": "I slept at nine o'clock.（我九點睡覺。）"
      },
      {
       "html": "<strong>I ate an apple this morning.</strong>",
-      "say": "I ate an apple this morning."
+      "say": "I ate an apple this morning.",
+      "zh": "I ate an apple this morning.（我今天早上吃了一顆蘋果。）"
      },
      {
       "html": "<strong>I went to school with my friend.</strong>",
-      "say": "I went to school with my friend."
+      "say": "I went to school with my friend.",
+      "zh": "I went to school with my friend.（我和朋友一起去上學。）"
      }
     ]
    },
@@ -735,11 +758,13 @@
     "examples": [
      {
       "html": "<strong>What did you eat yesterday?</strong>",
-      "say": "What did you eat yesterday?"
+      "say": "What did you eat yesterday?",
+      "zh": "What did you eat yesterday?（你昨天吃了什麼？）"
      },
      {
       "html": "<strong>Did you feel calm yesterday?</strong>",
-      "say": "Did you feel calm yesterday?"
+      "say": "Did you feel calm yesterday?",
+      "zh": "Did you feel calm yesterday?（你昨天覺得平靜嗎？）"
      }
     ]
    },
@@ -749,18 +774,21 @@
     "examples": [
      {
       "html": "<strong>I ate rice because I was hungry.</strong>",
-      "say": "I ate rice because I was hungry."
+      "say": "I ate rice because I was hungry.",
+      "zh": "I ate rice because I was hungry.（我吃了飯，因為我餓了。）"
      },
      {
       "html": "<strong>I slept well because I felt peaceful.</strong>",
-      "say": "I slept well because I felt peaceful."
+      "say": "I slept well because I felt peaceful.",
+      "zh": "I slept well because I felt peaceful.（我睡得很好，因為我覺得很安詳。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Simple past tense and irregular verbs",
-   "html": "The <strong>simple past tense</strong> describes a finished action — something that already happened and cannot be changed. Many verbs add <strong>-ed</strong> (help → helped), but our three key verbs are <em>irregular</em>: <span class=\"ok\">sleep → slept</span> · <span class=\"ok\">eat → ate</span> · <span class=\"ok\">go → went</span>. To ask a question, use <strong>did</strong> + the base verb: <span class=\"ok\">Did you go to school?</span> (not <em>Did you went</em>)."
+   "html": "The <strong>simple past tense</strong> describes a finished action — something that already happened and cannot be changed. Many verbs add <strong>-ed</strong> (help → helped), but our three key verbs are <em>irregular</em>: <span class=\"ok\">sleep → slept</span> · <span class=\"ok\">eat → ate</span> · <span class=\"ok\">go → went</span>. To ask a question, use <strong>did</strong> + the base verb: <span class=\"ok\">Did you go to school?</span> (not <em>Did you went</em>).",
+   "zh_html": "簡單過去式（simple past tense）描述一件已經完成的動作──某件已經發生、無法再改變的事。很多動詞會加上 -ed（help → helped），但我們這三個重要動詞是不規則的（irregular）：sleep → slept、eat → ate、go → went。要提問時，用 did 加上動詞原形：Did you go to school?（你去上學了嗎？）（不是 Did you went）。"
   },
   "story": {
    "paras": [
@@ -776,13 +804,19 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像一位園丁種下一顆種子。如果她種下一顆善良的種子──一句有幫助的話、一個慷慨的舉動──就會長出善良的植物。如果她種下一顆隨便、不用心的種子，長出來的就會是雜草。種子是原因（cause）；植物是結果（result）。我們每個人都是自己這一天的園丁。",
+    "所以當我們回顧昨天時，並不是在找讓自己擔憂的事。我們是用智慧來回顧：「我為什麼那樣做？我的意圖是什麼？」也許昨天我忘了帶作業，結果今天早上很緊張。這是一個小原因帶來的小結果──而現在，今天我可以種下一顆更有智慧的種子。不要為昨天擔憂，要從昨天學習。"
+   ]
   },
   "principle": {
    "lede": "In Buddhism, <strong>karma (業)</strong> is not fate or punishment. The Buddha taught: <em>“It is intention (Cetanā 思) that I call karma.”</em> Every action — what we say, do, and think — begins with an <strong>intention</strong>, and that intention shapes the results we meet today.",
    "h4": "Intention is the seed 意圖即種子",
    "html": "Cetanā (思) means <em>volition</em> or <em>intention</em> — the small spark inside us right before we act. We cannot change yesterday’s actions, but we <em>can</em> understand the intentions behind them. When we plant wholesome intentions today, we shape a kinder result tomorrow. Looking back becomes a teacher, not a burden.",
-   "video": null
+   "video": null,
+   "lede_zh": "在佛教裡，業（karma，業）不是命運，也不是懲罰。佛陀教導我們：「我說，意圖（思，Cetanā）就是業。」每一個行為──我們所說、所做、所想的──都從一個意圖開始，而那個意圖塑造了我們今天所遇到的結果。",
+   "zh_html": "思（Cetanā）的意思是意志或意圖──就在我們行動之前，內心那一點小小的火花。我們無法改變昨天的行為，但我們可以明白行為背後的意圖。當我們今天種下善的意圖，就為明天塑造出更善良的結果。回顧過去因此成為一位老師，而不是一個負擔。"
   },
   "practice": {
    "note": "Each day, write down what you did using the <strong>simple past tense</strong>, and reflect on the intention behind it. Choose the tier that fits you. 每天用過去式記錄，並反思行為的意圖與結果。",
@@ -793,7 +827,8 @@
      "h3": "3 sentences",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>3 complete sentences</strong> that use all three target verbs: <strong>slept, ate, went</strong>. Then say one good thing that happened today.",
-     "ex": "<b>Example</b>I slept at nine o’clock. I ate an apple. I went to school."
+     "ex": "<b>Example</b>I slept at nine o’clock. I ate an apple. I went to school.",
+     "req_zh": "寫出 3 個完整的句子，用上這三個目標動詞：slept、ate、went。然後說一件今天發生的好事。"
     },
     {
      "tier": "t2",
@@ -801,7 +836,8 @@
      "h3": "4–5 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>4–5 sentences</strong> using <strong>at least 5 past-tense verbs</strong>. Describe one <em>wholesome</em> action and explain why it was helpful.",
-     "ex": "<b>Example</b>Yesterday, I helped my dad. I felt happy because I made a good action. I slept very well after that."
+     "ex": "<b>Example</b>Yesterday, I helped my dad. I felt happy because I made a good action. I slept very well after that.",
+     "req_zh": "寫 4 到 5 個句子，至少用上 5 個過去式動詞。描述一個善的（wholesome）行為，並解釋它為什麼有幫助。"
     },
     {
      "tier": "t3",
@@ -809,7 +845,8 @@
      "h3": "5+ sentences",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>5+ sentences</strong> using complex structures (<em>because of, although, after that</em>) and analyze the <strong>intention (Cetanā)</strong> behind one action.",
-     "ex": "<b>Example</b>I forgot to finish my homework last night. Although this caused stress this morning, I reflected on my intention and promised to be more mindful of my time today."
+     "ex": "<b>Example</b>I forgot to finish my homework last night. Although this caused stress this morning, I reflected on my intention and promised to be more mindful of my time today.",
+     "req_zh": "寫 5 個以上的句子，運用較複雜的結構（because of 因為、although 雖然、after that 在那之後），並分析一個行為背後的意圖（思，Cetanā）。"
     }
    ]
   },
@@ -962,13 +999,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the <strong>future tense</strong> to express plans and promises: <strong>“I am going to…”</strong> (a plan) and <strong>“I will…”</strong> (a decision). Learn kindness vocabulary: <em>commitment, compassion, humility, the Middle Path, stranger, intention</em>."
+    "html": "Use the <strong>future tense</strong> to express plans and promises: <strong>“I am going to…”</strong> (a plan) and <strong>“I will…”</strong> (a decision). Learn kindness vocabulary: <em>commitment, compassion, humility, the Middle Path, stranger, intention</em>.",
+    "zh_html": "使用未來式（future tense）表達計畫和承諾：「I am going to…（我打算要…）」表示一個計畫，「I will…（我會…）」表示一個決定。學習與善良有關的單字：commitment（承諾）、compassion（慈悲）、humility（謙卑）、the Middle Path（中道）、stranger（陌生人）、intention（發心、意圖）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Refuge (皈依)</strong> as setting a goal guided by the Buddha’s teaching, and practice <strong>Mettā (慈悲)</strong> by turning loving-kindness into a real, generous act — performed with pure intention and no wish for reward."
+    "html": "Understand <strong>Refuge (皈依)</strong> as setting a goal guided by the Buddha’s teaching, and practice <strong>Mettā (慈悲)</strong> by turning loving-kindness into a real, generous act — performed with pure intention and no wish for reward.",
+    "zh_html": "理解「皈依（Refuge）」就是以佛陀的教導為引導來設定目標，並透過把慈心化為真實又慷慨的行動來練習「慈悲（Mettā）」——以純淨的發心去做，不求任何回報。"
    }
   ],
   "vocab": [
@@ -1022,15 +1061,18 @@
     "examples": [
      {
       "html": "<strong>I am going to smile at a stranger.</strong>",
-      "say": "I am going to smile at a stranger."
+      "say": "I am going to smile at a stranger.",
+      "zh": "I am going to smile at a stranger.（我打算對一個陌生人微笑。）"
      },
      {
       "html": "<strong>I am going to help someone, because it is kind.</strong>",
-      "say": "I am going to help someone, because it is kind."
+      "say": "I am going to help someone, because it is kind.",
+      "zh": "I am going to help someone, because it is kind.（我打算去幫助某個人，因為這是善良的。）"
      },
      {
       "html": "<strong>I am going to act with compassion this week.</strong>",
-      "say": "I am going to act with compassion this week."
+      "say": "I am going to act with compassion this week.",
+      "zh": "I am going to act with compassion this week.（這星期我打算用慈悲心去行動。）"
      }
     ]
    },
@@ -1040,11 +1082,13 @@
     "examples": [
      {
       "html": "<strong>I will help them.</strong>",
-      "say": "I will help them."
+      "say": "I will help them.",
+      "zh": "I will help them.（我會幫助他們。）"
      },
      {
       "html": "<strong>I will speak in a kind voice.</strong>",
-      "say": "I will speak in a kind voice."
+      "say": "I will speak in a kind voice.",
+      "zh": "I will speak in a kind voice.（我會用親切的聲音說話。）"
      }
     ]
    },
@@ -1054,18 +1098,21 @@
     "examples": [
      {
       "html": "<strong>My intention is to show kindness with humility.</strong>",
-      "say": "My intention is to show kindness with humility."
+      "say": "My intention is to show kindness with humility.",
+      "zh": "My intention is to show kindness with humility.（我的發心是用謙卑的態度展現善意。）"
      },
      {
       "html": "<strong>My intention is pure, so I expect nothing in return.</strong>",
-      "say": "My intention is pure, so I expect nothing in return."
+      "say": "My intention is pure, so I expect nothing in return.",
+      "zh": "My intention is pure, so I expect nothing in return.（我的發心是純淨的，所以我不期待任何回報。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Future tense — “going to” vs. “will”",
-   "html": "Both talk about the future, but with a small difference. Use <strong>“am / is / are going to”</strong> for a <em>plan</em> you have already decided: <span class=\"ok\">I am going to volunteer tomorrow.</span> Use <strong>“will”</strong> for a <em>promise or decision</em> made in the moment: <span class=\"ok\">I will help you.</span> A commitment to the Buddha’s path (Right Thought) is exactly this kind of clear promise."
+   "html": "Both talk about the future, but with a small difference. Use <strong>“am / is / are going to”</strong> for a <em>plan</em> you have already decided: <span class=\"ok\">I am going to volunteer tomorrow.</span> Use <strong>“will”</strong> for a <em>promise or decision</em> made in the moment: <span class=\"ok\">I will help you.</span> A commitment to the Buddha’s path (Right Thought) is exactly this kind of clear promise.",
+   "zh_html": "這兩種說法都在講未來，但有一點點不同。當你已經決定好的「計畫」，用「am / is / are going to」：I am going to volunteer tomorrow.（我明天要去當志工。）當你是當下做出的「承諾或決定」，用「will」：I will help you.（我會幫你。）對佛陀之道（正思惟）許下的承諾，正是這種清楚的承諾。"
   },
   "story": {
    "paras": [
@@ -1082,13 +1129,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "當佛陀坐在菩提樹下時，許多煩惱前來考驗他。我們把這些煩惱稱為「魔羅（Mara）」（魔羅，生命中的困難）——也就是那些想把我們拉離正道的疑惑與恐懼。佛陀沒有用憤怒去對抗它們，也沒有逃跑。他以平靜、穩定的心去面對它們，走在「中道（Middle Path）」（中道）上——不太緊，也不太鬆。",
+    "在覺悟之後，佛陀沒有把這份平靜只留給自己。他立下了一個「發心（intention）」：以「慈悲（Mettā）」去教導，好讓其他人也能找到同樣的自在。為了跟隨他，學生們會「皈依（Refuge）」（皈依）——他們選擇以他的教導為引導，就像旅人選擇北極星一樣。",
+    "皈依不只是說說而已。當我們把慈心化為「行動」的那一刻，它才變得真實——即使是對一個我們可能再也見不到的「陌生人（stranger）」。當我們以「謙卑（humility）」去幫助，不求任何回報時，我們的善行就是「純淨的（pure）」。那就是行動中的慈悲：一個被守住的承諾，一次一個小小的善意。"
+   ]
   },
   "principle": {
    "lede": "An intention is a seed; a kind act is the flower. This week we learn that a good plan only matters when we carry it into the world with a pure heart.",
    "h4": "From intention to action 從發願到行動",
    "html": "To set an <em>intention</em> is to point the heart in a wholesome direction (Right Thought). To take <em>Refuge</em> is to trust the Buddha’s teaching as our guide. But the path is finished by <em>Mettā</em> — loving-kindness made real. When you help a stranger with humility and want nothing in return, your kindness is pure, and you walk the Middle Path: full of effort, yet free of pride.",
-   "video": null
+   "video": null,
+   "lede_zh": "發心是一顆種子；善行是那朵花。這星期我們要學的是：一個好的計畫，唯有當我們用純淨的心把它帶進這個世界時，才真正有意義。",
+   "zh_html": "立下一個「發心」，就是把心指向一個善的方向（正思惟）。「皈依」就是信任佛陀的教導作為我們的引導。但這條路是靠「慈悲（Mettā）」來完成的——也就是讓慈心成為真實。當你以謙卑去幫助一個陌生人、不求任何回報時，你的善意就是純淨的，而你也正走在中道上：充滿精進，卻沒有驕傲。"
   },
   "practice": {
    "note": "Do <strong>one kind act</strong> for a stranger this week. First write your <em>plan</em> in the future tense; afterward, write your <em>reflection</em> in the past tense. Choose the tier that fits you. 先用未來式寫下計畫，做完後用過去式寫下反思。",
@@ -1099,7 +1153,8 @@
      "h3": "Plan + Reflect (2 sentences)",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>1 plan sentence</strong> with “I am going to…” and <strong>1 reflection sentence</strong> with “I was…” or “I felt…”. Then say one good thing that happened today.",
-     "ex": "<b>Example</b>I am going to smile at a stranger. I felt happy after I smiled."
+     "ex": "<b>Example</b>I am going to smile at a stranger. I felt happy after I smiled.",
+     "req_zh": "寫「1 個計畫句」用「I am going to…（我打算要…）」，和「1 個反思句」用「I was…（我那時是…）」或「I felt…（我感覺到…）」。然後說一件今天發生的好事。"
     },
     {
      "tier": "t2",
@@ -1107,7 +1162,8 @@
      "h3": "Plan (3–4) + Reflect (2)",
      "age": "Ages 9–12 · developing fluency",
      "req": "Plan in <strong>3–4 sentences</strong> using <em>going to / will</em> and a reason with <strong>because</strong>. Reflect in <strong>2 sentences</strong> with feeling words. Then say whether your intention was pure Mettā.",
-     "ex": "<b>Example</b>I am going to help someone carry their bag, because it is heavy. I will ask them in a kind voice. The stranger was surprised. I felt joyful because I showed kindness."
+     "ex": "<b>Example</b>I am going to help someone carry their bag, because it is heavy. I will ask them in a kind voice. The stranger was surprised. I felt joyful because I showed kindness.",
+     "req_zh": "用「going to / will」寫「3–4 句」計畫，並用「because（因為）」加上一個理由。用帶有情緒詞的「2 句」做反思。然後說說你的發心是不是純淨的慈悲。"
     },
     {
      "tier": "t3",
@@ -1115,7 +1171,8 @@
      "h3": "Plan (5+) + Reflect (3–4)",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Plan in <strong>5+ sentences</strong> with complex structures; you must use <em>humility</em> and <em>Mettā</em>. Reflect in <strong>3–4 sentences</strong> on whether the act followed the Middle Path and how it strengthened your Right Thought.",
-     "ex": "<b>Example</b>Next week, I am going to volunteer at a community center. I will approach the task with humility, remembering that the intention (Mettā) of this act is pure. Although the task was difficult, I found the Middle Path by not getting stressed. This act of Mettā reinforced my Right Thought."
+     "ex": "<b>Example</b>Next week, I am going to volunteer at a community center. I will approach the task with humility, remembering that the intention (Mettā) of this act is pure. Although the task was difficult, I found the Middle Path by not getting stressed. This act of Mettā reinforced my Right Thought.",
+     "req_zh": "用較複雜的句型寫「5 句以上」的計畫；你必須用到「humility（謙卑）」和「Mettā（慈悲）」。用「3–4 句」反思這個行動有沒有遵循中道，以及它如何強化了你的正思惟。"
     }
    ]
   },
@@ -1268,13 +1325,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use <strong>comparative adjectives</strong> (<em>richer than, more important than</em>) to compare and judge what truly matters, and build self-affirmations with <strong>“I am…”</strong>. Learn the vocabulary of value: <em>self-worth, freedom, balance, humility, resilience</em>."
+    "html": "Use <strong>comparative adjectives</strong> (<em>richer than, more important than</em>) to compare and judge what truly matters, and build self-affirmations with <strong>“I am…”</strong>. Learn the vocabulary of value: <em>self-worth, freedom, balance, humility, resilience</em>.",
+    "zh_html": "使用「比較級形容詞」（richer than 比……更富有、more important than 比……更重要）來比較並判斷什麼才是真正重要的事，並用「I am…（我是……）」造出對自己的肯定句。學會跟「價值」有關的單字：self-worth（自我價值）、freedom（自由）、balance（平衡）、humility（謙卑）、resilience（韌性）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Right Thought (Sammā Saṅkappa)</strong> as choosing wholesome, kind thinking — including <strong>Self-Mettā</strong>, loving-kindness toward ourselves. Apply <strong>balance (Penhun 平衡)</strong> and the Middle Path, knowing wealth is a tool for serving others, not a goal."
+    "html": "Understand <strong>Right Thought (Sammā Saṅkappa)</strong> as choosing wholesome, kind thinking — including <strong>Self-Mettā</strong>, loving-kindness toward ourselves. Apply <strong>balance (Penhun 平衡)</strong> and the Middle Path, knowing wealth is a tool for serving others, not a goal.",
+    "zh_html": "理解「正思惟（Sammā Saṅkappa）」就是選擇善良、良善的想法──包括 Self-Mettā，也就是對自己的慈悲。運用「平衡（Penhun 平衡）」與中道，明白財富只是服務他人的工具，而不是目的。"
    }
   ],
   "vocab": [
@@ -1328,15 +1387,18 @@
     "examples": [
      {
       "html": "<strong>A calm heart is richer than gold.</strong>",
-      "say": "A calm heart is richer than gold."
+      "say": "A calm heart is richer than gold.",
+      "zh": "A calm heart is richer than gold.（平靜的心比黃金更富有。）"
      },
      {
       "html": "<strong>Friendship is happier than money.</strong>",
-      "say": "Friendship is happier than money."
+      "say": "Friendship is happier than money.",
+      "zh": "Friendship is happier than money.（友誼比金錢更快樂。）"
      },
      {
       "html": "<strong>Working hard is better than being lazy.</strong>",
-      "say": "Working hard is better than being lazy."
+      "say": "Working hard is better than being lazy.",
+      "zh": "Working hard is better than being lazy.（努力比偷懶更好。）"
      }
     ]
    },
@@ -1346,11 +1408,13 @@
     "examples": [
      {
       "html": "<strong>Love is more important than money.</strong>",
-      "say": "Love is more important than money."
+      "say": "Love is more important than money.",
+      "zh": "Love is more important than money.（愛比金錢更重要。）"
      },
      {
       "html": "<strong>Kindness is more valuable than gold.</strong>",
-      "say": "Kindness is more valuable than gold."
+      "say": "Kindness is more valuable than gold.",
+      "zh": "Kindness is more valuable than gold.（善良比黃金更珍貴。）"
      }
     ]
    },
@@ -1360,18 +1424,21 @@
     "examples": [
      {
       "html": "<strong>I matter. I am important.</strong>",
-      "say": "I matter. I am important."
+      "say": "I matter. I am important.",
+      "zh": "I matter. I am important.（我很重要。我很重要。）"
      },
      {
       "html": "<strong>I am worthy of kindness.</strong>",
-      "say": "I am worthy of kindness."
+      "say": "I am worthy of kindness.",
+      "zh": "I am worthy of kindness.（我值得被善待。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Comparative adjectives",
-   "html": "To compare two things, we use the <strong>comparative</strong> form plus <strong>than</strong>. For short words, add <strong>-er</strong>: <span class=\"ok\">rich → richer</span> · <span class=\"ok\">happy → happier</span> · <span class=\"ok\">hard → harder</span>. For longer words, use <strong>more</strong> before the adjective: <span class=\"ok\">important → more important</span> · <span class=\"ok\">valuable → more valuable</span>. A few are irregular: <span class=\"ok\">good → better</span> · <span class=\"ok\">bad → worse</span>. Right Thought uses comparison to see what truly matters."
+   "html": "To compare two things, we use the <strong>comparative</strong> form plus <strong>than</strong>. For short words, add <strong>-er</strong>: <span class=\"ok\">rich → richer</span> · <span class=\"ok\">happy → happier</span> · <span class=\"ok\">hard → harder</span>. For longer words, use <strong>more</strong> before the adjective: <span class=\"ok\">important → more important</span> · <span class=\"ok\">valuable → more valuable</span>. A few are irregular: <span class=\"ok\">good → better</span> · <span class=\"ok\">bad → worse</span>. Right Thought uses comparison to see what truly matters.",
+   "zh_html": "要比較兩樣東西時，我們用「比較級」加上「than（比）」。短的單字，後面加「-er」：rich → richer（富有→更富有）、happy → happier（快樂→更快樂）、hard → harder（努力→更努力）。比較長的單字，就在形容詞前面加「more（更）」：important → more important（重要→更重要）、valuable → more valuable（珍貴→更珍貴）。有幾個是不規則變化：good → better（好→更好）、bad → worse（壞→更壞）。正思惟就是用比較來看清楚什麼才是真正重要的。"
   },
   "story": {
    "paras": [
@@ -1388,13 +1455,19 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像有兩位鄰居。一位住在裝滿黃金的大房子裡，可是他整晚煩惱、從來不笑。另一位住在小房子，錢也不多，卻睡得很安穩，會分享他的食物，還跟朋友一起開懷大笑。到底誰才是真正富有的人呢？",
+    "佛陀教導我們，「物質財富」只是一個工具──拿來幫助別人很有用，但它不是人生的目的。最深的財富，是一顆平靜又善良的心。這就是「中道」與「平衡（Penhun 平衡）」：我們不貪心，也不偷懶。我們努力工作，也好好休息。",
+    "還有一個人我們一定要記得去愛──那就是「我們自己」。Self-Mettā（對自己的慈悲）的意思，就是把慈愛轉向自己的內心。當一個煩惱的念頭說「我不夠好」時，「正思惟」會溫柔地回答：「我很重要。我比我的煩惱更有韌性。我的價值，比我犯的錯更大。」"
+   ]
   },
   "principle": {
    "lede": "",
    "h4": "Right Thought, the Middle Way 中道的正思惟",
    "html": "Right Thought (Sammā Saṅkappa) means choosing thoughts of kindness, generosity, and non-harming — and that kindness includes ourselves. When negative self-talk appears, we do not fight it with more cruelty; we replace it with a true, gentle thought. To know our own worth is not arrogance (傲慢), and it is not low self-esteem either. It is the <em>balance</em> of the Middle Path: humble, kind, and quietly sure that we matter.",
-   "video": null
+   "video": null,
+   "zh_html": "正思惟（Sammā Saṅkappa）的意思，是選擇善良、慷慨、不傷害的想法──而這份善良也包括我們自己。當負面的自我對話出現時，我們不會用更多的殘忍去攻擊它；我們會用一個真實、溫柔的念頭去取代它。認識自己的價值不是傲慢，也不是自卑。它是中道的「平衡」：謙卑、善良，並安靜而堅定地相信──我們很重要。"
   },
   "practice": {
    "note": "Write in your journal <strong>every day</strong> this week. Each day, compare two values with a comparative adjective, and write a kind affirmation to yourself. Choose the tier that fits you. 每天比較兩種價值觀，並寫下一句對自己的肯定語。",
@@ -1405,7 +1478,8 @@
      "h3": "1 comparison + 1 affirmation",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>1 comparison</strong> using a simple comparative (<em>better, happier</em>) and <strong>1 affirmation</strong> using “I am…”.",
-     "ex": "<b>Example</b>A calm heart is better than a busy mind. I am important."
+     "ex": "<b>Example</b>A calm heart is better than a busy mind. I am important.",
+     "req_zh": "寫「1 個比較句」，用簡單的比較級（better 更好、happier 更快樂），再用「I am…（我是……）」寫「1 句肯定句」。"
     },
     {
      "tier": "t2",
@@ -1413,7 +1487,8 @@
      "h3": "2 comparisons + 2 affirmations",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>2 comparisons</strong> with two different forms (<em>more important, harder</em>), comparing spiritual and material value, and <strong>2 affirmations</strong> that say why you matter.",
-     "ex": "<b>Example</b>Kindness is more important than money. Working hard is better than being lazy. I am a good person because I am honest. I am important to my family."
+     "ex": "<b>Example</b>Kindness is more important than money. Working hard is better than being lazy. I am a good person because I am honest. I am important to my family.",
+     "req_zh": "用兩種不同形式寫「2 個比較句」（more important 更重要、harder 更努力），比較心靈價值與物質價值，再寫「2 句肯定句」說明你為什麼很重要。"
     },
     {
      "tier": "t3",
@@ -1421,7 +1496,8 @@
      "h3": "3–4 comparisons + 3 affirmations",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>3–4 comparisons</strong> using complex structures to analyze the Middle Path or balance (Penhun), and <strong>3 affirmations</strong> on how you use Right Thought to overcome anxiety or negative self-talk.",
-     "ex": "<b>Example</b>Living in humility is wiser than showing arrogance. Finding balance is harder than going to the extremes, but it provides more peace. When I feel anxiety, I remind myself, “I am more resilient than my worry.”"
+     "ex": "<b>Example</b>Living in humility is wiser than showing arrogance. Finding balance is harder than going to the extremes, but it provides more peace. When I feel anxiety, I remind myself, “I am more resilient than my worry.”",
+     "req_zh": "用較複雜的句型寫「3–4 個比較句」，分析中道或平衡（Penhun），再寫「3 句肯定句」，說明你如何運用正思惟克服焦慮或負面的自我對話。"
     }
    ]
   },
@@ -1574,13 +1650,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use <strong>comparatives</strong> (<em>more difficult, better than</em>) and <strong>superlatives</strong> (<em>the most important, the best</em>) to compare and rank actions and values. Review the four main tenses through reflection."
+    "html": "Use <strong>comparatives</strong> (<em>more difficult, better than</em>) and <strong>superlatives</strong> (<em>the most important, the best</em>) to compare and rank actions and values. Review the four main tenses through reflection.",
+    "zh_html": "使用比較級 comparatives（more difficult 更難、better than 比……好）和最高級 superlatives（the most important 最重要的、the best 最好的）來比較和排序行為與價值觀。透過反思複習四種主要時態。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Right Action (正業)</strong> and <strong>Right Livelihood (正命)</strong>, and use the <strong>Middle Path (中道)</strong> to evaluate behavior — choosing what is wholesome over what is unwholesome in daily life."
+    "html": "Understand <strong>Right Action (正業)</strong> and <strong>Right Livelihood (正命)</strong>, and use the <strong>Middle Path (中道)</strong> to evaluate behavior — choosing what is wholesome over what is unwholesome in daily life.",
+    "zh_html": "理解正業（Right Action）和正命（Right Livelihood），並用中道（Middle Path）來評估行為——在日常生活中選擇善的、捨棄不善的。"
    }
   ],
   "vocab": [
@@ -1634,15 +1712,18 @@
     "examples": [
      {
       "html": "<strong>Kindness is more important than money.</strong>",
-      "say": "Kindness is more important than money."
+      "say": "Kindness is more important than money.",
+      "zh": "Kindness is more important than money.（善良比金錢更重要。）"
      },
      {
       "html": "<strong>Being honest is better than lying.</strong>",
-      "say": "Being honest is better than lying."
+      "say": "Being honest is better than lying.",
+      "zh": "Being honest is better than lying.（誠實比說謊更好。）"
      },
      {
       "html": "<strong>Helping others is harder than ignoring them.</strong>",
-      "say": "Helping others is harder than ignoring them."
+      "say": "Helping others is harder than ignoring them.",
+      "zh": "Helping others is harder than ignoring them.（幫助別人比不理會別人更難。）"
      }
     ]
    },
@@ -1652,11 +1733,13 @@
     "examples": [
      {
       "html": "<strong>The Middle Path is the best choice.</strong>",
-      "say": "The Middle Path is the best choice."
+      "say": "The Middle Path is the best choice.",
+      "zh": "The Middle Path is the best choice.（中道是最好的選擇。）"
      },
      {
       "html": "<strong>Helping others is the most rewarding action I can take.</strong>",
-      "say": "Helping others is the most rewarding action I can take."
+      "say": "Helping others is the most rewarding action I can take.",
+      "zh": "Helping others is the most rewarding action I can take.（幫助別人是我能做的最有意義的事。）"
      }
     ]
    },
@@ -1666,18 +1749,21 @@
     "examples": [
      {
       "html": "<strong>I chose the best action because it avoided the extremes.</strong>",
-      "say": "I chose the best action because it avoided the extremes."
+      "say": "I chose the best action because it avoided the extremes.",
+      "zh": "I chose the best action because it avoided the extremes.（我選了最好的做法，因為它避開了兩個極端。）"
      },
      {
       "html": "<strong>Being a teacher is the most wholesome job because it helps people grow.</strong>",
-      "say": "Being a teacher is the most wholesome job because it helps people grow."
+      "say": "Being a teacher is the most wholesome job because it helps people grow.",
+      "zh": "Being a teacher is the most wholesome job because it helps people grow.（當老師是最善的工作，因為它幫助人成長。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Comparatives & Superlatives",
-   "html": "For short words, add <strong>-er</strong> to compare and <strong>-est</strong> for the best/most: <span class=\"ok\">kind → kinder → the kindest.</span> For long words, use <strong>more</strong> and <strong>the most</strong>: <span class=\"ok\">important → more important → the most important.</span> Some are irregular: <span class=\"ok\">good → better → the best</span> · <span class=\"ok\">bad → worse → the worst</span>. Use <strong>than</strong> with comparatives: <em>better <u>than</u> lying</em>."
+   "html": "For short words, add <strong>-er</strong> to compare and <strong>-est</strong> for the best/most: <span class=\"ok\">kind → kinder → the kindest.</span> For long words, use <strong>more</strong> and <strong>the most</strong>: <span class=\"ok\">important → more important → the most important.</span> Some are irregular: <span class=\"ok\">good → better → the best</span> · <span class=\"ok\">bad → worse → the worst</span>. Use <strong>than</strong> with comparatives: <em>better <u>than</u> lying</em>.",
+   "zh_html": "短的字加 -er 表示比較、加 -est 表示最（most）：kind → kinder → the kindest（善良 → 更善良 → 最善良）。長的字用 more 和 the most：important → more important → the most important（重要 → 更重要 → 最重要）。有些是不規則變化：good → better → the best（好 → 更好 → 最好）、bad → worse → the worst（壞 → 更壞 → 最壞）。比較時要用 than（比）：better than lying（比說謊更好）。"
   },
   "story": {
    "paras": [
@@ -1694,13 +1780,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "在成為老師之前，佛陀曾經嘗試極端苦行（extreme effort）的道路。好幾年裡他幾乎不吃東西，把身體逼到極限。他變得又瘦又虛弱，連思考都很困難——但他離平靜卻一點也沒有更近。",
+    "有一天，他聽到一位音樂老師在船上對學生說起一把琴（lute，一種弦琴）。「如果弦繃得太緊（too tight），它會斷掉。如果弦太鬆（too loose），它彈不出聲音。把它調得剛剛好（just right），它就能奏出美妙的音樂。」",
+    "佛陀立刻明白了。嚴苛的極端生活就像斷掉的弦；懶散的生活就像太鬆而唱不出聲的弦。最有智慧的方式就是中道（Middle Path）——不太緊，也不太鬆。從這份平衡中長出正業（Right Action）：選擇善的、避開會造成傷害的。最好的選擇很少是最極端的那個，而是最平衡（balanced）的那個。"
+   ]
   },
   "principle": {
    "lede": "The Path (Magga) is the fourth Noble Truth — the way that leads out of suffering. Two of its steps are <strong>Right Action</strong> and <strong>Right Livelihood</strong>, and both are guided by the <strong>Middle Path</strong>.",
    "h4": "Choosing the Wholesome 抉擇善業",
    "html": "<strong>Right Action (正業)</strong> means not harming, not stealing, and acting with honesty and care. <strong>Right Livelihood (正命)</strong> means earning a living in a way that does not hurt other beings. When you face a choice, ask: <em>Which action is the most wholesome? Which one keeps the balance of the Middle Path?</em> The worst way to make money is one that harms others; the easiest way to be kind is to start with a single honest, helpful act today. Comparing actions wisely — better, best, most balanced — is how Right View becomes Right Action.",
-   "video": null
+   "video": null,
+   "lede_zh": "道（Magga）是第四聖諦——那條帶領我們走出苦的路。其中兩個步驟是正業（Right Action）和正命（Right Livelihood），兩者都由中道（Middle Path）來引導。",
+   "zh_html": "正業（Right Action）的意思是不傷害、不偷竊，並以誠實與用心來行動。正命（Right Livelihood）的意思是以不傷害其他眾生的方式來謀生。當你面對選擇時，問自己：哪一個做法最善？哪一個能守住中道的平衡？最糟的賺錢方式是傷害別人的方式；而最容易的行善方式，就是從今天一個誠實、有幫助的小舉動開始。有智慧地比較各種行為——更好、最好、最平衡——就是正見（Right View）轉化為正業（Right Action）的方法。"
   },
   "practice": {
    "note": "Each day this week, compare and rank your choices to check that you are walking the Middle Path. Choose the tier that fits you. 每天用比較級和最高級評價你的行為，選一個適合自己的等級。",
@@ -1711,7 +1804,8 @@
      "h3": "Rank the day",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>2 sentences</strong> using <strong>the best</strong> and <strong>the worst</strong> to describe today. Add <strong>1 sentence</strong> celebrating your best choice.",
-     "ex": "<b>Example</b>The best part of my day was laughing. The worst feeling was anger. I am happy because I made the best choice."
+     "ex": "<b>Example</b>The best part of my day was laughing. The worst feeling was anger. I am happy because I made the best choice.",
+     "req_zh": "用 the best（最好）和 the worst（最糟）寫 2 個句子來描述今天。再加 1 個句子，慶祝你今天最好的選擇。"
     },
     {
      "tier": "t2",
@@ -1719,7 +1813,8 @@
      "h3": "Compare & choose",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>2 sentences</strong> comparing a right action with an unwholesome one, then <strong>1 sentence</strong> explaining why your best choice fits the Middle Path.",
-     "ex": "<b>Example</b>Being honest is better than lying. Helping others is the most rewarding action I can take. I chose the best action because it avoided the extremes of laziness and stress."
+     "ex": "<b>Example</b>Being honest is better than lying. Helping others is the most rewarding action I can take. I chose the best action because it avoided the extremes of laziness and stress.",
+     "req_zh": "寫 2 個句子，比較一個正確的行為和一個不善的行為，再用 1 個句子說明為什麼你最好的選擇符合中道。"
     },
     {
      "tier": "t3",
@@ -1727,7 +1822,8 @@
      "h3": "Livelihood & reflection",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>3–4 sentences</strong> using superlatives to discuss Right Livelihood and Right Action with complex structures, then <strong>2 sentences</strong> reflecting on your hardest-but-best choice.",
-     "ex": "<b>Example</b>Becoming a teacher is the most wholesome job because it helps people grow. When I chose to tell the truth, it was the hardest decision, but it brought the most peace to my heart."
+     "ex": "<b>Example</b>Becoming a teacher is the most wholesome job because it helps people grow. When I chose to tell the truth, it was the hardest decision, but it brought the most peace to my heart.",
+     "req_zh": "用最高級寫 3–4 個句子，搭配較複雜的句型，討論正命和正業，再用 2 個句子反思你那個最難卻最好的選擇。"
     }
    ]
   },
@@ -1880,13 +1976,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use <strong>articles</strong> correctly — <strong>a / an</strong> for general things and <strong>the</strong> for specific ones — and use <strong>prepositions of place and time</strong> (<em>in, on, at, under</em>) to say exactly where and when you feel calm."
+    "html": "Use <strong>articles</strong> correctly — <strong>a / an</strong> for general things and <strong>the</strong> for specific ones — and use <strong>prepositions of place and time</strong> (<em>in, on, at, under</em>) to say exactly where and when you feel calm.",
+    "zh_html": "正確使用「冠詞」——a / an 用在一般、不特定的事物，the 用在特定的事物——並使用「地方和時間的介系詞」（in 在……裡、on 在……上、at 在……、under 在……下面）來精確地說出你在哪裡、什麼時候感到平靜。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Right Concentration (Samādhi)</strong> and <strong>Right Mindfulness (Sati)</strong> as the fruit of steady Right Effort — learning that real peace is found not in a perfect place, but in the <em>present moment</em>, with the focus resting gently on the breath."
+    "html": "Understand <strong>Right Concentration (Samādhi)</strong> and <strong>Right Mindfulness (Sati)</strong> as the fruit of steady Right Effort — learning that real peace is found not in a perfect place, but in the <em>present moment</em>, with the focus resting gently on the breath.",
+    "zh_html": "了解「正定（Right Concentration，巴利文 Samādhi）」和「正念（Right Mindfulness，Sati）」是穩定的「正精進」所結出的果實——明白真正的平安不在某個完美的地方，而在當下，讓專注力輕輕地安放在呼吸上。"
    }
   ],
   "vocab": [
@@ -1946,15 +2044,18 @@
     "examples": [
      {
       "html": "<strong>I need a moment of peace.</strong>",
-      "say": "I need a moment of peace."
+      "say": "I need a moment of peace.",
+      "zh": "我需要一刻的安寧。"
      },
      {
       "html": "<strong>The Buddha taught the Eightfold Path.</strong>",
-      "say": "The Buddha taught the Eightfold Path."
+      "say": "The Buddha taught the Eightfold Path.",
+      "zh": "佛陀教導了八正道。"
      },
      {
       "html": "<strong>A simple life is enough.</strong>",
-      "say": "A simple life is enough."
+      "say": "A simple life is enough.",
+      "zh": "簡單的生活就足夠了。"
      }
     ]
    },
@@ -1964,15 +2065,18 @@
     "examples": [
      {
       "html": "<strong>Peace is in my heart.</strong>",
-      "say": "Peace is in my heart."
+      "say": "Peace is in my heart.",
+      "zh": "安詳就在我的心裡。"
      },
      {
       "html": "<strong>My concentration is on my breath.</strong>",
-      "say": "My concentration is on my breath."
+      "say": "My concentration is on my breath.",
+      "zh": "我的專注力放在我的呼吸上。"
      },
      {
       "html": "<strong>I put the stress under a chair.</strong>",
-      "say": "I put the stress under a chair."
+      "say": "I put the stress under a chair.",
+      "zh": "我把壓力放到椅子底下。"
      }
     ]
    },
@@ -1982,18 +2086,21 @@
     "examples": [
      {
       "html": "<strong>I meditate at night.</strong>",
-      "say": "I meditate at night."
+      "say": "I meditate at night.",
+      "zh": "我在夜裡靜坐。"
      },
      {
       "html": "<strong>I can find silence at any time.</strong>",
-      "say": "I can find silence at any time."
+      "say": "I can find silence at any time.",
+      "zh": "我隨時都能找到寧靜。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Articles and prepositions",
-   "html": "Use <strong>a / an</strong> for something general (one of many) and <strong>the</strong> for something specific that we both know: <span class=\"ok\">a kind thought</span> vs. <span class=\"ok\">the Middle Path</span>. Use <strong>in</strong> for inside (<span class=\"ok\">in my heart</span>), <strong>on</strong> for a surface (<span class=\"ok\">on my breath</span>), and <strong>at</strong> for an exact place or time (<span class=\"ok\">at night</span>). These tiny words help us point to <em>where</em> and <em>when</em> our calm lives."
+   "html": "Use <strong>a / an</strong> for something general (one of many) and <strong>the</strong> for something specific that we both know: <span class=\"ok\">a kind thought</span> vs. <span class=\"ok\">the Middle Path</span>. Use <strong>in</strong> for inside (<span class=\"ok\">in my heart</span>), <strong>on</strong> for a surface (<span class=\"ok\">on my breath</span>), and <strong>at</strong> for an exact place or time (<span class=\"ok\">at night</span>). These tiny words help us point to <em>where</em> and <em>when</em> our calm lives.",
+   "zh_html": "用 a / an 來指一般的事物（眾多之中的一個），用 the 來指我們彼此都知道的特定事物：a kind thought（一個善念）相對於 the Middle Path（中道）。用 in 表示在裡面（in my heart 在我心裡）、on 表示在表面上（on my breath 在我的呼吸上）、at 表示某個確切的地點或時間（at night 在夜裡）。這些小小的字幫助我們指出平靜住在「哪裡」和「什麼時候」。"
   },
   "story": {
    "paras": [
@@ -2010,13 +2117,19 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像有個孩子因為房間很吵而沒辦法讀書（房間很吵）。她跑到一個安靜的角落，可是有一隻狗在叫。她跑到花園，可是風又吹了起來。她走到哪裡，都有東西打擾她，於是她又累又難過。",
+    "一位有智慧的老師微笑著說：「你一直在『一個地方』裡找平靜。但平靜不是住在房間或角落裡——它住在當下。」老師教她如何一次又一次地把注意力帶回到一件簡單的事情上：她自己的呼吸。這樣穩定地一再回來，就是「正念（Right Mindfulness，Sati）」，而它所帶來那份平靜、凝聚的專注，就是「正定（Right Concentration，Samādhi）」。",
+    "八正道的最後三步——「正精進、正念、正定」——就像一階一階爬樓梯一樣一起運作。靠著有耐心的正精進，這孩子學會了即使在吵雜的房間裡，也能把專注力安放在自己的呼吸上。她發現了一個祕密：平靜的關鍵不在於地點，而在於專注。平靜其實從來不遙遠——它一直都在這裡，就在此時此刻。"
+   ]
   },
   "principle": {
    "lede": "",
    "h4": "Concentration, the Fruit of Effort 精進結出的果實",
    "html": "Right Concentration is not forcing the mind to be still — it is the quiet gathering of attention that grows from kind, steady Right Effort and gentle Right Mindfulness. When your focus rests <em>on</em> your breath and your heart settles <em>in</em> the present moment, you can find calmness <em>at</em> any time and in any place, even a noisy one. Peace is not somewhere far away; it is here, now.",
-   "video": null
+   "video": null,
+   "zh_html": "正定不是強迫心安靜下來——它是從那份溫和、穩定的正精進，以及柔和的正念中，慢慢凝聚起來的安靜專注。當你的專注安放在呼吸上、你的心安住在當下，你就能隨時、在任何地方找到平靜，即使是在很吵的地方也一樣。平安不在遠方某處；它就在這裡、就在現在。"
   },
   "practice": {
    "note": "Every day this week, use articles and prepositions to write down <strong>where</strong> and <strong>when</strong> you found your peace. Choose the tier that fits you. 每天用冠詞和介詞寫下你在哪裡、什麼時候找到平靜。",
@@ -2027,7 +2140,8 @@
      "h3": "2 sentences + affirmation",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>2 preposition sentences</strong> using <em>in</em> and <em>on</em> to show where peace is, plus <strong>1 affirmation</strong> using <em>a</em> or <em>the</em>.",
-     "ex": "<b>Example</b>I feel calm in my bed. I see a book on a table. I am a peaceful student."
+     "ex": "<b>Example</b>I feel calm in my bed. I see a book on a table. I am a peaceful student.",
+     "req_zh": "寫 2 個介系詞句子，用 in 和 on 來表示平靜在哪裡，再加 1 句肯定語，用到 a 或 the。"
     },
     {
      "tier": "t2",
@@ -2035,7 +2149,8 @@
      "h3": "3–4 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3–4 sentences</strong> using <em>in, on, at</em> and the articles <em>a, an, the</em> to describe time and place, then say where your concentration is.",
-     "ex": "<b>Example</b>I feel relaxed at night. I put the stress under a chair. I am reading an interesting book. My focus is on my breathing."
+     "ex": "<b>Example</b>I feel relaxed at night. I put the stress under a chair. I am reading an interesting book. My focus is on my breathing.",
+     "req_zh": "寫 3–4 個句子，用到 in、on、at 和冠詞 a、an、the 來描述時間和地點，然後說說你的專注力放在哪裡。"
     },
     {
      "tier": "t3",
@@ -2043,7 +2158,8 @@
      "h3": "4–5 sentences",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>4–5 sentences</strong> using complex structures and all the prepositions and articles. Reflect on how Right Mindfulness (Sati) helps you find calm in an imperfect place.",
-     "ex": "<b>Example</b>I practice the Right Mindfulness even in a noisy room. The key to my peace is not the location, but the focus on my breathing. I can find silence at any time."
+     "ex": "<b>Example</b>I practice the Right Mindfulness even in a noisy room. The key to my peace is not the location, but the focus on my breathing. I can find silence at any time.",
+     "req_zh": "寫 4–5 個句子，使用複雜句型，並用上所有的介系詞和冠詞。想一想正念（Sati）如何幫助你在一個不完美的地方裡找到平靜。"
     }
    ]
   },
@@ -2196,13 +2312,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Form and use <strong>adverbs of manner</strong> by adding <strong>-ly</strong> (wise → wisely), including irregular ones (<em>good → well, fast → fast</em>). Review the four main tenses — <strong>simple present, present continuous, simple past, simple future</strong> — to describe <em>when</em> an action happens."
+    "html": "Form and use <strong>adverbs of manner</strong> by adding <strong>-ly</strong> (wise → wisely), including irregular ones (<em>good → well, fast → fast</em>). Review the four main tenses — <strong>simple present, present continuous, simple past, simple future</strong> — to describe <em>when</em> an action happens.",
+    "zh_html": "透過加上 -ly 來構成並使用情狀副詞（adverbs of manner）（wise → wisely 有智慧地），也包括不規則的（good → well 好地、fast → fast 快速地）。複習四個主要時態──簡單現在式、現在進行式、簡單過去式、簡單未來式──用來描述一個動作發生的時間。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Right Effort (Viriya)</strong> — preventing unwholesome states and cultivating wholesome ones — and define <strong>Mindfulness (Sati)</strong> as awareness of the present moment. Use the wisdom learned earlier to <em>guide</em> our effort, and act it out steadily, every day."
+    "html": "Understand <strong>Right Effort (Viriya)</strong> — preventing unwholesome states and cultivating wholesome ones — and define <strong>Mindfulness (Sati)</strong> as awareness of the present moment. Use the wisdom learned earlier to <em>guide</em> our effort, and act it out steadily, every day.",
+    "zh_html": "了解「正精進」（Right Effort，Viriya）──防止不善的狀態、培養善的狀態──並把「正念」（Mindfulness，Sati）定義為對當下的覺察。運用先前學到的智慧來引導我們的精進，並且每天穩定地把它實踐出來。"
    }
   ],
   "vocab": [
@@ -2262,15 +2380,18 @@
     "examples": [
      {
       "html": "<strong>We speak truthfully.</strong>",
-      "say": "We speak truthfully."
+      "say": "We speak truthfully.",
+      "zh": "We speak truthfully.（我們誠實地說話。）"
      },
      {
       "html": "<strong>I always listen carefully.</strong>",
-      "say": "I always listen carefully."
+      "say": "I always listen carefully.",
+      "zh": "I always listen carefully.（我總是仔細地聆聽。）"
      },
      {
       "html": "<strong>He acted wisely and kindly.</strong>",
-      "say": "He acted wisely and kindly."
+      "say": "He acted wisely and kindly.",
+      "zh": "He acted wisely and kindly.（他有智慧又善良地行動。）"
      }
     ]
    },
@@ -2280,11 +2401,13 @@
     "examples": [
      {
       "html": "<strong>I am sitting quietly now.</strong>",
-      "say": "I am sitting quietly now."
+      "say": "I am sitting quietly now.",
+      "zh": "I am sitting quietly now.（我現在正安靜地坐著。）"
      },
      {
       "html": "<strong>I am breathing slowly at this moment.</strong>",
-      "say": "I am breathing slowly at this moment."
+      "say": "I am breathing slowly at this moment.",
+      "zh": "I am breathing slowly at this moment.（我此刻正緩緩地呼吸。）"
      }
     ]
    },
@@ -2294,18 +2417,21 @@
     "examples": [
      {
       "html": "<strong>I will speak kindly next time.</strong>",
-      "say": "I will speak kindly next time."
+      "say": "I will speak kindly next time.",
+      "zh": "I will speak kindly next time.（下次我會親切地說話。）"
      },
      {
       "html": "<strong>Yesterday, I responded thoughtfully instead of shouting.</strong>",
-      "say": "Yesterday, I responded thoughtfully instead of shouting."
+      "say": "Yesterday, I responded thoughtfully instead of shouting.",
+      "zh": "Yesterday, I responded thoughtfully instead of shouting.（昨天我沒有大吼，而是體貼地回應。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Adverbs of manner & the four tenses",
-   "html": "An <strong>adverb of manner</strong> tells us <em>how</em> we do something. Most are made with <strong>adjective + -ly</strong>: <span class=\"ok\">wise → wisely</span> · <span class=\"ok\">calm → calmly</span> · <span class=\"ok\">truthful → truthfully</span>. Watch the irregular ones: <span class=\"ok\">good → well</span> and <span class=\"ok\">fast → fast</span>. Then choose the right <strong>tense</strong> to show <em>when</em>: <strong>simple present</strong> for habits (<em>always, every day</em>), <strong>present continuous</strong> for now (<em>at the moment</em>), <strong>simple past</strong> for reflection (<em>yesterday</em>), and <strong>simple future</strong> for plans (<em>tomorrow, next week</em>)."
+   "html": "An <strong>adverb of manner</strong> tells us <em>how</em> we do something. Most are made with <strong>adjective + -ly</strong>: <span class=\"ok\">wise → wisely</span> · <span class=\"ok\">calm → calmly</span> · <span class=\"ok\">truthful → truthfully</span>. Watch the irregular ones: <span class=\"ok\">good → well</span> and <span class=\"ok\">fast → fast</span>. Then choose the right <strong>tense</strong> to show <em>when</em>: <strong>simple present</strong> for habits (<em>always, every day</em>), <strong>present continuous</strong> for now (<em>at the moment</em>), <strong>simple past</strong> for reflection (<em>yesterday</em>), and <strong>simple future</strong> for plans (<em>tomorrow, next week</em>).",
+   "zh_html": "情狀副詞（adverb of manner）告訴我們做一件事的方式（how）。大部分是用「形容詞 + -ly」構成：wise → wisely（有智慧地）、calm → calmly（平靜地）、truthful → truthfully（誠實地）。要注意不規則的：good → well（好地）和 fast → fast（快速地）。接著選對時態（tense）來表示時間：用簡單現在式表示習慣（always 總是、every day 每天），用現在進行式表示現在（at the moment 此刻），用簡單過去式表示回顧（yesterday 昨天），用簡單未來式表示計畫（tomorrow 明天、next week 下週）。"
   },
   "story": {
    "paras": [
@@ -2322,13 +2448,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像一位名叫安雅（Anya）的小學生。上週她學會了要有智慧。這週老師問了一個新問題：不只是什麼才是有智慧的，而是你要怎麼去做？安雅想了一下，說：「我會有智慧地（wisely）行動。」老師笑了──安雅把一個形容詞變成了情狀副詞（adverb of manner），一個用來表示我們怎麼做事的字。",
+    "有一天安雅覺得很生氣，想要大吼。但她想起了「正精進」（Right Effort，Viriya）：在不善的東西長大之前先把它停下來，並且改去培養善的東西（阻止惡、生起善）。於是她平靜地（calmly）呼吸，溫和地（gently）回答。「上週我大吼了，」她說，「今天我正親切地（kindly）說話，明天我會再試一次。」一個句子同時包含了過去、現在和未來──還有一份穩定而喜悅的精進。",
+    "接著老師請她安靜地坐著。安雅注意到自己的呼吸、房間裡的聲音、溫暖的光。她沒有在想昨天或明天。她就只是在這裡（here）。這就是「正念」（Mindfulness，Sati）：對當下完整而溫柔的覺察。精進和正念合而為一──我們穩定地培養（cultivate）好習慣，並捨棄（abandon）有害的習慣，一次一個正念的當下。"
+   ]
   },
   "principle": {
    "lede": "Right Effort is not a single burst — it is steady, conscious energy, repeated every day. Mindfulness is the gentle light that keeps that effort awake in the present moment.",
    "h4": "Steady Effort, Awake Mind 持續的精進，清醒的心",
    "html": "Right Effort (Viriya) has four sides: prevent unwholesome states from arising, abandon those that have arisen, cultivate wholesome states, and keep them growing. Notice that we describe this with <em>adverbs</em> — we act <strong>steadily, wisely, calmly</strong> — and we anchor it with <em>tenses</em>: a habit in the simple present, a mindful action in the present continuous. When we act wisely <strong>every day</strong> and stay aware <strong>right now</strong>, effort and mindfulness become one path that leads toward Concentration (Samādhi).",
-   "video": null
+   "video": null,
+   "lede_zh": "正精進不是一次爆發──它是穩定、有意識的能量，每天重複。正念則是那道溫柔的光，讓那份精進在當下保持清醒。",
+   "zh_html": "正精進（Viriya）有四個面向：防止還沒生起的不善狀態生起、捨棄已經生起的不善狀態、培養善的狀態、並讓它們持續增長。注意我們是用副詞（adverbs）來描述這件事──我們穩定地、有智慧地、平靜地行動──並用時態（tenses）來定位它：習慣用簡單現在式，正念的行動用現在進行式。當我們每天都有智慧地行動，並在此刻保持覺察，精進和正念就成為同一條路，通往「定」（Concentration，Samādhi）。"
   },
   "practice": {
    "note": "Each day this week, record one act of Right Effort. Use an <strong>adverb</strong> to say <em>how</em> you acted, and a <strong>tense</strong> to show <em>when</em>. Choose the tier that fits you — the daily practice <em>is</em> the effort. 每天記錄一個正精進的行為，用副詞描述方式，用時態確認時間。",
@@ -2339,7 +2472,8 @@
      "h3": "Present + reflection",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>2 sentences</strong> in the simple present, each with an adverb, about a kind daily habit. Then write <strong>1 sentence</strong> in the simple past about a calm moment today.",
-     "ex": "<b>Example</b>I always listen carefully. I speak kindly to my friend. I felt calm when I read quietly in my room."
+     "ex": "<b>Example</b>I always listen carefully. I speak kindly to my friend. I felt calm when I read quietly in my room.",
+     "req_zh": "用簡單現在式寫 2 個句子，每句都帶一個副詞，描述一個善良的日常習慣。然後用簡單過去式寫 1 個句子，描述今天一個平靜的時刻。"
     },
     {
      "tier": "t2",
@@ -2347,7 +2481,8 @@
      "h3": "Now + past effort",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>1 sentence</strong> in the present continuous with an adverb about your focus right now. Then write <strong>2 sentences</strong> in the simple past with adverbs about a Right Effort that worked.",
-     "ex": "<b>Example</b>I am sitting peacefully right now, focusing steadily on my breath. Yesterday, I responded thoughtfully instead of shouting. I finished my homework diligently."
+     "ex": "<b>Example</b>I am sitting peacefully right now, focusing steadily on my breath. Yesterday, I responded thoughtfully instead of shouting. I finished my homework diligently.",
+     "req_zh": "用現在進行式寫 1 個句子，帶一個副詞，描述你現在正在專注的事。然後用簡單過去式寫 2 個句子，帶副詞，描述一次成功的正精進。"
     },
     {
      "tier": "t3",
@@ -2355,7 +2490,8 @@
      "h3": "Synthesis",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>4–5 sentences</strong> combining future, past, and present continuous with several adverbs to discuss the four sides of Right Effort. Then reflect: how do effort and mindfulness help you overcome greed (貪) or anger (嗔)?",
-     "ex": "<b>Example</b>I will try harder to speak gently and truthfully tomorrow. I am working patiently on my difficult assignment now, preventing frustration. Last week, I successfully avoided a mean comment, which I now see as acting wisely."
+     "ex": "<b>Example</b>I will try harder to speak gently and truthfully tomorrow. I am working patiently on my difficult assignment now, preventing frustration. Last week, I successfully avoided a mean comment, which I now see as acting wisely.",
+     "req_zh": "寫 4 到 5 個句子，結合未來式、過去式和現在進行式，並用上好幾個副詞，來談正精進的四個面向。然後反思：精進和正念如何幫助你克服貪（greed）或嗔（anger）？"
     }
    ]
   },
@@ -2508,13 +2644,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Synthesize <strong>all Q1 grammar</strong> in conversation: four tenses (past, present, continuous, future), comparative and superlative adjectives, adverbs, articles, and prepositions. Practice a <strong>“seeking advice”</strong> dialogue, and learn review vocabulary: <em>comprehensive, synthesis, resolve, challenge</em>."
+    "html": "Synthesize <strong>all Q1 grammar</strong> in conversation: four tenses (past, present, continuous, future), comparative and superlative adjectives, adverbs, articles, and prepositions. Practice a <strong>“seeking advice”</strong> dialogue, and learn review vocabulary: <em>comprehensive, synthesis, resolve, challenge</em>.",
+    "zh_html": "在對話中綜合運用「Q1 全部的文法」：四種時態（過去、現在、現在進行、未來）、比較級與最高級形容詞、副詞、冠詞和介系詞。練習一段「尋求建議（seeking advice）」的對話，並學習複習單字：comprehensive（完整的）、synthesis（綜合）、resolve（解決）、challenge（挑戰）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Summarize Quarter 1 through the <strong>Fourth Noble Truth: Magga 道諦</strong>. Name and describe the eight steps of the <strong>Noble Eightfold Path</strong>, and discuss how they work <em>together</em> to resolve the suffering (Dukkha 苦) we meet in daily life."
+    "html": "Summarize Quarter 1 through the <strong>Fourth Noble Truth: Magga 道諦</strong>. Name and describe the eight steps of the <strong>Noble Eightfold Path</strong>, and discuss how they work <em>together</em> to resolve the suffering (Dukkha 苦) we meet in daily life.",
+    "zh_html": "透過「第四聖諦：道諦（Magga）」來總結第一季。說出並描述「八正道（Noble Eightfold Path）」的八個步驟，並討論它們如何「一起」運作，來解決我們日常生活中遇到的苦（Dukkha）。"
    }
   ],
   "vocab": [
@@ -2568,11 +2706,13 @@
     "examples": [
      {
       "html": "<strong>I am feeling anxious because I have a test tomorrow.</strong>",
-      "say": "I am feeling anxious because I have a test tomorrow."
+      "say": "I am feeling anxious because I have a test tomorrow.",
+      "zh": "I am feeling anxious because I have a test tomorrow.（我感到焦慮，因為我明天有考試。）"
      },
      {
       "html": "<strong>I am feeling sad because I argued with my friend yesterday.</strong>",
-      "say": "I am feeling sad because I argued with my friend yesterday."
+      "say": "I am feeling sad because I argued with my friend yesterday.",
+      "zh": "I am feeling sad because I argued with my friend yesterday.（我感到難過，因為我昨天和朋友吵架了。）"
      }
     ]
    },
@@ -2582,11 +2722,13 @@
     "examples": [
      {
       "html": "<strong>You can use Right Mindfulness. I am breathing calmly now.</strong>",
-      "say": "You can use Right Mindfulness. I am breathing calmly now."
+      "say": "You can use Right Mindfulness. I am breathing calmly now.",
+      "zh": "You can use Right Mindfulness. I am breathing calmly now.（你可以用正念。我現在正平靜地呼吸。）"
      },
      {
       "html": "<strong>Right Speech is the kindest way. I will speak gently tomorrow.</strong>",
-      "say": "Right Speech is the kindest way. I will speak gently tomorrow."
+      "say": "Right Speech is the kindest way. I will speak gently tomorrow.",
+      "zh": "Right Speech is the kindest way. I will speak gently tomorrow.（正語是最善良的方式。我明天會溫和地說話。）"
      }
     ]
    },
@@ -2596,22 +2738,26 @@
     "examples": [
      {
       "html": "<strong>I am feeling stressed about my test. What should I do?</strong>",
-      "say": "I am feeling stressed about my test. What should I do?"
+      "say": "I am feeling stressed about my test. What should I do?",
+      "zh": "I am feeling stressed about my test. What should I do?（我為考試感到壓力很大。我該怎麼辦？）"
      },
      {
       "html": "<strong>You can try Right Effort. Study a little every day, and you will feel calmer.</strong>",
-      "say": "You can try Right Effort. Study a little every day, and you will feel calmer."
+      "say": "You can try Right Effort. Study a little every day, and you will feel calmer.",
+      "zh": "You can try Right Effort. Study a little every day, and you will feel calmer.（你可以試試正精進。每天讀一點點，你就會覺得比較平靜。）"
      },
      {
       "html": "<strong>Thank you. That is the most helpful advice.</strong>",
-      "say": "Thank you. That is the most helpful advice."
+      "say": "Thank you. That is the most helpful advice.",
+      "zh": "Thank you. That is the most helpful advice.（謝謝你。那是最有幫助的建議。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Putting all the tenses together",
-   "html": "In a real conversation we mix tenses naturally. We describe a problem with the <strong>past</strong> (<span class=\"ok\">I argued</span>) or <strong>present continuous</strong> (<span class=\"ok\">I am feeling worried</span>), and we offer hope with the <strong>future</strong> (<span class=\"ok\">You will feel better</span>). Use <strong>comparatives</strong> to compare (<span class=\"ok\">a calmer way</span>) and <strong>adverbs</strong> to say how (<span class=\"ok\">speak kindly</span>, <span class=\"ok\">breathe slowly</span>)."
+   "html": "In a real conversation we mix tenses naturally. We describe a problem with the <strong>past</strong> (<span class=\"ok\">I argued</span>) or <strong>present continuous</strong> (<span class=\"ok\">I am feeling worried</span>), and we offer hope with the <strong>future</strong> (<span class=\"ok\">You will feel better</span>). Use <strong>comparatives</strong> to compare (<span class=\"ok\">a calmer way</span>) and <strong>adverbs</strong> to say how (<span class=\"ok\">speak kindly</span>, <span class=\"ok\">breathe slowly</span>).",
+   "zh_html": "在真實的對話裡，我們會自然地混用各種時態。我們用「過去式」（I argued 我吵架了）或「現在進行式」（I am feeling worried 我正感到擔心）來描述問題，再用「未來式」（You will feel better 你會覺得好一些）來給予希望。用「比較級」來做比較（a calmer way 比較平靜的方式），用「副詞」來說明怎麼做（speak kindly 親切地說話、breathe slowly 慢慢地呼吸）。"
   },
   "story": {
    "paras": [
@@ -2629,13 +2775,21 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "佛陀教導我們，當我們感到苦（Dukkha）時，並不需要一直困在裡面。有一條完整的前進之路——「八正道（Noble Eightfold Path）」（八正道）。這八個步驟是：",
+    "1. 「正見（Right View）」——如實地看見事物的本來面貌。2. 「正思惟（Right Thought）」——善良又有智慧的發心。3. 「正語（Right Speech）」——說真實又溫和的話。4. 「正業（Right Action）」——用心地行動，不傷害。",
+    "5. 「正命（Right Livelihood）」——誠實地謀生。6. 「正精進（Right Effort）」——每天穩定又歡喜地努力。7. 「正念（Right Mindfulness）」——保持對當下的覺察。8. 「正定（Right Concentration）」——一顆平靜、專注的心。",
+    "沒有任何一個步驟能單獨運作。正精進需要正念；正語需要正思惟。它們一起「解決（resolve）」日常生活的挑戰——而這整個季度，每一堂文法課都是讓我們能走上這條路、並談論它的另一項工具。"
+   ]
   },
   "principle": {
    "lede": "The Fourth Noble Truth tells us there <em>is</em> a way out of suffering — the Path (Magga 道諦). It has eight steps that work together, like eight strings on one instrument. Here is the whole path in simple words.",
    "h4": "One Path, Eight Steps 一條道路，八個步驟",
    "html": "The Path is the most complete way to find peace. The eight steps are not eight separate rules — they support one another like the eight spokes of a wheel. When a challenge comes, we do not panic; we ask, “Which step of the Path can I use right now?” That is how wisdom turns into action, and how the words we learn turn into a kinder, calmer life.",
-   "video": null
+   "video": null,
+   "lede_zh": "第四聖諦告訴我們，確實「有」一條脫離苦的路——道諦（Magga）。它有八個一起運作的步驟，就像同一件樂器上的八根弦。以下用簡單的話介紹這整條路。",
+   "zh_html": "這條道是找到平靜最完整的方法。這八個步驟不是八條各自獨立的規則——它們像車輪的八根輻條一樣彼此支撐。當挑戰來臨時，我們不慌張；我們會問：「現在我可以用道上的哪一個步驟？」這就是智慧如何化為行動，也是我們學到的字句如何化為更善良、更平靜的生活。"
   },
   "practice": {
    "note": "Make a note or mind map that links each Quarter 1 Buddhist concept to its English grammar and one example sentence. Choose the tier that fits you, and get ready for next week’s Q1 assessment. 把每個佛學概念與對應的語法和例句連起來。",
@@ -2646,7 +2800,8 @@
      "h3": "Map 3 concepts",
      "age": "Ages 5–8 · new learners",
      "req": "Link <strong>3 concepts</strong> (e.g., Right Effort, Mettā, Dukkha) to a grammar point and write <strong>1 example sentence</strong> for each.",
-     "ex": "<b>Example</b>Mettā → Adverbs → I speak kindly to my friend."
+     "ex": "<b>Example</b>Mettā → Adverbs → I speak kindly to my friend.",
+     "req_zh": "把「3 個概念」（例如：正精進、慈悲、苦）各連結到一個文法點，並為每一個寫「1 個例句」。"
     },
     {
      "tier": "t2",
@@ -2654,7 +2809,8 @@
      "h3": "Map 5 concepts",
      "age": "Ages 9–12 · developing fluency",
      "req": "Link <strong>5 concepts</strong> to grammar. Include at least <strong>Simple Past</strong> and <strong>Present Continuous</strong>, each with a clear example sentence.",
-     "ex": "<b>Example</b>Karma → Simple Past → I slept well because I finished my work."
+     "ex": "<b>Example</b>Karma → Simple Past → I slept well because I finished my work.",
+     "req_zh": "把「5 個概念」連結到文法。至少要包含「簡單過去式」和「現在進行式」，每個都附上一個清楚的例句。"
     },
     {
      "tier": "t3",
@@ -2662,7 +2818,8 @@
      "h3": "Full map + reflection",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Map <strong>all 6 concepts</strong> (Right Effort, Mindfulness, Karma/Volition, Mettā, Dukkha, Magga) using comparatives and adverbs, then write a short reflection on the whole Path.",
-     "ex": "<b>Example</b>Self-Worth → Comparative Adjectives → My heart is more important than my phone."
+     "ex": "<b>Example</b>Self-Worth → Comparative Adjectives → My heart is more important than my phone.",
+     "req_zh": "用比較級和副詞把「全部 6 個概念」（正精進、正念、業／思、慈悲、苦、道）對應起來，然後寫一段對整條道路的簡短反思。"
     }
    ]
   },
@@ -2815,13 +2972,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use descriptive adjectives for feelings (<em>overwhelmed, calm, stressed</em>) and action verbs for managing them (<em>accept, let go, observe</em>). Master the patterns <strong>“I can control…”</strong> and <strong>“I cannot control…”</strong>, plus <strong>“It is better to…”</strong>"
+    "html": "Use descriptive adjectives for feelings (<em>overwhelmed, calm, stressed</em>) and action verbs for managing them (<em>accept, let go, observe</em>). Master the patterns <strong>“I can control…”</strong> and <strong>“I cannot control…”</strong>, plus <strong>“It is better to…”</strong>",
+    "zh_html": "使用描述心情的形容詞（overwhelmed 不知所措、calm 平靜、stressed 有壓力），以及處理情緒的動作動詞（accept 接受、let go 放下、observe 觀察）。熟練句型「I can control…（我可以控制……）」與「I cannot control…（我無法控制……）」，還有「It is better to…（……比較好）」。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Upekkhā (equanimity, 捨心)</strong> as a balanced heart that is not controlled by strong emotion. Practice <strong>Right Action</strong> and <strong>Right Speech</strong> by focusing energy inside the Circle of Control — and meet every feeling with non-judgmental observation."
+    "html": "Understand <strong>Upekkhā (equanimity, 捨心)</strong> as a balanced heart that is not controlled by strong emotion. Practice <strong>Right Action</strong> and <strong>Right Speech</strong> by focusing energy inside the Circle of Control — and meet every feeling with non-judgmental observation.",
+    "zh_html": "理解「Upekkhā（捨心、平等心，捨心）」是一顆不被強烈情緒控制的、平衡的心。練習「正業」與「正語」，把精力專注在「可控制的圈圈」裡──並用不批判的態度去觀察每一種感受。"
    }
   ],
   "vocab": [
@@ -2881,11 +3040,13 @@
     "examples": [
      {
       "html": "<strong>I can control my attitude.</strong>",
-      "say": "I can control my attitude."
+      "say": "I can control my attitude.",
+      "zh": "I can control my attitude.（我可以控制我的態度。）"
      },
      {
       "html": "<strong>I can control my words and my actions.</strong>",
-      "say": "I can control my words and my actions."
+      "say": "I can control my words and my actions.",
+      "zh": "I can control my words and my actions.（我可以控制我的言語和行為。）"
      }
     ]
    },
@@ -2895,11 +3056,13 @@
     "examples": [
      {
       "html": "<strong>I cannot control the weather.</strong>",
-      "say": "I cannot control the weather."
+      "say": "I cannot control the weather.",
+      "zh": "I cannot control the weather.（我無法控制天氣。）"
      },
      {
       "html": "<strong>I cannot control other people’s feelings, so I let go.</strong>",
-      "say": "I cannot control other people's feelings, so I let go."
+      "say": "I cannot control other people's feelings, so I let go.",
+      "zh": "I cannot control other people's feelings, so I let go.（我無法控制別人的感受，所以我選擇放下。）"
      }
     ]
    },
@@ -2909,18 +3072,21 @@
     "examples": [
      {
       "html": "<strong>It is better to observe my anger than to act on it.</strong>",
-      "say": "It is better to observe my anger than to act on it."
+      "say": "It is better to observe my anger than to act on it.",
+      "zh": "It is better to observe my anger than to act on it.（觀察我的憤怒，比照著它去行動更好。）"
      },
      {
       "html": "<strong>When I feel overwhelmed, it is better to breathe and accept.</strong>",
-      "say": "When I feel overwhelmed, it is better to breathe and accept."
+      "say": "When I feel overwhelmed, it is better to breathe and accept.",
+      "zh": "When I feel overwhelmed, it is better to breathe and accept.（當我感到不知所措時，呼吸並接受會比較好。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · can / cannot for ability and choice",
-   "html": "We use <strong>can</strong> and <strong>cannot (can’t)</strong> with the base verb to say what is — and is not — in our power. <span class=\"ok\">I can control my actions.</span> · <span class=\"ok\">I cannot control the past.</span> The verb never changes for he / she / it: <span class=\"ok\">She can let go.</span> Notice that <em>let go</em> stays as two words: <span class=\"ok\">I let go of my worry.</span>"
+   "html": "We use <strong>can</strong> and <strong>cannot (can’t)</strong> with the base verb to say what is — and is not — in our power. <span class=\"ok\">I can control my actions.</span> · <span class=\"ok\">I cannot control the past.</span> The verb never changes for he / she / it: <span class=\"ok\">She can let go.</span> Notice that <em>let go</em> stays as two words: <span class=\"ok\">I let go of my worry.</span>",
+   "zh_html": "我們用「can（可以）」和「cannot（can't，不能）」加上動詞原形，來說什麼在我們的能力範圍內、什麼不在。I can control my actions.（我可以控制我的行為。）、I cannot control the past.（我無法控制過去。）就算主詞是 he / she / it，動詞也不會變：She can let go.（她可以放下。）注意 let go 一直都是兩個字：I let go of my worry.（我放下了我的擔憂。）"
   },
   "story": {
    "paras": [
@@ -2937,13 +3103,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "有一天，一個學生很難過地來找老師。她說：「有人對我很沒禮貌，現在我一整天都覺得好生氣。」老師指著一個平靜的池塘，說：「丟一顆石頭進去。」學生丟了，水面就翻攪、起了漣漪。",
+    "「現在用你的手讓漣漪停下來。」老師說。學生又拍又推，水卻變得更亂了。於是她停下來，等待。慢慢地，池塘自己變回「平靜」又清澈了。",
+    "「你的情緒就是那些漣漪，」老師說。「你無法控制石頭會不會被丟進來──可是你不一定要去拍水。觀察、接受、然後放下，你的心就會回到平靜。」這顆平衡、不被動搖的心，就是 Upekkhā──捨心（平等心）。我們無法控制每一顆石頭，但我們永遠可以控制自己的態度、言語和行為：這就是我們「可控制的圈圈」。"
+   ]
   },
   "principle": {
    "lede": "Imagine your mind is a quiet pond. A big feeling drops in like a stone, and the water ripples. With equanimity, you simply <em>watch</em> the ripples until the water grows still again.",
    "h4": "The Circle of Control 控制圈",
    "html": "Equanimity is not coldness, and it is not pretending we have no feelings. It is the calm, balanced heart that <em>observes</em> a feeling without being swept away. We cannot control the weather, the past, or another person’s mood — and worrying about those things only makes the water wilder. But we can always control three things: our <strong>attitude</strong>, our <strong>words</strong>, and our <strong>actions</strong>. When we pour our effort into that small circle and let go of the rest, peace follows.",
-   "video": null
+   "video": null,
+   "lede_zh": "想像你的心是一座安靜的池塘。一個強烈的情緒像石頭一樣掉進來，水面就起了漣漪。有了捨心，你只要單純地「看著」漣漪，直到水面再次平靜下來。",
+   "zh_html": "捨心不是冷漠，也不是假裝我們沒有感覺。它是一顆平靜、平衡的心，能「觀察」一個情緒，卻不被它捲走。我們無法控制天氣、過去，或別人的心情──而為這些事煩惱，只會把水弄得更亂。但我們永遠可以控制三件事：我們的「態度」、我們的「言語」，和我們的「行為」。當我們把力氣放進那個小圈圈，並放下其餘的部分，平靜就會跟著來。"
   },
   "practice": {
    "note": "Each day this week, write about one stressful moment. Sort it into what you <strong>can control</strong> and what you must <strong>let go</strong> of. 每天記錄一個壓力情境，分成「可控」與「放手」兩部分。",
@@ -2954,7 +3127,8 @@
      "h3": "3 short sentences",
      "age": "Ages 5–8 · new learners",
      "req": "Write a <strong>situation</strong> (simple past), one <strong>“I can control…”</strong> sentence, and one <strong>“I cannot control…”</strong> sentence.",
-     "ex": "<b>Example</b>My friend was angry at me. I can control my words. I cannot control my friend’s feelings."
+     "ex": "<b>Example</b>My friend was angry at me. I can control my words. I cannot control my friend’s feelings.",
+     "req_zh": "寫一個「情境」（用簡單過去式），一句「I can control…（我可以控制……）」的句子，和一句「I cannot control…（我無法控制……）」的句子。"
     },
     {
      "tier": "t2",
@@ -2962,7 +3136,8 @@
      "h3": "Strategy & attitude",
      "age": "Ages 9–12 · developing fluency",
      "req": "Describe a stressful situation. Write <strong>2 “I can control…”</strong> sentences about your attitude and actions, then <strong>1</strong> sentence saying why you let go.",
-     "ex": "<b>Example</b>I felt stressed because I failed the math test. I can control my attitude to stay positive. I will study harder next time. I cannot control the past, so I let go of my worry."
+     "ex": "<b>Example</b>I felt stressed because I failed the math test. I can control my attitude to stay positive. I will study harder next time. I cannot control the past, so I let go of my worry.",
+     "req_zh": "描述一個有壓力的情境。寫「2 句『I can control…（我可以控制……）』」說明你的態度和行為，再寫「1 句」說明你為什麼選擇放下。"
     },
     {
      "tier": "t3",
@@ -2970,7 +3145,8 @@
      "h3": "Upekkhā synthesis",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Analyze a complex situation involving others. In <strong>3–4 sentences</strong> use <em>observe, accept, detach</em> to explain how you controlled your own reaction, then add a <strong>reflection</strong>.",
-     "ex": "<b>Example</b>I observed my frustration, but I chose to accept the reality (Upekkhā). My words were encouraging instead of critical. Focusing on my own effort made the situation less stressful."
+     "ex": "<b>Example</b>I observed my frustration, but I chose to accept the reality (Upekkhā). My words were encouraging instead of critical. Focusing on my own effort made the situation less stressful.",
+     "req_zh": "分析一個牽涉到別人的複雜情境。用「3–4 句」運用 observe（觀察）、accept（接受）、detach（抽離），說明你如何控制自己的反應，再加上一段「反思」。"
     }
    ]
   },
@@ -3123,13 +3299,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use action verbs for managing emotions: <em>stop, breathe, inhale, exhale, choose, manage</em>. Master the affirmation <strong>“I am in control of my emotions / words / actions.”</strong> and the plan pattern <strong>“When I feel X, I will Y.”</strong> Describe feelings with adjectives like <em>calm, stressed, overwhelmed</em>."
+    "html": "Use action verbs for managing emotions: <em>stop, breathe, inhale, exhale, choose, manage</em>. Master the affirmation <strong>“I am in control of my emotions / words / actions.”</strong> and the plan pattern <strong>“When I feel X, I will Y.”</strong> Describe feelings with adjectives like <em>calm, stressed, overwhelmed</em>.",
+    "zh_html": "使用管理情緒的動作動詞：stop（停下）、breathe（呼吸）、inhale（吸氣）、exhale（吐氣）、choose（選擇）、manage（管理）。熟練肯定句「I am in control of my emotions / words / actions.（我能掌控我的情緒／言語／行為。）」以及計畫句型「When I feel X, I will Y.（當我覺得 X，我就會 Y。）」用形容詞描述感受，例如 calm（平靜）、stressed（有壓力）、overwhelmed（招架不住）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Apply <strong>Right Effort (Vīrya 正精進)</strong> to transform and manage strong emotions. Understand and practice <strong>nonreaction (不反應)</strong> — choosing calm instead of reacting — and cultivate the inner peace that prepares the heart for <em>Ahimsa</em> (non-violence)."
+    "html": "Apply <strong>Right Effort (Vīrya 正精進)</strong> to transform and manage strong emotions. Understand and practice <strong>nonreaction (不反應)</strong> — choosing calm instead of reacting — and cultivate the inner peace that prepares the heart for <em>Ahimsa</em> (non-violence).",
+    "zh_html": "運用正精進（Right Effort，Vīrya）來轉化和管理強烈的情緒。理解並練習不反應（nonreaction）——選擇平靜而非衝動反應——並培養為慈悲心鋪路、面向不害（Ahimsa，非暴力）的內在平靜。"
    }
   ],
   "vocab": [
@@ -3189,11 +3367,13 @@
     "examples": [
      {
       "html": "<strong>I am in control of my emotions.</strong>",
-      "say": "I am in control of my emotions."
+      "say": "I am in control of my emotions.",
+      "zh": "I am in control of my emotions.（我能掌控我的情緒。）"
      },
      {
       "html": "<strong>I am in control of my words and my actions.</strong>",
-      "say": "I am in control of my words and my actions."
+      "say": "I am in control of my words and my actions.",
+      "zh": "I am in control of my words and my actions.（我能掌控我的言語和行為。）"
      }
     ]
    },
@@ -3203,11 +3383,13 @@
     "examples": [
      {
       "html": "<strong>When I feel angry, I will stop and breathe.</strong>",
-      "say": "When I feel angry, I will stop and breathe."
+      "say": "When I feel angry, I will stop and breathe.",
+      "zh": "When I feel angry, I will stop and breathe.（當我覺得生氣，我會停下來，深呼吸。）"
      },
      {
       "html": "<strong>When I feel stressed, I will inhale slowly and exhale.</strong>",
-      "say": "When I feel stressed, I will inhale slowly and exhale."
+      "say": "When I feel stressed, I will inhale slowly and exhale.",
+      "zh": "When I feel stressed, I will inhale slowly and exhale.（當我覺得有壓力，我會慢慢吸氣，再吐氣。）"
      }
     ]
    },
@@ -3217,18 +3399,21 @@
     "examples": [
      {
       "html": "<strong>Instead of arguing, I choose to stop and breathe.</strong>",
-      "say": "Instead of arguing, I choose to stop and breathe."
+      "say": "Instead of arguing, I choose to stop and breathe.",
+      "zh": "Instead of arguing, I choose to stop and breathe.（我選擇停下來深呼吸，而不是爭吵。）"
      },
      {
       "html": "<strong>I manage stress by listening to music.</strong>",
-      "say": "I manage stress by listening to music."
+      "say": "I manage stress by listening to music.",
+      "zh": "I manage stress by listening to music.（我用聽音樂來管理壓力。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · “by” + verb-ing for methods",
-   "html": "To say <em>how</em> we do something, we use <strong>“by + verb-<u>ing</u>.”</strong> <span class=\"ok\">I manage stress by playing sports.</span> · <span class=\"ok\">She calms down by reading.</span> Notice the <strong>-ing</strong> ending after <em>by</em>. With <strong>“When I feel X, I will Y,”</strong> we use the simple present after <em>when</em> and <strong>will</strong> for the plan: <span class=\"ok\">When I feel overwhelmed, I will breathe slowly.</span>"
+   "html": "To say <em>how</em> we do something, we use <strong>“by + verb-<u>ing</u>.”</strong> <span class=\"ok\">I manage stress by playing sports.</span> · <span class=\"ok\">She calms down by reading.</span> Notice the <strong>-ing</strong> ending after <em>by</em>. With <strong>“When I feel X, I will Y,”</strong> we use the simple present after <em>when</em> and <strong>will</strong> for the plan: <span class=\"ok\">When I feel overwhelmed, I will breathe slowly.</span>",
+   "zh_html": "要說明我們「怎麼」做某件事，我們用「by + 動詞-ing」：I manage stress by playing sports.（我用運動來管理壓力。）、She calms down by reading.（她靠閱讀讓自己平靜下來。）注意 by 後面的動詞要加 -ing。在「When I feel X, I will Y.」句型裡，when 後面用現在簡單式，計畫的部分用 will：When I feel overwhelmed, I will breathe slowly.（當我覺得招架不住，我會慢慢呼吸。）"
   },
   "story": {
    "paras": [
@@ -3245,13 +3430,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像一座安靜花園裡有一個小池塘（pond）。當水靜止不動時，你往下看就能把一切看得清清楚楚——石頭、魚兒，還有像鏡子一樣倒映的天空。這就是平靜（calm）的心（平靜的心，像平靜的池塘）。",
+    "現在想像一個小孩朝池塘丟了一顆石頭。撲通！水花跳起來，漣漪向四面散開，水面變得一片混亂。突然間你什麼都看不清楚了。一個強烈的情緒——生氣、壓力，或是招架不住（overwhelmed）——就像那顆石頭。它讓心起反應（react），一切都變得模糊。",
+    "但這裡有個祕訣：你不必再丟一顆石頭回去。你可以停下來（stop）。你可以慢慢吸氣（inhale），慢慢吐氣（exhale）。你可以專注在自己的心跳上，靜靜等待。漸漸地，漣漪退去，水面又恢復平靜。這種等待——不去反應——就叫做不反應（nonreaction，不反應）。憑著正精進（Right Effort，Vīrya）那份穩定的力量，你選擇平靜，於是再次看得清清楚楚。"
+   ]
   },
   "principle": {
    "lede": "Strong feelings are not “bad.” The skill is the pause between the feeling and what we do next — <em>Stop, Breathe, Choose</em>.",
    "h4": "Mindful restraint, the Middle Way 中道的克制",
    "html": "Right Effort (<em>Vīrya</em> 正精進) is the steady energy we use to calm a stormy mind. When a strong feeling arrives, we do not push it down by force, and we do not let it explode. We simply <strong>stop</strong>, <strong>breathe</strong> (inhale and exhale slowly), and then <strong>choose</strong> a kind response. This is <em>nonreaction</em> (不反應): the small, brave act of not throwing the stone back. Controlling our own anger is already a quiet act of <em>Ahimsa</em> — non-violence toward ourselves and others — which is exactly where next week’s path begins.",
-   "video": null
+   "video": null,
+   "lede_zh": "強烈的感受並不「壞」。真正的功夫，是在感受和我們接下來的行動之間，那個停頓——停下、呼吸、選擇（Stop, Breathe, Choose）。",
+   "zh_html": "正精進（Vīrya，正精進）是我們用來安定狂亂之心的那股穩定能量。當強烈的感受來臨，我們不用力把它壓下去，也不讓它爆發出來。我們只是停下來（stop）、呼吸（breathe，慢慢吸氣、吐氣），然後選擇（choose）一個善的回應。這就是不反應（不反應）：不把石頭丟回去，這個微小卻勇敢的舉動。掌控自己的怒氣，本身就已經是一種安靜的不害（Ahimsa）——對自己和對別人的非暴力——而這正是下週課程要開始的地方。"
   },
   "practice": {
    "note": "Each day this week, write about one moment when you felt a strong emotion, and how you used <strong>Stop, Breathe, Choose</strong> to practice nonreaction. Choose the tier that fits you. 每天記錄一次強烈情緒，並寫下你如何「停、吸、選」。",
@@ -3262,7 +3454,8 @@
      "h3": "3 short sentences",
      "age": "Ages 5–8 · new learners",
      "req": "Write a <strong>situation</strong> (1 sentence), an <strong>action</strong> using <em>stop</em> and <em>breathe</em> (1 sentence), and the <strong>affirmation</strong> (1 sentence).",
-     "ex": "<b>Example</b>I felt angry at my toys. I stopped and took a deep breath. I am in control of my hands."
+     "ex": "<b>Example</b>I felt angry at my toys. I stopped and took a deep breath. I am in control of my hands.",
+     "req_zh": "寫出一個情境 situation（1 句），一個用 stop 和 breathe 的行動 action（1 句），還有那句肯定句 affirmation（1 句）。"
     },
     {
      "tier": "t2",
@@ -3270,7 +3463,8 @@
      "h3": "Nonreaction & strategy",
      "age": "Ages 9–12 · developing fluency",
      "req": "Describe a <strong>situation</strong> that needed nonreaction (1 sentence), explain the calm <strong>strategy</strong> you chose (2 sentences), and add a <strong>control</strong> sentence with <em>“I am in control of…”</em>",
-     "ex": "<b>Example</b>My friend was rude to me in class. I chose nonreaction instead of arguing. I decided to listen to music to calm down. I am in control of my feelings and my voice."
+     "ex": "<b>Example</b>My friend was rude to me in class. I chose nonreaction instead of arguing. I decided to listen to music to calm down. I am in control of my feelings and my voice.",
+     "req_zh": "描述一個需要不反應的情境 situation（1 句），說明你選擇的平靜策略 strategy（2 句），再加一句用「I am in control of…（我能掌控……）」的掌控句。"
     },
     {
      "tier": "t3",
@@ -3278,7 +3472,8 @@
      "h3": "Vīrya & Ahimsa link",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Analyze a complex, <em>overwhelming</em> situation (1 sentence), then write a <strong>Vīrya response</strong> (3–4 sentences) explaining your breathing technique and how this control links to <em>Ahimsa</em>. Note your personal <strong>strategy</strong>.",
-     "ex": "<b>Example</b>When I felt overwhelmed by school deadlines, I wanted to yell. I used Right Effort to stop myself. I inhaled for four counts and exhaled for six. Controlling my anger is a small act of Ahimsa toward my family. Singing a happy song helped me feel calm again."
+     "ex": "<b>Example</b>When I felt overwhelmed by school deadlines, I wanted to yell. I used Right Effort to stop myself. I inhaled for four counts and exhaled for six. Controlling my anger is a small act of Ahimsa toward my family. Singing a happy song helped me feel calm again.",
+     "req_zh": "分析一個複雜、令人招架不住（overwhelming）的情境（1 句），然後寫一段正精進回應（Vīrya response，3–4 句），說明你的呼吸方法，以及這份掌控如何連結到不害（Ahimsa）。記下你個人的策略 strategy。"
     }
    ]
   },
@@ -3431,13 +3626,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the caring pattern <strong>“I care about…”</strong> and the rule pattern <strong>“Ahimsa means no…”</strong> and <strong>“I will not…”</strong> to describe gentle choices. Learn vocabulary: <em>Ahimsa, compassion, non-harm, master, gentle</em>."
+    "html": "Use the caring pattern <strong>“I care about…”</strong> and the rule pattern <strong>“Ahimsa means no…”</strong> and <strong>“I will not…”</strong> to describe gentle choices. Learn vocabulary: <em>Ahimsa, compassion, non-harm, master, gentle</em>.",
+    "zh_html": "使用關懷句型「I care about…（我在乎……）」、規則句型「Ahimsa means no…（不害的意思就是不要……）」和「I will not…（我不會……）」來描述溫柔的選擇。學習單字：Ahimsa（不害／不傷害）、compassion（慈悲）、non-harm（不傷害）、master（主人）、gentle（溫柔的）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Ahimsa (non-violence)</strong> in body, speech, and mind. Learn to “wash away” angry thoughts with breath and mindfulness, and see how one unkind thought can grow — so we choose to be the <strong>master of our own mind</strong>."
+    "html": "Understand <strong>Ahimsa (non-violence)</strong> in body, speech, and mind. Learn to “wash away” angry thoughts with breath and mindfulness, and see how one unkind thought can grow — so we choose to be the <strong>master of our own mind</strong>.",
+    "zh_html": "了解身、口、意上的「Ahimsa（不害／非暴力）」。學會用呼吸和正念「沖走」憤怒的念頭，並看見一個不善的念頭如何越長越大——所以我們選擇做自己心的主人。"
    }
   ],
   "vocab": [
@@ -3491,15 +3688,18 @@
     "examples": [
      {
       "html": "<strong>I care about you.</strong>",
-      "say": "I care about you."
+      "say": "I care about you.",
+      "zh": "我在乎你。"
      },
      {
       "html": "<strong>I care about my family.</strong>",
-      "say": "I care about my family."
+      "say": "I care about my family.",
+      "zh": "我在乎我的家人。"
      },
      {
       "html": "<strong>I care about the world and all living things.</strong>",
-      "say": "I care about the world and all living things."
+      "say": "I care about the world and all living things.",
+      "zh": "我在乎這個世界和一切眾生。"
      }
     ]
    },
@@ -3509,11 +3709,13 @@
     "examples": [
      {
       "html": "<strong>Ahimsa means no fighting.</strong>",
-      "say": "Ahimsa means no fighting."
+      "say": "Ahimsa means no fighting.",
+      "zh": "Ahimsa（不害）的意思就是不打架。"
      },
      {
       "html": "<strong>Ahimsa means no screaming or bad words.</strong>",
-      "say": "Ahimsa means no screaming or bad words."
+      "say": "Ahimsa means no screaming or bad words.",
+      "zh": "Ahimsa（不害）的意思就是不尖叫、不說壞話。"
      }
     ]
    },
@@ -3523,18 +3725,21 @@
     "examples": [
      {
       "html": "<strong>I will not fight or push my sister, even when I am angry.</strong>",
-      "say": "I will not fight or push my sister, even when I am angry."
+      "say": "I will not fight or push my sister, even when I am angry.",
+      "zh": "就算我生氣，我也不會打我妹妹或推她。"
      },
      {
       "html": "<strong>I am the master of my thoughts.</strong>",
-      "say": "I am the master of my thoughts."
+      "say": "I am the master of my thoughts.",
+      "zh": "我是我自己念頭的主人。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · “will not” for promises",
-   "html": "We use <strong>will not</strong> (or <strong>won’t</strong>) to make a promise about the future: <span class=\"ok\">I will not scream.</span> · <span class=\"ok\">I won’t use bad words.</span> After “no” in “Ahimsa means no ___,” we use the <strong>-ing</strong> form: <span class=\"ok\">no fighting</span>, <span class=\"ok\">no screaming</span>. Practicing Ahimsa means choosing gentle words again and again."
+   "html": "We use <strong>will not</strong> (or <strong>won’t</strong>) to make a promise about the future: <span class=\"ok\">I will not scream.</span> · <span class=\"ok\">I won’t use bad words.</span> After “no” in “Ahimsa means no ___,” we use the <strong>-ing</strong> form: <span class=\"ok\">no fighting</span>, <span class=\"ok\">no screaming</span>. Practicing Ahimsa means choosing gentle words again and again.",
+   "zh_html": "我們用 will not（或 won't）來對未來許下承諾：I will not scream.（我不會尖叫。）· I won't use bad words.（我不會說壞話。）在「Ahimsa means no ___」的 no 後面，我們用 -ing 形式：no fighting（不打架）、no screaming（不尖叫）。練習 Ahimsa（不害）就是一次又一次地選擇溫和的話語。"
   },
   "story": {
    "paras": [
@@ -3551,13 +3756,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "很久以前，一位慈悲的修行者發現一隻嚇壞了的小老鼠（老鼠）正在逃避一隻貓。修行者心生慈悲，便用他的法力把老鼠變成了一隻強壯的貓。可是接著有一隻狗來追那隻貓，於是修行者又把牠變成一隻狗。當一隻老虎嚇到了那隻狗，修行者就把牠變成了老虎。最後，為了讓這個生命能過上平靜的日子，他把老虎變成了一個人。",
+    "這個人過得很好——但慢慢地，一個不善的念頭在他心裡長了起來：「我比那位修行者還厲害。就算沒有他，我本來也很有本事。我不需要感恩。」這個念頭變成了傲慢，傲慢又變成了殘忍。這個人甚至想要傷害那位救了他的修行者。",
+    "修行者看見了這個人心裡的傷害，溫和地說：「你已經忘了善良——所以你可以回到你的心所變成的樣子。」一瞬間，這個人又變回了一隻小老鼠。一個壞念頭，任由它長大，就讓他失去了一切。這就是為什麼我們要在心裡練習 Ahimsa（不害）：我們早早地注意到一個不善的念頭，呼吸，然後在它長大之前把它沖走。我們選擇做自己念頭的主人。"
+   ]
   },
   "principle": {
    "lede": "Ahimsa is non-violence in three places at once. We keep our <em>body</em> gentle, our <em>speech</em> kind, and our <em>mind</em> peaceful.",
    "h4": "Body, Speech & Mind 身、語、意",
    "html": "Ahimsa in the <strong>body</strong> means I do not fight, push, or hurt — not people, not animals, not living things. Ahimsa in <strong>speech</strong> means I do not scream or use bad words, even when I lose a game. Ahimsa in the <strong>mind</strong> means I notice an angry thought and, like water in a waterfall, I <em>wash it away</em> and fill my heart with love and joy. When I master one small unkind thought today, I keep my whole world gentle. That is real strength.",
-   "video": null
+   "video": null,
+   "lede_zh": "Ahimsa（不害）是同時在三個地方做到非暴力。我們讓身體保持溫柔、言語保持善良、心保持平靜。",
+   "zh_html": "身體上的 Ahimsa（不害）是指我不打架、不推人、不傷害——不傷人，不傷動物，也不傷一切眾生。言語上的 Ahimsa 是指我不尖叫、不說壞話，就算輸了一場遊戲也一樣。心裡的 Ahimsa 是指我注意到一個憤怒的念頭，然後像瀑布裡的水一樣，把它沖走，讓我的心充滿愛與喜悅。當我今天能管好一個小小的不善念頭，我就讓我的整個世界都保持溫柔。這才是真正的力量。"
   },
   "practice": {
    "note": "This week, write about a time you felt angry or sad — and how you used Ahimsa to calm down. You may draft in Chinese first, then write it in English. 本週寫下一次生氣或難過的經驗，以及你如何用「不害」讓自己冷靜。可先用中文打草稿，再寫成英文。",
@@ -3568,7 +3780,8 @@
      "h3": "One promise",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>1 sentence</strong> using “I care about…” or “I will not…” plus a vocabulary word. Name one gentle choice.",
-     "ex": "<b>Example</b>I care about my sister. I will not push her."
+     "ex": "<b>Example</b>I care about my sister. I will not push her.",
+     "req_zh": "寫 1 個句子，用到「I care about…（我在乎……）」或「I will not…（我不會……）」，再加一個單字。說出一個溫柔的選擇。"
     },
     {
      "tier": "t2",
@@ -3576,7 +3789,8 @@
      "h3": "3–4 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3–4 sentences</strong> about a time you felt angry. Say what happened, and how you calmed down using Ahimsa. Use a <strong>“when”</strong> clause.",
-     "ex": "<b>Example</b>I lost a video game and felt angry. I wanted to scream, but I stopped. When I breathed slowly, I felt peaceful. I will not use bad words."
+     "ex": "<b>Example</b>I lost a video game and felt angry. I wanted to scream, but I stopped. When I breathed slowly, I felt peaceful. I will not use bad words.",
+     "req_zh": "寫 3–4 個句子，描述一次你生氣的經驗。說說發生了什麼事，以及你如何用 Ahimsa（不害）讓自己平靜下來。要用到一個「when（當……時）」子句。"
     },
     {
      "tier": "t3",
@@ -3584,7 +3798,8 @@
      "h3": "Ahimsa plan",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>3 ways</strong> you will practice Ahimsa at home — one for the <em>body</em>, one for <em>speech</em>, one for the <em>mind</em>. Reflect on the story of the mouse.",
-     "ex": "<b>Example</b>Body: I will not fight my brother. Speech: I will not scream when I lose. Mind: I will stop the thought “I hate this” and change it to “I will breathe and calm down.”"
+     "ex": "<b>Example</b>Body: I will not fight my brother. Speech: I will not scream when I lose. Mind: I will stop the thought “I hate this” and change it to “I will breathe and calm down.”",
+     "req_zh": "寫出你在家裡練習 Ahimsa（不害）的 3 種方法——一個給身體、一個給言語、一個給心。想一想那隻老鼠的故事。"
     }
    ]
   },
@@ -3737,13 +3952,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the well-wishing pattern <strong>“May you be happy and healthy”</strong> and <strong>“I send love to…”</strong> to name the people you care for. Learn kind-heart vocabulary: <em>loving-kindness, good will, universal, recipient</em>, and the Pali word <em>Mettā</em>."
+    "html": "Use the well-wishing pattern <strong>“May you be happy and healthy”</strong> and <strong>“I send love to…”</strong> to name the people you care for. Learn kind-heart vocabulary: <em>loving-kindness, good will, universal, recipient</em>, and the Pali word <em>Mettā</em>.",
+    "zh_html": "用祝福句型「May you be happy and healthy（願你快樂又健康）」和「I send love to…（我把愛送給…）」來說出你所關心的人。學習慈心相關的詞彙：loving-kindness（慈愛）、good will（善意）、universal（普遍的、無所不包的）、recipient（接受者），還有巴利文 Mettā（慈）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Mettā (Loving-Kindness)</strong> as <em>good will</em> — wishing others well. See that love is universal and crosses every boundary, and practice a daily guided meditation to strengthen the “good-will muscle.”"
+    "html": "Understand <strong>Mettā (Loving-Kindness)</strong> as <em>good will</em> — wishing others well. See that love is universal and crosses every boundary, and practice a daily guided meditation to strengthen the “good-will muscle.”",
+    "zh_html": "了解「慈」（Mettā，慈愛）就是善意（good will）──祝願別人安好。明白愛是普遍的、能跨越每一道界線，並每天練習一段引導式禪修，來鍛鍊這塊「善意的肌肉」。"
    }
   ],
   "vocab": [
@@ -3797,15 +4014,18 @@
     "examples": [
      {
       "html": "<strong>May you be happy and healthy.</strong>",
-      "say": "May you be happy and healthy."
+      "say": "May you be happy and healthy.",
+      "zh": "May you be happy and healthy.（願你快樂又健康。）"
      },
      {
       "html": "<strong>May you be safe and peaceful.</strong>",
-      "say": "May you be safe and peaceful."
+      "say": "May you be safe and peaceful.",
+      "zh": "May you be safe and peaceful.（願你平安又安詳。）"
      },
      {
       "html": "<strong>May all beings be happy.</strong>",
-      "say": "May all beings be happy."
+      "say": "May all beings be happy.",
+      "zh": "May all beings be happy.（願一切眾生都快樂。）"
      }
     ]
    },
@@ -3815,11 +4035,13 @@
     "examples": [
      {
       "html": "<strong>I send love to my family.</strong>",
-      "say": "I send love to my family."
+      "say": "I send love to my family.",
+      "zh": "I send love to my family.（我把愛送給我的家人。）"
      },
      {
       "html": "<strong>I send love to my classmates and to the animals.</strong>",
-      "say": "I send love to my classmates and to the animals."
+      "say": "I send love to my classmates and to the animals.",
+      "zh": "I send love to my classmates and to the animals.（我把愛送給我的同學和動物們。）"
      }
     ]
    },
@@ -3829,18 +4051,21 @@
     "examples": [
      {
       "html": "<strong>I am sending good will to everyone on Earth.</strong>",
-      "say": "I am sending good will to everyone on Earth."
+      "say": "I am sending good will to everyone on Earth.",
+      "zh": "I am sending good will to everyone on Earth.（我正把善意送給地球上的每一個人。）"
      },
      {
       "html": "<strong>I am breathing slowly and sending kindness from my heart.</strong>",
-      "say": "I am breathing slowly and sending kindness from my heart."
+      "say": "I am breathing slowly and sending kindness from my heart.",
+      "zh": "I am breathing slowly and sending kindness from my heart.（我正緩緩地呼吸，從心裡送出善意。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · “May you…” & the present continuous",
-   "html": "The modal verb <strong>“may”</strong> is used to make a gentle wish for someone: <span class=\"ok\">May you be happy.</span> We do <em>not</em> add <em>-s</em> after <em>may</em>. We also use the <strong>present continuous</strong> (<em>am / is / are</em> + verb-<strong>ing</strong>) to say what is happening right now: <span class=\"ok\">I am sending love.</span>"
+   "html": "The modal verb <strong>“may”</strong> is used to make a gentle wish for someone: <span class=\"ok\">May you be happy.</span> We do <em>not</em> add <em>-s</em> after <em>may</em>. We also use the <strong>present continuous</strong> (<em>am / is / are</em> + verb-<strong>ing</strong>) to say what is happening right now: <span class=\"ok\">I am sending love.</span>",
+   "zh_html": "情態動詞 may 用來為某人許下溫柔的祝願：May you be happy.（願你快樂。）我們不會在 may 後面加 -s。我們也用現在進行式（am／is／are + 動詞-ing）來說現在正在發生的事：I am sending love.（我正在送出愛。）"
   },
   "story": {
    "paras": [
@@ -3857,13 +4082,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像你心中的慈愛是一道小小的、溫暖的光。當你練習慈心（Mettā）時，那道光會變得更亮，並向外擴散成一圈圈的愛（circles of love）。",
+    "第一圈是最小的──就是你自己。你說：「願我快樂又健康。」你無法把自己還沒握住的光送給別人。下一圈是你的家人，然後是你的朋友和同學，再來是動物和整個大自然。",
+    "最後一圈是最大的一圈：地球上的每一個人──甚至包括陌生人，以及我們不喜歡的人。慈是普遍的（universal），因為我們的快樂和一切眾生的快樂是彼此相連的。慈愛是給每一個人的。"
+   ]
   },
   "principle": {
    "lede": "In the guided meditation, place your hand on your heart and repeat: <em>“May you be happy, may you be healthy.”</em> Then think about how good will can be trained, like a muscle, a little every day.",
    "h4": "Good Will, a Friendly Heart 善意的友善心",
    "html": "Mettā is not only a feeling — it is a steady <em>attitude</em> of friendliness toward all life. When we stop harming others (Ahimsa), we fill that space with active kindness. Through <strong>Bhāvanā</strong> (training the mind), we make the heart used to producing kind thoughts. The more you practice loving-kindness, the stronger your good-will muscle grows — and you learn to rejoice in the happiness of every living being.",
-   "video": null
+   "video": null,
+   "lede_zh": "在引導式禪修中，把手放在心口上，反覆默念：「願你快樂，願你健康。」然後想一想，善意是可以被鍛鍊的，就像肌肉一樣，每天練一點點。",
+   "zh_html": "慈（Mettā）不只是一種感覺──它是對一切生命持續保持友善的一種態度。當我們停止傷害他人（Ahimsa，不害），就用主動的善良把那個空間填滿。透過修習（Bhāvanā，訓練心），我們讓這顆心習慣生起善的念頭。你愈練習慈愛，你的善意肌肉就長得愈強壯──你也學會為每一個生命的快樂而隨喜。"
   },
   "practice": {
    "note": "For the next <strong>7 days</strong>, do the “Hand on Heart” meditation for 2 minutes each morning, then write one journal line. Choose the tier that fits you. 每天早上練習兩分鐘，再寫下慈心日記。",
@@ -3874,7 +4106,8 @@
      "h3": "One sentence",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>1 sentence</strong> naming today’s recipient: “Today, I sent love to ______.” Then say the wish out loud.",
-     "ex": "<b>Example</b>Today, I sent love to my mom. I said: “May you be happy and healthy.”"
+     "ex": "<b>Example</b>Today, I sent love to my mom. I said: “May you be happy and healthy.”",
+     "req_zh": "寫 1 個句子，說出今天的接受者：「Today, I sent love to ______.（今天，我把愛送給了 ______。）」然後把這個祝願大聲說出來。"
     },
     {
      "tier": "t2",
@@ -3882,7 +4115,8 @@
      "h3": "3–4 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3–4 sentences</strong>. Name two recipients from different circles, use <strong>“I send love to…”</strong>, and add the <strong>“May you be…”</strong> wish.",
-     "ex": "<b>Example</b>Today, I sent love to my family and to the street cats. I send love to people I have never met. May you all be happy and healthy."
+     "ex": "<b>Example</b>Today, I sent love to my family and to the street cats. I send love to people I have never met. May you all be happy and healthy.",
+     "req_zh": "寫 3 到 4 個句子。說出兩位來自不同圈圈的接受者，用「I send love to…」，並加上「May you be…」的祝願。"
     },
     {
      "tier": "t3",
@@ -3890,7 +4124,8 @@
      "h3": "5+ sentences",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>5+ sentences</strong>. Include someone you find <em>difficult</em> to like, explain why love is universal, and reflect on how good will is interconnected with your own happiness.",
-     "ex": "<b>Example</b>Today I am sending good will to a classmate I argued with. Although it is hard, I know my peace and his peace are interconnected. May you be safe; may you be peaceful."
+     "ex": "<b>Example</b>Today I am sending good will to a classmate I argued with. Although it is hard, I know my peace and his peace are interconnected. May you be safe; may you be peaceful.",
+     "req_zh": "寫 5 個以上的句子。包含一個你覺得難以喜歡的人，解釋為什麼愛是普遍的，並反思善意如何與你自己的快樂彼此相連。"
     }
    ]
   },
@@ -4043,13 +4278,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use <strong>“should”</strong> to talk about what is right: <em>“We should love everyone because we are all human.”</em> Learn words for caring and for suffering: <em>kind, mean, connected, suffering, ill-will</em>. Practice the well-wish pattern <strong>“May all beings be free from…”</strong>"
+    "html": "Use <strong>“should”</strong> to talk about what is right: <em>“We should love everyone because we are all human.”</em> Learn words for caring and for suffering: <em>kind, mean, connected, suffering, ill-will</em>. Practice the well-wish pattern <strong>“May all beings be free from…”</strong>",
+    "zh_html": "用「should（應該）」來談論什麼是對的：「We should love everyone because we are all human.（我們應該愛每一個人，因為我們都是人。）」學習關於關懷與苦的單字：kind（善良的）、mean（刻薄的）、connected（相連的）、suffering（苦）、ill-will（惡意）。練習祝福的句型「May all beings be free from…（願一切眾生遠離…）」"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>interconnectedness (緣起 · Pratītyasamutpāda)</strong>: helping others helps yourself. Extend loving-kindness beyond friends to strangers and animals — a first taste of <em>同體大悲</em>, the equality of all beings."
+    "html": "Understand <strong>interconnectedness (緣起 · Pratītyasamutpāda)</strong>: helping others helps yourself. Extend loving-kindness beyond friends to strangers and animals — a first taste of <em>同體大悲</em>, the equality of all beings.",
+    "zh_html": "理解「緣起（Pratītyasamutpāda）」：幫助別人就是幫助自己。把慈心從朋友延伸到陌生人和動物——初嚐「同體大悲」，也就是一切眾生平等。"
    }
   ],
   "vocab": [
@@ -4103,15 +4340,18 @@
     "examples": [
      {
       "html": "<strong>We should love everyone because we are all human.</strong>",
-      "say": "We should love everyone because we are all human."
+      "say": "We should love everyone because we are all human.",
+      "zh": "We should love everyone because we are all human.（我們應該愛每一個人，因為我們都是人。）"
      },
      {
       "html": "<strong>We should be kind because everyone wants to be happy.</strong>",
-      "say": "We should be kind because everyone wants to be happy."
+      "say": "We should be kind because everyone wants to be happy.",
+      "zh": "We should be kind because everyone wants to be happy.（我們應該善良，因為每個人都想要快樂。）"
      },
      {
       "html": "<strong>We should not hurt others, because we are all connected.</strong>",
-      "say": "We should not hurt others, because we are all connected."
+      "say": "We should not hurt others, because we are all connected.",
+      "zh": "We should not hurt others, because we are all connected.（我們不應該傷害別人，因為我們彼此相連。）"
      }
     ]
    },
@@ -4121,15 +4361,18 @@
     "examples": [
      {
       "html": "<strong>May all beings be free from anger.</strong>",
-      "say": "May all beings be free from anger."
+      "say": "May all beings be free from anger.",
+      "zh": "May all beings be free from anger.（願一切眾生遠離憤怒。）"
      },
      {
       "html": "<strong>May all beings be free from jealousy.</strong>",
-      "say": "May all beings be free from jealousy."
+      "say": "May all beings be free from jealousy.",
+      "zh": "May all beings be free from jealousy.（願一切眾生遠離嫉妒。）"
      },
      {
       "html": "<strong>May you be free from mental and physical suffering.</strong>",
-      "say": "May you be free from mental and physical suffering."
+      "say": "May you be free from mental and physical suffering.",
+      "zh": "May you be free from mental and physical suffering.（願你遠離身心的苦。）"
      }
     ]
    },
@@ -4139,18 +4382,21 @@
     "examples": [
      {
       "html": "<strong>No hitting, no screaming, no hurting others.</strong>",
-      "say": "No hitting, no screaming, no hurting others."
+      "say": "No hitting, no screaming, no hurting others.",
+      "zh": "No hitting, no screaming, no hurting others.（不打人、不尖叫、不傷害別人。）"
      },
      {
       "html": "<strong>We should not hurt animals.</strong>",
-      "say": "We should not hurt animals."
+      "say": "We should not hurt animals.",
+      "zh": "We should not hurt animals.（我們不應該傷害動物。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · The helping verb “should”",
-   "html": "We use <strong>should</strong> to talk about the right thing to do. After <strong>should</strong>, always use the <em>plain (base) verb</em>: <span class=\"ok\">We should help.</span> · <span class=\"ok\">We should be kind.</span> For the negative, add <strong>not</strong>: <span class=\"ok\">We should not hurt others.</span> Notice that <em>should</em> never adds <strong>-s</strong>, even for <em>he</em> or <em>she</em>: <span class=\"ok\">She should be kind.</span>"
+   "html": "We use <strong>should</strong> to talk about the right thing to do. After <strong>should</strong>, always use the <em>plain (base) verb</em>: <span class=\"ok\">We should help.</span> · <span class=\"ok\">We should be kind.</span> For the negative, add <strong>not</strong>: <span class=\"ok\">We should not hurt others.</span> Notice that <em>should</em> never adds <strong>-s</strong>, even for <em>he</em> or <em>she</em>: <span class=\"ok\">She should be kind.</span>",
+   "zh_html": "我們用「should」來談論該做的對的事。在「should」後面，永遠要用「原形動詞（base verb）」：We should help.（我們應該幫忙。）· We should be kind.（我們應該善良。）要表達否定，就加「not」：We should not hurt others.（我們不應該傷害別人。）注意「should」永遠不加「-s」，即使主詞是「he」或「she」也一樣：She should be kind.（她應該善良。）"
   },
   "story": {
    "paras": [
@@ -4167,13 +4413,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像有一張巨大的「網（web）」（一張大網）橫跨整個世界。在網的每一個結點上，都有一個人、一隻動物、一棵樹。線把他們全部連在一起。當一條線被拉動時，其他每一條線都會感受到那輕輕的牽動。網中沒有任何東西是真正孤單的。",
+    "有一天，一個孩子對另一個孩子不友善——她說了「刻薄（mean）」的話，把他弄哭了。但因為這張網是相連的，所以這份不友善沿著線傳了出去。第一個孩子也覺得心裡沉甸甸、不開心，因為「傷害他人就是傷害自己」（傷害他人就是傷害自己）。",
+    "隔天她做了不一樣的選擇。她幫助朋友、分享食物，並溫柔地對待班上的貓。這一次，「善意（kindness）」沿著線傳了出去，溫暖也回到了她自己的心裡。我們都會吃飯、睡覺，都希望快樂——我們是由同樣的需求組成的。當我們關懷任何一個眾生時，我們就是在關懷整張網，也是在關懷自己。這就是「緣起（interconnectedness）」的意義。"
+   ]
   },
   "principle": {
    "lede": "All beings share the same needs and the same wish to be free from suffering. Because we are connected, kindness is not only good for others — it is the natural way to care for ourselves and the whole world.",
    "h4": "One Body, Great Compassion 同體大悲",
    "html": "In Buddhism, <em>Pratītyasamutpāda</em> (緣起) teaches that everything arises together — nothing stands apart. When we understand this, compassion is not a chore but common sense: a person who hurts and screams brings <strong>ill-will</strong> back into their own heart, while a person who shares kindness lives in <strong>peace</strong>. To bow with hands together (合十) is to say, <em>“I see the goodness in you, and we belong to one another.”</em> Loving strangers and animals is the first step of <em>同體大悲</em> — the great compassion that holds all beings as one body.",
-   "video": null
+   "video": null,
+   "lede_zh": "一切眾生都有著相同的需求，也同樣希望遠離苦。因為我們彼此相連，善良不只對別人好——它更是關懷自己以及整個世界最自然的方式。",
+   "zh_html": "在佛法中，「緣起（Pratītyasamutpāda）」教導我們：萬事萬物都是相依而生——沒有任何東西是孤立存在的。當我們明白這一點，慈悲就不是一件苦差事，而是再自然不過的道理：一個傷害別人、大吼大叫的人，會把「惡意（ill-will）」帶回自己心裡；而一個分享善意的人，活在「平靜（peace）」之中。雙手合十（合十）就是在說：「我看見你身上的善，而我們彼此相屬。」愛護陌生人和動物，是「同體大悲」的第一步——那是把一切眾生視為同一個身體的大慈悲。"
   },
   "practice": {
    "note": "Show your love this week, then write about it. Choose the tier that fits you — kindness in action <em>is</em> the lesson. 這週實際付出善意，再寫下來。選一個適合自己的等級。",
@@ -4184,7 +4437,8 @@
      "h3": "Words & one act",
      "age": "Ages 5–8 · new learners",
      "req": "Fill in the blanks, then do <strong>one</strong> kind act. Use the words <em>Human, Animals, Peace, Connected</em>.",
-     "ex": "<b>Example</b>We should not hurt <u>Animals</u>. I wish for everyone to live in <u>Peace</u>. I helped my mom today."
+     "ex": "<b>Example</b>We should not hurt <u>Animals</u>. I wish for everyone to live in <u>Peace</u>. I helped my mom today.",
+     "req_zh": "把空格填滿，然後做「一件」善事。要用到這些字：Human（人）、Animals（動物）、Peace（平靜）、Connected（相連）。"
     },
     {
      "tier": "t2",
@@ -4192,7 +4446,8 @@
      "h3": "“Love is Beautiful” paragraph",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>two short paragraphs</strong>: (1) Why is love important? (2) How will you show love this week? Use <strong>should</strong> and <strong>because</strong>.",
-     "ex": "<b>Example</b>Love is important because it makes the world happy. We should be kind because we are all connected. I will show love by being kind to my cat."
+     "ex": "<b>Example</b>Love is important because it makes the world happy. We should be kind because we are all connected. I will show love by being kind to my cat.",
+     "req_zh": "寫「兩個短段落」：(1) 為什麼愛很重要？ (2) 這星期你會怎麼展現愛？ 要用到「should（應該）」和「because（因為）」。"
     },
     {
      "tier": "t3",
@@ -4200,7 +4455,8 @@
      "h3": "Essay & well-wishes",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a full <strong>“Love is Beautiful”</strong> essay (5+ sentences) and add four well-wishes using <em>“May all beings be free from…”</em> Reflect on interconnectedness.",
-     "ex": "<b>Example</b>Because we are all connected, my kindness returns to me. May all beings be free from anger, jealousy, and mental and physical suffering."
+     "ex": "<b>Example</b>Because we are all connected, my kindness returns to me. May all beings be free from anger, jealousy, and mental and physical suffering.",
+     "req_zh": "寫一篇完整的「Love is Beautiful（愛是美麗的）」短文（5 句以上），並用「May all beings be free from…（願一切眾生遠離…）」加上四個祝福。對緣起做出反思。"
     }
    ]
   },
@@ -4353,13 +4609,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Tell the difference between an <strong>emotion</strong> and a <strong>feeling</strong>, and use the adjectives <em>generous, respectful, nice</em>. Practice the pattern <strong>“I love my ___ because…”</strong> and simple Subject + Verb + Object sentences like <em>“I respect all people.”</em>"
+    "html": "Tell the difference between an <strong>emotion</strong> and a <strong>feeling</strong>, and use the adjectives <em>generous, respectful, nice</em>. Practice the pattern <strong>“I love my ___ because…”</strong> and simple Subject + Verb + Object sentences like <em>“I respect all people.”</em>",
+    "zh_html": "分辨「emotion（情緒）」和「feeling（感受）」的不同，並使用形容詞 generous（慷慨）、respectful（尊重）、nice（友善）。練習句型「I love my ___ because…（我愛我的……，因為……）」，以及像「I respect all people.（我尊重所有人。）」這樣簡單的「主詞＋動詞＋受詞」句子。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand that love is a clean <strong>emotion that rises from within</strong>. Practice <strong>Right Speech (正語)</strong> — never speaking badly of others behind their backs — and rest in the <strong>inherent light (內在光明)</strong>, the bright Buddha-nature in every heart."
+    "html": "Understand that love is a clean <strong>emotion that rises from within</strong>. Practice <strong>Right Speech (正語)</strong> — never speaking badly of others behind their backs — and rest in the <strong>inherent light (內在光明)</strong>, the bright Buddha-nature in every heart.",
+    "zh_html": "理解愛是一種「從內心升起的、純淨的情緒」。練習「正語（正語）」──絕不在別人背後說壞話──並安住在「內在光明（內在光明）」裡，那是每一顆心中都有的、明亮的佛性。"
    }
   ],
   "vocab": [
@@ -4413,15 +4671,18 @@
     "examples": [
      {
       "html": "<strong>I love my mom because she is kind.</strong>",
-      "say": "I love my mom because she is kind."
+      "say": "I love my mom because she is kind.",
+      "zh": "I love my mom because she is kind.（我愛我的媽媽，因為她很善良。）"
      },
      {
       "html": "<strong>I love my grandpa because he listens to me.</strong>",
-      "say": "I love my grandpa because he listens to me."
+      "say": "I love my grandpa because he listens to me.",
+      "zh": "I love my grandpa because he listens to me.（我愛我的爺爺，因為他會聽我說話。）"
      },
      {
       "html": "<strong>I love my friend because she is generous.</strong>",
-      "say": "I love my friend because she is generous."
+      "say": "I love my friend because she is generous.",
+      "zh": "I love my friend because she is generous.（我愛我的朋友，因為她很慷慨。）"
      }
     ]
    },
@@ -4431,11 +4692,13 @@
     "examples": [
      {
       "html": "<strong>Love is an emotion.</strong>",
-      "say": "Love is an emotion."
+      "say": "Love is an emotion.",
+      "zh": "Love is an emotion.（愛是一種情緒。）"
      },
      {
       "html": "<strong>An emotion is a feeling in the heart.</strong>",
-      "say": "An emotion is a feeling in the heart."
+      "say": "An emotion is a feeling in the heart.",
+      "zh": "An emotion is a feeling in the heart.（情緒是心裡的一種感受。）"
      }
     ]
    },
@@ -4445,18 +4708,21 @@
     "examples": [
      {
       "html": "<strong>I respect all people.</strong>",
-      "say": "I respect all people."
+      "say": "I respect all people.",
+      "zh": "I respect all people.（我尊重所有人。）"
      },
      {
       "html": "<strong>I am generous, and I share with my friends.</strong>",
-      "say": "I am generous, and I share with my friends."
+      "say": "I am generous, and I share with my friends.",
+      "zh": "I am generous, and I share with my friends.（我很慷慨，我會跟朋友分享。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Subject + Verb + Object & defining nouns",
-   "html": "Many English sentences follow the order <strong>Subject + Verb + Object</strong>: <span class=\"ok\">I (subject) respect (verb) all people (object).</span> To <em>define</em> a word, we use the verb <strong>is</strong>: <span class=\"ok\">An emotion is a feeling.</span> Remember the article: <em>a feeling</em>, <em>an emotion</em> (use <strong>an</strong> before a vowel sound)."
+   "html": "Many English sentences follow the order <strong>Subject + Verb + Object</strong>: <span class=\"ok\">I (subject) respect (verb) all people (object).</span> To <em>define</em> a word, we use the verb <strong>is</strong>: <span class=\"ok\">An emotion is a feeling.</span> Remember the article: <em>a feeling</em>, <em>an emotion</em> (use <strong>an</strong> before a vowel sound).",
+   "zh_html": "很多英文句子的順序是「主詞＋動詞＋受詞」：I (主詞) respect (動詞) all people (受詞).（我尊重所有人。）要「定義」一個字時，我們用動詞「is（是）」：An emotion is a feeling.（情緒是一種感受。）記得冠詞：a feeling、an emotion（在母音的發音前面要用「an」）。"
   },
   "story": {
    "paras": [
@@ -4473,13 +4739,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像每一個人的心裡都有一盞小小的、溫暖的「光」（內在光明）。佛陀教導我們，這盞光──我們明亮、善良的本性──一直都在，就算我們忘記了它，它也從不熄滅。",
+    "我們要怎麼讓自己的光一直亮著呢？一個簡單的方法就是「正語」（正語）。意思是我們不在別人背後說不友善的話。當我們的言語很「尊重」別人時，別人跟我們在一起會有安全感，「信任」也會慢慢長大。信任是一條強壯的根，能讓一段友誼──也就是一段 relationship（關係）──長長久久。",
+    "保持「慷慨」也能讓光持續明亮。幫助你的爺爺奶奶、別人說話時專心聆聽，或是把你多出來的零錢分享出去，這些都是愛的小禮物（Dāna 布施）。愛是一種情緒，而善良就是我們用這份情緒去「做」的事。"
+   ]
   },
   "principle": {
    "lede": "Love is not only a word we say — it is an emotion that rises from inside us, and it shows up in how we speak and act toward others.",
    "h4": "Let Your Light Shine 讓你的光明照耀",
    "html": "Right Speech and generosity are not rules from outside — they are the natural way our inner light wants to act. Every time you choose a kind word over an unkind one, or share instead of keeping everything for yourself, your tree of love grows a little stronger. Love begins in the heart, and kindness carries it into the world.",
-   "video": null
+   "video": null,
+   "lede_zh": "愛不只是我們嘴上說的一個字──它是一種從我們內心升起的情緒，而且會在我們對別人說話、做事的方式中顯現出來。",
+   "zh_html": "正語和慷慨不是外來的規則──它們是我們內在光明自然而然想要展現的方式。每一次你選擇善良的話而不是不友善的話，或是選擇分享而不是把所有東西都留給自己，你那棵「愛之樹」就會長得更強壯一點。愛從心裡開始，而善良會把它帶到這個世界。"
   },
   "practice": {
    "note": "Draw a large tree. On the branches, draw leaves or hearts and write English words for love and kindness. Color your tree beautifully! Choose the tier that fits you. 畫一棵大樹，在枝葉上寫下表示愛與善良的英文字，選一個適合自己的等級。",
@@ -4490,7 +4763,8 @@
      "h3": "5 words",
      "age": "Ages 5–8 · new learners",
      "req": "Write at least <strong>5 words</strong> on your tree, such as <em>Love, Kind, Mom, Dad, Nice</em>. Draw yourself at the bottom.",
-     "ex": "<b>Sentence</b>Love is from my heart."
+     "ex": "<b>Sentence</b>Love is from my heart.",
+     "req_zh": "在你的樹上寫至少「5 個字」，例如 Love（愛）、Kind（善良）、Mom（媽媽）、Dad（爸爸）、Nice（友善）。在樹的底部畫出你自己。"
     },
     {
      "tier": "t2",
@@ -4498,7 +4772,8 @@
      "h3": "8 words",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write at least <strong>8 words</strong>, including new vocabulary like <em>Generous, Respect, Care, Helpful, Listen, Family, Friend, Share</em>. Add one full sentence at the bottom.",
-     "ex": "<b>Sentence</b>I show love by helping my grandma."
+     "ex": "<b>Sentence</b>I show love by helping my grandma.",
+     "req_zh": "寫至少「8 個字」，包括新單字像 Generous（慷慨）、Respect（尊重）、Care（關心）、Helpful（樂於助人）、Listen（聆聽）、Family（家人）、Friend（朋友）、Share（分享）。在底部加上一個完整的句子。"
     },
     {
      "tier": "t3",
@@ -4506,7 +4781,8 @@
      "h3": "10+ words",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>10+ words</strong> (e.g. <em>Relationship, Emotion, Inherent Light, Trust, Community, Harmony</em>) plus a short reflection of 3–4 sentences.",
-     "ex": "<b>Prompt</b>Why are respect and trust important in a friendship?"
+     "ex": "<b>Prompt</b>Why are respect and trust important in a friendship?",
+     "req_zh": "寫「10 個字以上」（例如 Relationship 關係、Emotion 情緒、Inherent Light 內在光明、Trust 信任、Community 社群、Harmony 和諧），再加上一段 3–4 句的簡短反思。"
     }
    ]
   },
@@ -4659,13 +4935,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Learn the words <strong>Karuṇā (compassion)</strong> and <strong>gratitude</strong>, and the phrasal verb <strong>“let go.”</strong> Use the imperative wish pattern <strong>“May you be free from pain.”</strong> and the pattern <strong>“I am thankful for…”</strong> Review the adjectives <em>perfect, respected, kind</em>."
+    "html": "Learn the words <strong>Karuṇā (compassion)</strong> and <strong>gratitude</strong>, and the phrasal verb <strong>“let go.”</strong> Use the imperative wish pattern <strong>“May you be free from pain.”</strong> and the pattern <strong>“I am thankful for…”</strong> Review the adjectives <em>perfect, respected, kind</em>.",
+    "zh_html": "學習單字 Karuṇā（compassion 悲、慈悲）和 gratitude（感恩），以及片語動詞「let go（放下）」。使用祝願句型「May you be free from pain.（願你遠離痛苦。）」和句型「I am thankful for…（我感謝……）」。複習形容詞 perfect（完美的）、respected（受敬重的）、kind（善良的）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "See how <strong>Mettā (慈)</strong> grows into <strong>Karuṇā (悲)</strong>: when loving-kindness deepens, it becomes the wish to remove suffering. Understand <em>“We are one”</em> (同體) and how gratitude widens the heart so there is more room for compassion."
+    "html": "See how <strong>Mettā (慈)</strong> grows into <strong>Karuṇā (悲)</strong>: when loving-kindness deepens, it becomes the wish to remove suffering. Understand <em>“We are one”</em> (同體) and how gratitude widens the heart so there is more room for compassion.",
+    "zh_html": "看見慈（Mettā）如何成長為悲（Karuṇā）：當慈愛加深，它就變成想要拔除痛苦的心願。理解「我們是一體的（We are one，同體）」，以及感恩如何讓心變得更寬廣，好讓慈悲有更多容納的空間。"
    }
   ],
   "vocab": [
@@ -4719,15 +4997,18 @@
     "examples": [
      {
       "html": "<strong>May you be free from pain.</strong>",
-      "say": "May you be free from pain."
+      "say": "May you be free from pain.",
+      "zh": "May you be free from pain.（願你遠離痛苦。）"
      },
      {
       "html": "<strong>May you be held in compassion.</strong>",
-      "say": "May you be held in compassion."
+      "say": "May you be held in compassion.",
+      "zh": "May you be held in compassion.（願你被慈悲擁抱。）"
      },
      {
       "html": "<strong>May you know peace.</strong>",
-      "say": "May you know peace."
+      "say": "May you know peace.",
+      "zh": "May you know peace.（願你得到平安。）"
      }
     ]
    },
@@ -4737,11 +5018,13 @@
     "examples": [
      {
       "html": "<strong>I am thankful for my family.</strong>",
-      "say": "I am thankful for my family."
+      "say": "I am thankful for my family.",
+      "zh": "I am thankful for my family.（我感謝我的家人。）"
      },
      {
       "html": "<strong>I am thankful for my pets and my school.</strong>",
-      "say": "I am thankful for my pets and my school."
+      "say": "I am thankful for my pets and my school.",
+      "zh": "I am thankful for my pets and my school.（我感謝我的寵物和我的學校。）"
      }
     ]
    },
@@ -4751,18 +5034,21 @@
     "examples": [
      {
       "html": "<strong>I let go of my bad feelings.</strong>",
-      "say": "I let go of my bad feelings."
+      "say": "I let go of my bad feelings.",
+      "zh": "I let go of my bad feelings.（我放下我不好的情緒。）"
      },
      {
       "html": "<strong>When I let go, my heart feels light. We are one.</strong>",
-      "say": "When I let go, my heart feels light. We are one."
+      "say": "When I let go, my heart feels light. We are one.",
+      "zh": "When I let go, my heart feels light. We are one.（當我放下，我的心覺得輕盈。我們是一體的。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Adjective review",
-   "html": "Adjectives describe people and things. This week we review <span class=\"ok\">perfect</span>, <span class=\"ok\">respected</span>, and <span class=\"ok\">kind</span>: <em>a kind heart</em>, <em>a respected teacher</em>, <em>a perfect moment</em>. Notice the gentle wish word <strong>“May”</strong>: it does not give an order — it sends a blessing, as in <em>May you be free from pain.</em>"
+   "html": "Adjectives describe people and things. This week we review <span class=\"ok\">perfect</span>, <span class=\"ok\">respected</span>, and <span class=\"ok\">kind</span>: <em>a kind heart</em>, <em>a respected teacher</em>, <em>a perfect moment</em>. Notice the gentle wish word <strong>“May”</strong>: it does not give an order — it sends a blessing, as in <em>May you be free from pain.</em>",
+   "zh_html": "形容詞用來描述人和事物。這週我們複習 perfect（完美的）、respected（受敬重的）和 kind（善良的）：a kind heart（一顆善良的心）、a respected teacher（一位受敬重的老師）、a perfect moment（一個完美的時刻）。注意溫柔的祝願詞「May（願）」：它不是下命令，而是送出一份祝福，例如 May you be free from pain.（願你遠離痛苦。）"
   },
   "story": {
    "paras": [
@@ -4779,13 +5065,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "一個寧靜的早晨，佛陀和弟子們坐在一個平靜的池塘邊。他撿起一顆小石頭，丟進水裡。咚。石頭碰到水面的地方，出現了一個小小的圓圈（漣漪）。",
+    "那個小圓圈變成更大的圓圈，接著又更大，一直向外擴散，直到溫柔的漣漪（ripples）抵達池塘的每一個邊緣。「一顆小石頭，」佛陀說，「碰觸了整座池塘。你的善意就像這顆石頭。」",
+    "當你幫助一個傷心或受傷的人，那個人就少了一些痛苦（suffering）。然後他會對別人更友善，那個人又會對別人更友善。慈愛（Mettā）希望別人快樂；慈悲（Karuṇā）希望沒有人受苦——而就像漣漪一樣，即使是一個小小的慈悲舉動，也能改變整個世界。因為我們彼此相連（interconnected），我們是一體的。"
+   ]
   },
   "principle": {
    "lede": "Mettā says, <em>“I want you to be happy.”</em> Karuṇā goes one step deeper and says, <em>“I do not want you to suffer.”</em> This week we let loving-kindness grow into compassion for the whole world.",
    "h4": "Wishing No Suffering for the World 願世間無苦",
    "html": "When the heart fills with gratitude, it becomes soft and wide — and a wide heart has more room for others. From that softness, Mettā (wishing happiness) naturally grows into Karuṇā (wishing the end of suffering). To “let go” of our own bad feelings is the first act of compassion: it heals our own heart so we can hold others gently. And because every life is interconnected, one small kind act ripples outward. Be the ripple that starts the change — for we are all one.",
-   "video": null
+   "video": null,
+   "lede_zh": "慈（Mettā）說：「我希望你快樂。」悲（Karuṇā）更進一步，說：「我不希望你受苦。」這週，我們讓慈愛成長為對整個世界的慈悲。",
+   "zh_html": "當心充滿感恩，它就變得柔軟而寬廣——而寬廣的心有更多空間容納別人。從那份柔軟中，慈（Mettā，希望別人快樂）自然成長為悲（Karuṇā，希望痛苦止息）。「放下」我們自己不好的情緒，就是慈悲的第一個舉動：它療癒我們自己的心，讓我們能溫柔地擁抱別人。而因為每一個生命都彼此相連，一個小小的善舉就會像漣漪一樣向外擴散。當那個帶起改變的漣漪吧——因為我們都是一體的。"
   },
   "practice": {
    "note": "This week, send your compassion into the world like ripples. Choose the tier that fits you. 選一個適合自己的等級，把慈悲化為行動。",
@@ -4796,7 +5089,8 @@
      "h3": "Draw & copy",
      "age": "Ages 5–8 · new learners",
      "req": "Draw <strong>one person or animal</strong> you want to help. Then copy and complete these two sentences in your notebook.",
-     "ex": "<b>Example</b>Karuṇā means compassion. I want my dog to be free from pain."
+     "ex": "<b>Example</b>Karuṇā means compassion. I want my dog to be free from pain.",
+     "req_zh": "畫出一個你想幫助的人或動物。然後把下面這兩個句子抄到你的筆記本裡並完成它們。"
     },
     {
      "tier": "t2",
@@ -4804,7 +5098,8 @@
      "h3": "4 words & a memory",
      "age": "Ages 9–12 · developing fluency",
      "req": "Use these <strong>4 words</strong> in your own sentences: <em>kindness, let go, suffering, heart</em>. Then write about one time you helped someone who was sad or hurt.",
-     "ex": "<b>Example</b>My sister was crying. I gave her a hug. That is Karuṇā."
+     "ex": "<b>Example</b>My sister was crying. I gave her a hug. That is Karuṇā.",
+     "req_zh": "用這 4 個單字寫出你自己的句子：kindness（善良）、let go（放下）、suffering（痛苦）、heart（心）。然後寫一寫你曾經幫助某個傷心或受傷的人的一次經驗。"
     },
     {
      "tier": "t3",
@@ -4812,7 +5107,8 @@
      "h3": "The ripples paragraph",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a short paragraph (<strong>5–6 sentences</strong>) about the Buddha’s story of the ripples. Explain how one small act of kindness can change the world, using <em>interconnected, suffering,</em> and <em>peace</em>.",
-     "ex": "<b>Example</b>Because we are all interconnected, helping a stranger reduces suffering and spreads peace like ripples."
+     "ex": "<b>Example</b>Because we are all interconnected, helping a stranger reduces suffering and spreads peace like ripples.",
+     "req_zh": "寫一段短文（5–6 句），講佛陀漣漪的故事。說明一個小小的善舉如何能改變世界，並用上 interconnected（彼此相連）、suffering（痛苦）和 peace（平安）。"
     }
    ]
   },
@@ -4965,13 +5261,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the pattern <strong>“When I am ___, I will ___.”</strong> with the future tense <strong>“will”</strong> to state an intention, and learn calm-mind vocabulary: <em>meditation, calm, focus, suffering, cause, enlightenment, inhale, exhale</em>."
+    "html": "Use the pattern <strong>“When I am ___, I will ___.”</strong> with the future tense <strong>“will”</strong> to state an intention, and learn calm-mind vocabulary: <em>meditation, calm, focus, suffering, cause, enlightenment, inhale, exhale</em>.",
+    "zh_html": "使用「When I am ___, I will ___.（當我……時，我會……。）」這個句型搭配未來式「will」來說出一個心願，並學習讓心平靜的單字：meditation（靜坐）、calm（平靜）、focus（專注）、suffering（苦）、cause（原因）、enlightenment（覺悟）、inhale（吸氣）、exhale（吐氣）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Practice <strong>Mindful Looking (Sammā Sati 正念)</strong> as a form of meditation, and meet the <strong>Four Noble Truths (四聖諦)</strong>: suffering, its cause, its end, and the path — knowing that we can find peace even when life is hard."
+    "html": "Practice <strong>Mindful Looking (Sammā Sati 正念)</strong> as a form of meditation, and meet the <strong>Four Noble Truths (四聖諦)</strong>: suffering, its cause, its end, and the path — knowing that we can find peace even when life is hard.",
+    "zh_html": "把「正念地觀看（Mindful Looking，Sammā Sati 正念）」當作一種靜坐來練習，並認識「四聖諦」：苦、苦的原因、苦的止息，以及通往止息的道路——明白即使生活很難，我們也能找到平安。"
    }
   ],
   "vocab": [
@@ -5037,15 +5335,18 @@
     "examples": [
      {
       "html": "<strong>When I am angry, I will breathe slowly.</strong>",
-      "say": "When I am angry, I will breathe slowly."
+      "say": "When I am angry, I will breathe slowly.",
+      "zh": "當我生氣時，我會慢慢呼吸。"
      },
      {
       "html": "<strong>When I am worried, I will blow the thought bubble away.</strong>",
-      "say": "When I am worried, I will blow the thought bubble away."
+      "say": "When I am worried, I will blow the thought bubble away.",
+      "zh": "當我擔心時，我會把那個念頭泡泡吹走。"
      },
      {
       "html": "<strong>When I am distracted, I will bring my mind back.</strong>",
-      "say": "When I am distracted, I will bring my mind back."
+      "say": "When I am distracted, I will bring my mind back.",
+      "zh": "當我分心時，我會把我的心帶回來。"
      }
     ]
    },
@@ -5055,11 +5356,13 @@
     "examples": [
      {
       "html": "<strong>Meditation helps me with my homework.</strong>",
-      "say": "Meditation helps me with my homework."
+      "say": "Meditation helps me with my homework.",
+      "zh": "靜坐幫助我寫功課。"
      },
      {
       "html": "<strong>Meditation helps me pay attention.</strong>",
-      "say": "Meditation helps me pay attention."
+      "say": "Meditation helps me pay attention.",
+      "zh": "靜坐幫助我專心。"
      }
     ]
    },
@@ -5069,18 +5372,21 @@
     "examples": [
      {
       "html": "<strong>Focus on the blue firefly.</strong>",
-      "say": "Focus on the blue firefly."
+      "say": "Focus on the blue firefly.",
+      "zh": "專注在那隻藍色的螢火蟲上。"
      },
      {
       "html": "<strong>Inhale, exhale, and blow the bubble away.</strong>",
-      "say": "Inhale, exhale, and blow the bubble away."
+      "say": "Inhale, exhale, and blow the bubble away.",
+      "zh": "吸氣，吐氣，把泡泡吹走。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Future tense with “will” for intention",
-   "html": "We use <strong>will + (base verb)</strong> to say what we plan or choose to do: <span class=\"ok\">I will meditate to be calm.</span> · <span class=\"ok\">When I am sad, I will breathe.</span> The verb after <em>will</em> never changes — it stays simple: <em>I will focus</em>, <em>she will focus</em>, <em>they will focus</em>. This is a promise to your own calm mind."
+   "html": "We use <strong>will + (base verb)</strong> to say what we plan or choose to do: <span class=\"ok\">I will meditate to be calm.</span> · <span class=\"ok\">When I am sad, I will breathe.</span> The verb after <em>will</em> never changes — it stays simple: <em>I will focus</em>, <em>she will focus</em>, <em>they will focus</em>. This is a promise to your own calm mind.",
+   "zh_html": "我們用「will +（原形動詞）」來說出我們打算或選擇要做的事：I will meditate to be calm.（我會靜坐讓自己平靜。）· When I am sad, I will breathe.（當我難過時，我會呼吸。）will 後面的動詞永遠不變——它保持原形：I will focus、she will focus、they will focus。這是對你自己那顆平靜的心許下的承諾。"
   },
   "story": {
    "paras": [
@@ -5098,13 +5404,21 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "1. 苦（苦）——人生有些艱難的時刻。得不到想要的，或得到不想要的，都會讓人痛苦。（苦：得不到想要的，就會痛苦。）",
+    "2. 集（因）——這些痛苦大多來自於非常強烈地「想要」某些東西，或非常強烈地「討厭」某些東西。（集：痛苦來自貪愛與排斥。）",
+    "3. 滅（滅）——平安是有可能的。即使我們受了傷，一顆平靜的心也能安歇。泡泡可以不再長大。（滅：放下執著，平安是可能的。）",
+    "4. 道（道）——我們每天帶著平安與智慧而活——做個善良的人、用心觀照、在艱難的時刻好好呼吸。（道：以平安與智慧而活，就是覺悟之路。）"
+   ]
   },
   "principle": {
    "lede": "Mindfulness means watching the mind with kindness. When a busy thought rises like a bubble, we do not fight it — we notice it, breathe, and let it float away. With a calm and focused mind, the Buddha invited us to look honestly at life through the <em>Four Noble Truths</em>.",
    "h4": "You are the master of your thoughts 你是念頭的主人",
    "html": "The Four Noble Truths are not sad news — they are a map. They tell us that suffering is real, but it is not the end of the story: there is a way to peace. Each time you stop, inhale, exhale, and blow a thought bubble away, you take a small step on the <em>path to enlightenment</em>. The same kindness you practiced in earlier weeks (<em>Karuṇā</em> and <em>Mettā</em>) is part of this same path.",
-   "video": null
+   "video": null,
+   "lede_zh": "正念是指帶著善意觀看自己的心。當一個忙碌的念頭像泡泡一樣冒出來，我們不和它打架——我們注意到它，呼吸，然後讓它飄走。帶著一顆平靜又專注的心，佛陀邀請我們透過「四聖諦」誠實地看待人生。",
+   "zh_html": "四聖諦不是壞消息——它是一張地圖。它告訴我們：苦是真實的，但這不是故事的結局：有一條通往平安的路。每一次你停下來、吸氣、吐氣、把一個念頭泡泡吹走，你就在「通往覺悟的道路」上往前走了一小步。你在前幾週練習過的那份善意（慈，Karuṇā；慈愛，Mettā）也是這同一條道路的一部分。"
   },
   "practice": {
    "note": "Practice mastering your mind <strong>every day</strong> this week. Choose the tier that fits you — stopping to breathe <em>is</em> the practice. 每天練習，選一個適合自己的等級。",
@@ -5115,7 +5429,8 @@
      "h3": "Draw & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Draw a picture of yourself meditating. Draw <strong>3 bubbles</strong> above your head with 3 things that make you happy. Then trace and complete two sentences.",
-     "ex": "<b>Trace</b>“Meditation helps me be calm.” · “I am on the path.”"
+     "ex": "<b>Trace</b>“Meditation helps me be calm.” · “I am on the path.”",
+     "req_zh": "畫一張你自己在靜坐的圖。在你的頭上畫 3 個泡泡，裡面寫上 3 件讓你開心的事。然後描寫並完成兩個句子。"
     },
     {
      "tier": "t2",
@@ -5123,7 +5438,8 @@
      "h3": "3 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Think of a time you felt sad or angry this week. Write <strong>3 sentences</strong> using the <strong>“When I am ___, I will ___.”</strong> structure.",
-     "ex": "<b>Example</b>When I have too much homework, I will breathe to be calm. When I am sad, I will blow away the thought bubbles."
+     "ex": "<b>Example</b>When I have too much homework, I will breathe to be calm. When I am sad, I will blow away the thought bubbles.",
+     "req_zh": "想一想這個星期裡你覺得難過或生氣的一次經驗。用「When I am ___, I will ___.（當我……時，我會……。）」的句型寫 3 個句子。"
     },
     {
      "tier": "t3",
@@ -5131,7 +5447,8 @@
      "h3": "A reflection",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a short paragraph (<strong>5–8 sentences</strong>) explaining the Four Noble Truths in your own words, and how meditation helps you find peace in daily life.",
-     "ex": "<b>Prompt</b>Why can we have peace even when we are suffering? How does breathing help you find the “End of Suffering” every day?"
+     "ex": "<b>Prompt</b>Why can we have peace even when we are suffering? How does breathing help you find the “End of Suffering” every day?",
+     "req_zh": "寫一段短文（5–8 個句子），用你自己的話解釋四聖諦，以及靜坐如何幫助你在日常生活中找到平安。"
     }
    ]
   },
@@ -5284,13 +5601,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the social affirmations <strong>“I’m happy for you!”</strong> and <strong>“Good job!”</strong> to celebrate others. Learn the vocabulary <em>Muditā, jealousy, antidote, empathetic, enough</em>, and practice the affirmation “I am enough.”"
+    "html": "Use the social affirmations <strong>“I’m happy for you!”</strong> and <strong>“Good job!”</strong> to celebrate others. Learn the vocabulary <em>Muditā, jealousy, antidote, empathetic, enough</em>, and practice the affirmation “I am enough.”",
+    "zh_html": "用「I'm happy for you!（我為你感到開心！）」和「Good job!（做得好！）」這些社交肯定語來為別人喝采。學習這些詞彙：Muditā（隨喜）、jealousy（嫉妒）、antidote（解毒劑）、empathetic（有同理心的）、enough（足夠的），並練習這句肯定語「I am enough（我已經足夠）」。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Muditā (隨喜)</strong> as the antidote to jealousy and competition. Learn interconnectedness — that someone else’s happiness does not make us smaller. Build inner stability with self-love so we can truly rejoice for others."
+    "html": "Understand <strong>Muditā (隨喜)</strong> as the antidote to jealousy and competition. Learn interconnectedness — that someone else’s happiness does not make us smaller. Build inner stability with self-love so we can truly rejoice for others.",
+    "zh_html": "了解「隨喜」（Muditā，隨喜）是嫉妒和競爭的解毒劑。學會相互關連的道理──別人的快樂並不會讓我們變得渺小。透過自我慈愛建立內在的穩定，這樣我們才能真正為別人感到歡喜。"
    }
   ],
   "vocab": [
@@ -5344,15 +5663,18 @@
     "examples": [
      {
       "html": "<strong>I’m happy for you!</strong>",
-      "say": "I’m happy for you!"
+      "say": "I’m happy for you!",
+      "zh": "I'm happy for you!（我為你感到開心！）"
      },
      {
       "html": "<strong>I’m happy for my friend. She won the game.</strong>",
-      "say": "I’m happy for my friend. She won the game."
+      "say": "I’m happy for my friend. She won the game.",
+      "zh": "I'm happy for my friend. She won the game.（我為我的朋友感到開心。她贏了比賽。）"
      },
      {
       "html": "<strong>Good job! That is wonderful news.</strong>",
-      "say": "Good job! That is wonderful news."
+      "say": "Good job! That is wonderful news.",
+      "zh": "Good job! That is wonderful news.（做得好！那真是好消息。）"
      }
     ]
    },
@@ -5362,11 +5684,13 @@
     "examples": [
      {
       "html": "<strong>I am safe. I am loved.</strong>",
-      "say": "I am safe. I am loved."
+      "say": "I am safe. I am loved.",
+      "zh": "I am safe. I am loved.（我很安全。我被愛著。）"
      },
      {
       "html": "<strong>I am happy. I am enough.</strong>",
-      "say": "I am happy. I am enough."
+      "say": "I am happy. I am enough.",
+      "zh": "I am happy. I am enough.（我很快樂。我已經足夠。）"
      }
     ]
    },
@@ -5376,18 +5700,21 @@
     "examples": [
      {
       "html": "<strong>They are safe. They are loved.</strong>",
-      "say": "They are safe. They are loved."
+      "say": "They are safe. They are loved.",
+      "zh": "They are safe. They are loved.（他們很安全。他們被愛著。）"
      },
      {
       "html": "<strong>They are happy, and I am happy for them.</strong>",
-      "say": "They are happy, and I am happy for them."
+      "say": "They are happy, and I am happy for them.",
+      "zh": "They are happy, and I am happy for them.（他們很快樂，而我為他們感到開心。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · “for” after happy, and the verb “to be”",
-   "html": "To celebrate a person, we say <span class=\"ok\">I’m happy <strong>for</strong> you</span> — don’t forget the word <em>for</em>. For affirmations we use the verb <strong>to be</strong>: <span class=\"ok\">I <strong>am</strong> enough</span> for myself, and <span class=\"ok\">they <strong>are</strong> enough</span> for others. Saying it kindly, out loud, is <em>Right Speech</em>."
+   "html": "To celebrate a person, we say <span class=\"ok\">I’m happy <strong>for</strong> you</span> — don’t forget the word <em>for</em>. For affirmations we use the verb <strong>to be</strong>: <span class=\"ok\">I <strong>am</strong> enough</span> for myself, and <span class=\"ok\">they <strong>are</strong> enough</span> for others. Saying it kindly, out loud, is <em>Right Speech</em>.",
+   "zh_html": "要為一個人喝采，我們說 I'm happy for you（我為你感到開心）──別忘了 for 這個字。說肯定語時我們用 be 動詞：I am enough（我對自己來說已經足夠），以及 they are enough（他們對別人來說已經足夠）。親切地、大聲地把它說出來，就是「正語」（Right Speech）。"
   },
   "story": {
    "paras": [
@@ -5404,13 +5731,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像同一個班上的兩個小孩。兩個人都很努力，但只有其中一個贏得了繪畫比賽。第一個小孩有一顆嫉妒的心──小小的、暗暗的、緊緊的。它說：「那又怎樣？為什麼不是我？」那份緊繃的感覺並沒有從任何人手上把獎搶走；它只是讓這個嫉妒的小孩不快樂而已。",
+    "第二個小孩有一顆隨喜的心──明亮、敞開，而且愈來愈寬廣。它說：「做得好！我為你感到開心！」什麼都沒有失去。贏的人還是贏家──但現在有兩個小孩在微笑，而不是只有一個。喜悅加倍了。",
+    "這就是隨喜（Muditā）的祕密：別人的成功並不會讓你變得渺小。嫉妒是一點小小的毒，而隨喜就是解毒劑（antidote）。在我們能為別人感到歡喜之前，我們先用自我慈愛安定自己的心：我很安全，我被愛著，我很快樂，我已經足夠。當你知道自己已經足夠，你的心就有很多空間，可以容下每一個人的快樂。"
+   ]
   },
   "principle": {
    "lede": "When something good happens to a classmate, two hearts are possible. Notice which one you grow.",
    "h4": "When your friend wins, you win too 隨喜的美好",
    "html": "Muditā is one of the Four Immeasurables (四無量心), alongside loving-kindness (Mettā) and compassion (Karuṇā). It is the practice of rejoicing in others’ good fortune instead of comparing ourselves to them. Remember: you are enough, you are loved, and your heart has plenty of room for everyone’s happiness. Good job, class!",
-   "video": null
+   "video": null,
+   "lede_zh": "當同學遇到好事時，有兩種心是可能生起的。注意你正在養大的是哪一種。",
+   "zh_html": "隨喜（Muditā）是四無量心之一，和慈愛（Mettā，慈）與悲憫（Karuṇā，悲）並列。它是為別人的好運感到歡喜、而不拿自己去和他們比較的修習。記住：你已經足夠，你被愛著，而你的心有很多空間可以容下每一個人的快樂。做得好，全班同學！"
   },
   "practice": {
    "note": "This week, take the <strong>“Good Job” Challenge</strong>: find one person — a friend, sibling, or parent — who is happy or successful at something, and tell them <em>“I’m happy for you”</em> or <em>“Good job!”</em> Choose the tier that fits you. 選一個適合自己的等級。",
@@ -5421,7 +5755,8 @@
      "h3": "Draw & one sentence",
      "age": "Ages 5–8 · new learners",
      "req": "Draw a picture of a friend winning a game or doing something well. Write <strong>1 sentence</strong>, and copy the 3 words: <em>Muditā, happy, love</em>.",
-     "ex": "<b>Example</b>I am happy for my friend."
+     "ex": "<b>Example</b>I am happy for my friend.",
+     "req_zh": "畫一張圖，畫一位朋友贏得比賽或把某件事做得很好。寫 1 個句子，並抄寫這 3 個字：Muditā（隨喜）、happy（快樂）、love（愛）。"
     },
     {
      "tier": "t2",
@@ -5429,7 +5764,8 @@
      "h3": "A happy moment",
      "age": "Ages 9–12 · developing fluency",
      "req": "Describe a moment this week when you saw someone else happy. Use the prompt below, and use the word <strong>enough</strong> in a sentence about yourself.",
-     "ex": "<b>Example</b>My sister was happy because she passed her test. I said: “Good job!” It made me feel proud. I am enough."
+     "ex": "<b>Example</b>My sister was happy because she passed her test. I said: “Good job!” It made me feel proud. I am enough.",
+     "req_zh": "描述這一週裡你看見別人快樂的一個時刻。用下面的提示，並在一個關於你自己的句子裡用上 enough（足夠）這個字。"
     },
     {
      "tier": "t3",
@@ -5437,7 +5773,8 @@
      "h3": "Reflection essay",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a short paragraph (<strong>5–8 sentences</strong>) explaining why Muditā is the antidote to jealousy. Why is it sometimes hard to be happy for others, and how does Muditā help our hearts grow bigger?",
-     "ex": "<b>Example</b>It is hard to be happy for others when I am comparing myself to them. But practicing Muditā reminds me that I am enough, so a friend’s success cannot make me smaller."
+     "ex": "<b>Example</b>It is hard to be happy for others when I am comparing myself to them. But practicing Muditā reminds me that I am enough, so a friend’s success cannot make me smaller.",
+     "req_zh": "寫一小段話（5 到 8 個句子），解釋為什麼隨喜是嫉妒的解毒劑。為什麼為別人感到開心有時候很難？隨喜又如何幫助我們的心變得更寬大？"
     }
    ]
   },
@@ -5590,13 +5927,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the cause-and-effect pattern <strong>“I appreciate my parents because…”</strong> to give reasons, and learn character vocabulary: <em>appreciate, selfless, perseverance, altruistic, provide</em>. Review the simple past tense for telling stories."
+    "html": "Use the cause-and-effect pattern <strong>“I appreciate my parents because…”</strong> to give reasons, and learn character vocabulary: <em>appreciate, selfless, perseverance, altruistic, provide</em>. Review the simple past tense for telling stories.",
+    "zh_html": "用因果句型「I appreciate my parents because…（我感謝我的父母，因為…）」來說明理由，並學習關於品格的單字：appreciate（感謝、珍惜）、selfless（無私的）、perseverance（毅力）、altruistic（利他的）、provide（提供）。複習用來講故事的簡單過去式。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand that the practice of <strong>Muditā (隨喜)</strong> begins at home. Learn the importance of <strong>gratitude (報恩)</strong> and filial piety (孝道), and see that true wealth is not money but love and compassion."
+    "html": "Understand that the practice of <strong>Muditā (隨喜)</strong> begins at home. Learn the importance of <strong>gratitude (報恩)</strong> and filial piety (孝道), and see that true wealth is not money but love and compassion.",
+    "zh_html": "理解「隨喜（Muditā）」的練習要從家裡開始。學習「報恩（gratitude）」與孝道（filial piety）的重要，並看見真正的財富不是金錢，而是愛與慈悲。"
    }
   ],
   "vocab": [
@@ -5650,15 +5989,18 @@
     "examples": [
      {
       "html": "<strong>I appreciate my parents because they take care of me.</strong>",
-      "say": "I appreciate my parents because they take care of me."
+      "say": "I appreciate my parents because they take care of me.",
+      "zh": "I appreciate my parents because they take care of me.（我感謝我的父母，因為他們照顧我。）"
      },
      {
       "html": "<strong>I appreciate my grandma because she is selfless.</strong>",
-      "say": "I appreciate my grandma because she is selfless."
+      "say": "I appreciate my grandma because she is selfless.",
+      "zh": "I appreciate my grandma because she is selfless.（我感謝我的奶奶，因為她很無私。）"
      },
      {
       "html": "<strong>I appreciate my dad because he works hard for our family.</strong>",
-      "say": "I appreciate my dad because he works hard for our family."
+      "say": "I appreciate my dad because he works hard for our family.",
+      "zh": "I appreciate my dad because he works hard for our family.（我感謝我的爸爸，因為他為我們家辛勤工作。）"
      }
     ]
    },
@@ -5668,11 +6010,13 @@
     "examples": [
      {
       "html": "<strong>My friend won the race. I am not jealous; I am happy for her.</strong>",
-      "say": "My friend won the race. I am not jealous; I am happy for her."
+      "say": "My friend won the race. I am not jealous; I am happy for her.",
+      "zh": "My friend won the race. I am not jealous; I am happy for her.（我的朋友贏了比賽。我不嫉妒；我為她感到開心。）"
      },
      {
       "html": "<strong>My brother got a good grade, and I am happy for him.</strong>",
-      "say": "My brother got a good grade, and I am happy for him."
+      "say": "My brother got a good grade, and I am happy for him.",
+      "zh": "My brother got a good grade, and I am happy for him.（我哥哥拿到了好成績，我為他感到開心。）"
      }
     ]
    },
@@ -5682,18 +6026,21 @@
     "examples": [
      {
       "html": "<strong>My parents provide food and a home for me.</strong>",
-      "say": "My parents provide food and a home for me."
+      "say": "My parents provide food and a home for me.",
+      "zh": "My parents provide food and a home for me.（我的父母為我提供食物和一個家。）"
      },
      {
       "html": "<strong>Love is more important than money.</strong>",
-      "say": "Love is more important than money."
+      "say": "Love is more important than money.",
+      "zh": "Love is more important than money.（愛比金錢更重要。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Simple past for storytelling",
-   "html": "When we retell a story, we use the <strong>simple past tense</strong>. Many verbs add <strong>-ed</strong>: <span class=\"ok\">My friend played well.</span> Others change form: <span class=\"ok\">My friend won the race.</span> · <span class=\"ok\">I felt happy for her.</span> Use the past tense to share a moment of Muditā that <em>already</em> happened."
+   "html": "When we retell a story, we use the <strong>simple past tense</strong>. Many verbs add <strong>-ed</strong>: <span class=\"ok\">My friend played well.</span> Others change form: <span class=\"ok\">My friend won the race.</span> · <span class=\"ok\">I felt happy for her.</span> Use the past tense to share a moment of Muditā that <em>already</em> happened.",
+   "zh_html": "當我們重述一個故事時，會用「簡單過去式（simple past tense）」。許多動詞會加「-ed」：My friend played well.（我的朋友表現得很好。）有些動詞則會變化形式：My friend won the race.（我的朋友贏了比賽。）· I felt happy for her.（我為她感到開心。）用過去式來分享一個「已經」發生過的隨喜時刻。"
   },
   "story": {
    "paras": [
@@ -5710,13 +6057,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "從前有一個男孩，他的父親是個貧窮的農夫（一位貧窮的農夫）。學校裡其他孩子都有新鞋子和亮晶晶的便當盒，但這個男孩只有舊衣服。他為自己的父親感到羞愧，希望自己的家是富有的。",
+    "男孩不知道的是，他的父親默默地把幾乎所有的東西都送了出去。當鄰居的孩子餓肚子時，父親分出他們的米飯。當一位老人家走不動時，父親揹著他回家。他從不提起這些事，也從不要求別人感謝。他的愛是「無私的（selfless）」（無私的）——也是「利他的（altruistic）」（利他的）。",
+    "有一天男孩生病了。村裡許多人都來幫忙，因為他們記得這位父親的善良。男孩終於明白：他的家一點都不貧窮。他的父親給了他們最大的財富——一顆充滿愛的心。從那天起，男孩開始「感謝（appreciated）」他的父親，他的嫉妒也轉化成了喜悅。"
+   ]
   },
   "principle": {
    "lede": "Muditā means “having joy with others.” It is the opposite of envy — and the place to begin practicing it is right where we live.",
    "h4": "Joy with My Family 喜悅從家開始",
    "html": "It is sometimes easiest to feel joy for strangers and hardest to feel it for the people closest to us. <strong>Muditā</strong> begins at home: being truly happy when your brother does well, thanking your parents for a love that asks for nothing back. When you let go of jealousy and appreciate the selfless care your family gives, your whole house fills with light. As the teacher reminds us, “When you are happy for your parents and your siblings, your whole house fills with joy.” Be a <em>joy-sharer</em> this week.",
-   "video": null
+   "video": null,
+   "lede_zh": "隨喜（Muditā）的意思是「為別人感到歡喜」。它是嫉妒的相反——而開始練習它的地方，就在我們生活的這個家。",
+   "zh_html": "有時候，為陌生人感到歡喜最容易，為身邊最親近的人感到歡喜反而最難。「隨喜（Muditā）」要從家裡開始：當你的兄弟姊妹表現得好時，真心地為他們開心；為父母那份不求回報的愛而感謝他們。當你放下嫉妒、珍惜家人給你的那份無私關懷時，你整個家都會充滿光亮。正如老師提醒我們的：「當你為你的父母和兄弟姊妹感到歡喜時，你整個家都會充滿喜悅。」這星期，當一個「分享喜悅的人」吧。"
   },
   "practice": {
    "note": "“Muditā Starts at Home.” Choose the tier that fits you, and practice being a joy-sharer with your family this week. 選一個適合自己的等級，本週在家中練習隨喜。",
@@ -5727,7 +6081,8 @@
      "h3": "Draw & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Draw a picture of your mom or dad doing something for you (cooking or driving). Then trace and complete the sentences. Smile and say “Thank you” to your parents 3 times this week.",
-     "ex": "<b>Example</b>I love my family. Thank you for taking care of me."
+     "ex": "<b>Example</b>I love my family. Thank you for taking care of me.",
+     "req_zh": "畫一張你媽媽或爸爸為你做某件事的圖（煮飯或開車）。然後描寫並完成句子。這星期對你的父母微笑並說「Thank you（謝謝）」3 次。"
     },
     {
      "tier": "t2",
@@ -5735,7 +6090,8 @@
      "h3": "3 reasons",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3 reasons</strong> why you appreciate your parents or guardians. Use the word <strong>selfless</strong> to describe someone in your family.",
-     "ex": "<b>Example</b>I appreciate my parents because they cook for me, help me study, and never give up. My grandma is selfless because she always shares her food."
+     "ex": "<b>Example</b>I appreciate my parents because they cook for me, help me study, and never give up. My grandma is selfless because she always shares her food.",
+     "req_zh": "寫「3 個理由」說明你為什麼感謝你的父母或監護人。用「selfless（無私的）」這個字來形容你家裡的某個人。"
     },
     {
      "tier": "t3",
@@ -5743,7 +6099,8 @@
      "h3": "Reflection essay",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a paragraph (<strong>6–10 sentences</strong>) about the father’s story. Why did the son change his mind? Then name one moment this week when you felt jealousy, and describe how you turned it into Muditā.",
-     "ex": "<b>Example</b>At first the son was ashamed, but he learned that his father’s selfless love was true wealth. When my friend won, I felt envy — then I chose to be happy for her instead."
+     "ex": "<b>Example</b>At first the son was ashamed, but he learned that his father’s selfless love was true wealth. When my friend won, I felt envy — then I chose to be happy for her instead.",
+     "req_zh": "寫一段（「6–10 句」）關於那位父親的故事。兒子為什麼改變了想法？然後說出這星期一個你感到嫉妒的時刻，並描述你如何把它轉化成隨喜。"
     }
    ]
   },
@@ -5896,13 +6253,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use rich adjectives to describe inner experience: <em>foggy, wonderful, complete, peaceful</em>. Practice the patterns <strong>“Meditation helps me with…”</strong> and <strong>“I feel… after meditation.”</strong> Speak affirmations using <strong>“I am…”</strong>."
+    "html": "Use rich adjectives to describe inner experience: <em>foggy, wonderful, complete, peaceful</em>. Practice the patterns <strong>“Meditation helps me with…”</strong> and <strong>“I feel… after meditation.”</strong> Speak affirmations using <strong>“I am…”</strong>.",
+    "zh_html": "用豐富的形容詞描述內在的感受：foggy（霧濛濛的）、wonderful（美好的）、complete（完整的）、peaceful（平靜的）。練習句型「Meditation helps me with…（禪修幫助我……）」和「I feel… after meditation.（禪修之後，我覺得……）」。用「I am…（我是……）」說出肯定句。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Samādhi (concentration, 定)</strong> as the calm focus that clears the “foggy” mind. Learn the <strong>Third Eye</strong> as a point of focus, connect meditation with <em>positive energy</em>, and build healthy self-worth through identity affirmations rooted in <strong>Buddha-nature</strong>."
+    "html": "Understand <strong>Samādhi (concentration, 定)</strong> as the calm focus that clears the “foggy” mind. Learn the <strong>Third Eye</strong> as a point of focus, connect meditation with <em>positive energy</em>, and build healthy self-worth through identity affirmations rooted in <strong>Buddha-nature</strong>.",
+    "zh_html": "理解「Samādhi（定，定）」是那種能讓「霧濛濛」的心變清澈的平靜專注力。學習以「第三眼」作為專注的一個點，把禪修和 positive energy（正向能量）連結起來，並透過根植於「佛性」的身分肯定句，建立健康的自我價值。"
    }
   ],
   "vocab": [
@@ -5956,15 +6315,18 @@
     "examples": [
      {
       "html": "<strong>Meditation helps me with my homework.</strong>",
-      "say": "Meditation helps me with my homework."
+      "say": "Meditation helps me with my homework.",
+      "zh": "Meditation helps me with my homework.（禪修幫助我寫功課。）"
      },
      {
       "html": "<strong>Meditation helps me with my sleep.</strong>",
-      "say": "Meditation helps me with my sleep."
+      "say": "Meditation helps me with my sleep.",
+      "zh": "Meditation helps me with my sleep.（禪修幫助我睡覺。）"
      },
      {
       "html": "<strong>Meditation helps my brain not feel foggy.</strong>",
-      "say": "Meditation helps my brain not feel foggy."
+      "say": "Meditation helps my brain not feel foggy.",
+      "zh": "Meditation helps my brain not feel foggy.（禪修幫助我的腦袋不再霧濛濛。）"
      }
     ]
    },
@@ -5974,15 +6336,18 @@
     "examples": [
      {
       "html": "<strong>I feel wonderful after meditation.</strong>",
-      "say": "I feel wonderful after meditation."
+      "say": "I feel wonderful after meditation.",
+      "zh": "I feel wonderful after meditation.（禪修之後，我覺得很美好。）"
      },
      {
       "html": "<strong>I feel calm and complete after meditation.</strong>",
-      "say": "I feel calm and complete after meditation."
+      "say": "I feel calm and complete after meditation.",
+      "zh": "I feel calm and complete after meditation.（禪修之後，我覺得平靜又完整。）"
      },
      {
       "html": "<strong>When I focus on my third eye, I feel peaceful.</strong>",
-      "say": "When I focus on my third eye, I feel peaceful."
+      "say": "When I focus on my third eye, I feel peaceful.",
+      "zh": "When I focus on my third eye, I feel peaceful.（當我專注在第三眼時，我覺得很平靜。）"
      }
     ]
    },
@@ -5992,18 +6357,21 @@
     "examples": [
      {
       "html": "<strong>I am love. I am at peace.</strong>",
-      "say": "I am love. I am at peace."
+      "say": "I am love. I am at peace.",
+      "zh": "I am love. I am at peace.（我就是愛。我處於平靜之中。）"
      },
      {
       "html": "<strong>I am enough. I am complete.</strong>",
-      "say": "I am enough. I am complete."
+      "say": "I am enough. I am complete.",
+      "zh": "I am enough. I am complete.（我已經足夠。我是完整的。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Adjectives after “feel” and “am”",
-   "html": "After <strong>feel</strong> and <strong>am</strong> we use an <strong>adjective</strong> — a describing word — not a verb. <span class=\"ok\">I feel wonderful.</span> · <span class=\"ok\">I am complete.</span> Try to grow past the word <em>“good”</em>: use <strong>wonderful, amazing, peaceful, complete</strong> to paint a clearer picture of your energy."
+   "html": "After <strong>feel</strong> and <strong>am</strong> we use an <strong>adjective</strong> — a describing word — not a verb. <span class=\"ok\">I feel wonderful.</span> · <span class=\"ok\">I am complete.</span> Try to grow past the word <em>“good”</em>: use <strong>wonderful, amazing, peaceful, complete</strong> to paint a clearer picture of your energy.",
+   "zh_html": "在「feel（覺得）」和「am（是）」後面，我們要用「形容詞」──也就是描述的字──而不是動詞。I feel wonderful.（我覺得很美好。）、I am complete.（我是完整的。）試著超越「good（好）」這個字：用 wonderful（美好）、amazing（很棒）、peaceful（平靜）、complete（完整）來把你的能量描繪得更清楚。"
   },
   "story": {
    "paras": [
@@ -6020,13 +6388,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像一杯水，裡面攪進了泥巴。水看起來是褐色的、「霧濛濛的」（霧濛濛的），你看不透它。這就像一顆忙碌、煩惱的心──裝滿了關於考試、遊戲和擔憂的念頭，全部一起翻攪。",
+    "現在把杯子放下，讓它完全「靜止」。不要碰它。慢慢地，泥巴沉到杯底，水就變「清澈」了。這份靜止就是 Samādhi（定）──我們在禪修中練習的那種平靜專注力。我們靜坐的那 15 分鐘，就是讓泥巴沉澱的時間。",
+    "當心清澈了，一道安靜的光就會從內在發出來。我們把注意力放到「第三眼」（第三眼，眉心）──兩眉之間那個柔軟的點──然後感受到一股溫暖、明亮的「能量」。接著我們溫柔地對自己說：「我已經足夠。我是完整的。」一顆清澈的心，知道自己本來就是圓滿的。"
+   ]
   },
   "principle": {
    "lede": "As we grow older, we can sit a little longer. A longer meditation builds <em>Vīrya</em> (energy and will) and a deeper <em>Samādhi</em> (concentration). Together they turn a foggy mind into a clear, bright one.",
    "h4": "Your Energy Is Your Light 你的能量就是你的光",
    "html": "When you meditate, you clear away the fog so your light can shine bright. A “foggy brain” feels confused and tired; a “clear mind” feels calm, focused, and full of <em>positive energy</em>. By repeating affirmations like <strong>“I am enough, I am complete, I am loved,”</strong> you are not pretending — you are recognizing your own <em>Buddha-nature</em>, the goodness already complete inside you. Remember: you are enough, you are complete, and you are loved.",
-   "video": null
+   "video": null,
+   "lede_zh": "隨著我們長大，可以坐得久一點。比較長的禪修能培養 Vīrya（精進，能量與意志）和更深的 Samādhi（定，專注力）。它們一起，能把一顆霧濛濛的心變成清澈、明亮的心。",
+   "zh_html": "當你禪修時，你會把霧氣清開，讓你的光能夠閃耀。「霧濛濛的腦袋」會覺得困惑又疲倦；「清澈的心」會覺得平靜、專注，充滿「正向能量」。當你重複像「我已經足夠，我是完整的，我是被愛的」這樣的肯定句時，你不是在假裝──你是在認出自己的「佛性」，那份本來就完整地存在你內在的善。記得：你已經足夠，你是完整的，而且你是被愛的。"
   },
   "practice": {
    "note": "Write about your experience with the 15-minute meditation. You may write in English, or draw and use key words. Choose the tier that fits you. 寫下你 15 分鐘禪修的體驗，可用英文，也可畫圖加關鍵字。",
@@ -6037,7 +6412,8 @@
      "h3": "Draw & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Draw yourself meditating with a <strong>full heart</strong>. Copy these 3 words: <strong>Heart, Mind, Energy</strong>. Then trace and complete the sentence.",
-     "ex": "<b>Example</b>I feel wonderful after meditation."
+     "ex": "<b>Example</b>I feel wonderful after meditation.",
+     "req_zh": "畫出正在禪修、有著「滿滿的心」的自己。抄下這 3 個字：Heart（心）、Mind（念）、Energy（能量）。然後描寫並完成那個句子。"
     },
     {
      "tier": "t2",
@@ -6045,7 +6421,8 @@
      "h3": "Experience log",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3–4 sentences</strong> about how meditation helped you this week. Use a feeling word and the words <em>third eye</em> and <em>positive energy</em>.",
-     "ex": "<b>Example</b>Meditation helps me with my sleep. When I focus on my third eye, I feel calm. I have positive energy. I am complete."
+     "ex": "<b>Example</b>Meditation helps me with my sleep. When I focus on my third eye, I feel calm. I have positive energy. I am complete.",
+     "req_zh": "寫「3–4 句」說明這個星期禪修如何幫助了你。用一個表達感受的字，以及 third eye（第三眼）和 positive energy（正向能量）這兩個詞。"
     },
     {
      "tier": "t3",
@@ -6053,7 +6430,8 @@
      "h3": "Reflective essay",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a short paragraph (<strong>6–10 sentences</strong>) on the connection between meditation and energy. Explain why a <em>clear mind</em> beats a <em>foggy brain</em>, and how affirmations change your energy when you are stressed.",
-     "ex": "<b>Example</b>When my brain is foggy, I cannot focus at school. After fifteen minutes of meditation, my mind feels clear and my energy is wonderful. Saying “I am enough” reminds me that I am already complete."
+     "ex": "<b>Example</b>When my brain is foggy, I cannot focus at school. After fifteen minutes of meditation, my mind feels clear and my energy is wonderful. Saying “I am enough” reminds me that I am already complete.",
+     "req_zh": "寫一小段文字（「6–10 句」）談禪修和能量之間的關聯。說明為什麼「清澈的心」勝過「霧濛濛的腦袋」，以及當你有壓力時，肯定句如何改變你的能量。"
     }
    ]
   },
@@ -6206,13 +6584,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use stronger feeling words — <strong>wonderful</strong> and <strong>excellent</strong> — instead of plain “good.” Pair words with movement: <em>heart, mind, energy</em>. Build the pattern <strong>“My ___ felt wonderful/excellent.”</strong> and say <strong>“I am shaping my energy.”</strong>"
+    "html": "Use stronger feeling words — <strong>wonderful</strong> and <strong>excellent</strong> — instead of plain “good.” Pair words with movement: <em>heart, mind, energy</em>. Build the pattern <strong>“My ___ felt wonderful/excellent.”</strong> and say <strong>“I am shaping my energy.”</strong>",
+    "zh_html": "使用更有力的感受詞——wonderful（很棒的）和 excellent（極好的）——來取代平淡的「good」。把詞和動作搭配：heart（心）、mind（頭腦）、energy（能量）。建立句型「My ___ felt wonderful/excellent.（我的 ___ 感覺很棒／極好。）」並說出「I am shaping my energy.（我正在塑造我的能量。）」"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>meditation as medicine</strong> — an active way to heal the mind. Learn <strong>moving meditation</strong> through Tai-Chi-style gestures, and take <strong>responsibility</strong> for your own peace (<em>self-reliance · 自依止</em>)."
+    "html": "Understand <strong>meditation as medicine</strong> — an active way to heal the mind. Learn <strong>moving meditation</strong> through Tai-Chi-style gestures, and take <strong>responsibility</strong> for your own peace (<em>self-reliance · 自依止</em>).",
+    "zh_html": "理解禪修就是良藥（meditation as medicine）——一種主動療癒心的方式。透過太極式的動作學習動禪（moving meditation），並為自己的平靜負起責任（responsibility，自依止）。"
    }
   ],
   "vocab": [
@@ -6266,15 +6646,18 @@
     "examples": [
      {
       "html": "<strong>My mind felt excellent after school today.</strong>",
-      "say": "My mind felt excellent after school today."
+      "say": "My mind felt excellent after school today.",
+      "zh": "My mind felt excellent after school today.（今天放學後我的頭腦感覺極好。）"
      },
      {
       "html": "<strong>My energy was wonderful when I helped my mom.</strong>",
-      "say": "My energy was wonderful when I helped my mom."
+      "say": "My energy was wonderful when I helped my mom.",
+      "zh": "My energy was wonderful when I helped my mom.（我幫媽媽的時候，我的能量很棒。）"
      },
      {
       "html": "<strong>My heart felt wonderful after I meditated.</strong>",
-      "say": "My heart felt wonderful after I meditated."
+      "say": "My heart felt wonderful after I meditated.",
+      "zh": "My heart felt wonderful after I meditated.（禪修之後我的心感覺很棒。）"
      }
     ]
    },
@@ -6284,11 +6667,13 @@
     "examples": [
      {
       "html": "<strong>I am shaping my energy with my hands.</strong>",
-      "say": "I am shaping my energy with my hands."
+      "say": "I am shaping my energy with my hands.",
+      "zh": "I am shaping my energy with my hands.（我正在用雙手塑造我的能量。）"
      },
      {
       "html": "<strong>I move slowly, like Tai Chi, to feel calm.</strong>",
-      "say": "I move slowly, like Tai Chi, to feel calm."
+      "say": "I move slowly, like Tai Chi, to feel calm.",
+      "zh": "I move slowly, like Tai Chi, to feel calm.（我像打太極一樣慢慢移動，讓自己感覺平靜。）"
      }
     ]
    },
@@ -6298,18 +6683,21 @@
     "examples": [
      {
       "html": "<strong>I am responsible for my peace.</strong>",
-      "say": "I am responsible for my peace."
+      "say": "I am responsible for my peace.",
+      "zh": "I am responsible for my peace.（我為自己的平靜負責。）"
      },
      {
       "html": "<strong>I will meditate, because it is my medicine.</strong>",
-      "say": "I will meditate, because it is my medicine."
+      "say": "I will meditate, because it is my medicine.",
+      "zh": "I will meditate, because it is my medicine.（我會禪修，因為它是我的良藥。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · “Good,” “better,” and richer words",
-   "html": "Instead of always saying <em>good</em>, choose a stronger word. <span class=\"ok\">Excellent = super good.</span> <span class=\"ok\">Wonderful = full of wonder and joy.</span> Use them after the verb <strong>felt</strong> or <strong>was</strong>: <span class=\"ok\">My mind <strong>felt</strong> excellent.</span> · <span class=\"ok\">My energy <strong>was</strong> wonderful.</span> Rich words help you share exactly how you feel."
+   "html": "Instead of always saying <em>good</em>, choose a stronger word. <span class=\"ok\">Excellent = super good.</span> <span class=\"ok\">Wonderful = full of wonder and joy.</span> Use them after the verb <strong>felt</strong> or <strong>was</strong>: <span class=\"ok\">My mind <strong>felt</strong> excellent.</span> · <span class=\"ok\">My energy <strong>was</strong> wonderful.</span> Rich words help you share exactly how you feel.",
+   "zh_html": "與其老是說 good（好），選一個更有力的字吧。Excellent = 超級好。Wonderful = 充滿驚奇和喜悅。把它們放在動詞 felt（感覺）或 was（是）後面：My mind felt excellent.（我的頭腦感覺極好。）、My energy was wonderful.（我的能量很棒。）豐富的詞彙能幫你精準地分享自己的感受。"
   },
   "story": {
    "paras": [
@@ -6326,13 +6714,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "想像你的頭腦像一杯混濁的泥水（混濁的水）。當你搖晃它，你沒辦法看穿它——那是一個忙碌、煩惱的心。但如果你把它靜靜放著，或非常緩慢地移動它，泥沙就會沉到底部，水又變得清澈。",
+    "這週我們練習動禪（moving meditation）。就像溫和的太極（Tai Chi，太極），我們把一隻手放在心（heart）上，一隻手放在頭腦（mind，頭部）上，然後在身體周圍慢慢畫圓，去感受那股能量（energy）。我們不只是坐著——我們正在用雙手塑造（shaping）我們的能量，也在這個空間裡塑造出多一點點的平靜。",
+    "最棒的是，這帖良藥屬於你自己。沒有別人能讓你的心平靜下來——那是你自己的責任（responsibility）。當你選擇呼吸、選擇慢慢移動，並說出「I am responsible for my peace.（我為自己的平靜負責。）」你就成了自己溫柔的醫生。"
+   ]
   },
   "principle": {
    "lede": "When your body is sick, you take medicine. Teacher Dom reminds us that when the mind feels “foggy” or “crazy,” we have our own medicine too — meditation. And meditation does not have to be still: we can <em>move</em> our energy.",
    "h4": "You shape your own energy 你形塑自己的能量",
    "html": "In Buddhism this is called <em>self-reliance</em> (自依止): peace and awakening are cultivated by your own practice, not handed to you by someone else. Your inner state is not trapped inside you — it radiates outward and changes the room around you. So when you shape calm, positive energy with slow, mindful movement, you give a gift of peace to everyone near you.",
-   "video": null
+   "video": null,
+   "lede_zh": "身體生病時，你會吃藥。Dom 老師提醒我們，當心覺得「霧霧的」或「亂糟糟」的時候，我們也有自己的良藥——禪修。而禪修不一定要靜止不動：我們也可以讓能量動起來。",
+   "zh_html": "在佛教裡，這叫做自依止（self-reliance，自依止）：平靜與覺醒是靠你自己的修行培養出來的，不是別人遞給你的。你的內在狀態並沒有被困在你裡面——它會向外散發，改變你周遭的空間。所以當你用緩慢、正念的動作塑造出平靜、正向的能量，你就把一份平安的禮物送給了身邊的每一個人。"
   },
   "practice": {
    "note": "Watch the <strong>“Meditation Monkey”</strong> (or a kids’ Tai Chi) video at least 2 times this week and follow the movements. Then choose the tier that fits you. 看影片至少兩次，跟著動作移動你的能量，再選一個適合的等級。",
@@ -6343,7 +6738,8 @@
      "h3": "Draw & 2 sentences",
      "age": "Ages 5–8 · new learners",
      "req": "Draw yourself doing a Tai Chi move and write the word <strong>ENERGY</strong> in big letters. Then write <strong>2 simple sentences</strong>.",
-     "ex": "<b>Example</b>My heart is wonderful. I love peace."
+     "ex": "<b>Example</b>My heart is wonderful. I love peace.",
+     "req_zh": "畫出你自己在做一個太極動作的樣子，並用大大的字寫上 ENERGY（能量）。然後寫 2 個簡單的句子。"
     },
     {
      "tier": "t2",
@@ -6351,7 +6747,8 @@
      "h3": "Log & reflection",
      "age": "Ages 9–12 · developing fluency",
      "req": "Keep a <strong>meditation log</strong> — record how many times you meditated. Write a short reflection using the words <strong>medicine</strong> and <strong>calm</strong>.",
-     "ex": "<b>Example</b>Meditation is like medicine for my brain. It makes me feel excellent and calm."
+     "ex": "<b>Example</b>Meditation is like medicine for my brain. It makes me feel excellent and calm.",
+     "req_zh": "寫一份禪修紀錄（meditation log）——記錄你禪修了幾次。寫一段簡短的反思，用上 medicine（良藥）和 calm（平靜）這兩個詞。"
     },
     {
      "tier": "t3",
@@ -6359,7 +6756,8 @@
      "h3": "Paragraph on responsibility",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a <strong>6–10 sentence</strong> paragraph: “I am responsible for my peace.” What does it mean to you? How can moving your energy help when you feel stressed or angry?",
-     "ex": "<b>Example</b>I am responsible for my peace, because no one else can calm my mind for me. When I feel angry, I move slowly like Tai Chi and my energy feels wonderful again."
+     "ex": "<b>Example</b>I am responsible for my peace, because no one else can calm my mind for me. When I feel angry, I move slowly like Tai Chi and my energy feels wonderful again.",
+     "req_zh": "寫一段 6–10 句的短文：「I am responsible for my peace.（我為自己的平靜負責。）」這句話對你來說是什麼意思？當你覺得有壓力或生氣時，讓你的能量動起來能怎麼幫上忙？"
     }
    ]
   },
@@ -6512,13 +6910,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Learn the words <strong>harmony</strong> and <strong>unique</strong>, and correct the spelling of <em>wonderful</em> and <em>excellent</em>. Describe inner states with <strong>“I feel harmony in my heart”</strong> and <strong>“Everyone is unique.”</strong>"
+    "html": "Learn the words <strong>harmony</strong> and <strong>unique</strong>, and correct the spelling of <em>wonderful</em> and <em>excellent</em>. Describe inner states with <strong>“I feel harmony in my heart”</strong> and <strong>“Everyone is unique.”</strong>",
+    "zh_html": "學習 harmony（和諧）和 unique（獨一無二的）這兩個字，並改正 wonderful（很棒的）和 excellent（優秀的）的拼字。用「I feel harmony in my heart（我感覺到心裡的和諧）」和「Everyone is unique.（每個人都是獨一無二的。）」來描述內在的狀態。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>harmony</strong> as body and mind in agreement, and deepen the idea of the <strong>body as medicine</strong>. Through <strong>Anattā</strong> (無我), honor that each being is unique, yet all can live together in peace."
+    "html": "Understand <strong>harmony</strong> as body and mind in agreement, and deepen the idea of the <strong>body as medicine</strong>. Through <strong>Anattā</strong> (無我), honor that each being is unique, yet all can live together in peace.",
+    "zh_html": "了解「和諧」就是身與心的一致，並深入理解「身體即良藥」的觀念。透過「無我（Anattā）」，珍視每一個生命都是獨一無二的，但所有生命都能和平地共處。"
    }
   ],
   "vocab": [
@@ -6572,15 +6972,18 @@
     "examples": [
      {
       "html": "<strong>I feel harmony in my heart.</strong>",
-      "say": "I feel harmony in my heart."
+      "say": "I feel harmony in my heart.",
+      "zh": "我感覺到心裡的和諧。"
      },
      {
       "html": "<strong>I feel calm when I move slowly.</strong>",
-      "say": "I feel calm when I move slowly."
+      "say": "I feel calm when I move slowly.",
+      "zh": "當我慢慢動的時候，我覺得很平靜。"
      },
      {
       "html": "<strong>I move in harmony with the class.</strong>",
-      "say": "I move in harmony with the class."
+      "say": "I move in harmony with the class.",
+      "zh": "我和全班一起和諧地律動。"
      }
     ]
    },
@@ -6590,11 +6993,13 @@
     "examples": [
      {
       "html": "<strong>Everyone is unique.</strong>",
-      "say": "Everyone is unique."
+      "say": "Everyone is unique.",
+      "zh": "每個人都是獨一無二的。"
      },
      {
       "html": "<strong>My painting is unique because I used my favorite colors.</strong>",
-      "say": "My painting is unique because I used my favorite colors."
+      "say": "My painting is unique because I used my favorite colors.",
+      "zh": "我的畫是獨一無二的，因為我用了我最喜歡的顏色。"
      }
     ]
    },
@@ -6604,18 +7009,21 @@
     "examples": [
      {
       "html": "<strong>Our class sings in harmony together.</strong>",
-      "say": "Our class sings in harmony together."
+      "say": "Our class sings in harmony together.",
+      "zh": "我們全班一起和諧地歌唱。"
      },
      {
       "html": "<strong>Unique people can live in harmony.</strong>",
-      "say": "Unique people can live in harmony."
+      "say": "Unique people can live in harmony.",
+      "zh": "獨一無二的人們可以和諧地生活在一起。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Adjective vs. noun",
-   "html": "<strong>Unique</strong> is an adjective — it describes a person or thing: <span class=\"ok\">Everyone is unique.</span> <strong>Harmony</strong> is a noun — a thing we have or live in: <span class=\"ok\">We live in harmony.</span> Watch your spelling, too: it is <em>w-o-n-d-e-r-f-u-l</em> and <em>e-x-c-e-l-l-e-n-t</em>."
+   "html": "<strong>Unique</strong> is an adjective — it describes a person or thing: <span class=\"ok\">Everyone is unique.</span> <strong>Harmony</strong> is a noun — a thing we have or live in: <span class=\"ok\">We live in harmony.</span> Watch your spelling, too: it is <em>w-o-n-d-e-r-f-u-l</em> and <em>e-x-c-e-l-l-e-n-t</em>.",
+   "zh_html": "Unique（獨一無二的）是形容詞——它用來描述一個人或一樣東西：Everyone is unique.（每個人都是獨一無二的。）Harmony（和諧）是名詞——是我們擁有或身處其中的一樣東西：We live in harmony.（我們和諧地生活。）也要小心你的拼字：是 w-o-n-d-e-r-f-u-l，以及 e-x-c-e-l-l-e-n-t。"
   },
   "story": {
    "paras": [
@@ -6632,13 +7040,19 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "有一天，老師請學生們像山一樣安靜（silent）地坐著。他們先是聆聽自己的呼吸。接著老師開始輕聲說話——一段引導式（guided）的靜坐——孩子們讓這平靜的聲音把他們的心帶回到當下。",
+    "接下來，老師站起來，帶著大家做一套緩慢的太極流動。手臂像上升的流水一樣抬起，腳步像飄浮的雲一樣移動。每個孩子的動作都不一樣，可是全班卻一起流動了起來——這就是和諧（harmony）。老師微笑著說：「當你的身體和你的呼吸一致時，你就在律動中找到了和諧。」",
+    "老師提醒他們：每個孩子都是獨一無二的（unique）——世界上沒有別人會用完全一樣的方式律動、呼吸或思考。但即使如此，這些獨一無二的身體仍然能像一體一樣律動。這就是「身體即良藥」所帶來的禮物：一個健康的身體和一份平靜的呼吸，會成為一顆平安的心的家。"
+   ]
   },
   "principle": {
    "lede": "",
    "h4": "Body, Breath, and Group as One 身心一致",
    "html": "Harmony is not everyone being the same. It is many <em>unique</em> people — each with their own佛性 (Buddha-nature) — choosing to move, breathe, and live together gently. When your body is well and your breath is calm, the mind rests easily. Move your body with kindness, and the harmony you feel inside will spread to your family and your school.",
-   "video": null
+   "video": null,
+   "zh_html": "和諧並不是每個人都一模一樣。它是許多獨一無二的人——每個人都有自己的佛性（Buddha-nature）——選擇溫柔地一起律動、呼吸與生活。當你的身體安好、你的呼吸平靜時，心就能輕鬆地安歇。帶著善意律動你的身體，你內在感受到的和諧就會擴散到你的家人和你的學校。"
   },
   "practice": {
    "note": "Write your sentences <strong>this week</strong>, and practice <strong>3 minutes of silent meditation</strong> at home — sit as still as a mountain. Choose the tier that fits you. 選一個適合自己的等級。",
@@ -6649,7 +7063,8 @@
      "h3": "Draw & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Draw a picture of yourself and write <strong>“I am unique.”</strong> Then trace and complete two sentences about harmony.",
-     "ex": "<b>Example</b>I want harmony in my world. Everyone is unique."
+     "ex": "<b>Example</b>I want harmony in my world. Everyone is unique.",
+     "req_zh": "畫一張你自己的圖，並寫上「I am unique.（我是獨一無二的。）」然後描寫並完成兩個關於和諧的句子。"
     },
     {
      "tier": "t2",
@@ -6657,7 +7072,8 @@
      "h3": "Spelling & reflection",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>wonderful, excellent, unique, harmony</strong> three times each. Then write <strong>3 sentences</strong> about the guided meditation using the word <em>silent</em>.",
-     "ex": "<b>Example</b>I sat silent and calm. The teacher’s voice was wonderful. I felt harmony in my heart."
+     "ex": "<b>Example</b>I sat silent and calm. The teacher’s voice was wonderful. I felt harmony in my heart.",
+     "req_zh": "把 wonderful（很棒的）、excellent（優秀的）、unique（獨一無二的）、harmony（和諧）各寫三次。然後用 silent（安靜的）這個字，寫 3 個關於引導式靜坐的句子。"
     },
     {
      "tier": "t3",
@@ -6665,7 +7081,8 @@
      "h3": "Integration paragraph",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a <strong>6–10 sentence</strong> paragraph using all four words. Explain why unique people should live in harmony, using the Tai Chi class as your example.",
-     "ex": "<b>Example</b>Although we are each unique, our class moved as one in the Tai Chi flow. That excellent, wonderful feeling was harmony in motion."
+     "ex": "<b>Example</b>Although we are each unique, our class moved as one in the Tai Chi flow. That excellent, wonderful feeling was harmony in motion.",
+     "req_zh": "寫一段 6–10 個句子的短文，用上這四個字。以太極課為例，解釋為什麼獨一無二的人們應該和諧地生活在一起。"
     }
    ]
   },
@@ -6818,13 +7235,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Learn the verb <strong>“to yoke”</strong> (to join together) and the practice vocabulary: <em>physical, harmony, unique, balance</em>. Use the present continuous (“I am yoking…”) for an action happening now, and fix common spelling traps: <em>gratitude</em> (not <em>gratitade</em>) and <em>special</em> (where “c” sounds like “sh”)."
+    "html": "Learn the verb <strong>“to yoke”</strong> (to join together) and the practice vocabulary: <em>physical, harmony, unique, balance</em>. Use the present continuous (“I am yoking…”) for an action happening now, and fix common spelling traps: <em>gratitude</em> (not <em>gratitade</em>) and <em>special</em> (where “c” sounds like “sh”).",
+    "zh_html": "學習動詞 to yoke（連結、結合在一起）以及這些練習詞彙：physical（身體的）、harmony（和諧）、unique（獨特的）、balance（平衡）。用現在進行式（I am yoking… 我正在結合…）表示現在正在發生的動作，並改正常見的拼字陷阱：gratitude（感恩，不是 gratitade）和 special（其中的「c」發「sh」的音）。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand that <strong>yoga means union (身心合一)</strong> — the joining of body and mind. Practice <strong>Right Effort</strong> through movement, and use the body as a tool of cultivation. Through mindful motion (Kāyagatāsati, 身至念) we steady the mind and meet each moment with balance."
+    "html": "Understand that <strong>yoga means union (身心合一)</strong> — the joining of body and mind. Practice <strong>Right Effort</strong> through movement, and use the body as a tool of cultivation. Through mindful motion (Kāyagatāsati, 身至念) we steady the mind and meet each moment with balance.",
+    "zh_html": "了解「瑜伽就是合一」（yoga means union，身心合一）──身與心的結合。透過動作來練習「正精進」，並把身體當作修行的工具。透過正念的動作（Kāyagatāsati，身至念），我們安定這顆心，並以平衡的姿態迎接每一個當下。"
    }
   ],
   "vocab": [
@@ -6878,11 +7297,13 @@
     "examples": [
      {
       "html": "<strong>I am yoking my body and mind.</strong>",
-      "say": "I am yoking my body and mind."
+      "say": "I am yoking my body and mind.",
+      "zh": "I am yoking my body and mind.（我正在結合我的身與心。）"
      },
      {
       "html": "<strong>I am yoking my breath to my movement.</strong>",
-      "say": "I am yoking my breath to my movement."
+      "say": "I am yoking my breath to my movement.",
+      "zh": "I am yoking my breath to my movement.（我正在把呼吸和動作結合在一起。）"
      }
     ]
    },
@@ -6892,11 +7313,13 @@
     "examples": [
      {
       "html": "<strong>I move in harmony.</strong>",
-      "say": "I move in harmony."
+      "say": "I move in harmony.",
+      "zh": "I move in harmony.（我和諧地移動。）"
      },
      {
       "html": "<strong>I move slowly, flowing like water.</strong>",
-      "say": "I move slowly, flowing like water."
+      "say": "I move slowly, flowing like water.",
+      "zh": "I move slowly, flowing like water.（我緩緩地移動，像水一樣流動。）"
      }
     ]
    },
@@ -6906,22 +7329,26 @@
     "examples": [
      {
       "html": "<strong>Inhale, stretch high.</strong>",
-      "say": "Inhale, stretch high."
+      "say": "Inhale, stretch high.",
+      "zh": "Inhale, stretch high.（吸氣，向上伸展。）"
      },
      {
       "html": "<strong>Exhale, stay balanced.</strong>",
-      "say": "Exhale, stay balanced."
+      "say": "Exhale, stay balanced.",
+      "zh": "Exhale, stay balanced.（吐氣，保持平衡。）"
      },
      {
       "html": "<strong>My yoga pose is unique and special.</strong>",
-      "say": "My yoga pose is unique and special."
+      "say": "My yoga pose is unique and special.",
+      "zh": "My yoga pose is unique and special.（我的瑜伽姿勢獨特又特別。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Present continuous & tricky spelling",
-   "html": "Use the <strong>present continuous</strong> — <em>am / is / are</em> + <em>verb</em>-<strong>ing</strong> — for an action happening <em>right now</em>: <span class=\"ok\">I am yoking my body and mind.</span> · <span class=\"ok\">She is breathing slowly.</span> Watch your spelling, too: it is <span class=\"ok\">gratitude</span> (not <em>gratitade</em>) and <span class=\"ok\">special</span>, where the “c” sounds like “sh.”"
+   "html": "Use the <strong>present continuous</strong> — <em>am / is / are</em> + <em>verb</em>-<strong>ing</strong> — for an action happening <em>right now</em>: <span class=\"ok\">I am yoking my body and mind.</span> · <span class=\"ok\">She is breathing slowly.</span> Watch your spelling, too: it is <span class=\"ok\">gratitude</span> (not <em>gratitade</em>) and <span class=\"ok\">special</span>, where the “c” sounds like “sh.”",
+   "zh_html": "用現在進行式──am／is／are + 動詞-ing──來表示現在正在發生的動作：I am yoking my body and mind.（我正在結合我的身與心。）She is breathing slowly.（她正緩緩地呼吸。）也要注意拼字：是 gratitude（感恩，不是 gratitade），以及 special（特別的），其中的「c」發「sh」的音。"
   },
   "story": {
    "paras": [
@@ -6938,13 +7365,19 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "很久以前，古印度的老師們用一個字來形容修行最深的目標：瑜伽（yoga）。今天大多數人以為這個字的意思是伸展，但它真正、最原始的意思是「to yoke」（連結、結合）──把兩樣東西結合在一起，讓它們像一個整體一樣一起出力。",
+    "農夫用一根木樑把兩頭牛軛在一起（yoke），讓牠們步調一致，犁出一條筆直的田壟。同樣地，我們也把三樣東西結合在一起：我們的動作、我們的呼吸，和我們的覺察。當身體移動，呼吸跟著走，心溫柔地看著──它們就成為一份和諧，而不是三件各自分開的事。",
+    "這就是為什麼我們練習太極的流動和像樹式這樣的瑜伽姿勢。像水一樣流動能化開身體裡的緊繃；穩穩地站著保持平衡能安定這顆心。身體並不是與修行分開的──它是我們最誠實的工具之一。當你帶著專注和感恩來移動，你就是在做真正的瑜伽：把你的心與意結合成一個平靜、平衡的整體。"
+   ]
   },
   "principle": {
    "lede": "",
    "h4": "Moving Meditation 動中禪",
    "html": "Right Effort is not only sitting still. When we move the body with awareness — keeping the mind on each breath and each muscle (this is Kāyagatāsati, 身至念) — we dissolve tension and train concentration. Movement and stillness are not enemies. To <em>yoke</em> them is to find harmony in motion, and to carry that calm balance into every part of the day.",
-   "video": null
+   "video": null,
+   "zh_html": "正精進不只是靜靜地坐著。當我們帶著覺察來移動身體──把心放在每一次呼吸和每一塊肌肉上（這就是身至念，Kāyagatāsati）──我們就化開緊張、鍛鍊專注。動與靜並不是敵人。把它們結合（yoke）在一起，就是在動作中找到和諧，並把這份平靜的平衡帶進一天當中的每一個部分。"
   },
   "practice": {
    "note": "This week your homework is <strong>active</strong>. Spend time <em>every day</em> practicing the Tai Chi or yoga movements we learned. Choose the tier that fits you — the daily movement <em>is</em> the practice. 選一個適合自己的等級，每天律動。",
@@ -6955,7 +7388,8 @@
      "h3": "Tree Pose & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Hold your <strong>Tree Pose</strong> (balance) for 2 minutes every day. Then draw yourself doing your favorite yoga pose.",
-     "ex": "<b>Trace &amp; complete</b>“I am yoking my body and mind.” · “My yoga is special.”"
+     "ex": "<b>Trace &amp; complete</b>“I am yoking my body and mind.” · “My yoga is special.”",
+     "req_zh": "每天保持你的樹式（Tree Pose，平衡）2 分鐘。然後畫出你自己在做最喜歡的瑜伽姿勢。"
     },
     {
      "tier": "t2",
@@ -6963,7 +7397,8 @@
      "h3": "15-minute log",
      "age": "Ages 9–12 · developing fluency",
      "req": "Do a <strong>15-minute</strong> daily movement session. Keep a short log, using <strong>unique</strong> and <strong>harmony</strong> at least once.",
-     "ex": "<b>Example</b>Day 1: I practiced for 15 minutes. I felt calm. Day 2: My balance was unique today, and I moved in harmony."
+     "ex": "<b>Example</b>Day 1: I practiced for 15 minutes. I felt calm. Day 2: My balance was unique today, and I moved in harmony.",
+     "req_zh": "每天做 15 分鐘的動作練習。記一份簡短的紀錄，並至少各用一次 unique（獨特）和 harmony（和諧）。"
     },
     {
      "tier": "t3",
@@ -6971,7 +7406,8 @@
      "h3": "30-minute & essay",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Do a <strong>30-minute</strong> daily session, then write a paragraph (6–10 sentences) on why yoga is called “yoking.” Use <em>physical, harmony,</em> and <em>gratitude</em>.",
-     "ex": "<b>Prompt</b>How does moving your body help your mind stay calm? Describe your 30-minute physical practice with harmony and gratitude."
+     "ex": "<b>Prompt</b>How does moving your body help your mind stay calm? Describe your 30-minute physical practice with harmony and gratitude.",
+     "req_zh": "每天做 30 分鐘的練習，然後寫一段話（6 到 10 個句子），說明為什麼瑜伽被稱為「結合」（yoking）。用上 physical（身體的）、harmony（和諧）和 gratitude（感恩）。"
     }
    ]
   },
@@ -7124,13 +7560,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Learn biography and purpose words: <em>wealthy, journey, purpose, Dharma Wheel</em>. Use the pattern <strong>“I find ___ interesting because ___”</strong> to share an opinion, and describe a story in the simple past tense."
+    "html": "Learn biography and purpose words: <em>wealthy, journey, purpose, Dharma Wheel</em>. Use the pattern <strong>“I find ___ interesting because ___”</strong> to share an opinion, and describe a story in the simple past tense.",
+    "zh_html": "學習關於傳記和目標的單字：wealthy（富有的）、journey（旅程）、purpose（目標、意義）、Dharma Wheel（法輪）。用句型「I find ___ interesting because ___（我覺得 ___ 很有趣，因為 ___）」來分享看法，並用簡單過去式描述一個故事。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand why Prince Siddhartha left a <strong>wealthy</strong> palace to seek a <strong>purpose</strong>, and see the <strong>Dharma Wheel</strong> as the map that guides the whole journey. Comfort and riches are not the same as lasting happiness."
+    "html": "Understand why Prince Siddhartha left a <strong>wealthy</strong> palace to seek a <strong>purpose</strong>, and see the <strong>Dharma Wheel</strong> as the map that guides the whole journey. Comfort and riches are not the same as lasting happiness.",
+    "zh_html": "理解悉達多太子為什麼離開「富有（wealthy）」的皇宮去尋找「人生目標（purpose）」，並把「法輪（Dharma Wheel）」看作引導整段旅程的地圖。舒適和財富，並不等於長久的快樂。"
    }
   ],
   "vocab": [
@@ -7184,11 +7622,13 @@
     "examples": [
      {
       "html": "<strong>I find the prince’s journey interesting because he gave up everything.</strong>",
-      "say": "I find the prince's journey interesting because he gave up everything."
+      "say": "I find the prince's journey interesting because he gave up everything.",
+      "zh": "I find the prince's journey interesting because he gave up everything.（我覺得太子的旅程很有趣，因為他放棄了一切。）"
      },
      {
       "html": "<strong>I find the Dharma Wheel interesting because it is like a map.</strong>",
-      "say": "I find the Dharma Wheel interesting because it is like a map."
+      "say": "I find the Dharma Wheel interesting because it is like a map.",
+      "zh": "I find the Dharma Wheel interesting because it is like a map.（我覺得法輪很有趣，因為它就像一張地圖。）"
      }
     ]
    },
@@ -7198,11 +7638,13 @@
     "examples": [
      {
       "html": "<strong>The prince was very wealthy.</strong>",
-      "say": "The prince was very wealthy."
+      "say": "The prince was very wealthy.",
+      "zh": "The prince was very wealthy.（這位太子非常富有。）"
      },
      {
       "html": "<strong>He wanted to help all people end their suffering.</strong>",
-      "say": "He wanted to help all people end their suffering."
+      "say": "He wanted to help all people end their suffering.",
+      "zh": "He wanted to help all people end their suffering.（他想要幫助所有人結束他們的苦。）"
      }
     ]
    },
@@ -7212,18 +7654,21 @@
     "examples": [
      {
       "html": "<strong>My purpose is to learn and to be kind.</strong>",
-      "say": "My purpose is to learn and to be kind."
+      "say": "My purpose is to learn and to be kind.",
+      "zh": "My purpose is to learn and to be kind.（我的人生目標是學習和善良。）"
      },
      {
       "html": "<strong>The Dharma Wheel is his guide on the journey.</strong>",
-      "say": "The Dharma Wheel is his guide on the journey."
+      "say": "The Dharma Wheel is his guide on the journey.",
+      "zh": "The Dharma Wheel is his guide on the journey.（法輪是他這趟旅程上的引導。）"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Simple past for telling a story",
-   "html": "When we tell a story that already happened, we use the <strong>simple past tense</strong>. Many verbs add <strong>-ed</strong>: <span class=\"ok\">He wanted to leave.</span> · <span class=\"ok\">She walked far.</span> Some verbs change shape: <span class=\"ok\">be → was</span> (He <strong>was</strong> wealthy), <span class=\"ok\">leave → left</span>, <span class=\"ok\">see → saw</span> (He <strong>saw</strong> an old man)."
+   "html": "When we tell a story that already happened, we use the <strong>simple past tense</strong>. Many verbs add <strong>-ed</strong>: <span class=\"ok\">He wanted to leave.</span> · <span class=\"ok\">She walked far.</span> Some verbs change shape: <span class=\"ok\">be → was</span> (He <strong>was</strong> wealthy), <span class=\"ok\">leave → left</span>, <span class=\"ok\">see → saw</span> (He <strong>saw</strong> an old man).",
+   "zh_html": "當我們講一個已經發生過的故事時，會用「簡單過去式（simple past tense）」。許多動詞會加「-ed」：He wanted to leave.（他想要離開。）· She walked far.（她走了很遠。）有些動詞會改變形態：be → was（He was wealthy 他很富有）、leave → left（離開）、see → saw（He saw an old man 他看見一位老人）。"
   },
   "story": {
    "paras": [
@@ -7240,13 +7685,20 @@
     ]
    },
    "figcaption": null,
-   "img": null
+   "img": null,
+   "paras_zh": [
+    "很久很久以前，一個叫做「悉達多（Siddhartha）」（悉達多）的小太子出生在一個皇室家庭。他的父親，也就是國王，希望兒子永遠快樂，所以蓋了一座美麗的「皇宮（palace）」，裡面滿是花園、音樂和各種寶物。太子在「富有（wealthy）」中長大，從來沒見過任何悲傷的事。但在他心裡，他感覺到有某個重要的東西不見了。",
+    "有一天，太子騎馬到皇宮的城牆外面。他第一次看見了「四種景象（four sights）」：一位老人、一位病人、一個已經過世的人，以及一位平靜雲遊的修行人。前面三個讓他看見：每個人都會變老、生病、死亡——這正是皇宮一直瞞著他的「苦（suffering）」（苦）。但那位平靜的修行人帶給他希望：也許有一條路可以找到真正的快樂。",
+    "於是太子做了一個勇敢的決定。他離開了他的皇宮、他的財富和他舒適的生活，展開一段偉大的「旅程（journey）」。他的「人生目標（purpose）」不是要變富有，而是要找到一條路，幫助「所有人（all people）」遠離苦。經過多年的尋找，他靜靜地坐在一棵樹下，深深地觀照自己的內心——在那裡，他找到了「覺悟（enlightenment）」（覺悟）。從那天起，他被稱為「佛陀（Buddha）」，也就是「覺者」，他向世界傳授「法輪（Dharma Wheel）」（法輪）之道，那張引導我們回家的地圖。"
+   ]
   },
   "principle": {
    "lede": "The prince teaches us that <em>where</em> we are going matters more than <em>how fast</em> we run. A right direction — the Dharma Wheel — is worth more than all the gold in a palace.",
    "h4": "Direction over riches 方向勝過財富",
    "html": "Siddhartha had everything the world calls success, yet he was not at peace, because riches without a <em>purpose</em> are like an empty shell. When he chose to live for others — to help everyone end their suffering — his life finally had meaning. The <strong>Dharma Wheel</strong> is the map that keeps that journey on course. Even at school, your purpose can be simple and noble: to learn, to be kind, and to keep your inner peace.",
-   "video": null
+   "video": null,
+   "lede_zh": "這位太子教我們：我們「往哪裡去」，比我們「跑得多快」更重要。一個正確的方向——法輪——勝過皇宮裡所有的黃金。",
+   "zh_html": "悉達多擁有世人所謂的一切成功，卻沒有平靜，因為沒有「人生目標」的財富，就像一個空殼。當他選擇為他人而活——幫助每一個人結束他們的苦——他的生命才終於有了意義。「法輪（Dharma Wheel）」就是那張讓這段旅程不偏離方向的地圖。即使在學校裡，你的人生目標也可以既簡單又高尚：學習、善良，並守住你內心的平靜。"
   },
   "practice": {
    "note": "Think about Prince Siddhartha’s journey. Choose the tier that fits you, and share what you found most interesting. 想一想太子的旅程，選一個適合自己的等級分享。",
@@ -7257,7 +7709,8 @@
      "h3": "Draw & trace",
      "age": "Ages 5–8 · new learners",
      "req": "Draw the <strong>wealthy prince</strong> in his palace. Then trace and complete two sentences, and copy <em>journey</em> and <em>purpose</em> three times each.",
-     "ex": "<b>Example</b>The Prince was very wealthy. The Dharma Wheel is his guide."
+     "ex": "<b>Example</b>The Prince was very wealthy. The Dharma Wheel is his guide.",
+     "req_zh": "畫出在皇宮裡的「富有的太子（wealthy prince）」。然後描寫並完成兩個句子，並把「journey（旅程）」和「purpose（目標）」各抄寫三次。"
     },
     {
      "tier": "t2",
@@ -7265,7 +7718,8 @@
      "h3": "3 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3 sentences</strong> about the story. Use the pattern <strong>“I find ___ interesting because ___”</strong> and two vocabulary words. Then meditate for five minutes on your purpose at school.",
-     "ex": "<b>Example</b>I find the four sights interesting because they changed the prince. He was wealthy but he wanted to help others."
+     "ex": "<b>Example</b>I find the four sights interesting because they changed the prince. He was wealthy but he wanted to help others.",
+     "req_zh": "寫「3 個句子」關於這個故事。用句型「I find ___ interesting because ___（我覺得 ___ 很有趣，因為 ___）」和兩個單字。然後針對你在學校的人生目標靜坐五分鐘。"
     },
     {
      "tier": "t3",
@@ -7273,7 +7727,8 @@
      "h3": "A short essay",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write a paragraph of <strong>6–10 sentences</strong>. Explain why finding a <em>purpose</em> mattered more to Siddhartha than being <em>wealthy</em>, and how the <em>Dharma Wheel</em> acts as a map for his <em>journey</em>. Use all four vocabulary words.",
-     "ex": "<b>Example</b>Although the prince was wealthy, he felt empty until he found his purpose. The Dharma Wheel became the map for his long journey toward helping others."
+     "ex": "<b>Example</b>Although the prince was wealthy, he felt empty until he found his purpose. The Dharma Wheel became the map for his long journey toward helping others.",
+     "req_zh": "寫一段「6–10 句」的文章。說明為什麼找到「人生目標（purpose）」對悉達多來說，比變得「富有（wealthy）」更重要，以及「法輪（Dharma Wheel）」如何成為他這段「旅程（journey）」的地圖。把四個單字全部用上。"
     }
    ]
   },
