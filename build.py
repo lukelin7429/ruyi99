@@ -23,6 +23,10 @@ try:
     INTROS=json.load(open(os.path.join(ROOT,"data","intros.json")))
 except Exception:
     INTROS={}
+try:
+    ES_LESSONS=json.load(open(os.path.join(ROOT,"data","english_school.json")))
+except Exception:
+    ES_LESSONS=[]
 
 # 合併卡片（如「般若經講記」＝心經＋金剛經）：把多個來源系列收進一張卡、一頁。
 EXTRA_NAMES={}   # out -> 顯示名稱覆寫（讓麵包屑顯示合併後的書名）
@@ -43,7 +47,7 @@ for p,o in omap.items():
         out2path[o]=p
 
 NAV=[("首頁","/"),("法師簡介","/bhikkhuni/"),("讀書會","/study-group/"),
-     ("法會資訊","/news/"),("影音","/videos/"),("專欄","/column/"),("夏令營","/camps/")]
+     ("法會資訊","/news/"),("影音","/videos/"),("專欄","/column/"),("學習園地","/learn/")]
 NAVNAME={o:n for n,o in NAV}
 SITE_NAME="如意精舍"
 SITE_URL="https://ruyi99.org"
@@ -414,7 +418,7 @@ def build_home():
           ("法會資訊","/news/","念佛、浴佛與每月定期法會","cal","#274a78","#3f6aa5"),
           ("影音","/videos/","佛法常識與淨土講座影音","play","#9a6a1e","#c29a45"),
           ("專欄","/column/","三位作者的佛法心得文章","pen","#5a3d7a","#7d5aa6"),
-          ("夏令營","/camps/","兒童心靈環保成長營歷年紀錄","sun","#2f7d77","#3f9d95")]
+          ("學習園地","/learn/","週四英語課（融入佛法）與兒童夏令營，孩子的學習園地","sun","#2f7d77","#3f9d95")]
     cards=''.join('<a class="hcard rvl" style="--ac:%s;--ac2:%s;transition-delay:%dms" href="%s">'
                   '<div class="hcard-ic">%s</div><h3>%s</h3><p>%s</p>'
                   '<span class="hcard-go">前往 <span class="arw">→</span></span></a>'
@@ -509,7 +513,7 @@ def build_camps(o):
                 '<div class="cc-meta">%d 部影片 <span class="arw">→</span></div></div></a>'
                 %(min(i*70,520),u(k),thumb,badge,_camp_year(k),esc(nmk),n))
     body=hdr+'<main class="tintbg"><div class="wrap"><div class="campgrid rvl">'+cards+'</div></div></main>'
-    return page(nm,"/camps/",body,nm+" · 如意精舍")
+    return page(nm,"/learn/",body,nm+" · 如意精舍")
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
@@ -793,6 +797,333 @@ def build_bhikkhuni(o):
     body+='</div></main>'
     return page(nm,"/bhikkhuni/",body,nm+" · 如意精舍")
 
+# ================= 學習園地 / 如意英文學校 (English School) =================
+# 24 課英語課（融入佛法）線上複習庫。內容由 data/english_school.json 提供，
+# 設計為如意精舍自家的童趣版（plum/gold 底 + 每週糖果色），與英文站各自獨立。
+ES_THEME={1:'saffron',2:'pink',3:'jade',4:'sky',5:'coral',6:'violet',7:'gold',8:'saffron',
+ 9:'pink',10:'jade',11:'sky',12:'coral',13:'pink',14:'jade',15:'coral',16:'violet',17:'gold',
+ 18:'saffron',19:'sky',20:'jade',21:'pink',22:'coral',23:'violet',24:'gold'}
+ES_EMOJI={1:'🙏',2:'🧘',3:'🌱',4:'💗',5:'💎',6:'🛤️',7:'🎯',8:'🔥',9:'☸️',10:'🌊',11:'🌬️',12:'🕊️',
+ 13:'💛',14:'🤝',15:'❤️',16:'🤲',17:'🍃',18:'🎉',19:'👨‍👩‍👧',20:'🌳',21:'✨',22:'🪷',23:'🧘‍♀️',24:'👑'}
+ES_QLABEL={'eng':('💬','英文目標'),'spirit':('🪷','佛學／心靈目標')}
+# friendly breadcrumb names for the manually-written learning pages
+EXTRA_NAMES["/english-school/"]="如意英文學校"
+for _esd in ES_LESSONS:
+    EXTRA_NAMES["/english-school/%s/"%_esd["id"]]="第 %d 週"%_esd["week"]
+
+ES_CSS = """<style>
+.es{max-width:900px;margin:0 auto;
+ --ac:#e0892a;--ac2:#b86a12;--soft:#fdf2e2;--line2:#f1ddc0;}
+.es.t-saffron{--ac:#ef7d2e;--ac2:#b85a12;--soft:#fff0e0;--line2:#ffe2c6;}
+.es.t-pink{--ac:#e85684;--ac2:#b83560;--soft:#ffe7ef;--line2:#ffd2e0;}
+.es.t-jade{--ac:#2aa996;--ac2:#1c8273;--soft:#ddf4ef;--line2:#c2ece4;}
+.es.t-sky{--ac:#3f9be0;--ac2:#1f72b8;--soft:#e4f1fc;--line2:#cce6fa;}
+.es.t-coral{--ac:#ef6253;--ac2:#c43c30;--soft:#ffe8e4;--line2:#ffd4cd;}
+.es.t-violet{--ac:#8d63e6;--ac2:#6a3fc0;--soft:#efe7fc;--line2:#e0d2fa;}
+.es.t-gold{--ac:#d4961e;--ac2:#a76f0c;--soft:#fbf1d6;--line2:#f1e2b2;}
+.es .es-intro{display:grid;gap:16px;margin:30px 0 6px}
+@media(min-width:820px){.es .es-intro{grid-template-columns:1.3fr 1fr}}
+.es .es-note{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;
+ box-shadow:var(--shadow);font-size:16px;line-height:1.8;color:var(--ink-soft)}
+.es .es-note .ic{font-size:30px;display:block;margin-bottom:6px}
+.es .es-note b{color:var(--ac2)}
+.es .es-teacher{background:linear-gradient(160deg,#fbf1d8,#f7e7cf);border:2px solid #ecd6a6;
+ border-radius:18px;padding:22px 24px;position:relative;overflow:hidden}
+.es .es-teacher::after{content:"💛";position:absolute;right:-12px;bottom:-16px;font-size:120px;opacity:.12;transform:rotate(-12deg)}
+.es .es-teacher .who{display:flex;align-items:center;gap:13px;margin-bottom:10px}
+.es .es-teacher .av{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f1c75a,#e08a2e);
+ display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;box-shadow:0 8px 18px -8px rgba(224,138,46,.7)}
+.es .es-teacher .who b{font-family:var(--serif);font-size:22px;color:#9a5a12;display:block;line-height:1.1}
+.es .es-teacher .who span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b8862f;font-weight:700}
+.es .es-teacher p{font-size:15px;line-height:1.8;color:#6b4f23;position:relative;z-index:1;margin:0}
+.es .es-qhead{display:flex;align-items:center;gap:13px;margin:40px 0 14px;flex-wrap:wrap}
+.es .es-qbadge{font-family:var(--serif);font-weight:700;color:#fff;font-size:14px;letter-spacing:.04em;
+ padding:7px 16px;border-radius:30px}
+.es .es-qhead h2{font-size:23px;margin:0;letter-spacing:.04em;color:var(--ink)}
+.es .es-qhead .qs{flex-basis:100%;font-size:14px;color:var(--sub);margin-top:-4px}
+.es .es-grid{display:grid;gap:15px;grid-template-columns:1fr}
+@media(min-width:560px){.es .es-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:840px){.es .es-grid{grid-template-columns:1fr 1fr 1fr}}
+.es .es-card{position:relative;display:flex;flex-direction:column;background:#fff;border:2px solid var(--line2);
+ border-radius:20px;padding:20px;box-shadow:var(--shadow);overflow:hidden;
+ transition:transform .25s,box-shadow .25s,border-color .25s}
+.es .es-card::before{content:"";position:absolute;inset:0 0 auto 0;height:7px;background:var(--cc)}
+.es a.es-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--cc)}
+.es .es-card .top{display:flex;align-items:center;gap:12px;margin:4px 0 12px}
+.es .es-card .emo{width:50px;height:50px;border-radius:15px;background:var(--ccs);display:flex;
+ align-items:center;justify-content:center;font-size:26px;flex-shrink:0;transition:transform .25s}
+.es a.es-card:hover .emo{transform:scale(1.12) rotate(-7deg)}
+.es .es-card .wk{font-family:var(--serif);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ccd);font-weight:700}
+.es .es-card .wn{font-family:var(--serif);font-size:23px;font-weight:700;color:var(--ink);line-height:1}
+.es .es-card h3{font-size:17px;line-height:1.35;color:var(--ink);margin:0 0 auto;font-weight:700}
+.es .es-card .go{font-family:var(--serif);font-size:14px;color:var(--ccd);font-weight:700;margin-top:14px}
+.es .es-card .live{position:absolute;top:13px;right:13px;font-family:var(--serif);font-size:11px;font-weight:700;
+ letter-spacing:.05em;color:#fff;background:#2bae6a;padding:4px 10px;border-radius:20px}
+/* lesson body */
+.es-les{max-width:820px}
+.es-les .sec{margin:0 0 46px}
+.es-les .sh{display:flex;align-items:center;gap:13px;margin:0 0 18px;flex-wrap:wrap}
+.es-les .sh h2{font-size:23px;margin:0;color:var(--ink);position:relative;padding-bottom:8px;letter-spacing:.02em}
+.es-les .sh h2::after{content:"";position:absolute;left:0;bottom:0;width:42px;height:5px;border-radius:5px;background:var(--ac)}
+.es-les .sh .tag{font-size:12px;letter-spacing:.04em;color:var(--ac2);font-weight:700;background:var(--soft);padding:5px 12px;border-radius:20px}
+.es-les .lede{font-size:17px;color:var(--ink-soft);line-height:1.8;margin:0 0 18px}
+.es-les .note{font-size:14px;color:var(--sub);margin:0 0 16px}
+.es-les .obj2{display:grid;gap:15px}
+@media(min-width:660px){.es-les .obj2{grid-template-columns:1fr 1fr}}
+.es-les .obj{background:#fff;border:2px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+.es-les .obj.eng{border-top:6px solid #d4961e}.es-les .obj.spirit{border-top:6px solid var(--mist)}
+.es-les .obj h3{font-size:17px;margin:0 0 3px}.es-les .obj .ozh{font-size:12px;color:var(--sub);font-weight:700;letter-spacing:.04em;margin-bottom:9px}
+.es-les .obj p{font-size:15px;color:var(--ink-soft);line-height:1.7;margin:0}
+.es-les .vt{width:100%;border-collapse:separate;border-spacing:0 10px}
+.es-les .vt tr{background:#fff;box-shadow:var(--shadow)}
+.es-les .vt td{padding:13px 15px;border-top:2px solid var(--line2);border-bottom:2px solid var(--line2)}
+.es-les .vt td:first-child{border-left:6px solid var(--ac);border-radius:14px 0 0 14px}
+.es-les .vt td:last-child{border-right:2px solid var(--line2);border-radius:0 14px 14px 0;text-align:right}
+.es-les .vw{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--ink)}
+.es-les .vp{font-size:12px;color:var(--sub);font-weight:600;margin-left:4px}
+.es-les .vz{font-size:15px;color:var(--ink-soft)}
+.es-say{background:var(--soft);border:2px solid var(--line2);color:var(--ac2);border-radius:50%;
+ width:40px;height:40px;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;
+ transition:transform .15s,background .15s;vertical-align:middle}
+.es-say:hover,.es-say.on{background:var(--ac);border-color:var(--ac);color:#fff;transform:scale(1.1)}
+.es-les .pat{background:#fff;border:2px solid var(--line2);border-radius:16px;padding:18px 20px;margin-bottom:16px;box-shadow:var(--shadow)}
+.es-les .pl{display:inline-block;font-family:var(--serif);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+ color:#fff;background:var(--ac);padding:4px 12px;border-radius:20px;margin-bottom:11px;font-weight:700}
+.es-les .pf{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);background:var(--soft);
+ border-radius:11px;padding:11px 16px;margin-bottom:12px}
+.es-les .ex{font-size:16px;color:var(--ink-soft);margin:0 0 8px;line-height:1.6}
+.es-les .ex strong{color:var(--ink)}
+.es-sayl{background:none;border:none;color:var(--ac);cursor:pointer;font-size:15px;padding:0 2px;vertical-align:middle;transition:transform .15s}
+.es-sayl:hover,.es-sayl.on{transform:scale(1.25)}
+.es-les .gram{background:var(--soft);border:2px solid var(--line2);border-radius:16px;padding:18px 22px}
+.es-les .gram h4{font-size:16px;color:var(--ac2);margin:0 0 7px}.es-les .gram p{font-size:15px;color:var(--ink-soft);line-height:1.75;margin:0}
+.es-les .gram .ok{color:var(--mist);font-weight:700}
+.es-les figure.fig{margin:0 0 18px;border-radius:16px;overflow:hidden;border:3px solid #fff;box-shadow:var(--shadow-lg)}
+.es-les figure.fig img{width:100%;display:block}
+.es-les figure.fig figcaption{font-size:13px;color:var(--sub);padding:10px 15px;background:var(--soft)}
+.es-les .story p{font-size:16px;color:var(--ink-soft);line-height:1.85;margin:0 0 14px}
+.es-les .story strong{color:var(--ink)}.es-les .zh-gloss{color:var(--sub);font-size:14px}
+.es-les .qcheck{background:var(--soft);border:2px dashed var(--ac);border-radius:16px;padding:17px 21px;margin-top:16px}
+.es-les .qcheck h4{font-size:15px;color:var(--ac2);margin:0 0 9px}
+.es-les .qcheck ul{margin:0;padding-left:20px}.es-les .qcheck li{font-size:15px;color:var(--ink-soft);margin-bottom:6px;line-height:1.6}
+.es-les .vid{border-radius:16px;overflow:hidden;border:3px solid #fff;box-shadow:var(--shadow-lg);background:#000;margin:0 0 16px}
+.es-les .vid video{width:100%;display:block}
+.es-les .pbox{background:linear-gradient(160deg,#fbf1d8,#f6e6cd);border:2px solid #ecd6a6;border-radius:16px;padding:20px 24px}
+.es-les .pbox h4{font-size:17px;color:#9a5a12;margin:0 0 7px}.es-les .pbox p{font-size:15px;color:#6b4f23;line-height:1.75;margin:0}
+.es-les .tiers{display:grid;gap:15px}@media(min-width:740px){.es-les .tiers{grid-template-columns:repeat(3,1fr)}}
+.es-les .tier{background:#fff;border:2px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.es-les .tier.t1{border-top:6px solid #2bae6a}.es-les .tier.t2{border-top:6px solid #d4961e}.es-les .tier.t3{border-top:6px solid #8d63e6}
+.es-les .tier .tb{align-self:flex-start;font-family:var(--serif);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+ color:#fff;padding:5px 13px;border-radius:20px;margin-bottom:11px;font-weight:700}
+.es-les .tier.t1 .tb{background:#2bae6a}.es-les .tier.t2 .tb{background:#d4961e}.es-les .tier.t3 .tb{background:#8d63e6}
+.es-les .tier h3{font-size:17px;margin:0 0 3px}.es-les .tier .ta{font-size:13px;color:var(--sub);font-weight:700;margin-bottom:10px}
+.es-les .tier .tr{font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:11px}
+.es-les .tier .te{font-size:14px;color:var(--ink-soft);background:var(--bg-mist);border-radius:11px;padding:11px 13px;line-height:1.6}
+.es-les .tier .te b{display:block;color:var(--ac2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.es-quiz{background:var(--soft);border:2px solid var(--line2);border-radius:20px;padding:24px 22px}
+.es-quiz .q{padding:18px 0;border-bottom:2px dashed var(--line2)}.es-quiz .q:last-child{border-bottom:none}
+.es-quiz .qn{display:inline-block;font-family:var(--serif);font-size:13px;color:#fff;background:var(--ac);text-transform:uppercase;letter-spacing:.04em;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.es-quiz .qx{font-size:18px;color:var(--ink);font-weight:700;margin:0 0 13px;line-height:1.5}
+.es-opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--line2);border-radius:13px;
+ padding:12px 17px;margin-bottom:9px;font-size:17px;color:var(--ink);cursor:pointer;font-family:inherit;font-weight:600;transition:transform .12s,border-color .12s,background .12s}
+.es-opt:hover:not(:disabled){border-color:var(--ac);transform:translateX(4px)}
+.es-opt:disabled{cursor:default}
+.es-opt.correct{background:#eafaf0;border-color:#2bae6a;color:#1c7a4a}
+.es-opt.wrong{background:#ffeeec;border-color:#ef6253;color:#b23b2f}
+.es-opt.correct::after{content:"  🎉"}.es-opt.wrong::after{content:"  💡"}
+.es-expl{display:none;margin-top:11px;padding:13px 17px;background:#fff;border-left:5px solid var(--ac);border-radius:0 11px 11px 0;font-size:15px;color:var(--ink-soft);line-height:1.7}
+.es-expl.show{display:block}.es-expl strong{color:var(--ink)}
+.es-lnav{display:flex;justify-content:space-between;gap:13px;margin-top:42px;flex-wrap:wrap}
+.es-lnav a{font-family:var(--serif);font-weight:700;color:var(--ac2);background:var(--soft);border:2px solid var(--line2);border-radius:30px;padding:10px 18px;transition:transform .15s}
+.es-lnav a:hover{transform:translateY(-2px);color:var(--ac2)}
+.es-thanks{text-align:center;margin:48px 0 6px;padding:26px;background:linear-gradient(135deg,#fbf1d8,#f7e7ef 60%,#e4f3ee);border-radius:20px;border:2px solid #efd9b8}
+.es-thanks b{font-family:var(--serif);font-size:21px;color:#9a5a12;display:block;margin-bottom:5px}
+.es-thanks p{font-size:15px;color:#6b5230;margin:0}
+/* two-card learn hub */
+.es-learn{display:grid;gap:18px;margin:34px 0}
+@media(min-width:760px){.es-learn{grid-template-columns:1fr 1fr}}
+.es-lc{display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:20px;
+ padding:26px 26px 24px;box-shadow:var(--shadow);overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s}
+.es-lc::before{content:"";position:absolute;inset:0 0 auto 0;height:8px;background:var(--cc)}
+.es-lc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.es-lc .ic{width:62px;height:62px;border-radius:18px;background:var(--ccs);display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:14px}
+.es-lc h3{font-size:21px;margin:0 0 4px;color:var(--ink)}
+.es-lc .en{font-family:var(--serif);font-size:14px;letter-spacing:.06em;color:var(--ccd);font-weight:700;margin-bottom:10px}
+.es-lc p{font-size:15px;color:var(--ink-soft);line-height:1.75;margin:0 0 auto}
+.es-lc .go{font-family:var(--serif);font-weight:700;color:var(--ccd);margin-top:16px}
+</style>"""
+
+ES_SCRIPT = """<script>
+(function(){
+ function pick(){var v=speechSynthesis.getVoices()||[];return v.filter(function(x){return/en[-_]US/i.test(x.lang)})[0]||v.filter(function(x){return/^en/i.test(x.lang)})[0]||null;}
+ var bs=document.querySelectorAll('.es-say,.es-sayl');
+ if(bs.length&&'speechSynthesis'in window){try{speechSynthesis.onvoiceschanged=function(){};}catch(e){}
+  bs.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();
+   var t=b.getAttribute('data-say');if(!t)return;speechSynthesis.cancel();
+   var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.86;var vc=pick();if(vc)u.voice=vc;
+   document.querySelectorAll('.es-say.on,.es-sayl.on').forEach(function(o){o.classList.remove('on');});
+   b.classList.add('on');u.onend=function(){b.classList.remove('on');};u.onerror=function(){b.classList.remove('on');};
+   speechSynthesis.speak(u);});});}
+ document.querySelectorAll('.es-quiz .q').forEach(function(q){
+  var ci=parseInt(q.dataset.correct,10),opts=q.querySelectorAll('.es-opt'),ex=q.querySelector('.es-expl');
+  opts.forEach(function(btn,idx){btn.addEventListener('click',function(){
+   if(q.dataset.done)return;q.dataset.done='1';opts.forEach(function(b){b.disabled=true;});
+   if(idx===ci){btn.classList.add('correct');}else{btn.classList.add('wrong');opts[ci].classList.add('correct');}
+   if(ex)ex.classList.add('show');});});});
+})();
+</script>"""
+
+def es_say(t,inline=False):
+    return '<button class="es-say%s" data-say="%s" aria-label="聽發音">🔊</button>'%(
+        'l' if False else '',esc(t)) if not inline else \
+        '<button class="es-sayl" data-say="%s" aria-label="聽發音">🔊</button>'%esc(t)
+
+def build_learn(o):
+    hero=band(crumb_html(o),"RU-YI LEARNING","學習園地",
+        "如意精舍為孩子預備的兩種學習機會：每週四的英語課（融入佛法），以及寒暑假的兒童夏令營。"
+        "歡迎家長帶著孩子一起來學習、成長。")
+    es=u("/english-school/"); cp=u("/camps/")
+    cards=('<div class="es-learn">'
+      '<a class="es-lc" style="--cc:#ef7d2e;--ccs:#fff0e0;--ccd:#b85a12" href="%s">'
+      '<div class="ic">🍃</div><h3>如意英文學校</h3><div class="en">RU-YI ENGLISH SCHOOL</div>'
+      '<p>每週四的英語課，把英文學習與一顆柔軟慈悲的心結合在一起。24 週課程線上複習：'
+      '單字發音、句型、故事、佛法小品與自我檢測小考。課程由 Teacher Dom 老師設計。</p>'
+      '<div class="go">看 24 週課程 →</div></a>'
+      '<a class="es-lc" style="--cc:#3f9d95;--ccs:#dff4ef;--ccd:#1c8273" href="%s">'
+      '<div class="ic">☀️</div><h3>兒童夏令營</h3><div class="en">SUMMER CAMP</div>'
+      '<p>寒暑假的兒童與青少年心靈環保成長營，在遊戲與團體生活中認識自己、學習感恩與專注。'
+      '歷年活動影音紀錄都在這裡。</p><div class="go">看歷年夏令營 →</div></a>'
+      '</div>')%(es,cp)
+    body=hero+'<main class="tintbg"><div class="wrap"><div class="es">'+cards+'</div></div></main>'
+    return page("學習園地","/learn/",ES_CSS+body,"學習園地 · 週四英語課與兒童夏令營 · 如意精舍")
+
+def _es_qcards(ls):
+    out=''
+    for d in ls:
+        wk=d['week'];th=ES_THEME[wk];em=ES_EMOJI[wk]
+        cc={'saffron':('#ef7d2e','#fff0e0','#b85a12'),'pink':('#e85684','#ffe7ef','#b83560'),
+            'jade':('#2aa996','#ddf4ef','#1c8273'),'sky':('#3f9be0','#e4f1fc','#1f72b8'),
+            'coral':('#ef6253','#ffe8e4','#c43c30'),'violet':('#8d63e6','#efe7fc','#6a3fc0'),
+            'gold':('#d4961e','#fbf1d6','#a76f0c')}[th]
+        live='<span class="live">★ Live</span>' if wk==1 else ''
+        out+=('<a class="es-card" style="--cc:%s;--ccs:%s;--ccd:%s" href="%s">%s'
+              '<div class="top"><span class="emo">%s</span><div><div class="wk">Week</div><div class="wn">%d</div></div></div>'
+              '<h3>%s</h3><div class="go">開始上課 →</div></a>'
+              %(cc[0],cc[1],cc[2],u("/english-school/%s/"%d['id']),live,em,wk,esc(d['title_en'])))
+    return out
+
+def build_english_school(o):
+    hero=band(crumb_html(o),"RU-YI ENGLISH SCHOOL","如意英文學校",
+        "週四的英語課，把英文學習和一顆慈悲安定的心結合在一起。每一週都有可以聽、可以說的單字，"
+        "句型、故事、佛法小品與自我檢測小考。免費提供給上課的孩子與所有想學習的人。",
+        byline="課程設計 · Teacher Dom 老師")
+    q1=[d for d in ES_LESSONS if d['quarter']==1]; q2=[d for d in ES_LESSONS if d['quarter']==2]
+    intro=('<div class="es-intro">'
+      '<div class="es-note"><span class="ic">📚</span><b>給上課的同學：</b>用這些頁面複習我們在課堂上學過的內容——'
+      '點 🔊 聽每個單字的發音、再讀一次故事、做小考檢測自己。一起快樂學英文！</div>'
+      '<div class="es-teacher"><div class="who"><div class="av">🌟</div>'
+      '<div><span>Our Teacher</span><b>Teacher Dom</b></div></div>'
+      '<p>這趟英文旅程的每一週，都是 <b>Teacher Dom 老師</b>用心設計的——把英文和一顆慈悲安定的心'
+      '一起教給孩子。謝謝老師！💛</p></div></div>')
+    body=[hero,'<main class="tintbg"><div class="wrap"><div class="es">',intro]
+    body.append('<div class="es-qhead"><span class="es-qbadge" style="background:linear-gradient(135deg,#ef9a43,#ee6f3d)">Quarter 1 · 第 1–3 個月</span>'
+                '<h2>基礎、精進與恆心 🌱</h2><div class="qs">建立心的力量與單字基礎——專注、清楚、正精進。</div></div>')
+    body.append('<div class="es-grid">'+_es_qcards(q1)+'</div>')
+    body.append('<div class="es-qhead"><span class="es-qbadge" style="background:linear-gradient(135deg,#ee7eb3,#8d63e6)">Quarter 2 · 第 4–7 個月</span>'
+                '<h2>品格、慈悲與善語 💞</h2><div class="qs">用心說話、慈悲生活——慈、悲、喜、捨。</div></div>')
+    body.append('<div class="es-grid">'+_es_qcards(q2)+'</div>')
+    body.append('<div class="es-thanks"><b>✏️ 課程由 Teacher Dom 老師用心設計</b>'
+                '<p>24 週的英文與佛心——為如意英文學校的孩子們而做。</p></div>')
+    body.append('</div></div></main>')
+    return page("如意英文學校","/learn/",ES_CSS+''.join(body),
+                "如意英文學校 · 週四英語課（融入佛法）24 週線上複習 · 如意精舍")
+
+def _es_pills(d):
+    return ''.join('<span class="les-pill"></span>' for _ in [])  # pills shown in band sub instead
+
+def build_es_lesson(d, prev_d, next_d):
+    wk=d['week'];th=ES_THEME[wk];em=ES_EMOJI[wk]
+    o="/english-school/%s/"%d['id']
+    sub=' · '.join([p['label']+'：'+p['text'] for p in d['pills']])
+    hero=band(crumb_html(o),"%s  Week %d"%(("Quarter 1" if d['quarter']==1 else "Quarter 2"),wk),
+              d['title_en'], d['title_zh'], byline=sub)
+    B=['<main class="tintbg"><div class="wrap"><div class="es-les es t-%s">'%th]
+    # overview / objectives
+    objs=''
+    for ob in d['objectives']:
+        em2,zh=ES_QLABEL.get(ob['kind'],('•',ob['zh']))
+        objs+='<div class="obj %s"><h3>%s %s</h3><div class="ozh">%s</div><p>%s</p></div>'%(
+            ob['kind'], em2,esc(ob['h3']),esc(ob['zh'] or zh),ob['html'])
+    B.append('<section class="sec"><div class="sh"><h2>本週重點</h2><span class="tag">Overview</span></div>'
+             '<div class="obj2">%s</div></section>'%objs)
+    # vocab
+    rows=''
+    for v in d['vocab']:
+        rows+=('<tr><td><span class="vw">%s</span><span class="vp">%s</span></td>'
+               '<td class="vz">%s</td><td><button class="es-say" data-say="%s" aria-label="聽發音">🔊</button></td></tr>'
+               %(esc(v['word']),esc(v['pos']),esc(v['zh']),esc(v['say'])))
+    B.append('<section class="sec"><div class="sh"><h2>單字 Vocabulary</h2><span class="tag">點 🔊 聽發音</span></div>'
+             '<p class="note">聽、跟著念、大聲說三次。</p><table class="vt">%s</table></section>'%rows)
+    # patterns
+    pats=''
+    for p in d['patterns']:
+        exs=''
+        for ex in p['examples']:
+            exs+='<p class="ex">%s <button class="es-sayl" data-say="%s" aria-label="聽發音">🔊</button></p>'%(ex['html'],esc(ex['say']))
+        pats+='<div class="pat"><span class="pl">%s</span><div class="pf">%s</div>%s</div>'%(
+            esc(p['label']),esc(p['formula']),exs)
+    if d.get('grammar'):
+        pats+='<div class="gram"><h4>✏️ %s</h4><p>%s</p></div>'%(esc(d['grammar']['h4']),d['grammar']['html'])
+    B.append('<section class="sec"><div class="sh"><h2>句型 Sentence Patterns</h2><span class="tag">Key Patterns</span></div>%s</section>'%pats)
+    # story
+    st=d['story']
+    sh=''
+    if st.get('img'):
+        sh+='<figure class="fig"><img loading="lazy" src="%s" alt=""><figcaption>%s</figcaption></figure>'%(
+            u("/english-school/assets/"+st['img']),esc(st.get('figcaption') or ''))
+    sh+='<div class="story">'+''.join('<p>%s</p>'%pp for pp in st['paras'])+'</div>'
+    if st.get('qcheck'):
+        sh+='<div class="qcheck"><h4>🤔 %s</h4><ul>%s</ul></div>'%(
+            esc(st['qcheck']['h4']),''.join('<li>%s</li>'%it for it in st['qcheck']['items']))
+    B.append('<section class="sec"><div class="sh"><h2>故事 The Story</h2><span class="tag">Story</span></div>%s</section>'%sh)
+    # principle
+    pr=d['principle']
+    ph=''
+    if pr.get('lede'): ph+='<p class="lede">%s</p>'%pr['lede']
+    if pr.get('video'):
+        ph+=('<div class="vid"><video controls preload="metadata"><source src="%s" type="video/mp4">'
+             '您的瀏覽器不支援影片播放。</video></div>'%u("/english-school/assets/"+pr['video']))
+    if pr.get('h4'): ph+='<div class="pbox"><h4>🌟 %s</h4><p>%s</p></div>'%(esc(pr['h4']),pr['html'])
+    if ph:
+        B.append('<section class="sec"><div class="sh"><h2>佛法小品 The Principle</h2><span class="tag">Principle</span></div>%s</section>'%ph)
+    # practice
+    pc=d['practice']
+    if pc['tiers']:
+        tiers=''
+        for t in pc['tiers']:
+            tiers+=('<div class="tier %s"><span class="tb">%s</span><h3>%s</h3><div class="ta">%s</div>'
+                    '<div class="tr">%s</div><div class="te">%s</div></div>'%(
+                        t['tier'],esc(t['badge']),esc(t['h3']),esc(t['age']),t['req'],t['ex']))
+        B.append('<section class="sec"><div class="sh"><h2>練習 Practice</h2><span class="tag">Homework</span></div>'
+                 '<p class="note">%s</p><div class="tiers">%s</div></section>'%(pc.get('note') or '',tiers))
+    # quiz
+    qs=''
+    for q in d['quiz']:
+        opts=''.join('<button class="es-opt">%s</button>'%esc(op) for op in q['options'])
+        qs+=('<div class="q" data-correct="%d"><span class="qn">%s</span><div class="qx">%s</div>%s'
+             '<div class="es-expl">%s</div></div>'%(q['correct'],esc(q['num']),esc(q['text']),opts,q['expl']))
+    B.append('<section class="sec"><div class="sh"><h2>小考 Mini Quiz</h2><span class="tag">Check Yourself</span></div>'
+             '<p class="note">選出最適合的答案，點選後會看到解析。</p><div class="es-quiz">%s</div></section>'%qs)
+    # lesson nav
+    nav='<div class="es-lnav"><a href="%s">← 所有課程</a>'%u("/english-school/")
+    if next_d: nav+='<a href="%s">Week %d：%s →</a>'%(u("/english-school/%s/"%next_d['id']),next_d['week'],esc(next_d['title_en']))
+    nav+='</div>'
+    B.append(nav)
+    B.append('</div></div></main>')
+    return page(d['title_en'],"/learn/",ES_CSS+hero+''.join(B)+ES_SCRIPT,
+                "如意英文學校 第 %d 週 · %s · 如意精舍"%(wk,d['title_en']))
+
+
 # ---------------- generic interior page ----------------
 def build_page(o):
     p=out2path[o]; d=content[p]; nm=d["name"]
@@ -854,19 +1185,28 @@ if __name__=="__main__":
         elif o=="/camps/":
             write(o,build_camps(o))
         elif o.startswith("/camps/") and not children.get(o):
-            write(o,build_video_wall(o,"/camps/","夏令營 · 活動紀錄"))
+            write(o,build_video_wall(o,"/learn/","夏令營 · 活動紀錄"))
         else:
             write(o,build_page(o))
         n+=1
     # 合併頁（不在 omap 內，手動產生）
     for c in COMBINED:
         write(c["out"],build_prajna(c)); n+=1
+    # 學習園地 + 如意英文學校（不在 omap 內，手動產生）
+    write("/learn/",build_learn("/learn/")); n+=1
+    write("/english-school/",build_english_school("/english-school/")); n+=1
+    for i,_d in enumerate(ES_LESSONS):
+        _prev=ES_LESSONS[i-1] if i>0 else None
+        _next=ES_LESSONS[i+1] if i<len(ES_LESSONS)-1 else None
+        write("/english-school/%s/"%_d["id"],build_es_lesson(_d,_prev,_next)); n+=1
     # CNAME + nojekyll
     open(os.path.join(ROOT,".nojekyll"),"w").write("")
     # sitemap.xml (all pages) + robots.txt — for Google 收錄
     # 收錄合併頁、排除已轉址的舊系列首頁
     urls=["/"]+sorted([o for o in out2path if o!="/" and o not in REDIRECTS]
-                      +[c["out"] for c in COMBINED])
+                      +[c["out"] for c in COMBINED]
+                      +["/learn/","/english-school/"]
+                      +["/english-school/%s/"%d["id"] for d in ES_LESSONS])
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for o in urls:
