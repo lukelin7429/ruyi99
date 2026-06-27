@@ -19,6 +19,23 @@
     });
   });
 
+  // 今日一句 — pick a quote by today's date (same for everyone that day; auto-rotates)
+  var dd=document.getElementById('daily-data');
+  if(dd){
+    try{
+      var qs=JSON.parse(dd.textContent);
+      if(qs.length){
+        var now=new Date(), start=new Date(now.getFullYear(),0,0);
+        var day=Math.floor((now-start)/86400000);
+        var pick=qs[((day%qs.length)+qs.length)%qs.length];
+        var qe=document.getElementById('daily-q'), pe=document.getElementById('daily-plain'), se=document.getElementById('daily-src');
+        if(qe)qe.textContent=pick.q;
+        if(pe)pe.textContent=pick.plain;
+        if(se)se.textContent='——《'+pick.src+'》';
+      }
+    }catch(e){}
+  }
+
   // scroll reveal (getBoundingClientRect — robust in preview frames)
   var els=[].slice.call(document.querySelectorAll('.rvl'));
   function reveal(){

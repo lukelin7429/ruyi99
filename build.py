@@ -27,6 +27,10 @@ try:
     ES_LESSONS=json.load(open(os.path.join(ROOT,"data","english_school.json")))
 except Exception:
     ES_LESSONS=[]
+try:
+    DAILY_QUOTES=json.load(open(os.path.join(ROOT,"data","daily_quotes.json")))
+except Exception:
+    DAILY_QUOTES=[]
 
 # 合併卡片（如「般若經講記」＝心經＋金剛經）：把多個來源系列收進一張卡、一頁。
 EXTRA_NAMES={}   # out -> 顯示名稱覆寫（讓麵包屑顯示合併後的書名）
@@ -403,6 +407,19 @@ def build_home():
           '<p>海拔約 800 公尺的山上道場，以弘揚正知正見的佛法為理念，'
           '帶領大眾聞思修、深植菩提種子。</p></div></div></section>'
           %u("/assets/img/hero-fengguidou.jpg")]
+    # 今日一句經典法語（每天依日期自動輪替，純前端、無需重建）
+    if DAILY_QUOTES:
+        q0=DAILY_QUOTES[0]
+        body.append('<section class="daily-wrap"><div class="wrap"><div class="daily rvl">'
+            '<div class="daily-k">今日一句 · 經典法語</div>'
+            '<span class="daily-mark">”</span>'
+            '<blockquote class="daily-q" id="daily-q">%s</blockquote>'
+            '<p class="daily-plain" id="daily-plain">%s</p>'
+            '<cite class="daily-src" id="daily-src">——《%s》</cite>'
+            '<script type="application/json" id="daily-data">%s</script>'
+            '</div></div></section>'
+            %(esc(q0["q"]),esc(q0["plain"]),esc(q0["src"]),
+              json.dumps(DAILY_QUOTES,ensure_ascii=False).replace("</","<\\/")))
     # 首頁醒目卡片：週四英語課（讓家長一眼就找到上課資訊）
     body.append('<section class="home-feat-wrap"><a class="home-feat rvl" href="%s">'
         '<div class="hf-ic">🍃</div><div class="hf-body">'
