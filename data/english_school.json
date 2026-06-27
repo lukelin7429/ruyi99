@@ -25,13 +25,15 @@
     "kind": "eng",
     "h3": "English Goal",
     "zh": "英文目標",
-    "html": "Use the patterns <strong>“I feel…”</strong> and <strong>“I am grateful for…”</strong> to express feelings, and learn positive vocabulary: <em>grateful, joyful, effort, diligent, present</em>. Use the simple present tense for daily habits."
+    "html": "Use the patterns <strong>“I feel…”</strong> and <strong>“I am grateful for…”</strong> to express feelings, and learn positive vocabulary: <em>grateful, joyful, effort, diligent, present</em>. Use the simple present tense for daily habits.",
+    "zh_html": "運用句型「I feel…（我覺得…）」與「I am grateful for…（我感謝…）」來表達感受，並學習正向單字：grateful（感恩）、joyful（喜悅）、effort（努力）、diligent（勤奮）、present（當下）。用簡單現在式描述每天的習慣。"
    },
    {
     "kind": "spirit",
     "h3": "Spiritual Goal",
     "zh": "佛學／心靈目標",
-    "html": "Understand <strong>Right Effort (Sammā Vāyāma)</strong> as the steady cultivation of wholesome states like gratitude and joy — and connect “letting go” of pressure (the Laughing Buddha) with awareness of the present moment."
+    "html": "Understand <strong>Right Effort (Sammā Vāyāma)</strong> as the steady cultivation of wholesome states like gratitude and joy — and connect “letting go” of pressure (the Laughing Buddha) with awareness of the present moment.",
+    "zh_html": "認識「正精進（Sammā Vāyāma）」是持續培養感恩、喜悅等善心的功夫；並把「放下」壓力（歡喜佛的智慧）與覺察當下連結起來。"
    }
   ],
   "vocab": [
@@ -85,15 +87,18 @@
     "examples": [
      {
       "html": "<strong>I feel happy.</strong>",
-      "say": "I feel happy."
+      "say": "I feel happy.",
+      "zh": "我覺得快樂。"
      },
      {
       "html": "<strong>I feel joyful and calm.</strong>",
-      "say": "I feel joyful and calm."
+      "say": "I feel joyful and calm.",
+      "zh": "我覺得喜悅而平靜。"
      },
      {
       "html": "<strong>I feel present when I breathe slowly.</strong>",
-      "say": "I feel present when I breathe slowly."
+      "say": "I feel present when I breathe slowly.",
+      "zh": "當我慢慢呼吸時，我安住於當下。"
      }
     ]
    },
@@ -103,11 +108,13 @@
     "examples": [
      {
       "html": "<strong>I am grateful for my teacher.</strong>",
-      "say": "I am grateful for my teacher."
+      "say": "I am grateful for my teacher.",
+      "zh": "我感謝我的老師。"
      },
      {
       "html": "<strong>I am grateful for my family, because they are kind.</strong>",
-      "say": "I am grateful for my family, because they are kind."
+      "say": "I am grateful for my family, because they are kind.",
+      "zh": "我感謝我的家人，因為他們很善良。"
      }
     ]
    },
@@ -117,18 +124,21 @@
     "examples": [
      {
       "html": "<strong>I study English every day.</strong>",
-      "say": "I study English every day."
+      "say": "I study English every day.",
+      "zh": "我每天讀英文。"
      },
      {
       "html": "<strong>Consistency requires effort.</strong>",
-      "say": "Consistency requires effort."
+      "say": "Consistency requires effort.",
+      "zh": "持之以恆需要努力。"
      }
     ]
    }
   ],
   "grammar": {
    "h4": "Grammar Focus · Simple present for habits",
-   "html": "We use the <strong>simple present tense</strong> to talk about things we do again and again. Add <strong>-s</strong> for he / she / it: <span class=\"ok\">She studies every day.</span> · <span class=\"ok\">He works hard.</span> Right Effort means doing a little, <em>consistently</em> — not everything in one burst."
+   "html": "We use the <strong>simple present tense</strong> to talk about things we do again and again. Add <strong>-s</strong> for he / she / it: <span class=\"ok\">She studies every day.</span> · <span class=\"ok\">He works hard.</span> Right Effort means doing a little, <em>consistently</em> — not everything in one burst.",
+   "zh_html": "我們用「簡單現在式」來談一再重複做的事。主詞是 he／she／it 時，動詞要加 -s：She studies every day.（她每天讀書。）· He works hard.（他很努力。）正精進的意思是：每天做一點、持續不斷——而不是一口氣全做完。"
   },
   "story": {
    "paras": [
@@ -145,13 +155,20 @@
     ]
    },
    "figcaption": "This week’s visual: How to feel happy every day — effort, gratitude, and the present moment.",
-   "img": "q1w1-infographic.jpg"
+   "img": "q1w1-infographic.jpg",
+   "paras_zh": [
+    "很久以前，中國有一位雲遊的出家人，名叫布袋和尚。他身形圓胖、笑容滿面，走到哪兒都背著一個大布袋。因為他總是笑瞇瞇的，大家就叫他「歡喜佛」。",
+    "布袋裡裝著要送給孩子們的小禮物，他走到哪兒就分送到哪兒。他幾乎一無所有，卻是每個村莊裡最快樂的人。當人們問他快樂的祕訣，他只是把布袋放下，呵呵大笑。",
+    "那個布袋很重——就像我們心裡背負的種種煩惱與壓力。布袋和尚告訴我們：可以努力工作、走得很遠，同時也能把袋子放下，帶著歡喜的心安住當下。這就是「正精進」的平衡：盡力而為，也要放下壓力。"
+   ]
   },
   "principle": {
    "lede": "Watch this short film, <em>The Ru-Yi Method</em>, then think about how effort and joy work together.",
    "h4": "Effort, the Middle Way 中道的精進",
    "html": "Right Effort is not pushing yourself until you break, and it is not being lazy. It is the steady, kind effort of doing a little every day — and meeting each moment with gratitude. When you study English with <em>joy</em> instead of fear, the words come more easily. Diligence and laughter belong together.",
-   "video": "q1w1-the-ruyi-method.mp4"
+   "video": "q1w1-the-ruyi-method.mp4",
+   "lede_zh": "觀看這部短片《如意之道》(The Ru-Yi Method)，然後想一想：努力與喜悅如何相輔相成。",
+   "zh_html": "正精進不是把自己逼到崩潰，也不是懈怠偷懶。它是一種溫和而持續的努力——每天做一點，並以感恩的心面對每個當下。當你帶著「喜悅」而非「恐懼」學英文時，字句會更容易記住。勤奮與歡笑，本來就該在一起。"
   },
   "practice": {
    "note": "Write in your journal <strong>every day</strong> this week. Choose the tier that fits you — the daily practice <em>is</em> the Right Effort. 每天寫一篇，選一個適合自己的等級。",
@@ -162,7 +179,8 @@
      "h3": "One sentence",
      "age": "Ages 5–8 · new learners",
      "req": "Write <strong>1 sentence</strong> using “I feel…” or “I am grateful for…” plus a vocabulary word. Name one happy feeling.",
-     "ex": "<b>Example</b>I am grateful for my mom. I feel joy."
+     "ex": "<b>Example</b>I am grateful for my mom. I feel joy.",
+     "req_zh": "用「I feel…」或「I am grateful for…」加上一個本週單字，寫一個句子，說出一種快樂的感受。"
     },
     {
      "tier": "t2",
@@ -170,7 +188,8 @@
      "h3": "3–4 sentences",
      "age": "Ages 9–12 · developing fluency",
      "req": "Write <strong>3–4 sentences</strong>. Use a simple-present verb and a reason with <strong>because</strong>. Connect the gratitude to a feeling and a person.",
-     "ex": "<b>Example</b>I am grateful for my friend, because she is very kind. We played a game today. I feel joyful."
+     "ex": "<b>Example</b>I am grateful for my friend, because she is very kind. We played a game today. I feel joyful.",
+     "req_zh": "寫三到四個句子。用一個簡單現在式動詞，並用 because（因為）說明理由，把感恩連結到一種感受和一個人。"
     },
     {
      "tier": "t3",
@@ -178,7 +197,8 @@
      "h3": "5+ sentences",
      "age": "Ages 13–16 · fluent speakers",
      "req": "Write <strong>5+ sentences</strong> using a complex structure (<em>although, when, since</em>) and reflect on the Right Effort principle.",
-     "ex": "<b>Example</b>Although studying is hard, I am grateful for the effort I am making. I feel present and peaceful when I laugh."
+     "ex": "<b>Example</b>Although studying is hard, I am grateful for the effort I am making. I feel present and peaceful when I laugh.",
+     "req_zh": "寫五句以上，運用複雜句型（although 雖然、when 當、since 既然），並反思「正精進」的道理。"
     }
    ]
   },

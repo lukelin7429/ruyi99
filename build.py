@@ -930,6 +930,12 @@ ES_CSS = """<style>
 .es-les figure.fig figcaption{font-size:13px;color:var(--sub);padding:10px 15px;background:var(--soft)}
 .es-les .story p{font-size:16px;color:var(--ink-soft);line-height:1.85;margin:0 0 14px}
 .es-les .story strong{color:var(--ink)}.es-les .zh-gloss{color:var(--sub);font-size:14px}
+.es-les .zh-trans{font-size:15px;color:var(--sub);line-height:1.85;margin:-4px 0 14px;
+  padding:8px 12px;background:var(--bg-soft);border-left:3px solid var(--gold);border-radius:0 8px 8px 0}
+.es-les .zh-trans::before{content:"中譯　";font-size:12px;color:var(--gold);font-weight:700}
+.es-les .ex-zh{display:block;font-size:14.5px;color:var(--sub);margin-top:2px;padding-left:2px}
+.es-les .tr-zh{font-size:14px;color:var(--sub);line-height:1.8;margin:6px 0 0;
+  padding-top:6px;border-top:1px dashed var(--line)}
 .es-les .qcheck{background:var(--soft);border:2px dashed var(--ac);border-radius:16px;padding:17px 21px;margin-top:16px}
 .es-les .qcheck h4{font-size:15px;color:var(--ac2);margin:0 0 9px}
 .es-les .qcheck ul{margin:0;padding-left:20px}.es-les .qcheck li{font-size:15px;color:var(--ink-soft);margin-bottom:6px;line-height:1.6}
@@ -1079,8 +1085,9 @@ def build_es_lesson(d, prev_d, next_d):
     objs=''
     for ob in d['objectives']:
         em2,zh=ES_QLABEL.get(ob['kind'],('•',ob['zh']))
-        objs+='<div class="obj %s"><h3>%s %s</h3><div class="ozh">%s</div><p>%s</p></div>'%(
-            ob['kind'], em2,esc(ob['h3']),esc(ob['zh'] or zh),ob['html'])
+        zt='<p class="zh-trans">%s</p>'%ob['zh_html'] if ob.get('zh_html') else ''
+        objs+='<div class="obj %s"><h3>%s %s</h3><div class="ozh">%s</div><p>%s</p>%s</div>'%(
+            ob['kind'], em2,esc(ob['h3']),esc(ob['zh'] or zh),ob['html'],zt)
     B.append('<section class="sec"><div class="sh"><h2>本週重點</h2><span class="tag">Overview</span></div>'
              '<div class="obj2">%s</div></section>'%objs)
     # vocab
@@ -1096,11 +1103,13 @@ def build_es_lesson(d, prev_d, next_d):
     for p in d['patterns']:
         exs=''
         for ex in p['examples']:
-            exs+='<p class="ex">%s <button class="es-sayl" data-say="%s" aria-label="聽發音">🔊</button></p>'%(ex['html'],esc(ex['say']))
+            ez='<span class="ex-zh">%s</span>'%esc(ex['zh']) if ex.get('zh') else ''
+            exs+='<p class="ex">%s <button class="es-sayl" data-say="%s" aria-label="聽發音">🔊</button>%s</p>'%(ex['html'],esc(ex['say']),ez)
         pats+='<div class="pat"><span class="pl">%s</span><div class="pf">%s</div>%s</div>'%(
             esc(p['label']),esc(p['formula']),exs)
     if d.get('grammar'):
-        pats+='<div class="gram"><h4>✏️ %s</h4><p>%s</p></div>'%(esc(d['grammar']['h4']),d['grammar']['html'])
+        gz='<p class="zh-trans">%s</p>'%d['grammar']['zh_html'] if d['grammar'].get('zh_html') else ''
+        pats+='<div class="gram"><h4>✏️ %s</h4><p>%s</p>%s</div>'%(esc(d['grammar']['h4']),d['grammar']['html'],gz)
     B.append('<section class="sec"><div class="sh"><h2>句型 Sentence Patterns</h2><span class="tag">Key Patterns</span></div>%s</section>'%pats)
     # story
     st=d['story']
@@ -1108,7 +1117,12 @@ def build_es_lesson(d, prev_d, next_d):
     if st.get('img'):
         sh+='<figure class="fig"><img loading="lazy" src="%s" alt=""><figcaption>%s</figcaption></figure>'%(
             u("/english-school/assets/"+st['img']),esc(st.get('figcaption') or ''))
-    sh+='<div class="story">'+''.join('<p>%s</p>'%pp for pp in st['paras'])+'</div>'
+    pz=st.get('paras_zh') or []
+    sp=''
+    for i,pp in enumerate(st['paras']):
+        sp+='<p>%s</p>'%pp
+        if i<len(pz) and pz[i]: sp+='<p class="zh-trans">%s</p>'%pz[i]
+    sh+='<div class="story">'+sp+'</div>'
     if st.get('qcheck'):
         sh+='<div class="qcheck"><h4>🤔 %s</h4><ul>%s</ul></div>'%(
             esc(st['qcheck']['h4']),''.join('<li>%s</li>'%it for it in st['qcheck']['items']))
@@ -1116,11 +1130,15 @@ def build_es_lesson(d, prev_d, next_d):
     # principle
     pr=d['principle']
     ph=''
-    if pr.get('lede'): ph+='<p class="lede">%s</p>'%pr['lede']
+    if pr.get('lede'):
+        ph+='<p class="lede">%s</p>'%pr['lede']
+        if pr.get('lede_zh'): ph+='<p class="zh-trans">%s</p>'%pr['lede_zh']
     if pr.get('video'):
         ph+=('<div class="vid"><video controls preload="metadata"><source src="%s" type="video/mp4">'
              '您的瀏覽器不支援影片播放。</video></div>'%u("/english-school/assets/"+pr['video']))
-    if pr.get('h4'): ph+='<div class="pbox"><h4>🌟 %s</h4><p>%s</p></div>'%(esc(pr['h4']),pr['html'])
+    if pr.get('h4'):
+        pzt='<p class="zh-trans">%s</p>'%pr['zh_html'] if pr.get('zh_html') else ''
+        ph+='<div class="pbox"><h4>🌟 %s</h4><p>%s</p>%s</div>'%(esc(pr['h4']),pr['html'],pzt)
     if ph:
         B.append('<section class="sec"><div class="sh"><h2>佛法小品 The Principle</h2><span class="tag">Principle</span></div>%s</section>'%ph)
     # practice
@@ -1128,9 +1146,10 @@ def build_es_lesson(d, prev_d, next_d):
     if pc['tiers']:
         tiers=''
         for t in pc['tiers']:
+            rz='<div class="tr-zh">%s</div>'%t['req_zh'] if t.get('req_zh') else ''
             tiers+=('<div class="tier %s"><span class="tb">%s</span><h3>%s</h3><div class="ta">%s</div>'
-                    '<div class="tr">%s</div><div class="te">%s</div></div>'%(
-                        t['tier'],esc(t['badge']),esc(t['h3']),esc(t['age']),t['req'],t['ex']))
+                    '<div class="tr">%s</div>%s<div class="te">%s</div></div>'%(
+                        t['tier'],esc(t['badge']),esc(t['h3']),esc(t['age']),t['req'],rz,t['ex']))
         B.append('<section class="sec"><div class="sh"><h2>練習 Practice</h2><span class="tag">Homework</span></div>'
                  '<p class="note">%s</p><div class="tiers">%s</div></section>'%(pc.get('note') or '',tiers))
     # quiz
