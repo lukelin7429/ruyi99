@@ -27,6 +27,36 @@ try:
     ES_LESSONS=json.load(open(os.path.join(ROOT,"data","english_school.json")))
 except Exception:
     ES_LESSONS=[]
+
+def _apply_es_zh(lessons):
+    """疊加中文翻譯(獨立檔 english_school_zh.json)，使英文資料即使被重產也不會洗掉中譯。"""
+    try:
+        ZH=json.load(open(os.path.join(ROOT,"data","english_school_zh.json")))
+    except Exception:
+        return
+    for L in lessons:
+        z=ZH.get(L.get("id"))
+        if not z: continue
+        oz=z.get("objectives_zh",[])
+        for o,t in zip(L.get("objectives",[]),oz):
+            if t and not o.get("zh_html"): o["zh_html"]=t
+        flat=[e for p in L.get("patterns",[]) for e in p.get("examples",[])]
+        for e,t in zip(flat,z.get("examples_zh",[])):
+            if t and not e.get("zh"): e["zh"]=t
+        if z.get("grammar_zh") and L.get("grammar") and not L["grammar"].get("zh_html"):
+            L["grammar"]["zh_html"]=z["grammar_zh"]
+        sp=z.get("story_paras_zh") or []
+        if sp and L.get("story") and not L["story"].get("paras_zh") \
+           and len(sp)==len(L["story"].get("paras",[])):
+            L["story"]["paras_zh"]=sp
+        if L.get("principle"):
+            if z.get("principle_lede_zh") and not L["principle"].get("lede_zh"):
+                L["principle"]["lede_zh"]=z["principle_lede_zh"]
+            if z.get("principle_html_zh") and not L["principle"].get("zh_html"):
+                L["principle"]["zh_html"]=z["principle_html_zh"]
+        for ti,t in zip((L.get("practice") or {}).get("tiers",[]),z.get("practice_reqs_zh",[])):
+            if t and not ti.get("req_zh"): ti["req_zh"]=t
+_apply_es_zh(ES_LESSONS)
 try:
     DAILY_QUOTES=json.load(open(os.path.join(ROOT,"data","daily_quotes.json")))
 except Exception:
