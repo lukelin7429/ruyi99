@@ -98,6 +98,28 @@ def u(path):  # prefix an absolute site path with BASE
 
 def esc(s): return html.escape(s,quote=True)
 
+# ---- 全站搜尋索引：write() 逐頁累積，build 結束後寫出 search.json ----
+SEARCH_INDEX=[]
+_TAG_RE=re.compile(r"<[^>]+>")
+_SCRIPT_RE=re.compile(r"<(script|style|svg)\b.*?</\1>",re.S|re.I)
+_WS_RE=re.compile(r"\s+")
+def _index_page(o,htmltext):
+    mt=re.search(r"<title>(.*?)</title>",htmltext,re.S)
+    title=mt.group(1) if mt else o
+    for suf in (" · 如意精舍",):
+        if title.endswith(suf): title=title[:-len(suf)]
+    md=re.search(r'<meta name="description" content="([^"]*)"',htmltext)
+    desc=html.unescape(md.group(1)) if md else ""
+    # 取 topbar 之後、footer 之前的主體文字，去掉 nav/footer 雜訊
+    body=htmltext
+    i=body.find("</header>"); body=body[i+9:] if i!=-1 else body
+    j=body.find('<footer'); body=body[:j] if j!=-1 else body
+    body=_SCRIPT_RE.sub(" ",body)
+    body=html.unescape(_TAG_RE.sub(" ",body))
+    body=_WS_RE.sub(" ",(desc+" "+body)).strip()
+    SEARCH_INDEX.append({"title":title.strip(),"url":u(o if o!="/" else "/"),
+                         "body":body[:300].rstrip()})
+
 def natkey(o):
     last=o.strip("/").split("/")[-1]
     nums=re.findall(r'\d+',last)
@@ -134,6 +156,9 @@ def topbar(active_top):
     '<small>RU-YI MEDITATION</small></span></a>'
     '<button class="hamb" aria-label="選單">☰</button>'
     '<nav class="nav">'+''.join(links)+'</nav>'
+    '<button type="button" class="nav-search-btn" id="siteSearchBtn" aria-label="搜尋本站" title="搜尋（按 /）">'
+    '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>'
+    '<span class="nav-search-label">搜尋</span></button>'
     '</div></header>')
 
 def footer():
@@ -175,9 +200,14 @@ def page(title, active_top, body, desc=""):
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">'
     '<link rel="stylesheet" href="%s">'
+    '<link rel="stylesheet" href="%s">'
     '</head><body>%s%s%s%s'
+    '<script>window.RS_INDEX="%s"</script>'
+    '<script src="%s"></script>'
     '<script src="%s"></script></body></html>'
-    %(esc(title),esc(desc or title),og,icons,u("/assets/css/site.css"),topbar(active_top),body,footer(),LIGHTBOX,u("/assets/js/site.js")))
+    %(esc(title),esc(desc or title),og,icons,u("/assets/css/site.css"),u("/assets/css/search.css"),
+      topbar(active_top),body,footer(),LIGHTBOX,
+      u("/search.json"),u("/assets/js/site.js"),u("/assets/js/search.js")))
 
 def yt_thumb(ytid,cap="",force=False):
     t=cap if force else VTITLES.get(ytid,cap)
@@ -1231,6 +1261,8 @@ def write(o,htmltext):
     d=os.path.join(ROOT,rel) if rel else ROOT
     os.makedirs(d,exist_ok=True)
     open(os.path.join(d,"index.html"),"w").write(htmltext)
+    if 'http-equiv="refresh"' not in htmltext:   # 不收錄轉址頁
+        _index_page(o,htmltext)
 
 if __name__=="__main__":
     n=0
@@ -1297,4 +1329,12 @@ if __name__=="__main__":
     open(os.path.join(ROOT,"sitemap.xml"),"w").write("\n".join(sm))
     open(os.path.join(ROOT,"robots.txt"),"w").write(
         "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n"%SITE_URL)
-    print("built %d pages + sitemap(%d urls) + robots"%(n,len(urls)))
+    # 全站搜尋索引
+    seen=set(); idx=[]
+    for e in SEARCH_INDEX:
+        if e["url"] in seen or "backup" in e["url"]: continue
+        seen.add(e["url"]); idx.append(e)
+    idx.sort(key=lambda e:e["url"])
+    json.dump(idx,open(os.path.join(ROOT,"search.json"),"w"),
+              ensure_ascii=False,separators=(",",":"))
+    print("built %d pages + sitemap(%d urls) + robots + search(%d)"%(n,len(urls),len(idx)))
