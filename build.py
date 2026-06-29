@@ -592,12 +592,18 @@ def build_camps(o):
     hdr=band(crumb_html(o),"夏令營 · SUMMER CAMP",nm,
              "兒童與青少年心靈環保成長營，歷年活動影音紀錄。")
     kids=sorted(children.get(o,[]),key=_camp_year,reverse=True)
-    cards=""
+    # 2026 為手動生成頁（不在爬蟲內），置頂呈現
+    cards=('<a class="campcard rvl" href="%s">'
+           '<div class="cc-img"><div class="bg" style="background:linear-gradient(150deg,#9a6a1e,#c29a45)"></div>'
+           '<span class="cc-badge">最新一屆</span><span class="cc-year">2026</span></div>'
+           '<div class="cc-body"><div class="cc-title">青少年學佛營</div>'
+           '<div class="cc-meta">課程表 · 活動紀錄 <span class="arw">→</span></div></div></a>'
+           %u("/camps/2026/"))
     for i,k in enumerate(kids):
         d=content[out2path[k]]; nmk=d["name"]
         yts=[b["id"] for b in d["blocks"] if b["t"]=="yt"]; n=len(yts)
         thumb=yts[0] if yts else ""
-        badge='<span class="cc-badge">最新一屆</span>' if i==0 else ''
+        badge=''
         cards+=('<a class="campcard rvl" style="transition-delay:%dms" href="%s">'
                 '<div class="cc-img"><div class="bg" style="background-image:url(https://i.ytimg.com/vi/%s/hqdefault.jpg)"></div>'
                 '%s<span class="cc-year">%d</span><span class="cc-play"><i></i></span></div>'
@@ -606,6 +612,158 @@ def build_camps(o):
                 %(min(i*70,520),u(k),thumb,badge,_camp_year(k),esc(nmk),n))
     body=hdr+'<main class="tintbg"><div class="wrap"><div class="campgrid rvl">'+cards+'</div></div></main>'
     return page(nm,"/learn/",body,nm+" · 如意精舍")
+
+# ---------------- 2026 青少年學佛營（手動生成，不在爬蟲內） ----------------
+EXTRA_NAMES["/camps/2026/"]="2026 夏令營"
+
+# 四天主題（日期, 主題, 第N天, 一句話, 主色, 副色）
+CAMP26_THEMES=[
+ ("7/4","願力種子","第 1 天","做包子、開營、迎新之夜——種下這趟旅程的願","#2f5d52","#43806f"),
+ ("7/5","覺察紀錄","第 2 天","影像教學、大自然行禪、月光禪修——學習向內觀照","#274a78","#3f6aa5"),
+ ("7/6","共創表達","第 3 天","拍微電影、佛法漫畫、星空影展——把善念說出來","#9a6a1e","#c29a45"),
+ ("7/7","傳承結業","第 4 天","領袖培力、感恩信、結業——把這份光帶回家","#7c2942","#b5446a"),
+]
+# 每日課程表：(主色,副色,主題,日期, [ (時間, 課名, 說明/老師, 標記, 是否亮點) ])
+CAMP26_SCHEDULE=[
+ ("#2f5d52","#43806f","願力種子","7/4（六）",[
+   ("10:00 前","報到安單","學員陸續上山、安頓","",False),
+   ("上午","開營典禮","相見歡・破冰","",False),
+   ("13:30","生活禪・做包子","揉麵、造型、等發酵","",True),
+   ("15:00","佛學第一堂・願力種子","饅頭出爐 · 竣翔老師","",False),
+   ("17:00","晚課梵唱／料理晚餐","A 組料理・B 組梵唱","",False),
+   ("19:00","每日歌詠（三寶歌）","家維老師","",False),
+   ("19:40","迎新之夜","小隊主持・表演帶動","",True),
+   ("21:00","山上日記","寫下今天最有感覺的一件事","",True),
+ ]),
+ ("#274a78","#3f6aa5","覺察紀錄","7/5（日）",[
+   ("06:00","晨間瑜珈・靜坐／早課梵唱／早餐","一天的開始","",False),
+   ("08:30","佛學第四堂・生命願景","暐哲老師","",False),
+   ("10:20","影像（一）・教與拍","鏡頭語言＋手機拍攝，畫出分鏡腳本","吉祥老師",True),
+   ("11:40","無聲用餐體驗","專注感受食物・餐後分享 · 維哲老師","",True),
+   ("13:30","音樂（一）","聲音覺察・基礎梵唱 · 竣翔老師","",False),
+   ("15:00","大自然行禪＋森林靜心尋寶","行禪山林・五感任務・靜坐 · 維哲老師","",True),
+   ("19:40","月光禪修","戶外月光打坐・觀星・呼吸引導 · 家維老師","",True),
+   ("21:00","山上日記","","",True),
+ ]),
+ ("#9a6a1e","#c29a45","共創表達","7/6（一）",[
+   ("06:00","晨間瑜珈・靜坐／早課梵唱／早餐","","",False),
+   ("08:30","佛學第三堂・領袖智慧","呂賢老師","",False),
+   ("10:20","60 秒佛法微電影拍攝","影像（二）升級版・實拍＋初剪","吉祥老師",True),
+   ("13:30","音樂（二）","和諧共鳴・音樂會準備 · 芷睿老師","",False),
+   ("15:00","佛學第二堂・情緒智慧","認識情緒・第二支箭・受念處","吉祥老師",False),
+   ("16:30","佛法漫畫創作","把佛法故事畫成漫畫・分組發表 · 芷睿老師","",True),
+   ("19:00","我的煩惱解決室","匿名寫煩惱・佛法智慧找解方 · 呂賢老師","",True),
+   ("19:40","星空影展・音聲供養","佛學第五堂 傳承與感恩 · 竣翔老師","微電影放映",True),
+   ("21:00","山上日記","","",True),
+ ]),
+ ("#7c2942","#b5446a","傳承結業","7/7（二）",[
+   ("06:00","晨間瑜珈・靜坐／早課梵唱／早餐","","",False),
+   ("08:30","佛學第六堂・我為何吃素","家維老師","",False),
+   ("10:20","領袖培力・團康實戰","暐哲老師","",False),
+   ("11:40","心靈交流・感恩信寫作","寫給最想感謝的人・結業後寄出","",True),
+   ("下午","結業・賦歸","帶著願力與覺察回家","",False),
+ ]),
+]
+# 活動影片（營隊結束後填入 YouTube ID 即自動長出可點縮圖；現為空＝顯示「待上線」）
+CAMP26_VIDS=[]
+
+CAMP26_CSS=("<style>"
+ ".c26-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}"
+ ".c26-meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.30);"
+ "color:#fff;padding:7px 15px;border-radius:999px;font-size:14.5px;font-weight:600}"
+ ".c26-meta b{font-weight:800}"
+ ".c26-themes{display:grid;gap:18px;grid-template-columns:repeat(4,1fr);margin:8px 0 8px}"
+ "@media(max-width:820px){.c26-themes{grid-template-columns:repeat(2,1fr)}}"
+ "@media(max-width:520px){.c26-themes{grid-template-columns:1fr}}"
+ ".c26-th{position:relative;overflow:hidden;border-radius:16px;padding:20px;color:#fff;"
+ "background:linear-gradient(150deg,var(--a),var(--b));box-shadow:var(--shadow);"
+ "transition:transform .26s cubic-bezier(.2,.7,.2,1),box-shadow .26s}"
+ ".c26-th:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}"
+ ".c26-th .day{font-family:var(--serif);font-size:13px;letter-spacing:.16em;opacity:.92}"
+ ".c26-th h3{margin:4px 0 8px;font-size:22px;font-weight:800;letter-spacing:.04em}"
+ ".c26-th .dt{font-size:15px;font-weight:700;opacity:.95;margin-bottom:8px}"
+ ".c26-th p{margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.92)}"
+ ".c26-dayhead{max-width:var(--maxw);margin:46px auto 14px;display:flex;align-items:center;gap:14px}"
+ ".c26-dayhead .pill{background:linear-gradient(150deg,var(--a),var(--b));color:#fff;"
+ "padding:6px 16px;border-radius:999px;font-weight:800;font-size:15px;letter-spacing:.04em}"
+ ".c26-dayhead h2{font-size:23px;margin:0;letter-spacing:.05em}"
+ ".c26-dayhead .dt{color:var(--sub);font-size:15px;font-weight:600}"
+ ".c26-dayhead .rule{flex:1;height:1px;background:var(--line)}"
+ ".c26-jx .sdate{position:relative}"
+ ".c26-jx .sname::after{content:'吉祥老師';margin-left:8px;font-size:12px;font-weight:800;"
+ "color:#fff;background:var(--plum);padding:2px 8px;border-radius:999px;vertical-align:middle}"
+ ".c26-vidnote{background:var(--plum-soft);border:1px dashed var(--plum);border-radius:16px;"
+ "padding:26px;text-align:center;color:var(--plum-deep);font-size:16px;line-height:1.7}"
+ ".c26-vidnote .ic{font-size:32px;display:block;margin-bottom:8px}"
+ ".c26-teach{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;"
+ "margin:40px auto 8px;max-width:760px;background:#fbf8f2;border:1px solid var(--line);"
+ "border-radius:16px;padding:20px 24px}"
+ ".c26-teach .ic{font-size:30px}"
+ ".c26-teach .tx{flex:1;min-width:220px}"
+ ".c26-teach .tx b{display:block;font-size:16.5px;color:var(--ink)}"
+ ".c26-teach .tx span{font-size:14px;color:var(--sub)}"
+ ".c26-teach a.btn{background:var(--plum);color:#fff;padding:11px 20px;border-radius:999px;"
+ "font-weight:700;font-size:15px;white-space:nowrap}"
+ ".c26-teach a.btn:hover{background:var(--plum-deep);color:#fff}"
+ "</style>")
+
+def build_camp_2026(o="/camps/2026/"):
+    hero=band(crumb_html(o),"SUMMER CAMP 2026","2026 青少年學佛營",
+        "四天三夜，在風櫃斗的山上，用影像、音樂、行禪與佛法，"
+        "陪伴青少年認識自己、學習覺察與感恩。全程免費、遠離 3C、親近大自然。")
+    # hero meta chips（注入 band 後）
+    meta=('<div class="c26-meta">'
+          '<span>🗓️ <b>7/4 – 7/7</b>（四天三夜）</span>'
+          '<span>🎒 對象 <b>青少年</b></span>'
+          '<span>📍 <b>如意精舍</b>（南投信義・風櫃斗）</span>'
+          '<span>💛 <b>全程免費</b></span></div>')
+    hero=hero.replace("</div></section>",meta+"</div></section>",1)
+    parts=[hero,'<main class="tintbg"><div class="wrap">']
+    # 四天主題
+    parts.append('<div class="section-title rvl"><h2>四天，四個主題</h2><div class="rule"></div></div>')
+    th='<div class="c26-themes rvl">'
+    for dt,name,day,line,a,b in CAMP26_THEMES:
+        th+=('<div class="c26-th rvl" style="--a:%s;--b:%s">'
+             '<div class="day">%s</div><h3>%s</h3><div class="dt">%s</div><p>%s</p></div>'
+             %(a,b,esc(day),esc(name),esc(dt),esc(line)))
+    th+='</div>'; parts.append(th)
+    # 每日課程表
+    parts.append('<div class="section-title rvl"><h2>每日課程表</h2><div class="rule"></div></div>')
+    parts.append('<p class="sched-note rvl">完整四天流程；標示 ★ 為動手體驗活動。實際內容以營隊現場為準。</p>')
+    for a,b,theme,dt,rows in CAMP26_SCHEDULE:
+        parts.append('<div class="c26-dayhead rvl" style="--a:%s;--b:%s">'
+                     '<span class="pill">%s</span><h2>%s</h2><span class="dt">%s</span>'
+                     '<span class="rule"></span></div>'%(a,b,esc(dt),esc(theme),""))
+        cards='<div class="sched rvl">'
+        for time,cname,desc,note,star in rows:
+            jx=' c26-jx' if note=="吉祥老師" else ''
+            shown_note=note if note and note!="吉祥老師" else ''
+            star_mark='★ ' if star else ''
+            cards+=('<div class="scard rvl%s" style="--ac:%s;--ac2:%s">'
+                    '<div class="sdate"><span class="dy">%s</span></div>'
+                    '<div class="sbody"><div class="sname">%s%s</div>'
+                    '%s%s</div></div>'
+                    %(jx,a,b,esc(time),star_mark,esc(cname),
+                      '<div class="ssub">%s</div>'%esc(desc) if desc else '',
+                      '<div class="snote">%s</div>'%esc(shown_note) if shown_note else ''))
+        cards+='</div>'; parts.append(cards)
+    # 影片紀錄
+    parts.append('<div class="section-title rvl"><h2>活動影片紀錄</h2><div class="rule"></div></div>')
+    if CAMP26_VIDS:
+        parts.append('<div class="video-grid">'+''.join(yt_thumb(v) for v in CAMP26_VIDS)+'</div>')
+    else:
+        parts.append('<div class="c26-vidnote rvl"><span class="ic">🎬</span>'
+                     '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
+                     '<span style="font-size:14px;color:var(--sub)">'
+                     '歷年夏令營影音紀錄請見 <a href="%s">夏令營總覽</a>。</span></div>'%u("/camps/"))
+    # 教師專區（低調連結、非卡片）
+    parts.append('<div class="c26-teach rvl"><div class="ic">🔑</div>'
+                 '<div class="tx"><b>教師教學專區</b>'
+                 '<span>提供本營授課老師備課使用的教學指引（逐分鐘流程、講師口白、學習單）。</span></div>'
+                 '<a class="btn" href="%s">進入教師專區 →</a></div>'%u("/camps/2026/teaching/"))
+    parts.append('</div></main>')
+    return page("2026 青少年學佛營","/learn/",CAMP26_CSS+''.join(parts),
+                "2026 如意精舍青少年學佛營（7/4–7/7）課程表與活動紀錄 · 如意精舍")
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
@@ -1305,6 +1463,8 @@ if __name__=="__main__":
     # 合併頁（不在 omap 內，手動產生）
     for c in COMBINED:
         write(c["out"],build_prajna(c)); n+=1
+    # 2026 青少年學佛營（不在 omap 內，手動產生）
+    write("/camps/2026/",build_camp_2026("/camps/2026/")); n+=1
     # 學習園地 + 如意英文學校（不在 omap 內，手動產生）
     write("/learn/",build_learn("/learn/")); n+=1
     write("/english-school/",build_english_school("/english-school/")); n+=1
@@ -1318,7 +1478,7 @@ if __name__=="__main__":
     # 收錄合併頁、排除已轉址的舊系列首頁
     urls=["/"]+sorted([o for o in out2path if o!="/" and o not in REDIRECTS]
                       +[c["out"] for c in COMBINED]
-                      +["/learn/","/english-school/"]
+                      +["/learn/","/english-school/","/camps/2026/"]
                       +["/english-school/%s/"%d["id"] for d in ES_LESSONS])
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
