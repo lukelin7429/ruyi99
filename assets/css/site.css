@@ -57,8 +57,19 @@ a:hover{color:var(--plum-deep)}
   font-weight:500;transition:.18s}
 .nav a:hover{background:var(--plum-soft);color:var(--plum-deep)}
 .nav a.active{background:var(--plum);color:#fff}
-.hamb{margin-left:auto;display:none;border:0;background:none;cursor:pointer;
-  padding:8px;font-size:26px;color:var(--ink)}
+/* topbar right-side action group */
+.topbar-actions{display:flex;align-items:center;gap:4px;margin-left:auto}
+/* hamburger — three lines SVG */
+.hamb{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  width:44px;height:44px;background:none;border:none;cursor:pointer;padding:10px;
+  border-radius:8px;-webkit-tap-highlight-color:transparent}
+.hamb span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;
+  transition:transform .28s cubic-bezier(.22,.61,.36,1),opacity .2s;transform-origin:center}
+.hamb.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamb.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamb.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* mobile drawer — outside topbar header */
+.mob-drawer{display:none}
 
 /* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;background:var(--bg-soft)}
@@ -533,14 +544,33 @@ main figure.rvl img{width:100%;border-radius:var(--radius);box-shadow:var(--shad
 
 @media(max-width:820px){
   body{font-size:18px}
-  .nav{position:fixed;top:62px;left:0;right:0;background:#fff;flex-direction:column;
-    gap:0;padding:8px 14px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);
-    display:none;backdrop-filter:none}
-  .nav.show{display:flex}
-  .nav a{padding:13px 10px;border-radius:10px;font-size:17px}
-  .hamb{display:block}
+  .nav{display:none} /* hide desktop nav on mobile */
+  .hamb{display:flex}
   .topbar-inner{padding:10px 18px}
   .foot .wrap{grid-template-columns:1fr;gap:24px}
+
+  .mob-drawer{
+    display:block;
+    position:fixed;top:64px;left:0;right:0;bottom:0;
+    background:#fff;z-index:9999;
+    overflow-y:auto;
+    opacity:0;transform:translateY(-10px);
+    pointer-events:none;
+    transition:opacity .22s ease,transform .22s cubic-bezier(.22,.61,.36,1)
+  }
+  .mob-drawer.is-open{opacity:1;transform:translateY(0);pointer-events:auto}
+  .mob-drawer nav{display:flex;flex-direction:column;padding:8px 0 48px}
+  .mob-drawer nav a{
+    display:block;
+    font-size:18px;font-weight:500;
+    padding:18px 28px;
+    border-bottom:1px solid #f0f0f0;
+    text-decoration:none;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink)
+  }
+  .mob-drawer nav a.active{color:var(--plum-deep)}
+  .mob-drawer nav a:hover{color:var(--plum-deep);background:var(--plum-soft)}
 }
 
 /* 首頁醒目卡片：週四英語課 / 如意英文學校 */

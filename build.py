@@ -150,16 +150,36 @@ def topbar(active_top):
     for n,o in NAV:
         cls=' class="active"' if o==active_top else ''
         links.append('<a href="%s"%s>%s</a>'%(u(o),cls,esc(n)))
+    mob_links = ''.join(links).replace('<a ', '<a ').replace('class="active"','class="active"')
     return (
     '<header class="topbar"><div class="topbar-inner">'
     '<a class="brand" href="%s"><img class="brand-logo" src="%s" alt="如意精舍" width="42" height="42"><span>如意精舍'%(u("/"),u("/assets/img/ruyi-logo.png"))+
     '<small>RU-YI MEDITATION</small></span></a>'
-    '<button class="hamb" aria-label="選單">☰</button>'
     '<nav class="nav">'+''.join(links)+'</nav>'
+    '<div class="topbar-actions">'
     '<button type="button" class="nav-search-btn" id="siteSearchBtn" aria-label="搜尋本站" title="搜尋（按 /）">'
     '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>'
     '<span class="nav-search-label">搜尋</span></button>'
-    '</div></header>')
+    '<button class="hamb" id="ruyi99Hamb" aria-label="選單" aria-expanded="false">'
+    '<span></span><span></span><span></span>'
+    '</button>'
+    '</div>'
+    '</div></header>'
+    '<div class="mob-drawer" id="ruyi99Drawer" aria-hidden="true">'
+    '<nav>'+mob_links+'</nav>'
+    '</div>'
+    '<script>'
+    '(function(){'
+    'var btn=document.getElementById("ruyi99Hamb");'
+    'var dr=document.getElementById("ruyi99Drawer");'
+    'if(!btn||!dr)return;'
+    'function open(){dr.classList.add("is-open");dr.setAttribute("aria-hidden","false");btn.classList.add("is-open");btn.setAttribute("aria-expanded","true");document.body.classList.add("mob-nav-open");}'
+    'function close(){dr.classList.remove("is-open");dr.setAttribute("aria-hidden","true");btn.classList.remove("is-open");btn.setAttribute("aria-expanded","false");document.body.classList.remove("mob-nav-open");}'
+    'btn.addEventListener("click",function(e){e.stopPropagation();dr.classList.contains("is-open")?close():open();});'
+    'document.addEventListener("click",function(e){if(dr.classList.contains("is-open")&&!dr.contains(e.target)&&!btn.contains(e.target))close();});'
+    '})();'
+    '</script>'
+    )
 
 def footer():
     return (
