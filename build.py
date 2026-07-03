@@ -90,7 +90,17 @@ EMAIL_MASTER="a0909359364@gmail.com"; EMAIL_LUKE="luke@ruyi99.org"
 EMAIL_EN="ruyi@ruyimeditation.org"; EN_SITE="https://ruyimeditation.org"
 YT_CHANNEL="https://www.youtube.com/@ruyi99"
 
-BASE=os.environ.get("BASE","/ruyi99")  # project-pages base; set BASE="" for apex ruyi99.org
+# Base path for absolute site URLs. This repo is served on the apex domain
+# ruyi99.org (see CNAME), where the correct base is "" — NOT "/ruyi99".
+# Auto-detect: if a CNAME exists, force BASE="" so a rebuild can never
+# silently re-break the live site by prefixing assets with /ruyi99 (which 404s
+# on the apex and leaves every page unstyled). Override only via env if needed.
+if "BASE" in os.environ:
+    BASE=os.environ["BASE"]
+elif os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),"CNAME")):
+    BASE=""            # apex custom domain — no path prefix
+else:
+    BASE="/ruyi99"     # fallback for project-pages (username.github.io/ruyi99/)
 def u(path):  # prefix an absolute site path with BASE
     if path.startswith("http"): return path
     if not path.startswith("/"): path="/"+path
