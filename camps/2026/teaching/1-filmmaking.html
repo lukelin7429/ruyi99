@@ -23,6 +23,15 @@
   .board th,.board td{border:1px solid var(--line);padding:12px 14px;text-align:left;font-size:15.5px;vertical-align:top}
   .board th{background:var(--paper-warm);font-weight:800;font-size:14px}
   .board .cell{min-height:54px;color:#b6b1a8}
+  .deck-cta{display:inline-flex;align-items:center;gap:12px;margin-top:20px;background:#fff;color:#075c6b;
+    text-decoration:none;font-weight:800;padding:13px 24px 13px 16px;border-radius:999px;
+    box-shadow:0 12px 30px -10px rgba(0,0,0,.45);transition:transform .2s ease,box-shadow .2s ease}
+  .deck-cta:hover{transform:translateY(-3px);box-shadow:0 20px 42px -12px rgba(0,0,0,.55)}
+  .deck-cta .play{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#0c8599;color:#fff;font-size:14px;flex:0 0 auto}
+  .deck-cta .t{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+  .deck-cta .t b{font-size:18px}
+  .deck-cta .t small{font-weight:700;font-size:12px;letter-spacing:.09em;color:#0c8599;text-transform:uppercase}
+  .deck-foot{text-align:center;margin:6px 0 22px}.deck-foot .deck-cta{margin-top:0}
 </style>
 </head>
 <body>
@@ -49,6 +58,10 @@
       <span class="chip">🎯 產出 <b>分鏡腳本</b></span>
       <span class="chip">👥 <b>分組</b>進行</span>
     </div>
+    <a class="deck-cta" href="1-filmmaking-slides.html" target="_blank" rel="noopener">
+      <span class="play">▶</span>
+      <span class="t"><b>開始上課簡報</b><small>Start Slides · 雙語投影</small></span>
+    </a>
   </div>
   <div class="wave"></div>
 </header>
@@ -178,6 +191,7 @@
 
 <footer>
   <div class="wrap">
+    <div class="deck-foot"><a class="deck-cta" href="1-filmmaking-slides.html" target="_blank" rel="noopener"><span class="play">▶</span><span class="t"><b>開始上課簡報</b><small>Start Slides · 雙語投影</small></span></a></div>
     <b>① 影像（一）・教與拍</b>　7/5（日）10:20–11:30　如意精舍青少年佛學營 2026<br>
     <span class="org">Ru-Yi Meditation Center 如意精舍</span> ・ 吉祥老師教學設計　|　<a href="index.html" style="color:#d4a017">← 回總覽</a>　<a href="2-microfilm.html" style="color:#d4a017">下一堂：60 秒微電影 →</a>
   </div>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>60-Second Micro-Film · 微電影 — Bilingual Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fdf6f0; --ink:#2e211a; --ink2:#63514a;
+  --brand:#e8590c; --brand-d:#a8390a;
+  --amber:#c68a1e; --amber-d:#8f6112; --sage:#5f8468; --plum:#7c5f92;
+  --rose:#bd6a5a; --sky:#3a8fb0; --orange:#e8590c;
+  --calm1:#a8390a; --calm2:#e8590c;
+  --card:#fff; --line:#eaddd0;
+  --en:'Poppins','Segoe UI',system-ui,sans-serif;
+  --zh:'PingFang TC','Apple LiGothic Medium','Microsoft JhengHei',sans-serif;
+  --shadow:0 18px 45px -22px rgba(90,45,10,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--en);color:var(--ink);overflow:hidden;
+  background:radial-gradient(1200px 600px at 15% -10%,#fff3e8 0%,transparent 60%),
+     radial-gradient(1000px 700px at 110% 120%,#f7e6d5 0%,transparent 55%),var(--paper);}
+.zh{font-family:var(--zh)}
+.slide{position:fixed;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:clamp(28px,5vw,90px);gap:clamp(10px,1.6vh,22px)}
+.slide.active{display:flex}
+.kicker{display:inline-flex;align-items:center;gap:.55em;align-self:flex-start;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;font-size:clamp(13px,1.5vw,20px);color:#fff;
+  background:var(--brand);padding:.5em 1.05em;border-radius:999px;box-shadow:var(--shadow)}
+.kicker .zh{letter-spacing:.05em;font-weight:700;opacity:.95}
+h1{font-weight:800;line-height:1.02;font-size:clamp(38px,6.6vw,98px);letter-spacing:-.01em}
+h2.en{font-weight:800;line-height:1.04;font-size:clamp(34px,5.6vw,78px);letter-spacing:-.01em}
+.zh-h{font-family:var(--zh);font-weight:700;line-height:1.15;font-size:clamp(30px,5vw,68px)}
+.sub-en{font-size:clamp(19px,2.4vw,34px);font-weight:600;color:var(--ink2);line-height:1.3}
+.sub-zh{font-family:var(--zh);font-size:clamp(19px,2.5vw,34px);color:var(--ink2);line-height:1.5;font-weight:500}
+.big-zh{font-family:var(--zh);font-weight:700;line-height:1.28;font-size:clamp(30px,4.6vw,60px)}
+.lead{max-width:26ch}
+.meta{margin-top:auto;display:flex;gap:1.4em;flex-wrap:wrap;color:var(--ink2);font-weight:600;font-size:clamp(14px,1.6vw,22px)}
+.rule{width:clamp(60px,7vw,120px);height:6px;border-radius:6px;background:var(--brand);margin:.2em 0}
+.cards{display:grid;gap:clamp(14px,1.6vw,26px)}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(16px,2vw,32px);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.4em}
+.card .num{font-weight:800;font-size:clamp(14px,1.5vw,20px);letter-spacing:.1em;text-transform:uppercase}
+.card .ttl-en{font-weight:800;font-size:clamp(20px,2.3vw,34px);line-height:1.1}
+.card .ttl-zh{font-family:var(--zh);font-weight:700;font-size:clamp(21px,2.4vw,36px);line-height:1.2}
+.card .txt-en{font-size:clamp(14px,1.45vw,20px);color:var(--ink2);font-weight:500;line-height:1.35}
+.card .txt-zh{font-family:var(--zh);font-size:clamp(15px,1.55vw,22px);color:var(--ink2);line-height:1.5}
+.card.amber{border-top:8px solid var(--amber)}.card.sage{border-top:8px solid var(--sage)}
+.card.plum{border-top:8px solid var(--plum)}.card.rose{border-top:8px solid var(--rose)}
+.card.sky{border-top:8px solid var(--sky)}.card.orange{border-top:8px solid var(--orange)}
+.num.amber{color:var(--amber-d)}.num.sage{color:var(--sage)}.num.plum{color:var(--plum)}
+.num.rose{color:var(--rose)}.num.sky{color:var(--sky)}.num.orange{color:var(--brand-d)}
+.arrow-flow{display:flex;align-items:center;gap:clamp(10px,1.6vw,26px);flex-wrap:wrap}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(12px,1.5vw,26px);box-shadow:var(--shadow);flex:1;min-width:0}
+.step .z{font-family:var(--zh);font-weight:700;font-size:clamp(22px,2.4vw,36px)}
+.step .e{font-weight:700;font-size:clamp(15px,1.5vw,22px);color:var(--ink2)}
+.step .d{font-family:var(--zh);font-size:clamp(14px,1.4vw,20px);color:var(--ink2);margin-top:.3em;line-height:1.45}
+.to{font-size:clamp(24px,3vw,44px);font-weight:800;color:var(--brand);flex:0 0 auto}
+.checklist{display:grid;gap:clamp(10px,1.4vh,18px);margin-top:.3em}
+.chk{display:flex;align-items:center;gap:.7em;background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:clamp(12px,1.5vw,22px);box-shadow:var(--shadow)}
+.chk .bx{flex:0 0 auto;width:30px;height:30px;border-radius:8px;border:3px solid var(--brand);color:var(--brand);
+  display:grid;place-items:center;font-weight:800}
+.chk .z{font-family:var(--zh);font-weight:700;font-size:clamp(18px,2vw,28px)}
+.chk .e{font-weight:600;font-size:clamp(13px,1.35vw,19px);color:var(--ink2)}
+.full{background:linear-gradient(160deg,var(--calm1),var(--calm2));color:#fff}
+.full .kicker{background:rgba(255,255,255,.22)}
+.full h1,.full h2.en,.full .zh-h{color:#fff}.full .sub-zh,.full .sub-en,.full .meta{color:rgba(255,255,255,.92)}
+.quote-en{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:clamp(26px,4vw,56px);line-height:1.25;max-width:22ch}
+.r{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.slide.active .r{opacity:1;transform:none}
+#bar{position:fixed;top:0;left:0;height:6px;background:var(--brand);z-index:50;transition:width .35s ease;box-shadow:0 0 12px rgba(232,89,12,.6)}
+#count{position:fixed;bottom:18px;right:24px;z-index:50;font-weight:700;color:var(--ink2);font-size:clamp(13px,1.4vw,18px);
+  background:rgba(255,255,255,.7);border:1px solid var(--line);padding:.35em .8em;border-radius:999px;backdrop-filter:blur(4px)}
+#hint{position:fixed;bottom:18px;left:24px;z-index:50;color:var(--ink2);font-size:13px;font-weight:600;opacity:.75}
+#hint .zh{font-family:var(--zh)}
+.navzone{position:fixed;top:0;bottom:0;width:22%;z-index:40;cursor:pointer}#prevZ{left:0}#nextZ{right:0}
+#notes{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(34,22,14,.95);color:#faeee2;
+  padding:18px 26px 22px;transform:translateY(105%);transition:transform .35s ease;box-shadow:0 -14px 40px rgba(0,0,0,.4)}
+#notes.on{transform:none}
+#notes .lbl{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#f2a35c}
+#notes .body{font-family:var(--zh);font-size:clamp(15px,1.7vw,22px);line-height:1.5;margin-top:.35em}
+#notes .who{display:inline-block;font-family:var(--zh);font-weight:700;background:#f2a35c;color:#402208;padding:.15em .7em;border-radius:999px;font-size:14px;margin-right:.6em}
+@media (max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}.arrow-flow{flex-direction:column;align-items:stretch}.to{align-self:center;transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="navzone" id="prevZ"></div>
+<div class="navzone" id="nextZ"></div>
+
+<!-- 1 TITLE -->
+<section class="slide active full">
+  <span class="kicker r">Session 02 · <span class="zh">微電影實戰</span></span>
+  <h1 class="r" style="--d:.08s">60-Second<br>Micro-Film</h1>
+  <div class="zh-h r" style="--d:.16s">60 秒佛法微電影</div>
+  <div class="rule r" style="--d:.22s"></div>
+  <div class="sub-en r" style="--d:.28s">Film it — and screen it tonight under the stars.</div>
+  <div class="sub-zh r" style="--d:.34s">拍出來，今晚就放映。</div>
+  <div class="meta r" style="--d:.42s">
+    <span>🎬 SHOOT · CUT · SCREEN</span>
+    <span>⏱️ 70 min</span>
+    <span class="zh">🌌 當晚星空影展放映</span>
+  </div>
+</section>
+
+<!-- 2 TIME PLAN -->
+<section class="slide">
+  <span class="kicker r">Heads-up · <span class="zh">時間很趕</span></span>
+  <h2 class="en r" style="--d:.06s">The clock is tight — hold these blocks</h2>
+  <div class="sub-zh r" style="--d:.12s">關鍵：昨天的分鏡已經畫好，今天照著拍就行。/ Yesterday's storyboard is your map.</div>
+  <div class="cards g4" style="margin-top:.3em">
+    <div class="card orange r" style="--d:.2s"><div class="num orange">12 min</div><div class="ttl-zh zh">升級技巧＋派任務</div><div class="txt-en">Upgrade + assign</div></div>
+    <div class="card sky r" style="--d:.28s"><div class="num sky">30 min</div><div class="ttl-zh zh">分組實拍</div><div class="txt-en">Shoot (follow the storyboard)</div></div>
+    <div class="card sage r" style="--d:.36s"><div class="num sage">22 min</div><div class="ttl-zh zh">剪映初剪＋繳交</div><div class="txt-en">Edit + submit</div></div>
+    <div class="card plum r" style="--d:.44s"><div class="num plum">6 min</div><div class="ttl-zh zh">收束＋影展預告</div><div class="txt-en">Wrap + preview</div></div>
+  </div>
+</section>
+
+<!-- 3 MISSION / REAL STAGE -->
+<section class="slide full">
+  <span class="kicker r">Today's Mission · <span class="zh">今日任務</span></span>
+  <div class="quote-en r" style="--d:.1s">Tonight, your film takes the stage.</div>
+  <div class="big-zh r" style="--d:.2s;max-width:24ch">每組拍出 60 秒成片，<span style="border-bottom:5px solid rgba(255,255,255,.6)">晚上星空影展放給全營看</span>。</div>
+  <div class="sub-en r" style="--d:.3s">A real audience under the stars — that's who you're filming for.</div>
+</section>
+
+<!-- 4 FOUR UPGRADES -->
+<section class="slide">
+  <span class="kicker r">Teach · <span class="zh">升級四招</span></span>
+  <h2 class="en r" style="--d:.06s">4 tricks for more polish</h2>
+  <div class="cards g4" style="margin-top:.4em">
+    <div class="card orange r" style="--d:.14s"><div class="num orange">Trick 1</div><div class="ttl-en">B-roll</div><div class="ttl-zh zh">補拍空景</div><div class="txt-zh zh">多補空景／細節（香、樹、手），剪接穿插更豐富。</div></div>
+    <div class="card sky r" style="--d:.22s"><div class="num sky">Trick 2</div><div class="ttl-en">Subtitles</div><div class="ttl-zh zh">字幕</div><div class="txt-zh zh">關鍵一句打成字幕。字少、字大、停夠久。</div></div>
+    <div class="card sage r" style="--d:.3s"><div class="num sage">Trick 3</div><div class="ttl-en">Music</div><div class="ttl-zh zh">配樂</div><div class="txt-zh zh"><b>只用無版權音樂</b>。安靜主題配輕音樂，情緒立刻對。</div></div>
+    <div class="card plum r" style="--d:.38s"><div class="num plum">Trick 4</div><div class="ttl-en">Pacing</div><div class="ttl-zh zh">節奏</div><div class="txt-zh zh">一鏡別超過 5–6 秒。60 秒約 8–12 刀。</div></div>
+  </div>
+</section>
+
+<!-- 5 EDITING 3 STEPS -->
+<section class="slide">
+  <span class="kicker r">Editing · <span class="zh">剪映 CapCut</span></span>
+  <h2 class="en r" style="--d:.06s">Rough cut in 3 steps</h2>
+  <div class="arrow-flow" style="margin-top:.5em">
+    <div class="step r" style="--d:.16s"><div class="e">1 · Import</div><div class="z zh">匯入＋排序</div><div class="d zh">依分鏡順序拉進時間軸，刪掉不要的、剪掉頭尾。</div></div>
+    <div class="to r" style="--d:.22s">→</div>
+    <div class="step r" style="--d:.28s"><div class="e">2 · Trim</div><div class="z zh">剪短＋轉場</div><div class="d zh">總長控制在 60 秒上下，鏡頭間用淡入淡出。</div></div>
+    <div class="to r" style="--d:.34s">→</div>
+    <div class="step r" style="--d:.4s"><div class="e">3 · Export</div><div class="z zh">字幕＋配樂＋匯出</div><div class="d zh">加字幕、選免費配樂壓低音量，匯出 1080p 橫式。</div></div>
+  </div>
+  <div class="big-zh r" style="--d:.5s;margin-top:.2em;font-size:clamp(22px,3vw,40px);color:var(--brand-d)">求完成，不求完美 · Done beats perfect.</div>
+</section>
+
+<!-- 6 PLAN B -->
+<section class="slide">
+  <span class="kicker r">Plan B · <span class="zh">低科技備案</span></span>
+  <h2 class="en r" style="--d:.06s">The screening will not go dark</h2>
+  <div class="sub-zh r" style="--d:.12s">剪不完？網路斷？沒關係，準備三層備案。/ Three fallbacks, always something to show.</div>
+  <div class="cards g3" style="margin-top:.3em">
+    <div class="card orange r" style="--d:.2s"><div class="num orange">Plan A</div><div class="ttl-zh zh">拍好即播・不剪</div><div class="txt-en">Trim head &amp; tail in the camera app, play the raw take. One long shot still moves people.</div></div>
+    <div class="card sky r" style="--d:.3s"><div class="num sky">Plan B</div><div class="ttl-zh zh">照片＋旁白</div><div class="txt-en">A few photos + a voice-over → "photo movie" in one tap.</div></div>
+    <div class="card sage r" style="--d:.4s"><div class="num sage">Plan C</div><div class="ttl-zh zh">現場口述放映</div><div class="txt-en">Play the raw footage; one member narrates live. Sharing matters more than tech.</div></div>
+  </div>
+</section>
+
+<!-- 7 30-SEC SELF CHECK -->
+<section class="slide">
+  <span class="kicker r">Before you shoot · <span class="zh">開拍前 30 秒自檢</span></span>
+  <h2 class="en r" style="--d:.06s">30-second pre-shoot check</h2>
+  <div class="checklist">
+    <div class="chk r" style="--d:.16s"><span class="bx">✓</span><span><span class="z zh">手機橫拿，打開格線</span> <span class="e">Landscape + grid on</span></span></div>
+    <div class="chk r" style="--d:.22s"><span class="bx">✓</span><span><span class="z zh">光在背後、照在人臉上</span> <span class="e">Front light on the face</span></span></div>
+    <div class="chk r" style="--d:.28s"><span class="bx">✓</span><span><span class="z zh">背景乾淨，沒有路人亂入</span> <span class="e">Clean background</span></span></div>
+    <div class="chk r" style="--d:.34s"><span class="bx">✓</span><span><span class="z zh">雙手夾緊，按下後數 3 秒再喊卡</span> <span class="e">Steady — hold 3 sec after tapping</span></span></div>
+    <div class="chk r" style="--d:.4s"><span class="bx">✓</span><span><span class="z zh">每個鏡頭多拍一次備用，別忘補 B-roll</span> <span class="e">Shoot twice + grab B-roll</span></span></div>
+  </div>
+</section>
+
+<!-- 8 TEACHER HEART -->
+<section class="slide full">
+  <span class="kicker r">🪷 The heart of it · <span class="zh">心法</span></span>
+  <div class="quote-en r" style="--d:.1s">The goal isn't to train little directors.</div>
+  <div class="big-zh r" style="--d:.2s;max-width:26ch">是讓孩子體會——「我也能創作，我能把心裡的善念說出來」。</div>
+  <div class="sub-en r" style="--d:.3s">Every film — polished or not — deserves applause.</div>
+</section>
+
+<!-- 9 CLOSING -->
+<section class="slide full">
+  <span class="kicker r">Tonight · <span class="zh">星空影展</span></span>
+  <h1 class="r" style="--d:.08s">Lights, stars,<br>action</h1>
+  <div class="zh-h r" style="--d:.16s">今晚星空下，換你們的作品上場</div>
+  <div class="sub-en r" style="--d:.26s">Submit your film, then tonight — under the stars — your story takes the stage.</div>
+  <div class="sub-zh r" style="--d:.34s">交出成片，今晚星空影展放給全營看。</div>
+</section>
+
+<div id="count">1 / 9</div>
+<div id="hint">← → <span class="zh">翻頁</span> · F <span class="zh">全螢幕</span> · N <span class="zh">講師提示</span></div>
+<div id="notes"><span class="who zh"></span><span class="lbl"></span><div class="body"></div></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const bar=document.getElementById('bar'),count=document.getElementById('count');
+const notesBox=document.getElementById('notes'),notesBody=notesBox.querySelector('.body'),notesWho=notesBox.querySelector('.who');
+let i=0,notesOn=false;
+const NOTES=[
+ ["兩位老師","開場：今天拍出 60 秒成片，晚上星空影展放映。給孩子一個真實舞台。"],
+ ["吉祥老師","講清楚三段時間分配，強調照昨天分鏡拍就行。守住時間。"],
+ ["美國老師","點燃動機——為誰而拍。營造『今晚全營都會看到你的片』的期待。"],
+ ["吉祥老師","升級四招，每招示範一個例子。配樂務必只用無版權音樂。"],
+ ["兩位老師","剪映三步驟。示範一次，強調求完成不求完美。"],
+ ["吉祥老師","三層備案。讓卡關的組安心——影展不會開天窗。"],
+ ["美國老師","帶各組開拍前照念自檢表，貼在手機背面更好。"],
+ ["吉祥老師","心法：目的是讓孩子敢創作、說出善念。完成度高低都給掌聲。"],
+ ["兩位老師","繳交成片給竣翔老師備播，收束、預告星空影展。"]
+];
+function show(n){slides[i].classList.remove('active');i=Math.max(0,Math.min(slides.length-1,n));
+  slides[i].classList.add('active');bar.style.width=((i+1)/slides.length*100)+'%';
+  count.textContent=(i+1)+' / '+slides.length;if(notesOn)renderNotes();}
+function renderNotes(){notesWho.textContent=NOTES[i][0];notesBody.textContent=NOTES[i][1];}
+function next(){show(i+1)}function prev(){show(i-1)}
+function toggleNotes(){notesOn=!notesOn;notesBox.classList.toggle('on',notesOn);if(notesOn)renderNotes();}
+document.addEventListener('keydown',e=>{
+ if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();next();}
+ else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev();}
+ else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+ else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+ else if(e.key.toLowerCase()==='n')toggleNotes();});
+document.getElementById('nextZ').onclick=next;document.getElementById('prevZ').onclick=prev;
+bar.style.width=(1/slides.length*100)+'%';
+</script>
+</body>
+</html>
