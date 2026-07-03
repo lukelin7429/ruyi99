@@ -23,6 +23,16 @@
   @media(max-width:560px){.arrow2{grid-template-columns:1fr}}
   .feel{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
   .feel span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;box-shadow:var(--shadow-sm)}
+  .deck-cta{display:inline-flex;align-items:center;gap:12px;margin-top:20px;
+    background:#fff;color:#3b2a8c;text-decoration:none;font-weight:800;
+    padding:13px 24px 13px 16px;border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);
+    transition:transform .2s ease,box-shadow .2s ease}
+  .deck-cta:hover{transform:translateY(-3px);box-shadow:0 20px 42px -12px rgba(0,0,0,.55)}
+  .deck-cta .play{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;
+    background:#7048e8;color:#fff;font-size:14px;flex:0 0 auto}
+  .deck-cta .t{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+  .deck-cta .t b{font-size:18px}
+  .deck-cta .t small{font-weight:700;font-size:12px;letter-spacing:.09em;color:#7048e8;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -50,6 +60,10 @@
       <span class="chip">🪷 佛法 × 自我覺察</span>
       <span class="chip">🧘 含<b>引導靜坐</b></span>
     </div>
+    <a class="deck-cta" href="3-emotional-wisdom-slides.html" target="_blank" rel="noopener">
+      <span class="play">▶</span>
+      <span class="t"><b>開始上課簡報</b><small>Start Slides · 雙語投影</small></span>
+    </a>
   </div>
   <div class="wave"></div>
 </header>

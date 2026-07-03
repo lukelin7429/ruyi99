@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Emotional Wisdom · 情緒智慧 — Bilingual Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf5ec; --paper2:#f3ebdb; --ink:#2c2620; --ink2:#5c5348;
+  --amber:#b9822a; --amber-d:#8f6112; --sage:#5f8468; --plum:#7c5f92;
+  --rose:#bd6a5a; --sky:#4f7ea8;
+  --card:#ffffff; --line:#e7ddc9;
+  --en:'Poppins','Segoe UI',system-ui,sans-serif;
+  --zh:'PingFang TC','Apple LiGothic Medium','Microsoft JhengHei',sans-serif;
+  --shadow:0 18px 45px -22px rgba(70,50,20,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--en);color:var(--ink);
+  background:
+     radial-gradient(1200px 600px at 15% -10%, #fff8ec 0%, transparent 60%),
+     radial-gradient(1000px 700px at 110% 120%, #f0e6d2 0%, transparent 55%),
+     var(--paper);
+  overflow:hidden;
+}
+.zh{font-family:var(--zh)}
+/* ---- deck ---- */
+.slide{
+  position:fixed;inset:0;display:none;
+  flex-direction:column;justify-content:center;
+  padding:clamp(28px,5vw,90px);
+  gap:clamp(10px,1.6vh,22px);
+}
+.slide.active{display:flex}
+.kicker{
+  display:inline-flex;align-items:center;gap:.55em;align-self:flex-start;
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  font-size:clamp(13px,1.5vw,20px);color:#fff;
+  background:var(--amber);padding:.5em 1.05em;border-radius:999px;
+  box-shadow:var(--shadow);
+}
+.kicker .zh{letter-spacing:.05em;font-weight:700;opacity:.95}
+h1{font-family:var(--en);font-weight:800;line-height:1.02;
+  font-size:clamp(40px,7vw,104px);letter-spacing:-.01em}
+h2.en{font-weight:800;line-height:1.04;font-size:clamp(34px,5.6vw,78px);letter-spacing:-.01em}
+.zh-h{font-family:var(--zh);font-weight:700;line-height:1.15;
+  font-size:clamp(30px,5vw,68px);color:var(--ink)}
+.sub-en{font-size:clamp(19px,2.4vw,34px);font-weight:600;color:var(--ink2);line-height:1.3}
+.sub-zh{font-family:var(--zh);font-size:clamp(19px,2.5vw,34px);color:var(--ink2);line-height:1.5;font-weight:500}
+.big-zh{font-family:var(--zh);font-weight:700;line-height:1.28;font-size:clamp(30px,4.6vw,60px)}
+.lead{max-width:24ch}
+.meta{margin-top:auto;display:flex;gap:1.4em;flex-wrap:wrap;color:var(--ink2);
+  font-weight:600;font-size:clamp(14px,1.6vw,22px)}
+.meta .zh{font-weight:600}
+.accent{color:var(--amber-d)}
+.rule{width:clamp(60px,7vw,120px);height:6px;border-radius:6px;background:var(--amber);margin:.2em 0}
+
+/* cards */
+.cards{display:grid;gap:clamp(14px,1.6vw,26px)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:clamp(16px,2vw,32px);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:.4em;
+}
+.card .num{font-weight:800;font-size:clamp(15px,1.5vw,20px);letter-spacing:.12em;text-transform:uppercase}
+.card .ttl-en{font-weight:800;font-size:clamp(22px,2.4vw,36px);line-height:1.1}
+.card .ttl-zh{font-family:var(--zh);font-weight:700;font-size:clamp(22px,2.5vw,38px);line-height:1.2}
+.card .txt-en{font-size:clamp(15px,1.5vw,21px);color:var(--ink2);font-weight:500;line-height:1.35}
+.card .txt-zh{font-family:var(--zh);font-size:clamp(16px,1.6vw,23px);color:var(--ink2);line-height:1.5}
+.card.amber{border-top:8px solid var(--amber)}
+.card.sage{border-top:8px solid var(--sage)}
+.card.plum{border-top:8px solid var(--plum)}
+.card.rose{border-top:8px solid var(--rose)}
+.card.sky{border-top:8px solid var(--sky)}
+.card .num.amber,.accent.amber{color:var(--amber-d)}
+.num.sage{color:var(--sage)} .num.plum{color:var(--plum)} .num.rose{color:var(--rose)} .num.sky{color:var(--sky)}
+
+/* vocab wall */
+.wall{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(9px,1vw,16px)}
+.chip{background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:clamp(10px,1.3vw,20px) clamp(8px,1vw,14px);text-align:center;box-shadow:0 8px 20px -14px rgba(80,60,20,.4)}
+.chip .z{font-family:var(--zh);font-weight:700;font-size:clamp(18px,1.9vw,30px);line-height:1.15}
+.chip .e{font-weight:600;font-size:clamp(12px,1.25vw,18px);color:var(--ink2);margin-top:.15em}
+.wall .chip:nth-child(5n+1){border-top:5px solid var(--sage)}
+.wall .chip:nth-child(5n+2){border-top:5px solid var(--sky)}
+.wall .chip:nth-child(5n+3){border-top:5px solid var(--amber)}
+.wall .chip:nth-child(5n+4){border-top:5px solid var(--rose)}
+.wall .chip:nth-child(5n+5){border-top:5px solid var(--plum)}
+
+/* arrows compare */
+.arrow-flow{display:flex;align-items:center;gap:clamp(10px,1.6vw,26px);flex-wrap:wrap}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(12px,1.5vw,24px);
+  box-shadow:var(--shadow);flex:1;min-width:0}
+.step .z{font-family:var(--zh);font-weight:700;font-size:clamp(22px,2.4vw,34px)}
+.step .e{font-weight:700;font-size:clamp(15px,1.5vw,22px);color:var(--ink2)}
+.step .d{font-family:var(--zh);font-size:clamp(14px,1.4vw,20px);color:var(--ink2);margin-top:.3em;line-height:1.45}
+.to{font-size:clamp(24px,3vw,44px);font-weight:800;color:var(--amber);flex:0 0 auto}
+.brake{margin-top:.3em;background:#fff4e2;border:1px dashed var(--amber);border-radius:16px;
+  padding:clamp(12px,1.5vw,22px)}
+.brake .z{font-family:var(--zh);font-weight:700;font-size:clamp(19px,2.1vw,30px);color:var(--amber-d)}
+.brake .e{font-weight:600;font-size:clamp(15px,1.5vw,21px);color:var(--ink2);margin-top:.15em}
+
+/* quote / calm */
+.calm{background:linear-gradient(160deg,#6d5a86,#4a5f7a);color:#fff}
+.calm .kicker{background:rgba(255,255,255,.2)}
+.calm h2.en,.calm .zh-h{color:#fff}
+.calm .sub-zh,.calm .sub-en{color:rgba(255,255,255,.9)}
+.quote-en{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-size:clamp(26px,4vw,56px);line-height:1.25;max-width:20ch}
+.mantra{display:flex;flex-direction:column;gap:clamp(12px,1.6vh,22px)}
+.mline{background:rgba(255,255,255,.14);border-radius:18px;padding:clamp(14px,1.8vw,28px);border:1px solid rgba(255,255,255,.25)}
+.mline .e{font-weight:700;font-size:clamp(20px,2.4vw,36px)}
+.mline .z{font-family:var(--zh);font-weight:600;font-size:clamp(19px,2.2vw,32px);opacity:.92;margin-top:.15em}
+
+/* worksheet lines */
+.blanks{display:grid;gap:clamp(12px,1.8vh,22px)}
+.blank{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(12px,1.6vw,24px);box-shadow:var(--shadow)}
+.blank .q{font-family:var(--zh);font-weight:700;font-size:clamp(19px,2vw,30px)}
+.blank .qe{font-weight:600;font-size:clamp(14px,1.4vw,20px);color:var(--ink2);margin-top:.1em}
+
+/* reveal */
+.r{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.slide.active .r{opacity:1;transform:none}
+
+/* chrome */
+#bar{position:fixed;top:0;left:0;height:6px;background:var(--amber);z-index:50;transition:width .35s ease;box-shadow:0 0 12px rgba(185,130,42,.6)}
+#count{position:fixed;bottom:18px;right:24px;z-index:50;font-weight:700;color:var(--ink2);
+  font-size:clamp(13px,1.4vw,18px);background:rgba(255,255,255,.7);border:1px solid var(--line);
+  padding:.35em .8em;border-radius:999px;backdrop-filter:blur(4px)}
+#hint{position:fixed;bottom:18px;left:24px;z-index:50;color:var(--ink2);font-size:13px;font-weight:600;opacity:.75}
+#hint .zh{font-family:var(--zh)}
+.navzone{position:fixed;top:0;bottom:0;width:22%;z-index:40;cursor:pointer}
+#prevZ{left:0}#nextZ{right:0}
+/* speaker notes */
+#notes{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(30,24,18,.94);color:#fbeecf;
+  padding:18px 26px 22px;transform:translateY(105%);transition:transform .35s ease;box-shadow:0 -14px 40px rgba(0,0,0,.4)}
+#notes.on{transform:none}
+#notes .lbl{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#eab765}
+#notes .body{font-family:var(--zh);font-size:clamp(15px,1.7vw,22px);line-height:1.5;margin-top:.35em}
+#notes .who{display:inline-block;font-family:var(--zh);font-weight:700;background:#eab765;color:#3a2b12;
+  padding:.15em .7em;border-radius:999px;font-size:14px;margin-right:.6em}
+@media (max-width:820px){
+  .g3,.g4{grid-template-columns:1fr 1fr}
+  .wall{grid-template-columns:repeat(2,1fr)}
+  .arrow-flow{flex-direction:column;align-items:stretch}
+  .to{align-self:center;transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="navzone" id="prevZ"></div>
+<div class="navzone" id="nextZ"></div>
+
+<!-- 1 TITLE -->
+<section class="slide active">
+  <span class="kicker r">Ru-Yi Youth Camp · <span class="zh">如意精舍青少年佛學營</span></span>
+  <h1 class="r" style="--d:.08s">Emotional<br>Wisdom</h1>
+  <div class="zh-h r" style="--d:.16s">情緒智慧 · 第二支箭</div>
+  <div class="rule r" style="--d:.22s"></div>
+  <div class="sub-en r" style="--d:.28s">Emotions aren't the enemy — they're messengers.</div>
+  <div class="sub-zh r" style="--d:.34s">情緒不是敵人，是來敲門的訊息。</div>
+  <div class="meta r" style="--d:.42s">
+    <span>🗓️ 90 min <span class="zh">深度課</span></span>
+    <span>🪷 Buddhism × Self-Awareness</span>
+    <span class="zh">🧘 含引導靜坐</span>
+  </div>
+</section>
+
+<!-- 2 THREE SEEDS -->
+<section class="slide">
+  <span class="kicker r">Today's Goals · <span class="zh">今天的三顆種子</span></span>
+  <h2 class="en r" style="--d:.06s">Three seeds we'll plant today</h2>
+  <div class="cards g3" style="margin-top:.4em">
+    <div class="card sage r" style="--d:.12s">
+      <div class="num sage">Seed 1</div>
+      <div class="ttl-en">See it</div>
+      <div class="ttl-zh zh">看見情緒</div>
+      <div class="txt-en">Emotions come and go. Name them, and they won't drown you.</div>
+      <div class="txt-zh zh">情緒會來會走；學會命名，就不會被淹沒。</div>
+    </div>
+    <div class="card amber r" style="--d:.22s">
+      <div class="num amber">Seed 2</div>
+      <div class="ttl-en">Don't shoot the second arrow</div>
+      <div class="ttl-zh zh">不射第二支箭</div>
+      <div class="txt-en">Pain is the first arrow. The blame &amp; replay we add is the second — and that one is ours.</div>
+      <div class="txt-zh zh">痛是第一支箭；後面的懊惱、鑽牛角尖，是自己射的第二支箭。</div>
+    </div>
+    <div class="card plum r" style="--d:.32s">
+      <div class="num plum">Seed 3</div>
+      <div class="ttl-en">Be with it</div>
+      <div class="ttl-zh zh">與情緒共處</div>
+      <div class="txt-en">With awareness &amp; kindness, keep your emotions company instead of fighting them.</div>
+      <div class="txt-zh zh">用觀察＋慈心陪伴情緒，不壓抑、也不被帶走。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 WARM UP -->
+<section class="slide">
+  <span class="kicker r">Warm-up · <span class="zh">暖身</span></span>
+  <h2 class="en r" style="--d:.06s">The weather in your heart</h2>
+  <div class="zh-h r" style="--d:.14s">心情天氣報告</div>
+  <div class="sub-zh lead r" style="--d:.2s">你的心，現在是晴天、陰天、雷陣雨，還是颱風？</div>
+  <div class="sub-en r" style="--d:.24s">Pick one weather word for how your heart feels right now.</div>
+  <div class="cards g4" style="margin-top:.5em">
+    <div class="card sky r" style="--d:.3s"><div class="ttl-en">☀️ Sunny</div><div class="ttl-zh zh">晴天</div></div>
+    <div class="card sage r" style="--d:.36s"><div class="ttl-en">🌥️ Cloudy</div><div class="ttl-zh zh">陰天</div></div>
+    <div class="card plum r" style="--d:.42s"><div class="ttl-en">⛈️ Stormy</div><div class="ttl-zh zh">雷陣雨</div></div>
+    <div class="card rose r" style="--d:.48s"><div class="ttl-en">🌀 Typhoon</div><div class="ttl-zh zh">颱風</div></div>
+  </div>
+</section>
+
+<!-- 4 NAME IT -->
+<section class="slide">
+  <span class="kicker r">Teach 1 · <span class="zh">命名的力量</span></span>
+  <h2 class="en r" style="--d:.06s">Emotions aren't good or bad</h2>
+  <div class="zh-h r" style="--d:.14s">情緒沒有好壞，它們是訊息</div>
+  <div class="cards g2" style="margin-top:.4em">
+    <div class="card amber r" style="--d:.22s">
+      <div class="ttl-en">A message, not an enemy</div>
+      <div class="txt-zh zh">生氣、難過、嫉妒都不是「壞」——它們在告訴你「有件事很重要」。佛法不是要消滅情緒，而是看清楚它。</div>
+    </div>
+    <div class="card sage r" style="--d:.32s">
+      <div class="ttl-en">Name it to tame it</div>
+      <div class="ttl-zh zh">會命名，就不會被淹沒</div>
+      <div class="txt-zh zh">別只說「我心情不好」——底下是失望？孤單？還是害怕？叫得出名字，就管得住。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 VOCAB WALL -->
+<section class="slide">
+  <span class="kicker r">Teach 1 · <span class="zh">情緒詞彙牆</span></span>
+  <h2 class="en r" style="--d:.06s">Emotion Vocabulary Wall</h2>
+  <div class="sub-zh r" style="--d:.12s">帶學員一起念——你能叫出幾個情緒的名字？ / Read them aloud together.</div>
+  <div class="wall" style="margin-top:.3em">
+    <div class="chip r" style="--d:.16s"><div class="z zh">開心</div><div class="e">Happy</div></div>
+    <div class="chip r" style="--d:.18s"><div class="z zh">興奮</div><div class="e">Excited</div></div>
+    <div class="chip r" style="--d:.2s"><div class="z zh">平靜</div><div class="e">Calm</div></div>
+    <div class="chip r" style="--d:.22s"><div class="z zh">感動</div><div class="e">Moved</div></div>
+    <div class="chip r" style="--d:.24s"><div class="z zh">感恩</div><div class="e">Grateful</div></div>
+    <div class="chip r" style="--d:.26s"><div class="z zh">緊張</div><div class="e">Nervous</div></div>
+    <div class="chip r" style="--d:.28s"><div class="z zh">焦慮</div><div class="e">Anxious</div></div>
+    <div class="chip r" style="--d:.3s"><div class="z zh">害怕</div><div class="e">Afraid</div></div>
+    <div class="chip r" style="--d:.32s"><div class="z zh">委屈</div><div class="e">Hurt</div></div>
+    <div class="chip r" style="--d:.34s"><div class="z zh">失望</div><div class="e">Let down</div></div>
+    <div class="chip r" style="--d:.36s"><div class="z zh">生氣</div><div class="e">Angry</div></div>
+    <div class="chip r" style="--d:.38s"><div class="z zh">嫉妒</div><div class="e">Jealous</div></div>
+    <div class="chip r" style="--d:.4s"><div class="z zh">孤單</div><div class="e">Lonely</div></div>
+    <div class="chip r" style="--d:.42s"><div class="z zh">羞愧</div><div class="e">Ashamed</div></div>
+    <div class="chip r" style="--d:.44s"><div class="z zh">無聊</div><div class="e">Bored</div></div>
+    <div class="chip r" style="--d:.46s"><div class="z zh">煩躁</div><div class="e">Irritated</div></div>
+    <div class="chip r" style="--d:.48s"><div class="z zh">難過</div><div class="e">Sad</div></div>
+    <div class="chip r" style="--d:.5s"><div class="z zh">後悔</div><div class="e">Regretful</div></div>
+    <div class="chip r" style="--d:.52s"><div class="z zh">尷尬</div><div class="e">Embarrassed</div></div>
+    <div class="chip r" style="--d:.54s"><div class="z zh">期待</div><div class="e">Hopeful</div></div>
+  </div>
+</section>
+
+<!-- 6 SECOND ARROW STORY -->
+<section class="slide">
+  <span class="kicker r">Teach 2 · <span class="zh">核心教義</span></span>
+  <h2 class="en r" style="--d:.06s">The Second Arrow</h2>
+  <div class="zh-h r" style="--d:.14s">第二支箭 — 佛陀的故事</div>
+  <div class="big-zh lead r" style="--d:.22s;max-width:30ch">
+    「一個人被箭射中，痛不痛？痛。<br>如果第二支箭又射到同一個地方呢？更痛。」
+  </div>
+  <div class="sub-en lead r" style="--d:.3s;max-width:44ch">
+    The Buddha said: the <b>first arrow</b> — pain, bad luck — often can't be avoided. But most people then shoot themselves a <b>second arrow</b>.
+  </div>
+  <div class="meta r" style="--d:.4s"><span class="zh">出處：《雜阿含經》箭喻 · 南傳《相應部》SN 36.6</span></div>
+</section>
+
+<!-- 7 FIRST vs SECOND -->
+<section class="slide">
+  <span class="kicker r">Teach 2 · <span class="zh">拆解兩支箭</span></span>
+  <h2 class="en r" style="--d:.06s">First arrow vs. Second arrow</h2>
+  <div class="cards g2" style="margin-top:.4em">
+    <div class="card sky r" style="--d:.16s">
+      <div class="num sky">Arrow 1</div>
+      <div class="ttl-en">What happened</div>
+      <div class="ttl-zh zh">第一支箭 · 發生的事</div>
+      <div class="txt-zh zh">考差了、被誤會、和好朋友吵架、東西弄丟了。這是「境」，常常不是我們能控制的。</div>
+      <div class="txt-en">A bad grade, a misunderstanding, a fight, a loss — often out of our control.</div>
+    </div>
+    <div class="card rose r" style="--d:.28s">
+      <div class="num rose">Arrow 2</div>
+      <div class="ttl-en">How we react</div>
+      <div class="ttl-zh zh">第二支箭 · 我們的反應</div>
+      <div class="txt-zh zh">「我好爛」「都是他害的」「完蛋了」——一直重播、自責、鑽牛角尖。這支箭，是自己射自己的。</div>
+      <div class="txt-en">"I'm the worst." "It's all their fault." Replay, blame, spiral — this arrow, we shoot ourselves.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 KEY INSIGHT -->
+<section class="slide calm">
+  <span class="kicker r">🪷 Key Insight · <span class="zh">關鍵轉念</span></span>
+  <div class="quote-en r" style="--d:.1s">You can't always dodge the first arrow. But you can stop shooting the second.</div>
+  <div class="big-zh r" style="--d:.2s;max-width:26ch">修行不是讓你不中第一支箭——那是人生；而是學會不再射出第二支箭。</div>
+  <div class="sub-en r" style="--d:.3s"><b>Pain can stay. Suffering can shrink a lot.</b> &nbsp;<span class="zh">痛可以有，苦可以少很多。</span></div>
+</section>
+
+<!-- 9 THINK PAIR SHARE -->
+<section class="slide">
+  <span class="kicker r">💬 Think · Pair · Share · <span class="zh">兩兩分享</span></span>
+  <h2 class="en r" style="--d:.06s">Which part did I add myself?</h2>
+  <div class="cards g2" style="margin-top:.5em">
+    <div class="card amber r" style="--d:.16s">
+      <div class="ttl-zh zh">想一件最近的小事</div>
+      <div class="txt-en" style="font-size:clamp(17px,1.8vw,26px)">Think of one small thing that happened recently.</div>
+    </div>
+    <div class="card sage r" style="--d:.28s">
+      <div class="ttl-zh zh">哪部分是第一支箭？哪部分是我自己加上去的第二支箭？</div>
+      <div class="txt-en" style="font-size:clamp(17px,1.8vw,26px)">Which part was the first arrow (what really happened)? Which part was the second arrow you added?</div>
+    </div>
+  </div>
+  <div class="sub-zh r" style="--d:.4s;margin-top:.4em">⏱️ 5 分鐘 · 分享後請 2–3 組自願回饋 / Share, then a few pairs report back.</div>
+</section>
+
+<!-- 10 HOW EMOTIONS ARISE -->
+<section class="slide">
+  <span class="kicker r">Teach 3 · <span class="zh">情緒怎麼生起</span></span>
+  <h2 class="en r" style="--d:.06s">Where's the brake?</h2>
+  <div class="arrow-flow" style="margin-top:.5em">
+    <div class="step r" style="--d:.14s"><div class="e">👁️ Contact</div><div class="z zh">觸</div><div class="d zh">遇到一件事</div></div>
+    <div class="to r" style="--d:.18s">→</div>
+    <div class="step r" style="--d:.22s"><div class="e">💓 Feeling</div><div class="z zh">受</div><div class="d zh">舒服／不舒服</div></div>
+    <div class="to r" style="--d:.26s">→</div>
+    <div class="step r" style="--d:.3s"><div class="e">🧲 Craving</div><div class="z zh">愛</div><div class="d zh">想抓住／想推開</div></div>
+    <div class="to r" style="--d:.34s">→</div>
+    <div class="step r" style="--d:.38s"><div class="e">🔒 Clinging</div><div class="z zh">取</div><div class="d zh">緊抓不放，煩惱放大</div></div>
+  </div>
+  <div class="brake r" style="--d:.46s">
+    <div class="z zh">🛑 煞車點在「受」</div>
+    <div class="e">The brake is at <b>Feeling</b>. Pause there one second — before craving takes over. That's exactly where the second arrow is fired.</div>
+  </div>
+</section>
+
+<!-- 11 PRACTICE STEPS -->
+<section class="slide">
+  <span class="kicker r">Practice · <span class="zh">受念處</span></span>
+  <h2 class="en r" style="--d:.06s">Watch your emotions like clouds</h2>
+  <div class="zh-h r" style="--d:.12s">觀察情緒，像看天上的雲</div>
+  <div class="cards g4" style="margin-top:.4em">
+    <div class="card sky r" style="--d:.2s"><div class="num sky">1 · Stop</div><div class="ttl-zh zh">停</div><div class="txt-zh zh">坐正、閉眼，三個深呼吸。</div></div>
+    <div class="card sage r" style="--d:.28s"><div class="num sage">2 · Name</div><div class="ttl-zh zh">命名</div><div class="txt-zh zh">輕輕說出它：「這是緊張」。</div></div>
+    <div class="card amber r" style="--d:.36s"><div class="num amber">3 · Feel</div><div class="ttl-zh zh">感覺</div><div class="txt-zh zh">它在身體哪裡？只感覺，不評論。</div></div>
+    <div class="card plum r" style="--d:.44s"><div class="num plum">4 · Let go</div><div class="ttl-zh zh">放它走</div><div class="txt-zh zh">像看雲飄過：它會來，也會走。</div></div>
+  </div>
+</section>
+
+<!-- 12 MEDITATION QUOTE -->
+<section class="slide calm">
+  <span class="kicker r">🧘 Guided Sitting · <span class="zh">引導靜坐</span></span>
+  <div class="quote-en r" style="--d:.12s">You are not the cloud. You are the sky watching the clouds.</div>
+  <div class="big-zh r" style="--d:.24s;max-width:24ch">你不是那朵雲，你是看雲的天空。</div>
+  <div class="sub-zh r" style="--d:.36s;max-width:34ch">它升起，你知道；它停留，你陪著；它離開，你目送。你比任何一個情緒，都還要大。</div>
+</section>
+
+<!-- 13 LOVING KINDNESS -->
+<section class="slide calm">
+  <span class="kicker r">Practice · <span class="zh">慈心三句</span></span>
+  <h2 class="en r" style="--d:.06s">Give your emotions a warm home</h2>
+  <div class="mantra" style="margin-top:.3em">
+    <div class="mline r" style="--d:.16s"><div class="e">May I be safe, may I be at ease.</div><div class="z zh">願我平安，願我自在。</div></div>
+    <div class="mline r" style="--d:.28s"><div class="e">May the people I care about be safe and at ease.</div><div class="z zh">願我在乎的人平安自在。</div></div>
+    <div class="mline r" style="--d:.4s"><div class="e">May even those who hurt me be safe and at ease.</div><div class="z zh">願曾讓我難過的人，也平安自在。</div></div>
+  </div>
+</section>
+
+<!-- 14 TAKEAWAY -->
+<section class="slide">
+  <span class="kicker r">Handout · <span class="zh">帶走一句話</span></span>
+  <h2 class="en r" style="--d:.06s">Take one sentence with you</h2>
+  <div class="blanks" style="margin-top:.4em">
+    <div class="blank r" style="--d:.16s"><div class="q zh">① 今天我遇到的第一支箭是＿＿＿，我加上去的第二支箭是＿＿＿</div><div class="qe">First arrow / second arrow I added</div></div>
+    <div class="blank r" style="--d:.26s"><div class="q zh">② 下次有這種感覺時，我可以做的一件小事是＿＿＿</div><div class="qe">One small thing I can do next time (e.g. breathe 3 times)</div></div>
+    <div class="blank r" style="--d:.36s"><div class="q zh">③ 今天我想記住的一句話：＿＿＿＿＿＿＿</div><div class="qe">One sentence I want to remember today</div></div>
+  </div>
+</section>
+
+<!-- 15 CLOSING -->
+<section class="slide calm">
+  <span class="kicker r">🙏 <span class="zh">回向</span></span>
+  <h1 class="r" style="--d:.08s">Thank you</h1>
+  <div class="zh-h r" style="--d:.16s">你早就懂了，只是今天替它取了名字。</div>
+  <div class="sub-en r" style="--d:.26s">You already knew this. Today we just gave it a name.</div>
+  <div class="meta r" style="--d:.36s"><span class="zh">如意精舍 · 吉祥老師教學設計　Ru-Yi Meditation Center</span></div>
+</section>
+
+<div id="bar"></div>
+<div id="count">1 / 15</div>
+<div id="hint">← → <span class="zh">翻頁</span> · F <span class="zh">全螢幕</span> · N <span class="zh">講師提示</span></div>
+
+<div id="notes"><span class="who zh"></span><span class="lbl"></span><div class="body"></div></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const bar=document.getElementById('bar');
+const count=document.getElementById('count');
+const notesBox=document.getElementById('notes');
+const notesBody=notesBox.querySelector('.body');
+const notesWho=notesBox.querySelector('.who');
+let i=0, notesOn=false;
+
+// co-teaching cues: who leads + what to do
+const NOTES=[
+ ["兩位老師","開場問候。美國老師帶英文開場，吉祥老師接中文。點題：情緒不是敵人。"],
+ ["吉祥老師","講三顆種子，先給全課地圖。每顆種子一句話帶過即可。"],
+ ["美國老師","破冰活動，語氣輕鬆。可先示範自己現在的『天氣』。每人一個天氣詞。"],
+ ["吉祥老師","核心觀念：情緒沒好壞。帶『Name it to tame it』，美國老師可補英文說法。"],
+ ["兩位老師","一起帶學員念詞彙牆。中英交替念，氣氛熱絡。"],
+ ["吉祥老師","說第二支箭的故事，語速放慢、留懸念。"],
+ ["兩位老師","一人講第一支箭、一人講第二支箭，對比更清楚。舉學生生活例子。"],
+ ["吉祥老師","關鍵轉念——這是全課核心，慢、重、留白。"],
+ ["美國老師","帶 Think-Pair-Share，計時 5 分鐘，鼓勵自願分享。"],
+ ["吉祥老師","觸受愛取，少用名相多用比喻。強調煞車點在『受』。"],
+ ["吉祥老師","介紹四步驟，準備進入靜坐。語速開始放慢。"],
+ ["吉祥老師","引導靜坐 8–10 分鐘。口白慢、留白。引磬起訖。"],
+ ["兩位老師","慈心三句，帶學員默念。中英各一次。"],
+ ["兩位老師","發學習單，學員書寫。可放輕音樂。"],
+ ["兩位老師","收束、回向。連回上午的微電影主題作結。"]
+];
+
+function show(n){
+  slides[i].classList.remove('active');
+  i=Math.max(0,Math.min(slides.length-1,n));
+  const s=slides[i];
+  // restart reveal
+  s.querySelectorAll('.r').forEach(el=>{el.style.animation='none';});
+  s.classList.add('active');
+  bar.style.width=((i+1)/slides.length*100)+'%';
+  count.textContent=(i+1)+' / '+slides.length;
+  if(notesOn) renderNotes();
+}
+function renderNotes(){
+  notesWho.textContent=NOTES[i][0];
+  notesBody.textContent=NOTES[i][1];
+}
+function next(){show(i+1)} function prev(){show(i-1)}
+function toggleNotes(){notesOn=!notesOn;notesBox.classList.toggle('on',notesOn);if(notesOn)renderNotes();}
+
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();next();}
+  else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev();}
+  else if(e.key==='Home'){show(0)} else if(e.key==='End'){show(slides.length-1)}
+  else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+  else if(e.key.toLowerCase()==='n'){toggleNotes();}
+});
+document.getElementById('nextZ').onclick=next;
+document.getElementById('prevZ').onclick=prev;
+bar.style.width=(1/slides.length*100)+'%';
+</script>
+</body>
+</html>
