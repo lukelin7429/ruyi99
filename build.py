@@ -622,13 +622,19 @@ def build_camps(o):
     hdr=band(crumb_html(o),"夏令營 · SUMMER CAMP",nm,
              "兒童與青少年心靈環保成長營，歷年活動影音紀錄。")
     kids=sorted(children.get(o,[]),key=_camp_year,reverse=True)
-    # 2026 為手動生成頁（不在爬蟲內），置頂呈現
+    # 2026 為手動生成頁（不在爬蟲內），置頂呈現：青少年營＋兒童營各一張
     cards=('<a class="campcard rvl" href="%s">'
-           '<div class="cc-img"><div class="bg" style="background:linear-gradient(150deg,#9a6a1e,#c29a45)"></div>'
+           '<div class="cc-img"><div class="bg" style="background:linear-gradient(150deg,#274a78,#3f6aa5)"></div>'
            '<span class="cc-badge">最新一屆</span><span class="cc-year">2026</span></div>'
            '<div class="cc-body"><div class="cc-title">青少年學佛營</div>'
-           '<div class="cc-meta">課程表 · 活動紀錄 <span class="arw">→</span></div></div></a>'
+           '<div class="cc-meta">7/4–7/7 · 課程表 <span class="arw">→</span></div></div></a>'
            %u("/camps/2026/"))
+    cards+=('<a class="campcard rvl" style="transition-delay:70ms" href="%s">'
+            '<div class="cc-img"><div class="bg" style="background:linear-gradient(150deg,#b5591e,#d98b3f)"></div>'
+            '<span class="cc-badge">最新一屆</span><span class="cc-year">2026</span></div>'
+            '<div class="cc-body"><div class="cc-title">兒童學佛營</div>'
+            '<div class="cc-meta">7/8–7/12 · 課程表 <span class="arw">→</span></div></div></a>'
+            %u("/camps/2026-kids/"))
     for i,k in enumerate(kids):
         d=content[out2path[k]]; nmk=d["name"]
         yts=[b["id"] for b in d["blocks"] if b["t"]=="yt"]; n=len(yts)
@@ -702,6 +708,10 @@ CAMP26_CSS=("<style>"
  ".c26-meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.30);"
  "color:#fff;padding:7px 15px;border-radius:999px;font-size:14.5px;font-weight:600}"
  ".c26-meta b{font-weight:800}"
+ ".c26-sib{background:rgba(255,255,255,.94);color:#3a2e1c!important;padding:7px 15px;"
+ "border-radius:999px;font-size:14.5px;font-weight:800;text-decoration:none;"
+ "transition:transform .2s,box-shadow .2s;box-shadow:0 3px 12px rgba(0,0,0,.18)}"
+ ".c26-sib:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.26)}"
  ".c26-themes{display:grid;gap:18px;grid-template-columns:repeat(4,1fr);margin:8px 0 8px}"
  "@media(max-width:820px){.c26-themes{grid-template-columns:repeat(2,1fr)}}"
  "@media(max-width:520px){.c26-themes{grid-template-columns:1fr}}"
@@ -746,7 +756,8 @@ def build_camp_2026(o="/camps/2026/"):
           '<span>🗓️ <b>7/4 – 7/7</b>（四天三夜）</span>'
           '<span>🎒 對象 <b>青少年</b></span>'
           '<span>📍 <b>如意精舍</b>（南投信義・風櫃斗）</span>'
-          '<span>💛 <b>全程免費</b></span></div>')
+          '<span>💛 <b>全程免費</b></span>'
+          '<a class="c26-sib" href="%s">🧒 另有兒童營 7/8–7/12 →</a></div>'%u("/camps/2026-kids/"))
     hero=hero.replace("</div></section>",meta+"</div></section>",1)
     parts=[hero,'<main class="tintbg"><div class="wrap">']
     # 四天主題
@@ -794,6 +805,132 @@ def build_camp_2026(o="/camps/2026/"):
     parts.append('</div></main>')
     return page("2026 青少年學佛營","/learn/",CAMP26_CSS+''.join(parts),
                 "2026 如意精舍青少年學佛營（7/4–7/7）課程表與活動紀錄 · 如意精舍")
+
+# ---------------- 2026 兒童學佛營（手動生成，不在爬蟲內） ----------------
+EXTRA_NAMES["/camps/2026-kids/"]="2026 兒童營"
+
+# 五天主題（日期, 主題, 第N天, 一句話, 主色, 副色）
+KIDS26_THEMES=[
+ ("7/8","歡喜啟程","第 1 天","報到、開營、認識三寶、英文與戲劇——歡喜相見，種下這趟旅程的開始","#b5591e","#d98b3f"),
+ ("7/9","親近山林","第 2 天","整個上午的大自然探索、石頭彩拚、影片欣賞——走進山林，感受生命","#2f6d4f","#4f9670"),
+ ("7/10","品德創意","第 3 天","立體畫、歌唱、闖關、戲劇演出——在創作與遊戲中學品德","#276b78","#3f96a5"),
+ ("7/11","智慧感恩","第 4 天","弟子規、十大弟子、了凡四訓、甜點 DIY、結營晚會——聆聽智慧，滿懷感恩","#6a3a6e","#9a5a9e"),
+ ("7/12","圓滿賦歸","第 5 天","與人為善、經絡拍打、親子同心、結營典禮——帶著善念與笑容回家","#a83a55","#cf6480"),
+]
+# 每日課程表：(主色,副色,主題,日期, [ (時間, 課名, 說明/老師, 標記, 是否亮點) ])
+KIDS26_SCHEDULE=[
+ ("#b5591e","#d98b3f","歡喜啟程","7/8（三）",[
+   ("10:00 前","報到安單","學員陸續上山、安頓","",False),
+   ("10:20","開營典禮","歡喜相見・迎接新朋友","",False),
+   ("11:30","午餐／午休","","",False),
+   ("13:30","相見歡","小隊分組・破冰遊戲 · 隊輔","",True),
+   ("14:40","認識三寶","佛・法・僧的故事 · 尉家維老師","",False),
+   ("15:50","英文 English","Dom Jones 老師","",True),
+   ("17:00","晚課／晚餐","","",False),
+   ("18:40","戲劇編排","分組排練・晚間活動","",True),
+   ("20:30","盥洗・安板","","",False),
+ ]),
+ ("#2f6d4f","#4f9670","親近山林","7/9（四）",[
+   ("06:00","起床・盥洗","","",False),
+   ("06:30","早課／晨操／早餐","一天的開始","",False),
+   ("08:00","大自然探索","整個上午的山林體驗 · 邱志中老師","",True),
+   ("11:30","午餐／午休","","",False),
+   ("13:30","石頭彩拚","撿石頭・彩繪創作 · 邱志中老師","",True),
+   ("14:40","生命在呼吸間","謝呂賢老師","",False),
+   ("15:50","腦力激盪","團隊動腦遊戲 · 隊輔","",True),
+   ("17:00","晚課／晚餐","","",False),
+   ("18:40","影片欣賞","尉峻翔老師","",True),
+   ("20:30","盥洗・安板","","",False),
+ ]),
+ ("#276b78","#3f96a5","品德創意","7/10（五）",[
+   ("06:00","起床・盥洗","","",False),
+   ("06:30","早課／晨操／早餐","","",False),
+   ("08:00","勇敢說不","保護自己 · 謝呂賢老師","",False),
+   ("09:10","手繪錯覺立體畫","郭曉君老師","",True),
+   ("10:20","品德與人生","劉翠玲老師","",False),
+   ("11:30","午餐／午休","","",False),
+   ("13:30","歌唱","尉芷睿老師","",True),
+   ("14:40","三世因果","蔡暐哲老師","",False),
+   ("15:50","闖關體驗","分站遊戲 · 隊輔","",True),
+   ("17:00","晚課／晚餐","","",False),
+   ("18:40","戲劇演出","分組成果發表","",True),
+   ("20:30","盥洗・安板","","",False),
+ ]),
+ ("#6a3a6e","#9a5a9e","智慧感恩","7/11（六）",[
+   ("06:00","起床・盥洗","","",False),
+   ("06:30","早課／晨操／早餐","","",False),
+   ("08:00","心靈的力量","蔡謙睿老師","",False),
+   ("09:10","創意畫","林秀珠老師","",True),
+   ("10:20","弟子規","劉昭崇老師","",False),
+   ("11:30","午餐／午休","","",False),
+   ("13:30","十大弟子","詹璦瑛老師","",False),
+   ("14:40","了凡四訓","詹銅城老師","",False),
+   ("15:50","甜蜜的祝福","夏威夷豆棗糕 DIY · 李莉莉老師","",True),
+   ("17:00","晚課／晚餐","","",False),
+   ("18:40","結營晚會","才藝表演・溫馨迴響","",True),
+   ("20:30","盥洗・安板","","",False),
+ ]),
+ ("#a83a55","#cf6480","圓滿賦歸","7/12（日）",[
+   ("06:00","起床・盥洗","","",False),
+   ("06:30","早課／晨操／早餐","","",False),
+   ("08:00","與人為善","尉家維老師","",False),
+   ("09:10","經絡拍打","健康養生小體驗 · 張玉妮老師","",True),
+   ("10:20","親子同心","家長入營・親子活動 · 隊輔","",True),
+   ("11:10","結營典禮","賦歸・帶著善念回家","",False),
+ ]),
+]
+# 活動影片（營隊結束後填入 YouTube ID 即自動長出可點縮圖；現為空＝顯示「待上線」）
+KIDS26_VIDS=[]
+
+def build_camp_kids_2026(o="/camps/2026-kids/"):
+    hero=band(crumb_html(o),"SUMMER CAMP 2026","2026 兒童學佛營",
+        "五天四夜，在風櫃斗的山上，用大自然、藝術、戲劇與佛法故事，"
+        "陪伴國小學童親近自然、學習品德與感恩。全程免費、遠離 3C、親近大自然。")
+    meta=('<div class="c26-meta">'
+          '<span>🗓️ <b>7/8 – 7/12</b>（五天四夜）</span>'
+          '<span>🎒 對象 <b>國小學童</b></span>'
+          '<span>📍 <b>如意精舍</b>（南投信義・風櫃斗）</span>'
+          '<span>💛 <b>全程免費</b></span>'
+          '<a class="c26-sib" href="%s">🧑‍🎓 另有青少年營 7/4–7/7 →</a></div>'%u("/camps/2026/"))
+    hero=hero.replace("</div></section>",meta+"</div></section>",1)
+    parts=[hero,'<main class="tintbg"><div class="wrap">']
+    # 五天主題
+    parts.append('<div class="section-title rvl"><h2>五天，五個主題</h2><div class="rule"></div></div>')
+    th='<div class="c26-themes rvl">'
+    for dt,name,day,line,a,b in KIDS26_THEMES:
+        th+=('<div class="c26-th rvl" style="--a:%s;--b:%s">'
+             '<div class="day">%s</div><h3>%s</h3><div class="dt">%s</div><p>%s</p></div>'
+             %(a,b,esc(day),esc(name),esc(dt),esc(line)))
+    th+='</div>'; parts.append(th)
+    # 每日課程表
+    parts.append('<div class="section-title rvl"><h2>每日課程表</h2><div class="rule"></div></div>')
+    parts.append('<p class="sched-note rvl">完整五天流程；標示 ★ 為動手體驗與活動課程。實際內容以營隊現場為準。</p>')
+    for a,b,theme,dt,rows in KIDS26_SCHEDULE:
+        parts.append('<div class="c26-dayhead rvl" style="--a:%s;--b:%s">'
+                     '<span class="pill">%s</span><h2>%s</h2><span class="dt">%s</span>'
+                     '<span class="rule"></span></div>'%(a,b,esc(dt),esc(theme),""))
+        cards='<div class="sched rvl">'
+        for time,cname,desc,note,star in rows:
+            star_mark='★ ' if star else ''
+            cards+=('<div class="scard rvl" style="--ac:%s;--ac2:%s">'
+                    '<div class="sdate"><span class="dy">%s</span></div>'
+                    '<div class="sbody"><div class="sname">%s%s</div>'
+                    '%s</div></div>'
+                    %(a,b,esc(time),star_mark,esc(cname),
+                      '<div class="ssub">%s</div>'%esc(desc) if desc else ''))
+        cards+='</div>'; parts.append(cards)
+    # 影片紀錄
+    parts.append('<div class="section-title rvl"><h2>活動影片紀錄</h2><div class="rule"></div></div>')
+    if KIDS26_VIDS:
+        parts.append('<div class="video-grid">'+''.join(yt_thumb(v) for v in KIDS26_VIDS)+'</div>')
+    else:
+        parts.append('<div class="c26-vidnote rvl"><span class="ic">🎬</span>'
+                     '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
+                     '<span style="font-size:14px;color:var(--sub)">'
+                     '歷年夏令營影音紀錄請見 <a href="%s">夏令營總覽</a>。</span></div>'%u("/camps/"))
+    parts.append('</div></main>')
+    return page("2026 兒童學佛營","/learn/",CAMP26_CSS+''.join(parts),
+                "2026 如意精舍兒童學佛營（7/8–7/12）課程表與活動紀錄 · 如意精舍")
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
@@ -1493,8 +1630,9 @@ if __name__=="__main__":
     # 合併頁（不在 omap 內，手動產生）
     for c in COMBINED:
         write(c["out"],build_prajna(c)); n+=1
-    # 2026 青少年學佛營（不在 omap 內，手動產生）
+    # 2026 青少年學佛營 + 兒童學佛營（不在 omap 內，手動產生）
     write("/camps/2026/",build_camp_2026("/camps/2026/")); n+=1
+    write("/camps/2026-kids/",build_camp_kids_2026("/camps/2026-kids/")); n+=1
     # 學習園地 + 如意英文學校（不在 omap 內，手動產生）
     write("/learn/",build_learn("/learn/")); n+=1
     write("/english-school/",build_english_school("/english-school/")); n+=1
@@ -1508,7 +1646,7 @@ if __name__=="__main__":
     # 收錄合併頁、排除已轉址的舊系列首頁
     urls=["/"]+sorted([o for o in out2path if o!="/" and o not in REDIRECTS]
                       +[c["out"] for c in COMBINED]
-                      +["/learn/","/english-school/","/camps/2026/"]
+                      +["/learn/","/english-school/","/camps/2026/","/camps/2026-kids/"]
                       +["/english-school/%s/"%d["id"] for d in ES_LESSONS])
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
