@@ -700,8 +700,12 @@ CAMP26_SCHEDULE=[
    ("下午","結業・賦歸","帶著願力與覺察回家","",False),
  ]),
 ]
-# 活動影片（營隊結束後填入 YouTube ID 即自動長出可點縮圖；現為空＝顯示「待上線」）
-CAMP26_VIDS=[]
+# 活動影片（營隊進行中陸續上線；(YouTube ID, 標題) — 播放清單 PLQbEm5zT7U80）
+CAMP26_VIDS=[
+ ("5hpBeq17UXg","相見歡・破冰"),
+ ("exaNyUKRaN4","開營典禮"),
+]
+CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
 CAMP26_CSS=("<style>"
  ".c26-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}"
@@ -791,7 +795,13 @@ def build_camp_2026(o="/camps/2026/"):
     # 影片紀錄
     parts.append('<div class="section-title rvl"><h2>活動影片紀錄</h2><div class="rule"></div></div>')
     if CAMP26_VIDS:
-        parts.append('<div class="video-grid">'+''.join(yt_thumb(v) for v in CAMP26_VIDS)+'</div>')
+        parts.append('<div class="video-grid">'+''.join(yt_thumb(v[0],v[1],force=True) for v in CAMP26_VIDS)+'</div>')
+        parts.append('<div class="rvl" style="text-align:center;margin:20px 0 4px">'
+                     '<a href="%s" target="_blank" rel="noopener" '
+                     'style="display:inline-flex;align-items:center;gap:8px;font-weight:700;'
+                     'color:var(--sub,#5c5348);text-decoration:none;border:1.5px solid var(--line,#e7ddc9);'
+                     'padding:10px 20px;border-radius:99px">'
+                     '▶ 在 YouTube 看完整播放清單（陸續更新）→</a></div>'%CAMP26_PLAYLIST)
     else:
         parts.append('<div class="c26-vidnote rvl"><span class="ic">🎬</span>'
                      '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
