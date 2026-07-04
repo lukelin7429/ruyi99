@@ -624,7 +624,7 @@ def build_camps(o):
     kids=sorted(children.get(o,[]),key=_camp_year,reverse=True)
     # 2026 為手動生成頁（不在爬蟲內），置頂呈現：青少年營＋兒童營各一張
     cards=('<a class="campcard rvl" href="%s">'
-           '<div class="cc-img"><div class="bg" style="background:linear-gradient(150deg,#274a78,#3f6aa5)"></div>'
+           '<div class="cc-img"><div class="bg" style="background-image:url(/assets/img/camp-2026-teen.jpg);background-position:center 42%"></div>'
            '<span class="cc-badge">最新一屆</span><span class="cc-year">2026</span></div>'
            '<div class="cc-body"><div class="cc-title">青少年學佛營</div>'
            '<div class="cc-meta">7/4–7/7 · 課程表 <span class="arw">→</span></div></div></a>'
