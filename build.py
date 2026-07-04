@@ -702,8 +702,8 @@ CAMP26_SCHEDULE=[
 ]
 # 活動影片（營隊進行中陸續上線；(YouTube ID, 標題) — 播放清單 PLQbEm5zT7U80）
 CAMP26_VIDS=[
- ("5hpBeq17UXg","相見歡・破冰"),
  ("exaNyUKRaN4","開營典禮"),
+ ("5hpBeq17UXg","相見歡・破冰"),
  ("a0ngRAcoTww","生活禪・做包子"),
  ("XdUb_B1WcI0","佛學第一堂・願力種子"),
  ("4tLKW_IKhNo","料理晚餐"),
