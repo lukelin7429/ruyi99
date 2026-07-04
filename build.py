@@ -624,7 +624,7 @@ def build_camps(o):
     kids=sorted(children.get(o,[]),key=_camp_year,reverse=True)
     # 2026 為手動生成頁（不在爬蟲內），置頂呈現：青少年營＋兒童營各一張
     cards=('<a class="campcard rvl" href="%s">'
-           '<div class="cc-img"><div class="bg" style="background-image:url(/assets/img/camp-2026-teen.jpg);background-position:center 42%"></div>'
+           '<div class="cc-img"><div class="bg" style="background-image:url(/assets/img/camp-2026-teen.jpg);background-position:center 42%%"></div>'
            '<span class="cc-badge">最新一屆</span><span class="cc-year">2026</span></div>'
            '<div class="cc-body"><div class="cc-title">青少年學佛營</div>'
            '<div class="cc-meta">7/4–7/7 · 課程表 <span class="arw">→</span></div></div></a>'
@@ -704,6 +704,8 @@ CAMP26_SCHEDULE=[
 CAMP26_VIDS=[
  ("5hpBeq17UXg","相見歡・破冰"),
  ("exaNyUKRaN4","開營典禮"),
+ ("a0ngRAcoTww","生活禪・做包子"),
+ ("XdUb_B1WcI0","佛學第一堂・願力種子"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
@@ -764,6 +766,21 @@ def build_camp_2026(o="/camps/2026/"):
           '<a class="c26-sib" href="%s">🧒 另有兒童營 7/8–7/12 →</a></div>'%u("/camps/2026-kids/"))
     hero=hero.replace("</div></section>",meta+"</div></section>",1)
     parts=[hero,'<main class="tintbg"><div class="wrap">']
+    # 影片紀錄（放最前面，方便家長第一眼找到）
+    parts.append('<div class="section-title rvl"><h2>活動影片紀錄</h2><div class="rule"></div></div>')
+    if CAMP26_VIDS:
+        parts.append('<div class="video-grid">'+''.join(yt_thumb(v[0],v[1],force=True) for v in CAMP26_VIDS)+'</div>')
+        parts.append('<div class="rvl" style="text-align:center;margin:20px 0 4px">'
+                     '<a href="%s" target="_blank" rel="noopener" '
+                     'style="display:inline-flex;align-items:center;gap:8px;font-weight:700;'
+                     'color:var(--sub,#5c5348);text-decoration:none;border:1.5px solid var(--line,#e7ddc9);'
+                     'padding:10px 20px;border-radius:99px">'
+                     '▶ 在 YouTube 看完整播放清單（陸續更新）→</a></div>'%CAMP26_PLAYLIST)
+    else:
+        parts.append('<div class="c26-vidnote rvl"><span class="ic">🎬</span>'
+                     '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
+                     '<span style="font-size:14px;color:var(--sub)">'
+                     '歷年夏令營影音紀錄請見 <a href="%s">夏令營總覽</a>。</span></div>'%u("/camps/"))
     # 四天主題
     parts.append('<div class="section-title rvl"><h2>四天，四個主題</h2><div class="rule"></div></div>')
     th='<div class="c26-themes rvl">'
@@ -792,21 +809,6 @@ def build_camp_2026(o="/camps/2026/"):
                       '<div class="ssub">%s</div>'%esc(desc) if desc else '',
                       '<div class="snote">%s</div>'%esc(shown_note) if shown_note else ''))
         cards+='</div>'; parts.append(cards)
-    # 影片紀錄
-    parts.append('<div class="section-title rvl"><h2>活動影片紀錄</h2><div class="rule"></div></div>')
-    if CAMP26_VIDS:
-        parts.append('<div class="video-grid">'+''.join(yt_thumb(v[0],v[1],force=True) for v in CAMP26_VIDS)+'</div>')
-        parts.append('<div class="rvl" style="text-align:center;margin:20px 0 4px">'
-                     '<a href="%s" target="_blank" rel="noopener" '
-                     'style="display:inline-flex;align-items:center;gap:8px;font-weight:700;'
-                     'color:var(--sub,#5c5348);text-decoration:none;border:1.5px solid var(--line,#e7ddc9);'
-                     'padding:10px 20px;border-radius:99px">'
-                     '▶ 在 YouTube 看完整播放清單（陸續更新）→</a></div>'%CAMP26_PLAYLIST)
-    else:
-        parts.append('<div class="c26-vidnote rvl"><span class="ic">🎬</span>'
-                     '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
-                     '<span style="font-size:14px;color:var(--sub)">'
-                     '歷年夏令營影音紀錄請見 <a href="%s">夏令營總覽</a>。</span></div>'%u("/camps/"))
     # 教師專區（低調連結、非卡片）
     parts.append('<div class="c26-teach rvl"><div class="ic">🔑</div>'
                  '<div class="tx"><b>教師教學專區</b>'
