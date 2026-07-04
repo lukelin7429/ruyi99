@@ -706,6 +706,7 @@ CAMP26_VIDS=[
  ("exaNyUKRaN4","開營典禮"),
  ("a0ngRAcoTww","生活禪・做包子"),
  ("XdUb_B1WcI0","佛學第一堂・願力種子"),
+ ("4tLKW_IKhNo","料理晚餐"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
