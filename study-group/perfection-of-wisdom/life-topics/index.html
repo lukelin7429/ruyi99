@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>現代生活中的《大智度論》 · 如意精舍</title>
+  <meta name="description" content="以現代人面臨的情緒、人際、死亡等問題為入口，整理《大智度論》可供日常實踐的智慧。">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/search.css">
+  <style>
+    :root{--topic-ink:#2b2520;--topic-sub:#6d6258;--topic-line:#e2d7c8;--topic-soft:#f7f2ea;--topic-card:#fff;--topic-gold:#b8792c;--topic-green:#426f5b;--topic-red:#9a504d}
+    .topic-hero{background:linear-gradient(135deg,#f7f2ea 0%,#fff 58%,#eef4ef 100%);border-bottom:1px solid var(--topic-line)}
+    .topic-hero .wrap{padding-top:58px;padding-bottom:48px}
+    .topic-kicker{color:var(--topic-green);font-weight:800;letter-spacing:.08em;margin-bottom:12px}
+    .topic-hero h1{font-size:clamp(34px,6vw,62px);line-height:1.15;margin:0 0 18px;letter-spacing:.02em}
+    .topic-hero p{max-width:820px;color:var(--topic-sub);font-size:18px;line-height:1.9;margin:0}
+    .topic-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;padding-top:34px;padding-bottom:76px}
+    .topic-nav{position:sticky;top:22px;align-self:start;background:#fff;border:1px solid var(--topic-line);border-radius:18px;padding:18px;box-shadow:0 14px 34px rgba(50,42,35,.08)}
+    .topic-nav strong{display:block;color:var(--topic-sub);font-size:14px;margin-bottom:8px}
+    .topic-nav a{display:block;text-decoration:none;color:var(--topic-ink);padding:9px 0;border-top:1px solid rgba(226,215,200,.72)}
+    .topic-section{background:#fff;border:1px solid var(--topic-line);border-radius:20px;padding:28px;margin-bottom:22px;box-shadow:0 14px 34px rgba(50,42,35,.07)}
+    .topic-section h2{font-size:28px;margin:0 0 14px;letter-spacing:.03em}
+    .topic-section h3{font-size:20px;margin:24px 0 10px}
+    .topic-section p{color:var(--topic-sub);line-height:1.9;margin:0 0 14px}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+    .problem-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--topic-line);border-radius:18px;padding:20px;min-height:180px;transition:.2s ease;position:relative;overflow:hidden}
+    .problem-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(50,42,35,.1)}
+    .problem-card .tag{display:inline-flex;border-radius:999px;background:#f3e8d8;color:#7b4b1d;padding:3px 10px;font-size:13px;font-weight:800;margin-bottom:12px}
+    .problem-card h3{margin:0 0 8px;font-size:21px}
+    .problem-card p{font-size:15px;margin:0;color:var(--topic-sub)}
+    .problem-card.is-soon{background:#f9f7f2}
+    .problem-card.is-soon .tag{background:#e9ece7;color:#5c675f}
+    .insight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+    .insight{border:1px solid var(--topic-line);border-radius:16px;padding:17px;background:linear-gradient(180deg,#fff,#fffaf3)}
+    .insight b{display:block;color:var(--topic-green);font-size:18px;margin-bottom:7px}
+    .method-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+    .method{border:1px solid var(--topic-line);border-radius:16px;background:#fff;padding:16px}
+    .method .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#f3e8d8;color:#7b4b1d;font-weight:800;margin-bottom:10px}
+    .method h3{font-size:18px;margin:0 0 8px}
+    .method p{font-size:15.5px;margin:0}
+    .daily-box{background:#f3f7f4;border:1px solid rgba(66,111,91,.28);border-radius:18px;padding:20px;margin-top:16px}
+    .daily-box ol{margin:0;padding-left:1.4rem;color:var(--topic-sub);line-height:1.9}
+    .source-list a{color:var(--topic-green);font-weight:700}
+    .small-note{font-size:14.5px;color:var(--topic-sub)}
+    @media(max-width:920px){.topic-layout{grid-template-columns:1fr}.topic-nav{position:static}.problem-grid,.insight-grid,.method-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="/"><img class="brand-logo" src="/assets/img/ruyi-logo.png" alt="如意精舍" width="42" height="42"><span>如意精舍<small>RU-YI MEDITATION</small></span></a><nav class="nav"><a href="/">首頁</a><a href="/bhikkhuni/">法師簡介</a><a href="/study-group/" class="active">讀書會</a><a href="/news/">法會資訊</a><a href="/videos/">影音</a><a href="/column/">專欄</a><a href="/learn/">學習園地</a></nav><div class="topbar-actions"><button type="button" class="nav-search-btn" id="siteSearchBtn" aria-label="搜尋本站" title="搜尋（按 /）">搜尋</button></div></div></header>
+
+  <section class="topic-hero">
+    <div class="wrap">
+      <div class="crumb"><a href="/">首頁</a><span>›</span><a href="/study-group/">讀書會</a><span>›</span><a href="/study-group/perfection-of-wisdom/">大智度論</a><span>›</span>現代生活中的《大智度論》</div>
+      <div class="topic-kicker">問題導向導讀</div>
+      <h1>現代生活中的《大智度論》</h1>
+      <p>《大智度論》不是只屬於古文閱讀，也可以成為現代人面對情緒、人際、失落與壓力時的智慧地圖。本頁先從「如何控制自己的情緒」開始，把忍辱波羅蜜轉成日常可練習的觀照方法。</p>
+    </div>
+  </section>
+
+  <main class="wrap topic-layout">
+    <nav class="topic-nav" aria-label="頁面導覽">
+      <strong>本頁導覽</strong>
+      <a href="#problems">現代問題入口</a>
+      <a href="#emotion">如何控制情緒</a>
+      <a href="#methods">25 種忍辱方法</a>
+      <a href="#practice">日常練習</a>
+      <a href="#sources">資料來源</a>
+    </nav>
+
+    <div>
+      <section class="topic-section" id="problems">
+        <h2>從現代問題進入經論</h2>
+        <p>讀者不一定一開始就能讀懂「羼提波羅蜜」「生忍」「法忍」等名相，但每個人都知道生氣、失去、相處困難是什麼。主題卡的目的，就是先從生活問題打開門，再引導回《大智度論》的智慧。</p>
+        <div class="problem-grid">
+          <a class="problem-card" href="#emotion">
+            <span class="tag">已建立</span>
+            <h3>如何控制自己的情緒</h3>
+            <p>從《大智度論》卷14整理 25 種忍辱方法，轉成現代生活可用的情緒練習。</p>
+          </a>
+          <article class="problem-card is-soon">
+            <span class="tag">準備中</span>
+            <h3>如何面對親人的離去與死亡</h3>
+            <p>未來可從無常、苦、空、慈悲與回向等角度建立導讀。</p>
+          </article>
+          <article class="problem-card is-soon">
+            <span class="tag">準備中</span>
+            <h3>如何與難合作的同事相處</h3>
+            <p>未來可從忍辱、正語、觀因緣、破我慢等角度整理。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="topic-section" id="emotion">
+        <h2>如何控制自己的情緒</h2>
+        <p>《大智度論》談「忍辱」，不只是被欺負時硬忍，也不是壓抑情緒。它更像是一組心的訓練：當別人罵我、傷害我、讓我不舒服時，我先不讓瞋心接管自己，而是換一個角度看事情。</p>
+        <div class="insight-grid">
+          <article class="insight">
+            <b>忍，不是吞下委屈</b>
+            <p>忍辱的重點是「不被瞋心牽走」。必要時仍可溝通、設界線、離開危險，只是不讓報復心成為主導。</p>
+          </article>
+          <article class="insight">
+            <b>情緒來時，先換觀點</b>
+            <p>《大智度論》列出的許多方法，都是把「他在害我」轉成「我可以怎麼學、怎麼護心、怎麼減少苦」。</p>
+          </article>
+          <article class="insight">
+            <b>對方也被煩惱所苦</b>
+            <p>有些人難相處，不一定是專門針對我，也可能是被壓力、恐懼、習氣推著走。看見這點，瞋心會鬆一點。</p>
+          </article>
+          <article class="insight">
+            <b>保護自己，也保護善心</b>
+            <p>忍辱不是讓人繼續傷害自己，而是在處理問題時，不把自己的善心、智慧和判斷力一起燒掉。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="topic-section" id="methods">
+        <h2>25 種忍辱方法：白話與生活例子</h2>
+        <p>以下依《大智度論》卷14「云何瞋惱人中而得忍辱」的脈絡整理。每一項都先用一句白話說明，再給一個現代生活例子。</p>
+        <div class="method-list">
+          <article class="method"><span class="num">1</span><h3>當作還債</h3><p>白話：遇到不如意，先想這是因緣成熟，不必再用瞋心加重。例子：被同事誤會時，先穩住，不急著用更難聽的話回擊。</p></article>
+          <article class="method"><span class="num">2</span><h3>保持慈心</h3><p>白話：平常多練習祝願他人離苦，衝突時比較不會立刻爆炸。例子：對方語氣很衝，心裡先提醒自己：「願他不要被壓力逼成這樣。」</p></article>
+          <article class="method"><span class="num">3</span><h3>看見對方也苦</h3><p>白話：對方讓我痛苦，但他自己也活在種種苦中。例子：家人講話刺耳時，想到他也可能被老病、焦慮、孤單折磨。</p></article>
+          <article class="method"><span class="num">4</span><h3>不要隨世俗反射動作走</h3><p>白話：一般人被侵犯就瞋、被稱讚就喜；修行是練習不被拉著走。例子：在群組被批評，先等十分鐘再回覆。</p></article>
+          <article class="method"><span class="num">5</span><h3>把逆境看成老師</h3><p>白話：沒有難相處的人，就看不出自己的忍辱功夫。例子：遇到難合作的同事，把它當作訓練清楚溝通與穩定心的課題。</p></article>
+          <article class="method"><span class="num">6</span><h3>想到眾生曾互為親屬</h3><p>白話：從久遠因緣看，彼此不是絕對的敵人。例子：路人無禮插隊時，提醒自己不要把一個瞬間的行為定義成「這個人全壞」。</p></article>
+          <article class="method"><span class="num">7</span><h3>尊重每個人的佛種</h3><p>白話：對方現在糊塗，不代表永遠沒有覺悟的可能。例子：對孩子或下屬失望時，仍保留引導他的耐心。</p></article>
+          <article class="method"><span class="num">8</span><h3>看見瞋心的代價</h3><p>白話：瞋心會吞掉善心，也讓自己失去快樂。例子：一封憤怒 email 可能破壞多年合作，先不要在怒氣最高時送出。</p></article>
+          <article class="method"><span class="num">9</span><h3>記得慈悲是根本</h3><p>白話：菩薩以大悲為本，瞋心會破壞這個根本。例子：照顧病人或長輩時，疲累想罵人，先回到「我是想幫他離苦」。</p></article>
+          <article class="method"><span class="num">10</span><h3>把對方看成鍛鍊</h3><p>白話：罵我、逼我的境界，像火煉金，能燒出雜質。例子：被主管挑錯時，分辨哪些是可改進處，哪些只是情緒，不全盤接收。</p></article>
+          <article class="method"><span class="num">11</span><h3>讓對方少一點苦</h3><p>白話：有時對方發洩，是因為內心太苦；我不必加倍反擊。例子：朋友抱怨時語氣不好，先聽完，再找適當時間談界線。</p></article>
+          <article class="method"><span class="num">12</span><h3>對極苦者生憐憫</h3><p>白話：常被病、死、恐懼追逼的人，更需要慈愍。例子：老人家脾氣大，看到背後的衰老恐懼，而不是只看表面的難搞。</p></article>
+          <article class="method"><span class="num">13</span><h3>把瞋心視為重病</h3><p>白話：瞋心會覆蓋智慧，是心病中很難治的一種。例子：發現自己一直重播對方的錯，立刻停下來做呼吸或念佛。</p></article>
+          <article class="method"><span class="num">14</span><h3>知道瞋會越養越大</h3><p>白話：瞋心若常被餵養，會從小怨變大恨。例子：不要每天找朋友重複罵同一個人，改為討論下一步怎麼做。</p></article>
+          <article class="method"><span class="num">15</span><h3>忍能長養慈悲</h3><p>白話：能忍，心會柔軟；心柔軟，慈悲就容易生起。例子：練習不立刻反駁，會慢慢聽見對方真正的需要。</p></article>
+          <article class="method"><span class="num">16</span><h3>寧被無智者誤會，不被賢善者輕賤</h3><p>白話：怕被說軟弱而報復，反而失去自己的品格。例子：不在公開場合羞辱對方，即使旁人覺得你沒有贏。</p></article>
+          <article class="method"><span class="num">17</span><h3>忍讓心柔軟</h3><p>白話：忍辱的人即使沒有很多外在表現，也累積深厚功德。例子：家庭中少一句傷人的話，關係就少一道裂痕。</p></article>
+          <article class="method"><span class="num">18</span><h3>想到不忍的後果</h3><p>白話：一時逞快，後面可能要承受更重的苦。例子：吵架時摔東西、放狠話，事後修補關係更辛苦。</p></article>
+          <article class="method"><span class="num">19</span><h3>像醫師不怪病人</h3><p>白話：對方被瞋心所病，我若也瞋，就是一起生病。例子：客戶失控責罵時，先處理問題與安全，不把每句話都當成人身攻擊。</p></article>
+          <article class="method"><span class="num">20</span><h3>像看待無知小兒</h3><p>白話：有些傷害來自無明，不一定來自真正理解後的惡意。例子：孩子頂嘴時，先教育，不用成人對成人的仇恨回應。</p></article>
+          <article class="method"><span class="num">21</span><h3>想到後來更苦</h3><p>白話：不忍的當下好像痛快，後面悔恨與惡果更難受。例子：在社群媒體怒罵，當下舒暢，之後可能留下長久紀錄。</p></article>
+          <article class="method"><span class="num">22</span><h3>不忍就不像菩薩</h3><p>白話：若立願利益眾生，就不能讓瞋心成為自己的招牌。例子：身為主管、老師、父母，更要練習在壓力中不傷人。</p></article>
+          <article class="method"><span class="num">23</span><h3>像避風雨，不必恨風雨</h3><p>白話：遇到非人為的冷熱風雨，我們會防護而不瞋；遇人事也可先求方法。例子：難相處的人像壞天氣，先設流程與界線，不必天天怨恨。</p></article>
+          <article class="method"><span class="num">24</span><h3>觀察無我，誰在被傷害</h3><p>白話：身心是因緣和合，很多痛苦來自抓緊「我被羞辱」。例子：被一句話刺到時，問自己：是事實受損，還是自尊受刺激？</p></article>
+          <article class="method"><span class="num">25</span><h3>學諸佛走過的路</h3><p>白話：諸佛菩薩都先修生忍，再入更深法忍。例子：把今天的一次不反擊，當成向佛菩薩學習的一小步。</p></article>
+        </div>
+      </section>
+
+      <section class="topic-section" id="practice">
+        <h2>日常練習：情緒來時的四步</h2>
+        <p>這四步不是取代專業心理或醫療協助，而是把忍辱波羅蜜轉成日常可做的簡短練習。</p>
+        <div class="daily-box">
+          <ol>
+            <li><strong>停一下：</strong>先不要立刻回嘴、回訊息、按送出。</li>
+            <li><strong>認出瞋心：</strong>心裡說：「我現在正在被瞋心推動。」</li>
+            <li><strong>選一種觀法：</strong>例如「對方也苦」「這是練忍辱」「不要讓瞋心燒掉善心」。</li>
+            <li><strong>再處理事情：</strong>該溝通就溝通，該設界線就設界線，該離開危險就離開。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="topic-section source-list" id="sources">
+        <h2>資料來源與閱讀線索</h2>
+        <p>本頁依《大智度論》卷14關於「生忍」與「瞋惱人中修忍」的段落改寫，並參考厚觀法師〈《大智度論》之忍波羅蜜〉講義所整理的科目。</p>
+        <ul>
+          <li><a href="https://www.yinshun.org/docs/2007/SummerDharmaRetreat/Chinese/2007%E5%8E%9A%E8%A7%80%E6%B3%95%E5%B8%AB-%E3%80%8A%E5%A4%A7%E6%99%BA%EF%A8%81%EF%A5%81%E3%80%8B%E4%B9%8B%E5%BF%8D%E6%B3%A2%EF%A4%8F%E8%9C%9C.pdf" target="_blank" rel="noopener">厚觀法師：《大智度論》之忍波羅蜜</a></li>
+          <li><a href="https://zh.wikisource.org/zh-hant/%E5%A4%A7%E6%99%BA%E5%BA%A6%E8%AB%96/%E5%8D%B7015" target="_blank" rel="noopener">維基文庫：《大智度論》卷015</a></li>
+          <li><a href="https://deerpark.app/cbeta/T1509/15" target="_blank" rel="noopener">漢文大藏經：大智度論卷15</a></li>
+        </ul>
+        <p class="small-note">說明：本頁是讀書會導讀用途，重點在白話理解與日常應用；經論原文與詳細註解，仍應回到講義與大藏經本文研讀。</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot"><div class="wrap"><div><div class="fbrand">如意精舍</div><p>南投縣信義鄉風櫃斗山上，海拔約 800 公尺。<br>兩位法師於 2017 年回鄉弘法，以弘揚正知正見的佛法為理念，帶領大眾聞思修。</p></div><div><h4>聯絡</h4><p>南投縣信義鄉自強村陽和巷80號<br>電話：049-2791267<br><a href="mailto:a0909359364@gmail.com">a0909359364@gmail.com</a><br><a href="mailto:luke@ruyi99.org">luke@ruyi99.org</a></p></div><div><h4>連結</h4><p><a href="https://www.youtube.com/@ruyi99" target="_blank" rel="noopener">YouTube 頻道 @ruyi99</a><br><a href="https://ruyimeditation.org" target="_blank" rel="noopener">English site · ruyimeditation.org</a></p></div></div><div class="wrap bot">© 如意精舍 Ru-Yi Meditation Center · 南投信義．風櫃斗</div></footer>
+  <script>window.RS_INDEX="/search.json"</script>
+  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/search.js"></script>
+</body>
+</html>
