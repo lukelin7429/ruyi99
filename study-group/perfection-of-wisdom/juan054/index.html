@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《大智度論》卷054 導讀</title>
+  <style>
+    :root {
+      --ink: #24211d;
+      --muted: #6c6256;
+      --line: #ddd3c5;
+      --paper: #fbfaf7;
+      --surface: #ffffff;
+      --wash: #f1eee8;
+      --saffron: #b96f27;
+      --leaf: #4f7460;
+      --blue: #3d647c;
+      --rose: #9c5a54;
+      --shadow: 0 14px 35px rgba(58, 49, 37, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(241, 238, 232, 0.75), rgba(251, 250, 247, 0.5) 360px),
+        var(--paper);
+      font-family: "Noto Serif TC", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .hero {
+      padding: 48px 24px 28px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(185, 111, 39, 0.13), transparent 34%),
+        linear-gradient(135deg, rgba(79, 116, 96, 0.09), transparent 46%);
+    }
+
+    .hero-inner,
+    .content {
+      width: min(1120px, calc(100vw - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 14px;
+      color: var(--leaf);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--leaf);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 860px;
+      font-size: clamp(2rem, 5vw, 4.6rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 1.14rem;
+      line-height: 1.9;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta li {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.64);
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: #51493f;
+      font-size: 0.92rem;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 30px;
+      padding: 30px 0 72px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      color: var(--ink);
+      text-decoration: none;
+      border-top: 1px solid rgba(221, 211, 197, 0.7);
+      font-size: 0.96rem;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      margin-bottom: 26px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    section.unframed {
+      padding: 8px 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.55rem;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 1.16rem;
+      color: #3d342b;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: #39332d;
+    }
+
+    .quote {
+      margin: 20px 0 0;
+      padding: 18px 20px;
+      border-left: 5px solid var(--saffron);
+      background: #fff7ea;
+      color: #4f3a21;
+      font-size: 1.12rem;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .key-card {
+      min-height: 168px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #faf7f1);
+    }
+
+    .key-card b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--saffron);
+      font-size: 1.05rem;
+    }
+
+    .key-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eee7dc;
+      color: #493e33;
+      font-weight: 800;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .chapter-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdfa;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 15px 18px;
+      background: #f5f0e8;
+      font-weight: 800;
+      color: #3a332b;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-body {
+      padding: 18px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(79, 116, 96, 0.35);
+      background: rgba(79, 116, 96, 0.08);
+    }
+
+    .note strong {
+      color: var(--leaf);
+    }
+
+    .terms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .terms span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 11px;
+      background: #fff;
+      color: #4d453c;
+      font-size: 0.92rem;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 880px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 36px 18px 22px;
+      }
+
+      .hero-inner,
+      .content {
+        width: min(100vw - 28px, 1120px);
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">第四冊 · 卷054 · 〈釋天主品第二十七〉</p>
+        <h1>《大智度論》卷054 導讀</h1>
+        <p class="subtitle">帝釋三問開展「般若體、般若行、般若住」，須菩提以無所得空慧說明菩薩如何應住而不取相住，最後歸結於般若離名言、離說聽、離可取相。</p>
+        <ul class="meta" aria-label="講義資訊">
+          <li>講義第 08 期</li>
+          <li>PDF：27 頁</li>
+          <li>講義署名：釋厚觀</li>
+          <li>日期：2010.05.08</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>頁面導覽</strong>
+        <a href="#overview">本卷定位</a>
+        <a href="#three-questions">帝釋三問</a>
+        <a href="#structure">經論架構</a>
+        <a href="#practice">修學重點</a>
+        <a href="#terms">名相索引</a>
+        <a href="#web-plan">網頁版型建議</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>本卷定位</h2>
+          <p class="lead">本卷承接〈天主品〉，以釋提桓因請問般若為主軸。前半鋪陳諸天來集與佛光勝諸天光明，接著由帝釋三問引出般若的體、行、住，後半則進一步顯示般若畢竟空，離名言、離說聽、離可取相。</p>
+          <div class="quote">菩薩應以無所得為方便，於般若中「應住」而「不取相住」。</div>
+          <div class="grid">
+            <article class="key-card">
+              <b>說法因緣</b>
+              <p>諸天來集，佛常光勝諸天業報光，顯示般若智慧勝於天福。</p>
+            </article>
+            <article class="key-card">
+              <b>三問展開</b>
+              <p>帝釋問般若是什麼、如何行、如何住，成為本卷科判主軸。</p>
+            </article>
+            <article class="key-card">
+              <b>甚深歸結</b>
+              <p>般若雖藉語言說明，究竟不可執取為說者、聽者、知者。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="three-questions">
+          <h2>帝釋三問</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>帝釋所問</th>
+                <th>講義判釋</th>
+                <th>導讀意義</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>云何是般若波羅蜜</td>
+                <td>問般若體</td>
+                <td>般若是什麼，不是抽象定義，而是於一切法中以無所得如實觀察。</td>
+              </tr>
+              <tr>
+                <td>云何行</td>
+                <td>問初入方便行</td>
+                <td>如何開始修般若：觀五蘊、十二因緣、六度、三乘法，皆無所得。</td>
+              </tr>
+              <tr>
+                <td>云何住</td>
+                <td>問深入究竟住</td>
+                <td>如何安住於般若：住於人法二空，並於一切善法不取相住。</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="structure">
+          <h2>經論架構</h2>
+          <div class="chapter-list">
+            <details open>
+              <summary>壹、諸天來集，佛常光勝諸天光明</summary>
+              <div class="detail-body">
+                <div class="two-col">
+                  <div>
+                    <h3>內容重點</h3>
+                    <ul>
+                      <li>三千大千世界中，欲界、色界諸天來集。</li>
+                      <li>諸天有業報身光，來自布施、持戒、禪定、離欲等善業。</li>
+                      <li>佛常光雖說面各一丈，卻能映蔽諸天光明。</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>導讀方向</h3>
+                    <ul>
+                      <li>諸天來集不是單純列名，而是在鋪陳般若法會的殊勝性。</li>
+                      <li>天光代表福德業報，佛光代表佛德與智慧。</li>
+                      <li>由佛光勝天光，引出帝釋對般若智慧的希求。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details open>
+              <summary>貳、以三義說般若：般若體、初入般若行、深入究竟住</summary>
+              <div class="detail-body">
+                <h3>須菩提受請為說</h3>
+                <p>須菩提承佛神力而說般若，並勸未發心者應發菩提心。即使已入小乘聖道者，若能發心，也應隨喜，不障其功德。</p>
+                <h3>正答般若體與般若行</h3>
+                <ul>
+                  <li>主軸是「應薩婆若心，以無所得空慧觀」。</li>
+                  <li>觀五蘊無常、苦、空、無我，並觀五蘊如病、如癰、如箭、痛、惱、衰等。</li>
+                  <li>觀十二因緣、三乘法、六波羅蜜，皆以無所得為方便。</li>
+                  <li>說明諸法因緣和合而有增長，但畢竟空、無我、無我所。</li>
+                </ul>
+                <h3>正答般若住</h3>
+                <p>五蘊空、六根空、六塵空、六大空、十二因緣空、六度乃至一切種智空，與菩薩空無二無別。所謂住般若，不是住在某個境界，而是住於人法二空。</p>
+              </div>
+            </details>
+
+            <details>
+              <summary>應住與不應住</summary>
+              <div class="detail-body">
+                <h3>應如是住</h3>
+                <p>五蘊空與菩薩空無二無別，乃至一切種智空與菩薩空亦無二無別。菩薩不可在「菩薩」這個身分上建立實有相。</p>
+                <h3>所不應住</h3>
+                <ul>
+                  <li>不應住五蘊乃至一切種智。</li>
+                  <li>不應住常、無常、樂、苦、淨、不淨、我、無我、空、不空等門。</li>
+                  <li>不應住三乘無為果相與福田相。</li>
+                  <li>不應住菩薩初地乃至十地。</li>
+                  <li>不應住初發心、具足六度、不退轉地、五神通、供養諸佛、成就眾生、五眼、三昧、陀羅尼、十力、大慈大悲、相好等。</li>
+                </ul>
+                <div class="note"><strong>關鍵辨正：</strong>「不應住」不是否定修行內容，而是否定取相執著。論中明說：不破清淨住，但破計我邪見取相心住。</div>
+              </div>
+            </details>
+
+            <details>
+              <summary>參、顯般若義甚深</summary>
+              <div class="detail-body">
+                <h3>般若畢竟空，無名言、無聽、無說</h3>
+                <p>諸天覺得須菩提所說比夜叉語更難解。須菩提說，般若中無所論說，乃至不說一字，亦無聽者；諸法如化、如夢、如響、如幻，無說者、無聽者、無知者。</p>
+                <h3>諸法與諸法性非深非妙</h3>
+                <p>諸天以為須菩提越說越深妙，須菩提反說色非深非妙，受想行識非深非妙，乃至一切種智、一切種智性，非深非妙。若把「深妙」取成一個可執著的境界，仍不離戲論。</p>
+                <h3>雖說諸法，實無說者、聽者、知者</h3>
+                <p>諸佛所證菩提不可說，其中無說者、聽者、知者。欲證三乘聖果乃至佛道，皆不離此忍。菩薩從初發心起，應於般若中如是住：以無說、無聽故。</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section id="practice">
+          <h2>本卷修學重點</h2>
+          <div class="grid">
+            <article class="key-card">
+              <b>以無所得為方便</b>
+              <p>五蘊、十二處、十八界、十二因緣、六度、三乘、佛果功德，皆應以無所得觀之。</p>
+            </article>
+            <article class="key-card">
+              <b>不住不是不修</b>
+              <p>般若的「不住」不是消極，也不是廢除菩薩行，而是於一切善法中不取相。</p>
+            </article>
+            <article class="key-card">
+              <b>說法而離說法相</b>
+              <p>般若可藉語言引導，但不可被語言固定；依言入義，得義忘言。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <p>這些名相適合未來逐步做成可點選的詞彙頁，幫助學員在不同卷次之間建立連結。</p>
+          <div class="terms">
+            <span>帝釋</span>
+            <span>須菩提</span>
+            <span>般若波羅蜜</span>
+            <span>五蘊</span>
+            <span>十二因緣</span>
+            <span>六波羅蜜</span>
+            <span>三乘</span>
+            <span>一切種智</span>
+            <span>無所得</span>
+            <span>不住</span>
+            <span>人法二空</span>
+            <span>無生忍</span>
+            <span>如幻如化</span>
+          </div>
+        </section>
+
+        <section id="web-plan">
+          <h2>後續網頁化建議</h2>
+          <ol>
+            <li>主頁保留導讀式摘要，讓初學者快速掌握本卷重點。</li>
+            <li>完整科判放在可展開區塊，保留講義的嚴謹結構。</li>
+            <li>未來補上對應讀書會錄音集數，讓讀者可以從摘要回到音檔。</li>
+            <li>名相索引可以逐卷累積，最後變成《大智度論》學習地圖。</li>
+          </ol>
+          <p class="footer-note">目前這是第一版 HTML 草稿，重點是建立可閱讀、可討論、可持續擴充的版型。</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
