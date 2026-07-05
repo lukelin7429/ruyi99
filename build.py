@@ -710,6 +710,8 @@ CAMP26_VIDS=[
  ("b5_JI1q8Q28","三寶歌教學"),
  ("cBcW9-hn4ig","晨間瑜珈"),
  ("6cEJ9CdUWn4","早課"),
+ ("e6eU2H4gc4k","佛學第四堂・生命願景"),
+ ("eSi21KPWtGo","大自然行禪"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
