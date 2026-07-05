@@ -708,6 +708,8 @@ CAMP26_VIDS=[
  ("XdUb_B1WcI0","佛學第一堂・願力種子"),
  ("4tLKW_IKhNo","料理晚餐"),
  ("b5_JI1q8Q28","三寶歌教學"),
+ ("cBcW9-hn4ig","晨間瑜珈"),
+ ("6cEJ9CdUWn4","早課"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
