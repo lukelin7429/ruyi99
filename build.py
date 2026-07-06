@@ -714,6 +714,8 @@ CAMP26_VIDS=[
  ("eSi21KPWtGo","大自然行禪"),
  ("p7FZZTPi4MU","晨間瑜珈・第三天"),
  ("4tPWiJKzoL8","佛學第三堂・領袖智慧"),
+ ("b2CecQpxiH8","拍片教學"),
+ ("LzGeo_8X9SQ","佛曲教唱"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 # 學生「60 秒佛法微電影」創作成果（與上面的活動側拍紀錄區隔開）
