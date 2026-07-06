@@ -713,6 +713,7 @@ CAMP26_VIDS=[
  ("e6eU2H4gc4k","佛學第四堂・生命願景"),
  ("eSi21KPWtGo","大自然行禪"),
  ("p7FZZTPi4MU","晨間瑜珈・第三天"),
+ ("4tPWiJKzoL8","佛學第三堂・領袖智慧"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
 
