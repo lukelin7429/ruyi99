@@ -716,6 +716,13 @@ CAMP26_VIDS=[
  ("4tPWiJKzoL8","佛學第三堂・領袖智慧"),
 ]
 CAMP26_PLAYLIST="https://www.youtube.com/playlist?list=PLQbEm5zT7U80"
+# 學生「60 秒佛法微電影」創作成果（與上面的活動側拍紀錄區隔開）
+CAMP26_FILMS=[
+ ("T8VLudxG-9U","喜捨班・微電影"),
+ ("yH1ZacXsCQE","精進班・微電影"),
+ ("h19ayYFdsDQ","慈悲班・微電影"),
+ ("4bO27OXFTDY","慈悲班・幕後花絮"),
+]
 
 CAMP26_CSS=("<style>"
  ".c26-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}"
@@ -759,6 +766,9 @@ CAMP26_CSS=("<style>"
  ".c26-teach a.btn{background:var(--plum);color:#fff;padding:11px 20px;border-radius:999px;"
  "font-weight:700;font-size:15px;white-space:nowrap}"
  ".c26-teach a.btn:hover{background:var(--plum-deep);color:#fff}"
+ ".c26-filmwrap{background:linear-gradient(180deg,rgba(124,41,66,.06),rgba(124,41,66,.01));"
+ "border:1.5px solid var(--plum-soft,#eddce3);border-radius:20px;padding:26px 22px 8px;margin:6px 0 12px}"
+ ".c26-filmnote{margin:0 0 18px;font-size:15px;color:var(--sub);line-height:1.7}"
  "</style>")
 
 def build_camp_2026(o="/camps/2026/"):
@@ -789,6 +799,14 @@ def build_camp_2026(o="/camps/2026/"):
                      '活動影片將於營隊結束後陸續上線，敬請期待。<br>'
                      '<span style="font-size:14px;color:var(--sub)">'
                      '歷年夏令營影音紀錄請見 <a href="%s">夏令營總覽</a>。</span></div>'%u("/camps/"))
+    # 學生微電影作品（與上面的活動側拍紀錄區隔開）
+    if CAMP26_FILMS:
+        parts.append('<div class="section-title rvl"><h2>🎬 學生微電影作品</h2><div class="rule"></div></div>')
+        parts.append('<div class="c26-filmwrap rvl">'
+                     '<p class="c26-filmnote">7/6 共創表達日，喜捨班、精進班、慈悲班三隊各自實拍剪輯一部「60 秒佛法微電影」，'
+                     '當晚在星空下首映——這是孩子們親手完成的創作，與上方的活動紀錄側拍不同。</p>'
+                     '<div class="video-grid">'+''.join(yt_thumb(v[0],v[1],force=True) for v in CAMP26_FILMS)+'</div>'
+                     '</div>')
     # 四天主題
     parts.append('<div class="section-title rvl"><h2>四天，四個主題</h2><div class="rule"></div></div>')
     th='<div class="c26-themes rvl">'
