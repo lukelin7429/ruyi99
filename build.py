@@ -489,9 +489,12 @@ HERO_ART=('<svg class="hero-art" viewBox="0 0 1200 600" preserveAspectRatio="xMi
    for x,y,s in [(196,440,1.5),(190,402,1.2),(150,410,1.0),(128,408,0.9),(210,455,1.0)])
  +'</g></svg>')
 
+HOME_EXTRA_PHOTOS=["assets/img/home-courtyard-service.jpg","assets/img/home-kids-camp.jpg",
+                   "assets/img/home-mountain-trail.jpg","assets/img/home-group-photo.jpg",
+                   "assets/img/home-misty-mountain.jpg"]
 def build_home():
     d=content["/home"]
-    imgs=[b["src"] for b in d["blocks"] if b["t"]=="img"]
+    imgs=[b["src"] for b in d["blocks"] if b["t"]=="img"]+HOME_EXTRA_PHOTOS
     intro=[b["text"] for b in d["blocks"] if b["t"] in ("h","p") and len(b.get("text",""))>30][:4]
     vids=[b["id"] for b in d["blocks"] if b["t"]=="yt"]
     _=u  # base-aware url helper
@@ -977,7 +980,10 @@ def build_camp_kids_2026(o="/camps/2026-kids/"):
 NEWS_PHOTOS=[("assets/img/news-chanting.jpg","晨間誦經共修"),
              ("assets/img/news-altar.jpg","大殿三寶佛與供果"),
              ("assets/img/news-talk.png","法師開示講法"),
-             ("assets/img/news-bathing.jpg","浴佛法會")]
+             ("assets/img/news-bathing.jpg","浴佛法會"),
+             ("assets/img/news-recitation-outdoor.jpg","戶外誦經法會"),
+             ("assets/img/news-flower-offering.jpg","獻花供佛"),
+             ("assets/img/news-altar-service.jpg","大殿共修法會")]
 NEWS_EVENTS=[  # (solar, 農曆, 名稱, 備註, 類型) — 依現行站時間表（Luke 截圖核對）
  ("1/10","農曆十一月廿二","回娘家","","home"),
  ("1/11","農曆十一月廿三","念佛法會","","nianfo"),
