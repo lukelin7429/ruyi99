@@ -843,8 +843,12 @@ def build_camp_2026(o="/camps/2026/"):
     # 教師專區（低調連結、非卡片）
     parts.append('<div class="c26-teach rvl"><div class="ic">🔑</div>'
                  '<div class="tx"><b>教師教學專區</b>'
-                 '<span>提供本營授課老師備課使用的教學指引（逐分鐘流程、講師口白、學習單）。</span></div>'
+                 '<span>8 位老師的授課教材，提供備課使用的教學指引（逐分鐘流程、講師口白、學習單）。</span></div>'
                  '<a class="btn" href="%s">進入教師專區 →</a></div>'%u("/camps/2026/teaching/"))
+    parts.append('<div class="c26-teach rvl"><div class="ic">📋</div>'
+                 '<div class="tx"><b>主持人手冊</b>'
+                 '<span>總隊輔・隊輔現場用——4 天逐分鐘流程稿、開場口白、19 個團康活動操作卡。</span></div>'
+                 '<a class="btn" href="%s">進入主持人手冊 →</a></div>'%u("/camps/2026/host-guide/"))
     parts.append('</div></main>')
     return page("2026 青少年學佛營","/learn/",CAMP26_CSS+''.join(parts),
                 "2026 如意精舍青少年學佛營（7/4–7/7）課程表與活動紀錄 · 如意精舍")
