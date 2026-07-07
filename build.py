@@ -977,13 +977,13 @@ def build_camp_kids_2026(o="/camps/2026-kids/"):
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
-NEWS_PHOTOS=[("assets/img/news-chanting.jpg","晨間誦經共修"),
-             ("assets/img/news-altar.jpg","大殿三寶佛與供果"),
-             ("assets/img/news-talk.png","法師開示講法"),
-             ("assets/img/news-bathing.jpg","浴佛法會"),
-             ("assets/img/news-recitation-outdoor.jpg","戶外誦經法會"),
-             ("assets/img/news-flower-offering.jpg","獻花供佛"),
-             ("assets/img/news-altar-service.jpg","大殿共修法會")]
+NEWS_PHOTOS=[("assets/img/news-chanting.jpg",""),
+             ("assets/img/news-altar.jpg",""),
+             ("assets/img/news-talk.png",""),
+             ("assets/img/news-bathing.jpg",""),
+             ("assets/img/news-recitation-outdoor.jpg",""),
+             ("assets/img/news-flower-offering.jpg",""),
+             ("assets/img/news-altar-service.jpg","")]
 NEWS_EVENTS=[  # (solar, 農曆, 名稱, 備註, 類型) — 依現行站時間表（Luke 截圖核對）
  ("1/10","農曆十一月廿二","回娘家","","home"),
  ("1/11","農曆十一月廿三","念佛法會","","nianfo"),
