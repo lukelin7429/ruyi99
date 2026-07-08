@@ -930,6 +930,8 @@ KIDS26_SCHEDULE=[
 KIDS26_VIDS=[
  ("dSIR-IVoT7A","開營前活動"),
  ("jZdGZISonZg","開營典禮"),
+ ("-8UZ9gvvau0","相見歡"),
+ ("KtCXndwWf9o","認識三寶"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
