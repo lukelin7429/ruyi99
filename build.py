@@ -932,6 +932,8 @@ KIDS26_VIDS=[
  ("jZdGZISonZg","開營典禮"),
  ("-8UZ9gvvau0","相見歡"),
  ("KtCXndwWf9o","認識三寶"),
+ ("FHQVkDrRSLw","戲劇編排"),
+ ("tF8vhLjRJns","早課"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
