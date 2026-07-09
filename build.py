@@ -941,6 +941,9 @@ KIDS26_VIDS=[
  ("j1p98R6393c","大自然探索"),
  ("nxJQzkgrS0Y","晚課"),
  ("AFoa-wso88s","早操"),
+ ("5mU6liC3si4","生命在呼吸間"),
+ ("Pab8_dq9zh4","腦力激盪"),
+ ("t7PGGStXOFI","三世因果"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
