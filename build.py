@@ -935,6 +935,9 @@ KIDS26_VIDS=[
  ("FHQVkDrRSLw","戲劇編排"),
  ("tF8vhLjRJns","早課"),
  ("Ql322XmGp4M","歡樂歌唱"),
+ ("j1p98R6393c","大自然探索"),
+ ("nxJQzkgrS0Y","晚課"),
+ ("AFoa-wso88s","早操"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
