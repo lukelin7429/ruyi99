@@ -854,7 +854,10 @@ def build_camp_2026(o="/camps/2026/"):
                 "2026 如意精舍青少年學佛營（7/4–7/7）課程表與活動紀錄 · 如意精舍")
 
 # ---------------- 2026 兒童學佛營（手動生成，不在爬蟲內） ----------------
+EXTRA_NAMES["/camps/"]="夏令營"
 EXTRA_NAMES["/camps/2026-kids/"]="2026 兒童營"
+EXTRA_NAMES["/camps/2026-kids/teaching/"]="教師專區"
+EXTRA_NAMES["/camps/2026-kids/teaching/brave-no-game/"]="勇敢說不互動遊戲"
 
 # 五天主題（日期, 主題, 第N天, 一句話, 主色, 副色）
 KIDS26_THEMES=[
@@ -993,9 +996,148 @@ def build_camp_kids_2026(o="/camps/2026-kids/"):
                     %(a,b,esc(time),star_mark,esc(cname),
                       '<div class="ssub">%s</div>'%esc(desc) if desc else ''))
         cards+='</div>'; parts.append(cards)
+    parts.append('<div class="c26-teach rvl"><div class="ic">KEY</div>'
+                 '<div class="tx"><b>教師專區</b>'
+                 '<span>提供本營授課老師備課、帶活動與補充教材使用。</span></div>'
+                 '<a class="btn" href="%s">進入教師專區 →</a></div>'%u("/camps/2026-kids/teaching/"))
     parts.append('</div></main>')
     return page("2026 兒童學佛營","/learn/",CAMP26_CSS+''.join(parts),
                 "2026 如意精舍兒童學佛營（7/8–7/12）課程表與活動紀錄 · 如意精舍")
+
+KIDS26_TEACH_CSS=("<style>"
+".teacher-hub{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:18px 0 38px}"
+".teacher-tile{display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .22s,box-shadow .22s,border-color .22s}"
+".teacher-tile:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:transparent;color:var(--ink)}"
+".teacher-tile .tag{width:max-content;background:var(--plum-soft);color:var(--plum-deep);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:800;letter-spacing:.08em}"
+".teacher-tile h2{margin:0;font-size:24px;letter-spacing:.04em}"
+".teacher-tile p{margin:0;color:var(--sub);line-height:1.75}"
+".teacher-tile .go{margin-top:auto;color:var(--plum);font-weight:800}"
+".teacher-note{background:#fbf8f2;border:1px solid var(--line);border-radius:16px;padding:20px;color:var(--sub);line-height:1.8}"
+"</style>")
+
+def build_kids26_teaching(o="/camps/2026-kids/teaching/"):
+    hero=band(crumb_html(o),"TEACHER AREA","教師專區",
+              "兒童學佛營授課老師備課使用。此區會持續補充教案、學習單與課堂活動。",slim=True)
+    body=(hero+'<main class="tintbg"><div class="wrap">'
+          '<div class="teacher-hub rvl">'
+          '<a class="teacher-tile" href="%s"><span class="tag">互動遊戲</span>'
+          '<h2>勇敢說不</h2><p>依照「不要就是不藥」簡報設計，帶孩子練習看穿偽裝、STOP 四步驟、拒毒六招與求助。</p>'
+          '<span class="go">開始遊戲 →</span></a>'
+          '</div><div class="teacher-note rvl">教師專區未來可再加入講義、學習單、影片連結與課程備忘。'
+          '目前先放置「互動遊戲」入口，避免一般家長或學員直接進入備課資料。</div>'
+          '</div></main>'%u("/camps/2026-kids/teaching/brave-no-game/"))
+    return page("2026 兒童營教師專區","/learn/",KIDS26_TEACH_CSS+body,
+                "2026 如意精舍兒童學佛營教師專區")
+
+KIDS26_GAME_CSS=("<style>"
+".game-shell{max-width:1120px;margin:0 auto 44px}"
+".game-panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px;margin:20px 0}"
+".game-top{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}"
+".score{display:flex;gap:10px;flex-wrap:wrap}.score span{background:#fbf8f2;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:800;color:var(--ink-soft)}"
+".meter{height:12px;background:#eee6d8;border-radius:999px;overflow:hidden;margin-top:14px}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#2f6d4f,#d98b3f);transition:width .28s}"
+".mission-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:18px}"
+".mission{border:1px solid var(--line);background:#fbf8f2;border-radius:14px;padding:18px;text-align:left;cursor:pointer;color:var(--ink);transition:transform .18s,border-color .18s,background .18s}"
+".mission:hover{transform:translateY(-3px);border-color:#d9b879}.mission.done{background:#edf6ef;border-color:#9cc7a8}.mission h3{margin:0 0 8px;font-size:18px}.mission p{margin:0;color:var(--sub);font-size:14px;line-height:1.6}"
+".stage{display:none}.stage.active{display:block}.stage h2{margin:0 0 10px;font-size:28px}.stage-lead{color:var(--sub);line-height:1.75;margin:0 0 18px}"
+".choices{display:grid;gap:12px}.choice{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:15px 16px;text-align:left;cursor:pointer;font-size:16px;color:var(--ink);line-height:1.6;transition:background .18s,border-color .18s,transform .18s}.choice:hover{transform:translateY(-2px);border-color:#d9b879}.choice.good{background:#eef8f0;border-color:#7fbd8b}.choice.bad{background:#fff0ed;border-color:#dd9286}"
+".feedback{min-height:58px;margin-top:16px;padding:14px 16px;border-radius:14px;background:#fbf8f2;color:var(--ink-soft);line-height:1.7;border:1px solid var(--line)}"
+".navrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.game-btn{border:0;background:var(--plum);color:#fff;border-radius:999px;padding:10px 18px;font-weight:800;cursor:pointer}.game-btn.secondary{background:#efe6d7;color:#4d4035}.game-btn:disabled{opacity:.45;cursor:not-allowed}"
+".cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:16px}.flip{min-height:118px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;cursor:pointer;color:var(--ink);transition:transform .2s,background .2s}.flip.revealed{background:#edf6ef;color:#24523e}.flip:hover{transform:translateY(-3px)}"
+".script-box{background:#2f5d52;color:#fff;border-radius:16px;padding:20px;margin-top:16px}.script-box b{display:block;font-size:20px;margin-bottom:8px}.script-box p{margin:0;color:rgba(255,255,255,.9);line-height:1.8}"
+".finish{display:grid;gap:16px;grid-template-columns:1.1fr .9fr;align-items:center}.finish-card{background:#fbf8f2;border:1px solid var(--line);border-radius:16px;padding:20px}.finish-card h3{margin:0 0 10px}.finish-card ul{margin:0;padding-left:20px;color:var(--sub);line-height:1.8}"
+"@media(max-width:760px){.finish{grid-template-columns:1fr}.stage h2{font-size:24px}.game-panel{padding:18px}}"
+"</style>")
+
+KIDS26_GAME_JS=r"""<script>
+(function(){
+var score=0, completed={}, current="";
+var missions={
+ disguise:{title:"看穿偽裝", lead:"毒品不一定長得像毒品。請判斷哪些物品需要提高警覺，重點是來源可不可信。",
+  questions:[
+   ["朋友拿出包裝可愛的咖啡包，說「很好喝，不要問那麼多」。你要怎麼做？",["我不喝不明來源的東西，先問老師。","看起來像飲料，喝一點沒關係。","幫朋友保管，等一下再說。"],0,"包裝可愛不代表安全。不明來源不吃、不喝、不吸。"],
+   ["有人說電子煙不是毒品，只是放鬆一下。你要怎麼判斷？",["可能混入危險成分，離開並告訴大人。","只吸一口就知道了。","如果很多人試過就安全。"],0,"電子煙、煙彈可能被混入毒品。不是可信任大人提供的，就不要碰。"],
+   ["陌生人給糖果，包裝漂亮，還說免費。",["免費不代表安全，我不要。","免費很划算，可以收下。","先拿著，不吃就好。"],0,"免費也是常見話術。拒絕、離開、求助，是保護自己。"]
+  ]},
+ stop:{title:"STOP 四步驟", lead:"遇到不舒服的邀請，先不要急著回應。把 STOP 四步驟排進心裡。",
+  cards:[["S","Stop：先停下來"],["T","Think：想一想危險"],["O","Out：離開現場"],["P","Protect：找大人保護"]]},
+ refuse:{title:"拒毒六招", lead:"拒絕不是沒禮貌，是保護自己。請幫主角選一句能說出口的安全回答。",
+  questions:[
+   ["同學說：「大家都有試，你不敢喔？」",["對，我就是很惜命。","好啦，只試一次。","你不要告訴老師就好。"],0,"這是自我解嘲，幽默但立場清楚。"],
+   ["朋友說：「這不是毒品啦，吸一口很放鬆。」",["是朋友就不要害我，我先走。","你先吸，我再看看。","幫我藏一下。"],0,"友誼勸說加走為上策：真正的朋友不會逼你做危險的事。"],
+   ["有人一直催你喝不明飲料。",["我不喝不明來源的東西，我要去找老師。","喝完再問是什麼。","如果好喝就再拿一包。"],0,"堅持拒絕並求助，最安全。"]
+  ]},
+ help:{title:"求助練習", lead:"孩子不需要自己當偵探。發現危險時，先保護自己，再找可信任的大人。",
+  questions:[
+   ["你看到有人拿不明煙彈要大家試。",["離開現場，告訴老師、家長或隊輔。","留下來拍照傳給同學。","幫忙拿去別的地方藏。"],0,"不要拍照炫耀、不要幫忙保管。先離開，再求助。"],
+   ["朋友疑似被誘惑，但他叫你不要說。",["找可信任的大人一起幫忙。","答應保密，免得朋友生氣。","自己去質問對方。"],0,"保護朋友不是保密危險，而是找大人一起處理。"],
+   ["如果現場已經有立即危險。",["先離開，必要時撥打 110。","再觀察一下就好。","自己把東西搶過來。"],0,"緊急危險要找警察與大人，不要自己硬撐。"]
+  ]}
+};
+function qs(s){return document.querySelector(s)}
+function qsa(s){return Array.from(document.querySelectorAll(s))}
+function update(){
+ qs("#gameScore").textContent=score;
+ var done=Object.keys(completed).length;
+ qs("#gameDone").textContent=done+"/4";
+ qs("#gameMeter").style.width=(done*25)+"%";
+ qsa(".mission").forEach(function(b){b.classList.toggle("done",!!completed[b.dataset.mission])});
+ qs("#finishBtn").disabled=done<4;
+}
+function openMission(id){
+ current=id; var m=missions[id], html='<div class="stage active"><h2>'+m.title+'</h2><p class="stage-lead">'+m.lead+'</p>';
+ if(m.cards){
+  html+='<div class="cards">'+m.cards.map(function(c){return '<button class="flip" data-back="'+c[1]+'">'+c[0]+'</button>'}).join("")+'</div>';
+  html+='<div class="feedback">請依序點開 STOP，帶孩子全班念一次。</div>';
+ }else{
+  html+='<div id="questionBox"></div><div class="feedback" id="feedback">請選一個最安全的做法。</div>';
+ }
+ html+='<div class="navrow"><button class="game-btn secondary" id="backHome">回任務選單</button><button class="game-btn" id="completeMission">完成這一關</button></div></div>';
+ qs("#stageArea").innerHTML=html;
+ if(m.cards){
+  qsa(".flip").forEach(function(btn){btn.addEventListener("click",function(){btn.textContent=btn.dataset.back;btn.classList.add("revealed")})});
+ }else{renderQuestion(0)}
+ qs("#backHome").onclick=function(){qs("#stageArea").innerHTML=""};
+ qs("#completeMission").onclick=function(){if(!completed[current]){completed[current]=true;score+=10}qs("#stageArea").innerHTML='<div class="feedback">這一關完成。請回任務選單選下一關。</div>';update()};
+}
+function renderQuestion(i){
+ var m=missions[current], q=m.questions[i], box=qs("#questionBox");
+ box.innerHTML='<div class="script-box"><b>情境 '+(i+1)+'</b><p>'+q[0]+'</p></div><div class="choices">'+q[1].map(function(t,idx){return '<button class="choice" data-i="'+idx+'">'+t+'</button>'}).join("")+'</div>';
+ qsa(".choice").forEach(function(btn){btn.onclick=function(){
+  var good=Number(btn.dataset.i)===q[2]; btn.classList.add(good?"good":"bad");
+  qs("#feedback").textContent=(good?"答對了。":"這個選擇不夠安全。")+" "+q[3];
+  if(good) score+=3;
+  setTimeout(function(){ if(i<m.questions.length-1) renderQuestion(i+1); else qs("#feedback").textContent+=" 這組情境完成，可以按「完成這一關」。"; update();},900);
+ }});
+}
+qsa(".mission").forEach(function(btn){btn.onclick=function(){openMission(btn.dataset.mission)}});
+qs("#finishBtn").onclick=function(){
+ qs("#stageArea").innerHTML='<div class="finish"><div class="game-panel"><h2>闖關完成</h2><p class="stage-lead">請全班一起念：我不碰不明來源的東西；真正的朋友不會害我；遇到危險，我會離開並找大人。</p><div class="script-box"><b>勇敢不是逞強</b><p>勇敢是懂得保護自己，也懂得求助。</p></div></div><div class="finish-card"><h3>老師收束提問</h3><ul><li>今天最常見的誘惑話術是哪一句？</li><li>你最容易說出口的拒絕句是哪一句？</li><li>請寫下三位可信任的大人。</li></ul></div></div>';
+};
+qs("#resetBtn").onclick=function(){score=0;completed={};qs("#stageArea").innerHTML="";update()};
+update();
+})();
+</script>"""
+
+def build_kids26_brave_no_game(o="/camps/2026-kids/teaching/brave-no-game/"):
+    hero=band(crumb_html(o),"INTERACTIVE GAME","勇敢說不互動遊戲",
+              "依照反毒課程「不要就是不藥」設計，讓孩子在情境中練習識毒、拒毒、求助。",slim=True)
+    body=(hero+'<main class="tintbg"><div class="wrap"><div class="game-shell">'
+          '<div class="game-panel game-top rvl"><div><h2 style="margin:0 0 6px">任務總覽</h2>'
+          '<p class="stage-lead" style="margin:0">老師可投影使用，分組作答，也可讓全班一起喊出拒絕句。</p></div>'
+          '<div class="score"><span>分數 <b id="gameScore">0</b></span><span>完成 <b id="gameDone">0/4</b></span></div>'
+          '<div class="meter" style="flex-basis:100%%"><i id="gameMeter"></i></div></div>'
+          '<div class="mission-grid rvl">'
+          '<button class="mission" data-mission="disguise"><h3>1. 看穿偽裝</h3><p>糖果、咖啡包、電子煙，不看外表，看來源。</p></button>'
+          '<button class="mission" data-mission="stop"><h3>2. STOP 四步驟</h3><p>先停、想危險、離開、找大人保護。</p></button>'
+          '<button class="mission" data-mission="refuse"><h3>3. 拒毒六招</h3><p>把「我不要」練到真的說得出口。</p></button>'
+          '<button class="mission" data-mission="help"><h3>4. 求助練習</h3><p>孩子不用當偵探，安全求助最重要。</p></button>'
+          '</div><div id="stageArea"></div>'
+          '<div class="navrow rvl"><button class="game-btn" id="finishBtn" disabled>完成總結</button>'
+          '<button class="game-btn secondary" id="resetBtn">重新開始</button>'
+          '<a class="game-btn secondary" href="%s" style="text-decoration:none">回教師專區</a></div>'
+          '</div></div></main>'%u("/camps/2026-kids/teaching/"))
+    return page("勇敢說不互動遊戲","/learn/",KIDS26_GAME_CSS+body+KIDS26_GAME_JS,
+                "2026 兒童學佛營教師用互動遊戲：勇敢說不，不要就是不藥")
 
 # ---------------- 法會資訊 (news) ----------------
 # 2026 法會時間表 — 上半年為現行站確認資料；下半年念佛法會＝每月第二個週日（10/11 經 Luke 確認）
@@ -1701,6 +1843,8 @@ if __name__=="__main__":
     # 2026 青少年學佛營 + 兒童學佛營（不在 omap 內，手動產生）
     write("/camps/2026/",build_camp_2026("/camps/2026/")); n+=1
     write("/camps/2026-kids/",build_camp_kids_2026("/camps/2026-kids/")); n+=1
+    write("/camps/2026-kids/teaching/",build_kids26_teaching("/camps/2026-kids/teaching/")); n+=1
+    write("/camps/2026-kids/teaching/brave-no-game/",build_kids26_brave_no_game("/camps/2026-kids/teaching/brave-no-game/")); n+=1
     # 學習園地 + 如意英文學校（不在 omap 內，手動產生）
     write("/learn/",build_learn("/learn/")); n+=1
     write("/english-school/",build_english_school("/english-school/")); n+=1
@@ -1714,7 +1858,8 @@ if __name__=="__main__":
     # 收錄合併頁、排除已轉址的舊系列首頁
     urls=["/"]+sorted([o for o in out2path if o!="/" and o not in REDIRECTS]
                       +[c["out"] for c in COMBINED]
-                      +["/learn/","/english-school/","/camps/2026/","/camps/2026-kids/"]
+                      +["/learn/","/english-school/","/camps/2026/","/camps/2026-kids/",
+                        "/camps/2026-kids/teaching/","/camps/2026-kids/teaching/brave-no-game/"]
                       +["/english-school/%s/"%d["id"] for d in ES_LESSONS])
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
