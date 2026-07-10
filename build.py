@@ -961,6 +961,7 @@ KIDS26_VIDS=[
  ("t7PGGStXOFI","三世因果"),
  ("dj1HfNwIil8","學佛行儀"),
  ("PBZPDNgHh4w","勇敢說不"),
+ ("sXbiFSYygmQ","錯覺立體畫"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
