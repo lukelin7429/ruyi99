@@ -960,6 +960,7 @@ KIDS26_VIDS=[
  ("Pab8_dq9zh4","腦力激盪"),
  ("t7PGGStXOFI","三世因果"),
  ("dj1HfNwIil8","學佛行儀"),
+ ("PBZPDNgHh4w","勇敢說不"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
@@ -1043,14 +1044,18 @@ def build_kids26_teaching(o="/camps/2026-kids/teaching/"):
           '<h2>勇敢說不</h2><p>依照「不要就是不藥」簡報設計，帶孩子練習看穿偽裝、STOP 四步驟、拒毒六招與求助。</p>'
           '<span class="go">開始遊戲 →</span></a>'
           '<a class="teacher-tile" href="%s" target="_blank" rel="noopener"><span class="tag">上課簡報</span>'
+          '<h2>勇敢說不</h2><p>7/10（五）08:00 · 謝呂賢老師。115 更新版反毒課程：識毒、拒毒、求助，36 頁投影片含逐頁講師口白。</p>'
+          '<span class="go">開始上課簡報 →</span></a>'
+          '<a class="teacher-tile" href="%s" target="_blank" rel="noopener"><span class="tag">上課簡報</span>'
           '<h2>生命在呼吸間</h2><p>7/9（四）14:40 · 謝呂賢老師。從一口氣認識無常、無我與菩薩的願，21 頁投影片含逐頁講師口白。</p>'
           '<span class="go">開始上課簡報 →</span></a>'
           '<a class="teacher-tile" href="%s" target="_blank" rel="noopener"><span class="tag">上課簡報</span>'
           '<h2>三世因果</h2><p>7/10（五）14:40 · 蔡暐哲老師。因緣果的種子比喻、善因小劇場與種子分類活動，14 頁投影片含逐頁講師口白。</p>'
           '<span class="go">開始上課簡報 →</span></a>'
           '</div><div class="teacher-note rvl">教師專區未來可再加入講義、學習單、影片連結與課程備忘。'
-          '目前放置「互動遊戲」與兩份上課簡報入口，避免一般家長或學員直接進入備課資料。</div>'
+          '目前放置「互動遊戲」與三份上課簡報入口，避免一般家長或學員直接進入備課資料。</div>'
           '</div></main>'%(u("/camps/2026-kids/teaching/brave-no-game/"),
+                            u("/camps/2026-kids/teaching/brave-no-slides.html"),
                             u("/camps/2026-kids/teaching/life-in-breath-slides.html"),
                             u("/camps/2026-kids/teaching/cause-and-effect-slides.html")))
     return page("2026 兒童營教師專區","/learn/",KIDS26_TEACH_CSS+body,
