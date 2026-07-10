@@ -72,6 +72,21 @@ for _c in COMBINED:
         EXTRA_NAMES[_src]=_c["name"]
         REDIRECTS[_src]=_c["out"]
 
+# 手工頁面：內容由協作者直接手寫在 built HTML 裡，不屬於任何 build_*() 資料模型，
+# 上面的主迴圈（跑 out2path）本來就碰不到、不會覆蓋。這裡只是把它們「登記」進
+# sitemap.xml／search.json（這兩個檔案每次重建是整包重寫，不是累加），讓頁面能被
+# 收錄、被全站搜尋找到。新增一卷就加一行 out path，不需要重新產生內容。
+HANDMADE_PAGES=[
+    "/study-group/shurangama/juan01/",
+    # 補登：這幾頁先前是靠手動 patch 進 sitemap.xml/search.json 才被收錄，
+    # 一旦有人在快取沒還原全的狀況下跑全站重建，就會被整包重寫時悄悄漏掉。
+    "/column/Lucien/buddhist-leadership/",
+    "/column/Lucien/buddhist-leadership/page-2/",
+    "/column/Lucien/buddhist-leadership/page-3/",
+    "/column/Lucien/life-in-breath/",
+    "/study-group/perfection-of-wisdom/life-topics/",
+]
+
 out2path={}
 for p,o in omap.items():
     if o=="/":
@@ -1864,6 +1879,13 @@ if __name__=="__main__":
         _prev=ES_LESSONS[i-1] if i>0 else None
         _next=ES_LESSONS[i+1] if i<len(ES_LESSONS)-1 else None
         write("/english-school/%s/"%_d["id"],build_es_lesson(_d,_prev,_next)); n+=1
+    # 手工頁登記：讀取既有 built HTML 納入全站搜尋索引，不重新產生／不覆寫內容
+    for _o in HANDMADE_PAGES:
+        _p=os.path.join(ROOT,_o.strip("/"),"index.html")
+        if os.path.exists(_p):
+            _index_page(_o,open(_p).read())
+        else:
+            print("WARNING: handmade page missing on disk, skipped:",_o)
     # CNAME + nojekyll
     open(os.path.join(ROOT,".nojekyll"),"w").write("")
     # sitemap.xml (all pages) + robots.txt — for Google 收錄
@@ -1872,7 +1894,8 @@ if __name__=="__main__":
                       +[c["out"] for c in COMBINED]
                       +["/learn/","/english-school/","/camps/2026/","/camps/2026-kids/",
                         "/camps/2026-kids/teaching/","/camps/2026-kids/teaching/brave-no-game/"]
-                      +["/english-school/%s/"%d["id"] for d in ES_LESSONS])
+                      +["/english-school/%s/"%d["id"] for d in ES_LESSONS]
+                      +HANDMADE_PAGES)
     sm=['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for o in urls:
