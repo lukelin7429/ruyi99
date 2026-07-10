@@ -962,6 +962,9 @@ KIDS26_VIDS=[
  ("dj1HfNwIil8","學佛行儀"),
  ("PBZPDNgHh4w","勇敢說不"),
  ("sXbiFSYygmQ","錯覺立體畫"),
+ ("zrFbU9030GM","品德與人生"),
+ ("tiBspQ_hkEY","木頭彩拼"),
+ ("71AGFVGPvS4","闖關體驗"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
@@ -1044,6 +1047,9 @@ def build_kids26_teaching(o="/camps/2026-kids/teaching/"):
           '<a class="teacher-tile" href="%s"><span class="tag">互動遊戲</span>'
           '<h2>勇敢說不</h2><p>依照「不要就是不藥」簡報設計，帶孩子練習看穿偽裝、STOP 四步驟、拒毒六招與求助。</p>'
           '<span class="go">開始遊戲 →</span></a>'
+          '<a class="teacher-tile" href="%s"><span class="tag">互動遊戲</span>'
+          '<h2>無畏颱風小菩薩任務</h2><p>配合「無畏颱風談布施」課程，帶孩子練習颱風準備、無畏施、三種布施分類與能施太子的願心。</p>'
+          '<span class="go">開始遊戲 →</span></a>'
           '<a class="teacher-tile" href="%s" target="_blank" rel="noopener"><span class="tag">上課簡報</span>'
           '<h2>勇敢說不</h2><p>7/10（五）08:00 · 謝呂賢老師。115 更新版反毒課程：識毒、拒毒、求助，36 頁投影片含逐頁講師口白。</p>'
           '<span class="go">開始上課簡報 →</span></a>'
@@ -1056,6 +1062,7 @@ def build_kids26_teaching(o="/camps/2026-kids/teaching/"):
           '</div><div class="teacher-note rvl">教師專區未來可再加入講義、學習單、影片連結與課程備忘。'
           '目前放置「互動遊戲」與三份上課簡報入口，避免一般家長或學員直接進入備課資料。</div>'
           '</div></main>'%(u("/camps/2026-kids/teaching/brave-no-game/"),
+                            u("/camps/2026-kids/teaching/typhoon-dana-game/"),
                             u("/camps/2026-kids/teaching/brave-no-slides.html"),
                             u("/camps/2026-kids/teaching/life-in-breath-slides.html"),
                             u("/camps/2026-kids/teaching/cause-and-effect-slides.html")))
