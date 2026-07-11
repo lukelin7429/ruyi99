@@ -968,6 +968,11 @@ KIDS26_VIDS=[
  ("eGPqzyuf2eU","精進班戲劇・森林法庭"),
  ("RlAjmu5TnNg","慈悲班戲劇・快樂去哪裡了？"),
  ("d-eXqCmkwwE","喜捨班戲劇・不肯說對不起的國王"),
+ ("NkGskrfS2d0","心靈的力量"),
+ ("F4W3urs7O_Q","弟子規"),
+ ("HYlcajKHdo4","創意漫畫"),
+ ("A3tn8u-w-ek","無畏颱風談布施"),
+ ("2se8IS3QklA","持戒波羅蜜"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
