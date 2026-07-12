@@ -973,6 +973,8 @@ KIDS26_VIDS=[
  ("HYlcajKHdo4","創意漫畫"),
  ("A3tn8u-w-ek","無畏颱風談布施"),
  ("2se8IS3QklA","持戒波羅蜜"),
+ ("hW1RPHQSqeE","獻燈"),
+ ("iefZJRbXGug","呼吸的魔法"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
