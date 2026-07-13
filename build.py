@@ -85,6 +85,7 @@ HANDMADE_PAGES=[
     "/column/Lucien/buddhist-leadership/page-3/",
     "/column/Lucien/life-in-breath/",
     "/study-group/perfection-of-wisdom/life-topics/",
+    "/column/Yi-cheng/iced-latte/",
 ]
 
 out2path={}
