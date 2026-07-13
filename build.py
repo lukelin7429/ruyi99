@@ -392,9 +392,11 @@ def feat_video(ytid):
             '<span class="fv-play"><i></i></span></div>'
             '<div class="fv-cap">%s</div></button>'%(ytid,ytid,esc(t)))
 
-def article_card(child_o, i=0):
+def article_card(child_o, i=0, num=None):
+    """i = display position (0 = top, drives stagger). num = the article's true
+    chronological number (oldest article = 第01篇); defaults to i+1."""
     ttl=article_full_title(child_o); ex=article_excerpt(child_o)
-    idx='<div class="idx">第 %02d 篇</div>'%(i+1)
+    idx='<div class="idx">第 %02d 篇</div>'%(num if num is not None else i+1)
     return ('<a class="acard rvl"%s href="%s">%s<h3>%s</h3>%s'
             '<span class="more">閱讀全文 <span class="arw">→</span></span></a>'
             %(stagger(i),u(child_o),idx,esc(ttl),('<p>%s</p>'%esc(ex)) if ex else ''))
@@ -403,14 +405,14 @@ def author_teaser(author_o):
     arts=children.get(author_o,[])
     if not arts: return ""
     # author page lists newest first; take first article's title
-    return article_full_title(_column_order(author_o)[0]) if arts else ""
+    return article_full_title(_by_date_desc(_column_order(author_o))[0]) if arts else ""
 
 AUTHOR_PALETTES=[("#7c2942","#b5446a","#f6ebee"),   # 梅 plum
                  ("#2f5d52","#43806f","#e8f1ee"),   # 松 pine
                  ("#9a6a1e","#c29a45","#f7efe0")]    # 金 gold
 def author_panel(author_o, i=0):
     nm=name_of(author_o)
-    arts=_column_order(author_o); n=len(arts)
+    arts=_by_date_desc(_column_order(author_o)); n=len(arts)
     c1,c2,cs=AUTHOR_PALETTES[i%len(AUTHOR_PALETTES)]
     recent=""
     for k in arts[:3]:
@@ -441,6 +443,38 @@ def _column_order(o):
         if k not in used: ordered.append(k)
     return ordered
 
+_DATE_RE1=re.compile(r'\b(\d{1,2})/(\d{1,2})/(\d{4})\b')   # M/D/YYYY
+_DATE_RE2=re.compile(r'\b(\d{4})/(\d{1,2})/(\d{1,2})\b')   # YYYY/M/D
+def _article_date(child_o):
+    """Publication date key (YYYYMMDD int) from the article's sign-off date; the
+    LAST date found wins. None if the article carries no date."""
+    d=content.get(out2path.get(child_o),{}); key=None
+    for b in d.get("blocks",[]):
+        if b["t"] in ("h","p","li"):
+            t=b.get("text","")
+            for m in _DATE_RE1.finditer(t):
+                mo,dd,y=map(int,m.groups())
+                if 1<=mo<=12 and 1<=dd<=31: key=y*10000+mo*100+dd
+            for m in _DATE_RE2.finditer(t):
+                y,mo,dd=map(int,m.groups())
+                if 1<=mo<=12 and 1<=dd<=31: key=y*10000+mo*100+dd
+    return key
+
+def _by_date_desc(arts):
+    """Order articles newest-first by date. Undated articles interpolate from
+    their dated neighbours in the given (chronological-ascending) order so they
+    keep their natural place in the sequence."""
+    n=len(arts); keys=[_article_date(a) for a in arts]
+    for i in range(n):
+        if keys[i] is None:
+            prev=next((keys[j] for j in range(i-1,-1,-1) if keys[j] is not None),None)
+            nxt=next((keys[j] for j in range(i+1,n) if keys[j] is not None),None)
+            if prev is not None and nxt is not None: keys[i]=(prev+nxt)/2
+            elif prev is not None: keys[i]=prev+0.5
+            elif nxt is not None: keys[i]=nxt-0.5
+            else: keys[i]=0
+    return [arts[i] for i in sorted(range(n),key=lambda i:(-keys[i],i))]
+
 def build_column(o):
     """專欄 listing pages: themed band header + dynamic clickable cards."""
     nm=name_of(o)
@@ -453,12 +487,12 @@ def build_column(o):
         auth=sorted(authors,key=lambda k:-len(children.get(k,[])))
         cards='<div class="apanels rvl">'+''.join(
             author_panel(k,i) for i,k in enumerate(auth))+'</div>'
-    else:        # author page → article cards in TOC order
-        arts=_column_order(o)
+    else:        # author page → cards newest-first, numbered oldest=第01篇
+        arts=_by_date_desc(_column_order(o)); n=len(arts)
         hdr=band(crumb_html(o),"專欄作者 · ESSAYS",nm,
-                 "%s 的佛法心得文章，共 %d 篇。"%(nm,len(arts)))
+                 "%s 的佛法心得文章，共 %d 篇。"%(nm,n))
         cards='<div class="acards rvl">'+''.join(
-            article_card(k,i) for i,k in enumerate(arts))+'</div>'
+            article_card(k,i,n-i) for i,k in enumerate(arts))+'</div>'
     body=hdr+'<main class="tintbg"><div class="wrap">'+cards+'</div></main>'
     return page(nm,"/column/",body,nm+" · 如意精舍")
 
