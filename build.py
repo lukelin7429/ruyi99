@@ -1010,6 +1010,8 @@ KIDS26_VIDS=[
  ("2se8IS3QklA","持戒波羅蜜"),
  ("hW1RPHQSqeE","獻燈"),
  ("iefZJRbXGug","呼吸的魔法"),
+ ("m915h2hWARU","經絡拍打"),
+ ("W3PzoiqWJV8","親子同心"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
