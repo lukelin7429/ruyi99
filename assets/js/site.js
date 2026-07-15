@@ -68,12 +68,22 @@
     lbBox.innerHTML='<iframe src="https://drive.google.com/file/d/'+id+'/preview" allow="autoplay"></iframe>';
     lb.classList.add('open');document.body.style.overflow='hidden';
   }
+  // test path: native <audio> against Drive's direct-download endpoint, bypassing
+  // the Drive preview iframe that iOS Safari struggles with
+  function openDriveAudio(id){
+    if(!lb)return;
+    lb.classList.add('audio');lb.classList.add('audio-native');
+    lbBox.innerHTML='<audio controls autoplay preload="metadata" style="width:100%" src="https://drive.google.com/uc?export=download&id='+id+'"></audio>';
+    lb.classList.add('open');document.body.style.overflow='hidden';
+  }
   function closeLb(){
-    if(!lb)return;lb.classList.remove('open');lbBox.innerHTML='';document.body.style.overflow='';
+    if(!lb)return;lb.classList.remove('open','audio-native');lbBox.innerHTML='';document.body.style.overflow='';
   }
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-yt]');
     if(t){e.preventDefault();openLb(t.getAttribute('data-yt'));}
+    var a=e.target.closest('[data-drive-audio]');
+    if(a){e.preventDefault();openDriveAudio(a.getAttribute('data-drive-audio'));}
     var d=e.target.closest('[data-drive]');
     if(d){e.preventDefault();openDrive(d.getAttribute('data-drive'));}
     if(e.target.closest('#lb-close')||e.target.id==='lb'){closeLb();}

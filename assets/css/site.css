@@ -527,6 +527,7 @@ main figure.rvl img{width:100%;border-radius:var(--radius);box-shadow:var(--shad
 .lb-box{width:min(960px,100%);aspect-ratio:16/9;background:#000;border-radius:14px;
   overflow:hidden;box-shadow:var(--shadow-lg)}
 .lb.audio .lb-box{width:min(560px,100%);aspect-ratio:auto;height:min(420px,80vh)}
+.lb.audio-native .lb-box{height:auto;background:#1a1d24;padding:28px;display:flex;align-items:center}
 .lb-box iframe{width:100%;height:100%;border:0}
 .lb-close{position:absolute;top:18px;right:24px;color:#fff;font-size:34px;cursor:pointer;
   background:none;border:0;line-height:1}
