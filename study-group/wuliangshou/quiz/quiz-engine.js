@@ -126,6 +126,7 @@ function submitResult(round, total){
   }
   var payload = {
     name: getName(),
+    course: window.WLS_QUIZ_COURSE || "",
     round: round.id,
     roundTitle: round.title,
     score: state.score,
