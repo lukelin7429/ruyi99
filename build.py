@@ -1012,6 +1012,7 @@ KIDS26_VIDS=[
  ("iefZJRbXGug","呼吸的魔法"),
  ("m915h2hWARU","經絡拍打"),
  ("W3PzoiqWJV8","親子同心"),
+ ("4A2wOWLOIsU","忍辱波羅蜜"),
 ]
 KIDS26_PLAYLIST="https://www.youtube.com/playlist?list=PLVFEzL1YVNqA"
 
