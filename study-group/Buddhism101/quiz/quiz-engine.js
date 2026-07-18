@@ -111,7 +111,7 @@ function finishRound(){
   qsa(".mission")[state.roundIdx] && qsa(".mission")[state.roundIdx].classList.add("done");
   var html = '<div class="stage active game-panel"><div class="finish">';
   html += '<div class="finish-card"><h3>' + esc(round.title) + ' 完成</h3><div class="finish-score">' + state.correct + ' / ' + total + '</div><p class="stage-lead" style="margin-top:8px">答對 ' + state.correct + ' 題，共 ' + total + ' 題。</p><p class="submit-state" id="submitState">正在送出成績…</p></div>';
-  html += '<div class="finish-card"><h3>接下來</h3><ul style="margin:0;padding-left:20px;color:var(--sub);line-height:1.9"><li>可以回小考首頁挑戰其他單元</li><li>也可以重新作答本單元，加深印象</li><li>全部十個單元都通過後，可申請「佛法概論」結業證書</li></ul><div class="navrow"><button class="game-btn" id="retakeBtn">重新作答本單元</button><button class="game-btn secondary" id="backGrid2">回小考首頁</button></div></div>';
+  html += '<div class="finish-card"><h3>接下來</h3><ul style="margin:0;padding-left:20px;color:var(--sub);line-height:1.9"><li>可以回小考首頁挑戰其他單元</li><li>也可以重新作答本單元，加深印象</li><li>全部二十個單元都通過後，可申請「佛法概論」結業證書</li></ul><div class="navrow"><button class="game-btn" id="retakeBtn">重新作答本單元</button><button class="game-btn secondary" id="backGrid2">回小考首頁</button></div></div>';
   html += '</div></div>';
   qs("#stageArea").innerHTML = html;
   qs("#retakeBtn").onclick = function(){ startRound(state.roundIdx); };
