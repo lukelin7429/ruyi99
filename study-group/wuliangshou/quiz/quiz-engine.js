@@ -2,6 +2,7 @@
 "use strict";
 var ROUNDS = window.WLS_QUIZ_ROUNDS || [];
 var ENDPOINT = window.WLS_QUIZ_ENDPOINT || "";
+var LETTERS = ["A","B","C","D","E","F"];
 var state = { roundIdx: -1, qIdx: 0, score: 0, correct: 0, answers: [], locked: false };
 var done = {};
 
@@ -58,20 +59,29 @@ function renderQuestion(){
   html += '<div class="choices" id="qChoices">';
   if (q.type === "tf"){
     html += '<div class="tfrow">';
-    html += '<button class="choice" data-val="true">是</button>';
-    html += '<button class="choice" data-val="false">非</button>';
+    html += '<button class="choice" data-val="true"><span class="opt-letter">A</span>是</button>';
+    html += '<button class="choice" data-val="false"><span class="opt-letter">B</span>非</button>';
     html += '</div>';
   } else {
     q.options.forEach(function(opt, i){
-      html += '<button class="choice" data-val="' + i + '">' + esc(opt) + '</button>';
+      html += '<button class="choice" data-val="' + i + '"><span class="opt-letter">' + LETTERS[i] + '</span>' + esc(opt) + '</button>';
     });
   }
   html += '</div>';
   html += '<div class="feedback" id="qFeedback">請選出您認為正確的答案。</div>';
-  html += '<div class="navrow"><button class="game-btn secondary" id="backGrid">回小考首頁</button></div>';
+  var isLast = state.qIdx >= total - 1;
+  html += '<div class="navrow"><button class="game-btn" id="nextBtn" style="display:none">' + (isLast ? "看結果 →" : "下一題 →") + '</button><button class="game-btn secondary" id="backGrid">回小考首頁</button></div>';
   html += '</div>';
   qs("#stageArea").innerHTML = html;
   qs("#backGrid").onclick = function(){ qs("#stageArea").innerHTML = ""; };
+  qs("#nextBtn").onclick = function(){
+    if (state.qIdx < currentRound().questions.length - 1){
+      state.qIdx += 1;
+      renderQuestion();
+    } else {
+      finishRound();
+    }
+  };
   qsa("#qChoices .choice").forEach(function(btn){
     btn.addEventListener("click", function(){ handleAnswer(btn, q); });
   });
@@ -93,14 +103,11 @@ function handleAnswer(btn, q){
   qs("#qFeedback").innerHTML = (isCorrect ? "✅ 答對了。" : "❌ 再想想。") + " " + esc(q.explain) + (q.source ? "（出自：" + esc(q.source) + "）" : "");
   if (isCorrect){ state.score += 1; state.correct += 1; }
   state.answers.push({ q: state.qIdx + 1, correct: isCorrect });
-  setTimeout(function(){
-    if (state.qIdx < currentRound().questions.length - 1){
-      state.qIdx += 1;
-      renderQuestion();
-    } else {
-      finishRound();
-    }
-  }, 1100);
+  var nextBtn = qs("#nextBtn");
+  if (nextBtn){
+    nextBtn.style.display = "inline-block";
+    nextBtn.focus();
+  }
 }
 
 function finishRound(){
