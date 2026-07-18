@@ -59,7 +59,10 @@
         }
         return a;
       }
-      var quoteQs=quotes.map(function(qt,i){
+      // exclude today's own 今日一句 quote/source — otherwise the citation line above gives the answer away
+      var todaySrc = quotes.length ? quotes[((day2%quotes.length)+quotes.length)%quotes.length].src : null;
+      var eligibleQuotes = quotes.filter(function(qt){ return qt.src !== todaySrc; });
+      var quoteQs=eligibleQuotes.map(function(qt,i){
         var distractors=srcSet.filter(function(s){ return s!==qt.src; });
         var seed=day2*97+i*7+1;
         var picks=seededShuffle(distractors,seed).slice(0,3);
