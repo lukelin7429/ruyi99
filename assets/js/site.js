@@ -36,6 +36,69 @@
     }catch(e){}
   }
 
+  // 每日一題 — daily quiz question, same for everyone that day; no name, instant feedback.
+  // Pool = hand-written general-knowledge bank + auto-generated "guess the sutra" questions from the daily-quote data.
+  var dqRoot=document.getElementById('dq');
+  if(dqRoot){
+    try{
+      var escDq=function(s){ return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];}); };
+      var bankEl=document.getElementById('dq-bank');
+      var bank=bankEl?JSON.parse(bankEl.textContent):[];
+      var quotesEl=document.getElementById('daily-data');
+      var quotes=quotesEl?JSON.parse(quotesEl.textContent):[];
+      var srcSet=[];
+      quotes.forEach(function(qt){ if(srcSet.indexOf(qt.src)===-1) srcSet.push(qt.src); });
+      var now2=new Date(), start2=new Date(now2.getFullYear(),0,0);
+      var day2=Math.floor((now2-start2)/86400000);
+      function seededShuffle(arr,seed){
+        var a=arr.slice();
+        for(var k=a.length-1;k>0;k--){
+          seed=(seed*9301+49297)%233280;
+          var j=Math.floor((seed/233280)*(k+1));
+          var t=a[k]; a[k]=a[j]; a[j]=t;
+        }
+        return a;
+      }
+      var quoteQs=quotes.map(function(qt,i){
+        var distractors=srcSet.filter(function(s){ return s!==qt.src; });
+        var seed=day2*97+i*7+1;
+        var picks=seededShuffle(distractors,seed).slice(0,3);
+        var options=seededShuffle(picks.concat([qt.src]),seed+1);
+        return { type:"choice", q:"以下經文出自哪一部經論？「"+qt.q+"」", options:options, answer:options.indexOf(qt.src), explain:qt.plain, source:"每日一句．"+qt.src };
+      });
+      var pool=bank.concat(quoteQs);
+      if(pool.length){
+        var dqPick=pool[((day2%pool.length)+pool.length)%pool.length];
+        var LETTERS=["A","B","C","D","E","F"];
+        var qEl=document.getElementById('dq-q'), cEl=document.getElementById('dq-choices'), fEl=document.getElementById('dq-feedback');
+        if(qEl) qEl.textContent=dqPick.q;
+        if(cEl){
+          cEl.innerHTML='';
+          var opts = dqPick.type==="tf" ? ["是","否"] : dqPick.options;
+          var correctIdx = dqPick.type==="tf" ? (dqPick.answer ? 0 : 1) : dqPick.answer;
+          opts.forEach(function(opt,i){
+            var b=document.createElement('button');
+            b.className='dq-choice';
+            b.innerHTML='<span class="dq-letter">'+LETTERS[i]+'</span><span>'+escDq(opt)+'</span>';
+            b.addEventListener('click',function(){
+              if(cEl.getAttribute('data-locked')) return;
+              cEl.setAttribute('data-locked','1');
+              var isCorrect=(i===correctIdx);
+              b.classList.add(isCorrect?'good':'bad');
+              if(!isCorrect) cEl.children[correctIdx].classList.add('good');
+              [].slice.call(cEl.children).forEach(function(x){ x.disabled=true; });
+              if(fEl){
+                fEl.style.display='block';
+                fEl.innerHTML=(isCorrect?'✅ 答對了。':'❌ 再想想。')+' '+escDq(dqPick.explain||'')+(dqPick.source?'（出自：'+escDq(dqPick.source)+'）':'');
+              }
+            });
+            cEl.appendChild(b);
+          });
+        }
+      }
+    }catch(e){}
+  }
+
   // scroll reveal (getBoundingClientRect — robust in preview frames)
   var els=[].slice.call(document.querySelectorAll('.rvl'));
   function reveal(){
