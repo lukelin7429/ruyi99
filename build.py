@@ -86,6 +86,9 @@ HANDMADE_PAGES=[
     "/column/Lucien/life-in-breath/",
     "/study-group/perfection-of-wisdom/life-topics/",
     "/column/Yi-cheng/iced-latte/",
+    "/column/Cai-Ling/",
+    "/column/Cai-Ling/notification/",
+    "/column/Cai-Ling/neural-pathway/",
 ]
 
 out2path={}
@@ -336,7 +339,7 @@ def child_section(o):
         return '<div class="cards rvl">'+''.join(items)+'</div>'
 
 # 專欄 helpers ---------------------------------------------------------------
-BYLINES=("文/林吉祥","文/謝呂賢","文/孫一成")
+BYLINES=("文/林吉祥","文/謝呂賢","文/孫一成","文/孫彩玲")
 def article_full_title(child_o):
     """The real article title = first text block on the article page."""
     d=content.get(out2path.get(child_o),{})
