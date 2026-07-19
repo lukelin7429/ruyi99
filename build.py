@@ -78,6 +78,10 @@ for _c in COMBINED:
 # 收錄、被全站搜尋找到。新增一卷就加一行 out path，不需要重新產生內容。
 HANDMADE_PAGES=[
     "/study-group/shurangama/juan01/",
+    "/study-group/yogacara-bhumi/",
+    "/study-group/yogacara-bhumi/vol-001/",
+    "/study-group/yogacara-bhumi/vol-002/",
+    "/study-group/yogacara-bhumi/vol-003/",
     # 補登：這幾頁先前是靠手動 patch 進 sitemap.xml/search.json 才被收錄，
     # 一旦有人在快取沒還原全的狀況下跑全站重建，就會被整包重寫時悄悄漏掉。
     "/column/Lucien/buddhist-leadership/",
