@@ -77,6 +77,16 @@ for _c in COMBINED:
 # sitemap.xml／search.json（這兩個檔案每次重建是整包重寫，不是累加），讓頁面能被
 # 收錄、被全站搜尋找到。新增一卷就加一行 out path，不需要重新產生內容。
 HANDMADE_PAGES=[
+    "/study-group/cidi-chanmen/",
+    "/study-group/cidi-chanmen/dayi-shiming/",
+    "/study-group/cidi-chanmen/waifangbian/",
+    "/study-group/cidi-chanmen/neifangbian/",
+    "/study-group/cidi-chanmen/sichan/",
+    "/study-group/cidi-chanmen/wuliang-wuse/",
+    "/study-group/cidi-chanmen/miaomen-tesheng/",
+    "/study-group/cidi-chanmen/tongmingguan/",
+    "/study-group/cidi-chanmen/duizhi-guanfa/",
+    "/study-group/cidi-chanmen/cididing-sanmei/",
     "/study-group/shurangama/juan01/",
     "/study-group/yogacara-bhumi/",
     "/study-group/yogacara-bhumi/vol-001/",
