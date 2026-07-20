@@ -98,6 +98,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/notification/",
     "/column/Cai-Ling/neural-pathway/",
     "/column/Cai-Ling/the-self/",
+    "/column/Cai-Ling/surrender/",
 ]
 
 out2path={}
