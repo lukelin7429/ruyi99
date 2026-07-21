@@ -113,6 +113,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/surrender/",
     "/column/Cai-Ling/contraction/",
     "/column/Cai-Ling/bubble/",
+    "/column/Cai-Ling/listening/",
 ]
 
 out2path={}
