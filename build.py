@@ -112,6 +112,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/the-self/",
     "/column/Cai-Ling/surrender/",
     "/column/Cai-Ling/contraction/",
+    "/column/Cai-Ling/bubble/",
 ]
 
 out2path={}
