@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第一章 · 心之概要 Cittasaṅgaha · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第一章「心之概要」導讀：心 citta 的定義與四種辨識法、地（欲/色/無色/出世間）與性質（不善/善/果報/唯作）兩大分類軸、89 與 121 種心的完整開合（12 不善・18 無因・24 欲界美・15 色界・12 無色界・8/40 出世間），附巴利根本偈選文與消文。內容參考菩提比丘 CMA，採尋法比丘中譯用語。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"▸"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第一章</p>
+        <p class="eyebrow">四究竟法之首 · Cittasaṅgaha · 心之概要</p>
+        <h1>第一章 · 心之概要</h1>
+        <p class="subtitle">阿毗達磨從「心」下手，因為佛法分析的焦點是「經驗」，而心正是經驗的核心——那份「識知所緣」的作用。本章看似只在數心（89 種、再細分成 121 種），其實是在為整片心地繪出座標：以<strong>「地」</strong>與<strong>「性質」</strong>兩軸，把一切心安放進一個井然的系統。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第一章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：89 / 121 心</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#define">心的定義與四辨識</a>
+        <a href="#axes">兩大分類軸</a>
+        <a href="#kama">欲界心 54</a>
+        <a href="#rupa">色界心 15</a>
+        <a href="#arupa">無色界心 12</a>
+        <a href="#lokuttara">出世間心 8／40</a>
+        <a href="#summary">89 與 121 總覽</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#text">攝義論選文</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">《攝義論》先總說一切唯有<strong>四種究竟法</strong>——心、心所、色、涅槃——隨即以第一章專講其首的「<strong>心</strong>」(<span class="pali">citta</span>)。之所以先講心，是因為阿毗達磨要理解的是「經驗實相」，而心正是經驗中最主要的成分：對所緣的那份<strong>「識知」</strong>。</p>
+          <div class="quote">心只有一個特相——「識知所緣」；但依伴隨的心所與所處的界地不同，它展現為 89 種、乃至更細的 121 種。我們平常以為的「一個連續的意識」，其實是一連串剎那生滅、種類各異的心。</div>
+          <div class="grid">
+            <article class="key-card"><b>心是「識知」</b><p>心不是一個藏在背後的主宰者或工具，而就是「識知所緣」這個活動本身；它剎那生滅，無常無我。</p></article>
+            <article class="key-card"><b>兩軸定位</b><p>本章用「地（欲/色/無色/出世間）」與「性質（不善/善/果報/唯作）」兩把尺，把一切心編成座標網。</p></article>
+            <article class="key-card"><b>不是為了數數</b><p>把心分得這麼細，是為了下一章講「心所」時能精準對應，也為了修觀時如實見到心的生滅無我。</p></article>
+          </div>
+          <div class="note"><strong>本章科判總覽（依《攝義論》次第）：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">壹</span><span class="ke-t">心的定義</span><span class="ke-div">詞根・三義・四辨識</span></li>
+              <li><span class="ke-mk">貳</span><span class="ke-t">兩大分類軸</span><span class="ke-div">地 × 性質</span></li>
+              <li><span class="ke-mk">參</span><span class="ke-t">欲界心 54</span>
+                <ul>
+                  <li><span class="ke-mk">一</span><span class="ke-t">不善心 12</span><span class="ke-div">貪8・瞋2・癡2</span></li>
+                  <li><span class="ke-mk">二</span><span class="ke-t">無因心 18</span><span class="ke-div">不善果報7・善果報8・唯作3</span></li>
+                  <li><span class="ke-mk">三</span><span class="ke-t">欲界美心 24</span><span class="ke-div">善8・果報8・唯作8</span></li>
+                </ul>
+              </li>
+              <li><span class="ke-mk">肆</span><span class="ke-t">色界心 15</span><span class="ke-div">善5・果報5・唯作5</span></li>
+              <li><span class="ke-mk">伍</span><span class="ke-t">無色界心 12</span><span class="ke-div">善4・果報4・唯作4</span></li>
+              <li><span class="ke-mk">陸</span><span class="ke-t">出世間心 8 / 40</span><span class="ke-div">道4・果4（×5禪=40）</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="define">
+          <h2>心的定義與四種辨識法</h2>
+          <h3>「心」是什麼</h3>
+          <p>巴利 <span class="pali">citta</span> 源自動詞根 <span class="pali">citi</span>（識知、認知）。註釋家從三個角度定義它：作為<strong>作者</strong>——識知所緣者；作為<strong>工具</strong>——伴隨的心所藉之識知所緣者；作為<strong>活動</strong>——識知所緣這件事本身。</p>
+          <p>其中<strong>第三義（活動）最為究竟</strong>：心並不是一個離開「識知活動」而獨存的作者或工具。之所以還立「作者、工具」二義，是為了破斥「有一個常住的我在認識」的邪見——執行認識的不是「我」，而是「心」；而這個心，不外乎剎那生滅的識知之流。</p>
+          <h3>四種辨識法（用來界定任何究竟法）</h3>
+          <p>註釋傳統以四面精確界定一個法。以「心」為例：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>辨識</th><th>巴利</th><th>心的內容</th></tr></thead>
+            <tbody>
+              <tr><td class="n">特相</td><td class="pali">lakkhaṇa</td><td>識知所緣 (vijānana)</td></tr>
+              <tr><td class="n">作用</td><td class="pali">rasa</td><td>作諸心所的「先導」，統領並恆與之俱起</td></tr>
+              <tr><td class="n">現起</td><td class="pali">paccupaṭṭhāna</td><td>（在禪修經驗中）呈現為相續不斷的過程</td></tr>
+              <tr><td class="n">近因</td><td class="pali">padaṭṭhāna</td><td>名色 (nāmarūpa)——心不能單獨生起，必依心所與色法</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>導讀提醒（參菩提比丘 CMA）：</strong>「心的近因是名色」點出一個要義——心從不孤起。任何一個心，必與若干心所同生同滅，這正是下一章「心所」的伏筆。</div>
+        </section>
+
+        <section id="axes">
+          <h2>兩大分類軸：地 × 性質</h2>
+          <p>心雖只有「識知」一個特相，卻可從多重原則分類。本章最關鍵的兩把尺是「地」與「性質」。</p>
+          <div class="grid">
+            <article class="key-card"><b>軸一：地 bhūmi</b><p>依心「活動、常遊」的層面分四：<strong>欲界・色界・無色界・出世間</strong>。前三為世間 (lokiya)，第四超越五取蘊、以涅槃為所緣，是出世間 (lokuttara)。</p></article>
+            <article class="key-card"><b>軸二：性質 jāti</b><p>依業的性質分四：<strong>不善・善・果報・唯作</strong>。不善與善是「業」；果報是業成熟的結果；唯作則不造業、亦非業果。</p></article>
+            <article class="key-card"><b>兩軸交織</b><p>果報與唯作因「非善非不善」，合稱<strong>無記</strong> (abyākata)。整章 89 心，就是這兩軸交叉出的座標。</p></article>
+          </div>
+          <div class="note"><strong>「地」≠「界」：</strong>「地（sphere）」是心的<strong>分類</strong>，「界／趣（plane）」是眾生投生的<strong>世界</strong>。兩者密切相關卻不等同——例如色界心也可在欲界眾生身上生起（如人修得禪定）。但某一地的「造業心」若成熟感生，只會感生到同名的界。</div>
+        </section>
+
+        <section id="kama">
+          <h2>參 · 欲界心 54</h2>
+          <p>欲界心 (<span class="pali">kāmāvacara</span>) 共 54 種，是最貼近我們日常經驗的一群，分三大類：<strong>不善心 12、無因心 18、欲界美心 24</strong>。</p>
+
+          <h3>一、不善心 12（Table 1.2）</h3>
+          <p>不善心 (<span class="pali">akusala</span>) 依最主要的「根」(<span class="pali">mūla / hetu</span>) 分三類：<strong>貪根 8、瞋根 2、癡根 2</strong>。貪與瞋互斥，不並存於同一心；癡則遍在一切不善心中。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>根</th><th>受</th><th>邪見／瞋恚／疑・掉舉</th><th>行</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>貪根</td><td>悅俱</td><td>邪見相應</td><td>無行</td></tr>
+              <tr><td class="n">2</td><td>貪根</td><td>悅俱</td><td>邪見相應</td><td>有行</td></tr>
+              <tr><td class="n">3</td><td>貪根</td><td>悅俱</td><td>邪見不相應</td><td>無行</td></tr>
+              <tr><td class="n">4</td><td>貪根</td><td>悅俱</td><td>邪見不相應</td><td>有行</td></tr>
+              <tr><td class="n">5</td><td>貪根</td><td>捨俱</td><td>邪見相應</td><td>無行</td></tr>
+              <tr><td class="n">6</td><td>貪根</td><td>捨俱</td><td>邪見相應</td><td>有行</td></tr>
+              <tr><td class="n">7</td><td>貪根</td><td>捨俱</td><td>邪見不相應</td><td>無行</td></tr>
+              <tr><td class="n">8</td><td>貪根</td><td>捨俱</td><td>邪見不相應</td><td>有行</td></tr>
+              <tr><td class="n">9</td><td>瞋根</td><td>憂俱</td><td>瞋恚相應</td><td>無行</td></tr>
+              <tr><td class="n">10</td><td>瞋根</td><td>憂俱</td><td>瞋恚相應</td><td>有行</td></tr>
+              <tr><td class="n">11</td><td>癡根</td><td>捨俱</td><td>疑相應</td><td>—</td></tr>
+              <tr><td class="n">12</td><td>癡根</td><td>捨俱</td><td>掉舉相應</td><td>—</td></tr>
+            </tbody>
+          </table></div>
+          <p>貪根 8 由三組二分交織而成：<strong>受</strong>（悅俱／捨俱）×<strong>邪見</strong>（相應／不相應）×<strong>行</strong>（無行／有行）＝ 8。瞋根 2 只分無行／有行（瞋必憂俱、不與邪見同時起）。癡根 2 為「疑相應」與「掉舉相應」，皆捨俱，且不分有行無行。</p>
+          <div class="note"><strong>三個關鍵詞（參 CMA）：</strong><br>
+          ・<strong>悅俱／捨俱</strong>（somanassa／upekkhā）：伴隨的「受」是愉悅或中捨。<br>
+          ・<strong>邪見相應／不相應</strong>（diṭṭhi）：貪是否伴隨一個為它「找理由」的錯見。<br>
+          ・<strong>無行／有行</strong>（asaṅkhārika／sasaṅkhārika）：心是「自動生起」還是「被慫恿、勸誘、自我策勵」才生起。</div>
+
+          <h3>二、無因心 18（Table 1.3）</h3>
+          <p>無因心 (<span class="pali">ahetuka</span>) 是不具「六根」（貪瞋癡三不善根、無貪無瞋無癡三善根）的心。因缺根而較無力。分三組：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>組別</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>不善果報</td><td class="n">7</td><td>眼識、耳識、鼻識、舌識（皆捨俱）、身識（苦俱）、領受（捨俱）、推度（捨俱）</td></tr>
+              <tr><td>善果報</td><td class="n">8</td><td>眼耳鼻舌識（捨俱）、身識（樂俱）、領受（捨俱）、推度（悅俱）、推度（捨俱）</td></tr>
+              <tr><td>無因唯作</td><td class="n">3</td><td>五門轉向（捨俱）、意門轉向（捨俱）、生笑心（悅俱）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>為何善果報比不善果報多一個？</strong>不善果報的「推度」只有捨俱一種；善果報的「推度」則有兩種——遇「極可意」所緣時為悅俱，遇「中等可意」時為捨俱，故善果報 8、不善果報 7。<br><strong>幾個功能名詞：</strong>領受 (sampaṭicchana)、推度 (santīraṇa)、五門轉向 (pañcadvārāvajjana)、意門轉向 (manodvārāvajjana)、生笑心 (hasituppāda，阿羅漢緣欲界事而微笑之心)——這些在第四章「心路過程」會各就其位，此處先識其名。</div>
+
+          <h3>三、欲界美心 24（Table 1.4）</h3>
+          <p>「美心」(<span class="pali">sobhana</span>) 指伴隨「美心所」的心。<strong>「美」比「善」範圍更廣</strong>：善心固然是美，但美還包含具美心所的果報心與唯作心（此二為無記，非善）。欲界美心 24 = 大善 8 + 大果報 8 + 大唯作 8。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>受</th><th>智</th><th>行</th><th>大善</th><th>大果報</th><th>大唯作</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>悅俱</td><td>智相應</td><td>無行</td><td>(31)</td><td>(39)</td><td>(47)</td></tr>
+              <tr><td class="n">2</td><td>悅俱</td><td>智相應</td><td>有行</td><td>(32)</td><td>(40)</td><td>(48)</td></tr>
+              <tr><td class="n">3</td><td>悅俱</td><td>智不相應</td><td>無行</td><td>(33)</td><td>(41)</td><td>(49)</td></tr>
+              <tr><td class="n">4</td><td>悅俱</td><td>智不相應</td><td>有行</td><td>(34)</td><td>(42)</td><td>(50)</td></tr>
+              <tr><td class="n">5</td><td>捨俱</td><td>智相應</td><td>無行</td><td>(35)</td><td>(43)</td><td>(51)</td></tr>
+              <tr><td class="n">6</td><td>捨俱</td><td>智相應</td><td>有行</td><td>(36)</td><td>(44)</td><td>(52)</td></tr>
+              <tr><td class="n">7</td><td>捨俱</td><td>智不相應</td><td>無行</td><td>(37)</td><td>(45)</td><td>(53)</td></tr>
+              <tr><td class="n">8</td><td>捨俱</td><td>智不相應</td><td>有行</td><td>(38)</td><td>(46)</td><td>(54)</td></tr>
+            </tbody>
+          </table></div>
+          <p>三類各 8，由「受（悅／捨）×智（相應／不相應）×行（無行／有行）」交織而成。<strong>大善心</strong>生於凡夫與有學（三果以下聖者）造善時；<strong>大果報心</strong>是它們的異熟；<strong>大唯作心</strong>則是佛與阿羅漢造同樣善行時的心——因已斷惑，行善不再留下業力，只是「作」而已。此三常合稱 mahā-kusala／mahā-vipāka／mahā-kiriya。</p>
+          <div class="note"><strong>括號內是「89 心」的固定編號</strong>，方便你日後在各章間對照同一個心。欲界 54 心即編號 (1)–(54)：不善 (1)–(12)、無因 (13)–(30)、美心 (31)–(54)。</div>
+        </section>
+
+        <section id="rupa">
+          <h2>肆 · 色界心 15</h2>
+          <p>色界心 (<span class="pali">rūpāvacara</span>) 是與「色界禪那」(<span class="pali">rūpajjhāna</span>) 相應的心——藉專注（止 samatha）修得的高度定境。以「五禪」分，各有善、果報、唯作三種，故 15。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>禪</th><th>具足的禪支</th><th>善</th><th>果報</th><th>唯作</th></tr></thead>
+            <tbody>
+              <tr><td class="n">初禪</td><td>尋・伺・喜・樂・一境性</td><td>(55)</td><td>(60)</td><td>(65)</td></tr>
+              <tr><td class="n">二禪</td><td>伺・喜・樂・一境性</td><td>(56)</td><td>(61)</td><td>(66)</td></tr>
+              <tr><td class="n">三禪</td><td>喜・樂・一境性</td><td>(57)</td><td>(62)</td><td>(67)</td></tr>
+              <tr><td class="n">四禪</td><td>樂・一境性</td><td>(58)</td><td>(63)</td><td>(68)</td></tr>
+              <tr><td class="n">五禪</td><td>捨・一境性</td><td>(59)</td><td>(64)</td><td>(69)</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>五禪支（參 CMA）：</strong>尋 (vitakka，把心投向所緣)、伺 (vicāra，持續繫於所緣)、喜 (pīti，對所緣的喜悅)、樂 (sukha，愉悅之受)、一境性 (ekaggatā，心一境、定的核心)。愈高的禪，愈是逐步捨去較粗的禪支：二禪去尋、三禪再去伺、四禪去喜、五禪以「捨」代「樂」。<br>
+          <strong>五禪 vs 經教四禪：</strong>經藏多說「四禪」——從初禪到二禪時「尋、伺」同時捨去。阿毗達磨則多立一個「捨尋留伺」的中間禪，故成「五禪」。兩者只是開合不同。</div>
+        </section>
+
+        <section id="arupa">
+          <h2>伍 · 無色界心 12</h2>
+          <p>無色界心 (<span class="pali">arūpāvacara</span>) 是與「無色界定」(<span class="pali">arūpajjhāna</span>) 相應的心——在五禪之上，捨離一切色（物質）所緣而修得。以四種「處」為所緣，各有善、果報、唯作，故 12。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>四無色</th><th>巴利</th><th>所緣</th><th>善／果報／唯作</th></tr></thead>
+            <tbody>
+              <tr><td class="n">空無邊處</td><td class="pali">ākāsānañcāyatana</td><td>「無邊的虛空」之概念</td><td>(70)(74)(78)</td></tr>
+              <tr><td class="n">識無邊處</td><td class="pali">viññāṇañcāyatana</td><td>「空無邊處心」為無邊之識</td><td>(71)(75)(79)</td></tr>
+              <tr><td class="n">無所有處</td><td class="pali">ākiñcaññāyatana</td><td>空無邊處識之「不存在／無所有」</td><td>(72)(76)(80)</td></tr>
+              <tr><td class="n">非想非非想處</td><td class="pali">nevasaññānāsaññāyatana</td><td>無所有處心（想極微細，不可謂有想、不可謂無想）</td><td>(73)(77)(81)</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>兩點特色（參 CMA）：</strong><br>
+          ① 色界禪靠「捨去禪支」步步升進；無色界則禪支不變（都同第五禪的「捨・一境性」），改靠「<strong>捨去更微細的所緣</strong>」步步升進——所以四無色是換所緣、不是換禪支。<br>
+          ② 色界 15 + 無色界 12 = 27，合稱<strong>「廣大心」</strong>(mahaggata)，因其離蓋、清淨、高廣。加上欲界 54，這 81 種全屬<strong>世間心</strong> (lokiya)。</div>
+        </section>
+
+        <section id="lokuttara">
+          <h2>陸 · 出世間心 8 / 40</h2>
+          <p>出世間心 (<span class="pali">lokuttara</span>) 是「超越」(uttara) 五取蘊之「世間」(loka) 的心——它<strong>以涅槃為所緣</strong>，導向生死的止息。對應四個證悟階位，每階各有「道心」與「果心」，故 8。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>階位</th><th>巴利</th><th>道心</th><th>果心</th></tr></thead>
+            <tbody>
+              <tr><td class="n">須陀洹（入流）</td><td class="pali">sotāpatti</td><td>(82)</td><td>(86)</td></tr>
+              <tr><td class="n">斯陀含（一來）</td><td class="pali">sakadāgāmi</td><td>(83)</td><td>(87)</td></tr>
+              <tr><td class="n">阿那含（不還）</td><td class="pali">anāgāmi</td><td>(84)</td><td>(88)</td></tr>
+              <tr><td class="n">阿羅漢</td><td class="pali">arahatta</td><td>(85)</td><td>(89)</td></tr>
+            </tbody>
+          </table></div>
+          <p><strong>道心</strong> (magga) 是善心，作用在「斷（或永減）煩惱」，於一心續流中只生起一次、一剎那即滅；<strong>果心</strong> (phala) 是它的果報，隨即生起、可再三現起（果定）。二者皆以涅槃為所緣。四道各斷不同結：初道斷身見、疑、戒禁取；三道斷欲貪、瞋（的粗細）；阿羅漢道斷最細的色貪、無色貪、慢、掉舉、無明。</p>
+          <div class="note"><strong>為何 8 可開為 40？</strong>行者證道果時，心必伴隨某一層次的禪支（依其定力），故每一道／果心可依「五禪」再開為五，<strong>8 × 5 = 40</strong>。純觀行者（乾觀者 sukkhavipassaka）的道果，作初禪論。</div>
+        </section>
+
+        <section id="summary">
+          <h2>89 與 121 心總覽</h2>
+          <p>阿耨樓陀在章末用兩組偈頌，把前面 89 心分別依「性質」與「地」各收成四類，再說明如何開為 121。</p>
+          <h3>依性質（jāti）分：89 = 12 + 21 + 36 + 20</h3>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>性質</th><th>數</th><th>組成</th></tr></thead>
+            <tbody>
+              <tr><td class="n">不善</td><td>12</td><td>貪 8 + 瞋 2 + 癡 2</td></tr>
+              <tr><td class="n">善</td><td>21</td><td>欲界大善 8 + 色界善 5 + 無色界善 4 + 出世間道 4</td></tr>
+              <tr><td class="n">果報</td><td>36</td><td>不善果報 7 + 無因善果報 8 + 大果報 8 + 色界 5 + 無色界 4 + 出世間果 4</td></tr>
+              <tr><td class="n">唯作</td><td>20</td><td>無因唯作 3 + 大唯作 8 + 色界 5 + 無色界 4</td></tr>
+            </tbody>
+          </table></div>
+          <p>果報與唯作因非善非不善，合稱<strong>無記</strong>（36 + 20 = 56）。</p>
+          <h3>依地（bhūmi）分：89 = 54 + 15 + 12 + 8</h3>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>地</th><th>數</th><th>組成</th></tr></thead>
+            <tbody>
+              <tr><td class="n">欲界</td><td>54</td><td>不善 12 + 無因 18 + 美心 24</td></tr>
+              <tr><td class="n">色界</td><td>15</td><td>善 5 + 果報 5 + 唯作 5</td></tr>
+              <tr><td class="n">無色界</td><td>12</td><td>善 4 + 果報 4 + 唯作 4</td></tr>
+              <tr><td class="n">出世間</td><td>8</td><td>道 4 + 果 4</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>89 → 121：</strong>把出世間的 8 心（4 道 + 4 果）各依五禪開為 5，成 <strong>40</strong>；其餘 81 不變。故 81 + 40 = <strong>121</strong>。此時善為 37（21 − 4 + 20）、果報為 52（36 − 4 + 20）。「心雖只一個『識知』的特相，一經分類卻成眾多」——這就是第一章的全部結論。</div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>心即識知，無我可得</b><p>把「心」定義為「識知的活動」而非作者，正是要拆掉「有個我在認識」的錯見。這是全部分析的解脫指向。</p></article>
+            <article class="key-card"><b>先建座標，再填內容</b><p>「地×性質」兩軸是骨架。掌握這兩軸，89/121 的龐大數目就不再是死背，而是可推導的系統。</p></article>
+            <article class="key-card"><b>善・果報・唯作要分清</b><p>同樣是善行，凡夫是「善（造業）」、其異熟是「果報」、阿羅漢則是「唯作（不留業）」。這組區別貫穿全論。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第一章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>註釋家對「心」(citta) 的三種定義中，被視為最究竟的是哪一義？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>作者——識知所緣的那個「我」</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>工具——用來認識的常住器官</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>活動——識知所緣這件事本身</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>三義同等究竟，不分高下</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>心即「識知的活動」，不是離活動而獨存的作者或工具。立作者、工具二義，只是為破「有我在認識」的邪見。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>本章用來給一切心定位的「兩大分類軸」是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>過去與未來</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>地（bhūmi）與性質（jāti）</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>色與無色</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>粗與細</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>「地」分欲界/色界/無色界/出世間；「性質」分不善/善/果報/唯作。89 心即這兩軸交叉的座標。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">3</span>不善心共 12 種，其「貪根 8、瞋根 2、癡根 2」的分法，主要依什麼而定？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>依所處的界地</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>依禪支的多寡</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>依最主要的「根」（貪、瞋、癡）</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>依是否以涅槃為所緣</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>不善心先依主要的「根」分三類。貪瞋互斥、不並存於同一心；癡則遍在一切不善心中，另有二心是「癡獨盛」故立為癡根心。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">4</span>下列哪一組數字，正確描述「無因心 18」的組成？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>不善果報 7 + 善果報 8 + 無因唯作 3</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>貪 8 + 瞋 2 + 癡 2 + 唯作 6</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>善 5 + 果報 5 + 唯作 5 + 轉向 3</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>大善 8 + 大果報 8 + 大唯作 2</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>無因心 = 不善果報 7 + 善果報 8 + 無因唯作 3 = 18。善果報比不善果報多一個，是因為善果報的「推度」有悅俱、捨俱兩種。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">5</span>關於「美心 (sobhana)」與「善心 (kusala)」的關係，下列何者正確？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>兩者完全相同</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>善心範圍比美心廣</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>美心只指出世間心</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>美心範圍比善心廣，還含具美心所的果報與唯作心</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>「美」比「善」廣：善心固然是美，但美還包含具美心所的果報心、唯作心（此二為無記，非善）。故欲界美心 24 = 大善 8 + 大果報 8 + 大唯作 8。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">6</span>色界五禪中，從初禪到五禪，禪支的變化趨勢是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>逐禪增加，愈高禪支愈多</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>逐步捨去較粗的禪支（尋→伺→喜），末以捨代樂</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>禪支不變，只換所緣</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>始終只有一境性一支</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>初禪五支（尋伺喜樂一境性），二禪去尋、三禪再去伺、四禪去喜，五禪以「捨」代「樂」。禪支不變而只換所緣的，是後面的「無色界」。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>「地（sphere）」與「界／趣（plane）」意思相同：色界心一定只能在色界眾生身上生起。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>「地」是心的分類、「界」是投生的世界，兩者相關而不等同。例如人（欲界眾生）修得禪定時，色界心即可在其身上生起。但某地的「造業心」若感生，只會感生到同名的界。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>出世間心之所以能由 8 開為 40，是因為每一道心、果心都可依「五禪」的層次再開為五。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>行者證道果時心必伴隨某層次禪支，故 4 道 + 4 果共 8 心，各依五禪開為五，8 × 5 = 40。全部 89 心因此開為 121。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：阿毗達磨為什麼要區分「善心、果報心、唯作心」？阿羅漢行善為何是「唯作」而不造業？</summary>
+            <div class="detail-body"><p>（供省思）業的成熟需要「無明與愛」為根。凡夫行善，因仍有無明愛取，善心會留下業力，未來感果報心；阿羅漢已斷無明與愛，善行只是「作」了就過去，不再留下能感生死的業力，故名「唯作」。這一區別點出：解脫不是不再行動，而是行動不再繫縛。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：南傳把「心」開為 89／121，唯識則立「八識」。試想：南傳的「有分心 (bhavaṅga)」與唯識的阿賴耶識，在「維繫生命相續」上有何可對照之處？</summary>
+            <div class="detail-body"><p>（開放題）兩者都試圖回答「無心路活動時（如熟睡、二念之間），生命憑什麼相續？」南傳以「有分心」作為維繫一期生命的潛在心流（第四、五章詳談）；唯識以阿賴耶識執持種子、根身。二者都非「常我」，皆剎那生滅，但南傳不立獨立第八識，而以同一「識」在不同作用位上運作。這正是部派與大乘心識論最富張力的對讀點。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：本章反覆強調「心只有一個特相（識知），卻分成 89／121 種」。這對你觀察自己當下的起心動念有什麼啟發？</summary>
+            <div class="detail-body"><p>（供省思）它提醒我們：所謂「我的心情、我的念頭」，其實是一連串種類各異、剎那生滅的心在快速相續。當你能辨認「這是貪根悅俱心、那是善智相應心」，念頭就從「我」的獨白，變成可觀察的法。這正是修觀（vipassanā）的下手處——把混沌的內心經驗，還原成無常、無我的法在生滅。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <p>第一章的主題，在他系論書裡有平行或不同的處理。下表收成一張延伸路標，方便在讀書會裡互相對照。</p>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>心即「識知的活動」、非我</td><td>《俱舍論》界品・根品</td><td>俱舍亦以「了別」釋識，並破我執；可比對「心王」定義的異同。</td></tr>
+                  <tr><td>心王與心所同生同滅</td><td>唯識《成唯識論》心所五位</td><td>唯識「心所五十一」與南傳「五十二心所」的分類對照（下一章詳談）。</td></tr>
+                  <tr><td>色界五禪 / 無色界四定</td><td>《清淨道論》·《瑜伽師地論》三摩呬多地</td><td>禪支開合（四禪 vs 五禪）、四無色的所緣次第，可與瑜伽論、智者止觀並讀。</td></tr>
+                  <tr><td>四雙八輩・道心果心</td><td>《俱舍論》賢聖品 · 大乘五位</td><td>須陀洹到阿羅漢的斷結次第，可對比俱舍見道修道、與大乘菩薩階位。</td></tr>
+                </tbody>
+              </table>
+              <div class="note"><strong>怎麼用這張表：</strong>先讀懂本章的 89/121 架構，再挑一條有興趣的線索去對照。其中「心所的分類」下一章（第二章）會正式展開，是與唯識百法對讀的最佳切入點。</div>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <p>本章關鍵名相，日後可逐步做成可點選的詞彙頁，串起各章之間的連結。</p>
+          <div class="terms">
+            <span>心 citta</span><span>地 bhūmi</span><span>性質 jāti</span>
+            <span>欲界 kāmāvacara</span><span>色界 rūpāvacara</span><span>無色界 arūpāvacara</span><span>出世間 lokuttara</span>
+            <span>不善 akusala</span><span>善 kusala</span><span>果報 vipāka</span><span>唯作 kiriya</span><span>無記 abyākata</span>
+            <span>貪根・瞋根・癡根</span><span>無因心 ahetuka</span><span>美心 sobhana</span>
+            <span>悅俱・捨俱・憂俱</span><span>無行・有行</span><span>邪見相應</span><span>智相應</span>
+            <span>領受・推度・轉向・生笑心</span><span>禪支：尋伺喜樂一境性</span><span>道心・果心</span>
+          </div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第一章</h2>
+          <p class="sutra-meta">下列為《攝阿毗達磨義論》第一章的核心根本偈與短句（巴利羅馬字為古老公有原文；中譯採尋法比丘《精解》標準用語）。每段下方附本頁自撰消文（<strong>參菩提比丘 CMA</strong>，非其英譯原文）。點「消文」即可展開。完整的心相枚舉請見上方各表。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 6 段核心偈頌</span></div>
+
+          <h4 class="ke">一、禮敬偈</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Sammāsambuddham atulaṃ / Sasaddhammagaṇuttamaṃ / Abhivādiya bhāsissaṃ / Abhidhammatthasangahaṃ.</span>禮敬無等的正等正覺者，以及至上的正法與聖僧眾之後，我當說《攝阿毗達磨義論》——阿毗達磨諸義的綱要。</p><details class="ann"><summary>消文</summary><div>依巴利傳統，論師開講前必先禮敬三寶。阿耨樓陀尊者以此偈表達對佛（無等 atula——其功德無人能及）、法（至上的正法）、僧（聖眾 gaṇuttama——即四雙八輩的聖者僧）的虔敬。「我當說」(bhāsissaṃ) 也提醒我們：此論本為「口誦、背熟」而作，好隨時作為分析實相的工具。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、四種究竟法</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Tattha vutt'ābhidhammatthā / Catudhā paramatthato / Cittaṃ cetasikaṃ rūpaṃ / Nibbānam iti sabbathā.</span>阿毗達磨中所說之義，從究竟諦而言，一切總為四種：心、心所、色、涅槃。</p><details class="ann"><summary>消文</summary><div>此偈是全論的總綱。阿毗達磨區分二諦：世俗諦（人、我、事物等概念 paññatti）與究竟諦（以自性 sabhāva 存在、不可再分的「法」）。從究竟諦看，一切只有四法——心、心所、色（三者為有為、緣生），與涅槃（唯一無為法）。這四法完全含攝經教的五蘊：識蘊即心；受、想、行三蘊即五十二心所；色蘊即色；涅槃則不在五蘊內。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">三、心依地分四</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Tattha cittaṃ tāva catubbidhaṃ hoti: (i) kāmāvacaraṃ; (ii) rūpāvacaraṃ; (iii) arūpāvacaraṃ; (iv) lokuttarañ cā ti.</span>其中，心首先分為四種：(一) 欲界、(二) 色界、(三) 無色界、(四) 出世間。</p><details class="ann"><summary>消文</summary><div>心雖以「識知所緣」為單一特相，卻可依多重原則分類。此處先依「地」(bhūmi) 分四：欲界、色界、無色界為世間 (lokiya)，出世間 (lokuttara) 則以涅槃為所緣、超越五取蘊。「地」是心的分類，與眾生投生的「界（趣）」密切相關卻不等同——同名而不同層次。這四地，加上後文依「性質」(jāti：不善/善/果報/唯作) 的分法，交織出全章 89 心的座標。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">四、十二不善心結頌</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Aṭṭhadhā lobhamūlāni / Dosamūlāni ca dvidhā / Mohamūlāni ca dve'ti / Dvādas' ākusalā siyuṃ.</span>貪根八種、瞋根二種、癡根二種——如是不善心共有十二。</p><details class="ann"><summary>消文</summary><div>不善心先依主要的「根」分三。貪根八：由受（悅俱/捨俱）、邪見（相應/不相應）、行（無行/有行）三對二分交織而成。瞋根二：只分無行/有行（瞋必憂俱，且不與邪見同時起）。癡根二：疑相應與掉舉相應，皆捨俱，不分有行無行。貪與瞋互斥、不共一心；癡則遍在一切不善心中，另有此二心是「癡獨盛」而無貪瞋，故別立為癡根心。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">五、色界心十五</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Pañcadhā jhānabhedena / rūpāvacaramānasaṃ / Puññapākakriyābhedā / taṃ pañcadasadhā bhave.</span>色界心依禪那分為五種；再依善、果報、唯作之別，成為十五種。</p><details class="ann"><summary>消文</summary><div>色界心與色界禪那 (rūpajjhāna) 相應，藉專注（止 samatha）而修得。依「五禪」分五，每禪各有善（凡夫與有學修得時）、果報（生於色界者的異熟）、唯作（阿羅漢入禪時），故 5 × 3 = 15。五禪的差別在禪支的逐步捨離：初禪具尋伺喜樂一境性，二禪去尋、三禪去伺、四禪去喜、五禪以捨代樂。一切色界心皆與智相應，具無貪無瞋無癡三善根。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">六、八十九心與一二一心結頌</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Ittham ekūnanavutippabhedaṃ pana mānasaṃ / Ekavīsasataṃ v' ātha vibhajanti vicakkhaṇā.</span>如是，心可分為八十九種；智者又將之分為一百二十一種。</p><details class="ann"><summary>消文</summary><div>前文已依「性質」（不善12・善21・果報36・唯作20）與「地」（欲界54・色界15・無色界12・出世間8）兩種方式，把心收成 89。此處再說：把出世間的 8 心（4 道 + 4 果）各依五禪的層次開為五，成 40；其餘 81 不變，故 81 + 40 = 121。「心雖只一個『識知』的特相，一經分類卻成眾多」——這正是第一章的結論，也為第二章「心所」的細析鋪好了路。（參菩提比丘 CMA）</div></details></div>
+
+          <a class="backlink" href="/study-group/abhidhamma/">← 回上座部阿毗達磨總導論</a>
+        </section>
+
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(!tools)return;
+  tools.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-act]');if(!b)return;
+    var open=b.getAttribute('data-act')==='open';
+    document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+  });
+})();
+
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！第一章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>
