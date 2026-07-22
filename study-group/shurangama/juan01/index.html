@@ -121,6 +121,45 @@
       border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
       line-height:2.0; text-align:justify; text-indent:2em; }
     .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
     @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
       .grid{grid-template-columns:1fr;} }
     @media (max-width:560px){ .hero{padding:36px 18px 22px;}
@@ -153,6 +192,7 @@
         <a href="#two-roots">二種根本</a>
         <a href="#see-nature">十番顯見（前二番）</a>
         <a href="#practice">本卷修學重點</a>
+        <a href="#quiz">學習考題</a>
         <a href="#crossref">對讀地圖</a>
         <a href="#terms">名相索引</a>
         <a href="#sutra">經文（卷一）</a>
@@ -233,6 +273,120 @@
             <article class="key-card"><b>先破後顯</b><p>佛不急著給答案，先讓你發現「你以為的心其實是妄想」，真心才顯得出來。修行也是先看破妄執。</p></article>
             <article class="key-card"><b>認清根本</b><p>日用中念念攀緣的是生死根本；那個不隨境動、不生不滅的見性，才是涅槃根本。認對了才不白修。</p></article>
           </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握卷一的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>阿難之所以遭遇摩登伽女之難，圓瑛《講義》指出的根本原因是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>持戒不夠精嚴</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>不夠多聞博學</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>一向多聞，而定力（道力）不足</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>未曾親近善知識</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>阿難「多聞第一」卻幾乎毀失戒體，正顯「多聞不敵業力」——這一跌逼出全經對「定慧真修」的渴求，成為說法的緣起。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>「七處徵心」中，佛一一破斥阿難所答，真正要破的是什麼？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>否定眾生實有一個心</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>「把攀緣分別當作真心」的錯認</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>證明心確實安住在身內</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>證明心就在身體正中間</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>圓瑛稱此為「破妄識無處」——不是要人變成無心，而是拆穿「以攀緣妄想為真心」的執著。真心尚未正面點出，只是先把假的掃乾淨。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">3</span>依「二種根本」，眾生念念攀緣外塵、被誤認為自性的那個妄想心，稱為？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>識精元明</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>常住真心</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>生死根本</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>涅槃根本</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>攀緣妄想心即「生死根本」；依它修行如蒸沙作飯，只成生死流轉。認賊作子、家財散盡，正指此。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">4</span>那個「無始菩提涅槃的元清淨體、能生一切攀緣卻常被遺漏」的真本，經文稱之為？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>第六意識</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>識精元明</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>攀緣心</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>前塵虛妄相想</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>「識精元明」即涅槃根本、元清淨體；認清這個真本，才是修行的正確起點。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>第一番顯見中，阿難答「能推尋思惟的那個」就是心，佛卻喝斥「咄！此非汝心」。佛說那是什麼？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>常住真心</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>本具的見性</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>前塵虛妄相想</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>菩提涅槃元清淨體</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>「此是前塵虛妄相想」——那能推尋思惟的，是隨外塵生滅的攀緣分別，不是真心。真正能「見」的是見性（心），不是眼。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">6</span>「七處徵心」的用意，是要阿難修到「無心」、什麼都不思惟的境界。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>七處全破，破的是「以攀緣分別為心」的執著，不是要人變成無心。目的是先掃除假的，好讓真心顯出。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">7</span>憍陳那是因為悟到「客塵」二字而證道的。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>「不住名客，住名主人；搖動名塵，寂然名空。」佛即以「頭動而見性不動」證明塵境在動、見性常住不動。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">8</span>《楞嚴經》卷一已經完整講完全部「十番顯見」。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>卷一只含前二番（顯見是心、顯見不動），其餘八番延續到卷二。卷一結束於「認物為己，輪迴是中，自取流轉」。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：為什麼「認錯根本」之後，再精進的修行也只是「錯亂修習」？</summary>
+            <div class="detail-body"><p>楞嚴以「認賊作子，家財散盡」為喻：把攀緣妄想（賊）錯認成真心，依它修行如「蒸沙作飯」——方向根本錯了，愈精進只是愈深地流轉生死。唯有先認清「識精元明」這個涅槃真本，修行才有正確的立足點。這也是佛在正式說法前，要先破七處、辨二根本的用意。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：阿難「多聞第一」卻臨難幾乎失守，對你自己「解行並進」的用功有何提醒？</summary>
+            <div class="detail-body"><p>（開放題，供自我省思）光懂道理擋不住現前的境界與習氣；聞思之外必須有實際的止觀定力與持戒工夫。解與行如車之兩輪、鳥之雙翼，缺一不可——這正是全經從「多聞」轉向「定慧真修」的核心提醒。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：佛以「頭動而見性不動、手開合而見性無舒卷」證明什麼？試與六祖「不是風動、不是幡動，仁者心動」對讀。</summary>
+            <div class="detail-body"><p>證明「塵境在動、見性不動」——能見的見性常住不生滅，動搖生滅的只是客塵；眾生錯把動搖生滅當作自己，才「認物為己，輪迴是中」。六祖之語同一旨趣：所謂「動」的是攀緣妄心，真如自性本自不動。兩處都在指同一件事：莫認生滅為真我。</p></div>
+          </details>
         </section>
 
         <section id="crossref">
@@ -558,6 +712,56 @@
     var b=e.target.closest('button[data-act]');if(!b)return;
     var open=b.getAttribute('data-act')==='open';
     document.querySelectorAll('.sutra details.ann').forEach(function(d){d.open=open;});
+  });
+})();
+
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！卷一重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
   });
 })();
 </script>
