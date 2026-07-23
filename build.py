@@ -150,6 +150,9 @@ HANDMADE_PAGES=[
     "/study-group/vimalakirti/pin12/",
     "/study-group/vimalakirti/pin13/",
     "/study-group/vimalakirti/pin14/",
+    "/study-group/baoji/",
+    "/study-group/baoji/unit01/",
+    "/study-group/baoji/unit02/",
     # 補登：這幾頁先前是靠手動 patch 進 sitemap.xml/search.json 才被收錄，
     # 一旦有人在快取沒還原全的狀況下跑全站重建，就會被整包重寫時悄悄漏掉。
     "/column/Lucien/buddhist-leadership/",
