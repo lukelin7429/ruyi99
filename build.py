@@ -111,6 +111,7 @@ HANDMADE_PAGES=[
     "/study-group/yogacara-bhumi/vol-020/",
     "/study-group/yogacara-bhumi/vol-021/",
     "/study-group/yogacara-bhumi/vol-022/",
+    "/study-group/yogacara-bhumi/vol-023/",
     "/study-group/yogacara-bhumi/vol-051/",
     "/study-group/yogacara-bhumi/vol-052/",
     "/study-group/yogacara-bhumi/vol-053/",
