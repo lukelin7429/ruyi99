@@ -197,6 +197,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/listening/",
     "/column/Cai-Ling/seeing-through/",
     "/column/Cai-Ling/who-is-reborn/",
+    "/column/Cai-Ling/resonance/",
 ]
 
 out2path={}
