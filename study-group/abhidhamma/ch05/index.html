@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第五章 · 離心路過程 Vīthimutta · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第五章「離心路過程」導讀：結生、有分、死三位一心；三十一界、十九結生心、業的四重分類（作用/次序/時間/處）、死生輪迴與臨死所緣。把心理分析接上業與輪迴的宇宙圖景。內容參考菩提比丘 CMA。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第五章</p>
+        <p class="eyebrow">被動的心流 · Vīthimutta · 離心路過程</p>
+        <h1>第五章 · 離心路過程</h1>
+        <p class="subtitle">第四章講心的主動認知；本章講它的被動面——<strong>結生、有分、死</strong>三位一心，默默維繫一期生命。由此展開界地、結生、業、輪迴四大主題，把阿毗達磨的心理分析接上業與輪迴的宇宙圖景。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第五章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：界地・結生・業・輪迴</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#bhumi">一 · 三十一界</a>
+        <a href="#patisandhi">二 · 十九結生心</a>
+        <a href="#kamma">三 · 業的四重分類</a>
+        <a href="#cuti">四 · 死生輪迴</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">第四章講心的「主動」面——認知的心路；本章「離心路過程」(<span class="pali">Vīthimutta</span>) 講它的「被動」面：<strong>結生、有分、死</strong>這三種不屬於任何心路、卻默默維繫整期生命的果報心。由此展開四大主題——<strong>界地、結生、業、死生輪迴</strong>。這一章把阿毗達磨的心理分析，接上了業與輪迴的宇宙圖景。</p>
+          <div class="quote">結生、有分、死，其實是同一個果報心在一期生命的三個位置：投生的第一剎那是「結生」，中間維繫生命的底流是「有分」，命終的最後一剎那是「死」。三位一心，貫穿生死。</div>
+          <div class="note"><strong>本章四概要：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">一</span><span class="ke-t">界地 bhūmi</span><span class="ke-div">31 界</span></li>
+              <li><span class="ke-mk">二</span><span class="ke-t">結生 paṭisandhi</span><span class="ke-div">19 結生心</span></li>
+              <li><span class="ke-mk">三</span><span class="ke-t">業 kamma</span><span class="ke-div">四重分類・16 類</span></li>
+              <li><span class="ke-mk">四</span><span class="ke-t">死生 cuti-paṭisandhi</span><span class="ke-div">臨死・輪迴</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="bhumi">
+          <h2>一 · 界地：三十一界</h2>
+          <p>眾生輪迴的「世界」共 31 界，分三大層（呼應第一章「地」）：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>層</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>欲界 kāma</td><td class="n">11</td><td>四惡趣（地獄・畜生・餓鬼・阿修羅）＋ 人 ＋ 六欲天</td></tr>
+              <tr><td>色界 rūpa</td><td class="n">16</td><td>初禪三天、二禪三天、三禪三天、四禪七天（含五淨居天、無想天）</td></tr>
+              <tr><td>無色界 arūpa</td><td class="n">4</td><td>空無邊處、識無邊處、無所有處、非想非非想處</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點：</strong>投生哪一界，由「令生業」與相應的結生心決定。人界雖在欲界，卻是「善惡業造作最有力」之處——因苦樂參半、有慧堪修，最宜修道。色界、無色界則須修得禪定方能感生。</div>
+        </section>
+
+        <section id="patisandhi">
+          <h2>二 · 結生：十九結生心</h2>
+          <p>「結生」是一期生命最初的一剎那心，接續前世、開啟今生。能擔任結生（及有分、死）的果報心共 <strong>19 種</strong>：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>結生心</th><th>數</th><th>感生何處</th></tr></thead>
+            <tbody>
+              <tr><td>不善果報·捨俱推度</td><td class="n">1</td><td>四惡趣結生</td></tr>
+              <tr><td>善果報·捨俱推度</td><td class="n">1</td><td>欲善趣中「無因結生」（如先天殘疾之人、地居天）</td></tr>
+              <tr><td>大果報</td><td class="n">8</td><td>欲善趣「二因／三因」結生（人、欲天）</td></tr>
+              <tr><td>色界果報</td><td class="n">5</td><td>色界結生</td></tr>
+              <tr><td>無色界果報</td><td class="n">4</td><td>無色界結生</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>三因結生的意義：</strong>大果報結生若是「三因」（含無癡慧根），此人今生堪能證得禪定與道果；「二因」者則不堪（今生無法證禪與聖道，但仍可積福慧為來生植因）。這正把第三章「因的多寡」接上了修證的可能性。</div>
+        </section>
+
+        <section id="kamma">
+          <h2>三 · 業：四重分類（16 類）</h2>
+          <p>本章對「業」(<span class="pali">kamma</span>) 作四組、每組四種的分類，是理解業果最系統的框架：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>依作用</th><th>依成熟次序</th><th>依成熟時間</th><th>依成熟之處</th></tr></thead>
+            <tbody>
+              <tr><td>令生 janaka</td><td>重 garuka</td><td>現法受（此生受）</td><td>不善業</td></tr>
+              <tr><td>支持 upatthambhaka</td><td>臨死 āsanna</td><td>次生受（來生受）</td><td>欲界善業</td></tr>
+              <tr><td>阻礙 upapīḷaka</td><td>慣行 āciṇṇa</td><td>後後受（後後生受）</td><td>色界善業</td></tr>
+              <tr><td>毀壞 upaghātaka</td><td>已作 kaṭattā</td><td>無效 ahosi</td><td>無色界善業</td></tr>
+            </tbody>
+          </table></div>
+          <div class="grid">
+            <article class="key-card"><b>依作用</b><p>令生業感生結生與果報；支持業助長之；阻礙業削弱之；毀壞業則截斷前業、令另一果現前。</p></article>
+            <article class="key-card"><b>依成熟次序</b><p>果報成熟的優先順序：重業 &gt; 臨死業 &gt; 慣行業 &gt; 已作業。故臨終一念（臨死業）與平日慣行至關重要。</p></article>
+            <article class="key-card"><b>依成熟時間</b><p>此生受、來生受、後後生受，或「無效」（過了時機、未得成熟的業）。</p></article>
+          </div>
+          <div class="note"><strong>修行的著力點：</strong>「重業」中，善的極重是禪那，惡的極重是五逆等；一旦造下，必最先成熟、難以扭轉。而多數人一生無極重業，故「慣行業」（日常反覆的善惡習慣）與「臨死業」（臨終一念）就成了決定去向的關鍵——這正是淨土「臨終正念」與平日「熏習淨業」之所以重要的阿毗達磨根據。</div>
+        </section>
+
+        <section id="cuti">
+          <h2>四 · 死生：臨終與輪迴</h2>
+          <p>臨命終時，將成熟的業會在最後一段意門心路的速行中，投射出三種所緣之一，作為下一世結生心的所緣：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>臨死所緣</th><th>巴利</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>業</td><td class="pali">kamma</td><td>重現當年造業時的善惡思（如彷彿又在行善或造惡）</td></tr>
+              <tr><td>業相</td><td class="pali">kamma-nimitta</td><td>造業時相關的影像、器物、情境（如殺生者見刀、供養者見佛像）</td></tr>
+              <tr><td>趣相</td><td class="pali">gati-nimitta</td><td>即將投生之趣的徵兆（如天界的宮殿、地獄的火）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>死生相續（參 CMA）：</strong>死心（cuti）一滅，下一世的結生心即無間生起，中間<strong>無有間隔、無有「靈魂」移轉</strong>——前後只是同一相續中的因果接續，如印章印於蠟上：非同非異，能生所生剎那相連。這正是無我而有輪迴、業果不失的關鍵：不是「有一個我去投胎」，而是業力推動的心流相續不斷。</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第五章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、業的四重分類</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Janakaṃ upatthambhakaṃ upapīḷakaṃ upaghātakañ cā ti kiccavasena… garukaṃ āsannaṃ āciṇṇaṃ kaṭattā-kammañ cā ti pākadānapariyāyena…</span>依作用有令生、支持、阻礙、毀壞；依成熟次序有重、臨死、慣行、已作……。</p><details class="ann"><summary>消文</summary><div>此偈開列業的四組分類。它把「善有善報、惡有惡報」這句話拆得極細：業如何生果（作用）、哪個先熟（次序）、何時熟（時間）、在哪一界熟（處）。其中「成熟次序」最切修行——重業最先熟，無重業則看臨終一念與平日慣行。這解釋了為何佛法既重「莫以善小而不為」（慣行的累積），又重「臨終助念、正念分明」（臨死業的關鍵）。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、死生無間相續</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Icc'evaṃ gahitapaṭisandhikānaṃ pana… cutikkhaṇe… tato paraṃ paṭisandhi.</span>如是，已取結生者……於死心之剎那（現起業、業相或趣相）……此後即（無間）結生。</p><details class="ann"><summary>消文</summary><div>此段點出輪迴的機制：臨終的最後一段心路，速行緣取「業／業相／趣相」；死心一滅，下一世結生心即刻無間生起，緣取同一所緣。其間沒有一個「靈魂」跨越，只有業力驅動的心流剎那相續——如以此蠟印印彼，印文相續而非印章本身移轉。這正是「無我而有輪迴、業果不失」的精確表述，也是第一章「心是識知的活動、非常我」在生死層面的展開。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>結生有分死，三位一心</b><p>同一果報心貫穿一期生命的始、中、終。看清這點，「生從何來、死往何去」就有了法的答案。</p></article>
+            <article class="key-card"><b>慣行與臨終最關鍵</b><p>無極重業者，去向由慣行業與臨死業決定。故平日熏習淨業、臨終保持正念，都是實修的重中之重。</p></article>
+            <article class="key-card"><b>無我而有輪迴</b><p>死生之間無靈魂移轉，只有業力推動的心流相續。這化解了「無我怎麼輪迴」的千古疑問。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第五章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>結生、有分、死這三者的關係是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>三種不同的心所</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>三種速行心</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>同一果報心在一期生命的始、中、終三個位</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>三個不同的界地</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>同一種果報心（離心路心）在投生第一剎那作「結生」、中間作「有分」、命終作「死」——三位一心，貫穿生死。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>三十一界的正確組成是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>欲界 16 + 色界 11 + 無色界 4</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>欲界 11 + 色界 16 + 無色界 4</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>欲界 6 + 色界 21 + 無色界 4</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>欲界 11 + 色界 4 + 無色界 16</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>欲界 11（四惡趣＋人＋六欲天）+ 色界 16 + 無色界 4 = 31 界。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>依「作用」分類，感生結生與一期果報的業稱為？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>令生業 janaka</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>支持業 upatthambhaka</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>阻礙業 upapīḷaka</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>毀壞業 upaghātaka</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>令生業感生結生與果報；支持業助長、阻礙業削弱、毀壞業截斷之。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">4</span>依「成熟次序」，果報成熟優先順序最高的是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>已作業 kaṭattā</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>慣行業 āciṇṇa</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>臨死業 āsanna</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>重業 garuka</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>優先順序：重業 &gt; 臨死業 &gt; 慣行業 &gt; 已作業。善的極重是禪那，惡的極重是五逆等，一旦造下必最先成熟。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>臨命終時，將成熟的業投射為結生所緣，下列何者<strong>不是</strong>那三種臨死所緣？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>業 kamma</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>業相 kamma-nimitta</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>中陰身 antarābhava</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>趣相 gati-nimitta</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>三種臨死所緣是業、業相、趣相。南傳上座部不立「中陰身」——死心一滅，結生心無間生起。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">6</span>依南傳阿毗達磨，人死後有一個「靈魂」離開身體，經過中陰，再進入下一個母胎。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>死心一滅，結生心無間生起，中間無靈魂移轉、無中陰。只有業力推動的心流相續——無我而有輪迴。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">7</span>「三因結生」者今生堪能證得禪定與道果，「二因結生」者則不堪。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>三因結生（含無癡慧根）者今生堪證禪與聖道；二因者今生不堪，但仍可積福慧為來生植三因結生之因。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>對一般沒有造下「極重業」的人而言，來世去向主要由「慣行業」與「臨死業」決定。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>無極重業者，成熟次序落到臨死業與慣行業。這正是「平日熏習淨業」與「臨終正念」在修行上如此重要的原因。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：南傳「死心—結生心無間相續、無中陰」，與漢傳普遍接受的「中陰身（七七四十九日）」不同。你如何理解這個差異？</summary>
+            <div class="detail-body"><p>（開放題）這是部派見解的差異：上座部（分別說系）與化地部等主張「無中有」，死生無間；說一切有部、犢子部及漢傳（受《俱舍》《瑜伽》影響）則立「中有」。兩者都在維護「業果不失、無我輪迴」，只是對「死生之間有無過渡身」判斷不同。可作為部派思想的一個精彩對讀，不必急於論斷孰是。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：「慣行業」與「臨死業」的教理，如何為淨土法門「平日念佛、臨終正念往生」提供支持？</summary>
+            <div class="detail-body"><p>（供省思）平日綿密念佛，即是熏習最強的「慣行業」；臨終提起佛號、心緣淨土，即是善的「臨死業」。二者正是無極重業者決定去向的關鍵。阿毗達磨的業論，恰為「是心是佛、臨終十念得生」提供了心識層面的機制說明——念佛不是玄談，而是在調整慣行速行與臨死所緣。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：本章說「死生之間無我移轉，只有業力相續」。這如何同時成立「無我」與「業果不失、自作自受」？</summary>
+            <div class="detail-body"><p>（供省思）關鍵在「相續 santāna」：沒有一個常一不變的我從前世走到後世（故無我），但前後心流是同一因果相續、非斷非常（故業果不失、非甲作乙受）。如燈燄相續：前燄非後燄（無我），後燄由前燄而生（相續不失）。這正是中道——離「常見」（有我永恆）與「斷見」（死即斷滅）二邊。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>死生相續・有無中陰</td><td>《俱舍論》世間品 · 《瑜伽師地論》本地分</td><td>南傳「無中有」vs 有部／瑜伽「中有」，是部派輪迴論的核心分歧。</td></tr>
+                  <tr><td>業的四重分類</td><td>《俱舍論》業品 · 《瑜伽》攝決擇分</td><td>令生／支持、重／近／慣行等分法，與有部業論可細緻對照。</td></tr>
+                  <tr><td>三十一界</td><td>《俱舍論》世間品 · 天台六道</td><td>三界二十八天（俱舍）與南傳 31 界的天界開合對照。</td></tr>
+                  <tr><td>慣行・臨終業</td><td>淨土「臨終正念」·《瑜伽》臨終</td><td>為念佛往生提供心識機制的對讀。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>離心路 vīthimutta</span><span>結生 paṭisandhi</span><span>有分 bhavaṅga</span><span>死 cuti</span>
+            <span>三十一界</span><span>19 結生心</span><span>三因／二因結生</span>
+            <span>業 kamma</span><span>令生・支持・阻礙・毀壞</span><span>重・臨死・慣行・已作</span><span>現法受・次生受・後後受・無效</span>
+            <span>業 kamma</span><span>業相 kamma-nimitta</span><span>趣相 gati-nimitta</span><span>相續 santāna</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch04/"><span>← 上一章</span><b>第四章 · 心路過程</b></a><a class="next" href="/study-group/abhidhamma/ch06/"><span>下一章 →</span><b>第六章 · 色之概要</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

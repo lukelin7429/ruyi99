@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第六章 · 色之概要與涅槃 Rūpa · Nibbāna · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第六章「色之概要」導讀：28 色（具體18＋非具體10）、色聚與純八法、業心時節食四因生色，並以第四究竟法涅槃（一性・有餘無餘・空無相無願）收束四究竟法。內容參考菩提比丘 CMA，採尋法比丘中譯用語。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第六章</p>
+        <p class="eyebrow">四究竟法之三與四 · Rūpa · Nibbāna</p>
+        <h1>第六章 · 色之概要與涅槃</h1>
+        <p class="subtitle">前五章講「名法」（心與心所）；本章轉向第三究竟法「<strong>色</strong>」——28 種剎那生滅、成聚而起的物質法，並以唯一的無為法「<strong>涅槃</strong>」收束四究竟法。阿耨樓陀對四究竟法的分析部分（前六章），至此圓滿。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第六章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：28 色 · 涅槃</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#rupa28">壹 · 二十八色</a>
+        <a href="#kalapa">貳 · 色聚</a>
+        <a href="#samutthana">參 · 四因生色</a>
+        <a href="#nibbana">肆 · 涅槃</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">前五章講的都是「名法」——心與心所。第六章轉向第三種究竟法「<strong>色</strong>」(<span class="pali">rūpa</span>)，即物質現象，共 <strong>28</strong> 種；最後再以第四種、也是唯一的無為法「<strong>涅槃</strong>」(<span class="pali">nibbāna</span>) 收束四究竟法。至此，阿耨樓陀對四究竟法的<strong>分析部分（前六章）宣告完成</strong>。</p>
+          <div class="quote">「色」不是常識裡堅實的物質塊，而是 28 種剎那生滅、成組出現的物質性法。連我們的身體，也只是這些色法依業、心、時節、食四因不斷生起的動態聚合。</div>
+          <div class="note"><strong>本章結構：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">壹</span><span class="ke-t">色的列舉</span><span class="ke-div">28 色</span>
+                <ul>
+                  <li><span class="ke-mk">一</span><span class="ke-t">具體色 nipphanna</span><span class="ke-div">18</span></li>
+                  <li><span class="ke-mk">二</span><span class="ke-t">非具體色 anipphanna</span><span class="ke-div">10</span></li>
+                </ul>
+              </li>
+              <li><span class="ke-mk">貳</span><span class="ke-t">色聚 kalāpa</span><span class="ke-div">純八法・21 聚</span></li>
+              <li><span class="ke-mk">參</span><span class="ke-t">色的等起</span><span class="ke-div">業・心・時節・食 四因</span></li>
+              <li><span class="ke-mk">肆</span><span class="ke-t">涅槃 nibbāna</span><span class="ke-div">一性・二依・三行相</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="rupa28">
+          <h2>壹 · 二十八色</h2>
+          <p>28 色分兩大類：<strong>具體色 18</strong>（有自性、可為觀智所緣）與<strong>非具體色 10</strong>（較抽象，是前者的性質、界限或相狀）。</p>
+          <h3>一、具體色 18（nipphanna-rūpa）</h3>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>類</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>四大種 mahābhūta</td><td class="n">4</td><td>地（硬）・水（流/黏）・火（暖）・風（動/支）</td></tr>
+              <tr><td>五淨色 pasāda</td><td class="n">5</td><td>眼・耳・鼻・舌・身淨色（五根的敏感物質）</td></tr>
+              <tr><td>四境色 gocara</td><td class="n">4</td><td>色・聲・香・味（觸即地火風，不另立）</td></tr>
+              <tr><td>二性根色 bhāva</td><td class="n">2</td><td>女根・男根</td></tr>
+              <tr><td>心色</td><td class="n">1</td><td>心所依處 hadaya-vatthu</td></tr>
+              <tr><td>命色</td><td class="n">1</td><td>命根色 jīvitindriya（維持俱生色法）</td></tr>
+              <tr><td>食色</td><td class="n">1</td><td>食素／段食 ojā</td></tr>
+            </tbody>
+          </table></div>
+          <h3>二、非具體色 10（anipphanna-rūpa）</h3>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>類</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>限制色</td><td class="n">1</td><td>空界 ākāsa-dhātu（色聚之間的界限）</td></tr>
+              <tr><td>表色 viññatti</td><td class="n">2</td><td>身表・語表（心藉以表達的身動與語音）</td></tr>
+              <tr><td>變化色 vikāra</td><td class="n">3</td><td>輕快性・柔軟性・適業性（＋二表，合稱五變化）</td></tr>
+              <tr><td>相色 lakkhaṇa</td><td class="n">4</td><td>積集 upacaya・相續 santati・老 jaratā・無常 aniccatā</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>觸為何不另立？</strong>「觸境」就是地、火、風三大（硬軟、冷熱、推動），身根一觸即知，故不另立「觸色」。又：四相色中的「積集＋相續」即色法的「生」，「老」是住異，「無常」是滅——這正是一切色法剎那「生住滅」的印記，也是修觀所要現見的無常。（參菩提比丘 CMA）</div>
+        </section>
+
+        <section id="kalapa">
+          <h2>貳 · 色聚：物質的最小團</h2>
+          <p>色從不單獨生起，總是成「聚」(<span class="pali">kalāpa</span>) 而生。任何一個色聚，最少都含<strong>「純八法」</strong>——八個不可分離的色 (avinibbhoga)：</p>
+          <div class="quote">地・水・火・風・色・香・味・食素（ojā）——這八法在<strong>一切</strong>色聚中必定俱在、缺一不可，是物質的「最小公倍數」。</div>
+          <div class="note"><strong>要點：</strong>連一粒微塵、一滴水，都至少是這八法的聚合；其餘色（如淨色、性根、命根）則在特定色聚中附加於這八法之上。全論列有 21 種色聚（業生9、心生6、時節生4、食生2）。這說明「物質」在阿毗達磨中不是連續的實體，而是成組、剎那生滅的法聚——為「色無常、無我」提供了微觀基礎。</div>
+        </section>
+
+        <section id="samutthana">
+          <h2>參 · 色的四種等起</h2>
+          <p>一切色法皆由四種原因之一生起（<span class="pali">samuṭṭhāna</span>）：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>等起</th><th>巴利</th><th>說明</th></tr></thead>
+            <tbody>
+              <tr><td>業生色</td><td class="pali">kammaja</td><td>過去業所生（如五淨色、性根、心色、命色）</td></tr>
+              <tr><td>心生色</td><td class="pali">cittaja</td><td>當下心所生（如身表、語表、隨心而動的身體）</td></tr>
+              <tr><td>時節生色</td><td class="pali">utuja</td><td>火界（溫度）所生（如身外一切無情色）</td></tr>
+              <tr><td>食生色</td><td class="pali">āhāraja</td><td>段食（食素）所生（滋養色身）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>身心相依：</strong>我們的色身，每一剎那都由這四因共同支撐——業給了根身的底子，心牽動它的表情動作，溫度與飲食維持它的存續。「心生色」尤其值得留意：心念直接生起色法，這是身心互動、乃至修定影響色身（如禪悅轉身）的教理根據。</div>
+        </section>
+
+        <section id="nibbana">
+          <h2>肆 · 涅槃</h2>
+          <p>涅槃是四究竟法中<strong>唯一的無為法</strong>——非緣生、無生滅，是脫離有為苦的究竟寂靜。它可從三個角度說：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>分法</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>依自性 · 一</td><td>唯一「寂靜相」(santi-lakkhaṇa)——涅槃只有一，不可分</td></tr>
+              <tr><td>依上下文 · 二</td><td><strong>有餘依涅槃</strong> sa-upādisesa（阿羅漢在世，煩惱已盡而五蘊猶存）／<strong>無餘依涅槃</strong> anupādisesa（五蘊亦捨、不再相續）</td></tr>
+              <tr><td>依行相 · 三</td><td><strong>空</strong> suññata（離貪瞋癡）／<strong>無相</strong> animitta（離一切有為相）／<strong>無願</strong> appaṇihita（離願求）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>關鍵辨正（參 CMA）：</strong>涅槃不是「斷滅」（無），也不是「另一個世界」，而是「有為的止息」——貪瞋癡永滅、生死不再相續的無為寂靜。它以自性存在，是出世間道果心所緣的唯一對象（第一章出世間 8 心即以涅槃為所緣）。「有餘／無餘」不是兩個涅槃，而是同一寂滅在「五蘊未捨／已捨」兩種情況下的稱呼。</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第六章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、色為二種</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Bhūta-pasāda-visayā bhāvo hadayam icc' api / Jīvitāhārarūpehi aṭṭhavīsati rūpāni.</span>大種、淨色、境色、性根色、心色，以及命色、食色——色共二十八。</p><details class="ann"><summary>消文</summary><div>此偈列出具體色 18 的骨幹：四大種是一切色的基礎，其餘皆「所造色」，依大種而有。大種如大地，所造色如依地而長的草木。把「物質」拆成 28 種剎那生滅、成聚而起的法，正是要破除「有一個堅實、常住的身體或物質」的錯覺——身體只是色法依四因不斷生起的動態過程。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、涅槃的三種說</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Tad etaṃ sabhāvato ekavidham pi… sa-upādisesa-nibbānadhātu anupādisesa-nibbānadhātu cā ti duvidhaṃ… suññataṃ animittaṃ appaṇihitañ cā ti tividhaṃ.</span>此（涅槃）依自性雖一，依上下文則二（有餘依、無餘依），依行相則三（空、無相、無願）。</p><details class="ann"><summary>消文</summary><div>涅槃自性唯一（寂靜），但可從不同角度稱說：就「阿羅漢五蘊在否」分有餘、無餘；就「以何行相趣入」分空（觀無我而入）、無相（觀無常而入）、無願（觀苦而入）。這三行相正對應三解脫門，也對應觀智所偏重的三共相。涅槃非斷滅、非他界，而是貪瞋癡永滅的無為寂靜，是全部修道的歸趣——阿毗達磨對四究竟法的分析，至此圓滿收束於此。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>身體是動態的色聚</b><p>色身不是常住實體，而是 28 色依業心時節食四因剎那生滅的聚合。這是「觀身無常、無我」的微觀依據。</p></article>
+            <article class="key-card"><b>心能生色</b><p>「心生色」點出身心互動：心念直接牽動色法。修定影響色身、禪悅轉身，皆由此可解。</p></article>
+            <article class="key-card"><b>涅槃是止息，非斷滅</b><p>涅槃是貪瞋癡永滅的無為寂靜，以自性存在，為出世間心所緣。非無、非他界。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第六章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">1</span>阿毗達磨列舉的「色」共有幾種？如何分類？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>24 種：具體 14 + 非具體 10</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>28 種：具體 18 + 非具體 10</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>52 種</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>11 種</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>28 色 = 具體色 18（大種4＋淨色5＋境色4＋性根2＋心色1＋命色1＋食色1）+ 非具體色 10（空界1＋表2＋變化3＋相色4）。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">2</span>為什麼「觸境」不另立為一種色？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>因為觸不是色法</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>因為觸屬於心所</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>因為觸境就是地、火、風三大，不必另立</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>因為觸境即水界</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>觸境（硬軟、冷熱、推動）就是地、火、風三大，身根一觸即知，故四境色只列色聲香味，不另立觸色。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>任何一個色聚（kalāpa）中，必定俱在、缺一不可的「純八法」是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>地、水、火、風、色、香、味、食素</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>眼、耳、鼻、舌、身、意、色、心</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>四大種＋四相色</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>色、聲、香、味、觸、法、根、境</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>純八法（avinibbhoga）＝四大種＋色、香、味、食素，在一切色聚中必定俱在，是物質的最小組合。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">4</span>下列何者<strong>不是</strong>色法生起的四種原因（等起）之一？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>業 kamma</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>心 citta</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>時節 utu（火界／溫度）</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>虛空 ākāsa</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>四因生色是業、心、時節、食。虛空（空界）本身是被生的一種非具體色，不是生色之因。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">5</span>「有餘依涅槃（sa-upādisesa）」指的是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>還殘留一些煩惱未斷</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>阿羅漢煩惱已盡，但五蘊之身猶存於世</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>涅槃之外還有另一個涅槃</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>凡夫暫時體驗的涅槃</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>有餘依＝煩惱已盡、五蘊（身）猶存（阿羅漢在世）；無餘依＝五蘊亦捨、不再相續。二者是同一寂滅的兩種情況，非兩個涅槃。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">6</span>依阿毗達磨，我們的身體是一個常住、堅實的物質實體。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>身體是 28 色依業、心、時節、食四因剎那生滅、成聚而起的動態聚合，並非常住實體。這正是「觀身無常、無我」的微觀依據。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">7</span>「心生色（cittaja-rūpa）」意味著心念可以直接生起色法，是身心互動的教理根據。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>四因生色含「心生色」——身表、語表及隨心而動的身體皆由心生，這是修定影響色身、禪悅轉身的教理基礎。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">8</span>涅槃是一切都歸於「空無、斷滅」，什麼也不存在。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>涅槃是貪瞋癡永滅、生死不再相續的「無為寂靜」，以自性存在、為出世間心所緣，非斷滅、非虛無、也非另一個世界。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：把身體看成「28 色依四因剎那生滅的色聚」，對修「不淨觀」「界分別觀」有什麼幫助？</summary>
+            <div class="detail-body"><p>（供省思）界分別觀正是把身體拆解為地水火風四界（乃至 28 色），現見其中並無「我、我所、可貪之相」，只有生滅的法。色聚論給這種觀法一張精密地圖：知道身體只是成組生滅的物質法，貪身、我執便失去立足點。這與《清淨道論》的四界差別、三十二身分觀直接相通（第九章業處）。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：南傳「涅槃以自性存在、有寂靜相」，與中觀「涅槃亦空、無自性」看似衝突。你怎麼理解這組張力？</summary>
+            <div class="detail-body"><p>（開放題）這是部派實在論與大乘中觀最深的一組對話。南傳為維護「涅槃是真實可證的無為法、非斷滅」，說它「以自性存在」；中觀為徹底破執，連涅槃也說「無自性、與世間無異」（《中論》涅槃品）。兩者關切不同：一者防「斷見」（涅槃是無），一者防「常見／法執」（涅槃是實有一物）。深入對讀，正是理解「二諦」與「空」的絕佳入口。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：本章一併處理「色」與「涅槃」——一個是最粗的有為物質，一個是最細的無為寂靜。阿耨樓陀把它們放在同一章，有什麼深意？</summary>
+            <div class="detail-body"><p>（供省思）這正凸顯四究竟法的「有為／無為」二分：心、心所、色三者皆有為、皆苦、皆當「遍知」；涅槃無為、是苦的止息、當「證」。第六章以「最粗的色」始、以「無為涅槃」終，恰是把「所應遍知的有為」與「所應趣證的無為」並列——分析的終點，正指向修證的起點。這也預告了後三章從「理論」轉向「實修」。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>28 色 · 四大所造</td><td>《俱舍論》色法 · 唯識 11 色法</td><td>三系對「色」的開合：俱舍 11 色、唯識 11 色、南傳 28 色，數目與細目對照。</td></tr>
+                  <tr><td>色聚 · 極微</td><td>《俱舍論》極微說</td><td>南傳「色聚（純八法）」與有部「極微和合」的物質觀對讀。</td></tr>
+                  <tr><td>涅槃有自性</td><td>中觀《中論》涅槃品 · 般若</td><td>南傳「涅槃寂靜相、以自性存在」vs 中觀「涅槃亦空」的根本對話。</td></tr>
+                  <tr><td>界分別 · 四界</td><td>《清淨道論》四界差別 · 念處</td><td>接第九章業處與四念處身觀。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>色 rūpa</span><span>具體色 nipphanna</span><span>非具體色 anipphanna</span>
+            <span>四大種 mahābhūta</span><span>五淨色 pasāda</span><span>境色 gocara</span><span>性根色 bhāva</span><span>心所依處 hadaya</span><span>命根色</span><span>食素 ojā</span>
+            <span>空界 ākāsa</span><span>表色 viññatti</span><span>變化色 vikāra</span><span>相色 lakkhaṇa</span>
+            <span>色聚 kalāpa</span><span>純八法 avinibbhoga</span><span>業・心・時節・食 生色</span>
+            <span>涅槃 nibbāna</span><span>有餘依・無餘依</span><span>空・無相・無願</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch05/"><span>← 上一章</span><b>第五章 · 離心路過程</b></a><a class="next" href="/study-group/abhidhamma/ch07/"><span>下一章 →</span><b>第七章 · 類別之概要</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

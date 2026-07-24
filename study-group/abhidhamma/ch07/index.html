@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第七章 · 類別之概要 Samuccaya · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第七章「類別之概要」導讀：把究竟法編入經教法數的四大類——不善（漏蓋隨眠結）、雜（因根力食）、覺分（三十七道品）、一切（蘊處界諦）。內容參考菩提比丘 CMA，採尋法比丘中譯用語。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第七章</p>
+        <p class="eyebrow">接回經教法數的橋 · Samuccaya · 類別之概要</p>
+        <h1>第七章 · 類別之概要</h1>
+        <p class="subtitle">前六章分析完四究竟法；本章把它們<strong>重新編入經教常見的法數範疇</strong>——漏、蓋、隨眠、三十七道品、蘊處界諦。它像一座橋，把阿毗達磨的分析語言，接回你在經藏裡讀慣的名相。全章分不善、雜、覺分、一切四大類。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第七章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：類別 · 三十七道品</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#akusala">壹 · 不善之概要</a>
+        <a href="#missaka">貳 · 雜之概要</a>
+        <a href="#bodhi">參 · 三十七道品</a>
+        <a href="#sabba">肆 · 蘊處界諦</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">前六章完成了對四究竟法的分析。第七章「類別之概要」(<span class="pali">Samuccaya</span>) 換一種工作：把這些究竟法<strong>重新編入經教常見的各種「法數」範疇</strong>——漏、蓋、隨眠、蘊、處、界、諦、三十七道品……。它像一座橋，把阿毗達磨的分析語言，接回你在經藏裡讀慣的那些名相。全章分<strong>四大類</strong>。</p>
+          <div class="quote">同一批究竟法，這一章要問：它們如何組成「煩惱」的種種面貌？如何組成「趣向覺悟」的三十七道品？又如何回收成蘊、處、界、諦這些經教的骨架？</div>
+          <div class="note"><strong>本章四類：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">壹</span><span class="ke-t">不善之概要 akusala</span><span class="ke-div">漏・蓋・隨眠・結…</span></li>
+              <li><span class="ke-mk">貳</span><span class="ke-t">雜之概要 missaka</span><span class="ke-div">因・禪支・道分・根・力・增上・食</span></li>
+              <li><span class="ke-mk">參</span><span class="ke-t">覺分之概要 bodhipakkhiya</span><span class="ke-div">三十七道品</span></li>
+              <li><span class="ke-mk">肆</span><span class="ke-t">一切之概要 sabba</span><span class="ke-div">蘊・處・界・諦</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="akusala">
+          <h2>壹 · 不善之概要</h2>
+          <p>從九組不同的「煩惱法數」，照見同一批不善心所（尤其貪、瞋、癡、見、慢）如何以不同名目、不同角度纏縛眾生：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>法數</th><th>數</th><th>要點</th></tr></thead>
+            <tbody>
+              <tr><td>漏 āsava</td><td class="n">4</td><td>欲漏・有漏・見漏・無明漏（滲漏、久積之惑）</td></tr>
+              <tr><td>暴流 ogha</td><td class="n">4</td><td>欲・有・見・無明（漂溺眾生的洪流）</td></tr>
+              <tr><td>軛 yoga</td><td class="n">4</td><td>欲・有・見・無明（軛縛於生死）</td></tr>
+              <tr><td>繫 gantha</td><td class="n">4</td><td>貪・瞋・戒禁取・見取（身之四繫）</td></tr>
+              <tr><td>取 upādāna</td><td class="n">4</td><td>欲取・見取・戒禁取・我語取</td></tr>
+              <tr><td>蓋 nīvaraṇa</td><td class="n">6</td><td>貪欲・瞋恚・昏沉睡眠・掉舉惡作・疑・無明（障定慧）</td></tr>
+              <tr><td>隨眠 anusaya</td><td class="n">7</td><td>欲貪・有貪・瞋・慢・見・疑・無明（潛伏隨逐的根本惑）</td></tr>
+              <tr><td>結 saṃyojana</td><td class="n">10</td><td>繫縛眾生於輪迴的十結（經、論各有一套十結）</td></tr>
+              <tr><td>煩惱 kilesa</td><td class="n">10</td><td>貪・瞋・癡・慢・見・疑・昏沉・掉舉・無慚・無愧</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點：</strong>這九組不是九堆不同的東西，而是<strong>同一批不善心所被九種法門重新編組</strong>。例如「無明」同時是漏、暴流、軛、隨眠、煩惱的一員；「見」則現身為漏、取、結、煩惱。《導論》所說「同一法在不同名下入不同範疇」正是此意——這也讓你把散在各經的煩惱名相，收攏成一張可對照的表。</div>
+        </section>
+
+        <section id="missaka">
+          <h2>貳 · 雜之概要</h2>
+          <p>「雜」指這一類兼含善、不善、無記（故名 missaka）。共七組：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>法數</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>因 hetu</td><td class="n">6</td><td>貪瞋癡三不善根 ＋ 無貪無瞋無癡三善根</td></tr>
+              <tr><td>禪支 jhānaṅga</td><td class="n">7</td><td>尋・伺・喜・一境性 ＋ 樂・憂・捨（含善不善禪支）</td></tr>
+              <tr><td>道分 maggaṅga</td><td class="n">12</td><td>八正道 ＋ 邪見・邪思惟・邪精進・邪定（正八＋邪四）</td></tr>
+              <tr><td>根 indriya</td><td class="n">22</td><td>五根（眼耳鼻舌身）＋女男命 ＋意 ＋五受根 ＋信精進念定慧 ＋三無漏根</td></tr>
+              <tr><td>力 bala</td><td class="n">9</td><td>信・精進・念・定・慧 ＋ 慚・愧 ＋ 無慚・無愧</td></tr>
+              <tr><td>增上 adhipati</td><td class="n">4</td><td>欲・精進・心・觀（四如意足之增上）</td></tr>
+              <tr><td>食 āhāra</td><td class="n">4</td><td>段食・觸食・意思食・識食</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點：</strong>這一類把「因、根、力、食」等既通善又通惡的法數收在一起。特別是「二十二根」——它把感官（五根）、生命（命根）、情感（五受根）、修道（五善根＋三無漏根）全收進「根（主導作用）」這一概念下，是理解「根」義最完整的一組。</div>
+        </section>
+
+        <section id="bodhi">
+          <h2>參 · 覺分之概要：三十七道品</h2>
+          <p>「菩提分」(<span class="pali">bodhipakkhiya</span>) 是趣向覺悟的三十七種資糧，是本章最切修行的一組。七類合為 37：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>七類</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>四念處 satipaṭṭhāna</td><td class="n">4</td><td>身・受・心・法（念的四種所緣）</td></tr>
+              <tr><td>四正勤 sammappadhāna</td><td class="n">4</td><td>已生惡令斷・未生惡令不生・未生善令生・已生善令增</td></tr>
+              <tr><td>四神足 iddhipāda</td><td class="n">4</td><td>欲・精進・心・觀（成就定的四增上）</td></tr>
+              <tr><td>五根 indriya</td><td class="n">5</td><td>信・精進・念・定・慧</td></tr>
+              <tr><td>五力 bala</td><td class="n">5</td><td>信・精進・念・定・慧（同五根，力用更強、不為對治所動）</td></tr>
+              <tr><td>七覺支 bojjhaṅga</td><td class="n">7</td><td>念・擇法・精進・喜・輕安・定・捨</td></tr>
+              <tr><td>八正道 maggaṅga</td><td class="n">8</td><td>正見・正思惟・正語・正業・正命・正精進・正念・正定</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點（參 CMA）：</strong>37 道品雖列為七類，究其實質，是由<strong>少數幾個心所反覆現身</strong>：如「精進」出現於正勤、神足、根、力、覺支、道——共 9 次；「念」出現 8 次；「慧（擇法／正見）」5 次。所以它不是 37 件互不相干的事，而是同一組善心所（信念進定慧為骨幹）在修道不同階段、不同側重下的展開。掌握這點，「三十七道品」就從龐雜清單變成一條清晰的修道進程。</div>
+        </section>
+
+        <section id="sabba">
+          <h2>肆 · 一切之概要：蘊處界諦</h2>
+          <p>最後把一切究竟法，回收進經藏最根本的四套骨架：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>法數</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>蘊 khandha</td><td class="n">5</td><td>色・受・想・行・識</td></tr>
+              <tr><td>取蘊 upādānakkhandha</td><td class="n">5</td><td>五取蘊（有漏、為取所緣的五蘊；出世間法不入取蘊）</td></tr>
+              <tr><td>處 āyatana</td><td class="n">12</td><td>六內處（眼耳鼻舌身意）＋六外處（色聲香味觸法）</td></tr>
+              <tr><td>界 dhātu</td><td class="n">18</td><td>十二處 ＋ 六識界（眼識…意識界）</td></tr>
+              <tr><td>諦 sacca</td><td class="n">4</td><td>苦・集・滅・道 四聖諦</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>回到原點：</strong>整部阿毗達磨從「四究竟法」出發，繞了一大圈精密分析，最後在此把一切收攏回<strong>蘊、處、界、諦</strong>——這正是佛陀在經藏中最常用的分析架構。這一收，等於宣告：阿毗達磨不是另立新法，而是把經教的骨架講到最細、最徹底。四聖諦更是總綱——苦（五取蘊）、集（煩惱與業）、滅（涅槃）、道（三十七道品），恰好把本章四類串成一體。</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第七章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、四類總標</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Akusalasangaho, missakasangaho, bodhipakkhiyasangaho, sabbasangaho cā ti samuccayasangaho catubbidho veditabbo.</span>不善之概要、雜之概要、覺分之概要、一切之概要——當知類別之概要有此四種。</p><details class="ann"><summary>消文</summary><div>此偈開列本章四類。它們像四張不同用途的「收納表」：不善類收攝一切煩惱的種種名相；雜類收攝通善惡的因、根、力、食；覺分類收攝趣向解脫的三十七道品；一切類則把萬法回收進蘊處界諦。四類合看，正是一部「苦與苦滅」的地圖——前二類偏「流轉門」（煩惱與雜染），後二類偏「還滅門」（道品與究竟骨架）。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、三十七覺分</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Satipaṭṭhāna… sammappadhāna… iddhipāda… indriya… bala… bojjhaṅga… maggaṅga… ti sattatiṃsa bodhipakkhiyā.</span>四念處、四正勤、四神足、五根、五力、七覺支、八正道——三十七菩提分。</p><details class="ann"><summary>消文</summary><div>三十七道品是趣向覺悟的完整資糧。表面是七類 37 項，實則由「信、念、精進、定、慧」等少數善心所反覆組成：精進現身 9 次、念 8 次、慧 5 次。故它不是 37 件散事，而是同一組善法在修道不同階段的側重——初以念處立基、正勤策發、神足成定、根力堅固、覺支開慧、道支圓成。把握這條線，龐雜的道品便成一條清晰的修行次第，也直接通向第九章的止觀業處。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>同法異名</b><p>漏、蓋、隨眠、結…看似繁多，其實是同一批不善心所的不同編組。看破這點，煩惱名相就不再嚇人。</p></article>
+            <article class="key-card"><b>道品是同法反覆</b><p>三十七道品由信念進定慧少數善法反覆組成。掌握骨幹，龐雜清單就成一條修道次第。</p></article>
+            <article class="key-card"><b>萬法歸蘊處界諦</b><p>繞了一大圈分析，終究回收進經藏最根本的四套骨架——阿毗達磨是把經教講細，非另立新法。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第七章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>第七章「類別之概要」分為哪四大類？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>心・心所・色・涅槃</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>欲界・色界・無色界・出世間</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>不善・雜・覺分・一切</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>受・因・作用・門</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>本章四類即不善之概要、雜之概要、覺分之概要（37 道品）、一切之概要（蘊處界諦）。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>「三十七菩提分（道品）」的正確組成是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>念處5＋正勤5＋神足5＋根7＋力7＋覺支8</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>念處4＋正勤4＋神足4＋五根5＋五力5＋七覺支7＋八正道8</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>四諦＋八正道＋十二因緣</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>五蘊＋十二處＋十八界＋四諦</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>4+4+4+5+5+7+8 = 37。這是趣向覺悟的完整資糧。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>本章說「漏、蓋、隨眠、結、煩惱」等九組不善法數的關係是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>是同一批不善心所，被九種法門重新編組</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>是九堆完全不同、互不相干的煩惱</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>只有阿羅漢才有</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>都是善心所</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>如「無明」同時是漏、暴流、軛、隨眠、煩惱的一員——同一法在不同名下入不同範疇，是同批不善心所的九種編組。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">4</span>「隨眠（anusaya）」有幾種？其特點是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>4 種，是最粗的現行煩惱</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>10 種，只在惡趣現起</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>6 種，即六蓋</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>7 種，是潛伏隨逐、伺機現起的根本惑</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>七隨眠：欲貪・有貪・瞋・慢・見・疑・無明。它們潛伏於心相續中隨逐眾生，遇緣即現行，唯聖道能斷。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>「一切之概要」把萬法回收進經藏最根本的骨架，下列何組正確？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>戒・定・慧・解脫</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>漏・蓋・結・纏</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>蘊(5)・處(12)・界(18)・諦(4)</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>因・根・力・食</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>一切類把究竟法回收為五蘊、十二處、十八界、四聖諦——佛陀在經藏中最常用的分析骨架。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>三十七道品雖分七類，其實是由「信、念、精進、定、慧」等少數善心所反覆組成的。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>如精進現身 9 次、念 8 次、慧 5 次。道品不是 37 件散事，而是同組善法在修道不同階段的側重。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>「五取蘊」與「五蘊」完全相同，出世間的道果法也含在五取蘊中。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>五取蘊專指「有漏、為取所緣」的五蘊；出世間道果心（無漏）不入取蘊。苦聖諦即五取蘊，故此區別關係到四諦的界定。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>「界（dhātu）」有十八：即十二處再加上六識界。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>十八界 = 六內處（六根）＋六外處（六境）＋六識界。處與界的差別，主要在界另立了「六識」。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：本章把「漏、蓋、隨眠、結」等看成同批不善心所的不同編組。這對你面對自己的煩惱，有什麼實際的幫助？</summary>
+            <div class="detail-body"><p>（供省思）它把「煩惱」從一堆嚇人的名相，還原成可辨認的幾個心所（貪瞋癡慢見疑等）。當你知道「掉舉是蓋、也是煩惱、也隨掉舉隨眠」，就能在禪修中精準定位當下是哪個心所在作祟，並用相應的道品對治（如以念對治掉舉、以擇法對治疑）。名相的收攏，正是為了對治的精準。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：三十七道品由少數善心所反覆組成。這與大乘「六度」「菩薩道次第」在結構上有何可對照之處？</summary>
+            <div class="detail-body"><p>（開放題）兩者都把「修道」拆成可操作的德目，且都以少數核心（如般若／慧、精進、禪定）貫穿。道品偏「解脫道」的次第（念處→道支），六度偏「菩薩道」的悲智雙運（布施持戒…般若）。可留意「慧（般若）」在兩系都是收尾與核心，是聲聞道與菩薩道的共法樞紐。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：全章最後把萬法收回「蘊處界諦」，等於說阿毗達磨只是把經教講細。你如何理解「論不離經、以論釋經」的關係？</summary>
+            <div class="detail-body"><p>（供省思）阿毗達磨的價值不在另創新說，而在把經藏中散說、略說的法，系統化、窮盡化、精確化。四究竟法的分析最後回歸蘊處界諦，正表明：論是經的「顯微鏡」，不是經的替代品。這也提醒讀論者——學阿毗達磨是為了更如實地讀經、修經，而非執著名相、增長我慢。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>三十七道品</td><td>《瑜伽師地論》聲聞地 · 天台圓教道品</td><td>道品的共法性；南傳次第 vs 大乘開展。</td></tr>
+                  <tr><td>漏・蓋・結・隨眠</td><td>《俱舍論》隨眠品 · 唯識煩惱</td><td>煩惱的種種法數，三系分類的細緻對照。</td></tr>
+                  <tr><td>蘊處界諦</td><td>《雜阿含》· 《俱舍論》</td><td>五蘊十二處十八界四諦是三乘共同骨架，最宜互讀。</td></tr>
+                  <tr><td>二十二根</td><td>《俱舍論》根品</td><td>「根（增上作用）」義的完整對照。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>類別 samuccaya</span><span>漏 āsava</span><span>暴流 ogha</span><span>軛 yoga</span><span>繫 gantha</span><span>取 upādāna</span><span>蓋 nīvaraṇa</span><span>隨眠 anusaya</span><span>結 saṃyojana</span><span>煩惱 kilesa</span>
+            <span>因・禪支・道分</span><span>二十二根 indriya</span><span>力 bala</span><span>增上・食</span>
+            <span>三十七道品 bodhipakkhiya</span><span>四念處</span><span>四正勤</span><span>四神足</span><span>五根五力</span><span>七覺支</span><span>八正道</span>
+            <span>五蘊 khandha</span><span>五取蘊</span><span>十二處 āyatana</span><span>十八界 dhātu</span><span>四聖諦 sacca</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch06/"><span>← 上一章</span><b>第六章 · 色之概要與涅槃</b></a><a class="next" href="/study-group/abhidhamma/ch08/"><span>下一章 →</span><b>第八章 · 緣之概要</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

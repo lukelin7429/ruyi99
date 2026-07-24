@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第三章 · 雜之概要 Pakiṇṇaka · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第三章「雜之概要」導讀：以受、因、作用、門、所緣、依六個範疇分類心與心所（五受分布、四種因、14 作用10位、六門六所緣六依處）。內容參考菩提比丘 CMA，採尋法比丘中譯用語。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第三章</p>
+        <p class="eyebrow">四究竟法的六向索引 · Pakiṇṇaka · 雜之概要</p>
+        <h1>第三章 · 雜之概要</h1>
+        <p class="subtitle">前兩章一個個列出了心與心所；本章換一種切法，把它們放進<strong>受、因、作用、門、所緣、依</strong>六張分類網格逐一照過。這一章像一張六向索引，讓前面的零件立體起來，也為第四章「心路過程」備好零件。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第三章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：受因作用門所緣依</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#vedana">一 · 受</a>
+        <a href="#hetu">二 · 因</a>
+        <a href="#kicca">三 · 作用</a>
+        <a href="#dvara">四 · 門</a>
+        <a href="#arammana">五 · 所緣</a>
+        <a href="#vatthu">六 · 依</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">前兩章分別點數了「心」(89/121) 與「心所」(52)。第三章「雜之概要」(<span class="pali">Pakiṇṇaka</span>) 換一種切法：不再一個個枚舉，而是把心與心所<strong>放進六個範疇的網格</strong>逐一分類——<strong>受、因、作用、門、所緣、依</strong>。這一章像一張「六向索引表」，把前面的零件從六個角度重新照一遍。</p>
+          <div class="quote">同一堆心與心所，換六個問題來問：它帶什麼受？有幾個根？在心流中做什麼工作？從哪個門進來？緣取什麼對象？依於哪個色法？——六問答完，心的運作就立體了。</div>
+          <div class="note"><strong>本章科判（六門分類）：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">一</span><span class="ke-t">受 vedanā</span><span class="ke-div">依感受分</span></li>
+              <li><span class="ke-mk">二</span><span class="ke-t">因 hetu</span><span class="ke-div">依根之有無多寡</span></li>
+              <li><span class="ke-mk">三</span><span class="ke-t">作用 kicca</span><span class="ke-div">14 作用・10 位</span></li>
+              <li><span class="ke-mk">四</span><span class="ke-t">門 dvāra</span><span class="ke-div">六門</span></li>
+              <li><span class="ke-mk">五</span><span class="ke-t">所緣 ārammaṇa</span><span class="ke-div">六所緣</span></li>
+              <li><span class="ke-mk">六</span><span class="ke-t">依 vatthu</span><span class="ke-div">六依處</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="vedana">
+          <h2>一 · 受（vedanā）</h2>
+          <p>依「感受」分類。受可作三分（樂／苦／捨）或更細的<strong>五分</strong>——把身、心的樂受、苦受分開：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>五受</th><th>巴利</th><th>身/心</th><th>心的數目（依 121）</th></tr></thead>
+            <tbody>
+              <tr><td>樂</td><td class="pali">sukha</td><td>身・悅</td><td class="n">1（善果報身識）</td></tr>
+              <tr><td>苦</td><td class="pali">dukkha</td><td>身・不悅</td><td class="n">1（不善果報身識）</td></tr>
+              <tr><td>悅</td><td class="pali">somanassa</td><td>心・悅</td><td class="n">62</td></tr>
+              <tr><td>憂</td><td class="pali">domanassa</td><td>心・不悅</td><td class="n">2（瞋恚相應）</td></tr>
+              <tr><td>捨</td><td class="pali">upekkhā</td><td>身心・中</td><td class="n">55</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點：</strong>「身」的樂苦（sukha／dukkha）只出現在<strong>身識</strong>一個心裡，因為只有身根與觸境相撞才有粗猛的樂苦；眼耳鼻舌四識則因所緣衝擊弱，一律是「捨受」。心的憂受（domanassa）只在二瞋根心。合計 1+1+62+2+55 = 121。（參菩提比丘 CMA）</div>
+        </section>
+
+        <section id="hetu">
+          <h2>二 · 因（hetu）</h2>
+          <p>「因」即「根」(mūla)——貪瞋癡三不善根、無貪無瞋無癡三善（美）根。依一個心含幾個根，分為：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>類別</th><th>數目</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>無因 ahetuka</td><td class="n">18</td><td>18 無因心（不具任何根）</td></tr>
+              <tr><td>一因 ekahetuka</td><td class="n">2</td><td>癡根二心（只有「癡」一根）</td></tr>
+              <tr><td>二因 dvihetuka</td><td class="n">22</td><td>十不善心（貪根8＋瞋根2）＋ 欲界美心「智不相應」12</td></tr>
+              <tr><td>三因 tihetuka</td><td class="n">47</td><td>欲界美心「智相應」12 ＋ 廣大與出世間 35</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>為何重要：</strong>「因」的多寡關係到心的力量與果報。例如結生時是「三因」還是「二因」，決定此生是否堪能證禪定與道果（三因者堪能，二因者不堪）——這在第五章「離心路」談業與輪迴時會再用到。18+2+22+47 = 89。</div>
+        </section>
+
+        <section id="kicca">
+          <h2>三 · 作用（kicca）</h2>
+          <p>每個心在心流中都執行某種「工作」。全部共 <strong>14 種作用</strong>，發生在 <strong>10 個位（ṭhāna）</strong>：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>作用</th><th>巴利</th><th>說明</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>結生</td><td class="pali">paṭisandhi</td><td>一期生命最初的一剎那心，接續前世</td></tr>
+              <tr><td class="n">2</td><td>有分</td><td class="pali">bhavaṅga</td><td>維繫一期生命的潛在心流（無心路時的底流）</td></tr>
+              <tr><td class="n">3</td><td>轉向</td><td class="pali">āvajjana</td><td>心流轉向新出現的所緣（五門／意門轉向）</td></tr>
+              <tr><td class="n">4–8</td><td>見聞嗅嘗觸</td><td class="pali">dassana…</td><td>五識各自的了別作用</td></tr>
+              <tr><td class="n">9</td><td>領受</td><td class="pali">sampaṭicchana</td><td>接收五識所緣</td></tr>
+              <tr><td class="n">10</td><td>推度</td><td class="pali">santīraṇa</td><td>檢視所緣</td></tr>
+              <tr><td class="n">11</td><td>確定</td><td class="pali">votthapana</td><td>確定、判別所緣（意門轉向心兼此職）</td></tr>
+              <tr><td class="n">12</td><td>速行</td><td class="pali">javana</td><td>「跑」向所緣、真正造善惡業的階段（通常連續七剎那）</td></tr>
+              <tr><td class="n">13</td><td>彼所緣</td><td class="pali">tadārammaṇa</td><td>速行後餘勢的兩剎那，續緣同一所緣</td></tr>
+              <tr><td class="n">14</td><td>死</td><td class="pali">cuti</td><td>一期生命最後一剎那心</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>關鍵：速行（javana）是造業處。</strong>結生、有分、死是同一種心（離心路）在三個位上的作用；見聞嗅嘗觸五作用歸為一「位」，故 14 作用發生在 10 位。這 14 作用是第四章「心路過程」的零件——本章先識其名，下一章看它們如何串成一條認知的流水線。</div>
+        </section>
+
+        <section id="dvara">
+          <h2>四 · 門（dvāra）</h2>
+          <p>「門」是所緣進入心的通道，共六門：<strong>眼、耳、鼻、舌、身</strong>五門（即五淨色 pasāda-rūpa），加<strong>意門</strong>（即「有分」）。五門接收現前的色法所緣，意門則能緣取一切（含過去、未來、概念）。</p>
+          <div class="note"><strong>要點：</strong>五門心路與意門心路是第四章的兩大主軸。有些心「不從任何門而起」（如結生、有分、死——它們是離心路的），這在門的分類裡稱為「離門」(dvāravimutta)。</div>
+        </section>
+
+        <section id="arammana">
+          <h2>五 · 所緣（ārammaṇa）</h2>
+          <p>心所緣取的對象，六種：<strong>色、聲、香、味、觸</strong>五境（對五門），加<strong>法所緣</strong> (dhammārammaṇa，對意門)。法所緣又含五淨色、微細色、心、心所、涅槃與概念(paññatti)。</p>
+          <div class="note"><strong>要點：</strong>五境是「現在、實有」的色法，只能被相應的一根一門所取（色只入眼、聲只入耳…）；意門則能通緣六塵、三世、乃至涅槃與概念——這是「意」之所以能思惟抽象、回憶、想像的根據。</div>
+        </section>
+
+        <section id="vatthu">
+          <h2>六 · 依（vatthu）</h2>
+          <p>「依處」是心與心所賴以生起的色法基礎，共六：<strong>眼、耳、鼻、舌、身</strong>五淨色依處，加<strong>心所依處</strong> (hadaya-vatthu，心臟所依，為意界與意識界之所依)。</p>
+          <div class="note"><strong>關鍵：無色界無依處。</strong>因無色界已無色法，故該地的心「無所依處」而生。這點呼應第一章：色界、無色界的差別，最終落實在「還有沒有色法依處」上。心所依處是註釋傳統（非經藏明文）確立的概念，用以說明意界與意識界的物質基礎。（參菩提比丘 CMA）</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第三章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、六門分類總標</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Vedanā-hetuto kiccā / dvārālambaṇa-vatthuto / Cittuppādā ti pariññeyyā / saṅgaho nāma nayato.</span>依受、因、作用、門、所緣、依處——當如是了知諸心（心之生起）的攝集之理。</p><details class="ann"><summary>消文</summary><div>此偈開列本章的六個分類角度。前兩章「豎著」把心與心所一個個列出；本章「橫著」用六張網把它們重新篩過。這六門不是新的法，而是六種提問方式——問完，你就能對任一個心說出它的受、因、作用、門、所緣、依處，心的運作於是從清單變成立體的圖像。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、十四作用偈</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Paṭisandhi-bhavaṅgāvajjana-dassana-savana-ghāyana-sāyana-phusana-sampaṭicchana-santīraṇa-votthapana-javana-tadārammaṇa-cuti-vasena cuddasavidhāni.</span>依結生、有分、轉向、見、聞、嗅、嘗、觸、領受、推度、確定、速行、彼所緣、死——作用共十四種。</p><details class="ann"><summary>消文</summary><div>這 14 作用是心在「心路歷程」與「離心路」中所擔任的職務。其中結生、有分、死其實是同一種「離心路心」在三個位上的作用；見聞嗅嘗觸五者合為一位。真正造善惡業的是「速行 javana」——一次心路通常連跑七個速行剎那，業力即在此累積。這 14 作用正是下一章拆解「認知流水線」的零件。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>六向照心</b><p>受、因、作用、門、所緣、依——學會用這六問看任一念心，心的運作就從平面清單變成立體圖。</p></article>
+            <article class="key-card"><b>速行是造業處</b><p>14 作用中唯「速行」造善惡業。修行的關鍵，正在速行這七剎那是善是不善。</p></article>
+            <article class="key-card"><b>因的多寡定堪能</b><p>三因結生者才堪能證禪定與道果；因此「因」的分類直接關係到修證的可能性。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第三章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">1</span>第三章「雜之概要」用來分類心與心所的六個範疇是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>色、聲、香、味、觸、法</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>受、因、作用、門、所緣、依</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>戒、定、慧、解脫、解脫知見、涅槃</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>欲界、色界、無色界、出世間、善、不善</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>本章的六門分類即受(vedanā)、因(hetu)、作用(kicca)、門(dvāra)、所緣(ārammaṇa)、依(vatthu)。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">2</span>「身」的樂受與苦受（sukha／dukkha），只出現在哪一種心？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>眼識</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>意門轉向心</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>身識</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>速行心</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>只有身根與觸境相撞才有粗猛的樂苦，故身樂、身苦只在身識；眼耳鼻舌四識所緣衝擊弱，一律捨受。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">3</span>14 種「作用」中，真正造作善惡業的是哪一個？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>結生 paṭisandhi</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>有分 bhavaṅga</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>領受 sampaṭicchana</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>速行 javana</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>速行（javana）是心「跑」向所緣、造善惡業之處，通常連續七剎那；其餘作用多為果報或轉向、確定等，不造業。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">4</span>依「因（根）」分類，「一因心（ekahetuka）」指的是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>癡根二心（只有「癡」一根）</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>18 無因心</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>貪根八心</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>出世間心</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>癡根二心（疑相應、掉舉相應）只含「癡」一根，是唯一的一因心；無因心則連一根都沒有。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">5</span>關於「依處（vatthu）」，下列何者正確？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>共有八種依處</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>無色界因無色法，故其心無所依處而生</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>意界、意識界的依處是「舌淨色」</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>依處與所緣是同一回事</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>六依處為五淨色 + 心所依處(hadaya)；無色界無色法，故心無依處而生。意界意識界依「心所依處」，非舌淨色。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>心的「憂受（domanassa）」只出現在兩個瞋恚相應心中。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>憂受必與瞋俱，故只在二瞋根心；它恆是不善（不同於身苦受屬無記）。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>「門（dvāra）」只有五個，即眼、耳、鼻、舌、身五淨色。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>共六門：五淨色門 + 意門（即有分）。意門能緣一切（含過去未來與概念），是思惟、回憶、想像的通道。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>結生、有分、死這三種作用，其實是由同一種「離心路心」在不同位上擔任的。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>一期生命中，同一種果報心（離心路）在最初作「結生」、中間作「有分」、最後作「死」——三位一心，是第五章「離心路」的核心。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：本章把「速行（javana）」點為唯一的造業處。這對「起心動念、慎於幾微」的修行提醒有何意義？</summary>
+            <div class="detail-body"><p>（供省思）在一次認知裡，前面的轉向、五識、領受、推度、確定都只是「果報」與「準備」，不造業；真正決定善惡、留下業力的，是那七剎那速行。這意味著：境界現前的一瞬，我們無法選擇，但速行怎麼跑——起貪、起瞋，還是起正念、起慈——才是修行真正的著力點。「守護根門、正知而住」正是守在速行之前。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：唯識以「五俱意識、獨頭意識」等說明意門的作用；南傳以「意門」能緣三世與概念。試比較兩者對「意」的處理。</summary>
+            <div class="detail-body"><p>（開放題）兩系都承認「意」能離開現前五塵而緣取過去、未來、抽象。南傳以「意門＝有分」、法所緣含概念與涅槃來說明；唯識以第六意識（獨頭意識緣過去未來、五俱意識與前五識同緣現量）。可留意南傳的「有分」與唯識「意識所依」的功能重疊，是心識論對讀的細節。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：「三因結生者堪能證禪定道果，二因者不堪」——這個說法你怎麼理解？它是否意味修行有先天限制？</summary>
+            <div class="detail-body"><p>（供省思）此說指「今生的結生心」是三因（含無癡慧根）或二因，關係到今生修證的堪能。但這不是宿命論：結生心本身正是過去善業（尤其含慧與否）的果。它提醒的是「福慧雙修」的長遠性——今生若二因，正好策勵廣修福慧智，為來生的三因結生植因。修行是跨生的工程，而非一生定死。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>門・所緣・依（處）</td><td>《俱舍論》· 十二處十八界</td><td>六根六境六識與六門六所緣六依處的對應，是蘊處界學的共同語言。</td></tr>
+                  <tr><td>14 作用・速行</td><td>唯識「見分・自證分」· 心路</td><td>南傳「速行造業」與唯識「思心所造業、熏習種子」的對照。</td></tr>
+                  <tr><td>五受分類</td><td>《俱舍論》五受根</td><td>樂苦憂喜捨五受根，兩系分法幾乎一致，可直接對讀。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>雜 pakiṇṇaka</span><span>受 vedanā</span><span>樂・苦・悅・憂・捨</span>
+            <span>因 hetu</span><span>無因・一因・二因・三因</span>
+            <span>作用 kicca</span><span>結生 paṭisandhi</span><span>有分 bhavaṅga</span><span>速行 javana</span><span>彼所緣 tadārammaṇa</span><span>死 cuti</span>
+            <span>門 dvāra</span><span>意門</span><span>所緣 ārammaṇa</span><span>法所緣</span><span>依 vatthu</span><span>心所依處 hadaya</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch02/"><span>← 上一章</span><b>第二章 · 心所之概要</b></a><a class="next" href="/study-group/abhidhamma/ch04/"><span>下一章 →</span><b>第四章 · 心路過程</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

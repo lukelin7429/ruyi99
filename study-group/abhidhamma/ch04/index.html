@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第四章 · 心路過程 Vīthi · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第四章「心路過程」導讀：心不是孤立的點而是流動的過程。五門心路的 17 心剎那（有分→轉向→五識→領受→推度→確定→速行→彼所緣）、所緣四強度、意門心路、速行造業規則。南傳阿毗達磨最有特色的一章。內容參考菩提比丘 CMA。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第四章</p>
+        <p class="eyebrow">心是流不是點 · Vīthi · 心路過程</p>
+        <h1>第四章 · 心路過程</h1>
+        <p class="subtitle">「看見一朵花」的一瞬，其實是十幾個各司其職的心剎那接剎那跑完一趟固定程序。本章拆解心的<strong>動態運作</strong>——有分底流、五門與意門心路、十七心剎那、速行造業。這是南傳阿毗達磨最有特色的一章。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第四章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：心路 · 有分 · 速行</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#panca">五門心路 17 剎那</a>
+        <a href="#objects">所緣四強度</a>
+        <a href="#mano">意門心路</a>
+        <a href="#javana">速行與彼所緣</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">前三章是「靜態」的解剖——把心、心所一個個拆開分類。第四章「心路過程」(<span class="pali">Vīthi</span>) 轉入<strong>動態</strong>：心不是一個個孤立的點，而是依固定規律串成的<strong>流水線</strong>。你「看見一朵花」的那一瞬，其實是十幾個不同的心，各司其職、剎那接剎那地跑完一趟固定的程序。這是南傳阿毗達磨最有特色、也最精彩的一章。</p>
+          <div class="quote">看似「一眼看見」的當下，阿毗達磨拆給你看：那是過去有分→波動→斷→轉向→眼識→領受→推度→確定→速行七剎那→彼所緣兩剎那，一條十七剎那的認知流水線。</div>
+          <h3>兩個關鍵前提</h3>
+          <div class="grid">
+            <article class="key-card"><b>有分 bhavaṅga</b><p>無所緣現前時（如熟睡、二念之間），心並非空白，而是一股維繫生命的<strong>潛在底流</strong>「有分」在流動。一切心路都從有分中「浮起」，結束後又「沉回」有分。</p></article>
+            <article class="key-card"><b>心剎那 khaṇa</b><p>心生滅極快，一個心剎那含生、住、滅三小剎那。一個色法的壽命 = <strong>17 個心剎那</strong>——這正是一條完整五門心路的長度。</p></article>
+            <article class="key-card"><b>兩種心路</b><p><strong>五門心路</strong>（緣現前五塵）與<strong>意門心路</strong>（緣法所緣、含過去未來與概念）。五門心路結束後，必接著意門心路去進一步認知。</p></article>
+          </div>
+        </section>
+
+        <section id="panca">
+          <h2>五門心路 · 極大所緣的十七剎那</h2>
+          <p>當一個<strong>極大所緣</strong>（很清晰、力強的色塵）撞上眼淨色，心路跑完完整的 17 剎那。以「看見」為例：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>剎那</th><th>心（作用）</th><th>巴利</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>過去有分</td><td class="pali">atīta-bhavaṅga</td></tr>
+              <tr><td class="n">2</td><td>有分波動</td><td class="pali">bhavaṅga-calana</td></tr>
+              <tr><td class="n">3</td><td>有分斷</td><td class="pali">bhavaṅg'-upaccheda</td></tr>
+              <tr><td class="n">4</td><td>五門轉向</td><td class="pali">pañcadvārāvajjana</td></tr>
+              <tr><td class="n">5</td><td>眼識（見）</td><td class="pali">cakkhu-viññāṇa</td></tr>
+              <tr><td class="n">6</td><td>領受</td><td class="pali">sampaṭicchana</td></tr>
+              <tr><td class="n">7</td><td>推度</td><td class="pali">santīraṇa</td></tr>
+              <tr><td class="n">8</td><td>確定</td><td class="pali">votthapana</td></tr>
+              <tr><td class="n">9–15</td><td>速行 ×7（造業）</td><td class="pali">javana</td></tr>
+              <tr><td class="n">16–17</td><td>彼所緣 ×2</td><td class="pali">tadārammaṇa</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>讀法（參 CMA）：</strong>17 剎那 = 過去有分 1 + 有分波動與斷 2 + 心路作用 14。色塵在第 1 剎那開始，恰好在第 17 剎那末壞滅（色壽 17 心剎那）。整條流水線中，<strong>只有第 9–15 的「速行」在造善惡業</strong>；前面全是果報與轉向，最後的彼所緣也只是餘勢續緣。所以「看見」本身無關善惡，善惡在「看見之後那七剎那你怎麼反應」。</div>
+        </section>
+
+        <section id="objects">
+          <h2>所緣的四種強度</h2>
+          <p>五門所緣依「入心時機的早晚、力量的強弱」分四等，心路各跑到不同深度：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>所緣</th><th>巴利</th><th>心路跑到哪</th></tr></thead>
+            <tbody>
+              <tr><td>極大</td><td class="pali">atimahanta</td><td>完整 17 剎那，跑到<strong>彼所緣</strong></td></tr>
+              <tr><td>大</td><td class="pali">mahanta</td><td>止於<strong>速行</strong>，無彼所緣（過去有分較多）</td></tr>
+              <tr><td>微細</td><td class="pali">paritta</td><td>止於<strong>確定</strong>（生起 2–3 次），<strong>不起速行</strong></td></tr>
+              <tr><td>極微細</td><td class="pali">atiparitta</td><td>僅<strong>有分波動</strong>，全無心路（未真正認知）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>直觀理解：</strong>所緣愈弱、入心愈晚，過去有分佔掉愈多剎那，剩下能跑的心路就愈短。「極微細」如眼角餘光一閃、心裡「有動一下」卻沒真的看清——那只是有分波動，連轉向都沒起。這解釋了「有看到卻沒注意到」的日常經驗。</div>
+        </section>
+
+        <section id="mano">
+          <h2>意門心路</h2>
+          <p>意門心路緣取「法所緣」（過去、未來、概念、乃至涅槃），不需五淨色。五門心路結束後，心必轉入一連串意門心路，去「進一步認出、命名、思惟」剛才所見。純意門心路（如回憶、想像、思惟）則直接從有分而起。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>剎那</th><th>心（清晰所緣）</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>有分波動</td></tr>
+              <tr><td class="n">2</td><td>有分斷</td></tr>
+              <tr><td class="n">3</td><td>意門轉向 manodvārāvajjana</td></tr>
+              <tr><td class="n">4–10</td><td>速行 ×7</td></tr>
+              <tr><td class="n">11–12</td><td>彼所緣 ×2（清晰欲界所緣才有）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>要點：</strong>意門心路沒有「五識、領受、推度」——因為它不緣現前五塵，直接由「意門轉向」引入速行。純意門心路即「明覺地思惟、回憶、想像」的機制；也是修觀時「觀智」生起之處（觀智屬意門速行）。</div>
+        </section>
+
+        <section id="javana">
+          <h2>速行與彼所緣的規則</h2>
+          <div class="grid">
+            <article class="key-card"><b>速行通常 7 剎那</b><p>一般連跑 7 個速行。臨死、悶絕、初生等力弱時只 5 次；神通速行、道心速行則各有特例（道心速行只 1 剎那，隨即入果）。</p></article>
+            <article class="key-card"><b>彼所緣限欲界</b><p>彼所緣只在「欲界有情、欲界速行、欲界（清晰）所緣」三條件齊備時才生起，且只 2 剎那；廣大、出世間心路皆無彼所緣。</p></article>
+            <article class="key-card"><b>速行決定一切</b><p>整條心路的善惡、業力全由速行決定。凡夫的速行多是貪瞋癡，聖者則多善或唯作——修行即是「調整速行」。</p></article>
+          </div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第四章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、六種心路與六門</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Cha vatthūni, cha dvārāni, cha ālambaṇāni, cha viññāṇāni, cha vīthiyo, chadhā visayappavatti cā ti vīthisangahe cha chakkāni veditabbāni.</span>於心路的攝集，當知六個「六」：六依處、六門、六所緣、六識、六種心路、六種所緣的呈現方式。</p><details class="ann"><summary>消文</summary><div>本章開宗即以「六個六」統攝：六依處與六門即第三章所立，六所緣即六塵，六識即眼耳鼻舌身意識。關鍵是後兩者——「六種心路」（依六門而分）與「六種呈現」（所緣如何呈現於心）。心路不是雜亂的，而是依所緣從哪個門、以何強度呈現，走固定的路線。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、五門心路的完成</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">…cuddasa vīthicittuppādā, dve bhavaṅgacalanāni, pubbev' atītakam ekacittakkhaṇan ti katvā sattarasa cittakkhaṇāni paripūrenti. Tato paraṃ nirujjhati. Ālambaṇam etaṃ atimahantaṃ nāma.</span>如是完成十七心剎那，即：十四心路心、二有分波動、一先前已過的心剎那。此後（所緣）壞滅。此所緣名為「極大」。</p><details class="ann"><summary>消文</summary><div>此段界定「極大所緣」的完整心路：過去有分1 + 波動與斷2 + 心路14 = 17 剎那，恰與色塵的壽命等長。色塵在第17剎那末壞滅，心路也剛好跑完、沉回有分。這條17剎那的流水線是全章的基準；「大、微細、極微細」三種所緣，只是這條線的縮短版。你「看一眼」的真相，就是這樣一趟精密而剎那的程序。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>心是流，不是點</b><p>「看見、聽見」都不是單一事件，而是一整條依規律跑動的心路。認清這點，就不會把剎那的心誤認作常一的我。</p></article>
+            <article class="key-card"><b>守在速行之前</b><p>境界現前無法選擇，但速行如何跑（起貪瞋還是起正念）是修行的著力點。「守護根門」即守在速行之前。</p></article>
+            <article class="key-card"><b>有分即生命底流</b><p>熟睡無夢、二念之間，心仍以「有分」相續。這解釋了生命如何不中斷，也預告第五章的「結生—有分—死」。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第四章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>一條完整的「五門極大所緣心路」共有幾個心剎那？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>7</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>12</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>17</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>89</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>17 心剎那 = 過去有分1 + 有分波動與斷2 + 心路作用14，恰與一個色法的壽命（17 心剎那）等長。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">2</span>整條心路中，唯一造作善惡業的階段是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>五門轉向</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>眼識（見）</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>推度</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>速行 javana（第 9–15 剎那）</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>前面的轉向、五識、領受、推度、確定都是果報或準備，不造業；唯速行造善惡業。修行的著力點正在此。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>無所緣現前時（如熟睡、二念之間），維繫生命相續的潛在心流稱為？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>有分 bhavaṅga</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>速行 javana</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>彼所緣 tadārammaṇa</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>確定 votthapana</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>有分是一期生命的潛在底流；一切心路從有分浮起，結束後沉回有分。它也是意門所在。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">4</span>「微細所緣（paritta）」的五門心路，最遠只跑到哪一階段？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>彼所緣</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>確定（不起速行）</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>速行第七剎那</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>完整 17 剎那</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>微細所緣只到「確定」（生起 2–3 次）即落回有分，不起速行；更弱的「極微細」則僅有分波動、全無心路。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>「意門心路」與「五門心路」最主要的差別是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>意門心路沒有速行</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>意門心路長達 34 剎那</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>意門心路無五識、領受、推度，由意門轉向直接引入速行</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>意門心路不能緣過去與概念</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>意門心路不緣現前五塵，故無五識、領受、推度；由意門轉向直接入速行。它正是思惟、回憶、想像與觀智生起之處。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>速行（javana）通常連續生起七個剎那，但在臨死、悶絕等力弱時只生起五次。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>一般 7 速行；臨死、悶絕、初生等力弱時 5 速行；道心速行則只 1 剎那，隨即入果。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>「彼所緣（tadārammaṇa）」在一切心路中都會生起，且色界、出世間心路也有。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>彼所緣只在「欲界有情、欲界速行、欲界清晰所緣」三條件齊備時生起，且只 2 剎那；廣大、出世間心路皆無彼所緣。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>「看見」這件事本身（眼識）並不造善惡業，善惡取決於看見之後速行如何反應。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>眼識只是果報心（純粹了別），不造業；業在速行。故「守護根門」即守在「見色之後、速行之前」那一關。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：心路把「看見」拆成十七剎那、把「造業」鎖定在速行。這對「六根門頭好修行」這句老話有什麼精確的註解？</summary>
+            <div class="detail-body"><p>（供省思）「六根門頭好修行」原是禪門用語，心路論給了它精密的座標：根門接觸（五識）是果報、無法選擇；但接觸之後、速行之前有「確定」一關，正念可在此介入，決定速行起貪瞋還是起善。修行不是壓抑見聞，而是在「見聞之後那一瞬」保持正知，讓速行轉向善。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：南傳以「有分」解釋生命於熟睡、二念間如何不中斷；唯識以阿賴耶識「恆轉如瀑流」。試比較兩者。</summary>
+            <div class="detail-body"><p>（開放題）兩者都要回答「無明顯心識活動時，生命憑什麼相續」。南傳「有分」是一期生命的果報底流，剎那生滅、非常我；唯識阿賴耶識執持種子根身、亦「恆轉」非常。差異在：有分本身是「心路之外」的同一果報心，唯識則立獨立第八識統攝種子。這是心識論最深的一組對讀。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：觀智（vipassanā-ñāṇa）生起於「意門速行」。這對「觀」的用功方式有什麼提示？</summary>
+            <div class="detail-body"><p>（供省思）觀不是眼睛去「看」什麼，而是意門速行以慧心所如實照見名色的無常苦無我。這提示：修觀的關鍵在意門的善速行——即在明覺中，對當下生滅的身心現象起如實的慧觀，而非向外攀緣新境。止（定）先讓有分清淨、心路有力，觀（慧）再於意門速行中現觀，二者相輔，正是第九章業處的主題。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>有分 bhavaṅga</td><td>唯識阿賴耶識 · 《成唯識論》</td><td>維繫生命相續的潛在心；南傳有分 vs 第八識「恆轉」，異同並讀。</td></tr>
+                  <tr><td>速行造業 · 七剎那</td><td>唯識「思心所造業熏種」</td><td>造業機制的兩種精密模型對照。</td></tr>
+                  <tr><td>心路 · 剎那生滅</td><td>《俱舍論》剎那論 · 心心所俱起</td><td>剎那生滅與心心所相應的部派共識。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>心路 vīthi</span><span>有分 bhavaṅga</span><span>過去有分</span><span>有分波動</span><span>有分斷</span>
+            <span>五門轉向</span><span>領受 sampaṭicchana</span><span>推度 santīraṇa</span><span>確定 votthapana</span>
+            <span>速行 javana</span><span>彼所緣 tadārammaṇa</span><span>意門轉向</span>
+            <span>極大 atimahanta</span><span>大 mahanta</span><span>微細 paritta</span><span>極微細 atiparitta</span><span>心剎那 khaṇa</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch03/"><span>← 上一章</span><b>第三章 · 雜之概要</b></a><a class="next" href="/study-group/abhidhamma/ch05/"><span>下一章 →</span><b>第五章 · 離心路過程</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

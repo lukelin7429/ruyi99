@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第八章 · 緣之概要 Paccaya · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第八章「緣之概要」導讀：以「緣」把分析出的諸法重新編織成緣起網。十二緣起（三世兩重因果、三輪轉）、《發趣論》二十四緣、概念（paññatti）與二諦。分析（無我）與綜合（緣起）的結合。內容參考菩提比丘 CMA。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第八章</p>
+        <p class="eyebrow">分析之後的綜合 · Paccaya · 緣之概要</p>
+        <h1>第八章 · 緣之概要</h1>
+        <p class="subtitle">前七章「分析」諸法以顯無我；本章「綜合」——用<strong>緣</strong>把拆開的法重新編織成一張互相依存的緣起網。兩套系統並陳：經藏的<strong>十二緣起</strong>（縱貫三世）與《發趣論》的<strong>二十四緣</strong>（橫剖相依）。無我加緣起，佛法的兩隻腳至此站穩。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第八章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：十二緣起 · 二十四緣</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#paticca">壹 · 十二緣起</a>
+        <a href="#patthana">貳 · 二十四緣</a>
+        <a href="#pannatti">參 · 概念</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">前七章的工作是「<strong>分析</strong>」——把整體拆成一個個究竟法，顯出其中無我。第八章「緣之概要」(<span class="pali">Paccaya</span>) 做相反的工作：「<strong>綜合</strong>」——用「緣」(condition) 把拆開的法重新編織，顯示它們不是孤立的碎片，而是一張互相依存、環環相扣的緣起網。分析（無我）加上綜合（緣起），阿毗達磨的兩隻腳才站穩。</p>
+          <div class="quote">諸法不孤起，仗緣方生。本章用兩套系統講「緣」：一是經藏熟悉的<strong>十二緣起</strong>（縱貫三世的流轉），二是《發趣論》的<strong>二十四緣</strong>（橫剖諸法的相依關係）。</div>
+          <div class="note"><strong>本章二法：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">壹</span><span class="ke-t">緣起法 paṭicca-samuppāda</span><span class="ke-div">十二支・三世兩重因果</span></li>
+              <li><span class="ke-mk">貳</span><span class="ke-t">發趣法 paṭṭhāna</span><span class="ke-div">二十四緣</span></li>
+              <li><span class="ke-mk">參</span><span class="ke-t">概念 paññatti</span><span class="ke-div">名施設・義施設</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="paticca">
+          <h2>壹 · 十二緣起</h2>
+          <p>「此有故彼有，此生故彼生」——十二支縱貫三世，說明生死如何相續：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>支</th><th>巴利</th><th>三世 · 輪轉</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>無明</td><td class="pali">avijjā</td><td>過去因 · 煩惱輪</td></tr>
+              <tr><td class="n">2</td><td>行</td><td class="pali">saṅkhāra</td><td>過去因 · 業輪</td></tr>
+              <tr><td class="n">3</td><td>識</td><td class="pali">viññāṇa</td><td>現在果 · 果報輪</td></tr>
+              <tr><td class="n">4</td><td>名色</td><td class="pali">nāmarūpa</td><td>現在果 · 果報輪</td></tr>
+              <tr><td class="n">5</td><td>六處</td><td class="pali">saḷāyatana</td><td>現在果 · 果報輪</td></tr>
+              <tr><td class="n">6</td><td>觸</td><td class="pali">phassa</td><td>現在果 · 果報輪</td></tr>
+              <tr><td class="n">7</td><td>受</td><td class="pali">vedanā</td><td>現在果 · 果報輪</td></tr>
+              <tr><td class="n">8</td><td>愛</td><td class="pali">taṇhā</td><td>現在因 · 煩惱輪</td></tr>
+              <tr><td class="n">9</td><td>取</td><td class="pali">upādāna</td><td>現在因 · 煩惱輪</td></tr>
+              <tr><td class="n">10</td><td>有</td><td class="pali">bhava</td><td>現在因 · 業輪／果報輪</td></tr>
+              <tr><td class="n">11</td><td>生</td><td class="pali">jāti</td><td>未來果 · 果報輪</td></tr>
+              <tr><td class="n">12</td><td>老死</td><td class="pali">jarāmaraṇa</td><td>未來果 · 果報輪</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>三世兩重因果 · 三輪轉（參 CMA）：</strong>十二支跨過去、現在、未來三世，構成「過去因→現在果、現在因→未來果」的<strong>兩重因果</strong>。若依性質收攝為<strong>三輪轉</strong>：<strong>煩惱輪</strong>（無明1・愛8・取9）→ 推動 <strong>業輪</strong>（行2・有10之業有）→ 感生 <strong>果報輪</strong>（識至受3–7・生11・老死12）→ 果報又生煩惱……如是輾轉，無始輪迴。要斷此輪，關鍵在「愛」——受緣愛的這一環，正是凡聖分野、修行下手處。</div>
+        </section>
+
+        <section id="patthana">
+          <h2>貳 · 二十四緣</h2>
+          <p>《發趣論》以 24 種「緣」窮盡地說明：任何一個法，是以哪些方式作為另一法的條件。這是南傳「大論」的核心，也是本章的重頭戲。</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>緣</th><th>巴利</th><th>#</th><th>緣</th><th>巴利</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>因緣</td><td class="pali">hetu</td><td class="n">13</td><td>業緣</td><td class="pali">kamma</td></tr>
+              <tr><td class="n">2</td><td>所緣緣</td><td class="pali">ārammaṇa</td><td class="n">14</td><td>異熟緣</td><td class="pali">vipāka</td></tr>
+              <tr><td class="n">3</td><td>增上緣</td><td class="pali">adhipati</td><td class="n">15</td><td>食緣</td><td class="pali">āhāra</td></tr>
+              <tr><td class="n">4</td><td>無間緣</td><td class="pali">anantara</td><td class="n">16</td><td>根緣</td><td class="pali">indriya</td></tr>
+              <tr><td class="n">5</td><td>相續緣</td><td class="pali">samanantara</td><td class="n">17</td><td>禪那緣</td><td class="pali">jhāna</td></tr>
+              <tr><td class="n">6</td><td>俱生緣</td><td class="pali">sahajāta</td><td class="n">18</td><td>道緣</td><td class="pali">magga</td></tr>
+              <tr><td class="n">7</td><td>相互緣</td><td class="pali">aññamañña</td><td class="n">19</td><td>相應緣</td><td class="pali">sampayutta</td></tr>
+              <tr><td class="n">8</td><td>依止緣</td><td class="pali">nissaya</td><td class="n">20</td><td>不相應緣</td><td class="pali">vippayutta</td></tr>
+              <tr><td class="n">9</td><td>親依止緣</td><td class="pali">upanissaya</td><td class="n">21</td><td>有緣</td><td class="pali">atthi</td></tr>
+              <tr><td class="n">10</td><td>前生緣</td><td class="pali">purejāta</td><td class="n">22</td><td>無有緣</td><td class="pali">natthi</td></tr>
+              <tr><td class="n">11</td><td>後生緣</td><td class="pali">pacchājāta</td><td class="n">23</td><td>離去緣</td><td class="pali">vigata</td></tr>
+              <tr><td class="n">12</td><td>重複緣</td><td class="pali">āsevana</td><td class="n">24</td><td>不離去緣</td><td class="pali">avigata</td></tr>
+            </tbody>
+          </table></div>
+          <div class="grid">
+            <article class="key-card"><b>因緣 hetu</b><p>以「根」（貪瞋癡、無貪無瞋無癡）為緣，令相應心心所安穩有力——如樹依根。</p></article>
+            <article class="key-card"><b>所緣緣 ārammaṇa</b><p>以「被緣取的對象」為緣：無所緣則心不生。一切心必有所緣。</p></article>
+            <article class="key-card"><b>親依止緣 upanissaya</b><p>強而有力的「近依」：如善知識、往昔串習，成為後法生起的有力憑藉。</p></article>
+            <article class="key-card"><b>業緣 kamma</b><p>思（cetanā）為緣，感生異熟——連結第五章的業果論。</p></article>
+            <article class="key-card"><b>前生／後生緣</b><p>前生緣：先生的色（如五淨色）為後生的心之緣；後生緣：後生的心助前生的色身住立。</p></article>
+            <article class="key-card"><b>有緣／不離去緣</b><p>以「現前存在、不離去」為緣：正在的法支持俱存的法——最普遍的一組緣。</p></article>
+          </div>
+          <div class="note"><strong>要點（參 CMA）：</strong>24 緣不是 24 種互不相干的關係，而是從 24 個角度描述「法與法如何互為條件」。同一組心心所之間，往往同時是俱生緣、相互緣、依止緣、相應緣、有緣……多重緣並存。《發趣論》正是把全部究竟法丟進這 24 緣的排列組合中窮盡推演，故被尊為「大論」；佛陀思惟至此，六色光明乃出。這一套「綜合」的緣起網，與前七章「分析」的無我論，正是無我與緣起——佛法二大principle——的完整結合。</div>
+        </section>
+
+        <section id="pannatti">
+          <h2>參 · 概念（paññatti）</h2>
+          <p>本章末補上「概念／施設」，把「究竟法（勝義）」與「概念（世俗）」的分界收尾。概念不是究竟法，無自性、非緣生，只是心所安立：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>二種施設</th><th>巴利</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>義施設</td><td class="pali">attha-paññatti</td><td>「被使人知」的意義——如「人、村、方向、時間」等概念所指</td></tr>
+              <tr><td>名施設</td><td class="pali">nāma-paññatti</td><td>「使人知」的名稱——語言、名字本身</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>回到第一章的二諦：</strong>「人、車、村、時間、遍相（禪相）」都是概念，屬世俗諦；它們雖無勝義的自性，卻是溝通、修定（如取遍相入禪）不可少的工具。阿毗達磨的高明，正在<strong>既不否定概念的日用功能，又不把它誤認作究竟真實</strong>。分清這條線，就不會「執指為月」，也不會「廢指求月」。</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第八章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、緣起流轉</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Avijjāpaccayā saṅkhārā, saṅkhārapaccayā viññāṇaṃ… jātipaccayā jarāmaraṇaṃ… evam etassa kevalassa dukkhakkhandhassa samudayo hoti.</span>緣無明而有行，緣行而有識……緣生而有老死……如是純大苦聚集。</p><details class="ann"><summary>消文</summary><div>此即經藏最常誦的緣起流轉句。阿毗達磨把它收攝為三世兩重因果、三輪轉：無明與愛取（煩惱）推動行與有（業），業感識名色六處觸受生老死（果報），果報又滋生新的煩惱——如是無始輪轉。其還滅門「無明滅則行滅…」則指出解脫之道。斷輪的樞紐在「受緣愛」一環：於受不起貪愛，輪即轉不下去。這一句，正是全部修行要對治的生死結構。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、二十四緣總標</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Hetupaccayo, ārammaṇapaccayo, adhipatipaccayo… avigatapaccayo cā ti ayam ettha paṭṭhānanayo.</span>因緣、所緣緣、增上緣……乃至不離去緣——此即發趣（二十四緣）之法。</p><details class="ann"><summary>消文</summary><div>《發趣論》以此 24 緣，窮盡地推演一切究竟法如何互為條件。它與十二緣起互補：緣起是「縱」的流轉（三世生死如何相續），24 緣是「橫」的相依（當下諸法如何互撐）。兩者合看，才完整呈現「緣起」——不是宿命的鎖鏈，而是可觀察、可介入的條件之網。看清「法仗緣生、無有孤起的自性」，正是無我慧的圓成，也把前七章的分析與本章的綜合合為一體。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>分析＋綜合</b><p>前七章拆法顯無我，本章以緣連法顯緣起。無我與緣起，是佛法不可分的一體兩面。</p></article>
+            <article class="key-card"><b>斷輪在「愛」</b><p>三輪轉的樞紐是「受緣愛」。於受不起貪愛，生死之輪即轉不下去——這是修行最實際的著力點。</p></article>
+            <article class="key-card"><b>概念非究竟</b><p>人、車、時間都是施設，有用而無自性。分清勝義與世俗，才不執指為月、亦不廢指求月。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第八章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">1</span>本章用哪兩套系統來講「緣」？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>四聖諦 與 八正道</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>十二緣起（paṭicca-samuppāda）與 二十四緣（paṭṭhāna）</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>五蘊 與 十八界</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>止 與 觀</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>緣起法（縱貫三世的流轉）與發趣法（橫剖諸法相依的 24 緣），一縱一橫、互補完整。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">2</span>十二緣起收攝為「三輪轉」，其中「煩惱輪」包含哪幾支？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>行、有</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>識、名色、六處、觸、受</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>無明、愛、取</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>生、老死</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>煩惱輪＝無明(1)、愛(8)、取(9)；業輪＝行(2)、有(10業有)；果報輪＝識至受(3–7)、生(11)、老死(12)。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">3</span>《發趣論》所立的「緣」共有幾種？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>12</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>6</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>4</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>24</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>二十四緣（因緣、所緣緣、增上緣…不離去緣）是《發趣論》的核心，故該論被尊為「大論」。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">4</span>要斬斷生死輪迴的三輪轉，修行的關鍵樞紐在哪一環？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>「受緣愛」——於受不起貪愛</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>「生緣老死」——不讓自己出生</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>「識緣名色」</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>「觸緣受」</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>受（果報，無法避免）之後是否起愛（現在因），是凡聖分野、可介入之處。於受保持正念、不起貪愛，輪即轉不下去。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">5</span>關於「概念（paññatti）」，下列何者正確？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>概念是第五種究竟法</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>概念無自性、非緣生，屬世俗諦，但有溝通與修定的實用功能</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>概念就是涅槃</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>概念完全無用，應徹底否定</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>人、車、時間、禪相都是施設，屬世俗諦、無勝義自性，卻是溝通與修定（如取遍相入禪）的必要工具。既不誤認作究竟，也不廢棄其用。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>前七章偏「分析」（拆法顯無我），本章偏「綜合」（以緣連法顯緣起），兩者合起來才完整呈現佛法。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>分析法顯無我（anattā），綜合法（24 緣）顯緣起（paṭicca-samuppāda）。無我與緣起是佛法二大原理，一體兩面。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>24 緣是 24 種互不相干、彼此獨立的關係，任兩個法之間只能有一種緣。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>24 緣是從 24 個角度描述相依關係；同一組心心所之間往往「多重緣並存」（俱生、相互、依止、相應、有緣…同時成立）。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">8</span>十二緣起是一條「宿命的鎖鏈」，表示眾生的生死完全被過去決定、無可轉變。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>緣起不是宿命論，而是「可觀察、可介入」的條件之網。正因是「緣」生而非「定」生，於「受緣愛」處斷之，輪即還滅——這正是修行得以解脫的根據。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：南傳以「受緣愛」為斷輪樞紐；這與四念處「受念處」、與日常「守護根門」如何相互印證？</summary>
+            <div class="detail-body"><p>（供省思）受是果報，避不掉；但受之後起不起愛，是修行的關口。受念處正是在此下手——如實覺知樂受、苦受、捨受的生滅，而不隨之起貪、起瞋。這與第四章「守在速行之前」完全一致：根門觸境生受（果報），正念介入於「受→愛」之間，速行便可不落貪瞋。緣起、心路、念處，三處指向同一著力點。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：南傳二十四緣 vs 說一切有部「六因四緣」、瑜伽「十因」。試想不同傳承為何發展出不同數目的緣？</summary>
+            <div class="detail-body"><p>（開放題）緣的數目不同，反映各系分析的側重與粒度。有部四緣（因、等無間、所緣、增上）簡明；南傳 24 緣最細密（把俱生、相互、前生、後生、親依止等一一析出）；瑜伽十因另有角度。數目不是對錯之爭，而是「如何最完整地描述『仗緣而生』」的不同嘗試。對讀它們，能深化對「緣起」本身的理解。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：本章把「概念」與「究竟法」分判。這對讀經、修行時「執著名相」的毛病有什麼提醒？</summary>
+            <div class="detail-body"><p>（供省思）它提醒「二諦並行」：概念（名相、法數、乃至「涅槃」這個詞）是渡河的筏、指月的指，日用不可少；但若把筏、指誤認作彼岸、明月，就成法執。學阿毗達磨最大的風險正是「以名相為實」；本章末的「概念論」恰是一劑清涼——用之而不執之，正是中道。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>十二緣起・三世兩重</td><td>《俱舍論》分別世品 · 《瑜伽》緣起</td><td>三世說 vs 剎那緣起、遠續緣起等，是緣起詮釋的大題。</td></tr>
+                  <tr><td>二十四緣</td><td>有部六因四緣 · 瑜伽十因</td><td>不同傳承「緣」的數目與角度對照。</td></tr>
+                  <tr><td>概念 paññatti</td><td>中觀二諦 · 唯識依他/遍計</td><td>勝義與世俗、施設與實有的判分，通向空性論。</td></tr>
+                  <tr><td>綜合的緣起網</td><td>華嚴「法界緣起」· 中觀「緣起性空」</td><td>南傳相依網 vs 大乘無盡緣起／性空的對話。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>緣 paccaya</span><span>緣起 paṭicca-samuppāda</span><span>發趣 paṭṭhāna</span>
+            <span>無明・行・識・名色・六處・觸・受・愛・取・有・生・老死</span>
+            <span>三世兩重因果</span><span>煩惱輪・業輪・果報輪</span>
+            <span>因緣 hetu</span><span>所緣緣 ārammaṇa</span><span>親依止緣 upanissaya</span><span>業緣 kamma</span><span>前生・後生緣</span><span>有緣・不離去緣</span>
+            <span>概念 paññatti</span><span>名施設・義施設</span><span>二諦</span>
+          </div>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch07/"><span>← 上一章</span><b>第七章 · 類別之概要</b></a><a class="next" href="/study-group/abhidhamma/ch09/"><span>下一章 →</span><b>第九章 · 業處之概要</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

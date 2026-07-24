@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《攝阿毗達磨義論》第九章 · 業處之概要 Kammaṭṭhāna · 如意精舍讀書會</title>
+  <meta name="description" content="《攝阿毗達磨義論》第九章「業處之概要」導讀：止觀二種禪修。四十業處、六性行擇法、三修習三相、七清淨的觀智次第、四道四果、果定與滅盡定。全論以實修收尾。內容參考菩提比丘 CMA，採尋法比丘中譯用語。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .tbl-wrap { overflow-x:auto; margin-top:16px; }
+    .tbl-wrap table { min-width:520px; }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    .pali { font-style:italic; color:var(--blue); }
+    .chapnav { display:flex; justify-content:space-between; gap:14px; margin-top:6px; flex-wrap:wrap; }
+    .chapnav a { flex:1 1 220px; padding:16px 18px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); text-decoration:none; box-shadow:var(--shadow); }
+    .chapnav a span { display:block; font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .chapnav a b { color:var(--saffron); font-size:1.05rem; }
+    .chapnav a.next { text-align:right; }
+    /* 科判樹 */
+    .ke-tree-wrap { margin:20px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.75; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    /* 逐段 正文＋消文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.1rem; line-height:1.95; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    p.jing .pali-verse { display:block; font-style:italic; color:var(--blue); font-size:.98rem;
+      line-height:1.7; margin-bottom:8px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"\25B8"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/abhidhamma/">上座部阿毗達磨</a> › 第九章</p>
+        <p class="eyebrow">地圖終須上路 · Kammaṭṭhāna · 業處之概要</p>
+        <h1>第九章 · 業處之概要</h1>
+        <p class="subtitle">全論以實修收尾。本章是《清淨道論》的濃縮，把前八章的一切分析匯歸於一件事：<strong>如何實際修行、直到解脫</strong>。分止（修定）、觀（修慧）二門，以四十業處、七清淨為次第，導向四道四果。地圖已備，餘下的是親自上路。</p>
+        <ul class="meta" aria-label="本章資訊">
+          <li>主幹：Abhidhammattha Saṅgaha 第九章</li>
+          <li>參考底本：菩提比丘 CMA</li>
+          <li>中譯用語：尋法比丘《精解》</li>
+          <li>核心：止觀 · 七清淨 · 道果</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本章定位</a>
+        <a href="#samatha">壹 · 止：四十業處</a>
+        <a href="#vipassana">貳 · 觀：七清淨</a>
+        <a href="#fruit">參 · 道果與證悟</a>
+        <a href="#text">攝義論選文</a>
+        <a href="#practice">修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#finale">單元結語</a>
+        <a href="#nav">章節導航</a>
+      </nav>
+
+      <main>
+
+        <section id="overview">
+          <h2>本章定位</h2>
+          <p class="lead">全論以實修收尾。第九章「業處之概要」(<span class="pali">Kammaṭṭhāna</span>) 是《清淨道論》的濃縮，把前八章對心、色、緣起的一切分析，全部匯歸到一件事：<strong>如何實際修行、直到解脫</strong>。它分兩大法門——<strong>止 (samatha)</strong> 修定、<strong>觀 (vipassanā)</strong> 修慧——並以七清淨為次第，導向四道四果。</p>
+          <div class="quote">前八章是地圖，本章是上路。所有名相分析，若不落到止觀實修、不趣向心的解脫，便只是戲論。這也是阿耨樓陀把全論收在「業處」的深意。</div>
+          <div class="note"><strong>本章結構：</strong></div>
+          <div class="ke-tree-wrap">
+            <ul class="ke-tree">
+              <li><span class="ke-mk">壹</span><span class="ke-t">止 samatha</span><span class="ke-div">40 業處・性行・修習・相</span></li>
+              <li><span class="ke-mk">貳</span><span class="ke-t">觀 vipassanā</span><span class="ke-div">七清淨・觀智・三解脫門</span></li>
+              <li><span class="ke-mk">參</span><span class="ke-t">道果 · 證悟</span><span class="ke-div">四道四果・果定・滅盡定</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="samatha">
+          <h2>壹 · 止：四十業處</h2>
+          <p>「止」以專注培養定力，鎮伏五蓋、成就禪那。修止的所緣共 <strong>40 種</strong>，分七類：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>類</th><th>數</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td>十遍 kasiṇa</td><td class="n">10</td><td>地水火風・青黃赤白・光明・虛空（遍作圓相入定）</td></tr>
+              <tr><td>十不淨 asubha</td><td class="n">10</td><td>膨脹・青瘀・膿爛…等屍體十相（對治貪）</td></tr>
+              <tr><td>十隨念 anussati</td><td class="n">10</td><td>佛・法・僧・戒・捨・天・死・身至念・入出息念・寂止隨念</td></tr>
+              <tr><td>四梵住 brahmavihāra</td><td class="n">4</td><td>慈・悲・喜・捨（四無量心）</td></tr>
+              <tr><td>四無色 āruppa</td><td class="n">4</td><td>空無邊處…非想非非想處（無色定的所緣）</td></tr>
+              <tr><td>一想</td><td class="n">1</td><td>食厭想（āhāre paṭikkūlasaññā）</td></tr>
+              <tr><td>一差別</td><td class="n">1</td><td>四界差別（catudhātuvavatthāna，析身為地水火風）</td></tr>
+            </tbody>
+          </table></div>
+          <h3>對機擇法：六種性行</h3>
+          <p>《清淨道論》教人依「性行」(<span class="pali">carita</span>) 選相應的業處，事半功倍：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>性行</th><th>相應業處（舉要）</th></tr></thead>
+            <tbody>
+              <tr><td>貪行</td><td>十不淨、身至念（對治貪愛）</td></tr>
+              <tr><td>瞋行</td><td>四梵住、四色遍（清涼柔和）</td></tr>
+              <tr><td>癡行 / 尋行</td><td>入出息念（安定散亂之心）</td></tr>
+              <tr><td>信行</td><td>佛法僧戒捨天六隨念</td></tr>
+              <tr><td>覺（慧）行</td><td>死隨念、寂止隨念、食厭想、四界差別</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>修定的三階與三相（參 CMA）：</strong><br>
+          三修習：<strong>遍作</strong>（parikamma，準備）→ <strong>近行</strong>（upacāra，近分定，蓋已伏）→ <strong>安止</strong>（appanā，安止定，入禪那）。<br>
+          三相：<strong>遍作相</strong>（parikamma，最初的所緣）→ <strong>取相</strong>（uggaha，閉眼如見的心中影像）→ <strong>似相</strong>（paṭibhāga，清淨光潔、可隨意延展的定相）。取似相而入安止，即成禪那——正是第一章「色界心、無色界心」的實修來源。</div>
+        </section>
+
+        <section id="vipassana">
+          <h2>貳 · 觀：七清淨的次第</h2>
+          <p>「觀」以慧如實照見名色的無常、苦、無我，直接斷惑證道。其進程即《清淨道論》的<strong>七清淨</strong>——前二是止的基礎，後五是觀的開展：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>#</th><th>七清淨</th><th>內容</th></tr></thead>
+            <tbody>
+              <tr><td class="n">1</td><td>戒清淨</td><td>持戒清淨，為定慧之基</td></tr>
+              <tr><td class="n">2</td><td>心清淨</td><td>近行定與安止定（止的成就）</td></tr>
+              <tr><td class="n">3</td><td>見清淨</td><td>如實分辨「名與色」，破除我見（名色分別智）</td></tr>
+              <tr><td class="n">4</td><td>度疑清淨</td><td>照見名色的因緣（緣攝受智），越三世之疑</td></tr>
+              <tr><td class="n">5</td><td>道非道智見清淨</td><td>辨別「觀染」（光明、喜樂等）非道，正道在如實觀生滅</td></tr>
+              <tr><td class="n">6</td><td>行道智見清淨</td><td>生滅、壞滅、怖畏…行捨、隨順諸觀智的成熟</td></tr>
+              <tr><td class="n">7</td><td>智見清淨</td><td>四道智——現觀四聖諦、斷結證果</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>觀智的成熟（參 CMA）：</strong>第六清淨含一連串觀智——從<strong>生滅隨觀智</strong>（現見名色剎那生滅）、<strong>壞滅隨觀智</strong>（偏觀壞滅），經<strong>怖畏、過患、厭離、欲解脫、審察</strong>諸智，到<strong>行捨智</strong>（對諸行平等捨、不取不拒），再由<strong>隨順智、種姓智</strong>轉入出世間。此時心以涅槃為所緣，<strong>道智</strong>剎那生起、斷相應之結，隨即<strong>果智</strong>現前——這正是第一章「出世間 8/40 心」的實際發生。三解脫門（<strong>空・無相・無願</strong>）則依行者偏重無我、無常、苦哪一相入道而分。</div>
+        </section>
+
+        <section id="fruit">
+          <h2>參 · 道果與證悟</h2>
+          <p>觀智圓熟，四雙八輩的聖道次第成就：</p>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>四道四果</th><th>所斷結</th></tr></thead>
+            <tbody>
+              <tr><td>須陀洹（入流）道果</td><td>斷身見、疑、戒禁取（下三結）</td></tr>
+              <tr><td>斯陀含（一來）道果</td><td>減薄欲貪、瞋（不斷新結）</td></tr>
+              <tr><td>阿那含（不還）道果</td><td>斷欲貪、瞋（下五結盡）</td></tr>
+              <tr><td>阿羅漢道果</td><td>斷色貪、無色貪、慢、掉舉、無明（上五結盡）</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><strong>兩種殊勝定（參 CMA）：</strong><br>
+          <strong>果定 phalasamāpatti</strong>：聖者可隨意入定，令果心相續現起、久住於涅槃之樂。<br>
+          <strong>滅盡定 nirodhasamāpatti</strong>：三果、四果聖者且具八定者，可令心心所暫時全滅，最長七日——是有為法中最寂靜的暫歇。<br>
+          全論至此，從第一章「89/121 心」的分析，一路走到心的徹底解脫。理論的地圖，終於抵達實修的目的地。</div>
+        </section>
+
+        <section id="text" class="sutra-sec">
+          <h2>攝義論選文 · 第九章</h2>
+          <p class="sutra-meta">核心根本偈（巴利為公有原典，中譯採尋法比丘《精解》用語）。消文為本頁自撰，<strong>參菩提比丘 CMA</strong>。</p>
+          <div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 2 段核心偈頌</span></div>
+
+          <h4 class="ke">一、止觀二門</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Samathavipassanānaṃ bhāvanānam ito paraṃ / Kammaṭṭhānaṃ pavakkhāmi duvidham pi yathākkamaṃ.</span>此後我當依次宣說止與觀二種修習的業處。</p><details class="ann"><summary>消文</summary><div>全論最後一章，總標「止、觀」二門。止修定、鎮伏煩惱、成就禪那（心清淨）；觀修慧、如實照見無常苦無我、斷惑證道（慧清淨）。二者如車雙輪、鳥雙翼：止為觀提供穩定有力的心，觀以止所養之心現觀實相。阿耨樓陀把全論收在此，正表明——前八章對心色緣起的一切精析，最終都是為了「上路」：導向止觀實修與心的解脫，否則只是戲論。（參菩提比丘 CMA）</div></details></div>
+
+          <h4 class="ke">二、七清淨導向解脫</h4>
+          <div class="unit"><p class="jing"><span class="pali-verse">Sīlavisuddhi, cittavisuddhi, diṭṭhivisuddhi, kaṅkhāvitaraṇavisuddhi, maggāmaggañāṇadassanavisuddhi, paṭipadāñāṇadassanavisuddhi, ñāṇadassanavisuddhi cā ti sattavidhena visuddhisangaho.</span>戒清淨、心清淨、見清淨、度疑清淨、道非道智見清淨、行道智見清淨、智見清淨——清淨之攝集有此七種。</p><details class="ann"><summary>消文</summary><div>七清淨是修行的完整階梯，前後相依、次第而上：戒清淨立基，心清淨（定）淨心，見清淨破我見（分別名色），度疑清淨越三世之疑（見緣起），道非道清淨揀擇正道（不落觀染），行道清淨令諸觀智成熟（生滅至行捨），終以智見清淨——四道智現觀四諦、斷結證果。這正是把全論的分析，轉化為一條可實走的解脫之道。地圖至此走完，餘下的是親自上路。（參菩提比丘 CMA）</div></details></div>
+        </section>
+
+        <section id="practice">
+          <h2>本章修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>止觀雙運</b><p>止修定伏惑、觀修慧斷惑。定慧如車雙輪，缺一不可——這正呼應第一章卷首「多聞須配定慧真修」的提醒。</p></article>
+            <article class="key-card"><b>對機擇法</b><p>依性行選業處（貪行修不淨、散亂修安般…），是《清淨道論》的實修智慧，避免盲修瞎練。</p></article>
+            <article class="key-card"><b>地圖終須上路</b><p>前八章的名相分析，全為本章的止觀實修服務。學阿毗達磨不是為了博聞，而是為了解脫。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完上面的導讀後，用以下考題檢驗自己是否掌握第九章的重點。<strong>單選題</strong>與<strong>是非題</strong>可即時對答案、看解析並累計分數；<strong>思考題</strong>則點開「參考答案」自行對照，重在思辨、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>第九章「業處」把全論收攝於哪兩大修行法門？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>持戒 與 布施</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>念佛 與 誦經</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>止（samatha，修定）與 觀（vipassanā，修慧）</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>加行 與 正行</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>止修定伏惑、成就禪那；觀修慧、照見無常苦無我而斷惑證道。二者如車雙輪。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>修「止」的所緣共四十業處，下列分類何者正確？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>十遍＋十不淨＋十隨念＋十梵住</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>十遍＋十不淨＋十隨念＋四梵住＋四無色＋一想＋一差別</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>四念處＋四正勤＋四神足…共三十七</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>五蘊＋十二處＋十八界</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>40 = 遍10＋不淨10＋隨念10＋梵住4＋無色4＋想1＋差別1。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>依「性行」擇法，貪行偏重者最適合修哪類業處？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>十不淨、身至念</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>四梵住</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>六隨念</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>入出息念</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>貪行以不淨觀、身至念對治貪愛；瞋行修四梵住、信行修六隨念、散亂（尋/癡）行修安般。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">4</span>修定過程中，最終能延展清淨、據以入安止定的定相稱為？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>遍作相 parikamma-nimitta</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>取相 uggaha-nimitta</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>趣相 gati-nimitta</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>似相 paṭibhāga-nimitta</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>三相次第：遍作相→取相（閉眼如見）→似相（清淨光潔、可延展）。取似相入安止定，即成禪那。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>「七清淨」的最後一個、也是斷結證果的是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>戒清淨</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>心清淨</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>智見清淨（四道智現觀四諦）</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>見清淨</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>第七「智見清淨」即四道智——以涅槃為所緣，剎那現觀四聖諦、斷相應結、證果。前六清淨為其鋪路。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>阿耨樓陀把全論收在「業處（禪修）」而非理論，凸顯了阿毗達磨的一切分析最終都指向實修與解脫。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>前八章是地圖，本章是上路。名相分析若不落到止觀實修、不趣向心的解脫，便只是戲論。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>修定時出現的光明、喜樂、輕安等美好覺受，就是解脫的聖道，應緊抓不放。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>光明喜樂等是「觀染」（vipassanūpakkilesa），第五「道非道智見清淨」正是要辨明：這些非道，正道在如實觀諸行的生滅無常。執之則成障。</p>
+          </div>
+
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>「行捨智」是對一切行法平等捨、不取不拒的成熟觀智，是轉入出世間道的前奏。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>行捨智後，經隨順智、種姓智，心即以涅槃為所緣，道智生起斷結。行捨是觀智成熟的高峰。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+
+          <details class="reflect">
+            <summary>思考題一：南傳「四十業處」中亦有「佛隨念、慈心、四界差別、入出息念」等，與漢傳的念佛、慈悲觀、數息觀高度相通。你會如何把它們接上自己的日課？</summary>
+            <div class="detail-body"><p>（開放題）例如：漢傳念佛可與「佛隨念」對讀——都是以佛的功德為所緣安定其心；慈心觀與四梵住相通；數息與入出息念幾乎一致。南傳把這些業處的「性行擇法、三相三修」講得極細，正好為漢傳行者的日課提供操作層面的補充。可挑一個你已在修的，對照《清淨道論》的說明深化之。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題二：七清淨把「戒—定—慧」展開為可檢核的七階。這對你檢視自己修行「卡在哪一階」有什麼幫助？</summary>
+            <div class="detail-body"><p>（供省思）七清淨提供一把尺：戒不淨則定難成；定不足則見不清（無法穩定分別名色）；未見緣起則疑不度；不辨觀染則誤道為道。對照自省，往往能定位問題——例如散亂難定，可能是戒行或前行不足；觀不起來，可能是止的基礎（心清淨）未穩。修行於是有次第可循，不致盲修。</p></div>
+          </details>
+
+          <details class="reflect">
+            <summary>思考題三：走完九章，你如何回答「學這麼細的阿毗達磨，對『上求佛道、下化眾生』的菩薩行有何用」？</summary>
+            <div class="detail-body"><p>（供省思）阿毗達磨給的是「如實知心」的精密工具：知煩惱的種類與對治、知業果與緣起的機制、知止觀的次第。菩薩自利需以此斷惑修慧，利他則需以此善觀眾生心行、應病與藥。它與大乘的悲願不衝突——反而為「善巧方便」提供了心理學的地基。細，是為了更如實地慈悲與智慧，而非增長名相我慢。這正可與你所志的《瑜伽師地論》《大智度論》互參。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <details open>
+            <summary>展開／收合 · 跨系對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>本章主題</th><th>可對讀的論典</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>四十業處 · 止</td><td>《瑜伽師地論》聲聞地 · 智者《釋禪波羅蜜》</td><td>止的所緣與次第，南傳 vs 瑜伽 vs 天台的對照。</td></tr>
+                  <tr><td>七清淨 · 觀智</td><td>《清淨道論》全書 · 唯識五位</td><td>七清淨是《清淨道論》主幹；與大乘資糧—加行—見道—修道—究竟五位對讀。</td></tr>
+                  <tr><td>入出息念・慈心</td><td>漢傳數息觀・慈悲觀 · 《小止觀》</td><td>共法的禪修，最宜結合日課實修對讀。</td></tr>
+                  <tr><td>四道四果 · 斷結</td><td>《俱舍論》賢聖品 · 大乘菩薩階位</td><td>聲聞果位與菩薩位次的對照。</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <div class="terms">
+            <span>業處 kammaṭṭhāna</span><span>止 samatha</span><span>觀 vipassanā</span>
+            <span>十遍 kasiṇa</span><span>十不淨 asubha</span><span>十隨念 anussati</span><span>四梵住 brahmavihāra</span><span>入出息念</span><span>四界差別</span>
+            <span>性行 carita</span><span>遍作・近行・安止</span><span>遍作相・取相・似相</span>
+            <span>七清淨 visuddhi</span><span>名色分別智</span><span>緣攝受智</span><span>生滅隨觀智</span><span>行捨智</span><span>種姓智</span>
+            <span>四道四果</span><span>三解脫門</span><span>果定 phalasamāpatti</span><span>滅盡定 nirodhasamāpatti</span>
+          </div>
+        </section>
+
+        <section id="finale">
+          <h2>單元結語 · 走完九章之後</h2>
+          <p>從第一章「89／121 心」的分析起步，經心所、心路、業與輪迴、色與涅槃、類別、緣起，到本章的止觀與道果——《攝阿毗達磨義論》九章，把「經驗實相」拆解到極細，又以緣起重新編織，最後全數匯歸於<strong>心的解脫</strong>。</p>
+          <div class="note"><strong>給家維的話：</strong>這套南傳阿毗達磨，與你所志的《瑜伽師地論》《大智度論》正可互為鏡鑑——同觀心識、同辨煩惱、同修止觀，而各擅勝場。願這九章成為你日後跨系對讀、深入唯識與般若的一塊穩固地基。地圖已備，餘下的，是親自上路。🙏</p>
+          <p style="margin-top:16px;"><a class="backlink" href="/study-group/abhidhamma/">← 回上座部阿毗達磨總導論（回顧全九章）</a></p>
+        </section>
+
+        <section id="nav"><h2>章節導航</h2><div class="chapnav"><a href="/study-group/abhidhamma/ch08/"><span>← 上一章</span><b>第八章 · 緣之概要</b></a><a class="next" href="/study-group/abhidhamma/"><span>單元 →</span><b>回總導論</b></a></div></section>
+        <p class="footer-note" style="border-top:1px solid var(--line); padding-top:20px; margin-top:6px;">本頁導讀與消文為編者自行撰寫，內容主要參考 Bhikkhu&nbsp;Bodhi《A Comprehensive Manual of Abhidhamma》(BPS／Pariyatti)；中文術語參尋法比丘《阿毗達摩概要精解》。巴利偈頌為公有原典。本頁僅供如意精舍讀書會非營利學習之用。</p>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(tools){
+    tools.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-act]');if(!b)return;
+      var open=b.getAttribute('data-act')==='open';
+      document.querySelectorAll('#text details.ann').forEach(function(d){d.open=open;});
+    });
+  }
+})();
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！本章重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>
