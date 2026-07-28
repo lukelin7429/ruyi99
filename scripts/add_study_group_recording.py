@@ -92,7 +92,20 @@ def update_detail_page(category, url, num, date):
 
     html = html[:anchor] + new_button + html[anchor:]
 
-    total = len(existing_nums) + 1
+    # 集數統計一律用「最新集數」而不是「不重複按鈕數」：
+    # 舊資料若曾經有重複集數或缺漏（實際發生過，如無量壽經的 025、123 各出現兩次、122 缺漏），
+    # 用不重複數量算會比最新集號還小，導致新增錄音後「共 N 集」反而不動或變小。
+    all_nums = existing_nums | {new_num}
+    total = max(all_nums)
+    unique_count = len(all_nums)
+    raw_count = len(buttons) + 1
+    if unique_count != total or raw_count != total:
+        print(
+            f"注意：{category} 錄音清單集數有重複或缺漏"
+            f"（最新集數 {total}、不重複集數 {unique_count}、按鈕總數 {raw_count}）。"
+            f"「共 N 集」已依最新集數 {total} 更新，舊資料未動，如需清理請自行檢查子頁。",
+            file=sys.stderr,
+        )
     count_re = re.compile(r"(收聽錄音（共\s*)(\d+)(\s*集）)")
     if not count_re.search(html):
         sys.exit("找不到「共 N 集」統計文字，格式可能跟預期不同。")
