@@ -156,6 +156,29 @@
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 
+  // 跳到錄音 — floating button, auto-appears on any page that has a .audlist
+  // (錄音清單常常被介紹文字、導讀卡片壓到頁面很下面，這顆按鈕讓人不用一直滑)
+  var audlist=document.querySelector('.audlist');
+  if(audlist){
+    var jumpBtn=document.createElement('button');
+    jumpBtn.type='button';
+    jumpBtn.className='aud-jump';
+    jumpBtn.innerHTML='<span class="aud-jump-ic">🎧</span><span>跳到錄音</span>';
+    jumpBtn.addEventListener('click',function(){
+      audlist.scrollIntoView({block:'start'});   // html{scroll-behavior:smooth} 已經讓這個動作變平滑
+    });
+    document.body.appendChild(jumpBtn);
+    var toggleJump=function(){
+      var r=audlist.getBoundingClientRect();
+      var pastTop=window.scrollY>320;
+      var inView=r.top<window.innerHeight*.6 && r.bottom>0;
+      jumpBtn.classList.toggle('show',pastTop&&!inView);
+    };
+    toggleJump();
+    window.addEventListener('scroll',toggleJump,{passive:true});
+    window.addEventListener('resize',toggleJump);
+  }
+
   // photo carousels (supports multiple on a page)
   document.querySelectorAll('.carousel').forEach(function(car){
     var slides=car.querySelectorAll('.slide'),dots=car.querySelectorAll('.dot'),cur=0,timer;

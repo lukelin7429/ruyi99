@@ -519,6 +519,24 @@ main figure.rvl img{width:100%;border-radius:var(--radius);box-shadow:var(--shad
 .aud-num{font-weight:700;color:var(--ink);font-size:16px}
 .aud-date{font-size:13.5px;color:var(--sub);font-family:var(--serif);letter-spacing:.03em}
 .aud-go{margin-left:auto;font-size:13.5px;font-weight:700;color:var(--plum)}
+.audlist{scroll-margin-top:88px}
+
+/* 跳到錄音 — floating jump button, auto-injected by site.js on any page with .audlist */
+.aud-jump{position:fixed;right:22px;bottom:26px;z-index:40;
+  display:flex;align-items:center;gap:8px;padding:12px 20px 12px 15px;border:none;border-radius:999px;
+  background:linear-gradient(135deg,var(--plum),var(--plum-deep));color:#fff;
+  font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.02em;
+  box-shadow:var(--shadow-lg);cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(16px) scale(.9);
+  transition:opacity .3s ease,transform .38s cubic-bezier(.34,1.56,.64,1),visibility .3s,box-shadow .18s}
+.aud-jump.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.aud-jump:hover{transform:translateY(-3px) scale(1.03);box-shadow:var(--shadow-hover)}
+.aud-jump:active{transform:translateY(0) scale(.96)}
+.aud-jump-ic{font-size:17px;line-height:1}
+@media (max-width:640px){
+  .aud-jump{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    padding:11px 17px 11px 13px;font-size:14px}
+}
 
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:100;background:rgba(15,10,12,.86);display:none;
