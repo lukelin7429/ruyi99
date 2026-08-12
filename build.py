@@ -277,6 +277,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/resonance/",
     "/column/Cai-Ling/upgrade/",
     "/column/Cai-Ling/accept/",
+    "/column/Cai-Ling/mind-state/",
 ]
 
 out2path={}
