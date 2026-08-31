@@ -301,6 +301,11 @@ HANDMADE_PAGES=[
     "/column/Yang-Hui/certain-rebirth/",
     "/column/Yang-Hui/nineteenth-vow/",
     "/column/Yang-Hui/eleventh-vow/",
+    "/column/Da-Hui/meaning-of-life/",
+    "/column/Da-Hui/wisdom-through-chanting/",
+    "/column/Da-Hui/making-time-count/",
+    "/column/Da-Hui/four-hearts-of-dharma/",
+    "/column/Da-Hui/life-and-faith/",
 ]
 
 out2path={}
