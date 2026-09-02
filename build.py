@@ -267,6 +267,7 @@ HANDMADE_PAGES=[
     "/column/Lucien/life-in-breath/",
     "/study-group/perfection-of-wisdom/life-topics/",
     "/column/Yi-cheng/iced-latte/",
+    "/column/Yi-cheng/six-animals/",
     "/column/Cai-Ling/",
     "/column/Cai-Ling/notification/",
     "/column/Cai-Ling/neural-pathway/",
