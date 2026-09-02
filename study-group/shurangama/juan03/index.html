@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《大佛頂首楞嚴經》卷三 導讀 · 如意精舍讀書會</title>
+  <meta name="description" content="《楞嚴經》卷三導讀與經文：序分、七處徵心、二種根本、十番顯見（顯見是心、顯見不動）。依圓瑛法師《講義》判科，附跨經論對讀地圖與 CBETA 經文。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    /* 經文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .jing-credit { color:var(--muted); font-size:.95rem; margin:0 0 8px; }
+    .jing-subhead { margin:16px 0 6px; color:#3d342b; font-size:1.05rem; }
+    .sutra { margin-top:18px; padding:24px 26px; border:1px solid var(--line); border-radius:8px;
+      background:#fff; }
+    .sutra p { font-size:1.12rem; line-height:2.05; text-indent:2em; margin:0 0 16px; color:#2a2620; }
+    .sutra p:last-child { margin-bottom:0; }
+    /* 經文＋圓瑛《講義》消文 逐段 toggle */
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700; text-indent:0;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .ke-tree-wrap { margin:30px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    .ke-tree-wrap:first-child { margin-top:0; }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.7; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    .ke-now { margin-left:.5em; font-size:.72rem; font-weight:700; color:#fff;
+      background:var(--saffron); border-radius:5px; padding:.5px .5em; }
+    li.ke-cur { background:rgba(185,111,39,.09); border-radius:5px; }
+    li.ke-cur > .ke-mk { color:var(--saffron); }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.16rem; line-height:2.0; text-indent:2em; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"▸"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; text-indent:2em; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} .sutra{padding:18px;} .sutra p{font-size:1.06rem;text-indent:2em;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/shurangama/">楞嚴經</a> › 卷三</p>
+        <p class="eyebrow">如來藏 · 大佛頂首楞嚴經 · 卷三</p>
+        <h1>《楞嚴經》卷三 導讀</h1>
+        <p class="subtitle">承卷二會通五陰之後，本卷續會「六入、十二處、十八界」與「七大」——把根、塵、識乃至地水火風空見識，一一會歸如來藏妙真如性，圓彰「本非因緣、非自然性」。阿難於此大開圓解，說偈讚佛：「妙湛總持不動尊……將此深心奉塵剎，是則名為報佛恩。」</p>
+        <ul class="meta" aria-label="本卷資訊">
+          <li>判科依據：圓瑛《講義》</li>
+          <li>經文來源：CBETA T19n0945</li>
+          <li>科段：會通四科（六入·十二處·十八界）· 七大即藏 · 阿難讚佛偈</li>
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本卷定位</a>
+        <a href="#fourfold">會通四科（六入·十二處·十八界）</a>
+        <a href="#seven">七大即如來藏</a>
+        <a href="#verse">阿難讚佛偈</a>
+        <a href="#practice">本卷修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#sutra">經文（卷三）</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>本卷定位</h2>
+          <p class="lead">卷二以「十番顯見」顯真、會通五陰即如來藏。<strong>卷三承此，把佛法對「一切法」的分類——四科（五陰、六入、十二處、十八界）中未講完的六入、十二處、十八界，加上「七大」（地、水、火、風、空、見、識）——一一會歸如來藏妙真如性。</strong>至此「破妄顯真」的第一大科圓滿，阿難大開圓解，說偈讚佛。</p>
+          <div class="quote">性色真空，性空真色，清淨本然，周遍法界。</div>
+          <div class="grid">
+            <article class="key-card"><b>方法：即事顯理</b><p>不離眼耳鼻舌身意、色聲香味觸法，就地指出它們「非因緣、非自然」，當體即是藏性——即妄即真。</p></article>
+            <article class="key-card"><b>高潮：七大圓融</b><p>地水火風空見識七大，各各周遍法界、互不相礙。「清淨本然，周遍法界」是全卷的關鍵句。</p></article>
+            <article class="key-card"><b>果證：阿難說偈</b><p>阿難於此圓悟，說偈讚佛，發「將此深心奉塵剎」的大願，是解悟轉為發心的樞紐。</p></article>
+          </div>
+        </section>
+
+        <section id="fourfold">
+          <h2>會通四科（六入 · 十二處 · 十八界）</h2>
+          <p>「四科」是佛對一切法由略而詳的三種分類：五陰（卷二已講）、十二處、十八界；六入則是十二處的內六根一面。佛的講法一貫：先舉世人執為實有的法，再層層推破「非因緣、非自然」，結歸<strong>「本如來藏妙真如性」</strong>。</p>
+          <table>
+            <thead><tr><th>科目</th><th>內容</th><th>會歸要點</th></tr></thead>
+            <tbody>
+              <tr><td class="n">六入</td><td>眼、耳、鼻、舌、身、意六根「吸取」六塵之處。</td><td>如目睛瞪久所見狂華，根性非從明暗來、非從根出，當體即藏性。</td></tr>
+              <tr><td class="n">十二處</td><td>六根（內）＋六塵（外），共十二處。</td><td>根塵相對而立，皆無自性；離能所之執，即見藏性。</td></tr>
+              <tr><td class="n">十八界</td><td>六根、六塵、六識，共十八界。</td><td>識於根塵之中「妄現分別」，界限本空；破界限之執，即如來藏。</td></tr>
+            </tbody>
+          </table>
+          <div class="note"><strong>導讀提醒：</strong>四科的推破格式高度一致：<strong>「舉相 → 破因緣 → 破自然 → 結歸藏性」</strong>。抓住這個節奏，再多的名相也不會亂——每一段都在說同一件事：萬法當體即是妙真如性。</div>
+        </section>
+
+        <section id="seven">
+          <h2>七大即如來藏</h2>
+          <p>四科講「差別事相」，七大則講「周遍體性」。<strong>地、水、火、風、空、見、識</strong>七大，一一「清淨本然，周遍法界」，隨眾生心、應所知量，循業發現。</p>
+          <ul>
+            <li><strong>地、水、火、風</strong>——四大非和合而有：如鑽火、如求水，非因緣所生，性真圓融。</li>
+            <li><strong>空大</strong>——虛空非有非無，性覺真空、性空真覺，周遍不動。</li>
+            <li><strong>見大</strong>——見聞覺知之「見精」，非和合、非不和合，周遍法界。</li>
+            <li><strong>識大</strong>——了別之識，非因根塵而有定處，隨業發現，即如來藏。</li>
+          </ul>
+          <div class="quote">汝元不知，如來藏中，性色真空，性空真色，清淨本然，周遍法界；隨眾生心，應所知量，循業發現。</div>
+          <div class="note"><strong>關鍵辨正：</strong>七大「周遍法界」而「互不相礙」，正是後世華嚴「事事無礙」的先聲。世人以為地水火風彼此相陵（水火不容），佛則顯其同一藏性、圓融無礙——這是全卷義理的最高處。</div>
+        </section>
+
+        <section id="verse">
+          <h2>阿難讚佛偈</h2>
+          <p>會通四科七大既竟，阿難「頓悟禪那，修進聖位」，身心蕩然、得大無畏，遂說偈讚佛。此偈是全經最著名的段落之一，宜熟誦：</p>
+          <div class="quote">妙湛總持不動尊，首楞嚴王世希有！<br>銷我億劫顛倒想，不歷僧祇獲法身。<br>……<br>將此深心奉塵剎，是則名為報佛恩。<br>……<br>舜若多性可銷亡，爍迦羅心無動轉。</div>
+          <div class="note"><strong>導讀提醒：</strong>此偈由「讚佛之德」轉入「自陳所悟」，再發「五濁惡世誓先入」的菩薩大願，最後以「舜若多（空）性可銷亡，爍迦羅（堅固）心無動轉」明其願心堅固不退。<strong>解悟至此轉為發心</strong>——楞嚴由「見道」入「修道」的關節，正在這一偈。</div>
+        </section>
+
+        <section id="practice">
+          <h2>本卷修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>萬法即藏性</b><p>四科七大一一「本非因緣、非自然」，即如來藏。不在事外別求理，即事即理。</p></article>
+            <article class="key-card"><b>周遍不相礙</b><p>七大同一藏性、各各周遍而互不相礙，是「事事無礙」的根本，破「諸大相陵」之疑。</p></article>
+            <article class="key-card"><b>解悟起大願</b><p>阿難說偈，由悟轉願：「將此深心奉塵剎」。真正的悟，必然發為度生的深心。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完卷三導讀後，用以下考題自我檢驗。<strong>單選題</strong>與<strong>是非題</strong>即時對答、看解析並累計分數；<strong>思考題</strong>點開參考答案自行對照、不計分。</p>
+
+          <p class="quiz-group-title">一、單選題</p>
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>卷三「會通四科」中，除卷二已講的五陰外，本卷會通的是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>三界、九地</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>四諦、十二因緣</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>六入、十二處、十八界</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>五位百法</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>四科即五陰、六入、十二處、十八界；卷二講五陰，卷三續講其餘三科，再加七大。</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">2</span>「七大」指的是哪七者？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>地、水、火、風、空、根、塵</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>地、水、火、風、空、見、識</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>色、受、想、行、識、空、見</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>眼、耳、鼻、舌、身、意、心</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：B。</b>七大＝地、水、火、風、空、見、識。前五為色法之大，見、識則攝根與心，皆周遍法界。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>七大即如來藏的關鍵句「性色真空，性空真色」，下接哪八字？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>清淨本然，周遍法界</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>本非因緣，非自然性</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>循業發現，隨心應量</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>不生不滅，不垢不淨</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：A。</b>「如來藏中，性色真空，性空真色，清淨本然，周遍法界；隨眾生心，應所知量，循業發現。」是七大會歸藏性的定型句。</p>
+          </div>
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">4</span>阿難讚佛偈的開頭兩句是？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>諸行無常，是生滅法</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>若人欲了知，三世一切佛</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>天上天下無如佛，十方世界亦無比</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>妙湛總持不動尊，首楞嚴王世希有</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：D。</b>「妙湛總持不動尊，首楞嚴王世希有！銷我億劫顛倒想，不歷僧祇獲法身。」為此偈起句。</p>
+          </div>
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>偈末「舜若多性可銷亡，爍迦羅心無動轉」，「舜若多」意謂？</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">A</span><span>金剛</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">B</span><span>大地</span></button>
+              <button type="button" class="opt" data-i="2"><span class="mk">C</span><span>虛空</span></button>
+              <button type="button" class="opt" data-i="3"><span class="mk">D</span><span>光明</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：C。</b>舜若多＝空（虛空），爍迦羅＝堅固（金剛）。意謂：縱使虛空可以銷亡，我這堅固的願心也無有動轉。</p>
+          </div>
+
+          <p class="quiz-group-title">二、是非題</p>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>卷三會通四科七大，結論仍是一切法「本非因緣、非自然性」，即如來藏妙真如性。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>與卷二五陰相同，四科七大的推破格式一致——遮因緣、自然二見，結歸如來藏。</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>「七大」不包含「見大」與「識大」，只講地水火風空五大。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：錯誤。</b>七大＝地水火風空＋<strong>見、識</strong>。楞嚴特於五大之外別立見大、識大，攝根與心，一同會歸藏性。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>卷三以「阿難說偈讚佛」作結。</p>
+            <div class="opts">
+              <button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button>
+              <button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button>
+            </div>
+            <p class="quiz-exp"><b>答案：正確。</b>會通四科七大既竟，阿難大開圓解，說偈讚佛（妙湛總持不動尊……是則名為報佛恩），卷三於此圓滿。</p>
+          </div>
+
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+          <details class="reflect">
+            <summary>思考題一：七大「各各周遍法界」卻「互不相礙」，如何理解？</summary>
+            <div class="detail-body"><p>世人以事相看，水火相剋、地空相礙；佛以藏性看，七大同是一真法界隨緣顯現，故各遍法界而不相陵奪。此即華嚴「一多相即、事事無礙」的先聲：不是七個東西擠在一處，而是同一藏性、隨業循現，當處即遍、當遍即寂。</p></div>
+          </details>
+          <details class="reflect">
+            <summary>思考題二：「將此深心奉塵剎，是則名為報佛恩」——你如何理解「以深心奉塵剎」為報恩？</summary>
+            <div class="detail-body"><p>（開放題）真正的悟不停在自受用，而是化為「奉塵剎、度眾生」的深心。報佛恩不在言謝，而在承擔如來家業、於五濁惡世誓先入。可與〈普賢行願〉、地藏願行對看：悟後起修、修不離度生，正是大乘的骨髓。</p></div>
+          </details>
+          <details class="reflect">
+            <summary>思考題三：為何四科七大都要以「本非因緣、非自然」作結？</summary>
+            <div class="detail-body"><p>（開放題）「自然」墮外道無因、「因緣」滯權小生滅，兩者都以「有定法可得」為前提。楞嚴要顯的是超越二邊的如來藏：即事而非事、即相而離相。遮此二見，正為顯「當體即藏、周遍圓融」的中道實相——這也是全卷、乃至前三卷「破妄顯真」的總結。</p></div>
+          </details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <p>卷三的主題，在其他經論裡各有更細或不同角度的講法。下表收成一張延伸閱讀路標，方便讀書會互相對照。</p>
+          <details open>
+            <summary>展開／收合 · 跨經論對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>卷三主題</th><th>可對讀的經論</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>四科（陰入處界）</td><td>《俱舍論》·《瑜伽師地論》</td><td>阿毗達磨對蘊處界的細判，可補楞嚴「會歸」一面之略；一破一立，相得益彰。</td></tr>
+                  <tr><td>七大周遍圓融</td><td>《華嚴經》· 華嚴宗事事無礙</td><td>「各遍法界、互不相礙」正是華嚴法界觀的先聲，可與「一即一切」對看。</td></tr>
+                  <tr><td>循業發現</td><td>《瑜伽師地論》· 唯識</td><td>「隨眾生心、應所知量、循業發現」與阿賴耶識隨業變現同旨，唯識講得最細。</td></tr>
+                  <tr><td>即事即理·即妄即真</td><td>《大乘起信論》· 天台</td><td>真如隨緣、不變隨緣，與天台「一念三千、即空即假即中」互參。</td></tr>
+                  <tr><td>阿難讚佛偈·發願</td><td>〈普賢行願品〉·《地藏經》</td><td>「將此深心奉塵剎」的度生大願，與普賢十大願、地藏本願同一血脈。</td></tr>
+                </tbody>
+              </table>
+              <div class="note"><strong>怎麼用這張表：</strong>先讀懂本卷，再挑一兩條有興趣的線索去對照。七大與華嚴事事無礙一線，最值得深挖。</div>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <p>本卷關鍵名相，日後可逐步做成可點選的詞彙頁，串起各卷之間的連結。</p>
+          <div class="terms">
+            <span>六入</span><span>十二處</span><span>十八界</span><span>七大</span><span>地水火風空見識</span>
+            <span>清淨本然</span><span>周遍法界</span><span>循業發現</span><span>性色真空</span><span>即事即理</span>
+            <span>事事無礙</span><span>阿難讚佛偈</span><span>妙湛總持</span><span>舜若多</span><span>爍迦羅</span><span>將此深心奉塵剎</span>
+          </div>
+        </section>
+
+        <section id="sutra" class="sutra-sec">
+          <h2>經文 · 大佛頂首楞嚴經 卷第三</h2>
+          <p class="sutra-meta">經文依 CBETA《大正藏》T19n0945 校錄。本卷起「復次阿難，云何六入本如來藏妙真如性」，訖阿難讚佛偈「令我早登無上覺，於十方界坐道場」。</p>
+          <p class="jing-credit">經文依圓瑛法師《大佛頂首楞嚴經講義》判科分段，每段經文下方均附圓瑛法師消文（點「圓瑛《講義》消文」即可展開）。</p>
+<div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 160 段經文，每段附圓瑛法師消文</span></div>
+<div class="sutra">
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯二</span><span class="ke-t">會六入即藏性</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">總徵</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">別釋</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">復次，阿難！云何六入，本如來藏，妙真如性？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總徵。梵語缽羅吠奢，此云入，亦云處。入有二義：一為能入，以能入塵取境故；二為所入，以為塵入之處故。按本文吸此塵象，當以吸入為義，即吸入六塵之處，故又名處。他經色心開合無此科，本經以根中不生滅性，即首楞嚴定體，亦即如來成佛之密因，脩證圓通，下手所依之處，故特加焉。本如來藏者，本即根本，一切枝末，依之而起，今追究六入枝末之根本，元是如來藏，如即本有不變，真如之本體，來即真如隨緣，徧周之妙用，藏者，含藏世出世間，一切善功德，無不具足，猶如寶故。妙真如性者：即如來藏之性。此性即理即事，全妄全真，不滯一法，不捨一法故，所以稱妙。非是此真而彼不真，此如而彼不如，若如是則有對待，則不圓滿；今乃統萬法惟是一心，一真一切真，無有那一法不真，一如一切如，無有那一法不如：即六入亦妙真如性也。初總標竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">別釋</span><span class="ke-div">分6</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">眼入乃至六意入巳初分四午初舉例顯妄</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">辨妄無體</span></li><li><span class="ke-mk">三</span><span class="ke-t">無所從來</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！即彼目睛，瞪發勞者，兼目與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此舉前色陰，瞪目發勞為能例，發明眼入同一虛妄也。即彼：乃就彼色陰所云，其人無故不動目睛，瞪以發勞，因此見勞，遂見空華之勞相。兼目與勞：勞字指空華，謂不特空華是勞相，兼能見之目，與所見之勞相，同是真性菩提心中，瞪發勞相。如前所云：「見與見緣，併所想相，如虛空華，本無所有。」又如前所云：「影見俱眚。」眚與勞義同。能見之目是勞見，所見之相是勞相。菩提是本有真心，真原無妄，由最初一念妄動，依動故能見；依能見故，境界妄現。由末推本，豈僅色陰虛妄，即眼入同是菩提心中，一念妄動之勞相。一念妄動，與無故瞪目，無以異也。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><p class="jing">因於明暗，二種妄塵，發見居中，吸此塵象，名為見性。此見離彼明、暗二塵，畢竟無體。如是，阿難！當知是見，非明暗來，非於根出，不於空生。何以故？若從明來，暗即隨滅，應非見暗；若從暗來，明即隨滅，若從根生，必無明、暗；如是見精，本無自性。若於空出，前矚塵象，歸當見根，又空自觀，何關汝入？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>前五句托塵妄現，後三句離塵無體。以此眼入，因有明、暗二塵，黏湛然之體，發為勞見，居於浮、勝二根之中，吸入此明、暗二塵之象，如磁吸鐵，名為能見之量(此瞪即發菩勞相提)，乃屬托塵妄現。倘若離彼明、暗二塵，畢竟無有能入之體可得，是謂離塵無體。下文阿難疑根性斷滅，亦由此也。《正脈》問：「前取根性，離塵有體，異彼緣心，今云明、暗雙離，畢竟無體，何異緣心之無體乎？」答：「淺論之，前因眾生離緣心，不見真心，乃就根中指性，令識真心。然自是心非眼之後，但唯顯性不復論根，所以極表其離塵有體之真。今已領真性，尚執六根，別有體相，未融一性；更須令知，六入無自體相，所以極破其離塵無體之妄。雖說見性，乃根中局執之自性，非離眼廓周之見性也。前是顯性，而此破相，所以異矣！更深究之，此之破相，亦欲其離相即妙真如性耳。則顯性之旨仍同，豈如緣心，直破其一定無體哉？」二辨妄無體竟。午三無所從來此總標。據世人多謂見是其眼，從根是其正計，餘二併破，極顯其妄也。非明暗來不他生；非於根出不自生；不於空生，非無因生。於四性推檢無生，但缺不共生。應無見明。前三字總徵；此不從塵來。若說眼入從明塵而來，暗生明滅之時，見亦隨滅，應不見暗；若從暗塵而來，明生暗滅之時，見亦隨滅，應無見明。今明來見明，暗來見暗，明暗有去來，見性不生滅，當知是見，非明、暗來也，明矣！此不從根來。若說眼入，從根而生，必無明、暗二塵時，單根不能生見。故曰：「如是見精，本無自性。」自性乃能入之自體。此不從空來。若說眼入，從空而出，則以空為見之根，出來時，前矚(看也)塵境萬象，回歸時，應當自見其根；當然不能見。縱使能見，乃空自觀，何關汝眼入之事？三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：眼入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是無實體，無從來之故，當知眼入虛妄。以無實體故虛：無從來故妄，但是幻妄稱相。上句明相妄，下二句顯性真。謂眼入之相雖妄，妄不離真，其性本來不變，非因緣性；又復隨緣而非自然性耳。初眼入竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">耳入</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">舉例顯妄</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">辨妄無體</span></li><li><span class="ke-mk">三</span><span class="ke-t">無所從來</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！譬如有人：以兩手指，急塞其耳，耳根勞故，頭中作聲，兼耳與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此亦自法為例。以塞耳成勞，易知之例，以例耳入，所聞一切音聲，同一妄也。故呼阿難之名，而告之曰：譬如有人，此亦假設以顯妄。以者用也，用兩手指，急塞其耳，塞久成勞，以致頭中發為虛響，故云：頭中作聲。兼耳與勞三句，耳字意取耳入聞性，以性不自顯，寄根說故。勞字乃指頭中作聲，以勞雖妄發，因境顯故，故曰兼，曰與。謂不特聲是耳入之勞相，兼能聞之耳入，與所聞之勞相，同是真性菩提心中，瞪發勞相；比例發明，令知根塵同源，同一妄也。《指掌疏》云：此三句有二義：一者比例信真。言耳中聞性，本於真性菩提，人或易信：塞耳所發勞相，亦本於真性菩提，人皆難明，故曰同是菩提；佛意以根性本真，例彼勞相亦本真也。二者比例知妄。言瞪發勞相，唯是虛妄無實，人皆易知；耳中能聞之性，亦惟是虛妄無實，人或難信，故曰同是瞪發；佛意以瞪勞虛妄，例彼見性，亦唯妄也。二義中，前義比例信真，亦可兼釋總標中，浮塵諸幻化相，其性真為妙覺明體之疑。以今瞪發勞相，與浮塵幻化無異，勞相本於菩提，重明幻化相，亦不離真也。又瞪字，前眼入取例瞪目發勞，而後五入，何以亦用瞪發勞相？當知目瞪發勞，妄見空華，菩提心瞪發勞，則六精俱發，故皆用瞪發勞相。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><p class="jing">因於動、靜，二種妄塵，發聞居中，吸此塵象，名聽聞性。此聞離彼動、靜二塵，畢竟無體。如是，阿難！當知是聞，非動、靜來，非於根出，不於空生。何以故？若從靜來，動即隨滅，應非聞動！若從動來，靜即隨滅，若從根生，必無動靜；如是聞體，本無自性。若於空出，有聞成性，即非虛空；又空自聞，何關汝入？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>前五句托塵妄現。以其動、靜不常，故稱為妄。聞則托塵似有，豈屬真實？此聞雖居耳根之中，吸入塵象，但名聽聞性，亦顯其唯是幻妄名相而已。下三句離塵無體，同前所解。二辨妄無體竟。午三無所從來此總以標列，下則徵起逐破。應無覺靜！初句徵起，下先破從塵來。若從靜塵來，動生靜滅，耳中聞性，即當隨靜塵以俱滅，應不能聞動；若從動塵來，亦復如是。二應字，俱讀平聲。此破從根生。若謂此聞從根而生者，但有增上緣，必無動、靜所緣之塵，如是聞體(根也)，本來亦無能入之自性，以單根不立之故。此破從空而生。若謂此聞從虛空而出者，是空能有聞，亦得成為根性，既成根性，即非虛空；以聞屬靈知，空乃頑礙故。又空縱有聞，乃空自聞，即同他聞，何預(干也)汝之耳入？三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：耳入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此準上可知。二耳入竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">鼻入</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">舉例顯妄</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">辨妄無體</span></li><li><span class="ke-mk">三</span><span class="ke-t">無所從來</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！譬如有人：急畜其鼻，畜久成勞，則於鼻中，聞有冷觸；因觸分別，通、塞、虛、實，如是乃至，諸香臭氣。兼鼻與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此亦假設為例。譬如有人，急畜(縮也)其鼻，鼻息出入，自有常度，無故急縮，連縮既久，則反常成勞，即於鼻中，聞有冷觸。此冷觸由縮風所成，因有冷觸，則分別通、塞、虛、實；疏通呼吸之氣為虛，閉塞出入之息名實。如是乃至，吸入各種香、臭等氣，同一妄耳。兼鼻與勞：勞字指冷觸及香、臭氣；謂不特冷觸，香、臭氣，是鼻入之勞相，兼能聞之鼻入，與所聞之勞相，同是菩提心中，瞪發之勞相，以根塵同妄故。如第八番顯見文云，本是妙明，無上菩提，淨圓真心，妄為色空，及與聞見。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><p class="jing">因於通、塞，二種妄塵，發聞居中，吸此塵象，名齅聞性。此聞離彼通、塞二塵，畢竟無體。當知是聞，非通塞來，非於根出，不於空生。云何發明，香、臭等觸？若從根生，必無通、塞。如是聞機，本無自性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>然此鼻入，元無自性，但因浮、勝二根，對彼通而有聞，塞而無聞，二種妄塵，黏湛發齅，居於根中，吸入此塵象，名為齅聞能入之性。此聞亦不過幻妄稱相，離彼通、塞二種妄塵，畢竟無有能入之自體。上五句托塵妄現，後三句離塵無體。二辨妄無體竟。午三無所從來此總以標列，下則徵起別破。何以故？若從通來，塞則聞滅，云何知塞？如因塞有，通則無聞，初句徵，下先破不從塵生。若謂齅聞之性，從有聞之通而來，至無聞之塞時，此聞必隨通而去，應不更聞於塞，云何又知塞而無聞？既能知塞，則不從通來也明矣！如因無聞之塞，而有鼻入之齅性，則至有聞之通時，此聞則應隨塞而滅，無有齅聞之性，云何通時，又能發明香、臭等氣，來觸於鼻耶？既聞香、臭，應非從塞而有也，抑又明矣！此破從根生。若謂鼻入齅聞之性，從根而生者，則單根無塵，如是聞機(根也)離塵無體，本無能入之自性。以有所方有能，今既無所入之塵，安有能入之根？則不從根生也，抑又明矣！若從空出，是聞自當迴齅汝鼻；空自有聞，何關汝入？此破從空來。若謂齅聞之性，從鼻孔之空而來者，是空有聞，自當迴(返也)齅汝之鼻根。因有迴齅二字，故知是指鼻孔之空，非外空也。縱許能齅，但是虛空，自己有聞，又何關汝阿難鼻入之事？是知不從空生也，抑又明矣！三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：鼻入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>準上可知。三鼻入竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">舌入</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">舉例顯妄</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">辨妄無體</span></li><li><span class="ke-mk">三</span><span class="ke-t">無所從來</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！譬如有人：以舌舐吻，熟舐令勞。其人若病，則有苦味。無病之人，微有甜觸。由甜與苦，顯此舌根，不動之時，淡性常在。兼舌與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此亦自法為例。假設一事，譬如有人，以舌舐吻；舐即舔也。舌根無有外物可舐，但用舌入，自舐其脣吻；吻即口之兩角。熟舐乃舐之既久，令舌發勞。其人若病，舐之則妄有苦味，無病之人，舐之微有甜觸。由此熟舐，妄生甜苦，正顯舌入之根不動(即之不舐時)，淡性(非非甜苦)常在。甜苦與淡，乃舌入之勞相，以此為例，兼能嘗之舌入，與甜苦淡之勞相，同是菩提心中，瞪發勞相。前三科塵唯舉二，此科有甜、苦、淡三字，甜苦乃有味之味，淡屬無味之味，仍為二種。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><p class="jing">因甜、苦、淡，二種妄塵，發知居中，吸此塵象，名知味性。此知味性，離彼甜、苦，及淡二塵，畢竟無體。如是，阿難！當知如是，嘗苦、淡知，非甜、苦來；非因淡有；又非根出；不於空生。亡，復云何知，甜、苦二相？若從舌生，必無甜、淡，及與苦塵。斯知味根，本無自性。若從空出，虛空自味，非汝口知；又空自知，何關汝入？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此辨舌入虛妄。舌入元無自性，但因舌動時之甜、苦，及不動時之淡，二種妄塵，黏湛發知，居於根中，吸此塵象，托塵妄現，名為知味能入之性。然此舌入知性，離塵畢竟無體。二辨妄無體竟。午三無所從來此追究舌入無所從來，總標非塵、非根、非空。何以故？若甜、苦來，淡則知滅，云何知淡？若從淡出，甜即知初句徵，下逐破。先破不從塵來。此破不從根來。此破不從空生。三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：舌入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>準上可知。四舌入竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">身入</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">舉例顯妄</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">辨妄無體</span></li><li><span class="ke-mk">三</span><span class="ke-t">無所從來</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，譬如有人：以一冷手，觸於熱手，若冷勢多，熱者從冷；若熱功勝，冷者成熱。如是以此，合覺之觸，顯於離知，涉勢若成，因於勞觸。兼身與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此舉易知之身觸，以為能例，顯明身入虛妄。乃假設一人，用一隻冷手，觸合一隻熱手，兩手皆屬身根，與尋常有知之身，與無知之物，合則成觸不同。若冷之勢力多，則熱者從冷而成冷；若熱之功用勝，則冷者從熱而成熱矣。如是以此合覺之觸，顯於離知下，如是指上四句，用此兩手相合，覺知冷熱之觸，顯於兩手相離時，亦復有知觸之用，以驗身入所對觸塵，有離、合二種。彼此兩手，冷熱相涉之勢若成，乃因兩手相合，合久成勞，故現冷熱相涉之觸。兼身下三句，謂不但交相涉入，冷熱之相，是身入之勞相，兼身入與冷熱之相，同是菩提心中，瞪發勞相。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><p class="jing">因於離、合，二種妄塵，發覺居中，吸此塵象，名知覺性。此知覺體，離彼離、合違順二塵，畢竟無體。如是，阿難！當知是覺，非離、合來，非違順有，不於根出，又非何以故？若合時來，離當已滅，云何覺離？違順二相，亦復如是。若從根出，必無離、合、違、順四相。則汝身知，元無自性。必於空出，空自知覺，何關汝入？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此身入之知覺，乃托塵妄現其相。因於離、合二種妄塵，黏起湛然之體，發為覺精，居於浮、勝二根之中，吸入此塵象，名為身入知覺之性。此知覺體，離彼離、合違順二塵，畢竟無有身入之自體可得。離、合屬二塵，違順乃二相。苦觸，則違背眾生厭苦求樂之心理，故曰違；樂觸，則順從眾生厭苦求樂之心理，故曰順。離、合各有違順二相。二辨妄無體竟。午三無所從來空生。此總標無從來，下則徵破。初句徵，下先破從塵來。四相，非指離合違順為四，乃指離合二塵，各有違順二相，則成四相。此破從根出。此破空生。三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：身入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>準上可知。此中相妄性真之旨，如昔日僧問洞山曰：「寒暑到來如何迴避？」山曰：「何不向無寒暑處去？」僧曰：「如何是無寒暑處？」山曰：「寒時寒煞闍黎，熱時熱煞闍黎。」此為達妄即真，處處總成華藏界矣！五身入竟。</div></details></div>
+<h4 class="ke">已六意入分四午初舉例顯妄二辨妄無體三無所從來四結妄歸真今初</h4>
+<div class="unit"><p class="jing">阿難！譬如有人：勞倦則眠，睡熟便寤；覽塵斯憶，失憶為忘。是其顛倒，生、住、異、滅，吸習中歸，不相踰越，稱意知根。兼意與勞，同是菩提，瞪發勞相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此亦舉意入易知之例，以顯虛妄。假設一人辛勞疲倦，精神不足，意根不對緣境，則妄現睡眠之相；睡眠既熟，精神恢復，意根不甘滯寂，則便現醒寤之相；此乃約忽寐忽覺而言，非指夜寐夙興也。據此則勞倦睡熟，俱指意根，取此虛妄易知者，比例意入虛妄無體。覽塵斯憶，失憶為忘者：以既寤之時，則歷覽前塵而斯憶(記也)；欲睡之時，則失憶以為忘。又正睡之時，夢中獨頭，所緣覽塵境，亦稱記憶；既寤之後，則夢沉境寂，亦曰為忘。是其顛倒，生、住、異、滅者：以上忽眠、忽寤，或憶、或忘，皆屬顛倒之相。生、住、異、滅，對眠、寤、憶、忘而說。初眠為生，正眠為住；將寤為異，寤已為滅。始憶為生，正憶為住；將忘為異，忘盡為滅。寤忘準此可知。吸習中歸，不相踰越，稱意知根者：謂意根能吸入現習，生、住、異、滅四相，次第遷流，中歸意地，前不落後，後不超前，不相踰越，稱意入為能知之根焉。兼意與勞，同是菩提，瞪發勞相者：世人只知，眠、寤、憶、忘，為意家之勞相，並不知兼意知根，與所緣勞相，同是菩提心中，瞪發勞相。初舉例顯妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">辨妄無體</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>因於生滅，二種妄塵，集知居中；吸撮(取也)內塵，見、聞逆流，流</div></details></div>
+<div class="unit"><p class="jing">不及地，名覺知性。此覺知性，離彼寤、寐生滅二塵，畢竟無體。如是，阿難！當知如是，覺知之根，非寤寐來；非生滅有；不於根出；亦非空生。何以故？若從寤來，寐即隨滅，將何為寐？必生時有，滅即同無，令誰受滅？若從滅有，生即滅無，誰知生者？若從根出，寤、寐二相，隨身開合，離斯二體，此覺知者。同於空華，畢竟無性。若從空出，自是空知，何關汝入？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此生滅，乃前五塵落卸影子，有生、滅二種法塵之別。意入因於生、滅二塵，黏起湛然之體，集能知之性，居於意根之中，如幽室見。吸撮內塵：即吸取內之法塵，為己所緣。前五科向外，故云發見發聞等，今云集知者，以其但約緣內塵言。見聞逆流，流不及地者：前五根緣五塵之境；見、聞二字，該餘三根，皆順流外緣；倘若見、聞等根，要逆流反緣，也緣不到。因五塵落卸影子落在意地之中，為意根之所獨緣，故曰見聞逆流，流不及地。此能緣性，名意入覺知之性，亦不過托塵妄現而已。然此覺知之性，既是因塵而有，離塵自應無體可得。《正脈》云：寤寐不同上眠寤，彼是假設，取於睡時，此是法塵，但約神思昏、明而已。二辨妄無體竟。午三無所從來此總標，下徵破。初句徵；此先破從塵來。若謂此覺知之意入，從寤而來者，至於寐時，此覺知必隨寤而滅，又將何者而為寐乎？即今寐中，能做夢者，又是誰耶？若從寐來，類此可推。若謂此覺知，必從生塵有者，至於滅塵時，即應同生塵而無矣，又令誰領受滅塵，而內守幽閒寂靜之境耶？若謂此覺知，從滅塵有者，至於生塵時，即應同滅塵而無矣，即今能覺知生塵，分別苦樂者，又是誰耶？此破從根出。若謂此覺知，從意根出者，寤、寐二種之相，乃隨身根之內，肉團心開合而成。肉團心是肉質，狀如倒掛蓮華，寤則開，寐則合，離斯(此也)寤寐開合二體，此意入之覺知，同於空華，畢竟無有能入之性，是則根尚叵得，如何可說從根出也？此破從空而出。若謂此覺知，從空出者，空性頑鈍，根性靈知，虛空本屬無知，縱然能有知覺，自是空之有知，何關於汝意入之事？以上追究，此覺知者，來處不可得。三無所從來竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：意入虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>準上可知。此處《正脈疏》，交光法師，發明入、處、界三科，破法有三種差別，為千古獨唱！一者約緣破：言不局本法，廣破外緣也。如滅火不徑撲火，但抽去其薪，火自滅矣，以火無自體也。二者更互破：言二法相依而立，即須更互破之。如蛟水相依，兩皆為患，除之者，驅蛟絕水之本，泄水破蛟之居也。三者從要破：此有兩種，一者二法從要破：如兩木相倚而立，但推倒一邊，二皆倒矣。二者三法從要破：如筋、膠、角三合為弓，而膠為其要，但除去其膠，則筋、角皆不成弓矣。故此六入，全是約緣破，塵即其緣也。下十二處，兼更互破，及二法從要破也，眼、色、耳、聲四處，更互破也；餘八處二法從要破也。又惟身、觸二處，獨約根破，餘六處獨約塵破也。後十八界，全是三法從要破也。然文雖從要，意實並破，非同六入，正意在根也。詳其結處，蓋可見矣。卯二六入竟。</div></details></div>
+<h4 class="ke">楞嚴經講義第六卷終福州鼓山涌泉禪寺圓瑛宏悟述受法弟子明暘日新敬校</h4>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯三</span><span class="ke-t">會十二處即藏性</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">總徵</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">別破</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">復次，阿難！云何十二處，本如來藏，妙真如性？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總標十二處即藏性。處者方所也，定在也。以權教相宗說，根一定在內，塵一定在外，眼唯對色，耳唯對聲等，內外各六處，故名十二處，亦名十二入；謂取境，則以根入塵；受境，則以塵入根，通為能入，亦通為所入，故名為入。六科中，前二眼、色、耳、聲四處，約根塵互破，身、觸二處，獨約根破，餘六處皆約塵破，循循善誘，巧為開發，一一顯其相妄性真，全事即理也。本科十二處，為如來對迷色重迷心輕者，開色合心：開一色法，為六塵、五根，合受、想、行、識四陰心法為一意根，故說十二處。根、塵互相依倚，下文云：「根塵同源，縛脫無二」，「迷晦即無明，發明便解脫」。今為融歸藏性者，正欲今發明也。初總徵竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">別破</span><span class="ke-div">分6</span><ul><li class="ke-cur"><span class="ke-mk"></span><span class="ke-t">已初眼色處(至六)意法處巳初分四午初標舉</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">處二雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分文難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難！汝且觀此：祗陀樹林，及諸泉池。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>此標舉眼、色二處，觀即眼處，餘為塵處。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">於意云何？此等為是，色生眼見？眼生色相？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此約權宗，心、法相生為問。由法生故，種種心生；由心生故，種種法生。故徵云：在汝之意以為如何？還是色塵生出眼見耶？還是眼根生出色相耶？雙開兩途為問，下乃分破。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分文難破</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破眼見生色</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破色生眼見</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若復眼根生色相者，見空非色，色性應銷，銷則顯發一切都無；色相既無，誰明空質？空亦如是。若復色塵生眼見者，觀空非色，見即銷亡，亡則都無，誰明空、</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破眼生色相。故呼阿難，而告之曰：若復內之眼根，生出外之色相者，則眼具生色之性，設或見空之時，而非色相，是所生之色相既無，而能生之色性(指見眼)，應即銷亡！銷則顯發一切都無者：銷字即能生之見銷亡，而所生之色亦無，色相既無，空相亦復叵得？故曰顯發一切都無。色相既無，誰明(顯也)空質者：言空、色相形而顯，色相既無，空應不顯矣。反言無色，將誰顯空？此二句，即解釋顯發一切都無之義。空亦如是者：例破眼生空相，空、色俱為眼根所對之境，故須例破云：若復眼根生空相者，見色非空之時，空性應銷，銷則顯發一切都無，空相既無，誰明色質？為避文繁，故總例之曰：空亦如是。未二破色生眼見色？此破色生眼見。若復外之色塵，能生內之眼見者，觀空之時，而非色相，是能生見之色塵已滅，而所生之見，即應銷亡！然見既銷亡，則一切都無；既無能見，則將誰來明是空是色，故曰：誰明空色？則見與色、空，一總都無矣。準上亦應有空亦如是句。三分文難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：見與色、空，俱無處所。即色與見，二處虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此科結云：由是義故，應當起智觀察，了知能見之眼根，與所見之色、空，俱無定在之處所。以眼不生色，則色無處所；色不生眼，則見無處所，此且明其無內、外二處耳。即色與見，二處虛妄者：即色塵與眼見，二處之體，亦屬虛妄，以無體曰虛，偽現曰妄。前文云：「見與見緣，如虛空華，本無所有。」本非因緣，非自然性者：亦如前文云：其性真為妙覺明體，本非權乘所計之因緣性，及外道所計之自然性；以因緣、自然，俱為戲論矣。初眼色處竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">耳聲處</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">處二雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分文難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！汝更聽此，祗陀園中，食辦擊鼓，眾集撞鐘，鐘鼓音聲，前</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>後相續。此標舉耳、聲二處；聽即耳，鐘鼓為聲。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">於意云何？此等為是聲來耳邊？耳往聲處？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>聞非自然生，因聲而聞；聲非自然生，因聞有聲。在汝之意，以為如何？為是聲來耳邊而聞耶？為是耳往聲處而聞耶！邊字即處也。聲處下，應有為無來往一句，蓋有來往，是凡小妄情，無來往是權宗所計。彼謂耳、聲二處，離中知故，今了義之教，故並破之。分破中有若無來往句，此應是缺漏。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分文難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">聲來耳邊</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">耳往聲處</span></li><li><span class="ke-mk">三</span><span class="ke-t">無來無往</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若復此聲來於耳邊，如我乞食，室羅筏城，在祗陀林，則無有我；此聲必來，阿難耳處，目連迦葉，應不俱聞？何況其中，一千二百五十沙門，一聞鐘聲，同來食處？未二耳往聲處汝聞鼓聲，其耳已往擊鼓之處，鐘聲齊出，應不俱聞！何況其中，象、馬、牛羊，種種音響？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此約聲來耳處破。以聲一耳多，不能徧至。如我下法喻合辨：喻中如來乞食城中，林中則無；法中聲來阿難耳處，餘眾則無。故曰：「目連、迦葉，應不俱聞。」何況下，反顯一聲眾聞，同來食處，則計聲來耳邊者，妄也。若復汝耳，往彼聲邊，如我歸住祗陀林中，在室羅城，則無有我。此約耳往聲處破。以聞一聲多，不能徧往。如我下法喻合辨：喻中如來歸住林中，城裏則無：法中耳往擊鼓之處，鐘處則無。故鐘聲齊出，應不俱聞，何況其他種種音響，而豈得聞耶？今能聞眾聲，則計耳往聲處者，亦妄也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">無來無往</span></li></ul></div>
+<div class="unit"><p class="jing">若無來往，亦復無聞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此恐防轉計。因來往被破，則計無來無往，情所必至，故為此破。如無來往，則根、塵兩不相到，故曰：「亦復無聞」。今眾聲皆聞，則計無來往者，亦妄也。問：「此中耳、聲二處，既非有來有往，亦非無來無往，畢竟如何成聞？」答：「按本經，大乘了義，根塵俱周法界，如七大文云：「清淨本然，周徧法界。」今以無線電可以證信，外國廣播，按時收聽，彼處一說，此處即聞，如同一室談話，豈有來去之相？此即根性周徧，托緣便顯，應知性本自徧，但託緣顯，非藉緣生，塵性亦復如是」。三分文難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：聽與音聲，俱無處所。即聽與聲，二處虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是有無來、往俱非之故，應當悟明，耳根之聽，與音聲之塵，俱無內外定在之處所。即聽與聲，二處自體，亦不可得；說誰來往，及不來往，亦不過虛妄名相而已。其性本即如來藏性，非因緣、自然二種戲論矣！問：「無來無往，與根、塵俱徧法界同旨，離中知，即無來往，何亦被破？」答：「根、塵俱徧，實屬一體，同一如來藏，安可言離？若有離，則成二矣！今唯一性，故須並破。」二耳聲處竟。</div></details></div>
+<h4 class="ke">已三鼻香處分四午初標舉二處二詳以徵起三分文難破四結妄歸真今初</h4>
+<div class="unit"><p class="jing">阿難！汝又齅此，爐中旃檀，此香若復然於一銖，室羅筏城四十里內，同時聞氣。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此標舉鼻香二處。鼻即鼻；旃檀、香也，義翻與藥，齅之可以除病，亦云「牛頭旃檀」，出北俱盧洲，牛頭山中。《法華經》云：「此香六銖，價值娑婆世界」是也。此乃異香，功用殊勝。若復然於一銖，室羅筏城，四十里內，同於一時，俱聞香氣。《律曆志》云：二十四銖為一兩。每銖乃四分一釐六毫六絲六忽。《博物志》云：「漢武帝時，西國遣使，獻異香四枚於朝，漢制香不滿斤不得受。使乃將其香，取如大豆許，著在宮門上，香聞長安四十里，經月乃歇，帝乃受之。後長安瘟疫流行，博士奏請，焚香一枚，四十里間，民疫皆愈。」此異香功用殊勝之明證也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">詳以徵起</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>於意云何？此香為復生旃檀木；生於汝鼻；為生於空？</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>以上眼、色、耳、聲四處，乃更互破。此科乃二法從要破，故但徵香塵，了無</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>生處，如兩木相倚，推倒一邊，則兩木皆倒矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分文難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破從鼻生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破從空生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破從香生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若復此香，生於汝鼻，稱鼻所生，當從鼻出，鼻非旃檀，云何鼻中有旃檀氣？稱汝聞香，當於鼻入，鼻中出香，說聞非義？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>若謂此香，生於汝鼻，既稱此香，是鼻所生，應當香氣從鼻而出，方合生義；鼻非旃檀，云何鼻中有旃檀氣？此約體用相違破。鼻是肉體，而非旃檀香體，異體不能發用，云何肉鼻之中，而有發生旃檀氣之用？稱汝聞香，當於鼻入，鼻中出香，說聞非義者：此約名義不符破。聞字是名，以入為義，稱汝聞香，應當於汝鼻入，現鼻中生出香氣，名義不符，故難曰：「說聞非義」。則香不從鼻生也，明矣！未二破從空生若生於空，空性常恆，香應常在，何藉爐中，爇此枯木？若謂此香，不從肉鼻所生，乃生於鼻孔中之空者，鼻孔之空，與世界之空無二。空性常恆不變，所生之香，亦應常在，一切得皆有香氣，又何藉爐中，爇此枯木，然後有香？未爇無香，足顯不從空生也，明矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破從香生</span></li></ul></div>
+<div class="unit"><p class="jing">若生於木，則此香質，因爇成煙，若鼻得聞，合蒙煙氣！其煙騰空，未及遙遠，四十里內，云何已聞？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>香生於木，常情共計。故破云：若生於木，則此香之木質，因爇成煙，乃可通於鼻中。若鼻得聞，合當蒙受煙氣！今其煙騰空，未及遙遠，室羅筏城，四十里內，同時聞氣，足徵非生於木明矣，故以云何已聞反難焉。未三破香從木生。合上二科，三分文難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>是故當知：香鼻與聞，俱無處所。即齅與香，二處虛妄，本非因</div></details></div>
+<div class="unit"><p class="jing">緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是香塵無從來之故，應當悟知。香塵與鼻根，指浮、勝二根，及托根之齅聞性，仍屬根、塵二處，非有三法也。俱無處所者：外塵之處，既已叵得，內根之處，亦復不立，故曰：「俱無」。即齅聞與香塵二處之體，亦屬虛妄；無體曰虛，偽現曰妄，但有虛妄名相，若究其源，不從根生木生，則非因緣所生法；又不從空生，則非自然性，惟是如來藏，妙真如性也。三鼻、香二處竟。</div></details></div>
+<h4 class="ke">已四舌味二處分四午初標舉二處二詳以徵起三分文難破四結妄歸真今初</h4>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難！汝常二時，眾中持缽，其間或遇酥、酪、醍醐，名為上味。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>此標舉舌味二處。而舌處寄遇字之中。常即尋常日用；二時乃早食、午食時</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>也。酥、酪、醍醐，皆從乳生，從乳出酪，從酪出生酥，從生酥出熟酥，從熟酥出</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>醍醐。其間或遇此等之味，名為上味。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">詳以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">於意云何？此味為復生於空中？生於舌中？為生食中？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分文難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破從舌生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破從味生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破從空生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若復此味，生於汝舌，在汝口中，祗有一舌，其舌爾時，已成酥味，遇黑石蜜，應不推移？若不變移，不名知味；若變移者，舌非多體，云何多味，一舌之</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此先破味從舌生。若復此味，生汝阿難之舌，在汝口中，祗有一舌，亦祗能生出一味，譬如果樹，一樹祗能生一味之果。其舌爾時遇酥，已成酥味，或更遇黑石蜜時，自應不推變，不移易，不至再生甜味。《善見律》云：黑石蜜，即甘蔗糖。色黑、質堅、味甜，故名黑石蜜。知？此分兩途難破。舌以知味為義，承上云若不變遷移易，只知一味，則不名一舌能知眾味，即失知味之義矣。倘若推變移易，一口祗有一舌，舌非有多體，云何眾多之味，祗有一舌能知，如世間一樹，能生多味之果，安有是理耶？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未二</span><span class="ke-t">破從味生</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>若生於食，食非有識，云何知味？又食自知，即同他食，何預於</div></details></div>
+<div class="unit"><p class="jing">汝，名味之知？若生於空，汝噉虛空，當作何味？必其虛空，若作鹹味，既鹹汝舌，亦鹹汝面？則此界人，同於海魚！既常受鹹，了不知淡。若不識淡，亦不覺鹹，必無所知，云何名味？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破味從食生。常情妄計，味生於食，故為此破。若言味生於食品，食品非有分別之識，乃屬無知之物，若不假舌根，云何能知味耶？縱使能知，又屬食品自知其味，何干汝舌之事，而名汝舌嘗味之知也！如他人之食，豈可名汝舌嘗味之知乎？未三破從空生此破味從空生。因前從舌從食，皆已被破，勢必轉計從空而生。故此並破云：若言味生於虛空，則空必具味，故今噉虛空，當作何等之味？必其虛空下，按定一味；若空作鹹味，虛性周徧，汝全身在虛空之中，既能鹹汝舌，亦必鹹汝面，及汝全身，則此世界人類，都在鹹味之中，同於海魚一樣。既常受鹹，無時不在鹹中，自然了不知淡。而鹹、淡二味，相待以顯，既常受鹹味，曾不識知何者為淡，則應亦不覺所處是鹹，以無待故無辨也。如是則必一無所知，云何又以酥、酪、醍醐，名為上味耶？三分文難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>是故當知：味、舌與嘗，俱無處所。即嘗與味，二處虛妄，本非因</div></details></div>
+<div class="unit"><p class="jing">緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是味塵無有生處之故。此亦二法從要破中，獨約塵破。塵既叵得，根豈能有？因此當知，味塵、舌根，與舌根嘗性，能嘗所嘗，俱無定在處所。即能嘗之根，與所嘗之味亦無自體可得。推究其性不變，本非因緣，其用隨緣，亦非自然，乃如來藏，妙真如性。四舌味二處竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">身觸二處</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">處二約二觸破</span></li><li><span class="ke-mk">三</span><span class="ke-t">約一觸破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！汝常晨朝，以手摩頭。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此標舉身、觸二處。觸塵與諸塵不同，乃以有知之身，與無知之物，合則成觸。如衣服未穿身上，但屬色塵，待穿身上，覺知違順，方名為觸。夏天穿棉衣則違，穿紗衣則順。觸即身分之覺也，具有能知之用者為能觸，而無知覺者為所觸，是根、塵、能、所合成。本科觸塵，又與諸觸不同，獨以一身明觸，頭手皆身根，無外觸塵，但假摩以成觸相，根塵互不可分，無定處所，以例諸觸，皆類此虛妄。此科乃二法從要破，獨約根破也。律中佛敕弟子，一日三摩其頭，默誦偈曰：「守口攝意身莫犯，莫惱一切諸有情，無益之苦當遠離，如是行者得度世。」此中無益之苦，指外道所修苦行，非是真因。不得實果。佛弟子中，多有外道歸佛者，欲令捨邪從正，三摩其頭，自覺落髮出家，不忘為僧也。佛以阿難遵依佛敕，每日行之，故舉為問焉。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">約二觸破</span></li></ul></div>
+<div class="unit"><p class="jing">於意云何？此摩所知，誰為能觸？能為在手？為復在頭？若在於手，頭則無知，云何成觸？若在於頭，手則無用，云何名若各各有，則汝阿難，應有二身？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此雙徵云，在汝阿難之意云何？此摩頭所生之知覺，手知所摩是頭，頭知是手來摩，二俱有知，頭手二邊，誰為能觸者？誰為所觸者？能觸為在於手耶？為在於頭耶？要阿難自審。觸之為義，以有知者為能觸，無知者為所觸。能所相合，方成觸義。觸？若言能觸在於手，而手是有知，頭則應屬無知。現今頭亦有知，頭手皆為能知，無有所知，云何可以成觸？以觸必有知無知，能所相合之故。若言能觸在於頭，而頭是有知，手則應無知觸之用？現今手亦有知，頭手二俱有知，云何得名為觸耶？一身一知，世間共許，若謂頭之與手，各有一知，則汝阿難，應有二身？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">約一觸破</span></li></ul></div>
+<div class="unit"><p class="jing">若頭與手，一觸所生，則手與頭，當為一體！若一體者，觸則無</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>成，此翻前兩觸，轉成一觸。若言頭與手一觸所生，即頭手共一知，則成一觸也。若然，則手與頭，當為一體。若果一體者，無能所，絕對待，觸則無成。何以故？必有二體相合，方可成觸，如衣與身合，方成觸義。若二體者，觸誰為在(屬也)？在能非所？在所非能？不應虛空，與汝成觸？此防轉計二體。文中在能在所，能所二字，莫作能觸所觸解，當作能摩、所摩，文義始暢。因上一體被破，防計二體乃破云：若頭手二知，是為二體者，此二皆屬有知，皆為能觸，且道所觸之塵，又誰為在？即又當誰屬耶？若在能摩之手，即非在所摩之頭；若在所摩之頭，即非在能摩之手，現今頭手二皆有知，二皆能觸，無有所觸之塵，乃詰之曰：「不應當虛空，與汝成所觸耶？」</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：覺觸與身，俱無處所。即身與觸，二處虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是約二觸，則一知、二知了不可定；約一觸，則一體、二體，無所適從之故，當知所覺之觸，與能覺之身，俱無真實處所；則身根與觸塵，亦無體相，悉皆虛妄名相而已。若求其本，乃非因緣、非自然，乃如來藏，妙真如性也。五身觸二處竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳六</span><span class="ke-t">意法二處</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">處二雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">就法辨妄</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！汝常意中所緣，善、惡、無記三性，生成法則。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此標舉意、法二處。意中乃意根之中，所緣下為法塵。而法塵與前五塵不同，非有實性境，此唯意識之獨影境。何謂獨影境？由同時意識，與前五識同時而起，緣五塵性境，吸入意根之中，名為五塵落卸影子，故為獨影境。同時意識緣善境界，則意根中，有善性影子現起；緣惡境界，則意根中，有惡性影子現起；緣無記境界，則意根中，有無記性影子現起；無記境界，乃非善非惡之中庸境，於善惡二者，無可記別，故名無記性。此三性，乃生成法塵之定則。又一解，此三性，乃意根中，生成一定之法則，故名為性。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此法為復即心所生？為當離心，別有方所？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此雙徵法塵，為復即汝意根之心所生乎？為當離汝意根之心，而別有法塵之方向所在耶？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">就法辨妄</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破即心所生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破離心別有</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若即心者，法則非塵，非心所緣，云何成處？若離於心，別有方所，則法自性，為知非知？知則名心，異汝非塵，同他心量。即汝即心，云何汝心更二於汝？若非知者，此塵既非色、聲、香、味，離、合、冷、暖，及虛空相，當於何在？今於色、空，都無表示，不應人間，更有空外。心非所緣，處從誰</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>若此法塵，即意根之心所生者，能生之心有知，所生之法，亦當有知，如有情生有情。法塵既是有知，則應非塵，亦非心所緣之境；是心所緣，方成法處，反難既非心之所緣，云何可以成處也？未二破離心別有此破離心，雙開知與非知兩途。若言法塵，是離意根之心，別有方向處所者，則法塵應有自性，試問法塵自性，為是有知耶？為非有知耶？此先約有知破。若謂離心法塵，是有知者，則當名為心，不應名塵。異汝非塵，同他心量者：異作離字解，謂此法塵，既然離汝意根之心，而又有知，自應非是塵，乃另是一心也，豈不同他人之心量乎？他人之心，方是離汝有知也。即汝即心，云何汝心，更二於汝者：此三句防謬辯。若必執言，離心有知之法塵，亦即是汝，即汝之心量，非他人心量者，既是汝心，應不離汝，云何汝心，不與汝合而為一，更為二而離於汝耶？是則計法塵，離意根而有知者，謬矣！此更約非知破。若謂此法塵，乃離意根之心，而非知者，前五塵離心非知，此法塵，既不是五塵，及虛空相，而徵其定在何處也。離、合、冷、暖，乃屬觸塵。立？色即五塵色法，空即由色所顯虛空。今在五塵虛空，都無可表顯指示，汝之法塵。終不應言，人世之間，更有一個空外之處，為法塵所在，色容有外，空豈有外哉？心非所緣，處從誰立者：心指意根，所緣屬法塵。謂此法塵，離心非知，自不是能緣之心，又復離根而處空外，亦非所緣之境；則法塵非心、非境，處將從誰而立耶？三就法辨妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：法則與心，俱無處所。則意與法，二處虛妄，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是即心、離心，有知、非知皆謬之故，當知法塵、與意根之心，俱無一定處所。下二句，不特無處，亦復無體，則意根與法塵二處之體，亦但虛妄名相而已，如空中華，全無實體。推究無體之體，元是妙明真體，故曰：本非因緣，非自然性，乃如來藏，妙真如性。三會十二處即藏性竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯四</span><span class="ke-t">會十八界即藏性</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">總徵</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">別釋</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">復次，阿難！云何十八界，本如來藏，妙真如性？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總徵十八界即藏性。梵語馱都，此云界。界者界限，六根、六塵、六識，各有界限。以內之能緣者，屬根之界限；外之所緣者，屬塵之界限；中間能了別者，屬識之界限，三六十八，各有界限故。又界者因義，因即是依，以根、塵、識，互相依也。又界者種族義，以根、塵、識三，各有種子族類故。十八界，佛為心、色二迷俱重者說，心色俱開：色法開為六塵、五根；心法開為意根、及六識，合成十八。此中破意，乃三法從要破。根、塵、識三，識為其要，故獨約識破。識界既破，則根、塵二界，自不成立，如三間之屋，但拆去中間牆壁，左右二間之界，亦自不成矣！雖則獨約識破，實則根、塵兼破，但破其相妄，妄相既破，真性自顯，故曰：「本如來藏，妙真如性。」初總徵竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">別釋</span><span class="ke-div">分6</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">眼色識界(至)六意法識界巳初又分四午初標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分合難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！如汝所明，眼色為緣，生於眼識。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此佛就阿難，昔聞因緣權教，所明者為問。眼根與色塵，根、塵相對，互相為緣故；根為增上緣，塵為所緣緣，二緣相合，識生其中，故曰：「生於眼識」，而成三界矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識，為復因眼所生，以眼為界？因色所生，以色為界？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>根、塵、識三，惟徵於識，即三法從要破也；識既被破，三界自無。承上徵云：「此識為復因眼根所生，即以眼為識之界，名為眼識界耶？為復因色塵所生，即以色為識之界，名為色識界耶？」良以根、塵各有別名，皆隨自法為名，而識則無之，若不係以根、塵，則無所分別。諸經多係屬於根，曰眼識、耳識等，今以權教，根、塵皆能生識，故雙約以徵之。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分合難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因眼生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因色生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破和合生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若因眼生，既無色空，無可分別；縱有汝識，欲將何用？汝見又非青、黃、赤、白，無所表示，從何立界？若因色生，空無色時，汝識應滅？云何識知，是虛空性？若色變時，汝亦識其色相遷變，汝識不遷，界從何立？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破識單從眼生。若謂此識單因眼根生，即以眼為界者，則不藉乎色、空。既無色空，無有可分別之塵，單根則不能生識；縱使有能生汝之識，若無色、空，汝識亦將何所施其用乎？識以了別塵、境為用，無塵則不用識也。此承上汝眼根之見，無形、無色，既無長、短、方、圓之形，又非有青、黃、赤、白之色，無所表示，汝根之相。前段無色、空則塵無，此段無表示則根無，則中間之識，從何處可以立其界限乎？未二破因色生此破識單從色生。若謂此識，單因色塵生，即以色為界者。至於見空無色之時，則色塵已滅，汝識應當隨色而滅，識滅則無所識知，云何見空之時，又識知是虛空性耶？此言色塵遷變之時，汝亦識其色相已經遷變，是汝識不隨色遷變矣，一存一亡，無有對待，則識界從何可以成立耶？此與上段文，有二意：上乃從變不識空，此乃不變不成界。從變則變，界相自無；不變則恆，既從色生，應不識知虛空所在？此段上二句，因聞識不從色變，應不成界，乃轉計識從色變。遂破云：若識從色變，則色與識，二俱變滅，界相自然無矣。此從變不成界，乃對上不變不成界，成為交互之文。下四句，因聞識從色變，應不識空，乃轉計識不從色變。亦破云：若識不從色變，則識性恆常，雖然恆常不變，此識既因色塵所生，自屬無知，應當不能識知虛空所在！今能知空，足證識非從色生矣。此不變不識空，乃對上從變不識空，成為交互文。此種經文，是為交床（牒）法，兩頭俱到，文法極妙。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破和合生</span></li></ul></div>
+<div class="unit"><p class="jing">若兼二種，眼、色共生，合則中離，離則兩合，體性雜亂，云何成</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界？此以上單根獨塵，皆不能生識，轉計和合而生。遂破云：若言兼眼根、色塵二種，共生汝識者，且問還是眼色相合而生耶？還是眼色相離而生耶？此二句，上合離兩字指眼色，下離合兩字指眼識。若謂眼色，合併而生，則汝識半從根生，半從塵生，中間必有離縫，以不是整個生成。如二物相合，合處有離縫也；若謂眼色，離開而生，則汝識半是有知，半是無知，有知者合於眼，無知者合於色，遂成兩合矣。體性雜亂者：指識之體性。雜對合則中離說，半從根半從塵，和雜而生故曰雜；亂對離則兩合說，半合根半合塵，則成動亂故曰亂。既是雜亂，云何能成識之中界乎？三分合難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：眼色為緣，生眼識界，三處都無。則眼與色，及色界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是各生共生，俱不得成之故，應當了知。此知含二義：一者應當知妄，至三處都無止，結相之妄；二者應當知真，後四句歸性之真。以上所言，眼、色二種為緣，生於眼識者，現前推究，眼識既不從眼生，又不從色生，亦非雙兼眼色共生，則中間所生眼識，既不成界，內外眼色，何得為緣？中界既無，內外叵得，故曰三處都無。又三處都無，處即界也，所謂眼色為緣生識，今眼、色、識三界，俱不可得；應知此是相宗權教，順世之談，都無實義。則眼與色，及色界三：色界即色識界，係塵為名；此眼、色、識三，本非因緣，非自然性，乃是如來藏，妙真如性。初眼色識界竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">耳聲識界</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分合難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！又汝所明，耳聲為緣，生於耳識。</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識為復因耳所生，以耳為界？因聲所生，以聲為界？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分合難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因耳生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因聲生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破和合生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若因耳生，動靜二相，既不現前，根不成知，必無所知，知尚無成，識何形貌？若取耳聞，無動靜故，聞無所成；云何耳形，雜色觸塵，名為識界？則耳識界，復從誰立？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>耳識本無生處可得，先破因耳生。呼阿難而告之曰：若謂耳識因耳根生者，動靜二種聲塵既不現前，耳根不成能知，必無所知之聲塵，能知之耳根，尚且不得成，所生耳識畢竟作何形貌？此文防謬。因聞上段必無所知，知尚無成，乃謬辯云：知屬意根，耳根惟取能聞。今取耳聞生識，乃破之曰：若取耳聞，能生識者，無有動、靜二種聲塵，則能聞之根，亦無所成，何能生識？能聞又復被破，轉計有形之肉耳，為能生識，若謂但取肉耳能生識者，肉耳屬身根之色相，身根所對惟觸塵，故破曰：云何以肉耳，如新卷葉之形，雜於身根之色相，與身所對之觸塵，名為能生耳識之界耶？則耳識界，既非聞根肉耳所生，復從誰而立界乎？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未二</span><span class="ke-t">破因聲生</span></li></ul></div>
+<div class="unit"><p class="jing">若生於聲，識因聲有，則不關聞，無聞則亡聲相所在？識從聲生，許聲因聞，而有聲相；聞應(平聲)聞識！不聞非界；聞則同聲；識已被聞，誰知聞識？若無知者，終如草</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破耳識從聲生。若謂耳識生於聲塵者，是此識單從聲塵而有，則不關耳聞之事，須知聲必因聞而顯，設若無聞，則亦亡失聲相所在，聲尚不可得，云何能生於識？此防轉救。恐聞若無有聞，聲亦不有，遂轉救云：識固是從聲而生，卻許能生之聲，亦必因聞而有聲相，如是則聲中有識，聞聲之時，應當併聞於識！木。此下展轉顯謬：一、不聞非界謬：倘但聞聲，不復聞識，是則聲中無識，而聲則非生識之界矣。二、聞則同聲謬：倘若聞聲之時，亦聞於識，是識則同於聲，而被耳根所聞矣。三、被聞無知謬：蓋識以了知為用，而識已被耳根所聞，則無有識，又誰知聞聲，併聞於識耶？四、人同草木謬：若謂無有能知聞識者，則亦無有能知聞聲者，果都無所知，則人豈不終如草木之無情乎？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破和合生</span></li></ul></div>
+<div class="unit"><p class="jing">不應聲聞，雜成中界。界無中位，則內外相，復從何成？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破根塵和合共生。不應說言：聲塵與聞根，和雜而成中界。雜則不分，無有中位，可以為緣生識也。中間識界，既已不成，則內根外塵之界相，復從何而得成耶？三分合難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：耳聲為緣，生耳識界，三處都無。則耳與聲，及聲界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由是義故，自當了知，所謂耳根與聲塵兩者為緣，而生耳識者，則內外中間三處界限，覓之都無，但幻妄稱相而已。上結相妄，下顯性真，則此耳之與聲，及聲識界三，本來非是因緣、自然，二種世間戲論名相，其性即是如來藏，妙真如性。</div></details></div>
+<h4 class="ke">二耳聲識界竟</h4>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">鼻香識界</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分合難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！又汝所明，鼻香為緣，生於鼻識。</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識為復因鼻所生，以鼻為界？因香所生，以香為界？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分合難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因鼻生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因香生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破和合生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若因鼻生，則汝心中，以何為鼻？為取肉形雙爪之相？為取齅知動搖之性？若取肉形，肉質乃身，身知即觸，名身非鼻；名觸即塵，鼻尚無名，云何立界？若取齅知，又汝心中，以何為知？以肉為知，則肉之知，元觸非以空為知，空則自知，肉應非覺？如是則應虛空是汝，汝身非知，今日阿難，應無所在？以香為知，知自屬香，何預於汝？若香臭氣，必生汝鼻，則彼香、臭二種流氣，不生伊蘭，及旃檀木？二物不來，汝自齅鼻，為香為臭？臭則非香，香應非臭。若香、臭二俱能聞者，則汝一人，應有兩鼻？對我問道，有二阿難，誰為汝體？若鼻是一，香臭無二，臭既為香，香復成臭，二性不有，界從誰若因香生，識因香有，如眼有見，不能觀眼；因香有故，應不知知即非生，不知非識。香非知有，香界不成；識不知香，因界則非者，則非從香建立。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>首句按定，識因鼻生，下乃徵定鼻根。則汝阿難心中，將以何者，為汝之鼻根？為是取臉上肉之形質，如雙垂爪之相為鼻耶？為是取能發齅知，動搖之性為鼻耶？此雙開二句，下則詳破。若取臉上肉形，為汝鼻者，須知肉之體質，乃屬身根，身之所知，即是觸塵，既名身根，即非鼻根；既名觸塵，即非香塵；鼻根之名，尚不可得，云何可說，識因鼻生，依之而立界耶？鼻。若取根中齅知之性，為汝鼻者，又汝阿難心中，將以何者為能知，若以鼻頭之肉，為能知者，鼻肉體質，乃屬身根。則肉之知，元是身根，知觸之用，非是鼻根，齅知之性。末二句，同上身知即觸。此以鼻肉為知被破，轉計以空為知。亦破云：設若汝以鼻孔之空，為能齅知者，空本無知，縱許有知，則是空自有知，汝鼻頭之肉，應非覺矣？如是則應虛空是汝，汝身非知者：如是乃指上三句，鼻孔之空有知，若即是汝齅知之性，以此類推，則一切虛空，皆應是汝。又鼻上之肉，既無知性，則汝全身之肉，皆應非知；以此而論，空若是汝，則虛空無在，今日阿難，亦應無所在矣？此因肉知、空知被破，轉計以香為知。若謂以鼻中香，為齅知性者，香本非有知，縱許香具鼻根之知，此知自屬於香，何預於汝鼻知之事？此文但以香具鼻知，不可濫下香生鼻識。此文與上文，似不相接續，須補充轉救之意。因上以香為知，遂招知自屬香，何預於汝之破，遂轉救云：知雖屬香，香氣卻生於鼻，離鼻則無香氣，何得謂為不預於我？故復破云：如是香氣，生於汝鼻，臭氣亦生汝鼻，若香臭二氣，必定生於汝鼻者，則彼香、臭二種流動之氣，不生伊蘭，及旃檀木矣！二物不來之時，汝自齅汝鼻，還是為香耶？還是為臭耶？若是臭則非香；若是香應非臭。《指掌》引《觀佛三昧經》云：「末利山中，有伊蘭樹，臭若胖屍，熏聞四十由旬。其花紅色，甚可愛樂，若有食者，發狂而死；而旃檀之樹，亦發生伊蘭叢中，未及長大，如閻浮洲竹筍，不能發香，仲秋月滿，卒從地生，成旃檀樹，眾人皆聞妙香，永無伊蘭臭惡之氣。」鼻根是一，香、臭為二，故上破曰：臭則非香，香則非臭。若謂香臭二氣，俱能聞者，則汝一人應有兩個鼻知。此句對上以香為知，自不能再以臭為知。一人一鼻，世間共許，若有二知，即有兩鼻，如果兩鼻，對我問道，有二阿難，誰為汝阿難真體？立？此因聞既有二鼻，應有二身之破，遂轉計云：我本來無二，鼻祗是一個，不妨具足香、臭二知。故此破云：若鼻是一，則香臭自應混而為一，而無二矣！臭既可以為香，則臭無自性；香復可成臭，則香無自性；以香臭互奪兩亡，二種齅知根性，既然不有，而鼻識之界，欲從誰而立耶？未二破因香生香？此文具法、喻、合三。若執鼻識，因香塵生者，此識乃因香而有知，此是法；喻如因眼所有之見，自不能返觀其眼，此是喻；法合云：識因香有之故，應不自知其香，同見因眼有之故，應不自觀其眼矣！從香建立。首二句，知與不知，兩途俱非。若能知香，此知即非從香所生；若不知香，又非可名能知之識。下五句，如果香非識知其有，則香界自不成立。何故？蓋香必以齅知而後顯故，香非齅知則不有，香界何自而成？倘若識不知香，所言因香立識界</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破和合生</span></li></ul></div>
+<div class="unit"><p class="jing">既無中間，不成內外，彼諸聞性，畢竟虛妄。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>如上所破，鼻識不從根生，不從塵生，既無中間之識界可得，自不成內外根塵二界。如三進房屋，既無中間牆界，前後兩進之界相，自然亦無。彼諸聞性，畢竟虛妄者：承上二句，既內外不成，則能共生者無實；既無中間，則所共生者非真；如是齅聞之識，畢竟虛妄。三分合難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：鼻香為緣，生鼻識界，三處都無。則鼻與香，及香界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是鼻識，不從根塵，各生共生之故，當知權教相宗所云：鼻香二者為緣，生於鼻識者，乃順世之談，非了義之教。今推究識界生處，了不可得，中界既無，內外二界，亦復叵得？故曰三處(界也)都無。以上結相妄，以下顯性真，則鼻根與香塵，及香識界三，本非因緣性，及自然性，即是如來藏，妙真如性。三鼻香識界竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">舌味識界</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分合難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！又汝所明，舌味為緣，生於舌識。</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識為復因舌所生，以舌為界？因味所生，以味為界？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分合難破</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因舌生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因味生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破因空生</span></li><li><span class="ke-mk">四</span><span class="ke-t">破和合生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難！若因舌生，則諸世間，甘蔗、烏梅、黃連、石鹽、細辛、薑、桂、都無有味，汝自嘗舌，為甜為苦？若舌性苦，誰來嘗舌？舌不自嘗，孰為知覺？舌性非苦，味自不生，云何立界？若因味生，識自為味，同於舌根，應不自嘗，云何識知，是味非又一切味，非一物生，味既多生，識應多體？識體若一，體必味生，鹹、淡、甘、辛，和合俱生，諸變異相，同為一味，應無分別？分別既無，則不名識，云何復名，舌味識界？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破識因舌生。若謂舌識，單因舌根所生，不藉味塵，自能了別其味，即以舌為識之界者；則諸(助辭語)世間，甘蔗甜味，烏梅酸味，黃連苦味，石鹽鹹味，細辛藥名，生薑、肉桂藥品，此三種皆辣味，都成了無有味。倘無有此等味塵，來合汝舌，汝自嘗其舌，到底還是為甜耶？還是為苦耶？此明舌性，有味、無味俱非。承上云：若自嘗其舌，舌性是苦，誰來嘗汝之舌，而知其苦也？苦字該甜等諸味。蓋舌不能自嘗其舌，如眼不能自見其眼。又熟(誰解字)為知覺，其舌是苦耶？若謂舌性非苦，即無有味，則味自然不生於汝之舌，云何可立識界耶？未二破因味生味？若言舌識，單因味塵而生者，識自然就是味。味不能自知其味，同於舌根，應不能自嘗其舌；既不自嘗，云何而能識知，是有味，而非有味耶？又味塵類廣，一切之味，元非一物所生。以能生之味塵，既從多物而生，而所生之識，自應從味亦有多體，如母多，子亦應多，此以味多，而破識一也。設若識體是一，其體必定因味生者，所生之識是一，能生之味應亦非多。如世間鹽之鹹，水之淡，蔗之甘，薑之辛(辣也)，亦該酸苦，是為六味總相；和合俱生變異，是六味別相；如豆麵鹽水，合而為醬，是為和合；如黃連生來便苦，其味與物，俱時而生，謂之俱生；如變生成熟，異其本味，如炮炙煎之類，皆名變異。種種諸味，皆當同為一味，亦應無有分別，如子一，母亦應一，此以識一，而破味多也。識以分別為用，承上諸味既合為一。則無鹹、淡、甘、苦、酸、辣之分別。能生之味，分別既無，所生之識，分別亦無，則不應名之為識。云何復名，舌味為緣，生汝中間舌識界耶？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破因空生</span></li></ul></div>
+<div class="unit"><p class="jing">不應虛空，生汝心識？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>以上根生、塵生，二俱不成，恐計從空而生，然空性頑鈍，故曰：不應以無知之虛空，生汝有知之心識耶？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未四</span><span class="ke-t">破和合生</span></li></ul></div>
+<div class="unit"><p class="jing">舌味和合，即於是中，元無自性，云何界生？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>若以舌根味塵二者，和合生汝舌識者，舌是有知，塵是無知，一經和合，體性紛雜。如世間水土和合，水失流動之自性，土失乾燥之自性，故曰：「元無自性」。能生根塵，自性既無，云何識界，可從而生？本科四性推檢無生具足：不因舌生，是不自生；不因味生，是不他生；不因空生，是不無因生；不因舌味和合生，是不共生。三分文難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：舌味為緣，生舌識界，三處都無。則舌與味，及舌界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>舌界，即舌識界。前三科係塵為名，曰色識界、聲識界、香識界，此科併後二科，係根為名，曰舌識界、身識界、意識界。餘同上可知。四舌味識界竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">身觸識界</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分合難破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，又汝所明，身觸為緣，生於身識</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識為復因身所生，以身為界？因觸所生，以觸為界？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分合難破</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因身生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因觸生</span></li><li><span class="ke-mk">三</span><span class="ke-t">破和合生</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難，若因身生，必無離合，二覺觀緣，身何所識？</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>此破單根，不能生識。覺觀二字，麤緣為覺，細緣曰觀。有能覺觀，與所覺觀</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>之別；又有離時覺觀，合時覺觀二種。若謂身識，單因身根而生，不藉觸塵者，如</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>是雖有身根，必定無有離合二種，所覺觀之塵緣，則惟身無境，安能生識乎？此句</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>又作一解：合離是觸塵，覺觀指識心。謂必定無有合離，二種觸塵，為生覺觀識心</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>之助緣，何能生汝身識乎？縱許能生身識，無有觸塵，將何所識耶？此計識因身生</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>者，非也。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>未二破因觸生</div></details></div>
+<div class="unit"><p class="jing">若因觸生，必無汝身，誰有非身，知合離者？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此破單塵，亦不能生識。若計身識，單因觸塵而生，不藉身根者，必定無有汝身，惟塵無根，不成身觸為緣之義；世間誰有非依於身，能知合離之觸塵者？離卻身根，則能生之觸塵，尚不可得，則計識因觸生者，亦非也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">破和合生</span></li></ul></div>
+<div class="unit"><p class="jing">阿難，物不觸知，身知有觸。知身即觸，知觸即身；即觸非身，即身非觸。身觸二相，元無處所，合身即為，身自體性；離身即是，虛空等內外不成，中云何立？中不復立，內外性空。則汝識生從誰立界？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此標觸知之相。世間之物，不能自觸而成知，必定與身相合，方知有觸。此二句，為下正破共生之張本耳。此下文分三段，正破身觸和合生識，俱不成共生之義。此中首句知字，即上段身觸合處，所顯之知、屬識；身字屬根；觸字屬塵。此文承上，物不能自觸而成知，必與身合方知有觸，遂計身觸，和合共生。今以所生之識，無雙兼根塵二相為破。文有四句。上二約雙即，不得為共生；下二約雙非，亦不得為共生。乃以所生之識，仔細審察，還是知身乎？還是知觸乎？知身即觸，知觸即身者：若知於身，此識知，即從觸所生，並不兼乎身，以身但為所知；若知於觸，此識知即從身所生，並不兼乎觸，以觸亦但為所知；上句即觸所生，下句即身所生，其識知，皆單屬一邊，何得為根塵共生耶？即觸非身，即身非觸者：即觸即身，乃承上二句，即觸即身之文。若此識知，即從觸所生者，則非兼於身，惟單屬於觸之一邊；若此識知，即從身所生者，則非兼於觸，亦單屬身之一邊；何以為共生乎？另作一解，以便易知。四句中，以一、三相連，二、四相連，解曰：所生之識知，若知身根者，此知即是從觸塵所生。接第三句：即是從觸塵所生之識，當非兼屬身根，何得為共生耶？第二句，所生之識知，若知觸塵者，此知即從身根所生，接第四句：即是從身根所生之識，當非兼屬觸塵，亦何得為共生耶？交光法師所云：「所生無兼相」者是也。相。此段以能生根塵，無內外對立之相為破。以身根之與觸塵二相，元(本也)無內外對立之處所。此二句標，下釋云：以觸合身，即與身為自體，合而不分；若觸離身，即是虛空等相。等指色法，身外無非色空諸相。此明合離，皆無身觸對立之相，何能共生身識耶？交師所云：「能生無對相」者是也。此明根、塵、識三界，互不得成。上二句因能生根塵，內外二界不成，以致中間所生之識，亦何從而得安立？中二句，因中間所生識界，不復成立，致內外根塵之性亦空。末二句總結，不能共生。以上三界，皆不得成之故，則汝身識之生，畢竟從誰以立界耶？三分合難破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：身觸為緣，生身識界，三處都無。則身與觸，及身界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>準上可知。五身觸識界竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳六</span><span class="ke-t">意法識界</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">標舉三界</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">雙以徵起</span></li><li><span class="ke-mk">三</span><span class="ke-t">分文各破</span></li><li><span class="ke-mk">四</span><span class="ke-t">結妄歸真</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，又汝所明，意法為緣，生於意識。</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">雙以徵起</span></li></ul></div>
+<div class="unit"><p class="jing">此識，為復因意所生，以意為界，因法所生，以法為界？</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">分文各破</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">破因意生</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">破因法生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，若因意生，於汝意中，必有所思，發明汝意；若無前法，意無所生。離緣無形，識將何用？又汝識心，與諸思量，兼了別性，為同為異？同意即意，云何所生？異意不同，應無所識。若無所識。云何意生？若有所識，云何識意？唯同與異，二性無成，界云何立？若因法生，世間諸法，不離五塵，汝觀色法，及諸聲法，香法、味法、及與觸法，相狀分明，以對五根，非意所攝。汝識決定依於法生，汝今諦觀，法法何狀？若離色空，動靜、通塞、合離、生滅、越此諸相，終無所得。生、則色空諸法等生，滅、則色空諸法等滅。所因既無，因生有識，作何形相？相狀不有，界云何生？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此約根塵存亡破。故呼阿難，而告之曰：若謂意識，單因意根所生者，然汝意根之中，必有所思之法塵，方可發明汝能思之意根，以塵存則根存也；若無現前所思之法塵，則能思之意根，亦無所生，是塵亡則根亡也。離緣無形者：以意根離卻所緣法塵，根亦無形可得，云何而能生識耶？若是根塵雙泯，識將何用？此約根識同異破。識心指意識；思量指意根，即第七識，恆審思量，為意所依之根。兼、同也。破云：又汝意識之心，與諸思量之意根，同為能了別性，且道根識，為同耶？為異耶？同意即意四句，意指意根。若識心同於意根，則識心即是意根，云何識心，又為意根所生？若識心異於意根，而不同者，則定同無知之塵；既是同塵，應無所識，若果無所識知，則非意根同類，云何名為意生之識？若有所識知，則識心與意根，同為了別性，云何可分此是意識之了別性耶？此是意根之了別性耶？唯同與異，二性無成者：承上結云：惟同與異，根識二性，悉皆無成。何以故？若同意根，則識即是意，根識唯一，二性無成；若異意根，則不名識，根識二性亦復無成。則此意識之界，云何可說從根而立耶？是則以意根，為生識之界者，非也。未二破因法生首句法字，指內法塵，餘六個法字，皆指五塵實法。若謂意識，單從法塵所生者，然而世間所有諸法，不離色、聲、香、味、觸五塵，今汝且觀，色等諸法，悉有相狀分明，以對眼等五根，均非意根所攝之法。意根所緣法塵，乃前五塵落卸影子，五塵之法，決不能入於意根。上二句牒定。若汝識心，決定依於法塵生者，既有所生，必有形狀。汝現今諦實觀察，法塵之法，畢竟作何形狀？上一法字，別指法塵，下一法字，同上五塵之法，此破內無自體也。此中五塵，甜淡味塵，含在四塵之中。生滅即屬法塵，此二字應連下解釋，越字作離解。謂汝之法塵，全係五塵影子，有形方有影，若汝生滅法塵離卻色空等前五塵，豈能別有自體耶？當如離形，其影終無所得。等字作同字解。法塵生，則與色空五塵諸法同生，如形生影生；法塵滅。則與色空五塵諸法同滅，如形滅影滅，此破離外無體也。所因之法塵，既無自體，因他生有之意識，又作何等形狀相貌乎？既能生之法塵，相狀不有，則意識之界，云何因法塵而生耶？是則以法塵為生識之界者，亦非也。此科無破根塵共生之文，以意根與法塵，皆無自相，意根乃七識，法塵為影事，況此文分破中，又極明根塵虛無，故無復共生之相可破。三分文各破竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午四</span><span class="ke-t">結妄歸真</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知：意法為緣，生意識界，三處都無。則意與法，及意界三，本非因緣，非自然性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>交光法師云：「此科可為理事無礙法界之由致，雖不全具彼之諸門，但悟此，而自可達彼諸門之義，故曰由致。良以凡夫著於事相，而全不見理，權教隔乎事理，而兩不通融，故皆不能入理事無礙法界。今經且將事相，一一融歸於理。即彼十門中，全事皆理門也。既達諸事即理，則眾妙之門，自可相次而洞開矣，非彼由致而何哉！」合上三科，丑二會通四科即性常住竟。</div></details></div>
+<h4 class="ke">楞嚴經講義第七卷終福州鼓山涌泉禪寺圓瑛弘悟述受法弟子明暘日新敬校</h4>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三</span><span class="ke-t">圓彰七大即性周徧</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">寅初</span><span class="ke-t">阿難轉疑雙非</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">如來進示圓旨</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難白佛言：世尊！如來常說，和合因緣，一切世間，種種變化，皆因四大和合發明。云何如來，因緣、自然，二俱排擯？我今不知，斯義所屬！惟垂哀愍，開示眾生，中道了義，無戲論法。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此由阿難執權疑實。執昔日所聞因緣權教，疑現今所說了義實教。蓋阿難因緣之執，於九番顯見超情科中，佛已與自然而併破矣。阿難祗知妙覺明性，非因緣和合，至於世間諸相，因緣和合之執如故。所以聞佛於四科世間法，一一皆云非因緣，及自然性，所以騰疑復問也。阿難仰白佛言：世尊！如來昔日常說，和合因緣，和合即因緣和合，故並稱焉。佛初立教，以因緣為宗，對破外道自然，所以常說。但是如來一時權巧方便，以因緣正理而破外道邪說，非大乘了義之談，今經為了義教，阿難不達斯旨，是以執權疑實也。一切世間，種種變化四句，即舉四科諸相。一切(去聲)包括之詞，世間乃有情世間，及器世間，簡言之即身、心、世界。五陰中色陰即器世間之外色，與有情世間之外身；受、想、行、識四陰，即有情世間之內心。六入即有情世間身心，前五根屬身，意根屬心。十二處、十八界，十一色法，即器世間之世界，與有情世間之根身；意根與六識，即有情世間之內心。四科諸法乃世間有為之相，細分之，則千差萬別，種種不一，無非因緣和合，虛妄有生，皆自本無，變化而有。故曰：「皆因四大，和合發明」，是則不出因緣矣。上段執昔權義，此文疑今實教。阿難曰：云何如來，因緣、自然，二者俱同排斥，而擯棄之？若單遣自然，原是外計，因無可疑；而併遣因緣，有違自宗。果係何意，而我現今不知，雙非因緣、自然，斯(此也)義之所歸屬？此句即言不知雙非之旨，屬於何宗何教，故下請佛開示。惟願如來，垂慈哀愍：哀憐我等惑深，愍念我等智淺，不知非因緣非自然，斯義所屬。今求開示，中道了義，無戲論法。此阿難所請之法，正是四科所說雙非之法，因緣是學者世間戲論，自然是非學者世間戲論，非因緣非自然，即無戲論法，此法亦即中道了義。中道者不偏有無二邊，謂之中道；非因緣，即妙性不滯於有為，非自然，即妙性不墮於無為，有無雙遣，中道現前；正是大乘了義，真實之法，為如來藏，妙真如性。阿難所請之法，即佛已說之法，迷而不知，更為疑請，故佛責以，如說藥人，真藥現前，不能分別者此也。初阿難轉疑雙非竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">如來進示圓旨</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">卯初</span><span class="ke-t">責迷許說</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">總喻性相</span></li><li><span class="ke-mk">三</span><span class="ke-t">別詳七大</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">爾時世尊，告阿難言：汝先厭離，聲聞、緣覺，諸小乘法，發心勤求，無上菩提，故我今時，為汝開示，第一義諦。如何復將世間戲論，妄想因緣，而自纏繞！汝雖多聞，如說藥人，真藥現前，不能分別，如來說為，真可憐汝今諦聽，我當為汝分別開示；亦令當來，修大乘者，通達實相。阿難默然，承佛聖旨。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此如來述其應求施教之意。爾時世尊，告阿難言：我昔日因緣之教，乃應求小乘者而說，汝自婬室歸來，悔恨多聞，未全道力，慇懃啟請，十方如來，得成菩提之妙定；是汝先已厭離聲聞、緣覺，諸小乘法，回小向大，已發心勤求，無上菩提之佛道矣。故我今時，為汝開示，第一義諦：即是應汝所求，而施汝大教。今時，即三番破識以後之時，十番顯見，尅就根性，直指真心，攝事歸理，會通四科，即性常住，會相歸性。真心者，第一義諦也。即事即理，全妄全真，非因非緣，亦非自然，即是中道了義(第義一也)，真如實相，無戲論之法，早為開示，何待更請？如何是怪責意。此怪責阿難，悋惜舊聞，因緣權教，而不肯放捨。謂汝既厭離聲聞小乘法，如何復將小乘學者，世間戲論之因緣法，自纏自繞，迄今猶不肯放捨。妄想與因緣相關，心思因緣，是謂妄想因緣，口說因緣，是為因緣戲論。愍！此怪責阿難，雖聞中道，第一義諦，不能識取，謂汝雖多聞第一，我今應汝所求，為汝說非因緣，非自然之了義，汝不能諳識，汝如說藥之人，熟讀本草，口雖能說藥名，而未親採，真藥現前，不能分別是真，反疑棄之。真藥喻如來已說第一義諦；不能識取，反生疑難，豈不真可憐愍哉！首句誡聽，下則許說。已說真理，不能會悟，都緣徒聞，不肯諦實審察，故誡以諦聽。我當為汝，分別開示，非因緣、非自然之了義；不獨為汝，現會大眾，亦令當來之世，修習大乘行者(人也)，皆得通達實相，共入如來藏海也。實相與如來藏，名異體同，本經佛與阿難釋迷悶科中，即責其汝等聲聞，狹劣無識，不能通達，清淨實相，則知十番顯見，所顯見性真心，即清淨實相。復於四科，一一皆非因緣，非自然，本如來藏，妙真如性，亦即清淨實相。本科又標許，令現未修大乘者，通達實相，不過重明非因緣非自然之義，非離前法而別有也。如《正脈》所云：四科方談其一一皆是性真，而未嘗言其一一皆周法界，如指香柴煤炭，一一言其是火，而未及言一一皆可洞燒林野。此處標許下，別詳七大，方談其一一皆周法界，如方說出諸火，每一星之火，皆有洞燒林野之極量。四科但顯法法當體真常，七大極顯法法圓融周徧。前後兩科，義理淺深，即在是矣。實相有三，即三如來藏：一、無相之實相：無一切妄法差別之相，祗有一真平等實相，即空如來藏，空諸一切，虛妄染法之相，併非本體而全無也，乃藏性不變之體。二、無不相之實相：並非無相，而能隨緣現一切相，即不空如來藏，具足十界諸法，非無諸相也，乃藏性隨緣之用。三、無相無不相之實相：若言其無，則不捨一法；若言其有，則不立一塵，即空不空如來藏，即空不礙妙有，妙有不礙真空，乃藏性體用雙彰。阿難默然，承受聖旨者：默然即凝神靜慮，一心入於語義之中，欽承領受，我佛大聖之法旨。初責迷許說竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯二</span><span class="ke-t">總喻性相</span></li></ul></div>
+<div class="unit"><p class="jing">阿難，如汝所言：四大和合，發明世間，種種變化。阿難，若彼大性，體非和合，則不能與諸大雜和，猶如虛空，不和若和合者，同於變化，始終相成，生滅相續；生死死生，生生死死，如旋火輪，未有休息。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此牒取阿難問詞，呼阿難言：如汝前來所言，以地水火風，四大和合，方能發明世間種種變化者，汝實不知，四大之性，本非和合，非不和合之故，今當以喻明之。諸色。此以異喻別明，先明大性，非不和合。和合不和合，約性相論。文中法固反言，喻亦反顯。大性指四大之性，即如來藏性也。諸大指四大之相，相從性起，相不離性，相即性中之相，性即相中之性，性相雖有二名，性相本來一體，此為正義。若謂彼四大之性，體即性體，如非和合者，只許性之不變，不許性能隨緣，則不能與諸大之相雜和，猶如虛空之不和諸色也。此與真如隨緣之用相反，迴異虛空之不和諸色，故非不和合，此名異喻。此明大性，非是和合。若謂四大之性，是和合者，只許性之隨緣，不許性仍不變，則應同諸大之相，變易遷化，由始而終，因終復始，而始終相成也。從生至滅，既滅復生，而生滅相續也，此約無情世界而說。生死死生，生生死死者，因生有死，至死復生，而遞互相成也。生而復生，死而再死，亦前後相續也，此約有情根身而說。是知內外四大，皆變化相，若大性如此，猶如旋火成輪，未有休息。此亦法固反言，喻亦反顯。與真如不變之體相反，非同火輪之不息，故非是和合，此亦異喻。此二段文，具宗、因、喻三支比量，以法喻皆與大性相反，落於非量。前量云：大性是有法，體非和合為宗，因云：不與諸大雜和故；喻如虛空不和諸色。若爾，則真如用不隨緣。後量云：大性是有法，和合為宗。因云：同於變化故：喻如火輪不息。若爾，則真如體非不變。阿難，如水成冰，冰還成水。此單喻顯法，乃以同喻，翻前異喻。喻大性不變隨緣，隨緣不變，翻前二段：一則體非和合，則墮自然，而失隨緣之義；一則和合，則墮因緣，而失不變之義。今以同喻，而顯真如不變、隨緣二義，故重呼阿難之名，而告之曰：如水成冰，冰還(復也)成水。上句大性體雖不變，而用能隨緣成相，既不如虛空不和諸相，當如何等乎？當如水能隨緣成冰，無所和合，而能現和合之相，水不離冰，豈一定屬於非和合耶？下句大性用雖隨緣成相，仍然不變本體，既不如火輪之不息，當如何等乎？當如冰還成水，但似和合，終無和合之實，豈一定屬於和合耶？交光法師謂：還字當玩，足顯不變。正因不變，故還為水，正於還為水處，見其非真和合，若真和合則變矣！如青、黃和合，即變為綠，豈能還為青、黃乎？總立量云：諸大性相是有法，非不和合非和合為宗，因云：隨緣不變故；同喻如水冰冰水，異喻如虛空火輪。此量與諸大性相相合，為真比量，其理極成。阿難前言，四大和合，發明諸相，如來所答，有二意應研究：一、阿難但問四大之相，如來則雙明性相。良以權宗，雖依性說相，性是密意，惟說法相，不說法性。阿難久習權宗，迷性執相，故有斯問。如來則性相雙舉，明相依性起，以性融相，以袪舊見，冀得新悟也。二、阿難但執因緣和合，乃為自宗，因何排擯？如來則兼破和合及不和合，恐阿難和合被破，轉計不和合，故此兼破，以杜轉計也。二總喻性相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯三</span><span class="ke-t">別詳七大</span><span class="ke-div">分7</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">地大(乃至)七識大(大辰初分地四)巳初標性約析</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就析詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">四</span><span class="ke-t">變拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">汝觀地性：麤為大地，細為微塵，至隣虛塵，析彼極微，色邊際相，七分所成，更析隣虛，即實空性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>阿難但言四大和合，發明世間諸相。佛今廣融七大者，以四大攝法未周，但攝五陰中色陰，十二處前之十一處，十八界五根、六塵，而受想行識四陰，六入根性，十二處之意根，十八界中意根、六識，及色陰之空，皆不能攝。故加空、見、識三大，則收盡有為諸法，此佛廣談七大之意也。意謂汝阿難，不達諸大之性，非和合非不和合，故教觀地大。汝且觀察，此地大之性，有麤有細，麤者為大地，細者為微塵，至隣虛塵，以微塵分析作七分，名極微塵；極微塵再分析作七分，名隣虛塵，故用一至字。隣虛塵是析彼極微塵，七分所成。一極微塵，分作七個隣虛塵、此塵是色邊際相。文中色邊際相四字，當在七分所成之下，諒係抄寫之誤。若連上者，以極微塵，非是色邊際相，因尚有隣虛塵故，自當易之。應作如是解：析彼極微塵七分所成之隣虛塵，即是色邊際相；與虛空為隣，故名隣虛塵。不能更析，若更析隣虛，即歸於空，實是空性，而非色性矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就析詳辨</span></li></ul></div>
+<div class="unit"><p class="jing">阿難，若此隣虛，析成虛空，當知虛空，出生色相。汝今問言：由和合故，出生世間，諸變化相。汝且觀此：一隣虛塵，用幾虛空，和合而有？不應(平聲)隣虛，合成又隣虛塵，析入空者，用幾色相，合成虛空？若色合時，合色非空；若空合時，合空非色；色猶可析，空云何</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此就析色歸空，而定合空成色。謂若此隣虛塵，既可析成虛空，自當以此例知，虛空定能出生色相，空生色相，本無是理。佛故意為難，以破和合之計，併破此方儒宗所執，虛以生氣，氣以成形，而世間萬物，皆從陰陽之氣，所成等偽。此牒定和合因緣之執。隣虛。此要阿難自己審觀，謂汝言世間諸法，和合發明；而隣虛塵，即色法之一，亦應由和合而有。汝且觀此一隣虛塵，用幾多虛空和合，而有此隣虛塵也。色、空相異，色是有相，空是無相，佛明知空無數量，本不可合，故意舉此，以破和合之計。而隣虛塵，色法之最小者，此塵之外，更無色法可和合，除非合空而成，故問用幾虛空，和合而有。設若汝說和合，乃是合色成色，非言合空成色者，豈是隣虛，合成隣虛耶？倘說隣虛合成隣虛，則當有三過：一者合自成自過。蓋唯有合他成自，未有合自成自者；二者合一成一過，蓋唯有合多成一，未有合一成一者；三者合細成細過，蓋唯有合細成麤，未有合細成細者。如是隣虛，既非合色所成，當是合空而有，故問其用幾虛空，和合而有？此如來以析入，而難合成。良以析色歸空，是小乘之自教，諸法和合，是阿難之自語，今則順彼自教，難以自語，故又曰：隣虛塵既可析入虛空者，當知色相出生虛空，究竟用幾多色相(即虛隣塵)合成虛空？佛明知色非合空所成，空非析色而有，故作斯難。阿難不能施辯何也？以順析入，則非和合，與自語諸法和合相違；以依和合，則非析入，與自宗析色歸空相背，兩處負墮，故默無辯。合？此結申正義。若色法和合之時，合色祗能成色，決非可以成空，而空無形相，本不可合。縱許虛空和合之時，合空亦祗是成空，決非可以成色，此為一定之理。由是而觀，色空俱非和合而有也，明矣。色猶可析，空云何合者：然又當知，色法猶可分析，觀猶可二字，析色但自析色，實非析色可以成空，空終無和合之義，何以故？無形段故，無數量故，云何可說和合耶？佛意以空不可合，則隣虛非和合而有，隣虛既非和合而有，則世間種種諸法，執為因緣和合者，豈實義耶？此中但以空不可合，則諸法和合而有之執，破盡無餘矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝元不知：如來藏中，性色真空，性空真色，清淨本然，周徧法隨眾生心，應所知量。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。此明全體圓融。地大之色，體即法界，色空圓融無礙，本非和合。汝阿難固執因緣和合者，因無始覺妙智，元不知如來藏，本覺妙理之中，無法不具，無法不融者也。如來藏即真心之別名，乃依理立名。如來二字，即真心不變隨緣，隨緣不變之理，圓融無礙，含藏一切諸法，無一法不在裏許，故曰如來藏中。性色真空，性空真色者：乃指如來藏中，性徧色空，互相融即，此七大，科科皆曰如來藏中，是屬理具之七大，當約藏中未發現者說，不同前四科，是屬事造之七大，乃為藏中已發現者說也。問：「四科之法，何以亦目為七大？」答：「陰、入、處、界，與七大無別，但橫、豎、開、合之不同耳。約豎論，則開色陰為前六大，合受、想、行、識四陰為識大；約橫論，則合六塵為五大，合六根為見大，合六識為識大。何嘗離七大而別有哉？」而如來先會四科即藏性，是將已發現七大，一一會歸藏性，以明即事則理，故曰本如來藏。此科是說未發現七大，一一含具藏中，以明全性全相，故曰如來藏中；觀中字即理具事造所由分也。問：「本科原屬地大，不言地大，而易以色字，其故何也？」答：「地大為色法所攝，易以色字，舉其總也。」色而稱曰性色、真色者，非指世間已發現之色，乃指藏中性具之色，真體之色，與空相融相即；色空，本屬對待，融之則性具之色，即是真體之空，豈同析色以歸空也。性具之空，即是真體之色，豈待合空以成色也。性則言其非相，亦即理而非事也；真則言其非俗，亦即體而非用也。有以理事體用合釋者，非也。性真二字，即是理體，為色空之本。字別義同，今影互用之，若不影互應有四句，當曰性色真空，真空性色；性空真色，真色性空。總成色空融即，其義方足。又性色、真色，非但揀異於已發現，世間麤細之色，併不同乎般若觀照，即空之色也。又性空真空，非但揀異於凡夫外道，頑斷之空，併不同乎般若觀照，即色之空也。此之色空，俱屬全體，隨心應量下，方顯大用。清淨本然者：指如來藏，自性清淨，不假功用，並非澄之使清，滌之使淨，乃本來清淨，無有濁垢，藏中色空，唯性唯真，即同體清淨也。周徧法界者：上句約藏性，本具不變之體，此句約藏性，本具隨緣之用。未經起用，但周徧於理法界，若從體起用，自可周徧於事法界矣。起用在下一段。此明大用無限。用從體起，事造不離理具也。仍本如來藏，不變之體，現起隨緣之用，隨九法界眾生之緣，此眾生，即九界眾生；心以根性言，九界眾生根性，有勝劣之不同；量以知識言，九界眾生知量，有大小之不等，此皆從平等性中，已起差別之相。若眾生，但以劣心小量致之，則所以應之以麤少之色者，固無不副其心，而無不滿其量也；若眾生，能以勝心大量致之，則所以應之以廣妙之色者，亦無不副其心，而不滿其量也。交師此解極好，併下段乃為千古獨唱，無人能出其右者。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性。皆是識心，分別計度，但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此循業發現句，不連接隨心應量下，而列入此科者，因按照以下諸大之文，分屬之本意也。又此句正是致下二惑之由，應入此科。蓋業有染淨之分，九界眾生，依、正二報之色，皆循(隨也)業所感，而發現也。業為能發現，色為所發現，如谷應聲，如影隨形，豈唯迷位，必循染業，而後能發，即是悟人，亦須循淨業，而後能現。交師云：此四字，雙具兩種不自在意：一者世出世間，一切淨妙之色，若不循彼種種淨業，雖欲發現，不可得也；二者三塗四惡，一切苦穢之色，若不戒彼種種染業，雖欲不發現，不可得也。蓋不戒即是循也。故此四字，非但只表不循業，則不得發現，兼表循業，則不得不發現，而二俱無自由分矣。世間無知：指有情世間，無有正智之眾生，不了藏性，不變、隨緣二義，因循業發現，遂起因緣、自然二惑。交師謂：良以業之起也，似有由藉，故世間淺智眾生，執此生起之近由，而遂惑為因緣性；曾不達圓融不變之體，周徧法界，何所藉於因緣。業之成也，似難改移，故世間無智眾生，執此難改之現量，而遂惑為自然性；曾不達無礙隨緣之用，隨心應量，何得泥於自然，是皆為一循業之所惑耳。皆是識心，分別計度者：以因緣、自然二惑，皆由第六意識妄心，妄生分別，周徧計度，即徧計執性，徧計本空，故曰：但有虛妄言說，都無真實義理。言說指因緣、自然，二種戲論。和合與因緣相關，不和合與自然相關，攝在二惑中，故不別列。初地大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">火大</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">標性約求</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就求詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">四</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，火性無我，寄於諸緣。汝觀：城中未食之家，欲炊爨時，手執陽燧，日前求火。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>火大之性，無有自體；我即自體。寄託於鑽木、執鏡、擊石等諸緣，而得顯現。又日、艾、鏡三者，為諸緣。溫陵戒環法師所謂：「火無體，寓物成形者」是也。汝觀下，要阿難就事以驗。汝觀看室羅筏城之中，未食之家，要炊爨時，手執陽燧，在於日前求火，以為炊爨熟食之用。陽燧是取火之鏡，以此試驗，火大是否和合而有。陽燧，崔豹古今註云：「以銅為之，如鏡之狀，照人則影倒，向日則火生。」淮南子曰：「陽燧、火方諸也。」王充論云：「五月丙午日午時，燒煉五方石，圓如鏡，中央窪，天晴向日，其光影注處即燒。」引此一事，以為下文，破和合立難之本。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就求詳辨</span></li></ul></div>
+<div class="unit"><p class="jing">阿難，名和合者，如我與汝，一千二百五十比丘今為一眾；眾雖為一，詰其根本，各各有身，皆有所生，氏族名字。如舍利弗，婆羅門種；優樓頻螺，迦葉波種；乃至阿難，瞿曇種姓。阿難，若此火性，因和合有，彼手執鏡，於日求火，此火為從鏡中而出？為從艾出？為於日來？阿難，若日來者，自能燒汝手中之艾，來處林木，皆應受焚？熱相，云何融泮？若生於艾，何藉日鏡，光明相接，然後火生？汝又諦觀：鏡因手執，日從天來，艾本地生，火從何方，遊歷於日、鏡相遠，非和非合；不應火光，無從自有？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此舉和合之例反例火大，不同如是。凡言和合者，必先分而後合，如我與汝，一千二百五十比丘，今為一眾，是為和合：眾雖為一，若詰其和合之根本，各人有各人之身，皆有各人所生之姓氏、種族、名字不同，後合為一眾。火大若是和合者，火大是一，若詰其根本，亦應各有體質、種類、名字不同，如可指出日來之火，艾生之火，鏡出之火，今合為一，可說和合，若不爾者，和合之義，自不能成。如舍利弗，婆羅門種，此云淨裔，謂是梵(淨也)天苗裔；又云淨志，志生淨天，印度智識階級。優樓頻螺此云木瓜林，依此林脩道故，依之立名。迦葉波種，此云龜氏，先人在此脩道，感靈龜負圖而應，以是命族。阿難瞿曇種姓，此云甘蔗種族，佛之始祖，日炙甘蔗而生，號瞿曇氏；又譯日種，又譯甘蔗，後四世改為釋迦。此舉眾之所生，氐族名字也。此文前二句先牒定，下標徵。若此火性，是因和合有者，彼人手執火鏡，於(在也)日前求火，此火為從鏡中而出來？為從艾中而出來？為於日中而出來？先徵後破。此破火從日來。若謂火從日來，自能燒汝手中，所持之艾，是日中有火，來處所有山林樹木，為日所照之處，皆應受焚；今既不焚，則知此火，非從日來矣。若鏡中出，自能於鏡，出然於艾，鏡何不鎔？紆(屈也)汝手執，尚無此破火從鏡出。若謂火從鏡中而出，自能於鏡中出來，然燒於艾，是鏡中具火大，火能剋金，鏡何以不銷鎔？又鏡中有火，定有熱相，現紆屈汝手，執持此鏡，尚無熱相，鏡云何而得融泮？融泮即化也。鏡既不熱，則知此火，非從鏡出矣。此破火從艾生。若謂火大出生於艾，艾當自燃，又何所藉日鏡光明，與艾相接，然後火於艾生。不接不生，則知火大，非從艾生矣。此？此要阿難，再諦實觀察，鏡、日、艾三者，各有從來，而火何所從來，而遊歷於艾乎？既無從來，當非和合。凡言和合，須同處相雜相交，現日之與鏡，一在天，一在地，相隔遙遠，非有和合之相。後二句反難云：不應當火光，無因自然而有；從即因也。以上至非和非合止，先破因緣，後二句破自然。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝猶不知：如來藏中，性火真空，性空真火，清淨本然，周徧法隨眾生心，應所知量。阿難，當知世人，一處執鏡，一處火生；徧法界執，滿世間起。起徧世間，寧有方所？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。此顯全體圓融。猶者依舊也。不知由無真智，不達真理，如來藏，即是清淨實相真理，火大是事，事不離理，由阿難狹劣無識，不能通達，清淨實相。故責云：吾先為汝發明，地大即藏性，應當覺悟，何以汝依舊不了知，火大即藏性之中，本有之物，乃天真本具非和合不和合也？性火真空，性空真火：亦互影言之，合四句為兩句，謂性具之火，即是真體之空；性具之空，即是真體之火，即火即真，全相全性，圓融無礙，體本清淨，離諸染垢。即六祖大師所云：「本來無一物，何處惹塵埃。」周徧法界，即是體徧，用徧乃在下段。此與上科，體用攸分。上明藏性不變之體，此明藏性隨緣之用，用元從體起，亦必隨緣而興，乃隨九法界眾生，勝劣之心，應其所知，大小之量，隨緣顯現其用，即事可以驗知。此即事驗知。一人一處，執鏡求火，隨一人之緣，一處火生；徧法界眾生，執鏡求火，隨多人之緣，滿世間都有火起。起徧世間，寧有一定方所？此約凡夫現境，尚見無限，而聖分上，更不待言；隨心應量，於此可知矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度，但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>循業發現，乃為因緣、自然，二種妄計根本。此火大不獨迷位，業障眾生，必循染業而後能發，如餓鬼之道，饑火交然，頂髮煙生，口吐火焰；縱是修位，大心之士，亦須循淨業而後能現，如火頭金剛，烏芻瑟摩，化多婬心，成智慧火，此皆循業發現之明證也。世間無知者：謂權乘學者世間，無有真智，昧乎藏性不變之體，竟惑為因緣；外道非學者世間，無有正智，昧乎藏性隨緣之用，竟惑為自然。此等皆是識心，妄想分別，周徧計度，於依他起性法中，不了當體，即是如來藏，圓成實性，妄起徧計執性。但有言說：但作凡解，凡有言說，如說因緣自然，和合不和合，非因緣非自然，非和合非不和合等，皆屬戲論，都無真實之義。二火大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰三</span><span class="ke-t">水大</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">標性約求</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就求詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">四</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難，水性不定，流息無恆，如室羅城，迦毘羅仙、斫迦羅仙、及</div></details></div>
+<div class="unit"><p class="jing">缽頭摩、訶薩多等，諸大幻師，求太陰精，用和幻藥，是諸師等，於白月晝，手執方諸，承月中水。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>水大之性即藏性。體雖不變，用能隨緣，所以不定。流息(止也)無恆(常也)：流無常流，隨緣而息，如河水填之則息；息無常息，隨緣而流，如池水決之則流，正顯不定也。又此句，對下求太陰精解，求之則流，不求則息(不也流)，流與不流，無有恆常，是為不定。如室羅城下，舉事以驗。迦毘羅，此云：黃赤色，以其髮黃兼赤也。斫迦羅，此云輪，以自執所見理圓，能摧他宗故。缽頭摩，此云赤蓮華，池名，近此住故。訶薩多，梵語之略，《灌頂疏》云：阿迦薩謨多羅，此云海水。近海而住，事水外道也。等者舉此四人，以等其餘。諸大幻師：以其善用幻術，不僅能幻化人物，且能奪陰陽造化之工，故稱大幻師。求太陰精：即月中水，用以和合幻藥，為丸作餌，是諸幻師等，多皆如是。於白月晝：即在中夜，月白如晝之時，八月中秋等夜。手執方諸，承接月中水，即太陰精。方諸，即水精珠。許慎曰：「方，石也，諸，珠也。」《王充論》云：「十一月(子月)壬子日，夜半子時，於北方(壬水癸)煉五方石為之，向月得津。」淮南子曰：「方諸見月，則津而為水。」故諸幻師，以此求水。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就求詳辨</span></li></ul></div>
+<div class="unit"><p class="jing">此水為復從珠中出？空中自有？為從月來？阿難，若從月來，尚能遠方，令珠出水，所經林木，皆應吐流，流則何待方諸所出？不流明水，非從月降。若從空生，空性無邊，水當無際，從人洎(及也)天，皆同滔溺，云何復有，水、陸、空行？汝更諦觀：月從天陟，珠因手持，承珠水盤，本人敷設，水從何方，流注於此？月、珠相遠，非和非合；不應水精，無從自有！</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此標三處徵起，下則逐破。此破水大從月來。若說水從月來，此月尚能於隔遠之處，令珠出水，則於所經過，近處之林木，皆應吐流；即出水也。此以遠證近，當必流水，若必流，則隨處皆可承月中水，又何待方諸所承而水出也？若林木不吐流，則分明此水，非從月中而降也。此破從月來者，非也。若從珠出，則此珠中，常應(平聲)流水，何待中宵，承白月晝？此破水大從珠出。若水從珠出，則不假藉他緣，珠中常應流水，隨時皆可承之。又何待中宵(即夜半)，又何必月白如晝之時耶？此破水大從空生。若水從空而生者，虛空之性無邊，則水亦應當無際；際即邊也。如是下自人間，上及天宮，皆應同在滔滔大海之中，俱受沉溺之患，云何更有水居、陸地、空行之分？以上所徵三處，悉已逐破，下令審觀。此更令諦審觀察也。月從天陟：即月在天上行走。珠因手持，承珠水盤，盤以承水，珠安盤中，故曰承珠水盤。本人敷設：本人即幻師。上已說明，水不從月來，不從珠出，不於空生，此水究竟從何方流注於此盤中，是不得不加審察也。此破和合不和合，二計俱非。若說月之與珠，和合而生水大，一月在天，一珠在地，相隔遙遠，自非和合；和合必同處不離，方可說和說合。而月珠相遠和合之計、破矣。恐轉計非和合，即破曰：不應當說言，此月中水，無所從來，自然而有也。此非和合之計又破矣。水精謂月中水，即水中之精也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝尚不知：如來藏中，性水真空，性空真水，清淨本然，周徧法隨眾生心，應所知量。一處執珠，一處水出，徧法界執，滿法界生，生滿世間，寧有方</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。由汝一向蒙昧，尚且不知如來藏中，性具之水，全體即是真空；性具之空全體即是真水。性真二字，字異義一，即如來藏體，清淨本然者。自性由來清淨，寂湛常恆，不動不變；不變體中，本具隨緣妙用，故曰周徧法界。此屬理具，事造當在下段。此二句，即如來藏隨緣之用。隨九界眾生，勝劣之心，大小之量，皆能應之。併上清淨本然，即所謂寂然不動，感而遂通之故，下則舉事驗知。所？此即舉現前之事，驗知水大隨心應量。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度，但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>首句循即隨也。亦指迷位，及修位眾生，皆隨染淨業，發現水大之相。如地獄眾生，隨惡業所感，則現鑊湯油鍋，血河灰河，洋銅灌吞諸事；月光童子，修習水觀，入定之時，則現水滿室中，童子投礫，激水作聲等事。世間無知眾生，不知水大唯心，惑為因緣、自然二執，皆是識心，妄生分別計度；但有言說，虛妄名相，都無真實之義。三水大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰四</span><span class="ke-t">風大</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">標性約拂</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就拂詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">四</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，風性無體，動、靜不常：汝常整衣，入於大眾，僧伽黎角，動及傍人，則有微風，拂彼人面。動、靜不常也。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>風大之性，本無自體可得。時動時靜，忽起忽滅，動非常動，有時而靜；靜非常靜，有時而動。故曰：「不常」。汝常(尋也常)整(理也)衣，入於大眾之中。僧伽黎：即大衣，又名雜碎衣，二十五條，各四長一短。凡分衛(乞也食)入眾，常披此衣。衣角動及傍人，則有微風，拂彼人面。且舉此一事，驗證風性無體，</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就拂詳辨</span></li></ul></div>
+<div class="unit"><p class="jing">此風為復出袈裟角？發於虛空？生彼人面？阿難，此風若復出袈裟角，汝乃披風，其衣飛搖，應離汝體。我今說法，會中垂衣，汝看我衣，風何所在？不應衣中，有藏風地？若生虛空，汝衣不動，何因無拂？空性常住，風應常生，若無風時，虛空當滅；滅風可見，滅空何狀？若有生滅，不名虛空；名為虛空，云何風出？若風自生被拂之面，從彼面生，當應拂汝？自汝整衣，云何倒拂？汝審諦觀：整衣在汝；面屬彼人；虛空寂然，不參流動；風自誰方，鼓動來此？風、空性隔，非和非合；不應風性，無從自有？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此徵問風所從來，下則逐破。此破風大出袈裟角。袈裟此云壞色，義翻離塵服。若謂此風，出於袈裟角，是衣中有風，汝乃披風。風性屬動，其衣飛搖，自應離汝身體；現衣不離體，是衣中無風，則此風不出袈裟角，明矣。我今說法，會中垂衣，汝看我衣，風何所在？我今之上，應補救詞，文方接續。恐聞衣中無風，乃轉救云：衣中有風，但是動衣風出，垂衣風藏，何得以飛搖離體為難？佛則以說法垂衣，風何所在，不應說言，衣中另有藏風地破之。此破風大從空生。若風生於虛空，應不藉拂衣之緣，當汝衣不動之時，何因無風拂彼人面？空性常住下，以風空性異為破。空性常住，風性生滅，若以風從空，風應常生，若以空從風，至無風之時，風滅空亦當滅。下二句明空無可滅，然滅風可見，滅空究作何狀耶？此以名義不符為破。若有生滅，不應名為虛空，空無生滅故，上二句破名不相當；名曰虛空，云何有風而出，空以無物為體故，此二句破義不相合，若有風出，則名義雙失耳。此破風大從彼面生。既從彼面而生，自當拂汝。自汝整衣，云何彼面所生之風，仍倒拂於彼耶？此令審觀，整衣在汝，衣中無藏風地；面屬彼人，彼面亦不生風；虛空寂然，不參(曾也)流動，自不生風。汝應審諦觀察，風自誰方，鼓動來此？鼓即動也。以上三處，皆無風大生處。上二句，風空體性隔異，一動一靜，所以非和非合，此破因緣之執。下二句，不應當說此風性，無因自有，此破自然之執；從即因也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝宛不知：如來藏中，性風真空，性空真風，清淨本然，周徧法隨眾生心：應所知量。阿難如汝一人，微動服衣，有微風出；徧法</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。此顯全體圓融，全相全性。阿難雖曰多聞，宛然不知如來藏中，性具風大，本自真空：性具之空，亦本真風，其體清淨本然，不假功用，周徧法界。界拂，滿國土生，周徧世間，寧有方所？此顯大用無限。如汝下，即事驗徧。</div></details></div>
+<h4 class="ke">已四雙拂二計</h4>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度，但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>所循之業，有漏無漏之別；所現之大，亦有染淨不同。迷位眾生現染，修位眾生現淨，一一無非隨業所感。交光法師，假立問答，發揮循業之理甚詳，而與學者，大有啟發。問：「悟人既須循業，佛循業否？」答：「在因位循之，卻即菩薩，因滿果發之後，但惟隨心，尚無量之可應，何有業之可循？惟除示現，無實業也。故知稱體作用，無不自在，惟佛能之。」問：「現見菩薩作用自在，何言惟佛能之？」答：「菩薩修行未畢，正由循業所發，故今非揀其不能作用自在，但揀其非是不循業耳。然惟圓實菩薩，所循大自在業，所發十玄妙用，與果人敵體相似。」「又所應之知，即解悟也；所循之業，即修行也。若惟務修行，而不求圓解，則三祗六度，終無實果；正以知自局，而量自有限也。若但專務多聞，而不策圓修，則恆沙妙理，祗益戲論；正以業不循，而果終不發也。以此而知，圓解圓修，不可不相應矣。」世間淺智眾生，見此循業發現之近由，遂惑為因緣；世間無智眾生，昧此循業發現之根源，遂惑為自然；此等皆是識心分別計度，情有理無，故曰但有言說，都無實義。四風大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰五</span><span class="ke-t">空大</span><span class="ke-div">分5</span><ul><li class="ke-cur"><span class="ke-mk"></span><span class="ke-t">已初標性約鑿</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就鑿詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">合會警悟</span></li><li><span class="ke-mk">四</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">五</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，空性無形，因色顯發：如室羅城，去河遙處，諸剎利種，及婆羅門，毘舍、首陀、兼頗羅墮、旃陀羅等。新立安居，鑿井求水，出土一尺，於中則有一尺虛空；如是乃至出土一丈。中間還得一丈虛空，虛空淺深，隨出多少。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此融空大即藏性。空性無形：此句指不變之體，性者體性，本無大小方圓之形段，有形則有變，無形則不變。因色顯發：此句指隨緣之用，因隨色塵之緣，顯現發明也。如顯見無礙科，觀一界之大則現大空，一室之小則現小空，方器則現方空，圓器則現圓空，雖隨緣顯發，空體不變。如下即事驗證。如室羅城(即衛舍國)，去(離也)河遙遠之處，諸剎利種，此云王種，亦云田主；及婆羅門，此云淨志，亦云淨行，以守道居正，潔淨其行也；毗舍此云商賈，行商坐賈者是；首陀此云農夫，耕田種地者是；如此方四民。更有智愚二族，兼及頗羅墮，此云利根，即六藝百工之輩；旃陀羅，此云屠者，即屠兒魁膾之徒，亦云嚴幟，國法令其搖鈴執幟，警人異路，良民不與同行。新立安居下，要新立安身居住之家，因離河遙遠，必須鑿井求水。鑿出土一尺深，在井中即有一尺虛空，如是乃至，越略二至九之數，鑿出土一丈深，井中還得一丈虛空，虛空之淺深，乃隨鑿出之土，多少而論。此即空性無形，因色顯發之事實。</div></details></div>
+<h4 class="ke">已二就鑿詳辨</h4>
+<div class="unit"><p class="jing">此空為當因土所出？因鑿所有？無因自生？阿難，若復此空，無因自生，未鑿土前，何不無礙？惟見大地，迥若因土出，則土出時，應見空入，若土先出，無空入者，云何虛空，因土而出？若無出入，則應空土，原無異因；無異則同，則土出時，空何不若因鑿出，則鑿出空，應非出土？不因鑿出，鑿自出土，云何見汝更審諦，諦審諦觀：鑿從人手，隨方運轉，土因地移，如是虛空，因何所出？鑿、空虛實，不相為用，非和非合；不應虛空，無從自出。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此徵起，下逐破。無通達。此破空大無因生。若復此空，無因自然而生，未鑿土前，即應無礙，何以不能無礙，惟見大地，迥然質礙，無有通達之相。鑿土方見虛空，非無因而生也。西域外道，於空大多執自然，故首破之，以明非自然也。此破空大因土所出。以未鑿土前，原不見空，因鑿土出，而後成空，遂謂空因土出。則土鑿出之時，應見虛空，從井內周圍土中出來，入於井中，如井水，從井內土中出來可也。若土先出，無空入者，如何可說，虛空因土所出？出？此破空無出入。若謂空本在土中，無有從土出，從井入者。則應未鑿土前，空之與土，本無各異之因；因者依也。同處相依，無異則是同體不分，則土出時，空何以不與土而俱出耶？空？此破因鑿不因鑿，兩者俱非。若謂此空，是因鑿而出，則是鑿出虛空，應非出土，而成空也。若謂此空，不因鑿出，與鑿無干者，則鑿井之時，但自出土，應不成空，云何隨鑿，隨見虛空耶？此更教以審察諦觀：井因鑿出，鑿從人手，隨其方向，擇地施工，運轉而成，土因地中搬移而出；如是井內虛空，因何所出？以此空，上已辨明，既非無因自出，又非土出，又非鑿出，畢竟從何所出耶？鑿體是實，空性是虛，一虛一實，不相為用，云何可說因緣和合而有？故曰非和非合；下二句翻上，既非和合，則不和合，故亦破云：不應說言，此空無所從來，自然而出？此即雙破因緣、自然二計。</div></details></div>
+<h4 class="ke">已三合會警悟</h4>
+<div class="unit"><p class="jing">若此虛空，性圓周徧，本不動搖，當知現前，地、水、火、風，均(同也)名五大，性真圓融，皆如來藏，本無生滅。阿難，汝心昏迷，不悟四大，元如來藏，當觀虛空：為出為入？為</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>佛意以此空大，合前四大，同名五大，會歸藏性。諸經多惟說四大，此經點出空大，例彼四大，同名五大。當知非僅虛空，新得大名，兼顯四大，昔日雖稱為大，亦惟其據處處皆有，地水火風言之，而實未顯互不相礙，非真大也。自今融以藏性，圓徧常住，方為真大，雖非新得大名，至今始得真大之實。若尋常談空，雖說周徧，有色礙處，即不圓滿，因色、空二法，相傾、相奪之故。今此空性，即是藏性，圓融無礙，圓滿周徧，色、空相即，乃是性圓周徧。此性寂然常住，本不動搖，與下無生滅同。當知現前地、水、火、風，均名五大者：此以空大，性圓周徧，本不生滅，例知現前地、水、火、風，四大均等。四大平昔，雖稱周徧，未經彰顯，一一稱性，圓融周徧，今會同空大，同名五大。性真圓融，皆如來藏，本無生滅者：即言諸大一一，唯性唯真，如前所云，性色真空，乃至性風真空等，以性融大，諸大全性，故曰皆如來藏。性真二字，即指藏性徧心，諸大圓融無礙，無一而非如來藏，從本以來，元無生滅，即常住不動。非出入？此警令觀察空大，悟明四大。謂阿難言，汝心昏迷；無明障心故昏，真智不起故迷。執諸法皆因四大和合而有，是不悟四大，元是如來藏，非和非合，非不和合，故令觀察虛空，自可便知。當觀虛空，為出為入，為非出入者：教以應當觀察虛空，即觀鑿井所見之空，為因鑿土而出耶？為因移土而入耶？為土有出入，空非(無也)出入耶？若悟空大，非出非入，非不出入，即可悟明四大，一一性圓周徧，非和非合，非不和合矣！如前總喻云：「如水成冰」，豈可說一定不和合耶？如「冰還成水」，豈可說一定和合耶？</div></details></div>
+<h4 class="ke">已四結顯體用</h4>
+<div class="unit"><p class="jing">汝全不知：如來藏中，性覺真空，性空真覺，清淨本然，周徧法隨眾生心，應所知量。阿難，如一井空，空生一井；十方虛空，亦復如是，圓滿十方寧有</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。汝全不知，寓有深責之意。我如是為汝種種開示，中道了義，要汝觀空得悟。汝竟全然不知，如來藏中，性具之覺，本是真體之空；性具之空，即是真體之覺。此二句，按前空大，變其文法，將前指性之空，換為覺字，空覺二字，皆指藏性。藏性具有寂、照二義，空是寂義，覺是照義。又復顛倒其詞，將本大性空之句放在下句，若不變其文，則雙句皆是，性空真空，性空真空，無可分別。清淨本然，周徧法界，準前可知。上顯全體圓融，此顯大用無限。方所。此即事以驗，性圓周徧。如一處鑿井，所見之空，空生一井；十方鑿井，所現虛空，亦復如此。一井之空，非出非入者是也。虛空圓滿，周徧十方，寧有一定方所？正由虛空，無所不徧，故成大義。非此有彼無，先無今有，不但具有大義，亦具常義，故前云：「本不動搖，本無生滅」也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度。但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>迷位眾生，循其所造有漏之業，則發現染空，如第四禪天人，厭有趣空，則現空無邊處。修位眾生，循其所修無漏之業，則發現淨空，如第四果羅漢，灰身泯智，則現偏空涅槃。前者既循有漏之業，要不發現染空不可得；後者不循無漏之業，雖欲發現淨空，亦不可得也。世間無知：此指凡、小、外道，惑為空大，是因緣所生，或執空大，乃自然而有，皆是識心分別計度，徧計執性用事，但有言說，都無真實之義。五空大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰六</span><span class="ke-t">見大</span><span class="ke-div">分5</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">標性約塵</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就塵詳辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">合會警悟</span></li><li><span class="ke-mk">四</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">五</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，見覺無知，因色空有。如汝今者，在祗陀林，朝明夕昏；設居中宵，白月則光，黑月便暗，則明暗等，因見分析。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此會見大即藏性。見大統指六根中，見、聞、齅、嘗、覺、知之性，今單舉見，以例餘五耳。此屬第八識見分，映在六根門頭，緣彼現量六塵者，非取浮、勝二根，故不言根，而言見也。一切諸法，色、心二字收無不盡。前五大屬色法，後識大屬心法，故諸經祗明三科，無六入，見大即六入。本經立此大，有三義存焉：一、收前文：前十番顯見，顯此見大是真，今更申明見聞等性，即如來藏，則顯見是心之旨愈暢。二、順後文：諸佛異口同音，告阿難言，使汝輪轉，生死結根，唯汝六根，更非他物；令汝速證安樂解脫，寂靜妙常，亦汝六根，更無他物；欲說根性法門，應立此大。三、為圓通故：如六塵、六根、六識，前後六大，皆為諸聖圓通法門，若無根大，則大勢至念佛圓通，都攝六根，何所依據？故須立此大，具足二十五數也。見覺無知，因色空有者；乃明見大即藏性，見覺即見性，是靈明洞澈之覺體，一段光明，寂而常照，不立能所，本來無有能知所知，乃因色空，而有能知，及所知耳。此即下文，由塵發知之義。由有色、空之塵，黏湛發見，始有能見之根，與所見之塵，而成能所二知。見覺無知，指不變之體，因色空有，指隨緣之用。如汝今者，在祗陀林，尋常所見，晨朝日出則明，傍晚日夕(日時落)便昏，此晝之明暗也；設居中宵半夜之時，逢白月夜，則有光明，逢黑月夜，即便昏暗，此夜之明暗也。則明暗等，因見分析者：等者等於色、空，本科塵以明、暗、色、空四字，互為隱顯。如言色空，是合明暗之色以對空；單言明暗，是開色以攝空；如言見空，是以空攝色，而對見也。文中開攝不定，故先明之。則明暗等，因見分析：是開色以攝空，即因此塵境，而見始得以分析，是明是暗，乃是見托塵立，塵因見顯，例知其餘，五根、五塵，莫不皆爾。即下文所謂：「由塵發知，因根有相，相見無性，同如交蘆。」根塵皆無獨立之自性。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就塵詳辨</span></li></ul></div>
+<div class="unit"><p class="jing">此見為復，與明暗相，並太虛空，為同一體？為非一體？或同非同？或異非異？阿難，此見若復與明與暗，及與虛空，元一體者，則明與暗，二體相亡？暗時無明，明時無暗。若與暗一，明則見亡？必一於明，暗若此見精，與暗與明，非一體者，汝離明暗，及與虛空，分析見元，作何形相？離明離暗，及離虛空，是見元同龜毛、兔角：明、暗、虛空三事俱異，從何立見？明暗相背，云何或同？離三元無，云何或異？分空分見，本無邊畔，云何非同？見暗見明，性非遷改，云何非汝更細審，微細審詳，審諦審觀：明從太陽，暗隨黑月，通屬虛空，壅歸大地，如是見精，因何所出？見覺空頑(以攝空色，)，非和非合；不應見精，無從自出？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此下就塵辨見。佛先徵後破，徵以根塵同異為徵，共有四句：一同、二異，三或同或異，四非同非異。以二或二非各成一句，與下文合。佛以二同二異，各成一句，非同即是或異，義無乖也。問阿難言：而此見大，為復與明暗相(此色開法)，併太虛空之相，為是同一體耶？為非同一體耶？為或同非同耶？為或異非異耶？先標徵，下逐破。時當滅？滅則云何見明見暗？若明暗殊，見無生滅，一云何成？此破見大，與塵同一體。謂阿難言：此之見覺，若復與明與暗，及與虛空(此對開色空)，元是一體者，一體則合而不分，此牒徵詞。下約塵破，則明之與暗，二體更互相亡；暗時無有明，則明亡：明時無有暗，則暗亡。明暗相傾奪，故二體相亡，此見究竟與誰為一耶？若與暗一下六句，正以顯謬。此見若與暗為一體者，明生暗滅，則見應當與暗偕亡，云何又能見明？若必此見與明為一體者，暗生明滅，則見亦當與明以俱滅，云何又能見暗？後二句，即連上分解頗順。倘欲另解滅字，當承上雙約明暗，承一二兩句，謂見既隨暗而滅，當明現前，云何見明？承三、四兩句，謂見既隨明而滅，當暗現前，云何見暗？若明暗殊，見無生滅，一云何成？此三句，結成非一之義。以明來暗去，暗生明滅，明暗雖復差殊，見性本無生滅，一體之義，云何得成？此破見大與塵非一體。見精見元，俱見性之別稱。謂若此見精，與暗與明，非一體者，則見當離塵，別有自體。下顯不能離塵，若離明暗，及與虛空，(開對色空)，分析汝見元本體，究竟作何形相？上四句明離塵，則見無體，同於龜毛兔角之本無；後三句結成非異之義，若明、暗、虛空三事俱異(離也)，無塵不能立見，如是云何可說，此見與塵非一體耶？此破或同或異。此或同即一體，或異即非一體，悉本前義。明暗互奪兩亡，是為相背，云何或同？離卻明、暗、虛空三者，元無獨立之見，云何或異？異？此破非同非異。首句以空攝色，若謂見性，非同於塵，應可分析，各自有體，現今分析所見之空(攝色)，分析能見之見，本無空、見，邊際界畔可得，云何可說為非同乎？見暗見明(開攝色空)，明暗有互相傾奪，見性無遷變改易，一則生滅，一則常住，不得混同，云何可說為非異乎？辨見至此，可謂盡矣。故下阿難，而得明心生信之益。上以四義，已破見大無和合相，再令審觀生信，故謂汝更加細審。下二句即釋細審之義，必令觀察現境，窮極見源而後已。當觀所見之明相從於太陽，暗相隨於黑月，通相屬於虛空，壅相歸於大地，各有從來，汝能見明、暗、通、塞之見精，畢竟因何所出？既無所出，將何和合耶？此破非因緣非自然。見精有知覺，虛空是頑鈍，體性各異，非和非合，何得謂曰，諸法皆由因緣，和合而有？既非因緣，不應見精，無從(因也)自然而出。</div></details></div>
+<h4 class="ke">已三合會警悟</h4>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>若見、聞、知，性圓周徧，本不動搖，當知無邊不動虛空，併其動</div></details></div>
+<div class="unit"><p class="jing">搖地、水、火、風，均名六大，性真圓融，皆如來藏，本無生滅。阿難，汝性沉淪，不悟汝之見、聞、覺、知，本如來藏，汝當觀此：見、聞、覺、知，為生為滅？為同為異？為非生滅？為非同</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>佛意以此見大，合前五大，同名六大，會歸藏性。五大是無情，見大是有情，合會情與無情共一體。首句若見、聞、知：六精舉三該六。性圓周徧；性即六精之性，本來圓滿，周徧法界，非此有彼無，此無彼有，方是性圓周徧；本不動搖生滅，非先無今有，今有後無，乃是常住義。阿難後悟徧常二義，皆由此也。當知無邊不動虛空，並其動搖地、水、火、風，與此見大均平，以其體性平等，可名六大。均字，上科作同義解，此科作平等解，義俱可通。性真圓融三句，即會相歸性，論六大之相元妄，非無彼此；觀六大之性本真，莫不圓融，皆是如來藏性，從本以來，原無生、滅、動搖之相可得。異？上段合無情之五大，與有情之見大，皆會歸如來藏性，以五大是第八識相分，見大是第八識見分，見、相皆依自證分，自證分是第八識本體，乃依證自證分(即真如是)。其中有兩重難知難信，故須合會：一者見聞等是無形，說圓周徧，易知易信；地等是有形，說圓周徧，難知難信。二者見等是有情，說是藏心，易知易信，空等是無情，說是藏心，難知難信，今已合會，皆同藏性。此段警令覺悟，謂阿難言：汝之心性沉淪，溺於權見，無有真智，不悟汝之見、聞、齅、嘗、覺、知六精，本來是如來藏，妙真如性。汝當觀察：此等見、聞、覺、知(聞知攝攝鼻舌根根)之性，為是生滅耶？為非生滅耶？而與五大，為是同異耶？為非同異耶？上科不悟者四大，當觀者空大，令悟四大，與空大同體圓融；此科不悟者見大，當觀者亦見大。生、滅就自體言，同、異對五大說。欲令阿難，悟明見等，非生、滅、同、異，亦非不生滅、不同異。若能悟此見大，性圓周徧，本無生滅，則生滅與不生滅，同異與非同異，俱為戲論，便知五大，亦本如來藏，非和非合非不和合矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝曾不知：如來藏中，性見覺明，覺精明見，清淨本然，周徧法隨眾生心。應所知量。如一見根，見周法界。聽、齅、嘗觸、覺</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。此顯全體圓融。曾不知，即一向未曾悟也。汝未悟如來藏中，性具之見，即是覺體本明，本覺之精，即是妙明真見。此中性見、明見，同上性色、真色，以性融大也；覺明、覺精，同上性空、真空，直指本體也。清淨本然二句，謂見等體本清淨，廣大圓滿，周徧法界。觸、覺知，妙德瑩然，徧周法界，圓滿十虛，寧有方所？此顯大用無限。隨即隨緣起用，能隨九界眾生，勝劣之心，大小之量，一一應之；下則舉例以顯，如一見根，稱體周徧，以例諸根，耳之聽，鼻之齅，舌之嘗觸，味以合方知，故亦名觸，身之覺觸，意之覺知，此等諸根，即妙性之德用，清淨光明，如玉之瑩光皎潔，俱同見根，徧周法界，圓滿十方虛空，寧有一定方所，即無在無所不在也。四結顯體用竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度，但有言說都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>循九界眾生之業，發現之見，各有不同。眾生肉眼，不見障外之色；天眼視遠惟明；慧眼見色了空；法眼徧觀塵世，此皆循染淨業，發現勝劣見。世間無知眾生，惑為因緣、自然，皆是意識妄心，妄生分別計度，但有言說，都無真實之義。問：「十番顯見，已顯見性即是真心，而為諸法總相，今則融入藏性，則見大乃為別相，未審其義云何？」答：「此經推重圓通，悟修證入，皆依六根，故前特顯見性，以為全體，必須悟此不生滅性，為本脩因，然後方可圓成，果地修證。」此七大普融萬法，而如來藏當為總相，萬法皆為別相。若約圓實教旨，法法皆可互為總別，如帝網千珠，一珠含多珠，多珠趣一珠，以一珠為總相，多珠為別相，珠珠皆然，即是互為總別。《正脈》云：「良以前之開顯，今之融入，俱有初後二相。前之初相，自根中薦出，及其後相，則會萬法為一體，而根身器界，皆是其中幻影，當即是此中，如來藏也。今之初相，亦從目前明暗辨起，與前根中薦出無異，及其後相，則合會結顯，性真圓融，周徧法界，當亦與前開顯後相，無有異也。又此中七大，皆許同是圓融，又是依圓旨之萬法互含也。而彼中見性，獨許冠於萬法，又是本經之別旨宗要也。當知前欲其巧於悟修，而此欲其圓於見解矣。具眼者辨之。」六見大竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰七</span><span class="ke-t">識大</span><span class="ke-div">分5</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">標約根塵</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">就根塵辨</span></li><li><span class="ke-mk">三</span><span class="ke-t">合會警悟</span></li><li><span class="ke-mk">四</span><span class="ke-t">結顯體用</span></li><li><span class="ke-mk">五</span><span class="ke-t">雙拂二計</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難，識性無源，因於六種根塵妄出。汝今徧觀：此會聖眾，用目循歷，其目周視，但如鏡中，無別分析。汝識於中，次第標指，此是文殊，此富樓那，此目犍連，此須菩提，此舍利弗。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>識性對下六種根塵，是指前六識，性即了別性，此性無有根源。下二句，即釋無源之義，因於六種根塵為緣，虛妄顯現，乃為塵影，塵有則有，塵無則無，是謂無源。汝今徧觀：此楞嚴法會聖眾，此單舉眼根對色塵，以例餘五。用目循歷者：用眼目循序歷覽。其目周圍巡視，此根塵相對之時，一念未起，正根中見性，取現量性境。但如鏡中現像，元無妍、媸、美、惡，差別之分析也。此揀明眼根之相也。此揀明識之相。即眼識及隨眼識同時而起之明了意識，此二者亦有揀別。但對色塵，初起第一念，不涉名言，即是眼識名隨念分別；如起第二念，計執名字，即是隨眼家俱起之同時意識，名計度分別。分別名相，緣境之後，將外境攝入，交內之獨頭意識。於中次第標指者：於此聖眾之中，次第與循歷相照應，眼根循序而觀，意識次第標名指相。此是文殊，譯為妙德；此富樓那，譯為滿慈；此目犍連，譯採菽氏；此須菩提，譯為空生；此舍利弗，譯為鶖子。此揀明眼識，與隨眼意識之相。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">就根塵辨</span></li></ul></div>
+<div class="unit"><p class="jing">此識了知，為生於見？為生於相？為生虛空？為無所因，突然而阿難，若汝識性，生於見中，如無明暗，及與色空，四種必無。元無汝見，見性尚無，從何發識？若汝識性，生於相中，不從見生？既不見明，亦不見暗，明暗不矚(視也)，即無色空，彼相尚無，識從何發？緣，見、聞、覺、知，無處安立？處此二非，空則同無，有非同物。縱發汝識，欲何分別？若無所因，突然而出，何不日中，別識明月？汝更細詳，微細詳審：見託汝睛，相推前境，可狀成有，不相成無，如是識緣，因何所出？識動、見澄，非和非合，聞、聽、覺、知，亦復如是；不應識緣，</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>出？此先徵起，下則逐破。徵問此識，能了別之知，為是生於見根？為是生於塵相？為是生於虛空？為無所因，突然(忽然)生出此識耶？此破因根生。見即根也。離塵無根，從何發識？此破因塵生。相即塵也，彼相亦即塵相，塵尚無有，識從何發？若生於空，非相非見，非見無辨，自不能知，明暗色空？非相滅此破因空生。若生於空，既非塵相，又非見根。若非見根，則無能辨之性，自然不能知於明、暗、色、空，是離根無塵；若非塵相，則滅所緣之境，而見、聞、覺、知無處安立，是離塵無根矣！處此非相、非見二非之中，能生之空，則幾同於無。何以故？因非見無辨故。此空等同於無，何能生識耶？若說空是有，又非同於物，亦何能生識？縱然能生汝識，因非相已滅所緣之境，欲將何者為所分別耶？此破無因生。若謂無因，突然而能生出汝識者，何不於白日之中，無有明月，突然特別生出汝識，以了知明月耶？如前所說，非和合非不和合之義。汝可更加細詳，微細詳審句，即解釋細詳二字。能見之根，寄託於眼睛之內；所見之塵，推為現前之境；可有形狀者，成為有相之色；不有形相者，成為無相之空；如是根、塵、色、空之中，汝可微細審詳，生識之緣，畢竟因(依也)何所出？於根、塵、色、空，既無所出，則非和合明矣！無從自出？凡言和合，必體性相類，可說和合，現今識有分別屬動，見無分別屬澄，澂湛不動也。體性各異，非和非合：聞、聽、覺、知五根之性，亦復如是，均非因緣和合矣。不應、誡止之詞，不應說此識生緣，乃是無從(因也)自然而出耶？然必根、塵相對而生，則又非不和合矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳三</span><span class="ke-t">合會警悟</span></li></ul></div>
+<div class="unit"><p class="jing">若此識心，本無所從，當知了別，見、聞、覺、知，圓滿湛然，性非從所，兼彼虛空，地、水、火、風，均名七大，性真圓融，皆如來藏本無生滅。阿難，汝心麤浮，不悟見聞，發明了知，本如來藏。汝應觀此：六處識心，為同為異？為空為有？為非同異？為非空有？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此合前六大，會歸藏性。謂如我前來所說，此之識心，本無所從，則非和合而有。當知此了別之識，與上見、聞、覺、知之根，同是圓滿湛然，其性非從緣所生。倘不圓滿，可說從緣所生，今既圓滿，此外無法，豈有緣之可從？兼彼無情之虛空，及地、水、火、風悉皆均等，同名七大。此以識大，會通前之六大。性真圓融，皆如來藏，本無生滅者：七大一一皆性皆真，圓融無礙；如前云：性色真空，性空真色等。既唯性唯真，七大本非七大，故皆如來藏，本無生滅，常住不動也。此警令悟明識大即藏性。謂阿難言：汝心麤浮，麤則不細，浮則不深，無有深細之慧，不能悟明，見聞等根即藏性，不發明能了知之識性，本如來藏者：不字雙用，即不悟不發明根識，同是如來藏性。則教以應當起智觀察，六處識心。為是同異乎？為是空有乎？為非同異乎？為非空有乎？若言是同，六用差別；若言是異，元一精明；此識豈可以同異言耶？若言是空，現有了別；若言是有，全無形相；此識豈可以空有言耶？若言非同，元本一體；若言非異，六處用殊；則知此識，又不可以非同非異言矣？若言非空，離於根塵，元無所有；若言非有，現能分別，諸塵境界；則知此識，又未可以空有言矣？若能悟明識大，同異非同異，空有非空有，則可悟明前之見大，與今之識大，非和合非不和合矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳四</span><span class="ke-t">結顯體用</span></li></ul></div>
+<div class="unit"><p class="jing">汝元不知：如來藏中，性識明知，覺明真識，妙覺湛然，徧周法含吐十虛，寧有方所？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>界。此結顯識大之體。以識體即是如來藏體，由阿難無有真智，不悟真理，故曰：汝元不知如來藏性之中，性具之識，即是妙明真知；本覺之明，即是性真之識。以藏性、識性，相融、相即也。妙覺湛然，然周法界者：前云清淨本然，約本元自性說；今此識大，體即妙本明覺，湛然凝然，故直稱妙覺湛然；體中元具徧周法界之用，此亦但理具，而非事造，事造亦在下文。理具與事造之用，當云何分？理具者，全體具足大用，渾涵未發；雖然未發，其本有之力用，毫無欠闕，如火柴具足火之力用，雖然未發，具有焚燒林野之用。事造者，將此火柴一擦，一星之火，便可燎原。理具事造，亦復如是。此明大用無限。此科無隨心應量之文者，以心即識心，量亦識量，不復自隨自應，故不列焉。但言識性，能含能吐，含即包藏義，吐即出生義。此即稱性所起之大用，藏性能含裹十方，無際虛空，何況空中，所有世界眾生耶？藏性能顯現十方，無盡虛空，以及空中所有一切諸法，識亦如是。故相宗云：「萬法唯識」也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳五</span><span class="ke-t">雙拂二計</span></li></ul></div>
+<div class="unit"><p class="jing">循業發現。世間無知，惑為因緣，及自然性，皆是識心，分別計度，但有言說，都無實義。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>循有漏、無漏二種之業，發現六凡有情世間、三乘正覺世間，染淨之識。凡、外無有正知正見之眾，迷惑為因緣和合而生，及自然不和合而生。此等皆妄想識心，分別計度，但有戲論之言說，都無真實之了義耳。《正脈》問：「此經首先正破識心，如七處曲搜，三迷決了，名義皆妄，畢竟無體；乃至顯見文中，又復旁兼相形而破，未嘗少假寬容。何後於十八界，即已許為如來藏心，妙真如性，至此愈稱其周徧法界，含吐十虛，是即性之全體，而同彼開顯見性之極量，何前乃妄之至，而後乃真之極乎？」答：「前約初心悟修，須從方便，決擇真妄，捨生死根本，取涅槃妙心，則識須破盡，決定不用；後約圓解普融，無法不真，無法不如，乃至剎塵念劫，無非一真法界，何況識心，不融法界？懸示中雙具二門，此意詳盡，宜研味之。《指掌》云：識之所以為患者，要在不知是妄，良以不知是妄，必至認以為真，遂不復更求真本：因將如來藏心，日汨沒於情塵之中，從迷積迷，浩劫不返。若果知是妄，不認為真，還須會歸如來藏性，如不然者，必至全體灰泯，反將含吐十虛之妙覺明用，永沉幻果，塵劫莫升。所以妙成二智，斷分於焦芽敗種者，豈曰無故？是知前之所以正破旁破者，務令了識是妄；後之所以會相融性者，務令達妄即真，得旨忘筌，微智者不足與道也」。丑三圓彰七大即性周徧竟。併上大科辛初如來破妄顯真竟。</div></details></div>
+<h4 class="ke">楞嚴經講義第八卷終福州鼓山涌泉禪寺圓瑛弘悟述受法弟子明暘日新敬校</h4>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛二</span><span class="ke-t">阿難明心生信</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">壬初</span><span class="ke-t">承示開悟</span></li><li><span class="ke-mk">二</span><span class="ke-t">讚謝獲益</span></li><li><span class="ke-mk">三</span><span class="ke-t">發廣大心壬初分二</span></li></ul></li></ul></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li class="ke-cur"><span class="ke-mk">癸初</span><span class="ke-t">敘承示二敘開悟</span><span class="ke-now">今</span></li></ul></div>
+<div class="unit"><p class="jing">爾時阿難，及諸大眾，蒙佛如來，微妙開示。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此結集經家，敘述阿難，悟明本有真心，發起大乘正信，先敘承示，以為開悟之大本也。爾時，乃如來破妄顯真，已竟之時。微者隱微，昔日權宗，未曾顯說，六識是生死根本，根性是涅槃正因。妙者奧妙，今日實教，廣談了義，直指生滅身中有佛性，一切諸法是真如：此即上三卷之微妙開示。《正脈》云：「通承破妄顯真科中諸文為言，良以此大開解，功夫非近，今當總前，撮其大要，令知微妙之實。破妄心有三：一、七破以密示無處；二、重徵以顯呵非心；三、縱奪以決指無體。是所以破妄心者，極微細而盡精妙矣。顯真心文中亦三：一示見等，而尅就根性，直指其實體。二、示陰等，而廣融諸相，以明其一體。三、示地等，而極顯圓融，以彰其全體。是所以顯真心者，亦可謂極微細而盡精妙矣。」</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">敘開悟</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">子初</span><span class="ke-t">敘心蕩然</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">敘身蕩然</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">身心蕩然，得無罣礙，是諸大眾，各各自知，心徧十方，見十方一切世間，諸所有物，皆即菩提，妙明元心。心精徧圓，含裹十方。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>空，如觀手中，所持葉物。阿難開悟，即是已開見道之眼。自第一卷阿難認識為心，三迷被破，遂即捨妄求真，求如來為發妙明心，為開道眼。如來即為指見是心，顯見不動、不滅、不失、無還、不雜、無礙、不分、超情、離見、經歷十番，可謂發妙明心，而至微細矣！更為會四科，全事即理，融七大全相皆性，普融萬法，可謂發妙明心，而極奧妙矣！由是阿難明心生信，頓開道眼，故有此悟。身心蕩然，得無罣礙者：當以二義釋之：一、達妄本空：昔在迷時，妄認四大假合，為自身相；六塵緣影，為自心相；乃為六根所局，六識所錮，皆成罣礙。今者了達妄身、妄心，本自空寂，蕩然(如漂大水蕩)無存，故得無礙，解脫自在也。二、知真本具：昔在迷時，將本有法性身，妙明心，埋沒於塵勞煩惱之中，幻妄身心之內，今者知法身清淨，徧一切處，則身蕩然；妙心圓明，徧周法界，則心蕩然；無形無相，蕩然寬廓，得無罣礙，得大受用也。是諸大眾，各各自知，心徧十方者：以既蒙如來，微妙開示，不獨當機阿難得悟，是諸同聞大眾，亦多各各自知；自知即悟也。其中大眾，位有淺、深不同，悟有解、證不等，所悟為何？乃悟真心，徧滿十方，包含萬法。較之昔日，認識為心，執心在身內；捨妄求真文云：「不知寂常心性。」不失科中云：「不知色身外洎山河，虛空大地，咸是妙明真心中物。」不雜科中則曰：「云何得知，是我真性？」不分科中又謂：「茫然不知，是義終始！」四科總標文云：「殊不能知，生滅去來，本如來藏，常住妙明，不動周圓，妙真如性。」此皆不自知也。今聞四科，全事即理，七大全相皆性，到此雲散月明，瓜熟蒂落，如人飲水，冷暖自知。心徧十方，見十方虛空，乃依報世界之最大者。在真心中，如觀手中，所持葉物，此則觀大同小也。葉即貝葉，物如菴摩羅果。此悟萬法唯心。妙明元心，即如來藏心。一切包括之詞，世間即情、器二世間，身心世界是也。此皆領上顯見科中，第四顯見不失文云：「色心諸緣，及心所使，諸所緣法，唯心所現；汝身汝心，皆是妙明，真精妙心中所現物。」又領第八顯見不分文云：「此見及緣(即世身心界)，元是菩提，妙淨明體。」又領陰等四科，皆即如來藏性，而成此悟，至此則斥破妄心，顯示真心之旨，方以極領，更不再認緣塵分別為心矣。此悟心包萬法。向者誤認妄想為真心，惑在色身之內，身在界中，界在空中，重重含裹，遺真認妄，迷己為物，曾無超越；今者圓悟真心，惟精惟一，惟是一真法界，純一無雜，周徧圓滿，故曰：心精徧圓。含容萬法，包裹十方，無往而非常住真心，無處不是性淨明體，此則轉小成大也。乃領上七大文中，性真圓融，皆如來藏，而成此悟。以上正敘心蕩然，得無罣礙。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">敘身蕩然</span></li></ul></div>
+<div class="unit"><p class="jing">反觀父母，所生之身，猶彼十方虛空之中，吹一微塵，若存若亡。如湛巨海，流一浮漚，起滅無從，了然自知，獲本妙心，常住不</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此悟正報法身。向者妄認四大假合，以為真身，亦復認物為己，六根各局，四支質礙，處在空界之中，不能超越；今則悟明本有法身，虛廓曠蕩，猶若太虛，反觀父母所生血肉之身，高不過七尺，壽不上百年，總屬幻妄不實，猶彼十方虛空之中，風吹所起一點微塵，至渺小，極幻妄，似有似無。太虛喻法身廣大，微塵喻生身渺小。此身在法性空中，如草露風燈，雖然暫存，終非永存，故曰若存；又如幻事夢境，雖未即亡，終歸滅亡，故曰若亡。此則轉麤為細也。滅。向者誤執此身堅實，今悟法性身，如湛然澄清不動之巨(大也)海；生身如海中所流一浮漚，倏起倏滅，起無所從來，滅無所從去，常處出生，隨處滅盡，乃屬幻妄無常。此則轉實為虛也。了然自知，獲本妙心，常住不滅者：此結身蕩然也。前敘開悟之文，總標身心蕩然，得無罣礙，身即法性身，心即妙明心，因悟法身妙心，故得蕩然無礙。下則先敘心蕩然。阿難與大眾，自知妙心，徧滿十方，萬法唯心，心包萬法，澈悟依報，法法全真。後敘身蕩然，因悟法身廣大，常住不滅，故反觀父母所生之身，如空中一塵，海中一漚，是以結曰：「了然自知」。了然明白，纖毫不昧，親證實到，自知自信，不由他悟也。獲本妙心者：即得親見，本覺妙心。本覺妙心，是本有法身，一向迷時，法身埋沒在五蘊身中；今已開悟，親見本來面目，雖然曰獲，既屬本有，實非新得。此身常無始終，住無去來，無始無終，無去無來，則永劫不滅，故曰「常住不滅」。此亦領前，不滅、不失、無還三科，及釋迷悶科末，清淨本心，本覺常住，會四科一一非因緣，非自然，融七大一一皆如來藏，本無生滅，諸微妙開示，而成此悟也。《正脈》交光法師云：「經家於佛說之後，偈讚之前，特詳敘此者，正以示奢摩他，秘奧觀體，令行人於此著眼；蓋通前三卷工夫，全為揭露，此至妙至密之觀體也。良以眾生常流轉，權乘不究竟者，皆緣未見此體，猶如生盲故也。行人若能於斯所敘，心境一如，不犯思惟，物物頭頭，了然在目，渾是妙心自體，亦不費纖毫功力，身心本來，廓周沙界；但不馳散，積之歲月，而不心開者，未之有也。當知本惟一體，若語正因本性，即空如來藏，以一味真如，更無餘物故。若兼了因，即奢摩他秘密觀照，以親見自心，非作意思惟故。若更不避彌天過犯，則西來直指，正法眼藏，即此而已。但彼直入無分別，此由方便分別，至此無分別處，其歸一也。問：此似意盡無餘，然奢摩他未竟，後二藏未談，彼是何意？答：微密觀照，此方了其密字，以體屬秘奧故也。彼乃兼用，盡其精細，始屬微字，宜酌分之。」初承示開悟竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">讚謝獲益</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">癸初</span><span class="ke-t">讚謝佛法</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">悟獲法身</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">禮佛合掌，得未曾有！於如來前，說偈讚佛：妙湛總持不動尊，首楞嚴王世希有！銷我億劫顛倒想，不歷僧祗獲法身。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此亦經家所敘，禮謝標偈。得未曾有者：向所未悟，今得妙悟，是為昔所未曾有，蓋悟有解悟、證悟之不同，位有深位、淺位之不等。如阿難但解悟而已，是以仍居初果之位，今即以所悟之理，偈讚於佛：此讚謝佛法。上句讚佛，下句上四字讚法，下三字雙讚佛法。標偈中袛標讚佛，以法是佛所證，亦為佛所說，標佛即可攝法。阿難今以所悟之理，即佛所證、所說之法，乃依之而讚佛法。上句依佛所證，法身、般若、解脫三德秘密之藏，圓成法、報、應三身，讚佛三身，是謂讚佛；乃順序而讚，與諸家略有不同。妙湛讚佛法身。法身，為諸法所依之理體，在無情分中為法性，在有情分中為佛性，即眾生本有之佛性，妙覺湛然，徧周法界。眾生在迷，法身埋沒於五蘊山中，我佛因中，悟此妙覺湛然之真心，即法身德。依此自性清淨法身，不生不滅，為因地心，然後圓成，果地修證，得證離垢妙極法身，是謂成佛。經云：「微妙淨法身，湛然映一切。」故讚曰妙湛。總持：讚佛報身。報身以智慧為身，此智即般若妙智，是般若德，人人本有。佛云：大地眾生，個個具有如來智慧德相，即指般若德。眾生迷此，全智成識；我佛因中悟此，依如如智，照如如理，迴光返照，照澈心源，惑盡智圓，轉識成智，得根本智，成自受用報身。此智總持一切智，是為一切智之根本。依根本智，復起後得智，成他受用報身。總持無量，相好莊嚴，能為眾生，作外熏之緣，故讚曰總持。不動：讚佛應身。應身乃應眾生機，所示現之身，觀察眾生，應以勝應身得度者，即現勝應身；應以劣應身得度者；即現劣應身；應以樹神身得度者，即現樹神身；隨機應現，不動本際，普應十方，自在解脫，任運無礙，即解脫德。如佛初說華嚴，以大教不契於小機，由是雙垂兩相，不動寂場，而遊鹿苑，現丈六身，為五比丘說法，故讚曰不動。此以三德三身合釋，以佛證三德成三身，故以讚之。尊字，由佛從因剋果，五住究盡，二死永亡，福慧兩足，九界稱尊。為世間六凡，出世三乘，之所共尊故。首楞嚴王：即阿難所請，世尊所證、所說之法。阿難啟請，十方如來，得成菩提之定。前請說妙奢摩他、三摩、禪那，乃定之別名；後佛告以有三摩提，名大佛頂，首楞嚴王，即三定之總名。今以總名讚之。首楞嚴譯為一切事究竟堅固，佛證此究竟堅固之定，前說四科七大，一切事相之法，一一會歸如來藏性，本不動搖，本不生滅，自性天然妙定，即首楞嚴定也。此定為定中之王，能統百千三昧。阿難聞此悟此，故以所悟之定名讚之。世希有三字，雙讚佛法，難逢難遇。如法華經云：「諸佛出於世，懸遠值遇難；正使出於世，說是法復難；譬如優曇花，時時乃一現。」豈非世所希有耶？癸二悟獲法身此明所獲之益。上句斷妄益，下句明真益。銷者銷除，億劫即無量，非局定數；顛倒想者，迷真認妄，執妄為真，真妄顛倒。迷心在身內，惑法在心外，身心萬法，各有自體，妄認身心為實我，萬法為實法，我、法二執顛倒重重錮蔽。將本有法身，迷不自知，則非失似失，若一旦開悟，親見本來面目，則無得為得矣！今聞如來，循循善誘，破緣影之非心，指根中之佛性，十番正示，二見翻顯，更會四科，則妄即真，復融七大，全相全性，將本有法身，和盤托出，如云開見日，冰化為水，億劫顛倒妄想，一旦銷除矣！而此銷除之功，一由如來微妙開示，二由阿難悟明心性，如若不悟真心，安得銷除妄惑？不歷僧祗獲法身者：梵語阿僧祗劫，此云無數劫。劫者劫波，乃長時分。《婆沙論》云：「三祗修六度行，百劫種相好因，然後獲五分法身。」《唯識論》云：「地前歷一僧祗，初地至七地，滿二僧祗，八地至等覺，是三僧祗，然後究竟法身。」今阿難自敘，不必經歷三大阿僧祗劫，已獲法身，以為致疑之端。致疑有三：一、執婆沙唯識，權乘不了之義，疑今大乘圓實之旨；二、阿難希除細惑，早登妙覺，是未獲法身之明證；三、阿難仍居初果，至如來說定已竟，方得進位於二果，何得遽云，不歷僧祗獲法身耶？以致議論紛紛，莫衷一是。今特詳釋：第一當究獲字；獲者得也，有悟得證得之不同。阿難煩惱障重，所知障輕，況已發大心，已求佛定，佛為重重開示，直指本有真心，以為菩提正因，此心不生滅，不動搖，即人人本具清淨法身，昔被顛倒妄想之所覆蓋，現倒想已銷，如雲開自當見日，則親見本有佛性，而云悟獲法身者，何過？第二當究權實教殊：權教多重事相，必假修成，實教則重性具，貴在了悟。未悟之先，法身本自現成，圓覺經云：「一切眾生，本來成佛」，倘能一念迴光，便同本得，但離妄緣，即如如佛。豈同權漸之教，必歷僧祗，方獲法身耶？第三當究圓實教旨：行布不礙圓融，圓融不礙行布，此如正脈疏，交光法師云：按圓教教旨，則行布不礙圓融，故雖未及斷惑究竟，不妨全獲法身，全體即佛。如前開示，迷心於色身之中者，既名為性顛倒，至後開悟，見心於太虛之外者，豈不號為正徧知哉？正徧知，即成正覺，而獲法身矣。然則執現果，而不許阿難獲法身者，失旨之甚也。又圓融不礙行布，故雖全獲法身，不妨更除細惑，更歷諸果，更成究竟寶王也。此經後云：「理則頓悟，乘悟併銷；事非頓除，因次第盡。」可為明證矣。如是則雖卻後，更歷僧祗，以成究竟佛果，當亦與此不歷之前，先獲法身，了不相礙也。何況圓頓悟後之脩，念念是佛，雖進斷通惑，亦與權漸脩者，日劫相倍。至於住後，斷別惑以去，一生有圓曠劫之果者矣。如是則雖謂其卻更不歷乎僧祗，亦無礙也。若更取於延促同時之玄旨，愈不可以長短拘矣。二讚謝獲益竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">發廣大心</span><span class="ke-div">分5</span><ul><li class="ke-cur"><span class="ke-mk">癸初</span><span class="ke-t">發願報恩</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">誓度眾生</span></li><li><span class="ke-mk">三</span><span class="ke-t">求除細惑</span></li><li><span class="ke-mk">四</span><span class="ke-t">速成正覺</span></li><li><span class="ke-mk">五</span><span class="ke-t">申述不退</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>願今得果成寶王，還度如是恆沙眾。將此深心奉塵剎，是則名為報</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>佛恩。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難既已悟獲法身，自知成佛有分，故發願成佛度生，報佛開示之深恩。今字</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>對前說，前悟獲法身，但是理法身，今欲依悟起脩，冀得究竟法身，故發願自今以</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>往，精進修持，早得菩提佛果，成就寶王。寶王即佛寶法王，於法自在也。此句乃</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>運智，上求佛道以自利；下句乃運悲，下度眾生以利他。還字即表示不但自利，還</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>要利他，度脫如是，恆河沙數之眾生。將此深心奉塵剎，是則名為報佛恩者：此字</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>指上智悲二心，將此深心四字，雙運二心，而束為深心。願將此深心，回奉十方，</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>微塵剎土，諸佛眾生，於佛則常隨受學，以求慧足；於生則廣行濟度，以求福足，</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>莊嚴成佛國土，是則名為報答我佛，微妙開示之深恩也。此偈兩句，亦即四弘誓</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>願：首句佛道無上誓願成，兼攝煩惱無盡誓願斷，以斷盡煩惱，方證菩提故；次句</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>眾生無邊誓願度，兼攝法門無量誓願學，以必達法門，方能度生故。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">誓度眾生</span></li></ul></div>
+<div class="unit"><p class="jing">伏請世尊為證明，五濁惡世誓先入，如一眾生未成佛，終不於此取</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>泥洹。前偈發願度生，是果後自覺已圓，然後覺他；此偈五濁誓入，是果前自未得度，先度人也。以願重力微，故俯伏啟請世尊，為作證明，實求慈光加被，令得不退，滿斯弘願。五濁惡世誓先入者：此急於救苦也。五濁：一劫濁：梵語劫波，此云時分，劫濁無別體，即下四濁交湊，是其相也。時當減劫，人壽減至二萬歲，眾生具下四濁，即名劫濁。二見濁：五利使為體，諸見熾盛，即其相也。五利使者，五種妄見，能使眾生，造作諸業，能使眾生，趣入生死，故名為使，而幾微迅速，非比五鈍使，故名為利。一者身見：執身為我，而起我身之見，妄生貪愛。不悟四大假合，總屬無常。二者邊見：執有執空，而起二邊之見，一味偏執，不悟見解既偏，失乎中道。三者戒取：非因計因，而起我能持戒之見，修諸苦行，不悟蒸沙作飯，塵劫難成。四者見取：非果計果，而起自負所見之見，未證言證，不悟有漏界中，終非究竟。五者邪見：撥無因果，而起邪外斷常之見，墮豁達空，不悟雜毒入心，自誤誤人。此五種妄見，昏昧汨沒，渾濁自性，故名見濁。三煩惱濁：五鈍使為體，三災感召，即其相也。五鈍者，五種妄心，能使眾生，造諸惡業，能使眾生，趣入生死，故亦名使，比前五利，稍為鈍滯，故名為鈍。一者貪心：於順情境上，起諸貪愛。二者瞋心：於違情境上，起諸瞋恨。三者癡心：於中庸境上，非違非順，起諸癡迷，不能覺察。四者慢心：於諸眾生，心起驕慢，不能謙遜。五者疑心：於諸善法，心起疑貳，不能決擇，此五種妄心，煩動惱亂，渾濁自性，故名煩惱濁。四眾生濁：攬五陰見慢為體，惡名穢稱，即其相也。眾生積聚五陰為身，故曰攬五陰。外身四大假合，屬色陰；內心前五識，領受五塵境界，為受陰，雖諸識皆有受，惟五識受力偏強，故以屬之；六識想像前塵，落卸影子，即想陰；雖諸識皆有想，惟六識想力最勝，故以屬之；七識恆審思量，念念相續，如急流水，遷流不息，即行陰，雖諸識皆有思，惟七識思力偏重，故以屬之。有以中間三陰，配受、想、思三心所，尚有四十八心所，收攝未盡，今以四陰，分屬八識，則心王心所，攝無不盡，心所即攝諸識中矣。八識執持息、暖、壽三，一期住世，識在身中，乃有煖氣，壽命未盡，識若離身，便生冷觸，壽命斷絕；執持此身，不至散壞者，即識陰，是謂攬五陰。見慢果報者，見是橫計主宰，為見我，慢是俱生主宰，為慢我；前世所作業因，今世所受果報，以為其體。惡名穢稱者，眾生之名，鄙惡下賤，色心劣穢，生死輪迴，備嬰眾苦，故名眾生濁。五命濁：色心連持為體，催年減壽，則其相也。色即地、水、火、風之色法，心即見、聞、覺、知之心法。人生攬地、水、火、風四大為身，四大本無知之物，因有八識見分，旋令覺知，見分本一精之體，因四大色法，壅令留礙，元依一精明，分作六和合。色、心連屬，執持不散，足為命根，故以為體。催年減壽者，以人生上壽，不過百年，脩短無定，生死不測，故云命濁：是為五濁之世。人壽從二萬歲，過一百年減一歲，減至一百歲時，五濁熾盛，其苦轉劇，名為五濁惡世。眾生剛強，難調難伏，我佛於此時候，出現於世。阿難亦誓願，先入濁世度生，欲步本師之後塵也。如一眾生未成佛，終不於此取泥洹者：此廣大心，與常時心也。誓願度盡眾生，如地藏菩薩，願行堅強，眾生度盡，方證菩提；地獄未空，誓不成佛，無二無別。取泥洹即取證涅槃，泥洹亦翻滅度，乃梵音楚夏之別。不取有二：一、不取二乘獨得涅槃；二、不取諸佛究竟涅槃。即眾生度盡，我願方盡，亦即眾生度盡，方證菩提也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">求除細惑</span></li></ul></div>
+<div class="unit"><p class="jing">大雄大力大慈悲，希更審除微細惑。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>上句讚佛德，下句求斷惑。佛尅備二嚴，具足萬德，此略舉而讚。以佛具智德，能破微細深惑，稱大雄；能拔無明深根稱大力；能與眾生究竟之樂，稱大慈；能拔眾生生死之苦，稱大悲。是以希求我佛，更為審除微細惑，此惑有二分別；一、界內思惑；二、界外無明。思惑是煩惱障細分，無明是所知障細分，阿難雖悟獲法身，而此二惑俱在，故欲加功用行，求佛更為開示審除。第四卷佛答滿慈，兼示阿難，即審除也。阿難悟後請脩，至第八卷結經畢，方斷根中，積生無始虛習。文云：「斷除三界修心，六品微細煩惱」，進位於二果，尚有七十五品未斷，「何況此中生、住、異、滅，分劑頭數。」界外無明，是微而又微，細而又細也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸四</span><span class="ke-t">速成正覺</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>令我早登無上覺，於十方界坐道場。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>此半偈，承上半偈。佛以大雄大力，除我細惑，自可令我早登無上之覺道，即</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>佛果究竟覺；此仗佛大悲，拔二種生死之苦，得證無餘涅槃，方登無上大覺之位。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>更望佛大慈，與福慧二嚴之樂，於十方世界，應機示現，現坐道場，說法利生也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸五</span><span class="ke-t">申述不退</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>舜若多性可銷亡，鑠迦羅心無動轉。</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>舜若多此云空，鑠迦羅此云堅固。阿難已發上求下化，廣大心、第一心、常</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>心、不顛倒心，四心並發，四弘深誓。結云：縱使空性，可以銷亡，而我堅固之</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>心，決無動轉，即所謂虛空有盡，我願無窮也。從正宗至此，說法當為一周，名破</div></details></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>妄顯真周。庚初銷倒想明妄真以現信竟。</div></details></div>
+</div>
+          <a class="backlink" href="/study-group/shurangama/">← 回楞嚴經總覽</a>
+        </section>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(!tools)return;
+  tools.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-act]');if(!b)return;
+    var open=b.getAttribute('data-act')==='open';
+    document.querySelectorAll('.sutra details.ann').forEach(function(d){d.open=open;});
+  });
+})();
+
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！卷一重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>
