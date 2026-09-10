@@ -311,6 +311,8 @@ HANDMADE_PAGES=[
     "/column/Da-Hui/making-time-count/",
     "/column/Da-Hui/four-hearts-of-dharma/",
     "/column/Da-Hui/life-and-faith/",
+    "/news/shuwen/",
+    "/news/ulambana-2026/",
 ]
 
 out2path={}
