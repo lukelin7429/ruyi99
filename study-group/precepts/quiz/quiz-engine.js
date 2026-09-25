@@ -1,16 +1,12 @@
 (function(){
 "use strict";
 var ROUNDS = window.WLS_QUIZ_ROUNDS || [];
-var ENDPOINT = window.WLS_QUIZ_ENDPOINT || "";
 var LETTERS = ["A","B","C","D","E","F"];
-var state = { roundIdx: -1, qIdx: 0, score: 0, correct: 0, answers: [], locked: false };
-var done = {};
+var state = { roundIdx: -1, qIdx: 0, score: 0, correct: 0, locked: false };
 
 function qs(s){ return document.querySelector(s); }
 function qsa(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
 function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
-
-function getName(){ return qs("#quizName").value.trim(); }
 
 function renderGrid(){
   var grid = qs("#missionGrid");
@@ -19,20 +15,38 @@ function renderGrid(){
     return '<button class="mission" data-idx="' + i + '"' + (count === 0 ? " disabled" : "") + '>' +
       '<h3>' + esc(r.title) + '</h3>' +
       '<p>' + esc(r.range) + '　' + esc(r.theme) + '</p>' +
-      (count === 0 ? '<p style="margin-top:6px;color:#b98">（題目準備中）</p>' : '') +
+      (count === 0 ? '<p style="margin-top:6px;color:#b98">（題目準備中）</p>' : '<p style="margin-top:6px;color:#7c2942;font-weight:700">' + count + ' 題 · 開始作答 →</p>') +
       '</button>';
   }).join("");
   qsa(".mission").forEach(function(btn){
     btn.addEventListener("click", function(){
       if (btn.disabled) return;
-      if (!getName()){
-        alert("請先在上方填寫姓名，再開始作答。");
-        qs("#quizName").focus();
-        return;
-      }
       startRound(Number(btn.dataset.idx));
     });
   });
+  renderAnswerKey();
+}
+
+/* 答案與解析總表：不必作答也能直接在頁面上看完整題目、正解與解析 */
+function renderAnswerKey(){
+  var box = qs("#answerKey");
+  if (!box) return;
+  var html = ROUNDS.filter(function(r){ return (r.questions || []).length; }).map(function(r){
+    var items = r.questions.map(function(q, n){
+      var h = '<li><div class="ak-q"><span class="ak-tag">' + (q.type === "tf" ? "是非" : "單選") + '</span>' + esc(q.q) + '</div>';
+      if (q.type === "tf"){
+        h += '<div class="ak-a">正解：' + (q.answer ? "○ 是" : "✗ 非") + '</div>';
+      } else {
+        h += '<ul class="ak-opts">' + q.options.map(function(o, i){
+          return '<li' + (i === q.answer ? ' class="ok"' : '') + '>' + LETTERS[i] + '. ' + esc(o) + (i === q.answer ? '　✔ 正解' : '') + '</li>';
+        }).join("") + '</ul>';
+      }
+      h += '<div class="ak-x">' + esc(q.explain) + (q.source ? '（出自：' + esc(q.source) + '）' : '') + '</div></li>';
+      return h;
+    }).join("");
+    return '<h3 class="ak-h">' + esc(r.title) + '　' + esc(r.theme) + '<small>' + esc(r.range) + '</small></h3><ol class="ak-list">' + items + '</ol>';
+  }).join("");
+  box.innerHTML = '<details class="ak"><summary>看全部答案與解析（不必作答，展開即可閱讀）</summary><div class="ak-body">' + html + '</div></details>';
 }
 
 function startRound(idx){
@@ -40,7 +54,6 @@ function startRound(idx){
   state.qIdx = 0;
   state.score = 0;
   state.correct = 0;
-  state.answers = [];
   state.locked = false;
   renderQuestion();
 }
@@ -91,7 +104,7 @@ function handleAnswer(btn, q){
   if (state.locked) return;
   state.locked = true;
   var chosenVal = btn.dataset.val === "true" ? true : (btn.dataset.val === "false" ? false : Number(btn.dataset.val));
-  var isCorrect = (q.type === "tf") ? (chosenVal === q.answer) : (chosenVal === q.answer);
+  var isCorrect = chosenVal === q.answer;
   btn.classList.add(isCorrect ? "good" : "bad");
   if (!isCorrect){
     qsa("#qChoices .choice").forEach(function(b){
@@ -102,7 +115,6 @@ function handleAnswer(btn, q){
   qsa("#qChoices .choice").forEach(function(b){ b.disabled = true; });
   qs("#qFeedback").innerHTML = (isCorrect ? "✅ 答對了。" : "❌ 再想想。") + " " + esc(q.explain) + (q.source ? "（出自：" + esc(q.source) + "）" : "");
   if (isCorrect){ state.score += 1; state.correct += 1; }
-  state.answers.push({ q: state.qIdx + 1, correct: isCorrect });
   var nextBtn = qs("#nextBtn");
   if (nextBtn){
     nextBtn.style.display = "inline-block";
@@ -113,44 +125,14 @@ function handleAnswer(btn, q){
 function finishRound(){
   var round = currentRound();
   var total = round.questions.length;
-  done[state.roundIdx] = true;
   qsa(".mission")[state.roundIdx] && qsa(".mission")[state.roundIdx].classList.add("done");
   var html = '<div class="stage active game-panel"><div class="finish">';
-  html += '<div class="finish-card"><h3>' + esc(round.title) + ' 完成</h3><div class="finish-score">' + state.correct + ' / ' + total + '</div><p class="stage-lead" style="margin-top:8px">答對 ' + state.correct + ' 題，共 ' + total + ' 題。</p><p class="submit-state" id="submitState">正在送出成績…</p></div>';
-  html += '<div class="finish-card"><h3>接下來</h3><ul style="margin:0;padding-left:20px;color:var(--sub);line-height:1.9"><li>可以回小考首頁挑戰其他回次</li><li>也可以重新作答本回，加深印象</li></ul><div class="navrow"><button class="game-btn" id="retakeBtn">重新作答本回</button><button class="game-btn secondary" id="backGrid2">回小考首頁</button></div></div>';
+  html += '<div class="finish-card"><h3>' + esc(round.title) + ' 完成</h3><div class="finish-score">' + state.correct + ' / ' + total + '</div><p class="stage-lead" style="margin-top:8px">答對 ' + state.correct + ' 題，共 ' + total + ' 題。</p></div>';
+  html += '<div class="finish-card"><h3>接下來</h3><ul style="margin:0;padding-left:20px;color:var(--sub);line-height:1.9"><li>重新作答本回，加深印象</li><li>回小考首頁挑戰其他回次</li><li>或展開下方「全部答案與解析」逐題複習</li></ul><div class="navrow"><button class="game-btn" id="retakeBtn">重新作答本回</button><button class="game-btn secondary" id="backGrid2">回小考首頁</button></div></div>';
   html += '</div></div>';
   qs("#stageArea").innerHTML = html;
   qs("#retakeBtn").onclick = function(){ startRound(state.roundIdx); };
   qs("#backGrid2").onclick = function(){ qs("#stageArea").innerHTML = ""; };
-  submitResult(round, total);
-}
-
-function submitResult(round, total){
-  var stateEl = qs("#submitState");
-  if (!ENDPOINT || ENDPOINT.indexOf("REPLACE_WITH") === 0){
-    if (stateEl) stateEl.textContent = "（尚未設定後台網址，成績僅顯示於畫面，未送出紀錄）";
-    return;
-  }
-  var payload = {
-    name: getName(),
-    course: window.WLS_QUIZ_COURSE || "",
-    round: round.id,
-    roundTitle: round.title,
-    score: state.score,
-    total: total,
-    correct: state.correct,
-    answers: state.answers
-  };
-  fetch(ENDPOINT, {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "text/plain;charset=utf-8" },
-    body: JSON.stringify(payload)
-  }).then(function(){
-    if (stateEl) stateEl.textContent = "✅ 成績已送出紀錄。";
-  }).catch(function(){
-    if (stateEl) stateEl.textContent = "⚠️ 成績送出失敗，請確認網路連線後重新作答一次本回。";
-  });
 }
 
 renderGrid();
