@@ -267,6 +267,7 @@ HANDMADE_PAGES=[
     "/column/Lucien/buddhist-leadership/page-2/",
     "/column/Lucien/buddhist-leadership/page-3/",
     "/column/Lucien/life-in-breath/",
+    "/column/Lucien/four-siddhantas/",
     "/study-group/perfection-of-wisdom/life-topics/",
     "/column/Yi-cheng/iced-latte/",
     "/column/Yi-cheng/six-animals/",
