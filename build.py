@@ -288,6 +288,7 @@ HANDMADE_PAGES=[
     "/column/Cai-Ling/last-thought/",
     "/column/Cai-Ling/karma-design/",
     "/column/Cai-Ling/oil-lamp/",
+    "/column/Cai-Ling/cloud-push/",
     "/column/Da-Hui/",
     "/column/Da-Hui/purpose-of-life/",
     "/column/Da-Hui/three-benefits-of-learning-buddhism/",
