@@ -403,6 +403,18 @@ main{padding:48px 0 70px}
 .carousel .dot{width:10px;height:10px;border-radius:50%;border:0;cursor:pointer;
   background:rgba(255,255,255,.5);transition:.2s}
 .carousel .dot.on{background:#fff;width:26px;border-radius:6px}
+/* 簡報輪播（carousel 的變體）：手動翻頁、圓點在圖下方、點圖放大 */
+.carousel.deck{width:100%;max-width:760px;aspect-ratio:auto;margin:10px auto 26px}
+.carousel.deck .slides{position:relative;inset:auto;aspect-ratio:16/9}
+.carousel.deck .slide{pointer-events:none;transition:opacity .35s ease}
+.carousel.deck .slide.on{pointer-events:auto}
+.carousel.deck .slide::after{display:none}
+.carousel.deck .slide-fg{cursor:zoom-in}
+.carousel.deck .car-nav{top:calc(50% - 19px);width:40px;height:40px;font-size:23px}
+.carousel.deck .car-nav.prev{left:10px}.carousel.deck .car-nav.next{right:10px}
+.carousel.deck .dots{position:static;padding:12px 0 14px}
+main figure.rvl img[data-img]{cursor:zoom-in}
+.lb-box img{width:100%;height:100%;object-fit:contain;display:block}
 
 /* ---------- 法會 schedule ---------- */
 .sched-note{max-width:var(--maxw);margin:0 auto 18px;color:var(--sub);font-size:15px;text-align:center}
