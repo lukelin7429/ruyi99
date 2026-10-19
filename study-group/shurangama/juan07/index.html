@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《大佛頂首楞嚴經》卷七 導讀 · 如意精舍讀書會</title>
+  <meta name="description" content="《楞嚴經》卷七導讀與經文：序分、七處徵心、二種根本、十番顯見（顯見是心、顯見不動）。依圓瑛法師《講義》判科，附跨經論對讀地圖與 CBETA 經文。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    /* 經文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .jing-credit { color:var(--muted); font-size:.95rem; margin:0 0 8px; }
+    .jing-subhead { margin:16px 0 6px; color:#3d342b; font-size:1.05rem; }
+    .sutra { margin-top:18px; padding:24px 26px; border:1px solid var(--line); border-radius:8px;
+      background:#fff; }
+    .sutra p { font-size:1.12rem; line-height:2.05; text-indent:2em; margin:0 0 16px; color:#2a2620; }
+    .sutra p:last-child { margin-bottom:0; }
+    /* 經文＋圓瑛《講義》消文 逐段 toggle */
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700; text-indent:0;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .ke-tree-wrap { margin:30px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    .ke-tree-wrap:first-child { margin-top:0; }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.7; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    .ke-now { margin-left:.5em; font-size:.72rem; font-weight:700; color:#fff;
+      background:var(--saffron); border-radius:5px; padding:.5px .5em; }
+    li.ke-cur { background:rgba(185,111,39,.09); border-radius:5px; }
+    li.ke-cur > .ke-mk { color:var(--saffron); }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.16rem; line-height:2.0; text-indent:2em; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"▸"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; text-indent:2em; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} .sutra{padding:18px;} .sutra p{font-size:1.06rem;text-indent:2em;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/shurangama/">楞嚴經</a> › 卷七</p>
+        <p class="eyebrow">如來藏 · 大佛頂首楞嚴經 · 卷七</p>
+        <h1>《楞嚴經》卷七 導讀</h1>
+        <p class="subtitle">四種清淨明誨之後，佛為「宿習不能滅除」的人開出持咒一門：建立道場、三七日行道，並由佛頂化佛重宣「大佛頂首楞嚴神咒」，廣說咒心功德。末段阿難請問修行位次，佛先說眾生、世界二種顛倒，以及由此而有的十二類生。</p>
+        <ul class="meta" aria-label="本卷資訊">
+          <li>判科依據：圓瑛《講義》</li>
+          <li>經文來源：CBETA T19n0945</li>
+          <li>科段：持咒 · 建立道場 · 楞嚴神咒 · 二種顛倒 · 十二類生</li>
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本卷定位</a>
+        <a href="#why">為何要持咒</a>
+        <a href="#altar">建立道場 · 三七行道</a>
+        <a href="#mantra">楞嚴神咒與咒心功德</a>
+        <a href="#inverted">二種顛倒 · 十二類生</a>
+        <a href="#practice">本卷修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#sutra">經文（卷七）</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>本卷定位</h2>
+          <p class="lead">卷六以四種清淨明誨立下戒的基礎。<strong>卷七回答：持戒之外，宿世習氣不能滅除怎麼辦？</strong>佛開出持咒一門，詳說道場建立、三七日行道的方法，並由佛頂化佛重宣楞嚴神咒。卷末阿難問修行階位，佛先說二種顛倒與十二類生，作為卷八五十五位的前提。</p>
+          <div class="quote">若有宿習不能滅除，汝教是人一心誦我佛頂光明摩訶薩怛多般怛囉無上神呪。</div>
+          <div class="grid">
+            <article class="key-card"><b>次第：戒先咒後</b><p>先持四種律儀「皎如氷霜」，宿習難除時才以神咒助道。</p></article>
+            <article class="key-card"><b>方法：道場行道</b><p>建壇、懸鏡、燒香，三七日頂禮、發願、持咒，十方如來鏡交光處摩頂。</p></article>
+            <article class="key-card"><b>轉入：顛倒之源</b><p>眾生顛倒、世界顛倒展轉成十二類生，為修行位次的前提。</p></article>
+          </div>
+        </section>
+
+        <section id="why">
+          <h2>為何要持咒</h2>
+          <p>本卷開頭承接卷六：「阿難！汝問攝心，我今先說入三摩地修學妙門。」修三摩地，<strong>先持四種律儀</strong>：</p>
+          <div class="quote">要先持此四種律儀，皎如氷霜，自不能生一切枝葉。心三口四，生必無因。</div>
+          <p>婬殺盜妄四事不失，「心尚不緣色、香、味、觸，一切魔事云何發生？」但若宿世習氣深厚，持戒之外仍需助力，佛便教人一心誦持佛頂神咒。</p>
+          <div class="note"><strong>導讀提醒：</strong>「心三口四」指十惡業中意業三種、口業四種。持四根本戒如砍斷樹根，十惡的枝葉自然不生。持咒是在這個基礎上加功，不是替代。</div>
+        </section>
+
+        <section id="altar">
+          <h2>建立道場 · 三七行道</h2>
+          <p>佛詳說末世眾生建立道場的方法：</p>
+          <ul>
+            <li><strong>淨地</strong>：取雪山大力白牛之糞，和栴檀泥地；若非雪山，則「於平原穿去地皮，五尺已下取其黃土」，和栴檀、沈水等香泥地。</li>
+            <li><strong>壇場</strong>：方圓丈六，作八角壇；中心置金銀銅木所造蓮華，華中安缽，缽中盛八月露水；外建十六蓮華、十六香鑪，純燒沈水。</li>
+            <li><strong>懸鏡</strong>：壇中安鏡，又取八鏡覆懸虛空，與壇中之鏡方面相對，「使其形影重重相涉」。</li>
+            <li><strong>聖像</strong>：當陽張盧舍那、釋迦、彌勒、阿閦、彌陀及諸大變化觀音形像，左右安金剛藏、帝釋、梵王、烏芻瑟摩等護法。</li>
+          </ul>
+          <table>
+            <thead><tr><th>時段</th><th>功課</th></tr></thead>
+            <tbody>
+              <tr><td class="n">初七日</td><td>至誠頂禮十方如來、諸大菩薩及阿羅漢；六時誦咒繞壇，至心行道，一時常行一百八遍。</td></tr>
+              <tr><td class="n">第二七</td><td>一向專心發菩薩願，心無間斷。</td></tr>
+              <tr><td class="n">第三七</td><td>於十二時一向持佛般怛羅咒。至第七日，十方如來一時出現，鏡交光處承佛摩頂。</td></tr>
+            </tbody>
+          </table>
+          <div class="note"><strong>關鍵辨正：</strong>道場的鏡子「形影重重相涉」，象徵法界重重無盡的境界。整個壇儀的設計，可以看作卷三所說七大周遍法界、互不相礙的具體呈現。</div>
+        </section>
+
+        <section id="mantra">
+          <h2>楞嚴神咒與咒心功德</h2>
+          <p>阿難請佛重宣神咒。世尊從肉髻中涌百寶光，光中出千葉寶蓮，有化如來坐寶華中，頂放十道百寶光明，「佛無見頂相放光如來宣說神呪」。咒全文見下方經文區「楞嚴咒全文」。</p>
+          <p>說咒之後，佛廣讚咒心功德，一連串排比：</p>
+          <div class="quote">十方如來因此呪心，得成無上正遍知覺。十方如來執此呪心，降伏諸魔、制諸外道。……十方如來持此呪心，能於十方摩頂授記。</div>
+          <table>
+            <thead><tr><th>五會</th><th>句數範圍</th></tr></thead>
+            <tbody>
+              <tr><td class="n">毘盧真法會</td><td>第一至一百三十七句</td></tr>
+              <tr><td class="n">釋尊應化會</td><td>至一百七十八句</td></tr>
+              <tr><td class="n">觀音合同會</td><td>至二百七十二句</td></tr>
+              <tr><td class="n">剛藏折攝會</td><td>至三百三十二句</td></tr>
+              <tr><td class="n">文殊弘傳會</td><td>至四百二十七句（「哆姪他」起至咒終）</td></tr>
+            </tbody>
+          </table>
+          <div class="note"><strong>關於版本：</strong>CBETA《大正藏》本卷內文另收一種音譯（附漢譯小注），本頁採用卷末所附、亦即漢傳寺院通行持誦的四百二十七句本（「南無薩怛他蘇伽多耶……」），與圓瑛《講義》所據相同。</div>
+        </section>
+
+        <section id="inverted">
+          <h2>二種顛倒 · 十二類生</h2>
+          <p>阿難問：修行要經過哪些階位，才能入大涅槃？佛先從根源說起。<strong>一切眾生與世界都是顛倒而成</strong>：</p>
+          <ul>
+            <li><strong>眾生顛倒</strong>：「由性明心，性明圓故，因明發性，性妄見生，從畢竟無成究竟有。」與卷四「性覺必明，妄為明覺」同一義。</li>
+            <li><strong>世界顛倒</strong>：「是有所有，分段妄生，因此界立。非因所因，無住所住，遷流不住，因此世成。」三世四方和合相涉，變化眾生成十二類。</li>
+          </ul>
+          <p>十二類生：<strong>卵生、胎生、濕生、化生、有色、無色、有想、無想、非有色、非無色、非有想、非無想</strong>。每一類都配以一種輪迴與顛倒，如卵生由「世界虛妄輪迴，動顛倒故」，胎生由「世界雜染輪迴，欲顛倒故」，各和合成八萬四千種亂想。</p>
+          <div class="note"><strong>導讀提醒：</strong>這一段是卷八五十五位的引子。先講清楚眾生怎麼從真性「顛倒」出來，下一卷才講怎麼一步步「轉回去」。</div>
+        </section>
+
+        <section id="practice">
+          <h2>本卷修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>戒為咒基</b><p>持咒的效力建立在持戒之上。宿習深重時，咒是增上緣。</p></article>
+            <article class="key-card"><b>三七專修</b><p>頂禮、發願、持咒依次而進，是一套可實修的密集用功模式。</p></article>
+            <article class="key-card"><b>認清顛倒</b><p>十二類生都是顛倒所成，修行的方向就是逆著顛倒回歸本覺。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完卷七導讀後，用以下考題自我檢驗。<strong>單選題</strong>與<strong>是非題</strong>即時對答、看解析並累計分數；<strong>思考題</strong>點開參考答案自行對照、不計分。</p>
+          <p class="quiz-group-title">一、單選題</p>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">1</span>佛在什麼情況下，教人一心誦持佛頂神咒？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>已證阿羅漢果之後</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>持四種律儀後，仍有宿習不能滅除</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>只要想求世間福報</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>不能受戒的人</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>B。「若有宿習不能滅除，汝教是人一心誦我佛頂光明摩訶薩怛多般怛囉無上神呪。」持咒是在持戒的基礎上，對治無始宿習。</p>
+          </div>
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">2</span>「要先持此四種律儀」，四種指的是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>佛、法、僧、戒</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>身、口、意、心</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>戒、定、慧、解脫</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>不婬、不殺、不偷、不大妄語</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>D。即卷六四種清淨明誨。經云持此四種律儀「皎如氷霜，自不能生一切枝葉」。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>道場三七日行道，第三個七日的功課是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>於十二時一向持佛般怛羅咒</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>至誠頂禮十方如來</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>一向專心發菩薩願</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>默然坐禪不語</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>A。初七日至誠頂禮、六時誦咒繞壇；第二七一向專心發菩薩願；第三七於十二時一向持佛般怛羅咒。</p>
+          </div>
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">4</span>楞嚴神咒在本卷中由誰宣說？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>觀世音菩薩</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>文殊師利菩薩</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>佛頂放光、光中化佛宣說</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>金剛藏菩薩</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>C。世尊從肉髻中涌百寶光，光中出千葉寶蓮，有化如來坐寶華中，頂放十道百寶光明，「佛無見頂相放光如來宣說神呪」。</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">5</span>十二類生是由哪兩種顛倒展轉而有？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>見顛倒與想顛倒</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>眾生顛倒與世界顛倒</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>常顛倒與樂顛倒</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>因顛倒與果顛倒</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>B。佛先說眾生顛倒、世界顛倒，再由此說卵、胎、濕、化等十二類眾生。</p>
+          </div>
+          <p class="quiz-group-title">二、是非題</p>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>經中說：十方如來因此咒心，得成無上正遍知覺。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>正確。「十方如來因此呪心，得成無上正遍知覺。十方如來執此呪心，降伏諸魔、制諸外道。」以下廣說十方如來乘此咒心、持此咒心的功德。</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">7</span>依本經，楞嚴咒可以取代持戒，不持戒而專持咒即可成就。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>錯誤。經文次第是先持四種律儀，「若有宿習不能滅除」才教持咒。咒是助道，不是捨戒的捷徑。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">8</span>楞嚴咒凡分五會，共四百二十七句。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>正確。圓瑛消文：毘盧真法會、釋尊應化會、觀音合同會、剛藏折攝會、文殊弘傳會，共四百二十七句。</p>
+          </div>
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+          <details class="reflect"><summary>思考題一：為什麼持咒放在持戒之後？</summary><div class="detail-body"><p>戒是從心上斷四種根本流失（婬殺盜妄）。但無始以來的習氣不是一受戒就能消盡，所以佛在戒的基礎上開持咒一門，對治宿習。次第是：戒為基礎，咒為增上，目標仍是三摩地。你正在背楞嚴咒，可以留意持誦時心是否也在「攝」。</p></div></details>
+          <details class="reflect"><summary>思考題二：咒是「密語」，不解其義也能有功德嗎？</summary><div class="detail-body"><p>（開放題）古德說咒有五不翻，其中「祕密故不翻」。楞嚴經本身的說法是：咒心是十方如來成道、降魔、說法、授記所依。不解字義，不等於不知其用。持咒時心專一、不雜念，本身就是收攝六根的工夫，和卷五大勢至「都攝六根」相通。</p></div></details>
+          <details class="reflect"><summary>思考題三：十二類生的分類，對修行有什麼提醒？</summary><div class="detail-body"><p>（開放題）十二類生（卵胎濕化、有色無色、有想無想、非有色、非無色、非有想、非無想）都是「顛倒」的產物。這一段在全經結構上是為卷八的修行位次鋪路：先看清眾生從何處顛倒而來，才知道修行要從何處回頭。</p></div></details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <p>卷七的主題在其他經論中的對應，方便讀書會延伸閱讀。</p>
+          <details open>
+            <summary>展開／收合 · 跨經論對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>卷七主題</th><th>可對讀的經論</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>楞嚴咒</td><td>宣化上人《楞嚴咒疏句偈解》</td><td>上人逐句解釋楞嚴咒，是持咒最重要的參考。</td></tr>
+                  <tr><td>建立道場</td><td>宋·知禮《千手眼大悲心咒行法》</td><td>天台懺法的壇儀與三七行道結構，可與本卷互參。</td></tr>
+                  <tr><td>持戒為先</td><td>卷六四種清淨明誨 ·《梵網經》</td><td>咒的功效以戒為前提，與菩薩戒的心地觀相通。</td></tr>
+                  <tr><td>十二類生</td><td>《金剛經》大乘正宗分</td><td>「若卵生、若胎生、若濕生、若化生……」可對照本卷的展開與配屬。</td></tr>
+                  <tr><td>眾生世界顛倒</td><td>卷四三種相續 ·《大乘起信論》</td><td>「性明心」一段與卷四「性覺必明」、起信論「不覺念起」同一脈絡。</td></tr>
+                </tbody>
+              </table>
+              <div class="note"><strong>怎麼用這張表：</strong>正在背楞嚴咒的同修，上人的咒疏句偈解最實用；做大悲咒行法的同修，可對照知禮行法的壇儀。</div>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <p>本卷關鍵名相，日後可逐步做成可點選的詞彙頁。</p>
+          <div class="terms">
+            <span>四種律儀</span><span>心三口四</span><span>宿習</span><span>佛頂神咒</span><span>悉怛多般怛囉</span>
+            <span>道場</span><span>三七行道</span><span>鏡交光處</span><span>五會</span><span>咒心</span>
+            <span>眾生顛倒</span><span>世界顛倒</span><span>十二類生</span><span>卵胎濕化</span><span>無見頂相</span>
+          </div>
+        </section>
+
+        <section id="sutra" class="sutra-sec">
+          <h2>經文 · 大佛頂首楞嚴經 卷第七</h2>
+          <p class="sutra-meta">經文依 CBETA《大正藏》T19n0945 校錄。本卷起「阿難！汝問攝心，我今先說入三摩地修學妙門」，訖「是名眾生十二種類」。楞嚴咒採卷末所附通行四百二十七句本。</p>
+          <p class="jing-credit">經文依圓瑛法師《大佛頂首楞嚴經講義》判科分段，每段經文下方均附圓瑛法師消文（點「圓瑛《講義》消文」即可展開）。</p>
+<div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 73 段經文，每段附圓瑛法師消文</span></div>
+<div class="sutra">
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅三</span><span class="ke-t">總結遠魔</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗汝問攝心，我今先說，入三摩地，修學妙門。求菩薩道，要先持此四種律儀，皎如冰霜，自不能生一切枝葉。心三口四，生必</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>無因。阿難先問，欲攝其心，入三摩地，云何令其安立道場，遠諸魔事？佛按定其意，總結云：阿難！汝問我攝心之法，我今先說四重律儀，即是入三摩地，指耳根圓通，初心修學，至妙之門。此妙門即四重律儀，是故求菩薩道者，要先持此四種律儀；身心皎潔，絲毫無犯，如冰如霜，如是則根本已除，以淫、殺、盜、妄四種是根本戒故，拔本必不滋末，自然不能發生一切枝葉。心三者，指貪、瞋、癡；口四者，指妄言、綺語、兩舌、惡口，皆為枝葉。然貪、瞋、癡，屬大煩惱。今淫、殺、盜、妄，從心止絕，乃至一念不生故也。根本既除，則枝末無所從生，故曰生必無因，是則嚴持四重，稱為修學妙門者宜矣！阿難﹗如是四事，若不遺失，心尚不緣色、香、味、觸，一切魔事，云何發生﹖此絕塵決定遠魔。如是四事，若能持守，不令一念，漏落於四重中。則心常住戒，尚不緣色、香、味、觸諸塵事業，六塵舉四，可以例知。《正脈》云：「塵依念住，念絕而塵何所依？魔托塵入，塵亡而魔何所托？故曰一切魔事，云何發生。」初正教持戒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">助以咒力（</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk"></span><span class="ke-t">）寅初正以勸持讚勝</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">況顯除習無難</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">若有宿習，不能滅除，汝教是人，一心誦我，佛頂光明，摩訶薩怛哆，般怛囉，無上神咒。斯是如來，無見頂相，無為心佛，從頂發輝，坐寶蓮華，所說神</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此正勸持咒。宿是宿生，習是惑業，習氣種子。溫陵曰：現業已制，自行可違，宿習難除，必假神力。今夫行人，好正而固邪，欲潔而偏染，隱然若有驅策，而不能已，宿習之使也。惟有神咒，不思議力，乃可滅除，故云汝教是人，一心誦我，佛頂光明神咒。誦咒而曰一心者，有事有理：事一心者，以能持之心，持所持之咒，能所分明，相續不斷。理一心者：能持之心，全心是咒；所持之咒，全咒是心，能所雙亡，心咒不二，咒則是心，心則是咒。咒是頂光化佛所說，正以表尊中之尊，密中之密。佛本是世間最尊，今是佛頂之化佛，固是尊中之尊。頂是無見，是世間最密，今是化佛，從頂發輝所說，乃是密中密也，亦借此以表除習義故。摩訶薩怛哆，般怛囉，此云大白傘蓋，大表如來藏心之體，絕諸對待故；白表如來藏心之相，離諸妄染故；傘蓋表如來藏心之用，普覆一切故。既即藏心，故稱無上，神妙莫測之咒。咒。斯指神咒，謂此咒是如來無見頂相，即佛三十二相之第一相，曰肉髻頂相。而稱無見者，華嚴九地菩薩，為佛乳母，捧持諦觀，不見其頂，示頂法不可以見見也，無為心佛：乃從世尊肉髻頂相，涌百寶光，故曰從頂發輝。光中涌出，千葉寶蓮，有化如來，坐寶華中，故曰坐寶蓮華。佛稱無為者，以係如來入定，從無為心中現故。重放光明，所說心咒，以是諸佛心印，其體即是如來藏故。初正以勸持讚勝竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">況顯除習無難</span></li></ul></div>
+<div class="unit"><p class="jing">且汝宿世，與摩登伽，歷劫因緣，恩愛習氣，非是一生，及與一劫，我一宣揚，愛心永脫，成阿羅漢。彼尚淫女，無心修行，神力冥資，速證無學。云何汝等，在會聲聞，求最上乘，決定成佛，譬如以塵，揚於順風，有何艱險﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此顯咒力，不可思議。姑就近事論之，且汝與摩登伽女，宿世因緣，恩情愛戀，習氣種子，非是一生，及與一劫，由來遠矣！難以解脫，如前云：汝愛我心，我憐汝色，以是因緣，經百千劫，常在纏縛。按《登伽經》云：阿難既返，女啼不止，續念阿難。隨至祇桓，佛使追呼。而問之曰：汝逐阿難，欲何所索？女言：我聞阿難無婦，我又無夫。佛言阿難無髮，汝能剃頭否？女歸白母，已許剃髮。佛問：汝愛阿難何等？答曰：我愛阿難眼、耳、口、鼻，以至身形等。佛言：阿難眼中但有淚，耳中但有垢，口中但有涎，鼻中但有涕，身中但有屎、尿。有夫妻者，便有惡露，有惡露則生子，有子則有死，既有死喪，便有啼哭，是身何益，汝何所愛？女聞是語，便自正心，即得入道。我一宣揚，愛心永脫者：指佛纔一宣揚，敕文殊將咒往護，惡咒銷滅，一聞神咒，冥熏加被之力，宿習滅除；及見佛聞法，愛河乾枯，頓證三果，故曰愛心永脫。成阿羅漢者：指前聞文殊選圓通後，證四果也。良以先蒙咒力，銷除宿習，復藉法音，悟證聖果，設非咒力，除此宿習，安得淫心速滅，契無為法耶？且登伽習厚，尚屬淫女，無心修行，但由神咒，不測之力，資熏之功，尚能速證無學果位。云何，深怪之辭，謂云何汝等，惑習微薄，在會聲聞者，兼有學及無學也：有學斷見惑，無學斷思惑，非同登伽，尚為淫女耶。且其所求，惟是最上一乘，決定自信，成佛之道，亦非同登伽之無心修行耶。譬如以塵，塵喻習氣，順風喻神咒。以微塵揚於順風，塵無不盡；喻習氣遇於神咒，習無不除，有何艱難險阻之事哉？初歷明預先嚴戒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">略示場中定慧</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">丑初</span><span class="ke-t">因戒生定</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">因定發慧</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">若有末世，欲坐道場，先持比丘，清淨禁戒，要當選擇戒清淨者，第一沙門，以為其師，若其不遇真清淨僧，汝戒律儀，必不成就。然後結界，建立道場。求於十方，現住國土，無上如來，放大悲光，來灌其頂。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明因戒生定，精修律儀，以為其本。設若末世，有修耳根圓通者，發心欲坐修道之場。必先持此比丘根本四重清淨禁戒；清謂清其源，淨謂淨其流，如上所云：先持四重律儀，皎如冰霜，自不能生，一切枝葉是也。受戒之時，須選授戒之師，蓋師是學人之模範，模範不正，鮮能依之成正器故。必宜選擇戒根清淨，第一沙門，以為其師。第一者法臘俱長，為眾所推，如此沙門，能和合成事；用以為師，羯磨乃得成故。若其不遇真實清淨大僧，汝雖受戒律，不過虛名，其實無漏戒體，必定不能成就也。若遇真僧，戒律清淨，德臘俱長，戒方成就。戒成已後，著新淨衣，然香閒居，誦此心佛所說神咒，一百八徧，戒成已後，道器成就，魔不得便，隨力厚薄，或著新衣，或洗令淨，而著此衣，表裏俱潔。然香以熏其室，閒居以攝其心，心處交熏，如此誦咒，神效易致，宿習易除也。咒誦一百八徧者，表所治煩惱之數。一切眾生，煩惱有百八，故以戒違現業，咒除宿習，魔不得其便也。然後可以擇日建立修道之場。《指掌》云：結壇必先誦咒者，有二義：一、謂治習淨根，壇儀乃現；二、謂仗咒神功，遠諸魔事。有志行道者，不可不知也。此定中求佛。上二科是用戒意，此方是所生之定。良以眾生心水淨，諸佛影現中，心水澄清即定也，故知此已在定中。求於十方，現住國土者：即現坐道場，無上如來，謂超九界以獨尊，此屬所感也。放大悲光者：光從大悲心中放出，來灌其頂，身心受益，此屬所應也。感應道交，行道無慮矣！初因戒生定竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">因定發慧</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗如是末世，清淨比丘，若比丘尼，白衣檀越，心滅貪婬，持佛淨戒，於道場中，發菩薩願。出入澡浴，六時行道，如是不寐，經三七日。我自現身，至其人前，摩頂安慰，令其開悟。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>上科因戒生定，此科因定發慧。《正脈》云：前不兼後，後必兼前。前科但牒戒而生定，此科總標因定，而文中雙牒，戒定為因也。阿難！如是末世，結界建壇，唯許清淨比丘，若壇儀已成，修習不拘四眾，故云若比丘尼，白衣檀越。出家二眾，持戒有素，故通稱清淨，在家二眾，故通稱白衣檀越；是華梵合稱，檀是檀那，此云布施；越以布施能超越貧窮苦海故。今通許者，以一切眾生，皆有佛性，皆可修習。雖四眾同壇，必各從其類，如優婆塞，隨比丘後，優婆夷隨比丘尼後，此一定之序也。心滅貪淫：指白衣言，心滅貪、癡、淫、愛等念。持佛淨戒：指出家言，嚴持諸佛所制清淨戒律，身心勿犯，方為可耳。設或不然，勿許濫從，以妨道業。而於修道場中，一向發菩薩四弘誓願，以為感佛機也。《正脈》云：凡出道場而復入，則必澡浴，外潔其身也。六時行道，即專注反聞，經行排遣，內攝其心也。晝夜十二時，六時行道，六時靜坐，均調昏散矣。如子時行道，丑時靜坐，寅時行道，卯時靜坐是也。然行中，坐中，所習皆反聞自性，入流亡所而已。餘二句結成剋期入定。不寐有二意；一除昏睡不覺，二戒忘失反聞。此科正牒定，而明因定二字。下科乃生慧也。定心，為生慧之親因。我自現身，至其人前，摩頂表攝授之意，安慰施無畏之力，此為助緣。因緣既備，令其豁然貫通，朗然大悟也。《正脈》云：然開悟渾含，淺深諸相，不可一定，若得動靜不生，發須陀洹見道慧；若得聞所聞盡，發阿羅漢人空慧；若得空所空滅，成法空慧；若得寂滅現前，發圓通無上知覺慧也。孤山曰：若見此像，當觀空寂，是佛顯然，是魔則滅。初請略說竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛二</span><span class="ke-t">重請詳示</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">壬初</span><span class="ke-t">重請說道場</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">重請說神咒辛初分二癸初阿難重請二世尊重說</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難白佛言：世尊﹗我蒙如來無上悲誨，心已開悟，自知修證，無學道成。末法修行，建立道場，云何結界，合佛世尊，清淨軌則﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此阿難重請說道場。前雖言入道場，而未說道場如何建設，故重請之。阿難承教持戒遠魔，又令誦咒除習，復示結壇行道；我蒙此等訓誨，皆出如來至極悲心之所流出，故曰無上悲誨。心已開悟者：謂如佛所說，雲散長空，心同皎月，已獲開悟，自知從此但習反聞修證，不須道場，可成無學之道。無學，不僅四果，當指圓通，三空諸果位也。末法修行，道高一尺，魔高一丈，建立道場，自非小事，究竟如何結界，方合佛制，不違世尊，清淨軌則？初阿難重請竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">世尊重說</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">子初</span><span class="ke-t">道場建設</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">修證節次</span></li><li><span class="ke-mk">三</span><span class="ke-t">結答酬請子初分五丑初所建壇式二所設莊嚴三所獻供養四所奉尊像五所取照映</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">佛告阿難：若末世人，願立道場，先取雪山，大力白牛，食其山中肥膩香草，此牛唯飲雪山清水，其糞微細，可取其糞，和合旃檀，若非雪山，其牛臭穢，不堪塗地。別於平原，穿去地皮，五尺已下，取其黃土。雞舌香，以此十種，細羅為粉，合土成泥，以塗場地，方圓丈六，壇心置一金、銀、銅、木，所造蓮華，華中安鉢、鉢中先盛八月露水，水中隨安所有華葉。取八圓鏡，各安其方，圍繞華鉢。鏡外建立十六蓮</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>以泥其地。此示道場之建設。蓋聖人施設，理事雙彰；事依理成，理得事顯，非是壇儀，徒壯觀瞻也。佛告阿難：末世眾生，障深業重，非建道場，難以修習，故曰願立也。立壇之地，恐有不淨，故須另塗也。表法諸家，各有所長，惟《寶鏡疏》，始終表顯，方合圓通修法，故皆依之。雪山者，表真如法性，不變理體也。大力白牛者：表自性清淨，根本正智也。先取之者，因其飲食如法，乃取糞和香，以泥其地也。食其山中肥膩香草者：雪山有草，名曰忍辱，食之可得醍醐，豐肥油膩，其糞清香。此牛唯飲雪山清水，香草表三慧，清水表正定也。惟以水草牛者，正如行人熏修，定、慧均等也。其糞精微細妙者：表因戒生定，因定發慧也。可取其糞，和合旃檀，以泥其地者：除其舊地，覆以新泥也。表三無漏學，能熏法身，成真因地也。別於平原者：另於平原，以高阜恐堆積不淨，拗下恐流聚污穢；穿去地皮五尺以下，取其本淨黃土用之。若無雪山白牛者，表且取中根也。穿去地皮，五尺以下者：表蠲除外務，專修返聞，從解結破五陰也。取其黃土者：黃色居中，表六根之中，中道佛性也。和上栴檀，沉水、蘇合、薰陸、鬱金、白膠、青木、零陵、甘松、及為八角壇。和上旃檀等十種香，表十波羅密也。細羅為粉者：表十波羅密，廣為萬行也。合土成泥者：表萬行唯心也。以塗場地者：表成真因也。方圓丈六，為八角壇者：此定壇相，表八正道，攝於八邪也。八角則方而復圓，圓而復方，表體用不二，事理同歸也。蓋上白牛，正表最上根人，以能不隨分別，即三緣頓斷，三因不生，狂性自歇，歇即菩提；喻如唯以牛糞，可和旃檀也。設或不能直下歇狂，須知修行，二決定義，就六根門頭，破除五陰，得元明覺，無生滅性，為因地心，更加四種律儀，五會神咒，方成妙修者，喻和黃土，旃檀之外，加九香也。梵語旃檀，此翻與樂，即白檀香也。竺法真云，出外國羅山有白檀樹。此經用以塗地，非《法華海》此岸旃檀，六銖價值娑婆者也。沉香，《異物志》云：出日南國，凡欲取者，斫樹著地，積久朽爛，其心至堅，入水則沉。蘇合，《續漢書》云：出大秦國，合諸香煎其汁，謂之蘇合，或曰蘇合國，人採花笮汁，熬以為膏，以賣賈客。熏陸，《南方草木》狀云：出大秦國海邊大樹，生於沙中，盛夏樹膠流涉沙上，性能止痛，採取賣之。鬱金，《說文》云：鬱鬯乃百草之華，遠人所貢方物，鬱人搗而之，和酒以降神也。白膠，《本草》云：商雒間多有，樹如白楊，實大如鳥卵，能除惡氣、去瘡�，即楓香脂也。青木，《南州異物志》云：是草根，能寤魘寐，狀如甘草，出交州。零陵，《南越志》云：一名燕草，又名熏草。出零陵郡山谷之間，葉如羅勒，能止精明目也。甘松，出涼州諸山，能和合眾香，可除腹脹，亦能下氣。雞舌，《異物志》云：出薄州，云是草萎，乃漢時尚書郎，含之奏事者。設或久服，則能令人身口皆香，即丁香也。場地者：即密部所謂畫地為場也。然欲修定，必須擇日，結界建壇；修行既畢，即解界撤壇，不得留至明相出時，此定制也。古云：封土曰壇，除土曰墠，除掃也。《國語》云：壇之所除也，曰場。封土，即起土也。此中場地，可如其墠，今既名壇，必須起土，故先除地為場，後別取黃土和香，於其場上，以泥塗起，令成壇相，在室中央，此示楞嚴壇場之法式也。初所建壇式竟。丑二所設莊嚴華，十六香鑪。間華鋪設，莊嚴香鑪。純燒沉水，無令見火。此明壇中，所設莊嚴。金、銀、銅、木所造蓮華者：是隨力為之，不必拘執也。然壇心者，乃表中道因心，真如本體也。蓮華者：表因果同時，染淨不二也。所造者：表真如位中，本無因、果、染、淨；以能隨緣，故成染淨因果也。鉢名應器，表如來藏，事理圓融，隨眾生心，應所知量也。八月露水：表中道純真，首楞嚴妙定也。隨安華葉：表如幻聞熏聞修，中道妙慧也。八鏡安方者：表眾生本有八識，大圓鏡智，不離當處也。圍繞華鉢者：表妙慧恆依藏心也。鏡外建立蓮華香鑪者：表依慧發行，從性起修也。各須十六者：表慧華戒香，自行八正，化他八正也。間華鋪設，莊嚴香鑪者：表戒慧互嚴，還修自性也。純燒沉水，無令見火者：表無相妙戒，在惑業而不染惑業也。二所設莊嚴竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三</span><span class="ke-t">所獻供養</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>取白牛乳，置十六器，乳為煎餅，並諸砂糖，油餅、乳糜、蘇合、蜜薑、純酥、純蜜﹔於蓮華外，各各十六，繞圍華外，以奉諸佛，及大菩薩。此明壇中，所獻供養。取雪山白牛乳，置十六器，用以作供。一、乳為煎餅，謂煎乳成餅也。二、並諸沙糖，謂蔗汁熬糖，如沙而甘也。三、油餅，謂以油和麵作餅，而膩脆也。四、乳糜，謂用乳和米作粥，而甘粘也。五、蘇合，謂和合眾香，煎汁成膏。六、蜜薑，謂以蜜浸薑，味辛而甘。七、純酥，謂乳煉成酥。八、純蜜，謂華蕊成蜜。各各十六，圍繞華外。白牛乳餅，及餘七物者：表稱性所起，禪悅法喜，所謂八正道味也。各各十六，圍繞華外者：表一一正道，各具自行化他，二種八正也。以奉諸佛，及大菩薩者：表以已證禪悅法喜正道之味，因心而向果德也。</div></details></div>
+<div class="unit"><p class="jing">每以食時，若在中夜，取蜜半升，用酥三合，壇前別安一小火鑪以兜樓婆香，煎取香水，沐浴其炭，然令猛熾，投是酥蜜，於炎鑪</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>內，燒令煙盡，享佛菩薩。每以食時，即日中午食之時。溫陵曰：佛以日中受食，故每日以日中致享。若在中夜，佛不受食，唯以酥蜜，燒令煙盡享之。蓋午為日中，子為夜中，表諸聖位，必須中中流入也。蜜乃華之精，酥為乳之精，皆是味中上味，表耳根圓通，妙妙聞心也。半升中數，三合成數，表中道定心，能融五濁，會三空也。壇前別安小火鑪者：正表耳根一門，從此深入也。兜樓婆香，《異物志》云：出海邊國，如都梁香，又翻譯云：出鬼神國，此方無故不翻。或翻香草，舊云白茅香。以之煎水浴炭者，表戒根清淨，咒力除習，則正助皆具，而發正定之真修也。投酥鑪內者；表從妙心，修耳根三昧也。燒令煙盡者：正表初於聞中，以至空覺極圓，空所空滅也。享佛菩薩者：乃表生滅既滅，寂滅現前，顯上合下同二種殊勝也。三所獻供養竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">所奉尊像</span></li></ul></div>
+<div class="unit"><p class="jing">令其四外，懸幡華，於壇室中，四壁敷設十方如來，及諸菩薩，像，兼金剛藏，安其左右。等，頻那、夜伽，張於門側，左右安置。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>所有形像。此外壇尊像也。令其四外：即八角壇之四外。徧懸旛華者：莊嚴壇室，即外壇也。外壇八角，於壇室中，但惟四壁，敷設十方如來，及諸菩薩，所有畫像。令其四外者：表四種明誨之外，不妨諸行互嚴也。蓋旛表密咒，有摧邪輔正之力；華表密因，為十度萬行之宗。以壇室中，四壁敷設者：表一真法界，具四法界也。十方如來，表覺果也；菩薩像者，表因心也。應於當陽，張盧舍那，釋迦、彌勒、阿、彌陀，諸大變化，觀音形應平聲，應於當陽正位也。梵語盧舍那，具云毘盧遮那，翻有三義：一曰徧一切處，法身也；二曰淨滿，自受用身也；三曰光明徧照，他受用身也。三身一名者，同為真身故。為一真法界，寂場真主，乃報身智慧也。梵語釋迦牟尼，此云能仁寂默，為三千大千娑婆教主，即應身慈悲也。梵語梅怛利曳，此云慈氏，正當來之教主也。梵語阿閦，此云不動，居東方群動之首，表動中有不動智也。梵語阿彌陀，此云無量壽，居西方極樂之邦，表與樂乃無緣慈也。諸大變化，觀音像者：如前文所明，眾首臂目等，此是顯教圓通之主。金剛藏者，常領金剛，護持咒人，伏魔除障，乃是密教圓通之主。安其左右者，表顯密齊彰也。帝釋、梵王，烏芻瑟摩，並藍地迦，諸軍荼利，與毗俱胝，四天王溫陵曰：門側左右，釋梵等眾，有力外護也。末法修行，凡類於此，一有闕焉，必不成就。帝釋云能為主，即忉利天主。梵王不犯欲塵，即初禪天主。鳥芻瑟摩，即火頭金剛。藍地迦，即青面金剛。軍荼利，此云解怨結，亦金剛異名。毘俱胝，即毘盧神變。經云：右邊毘俱胝，手垂數珠鬘，三目持髮髻，尊形猶皓素，圓光色無比者是也。四天王者，即東、南、西、北，所謂持國、增長、廣目、多聞也。頻那、即豬頭使者。夜伽、即象鼻使者。自帝釋之下，此等外護，俱表摧邪顯正之功用也。四所奉尊像竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑五</span><span class="ke-t">所取照映</span></li></ul></div>
+<div class="unit"><p class="jing">又取八鏡覆懸虛空，與壇場中，所安之鏡，方面相對，使其形影，</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>重重相涉。又取八圓鏡，覆懸虛空者：表諸佛果位，轉八識成大圓鏡智，從空如來藏，普照十方塵剎中也。與壇場中，所安之鏡，圍繞華缽，一方一個，而面向於外，外壇之鏡，一方一個，而面向於內，故曰方面相對；表生心即是佛心，佛心不異生心也。使其形影，重重相涉者：表生佛互融，聖凡無異，乃不可思議之境也。蓋壇中八鏡，仰照空鏡者，表因該果海也。設或行人，二六時中，於此壇儀苟一著眼，了明斯理，則知心、佛、眾生，三無差別，而通身皆在事事無礙法界中矣！初道場建設竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">修證節次</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">丑初三七初</span><span class="ke-t">成定慧</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">百日頓證聖果</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>於初七中，至誠頂禮，十方如來，諸大菩薩，阿羅漢號，恆於六</div></details></div>
+<div class="unit"><p class="jing">時，誦咒圍壇，至心行道，一時常行，一百八遍。第二七中，一向專心，發菩薩願，心無間斷，我毘奈耶，先有願第三七中，於十二時，一向持佛，般怛囉咒，至第七日，十方如來，一時出現，鏡交光處，承佛摩頂。即於道場，修三摩地。能令如是，末世修學，身心明淨，猶如瑠</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此修證節次。第一七中，禮誦行道。於初七中，至誠頂禮：頂禮而曰至誠者，專至其心，誠懇不二也。凡人之修道，必須皈敬三寶，以為最初方便也。十方如來，佛寶也；菩薩、羅漢，僧寶也；持誦心咒，法寶也。恆於六時之中，持誦佛頂心咒圍壇，以至誠心，經行道場，每於一時圍壇，常行一百八徧。此非指全咒，乃指心咒：跢姪他、唵、阿那隸、毘舍提，鞞囉跋闍囉陀唎，槃陀槃陀你、跋闍囉、謗尼泮、虎都盧甕泮、娑婆訶。但要三業相應，自能成效，六時行道，六時頂禮，仗承不思議力加被，助道也。教。此第二七中，一向發願。既曰一向，不拘六時；既曰專心，不雜禮誦；唯有專心，發菩薩願。務必心心相續，念念無間，而不斷絕；此恐心生懈退，加以堅固之願也。我毘奈耶，先有願教者：如《梵網經》、十大願王，及菩薩四弘誓願，行願堅強，得大勇猛也。此第三七中，一向持咒。溫陵曰：時無間歇，咒無遍限，一向誦持，遂能以精誠感格，進力克功也。至第三七末日，十方如來，一時出現，於壇室中，鏡交光處，佛身既在鏡現，我身亦在鏡現。親承諸佛，手摩其頂，聖凡不隔。重重無盡，則生佛智照，感應道交也。璃。此定心成就。即於道場中，專修反聞工夫，故曰修三摩地，即首楞嚴，耳根圓通。不令一念，漏落於聲塵境界；念念照性，心心在定，但一味反聞無間耳。此慧心成就。能令者，以定心為親因，以道場持咒等為助緣，因緣力故，所以能令也。如是之人，雖在末世修學，亦能發慧開悟，則根、塵、識心，應念化成無上知覺，故曰身心明淨。內外映澈，猶如瑠璃。以一切諸法，無不形現其中矣！初三七初成定慧竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">百日頓證聖果</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗若此比丘，本受戒師，及同會中，十比丘等，其中有一不清淨者，如是道場，多不成就。從三七後，端坐安居，經一百日，有利根者，不起於座，得須陀洹。縱其身心。聖果未成，決定自知，成佛不謬。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明壇儀雖立，設或師友不淨，多不成就。及同會中，十比丘等，準《方等陀羅尼》云：行此法時，十人已還，既曰已還；六眾、七眾俱可。設無同志，未可勉強，寧可獨行。其中不淨，乃有二種：一受戒師不淨、二同行侶不淨，是二者中，有一不清淨者，如是道場，多不成就，佛聖不臨，龍天不護，正定難修，妙悟難發，故知師友不可不慎選擇也。此明三七修學，未克即成定慧。從三七後，端身正坐，寂然安居，經一百日，勇猛精進，修習亡塵照性工夫。有利根者，惑障俱輕，定功綿密，慧照分明，定慧雙流，經一百日，不起於座。此一百日，不起於座，工夫相應，在定中並不知時長也。亦非同平時，坐一時行一時也；因文中明言，經一百日，不起於座，即得須陀洹果。梵語須陀洹，此云入流，不入色、聲、香、味、觸、法，斷分別見惑，為見道位。借小果名，而論果證，實同圓教初信。阿難圓悟藏性，頓獲法身也。《寶鏡疏》云：縱其身心俱生細惑，一時難斷；分別思惑，完全仍在；無學聖果，未得即成；然而決定自知，成佛之事，不虛謬也。所謂一信永信，信得自心是佛，自性即佛，更不再疑也。二修證節次竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結答酬請</span></li></ul></div>
+<div class="unit"><p class="jing">汝問道場，建立如是。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總結答。前阿難問云：「末法修行，建立道場，云何結界？」我已言結界建壇，種種方法，與夫修學證果。如是之法，一一詳示，故酬其所請，而結答之曰：「汝問道場，建立如是。」《指掌疏》云：「如是者，謂如上所說是也。」然如上所說，建壇之法，末世行之，誠為不易；故下文誦咒，亦許不入道場。而上文有一不淨，則云道場不成。是知有力者，固應如法建壇；無力者，只要持戒清淨。設若有壇無戒，反不如有戒無壇之為愈也。初重請說道場竟。楞嚴經講義第十七卷終</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">重請說神咒</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">癸初</span><span class="ke-t">會眾重請</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">如來重說</span></li><li><span class="ke-mk">三</span><span class="ke-t">會眾願護</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難頂禮佛足，而白佛言：自我出家，恃佛憍愛，求多聞故，未證遭彼梵天，邪術所禁，心雖明了，力不自由，賴遇文殊，令我解脫，雖蒙如來，佛頂神咒，冥獲其力，尚未親聞。惟願大慈，重為宣說，悲救此會，諸修行輩，末及當來，在輪迴者，承佛密音，身意解脫。於時會中，一切大眾，普皆作禮，佇聞如來秘密章句。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>無為。此重請說神咒。阿難雖蒙其益，未克親聞；故頂禮佛足，而白佛言：自我捨俗出家，猶恃佛之憍憐寵愛，惟求多聞，不務真修，但得初果，所以道力微弱，故未證四果無為之道。遭者遇也，彼指摩登伽，為愛女之故，用先梵天咒，邪術之所禁制。然在彼時，心雖明了，而未全道力，無自由分。賴遇文殊，將咒往護，令我解脫淫難，始將歸來。今但云賴遇文殊得脫者：舉能持人，略所持咒，故雖蒙如來佛頂神咒，而文殊但是密誦，破邪除淫，而我冥獲其力；真言密語，尚未親聞。此請重說，為利今後。惟願世尊大慈，重為宣說，大悲救拔現住此會諸修行輩，此指三乘聖眾，多學少成，難進易退者，均望咒力救拔也。不唯現會獲益，末指當來，佛法展轉流通，即在輪迴者，亦得均霑法利，以承佛密咒音聲，身意俱得解脫；以遠離魔難，身得解脫，破惑證真，意得解脫也。作是請已，於時會中，一切大眾，普皆頂禮於佛。佇者待也，佇聞如來秘密神咒，微妙章句。初會眾重請竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">如來重說</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">子初</span><span class="ke-t">正說神咒</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">說咒利益子初分三丑初光相表顯二大眾欽聽三五會神咒</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">爾時世尊，從肉髻中，涌百寶光，光中涌出，千葉寶蓮，有化如來，坐寶華中。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此將說神咒，先現化佛。然此科乃顯中之密，以從如來自身所現也。爾時世尊，從肉髻中：準《無上依經》云：乃是頂骨涌起，自然成髻，其色紅赤，在青螺紺髮之中，即無見頂相；表如來藏，法身理體也。光從頂放，表般若妙智也；光涌百寶，表解脫大用也。光中涌出，千葉寶蓮者：表依妙智，而發勝因也。有化如來，坐寶華中：表因果一契也。頂放十道，百寶光明，一一光明，皆徧示現，十恆河沙，金剛密跡，擎山持杵，徧虛空界。此乃密中之密，以從佛頂之佛頂，放寶光之寶光，表斯咒，尊中之尊，妙中之妙也。由一頂髻放十道光，具百寶色者，表如來藏性，圓含萬法，其體清淨本然，周徧法界也。金剛密跡，擎山持杵，徧虛空界者：內秘菩薩之德，外現金剛之跡，擎山制外，持杵降魔，密行化導，故曰金剛密跡。徧滿空界，顯現威力。金剛徧界者，表循業發現，生善滅惡，隨緣妙用也。初光相表顯竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">大眾欽聽</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>大眾仰觀，畏愛兼抱，求佛哀祐，一心聽佛，無見頂相，放光如</div></details></div>
+<div class="unit"><p class="jing">來，宣說神咒。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>法會大眾，見佛從頂，放光之中化佛，化佛復從頂放光，光中示現，金剛密跡，事出希有，惟有景仰觀察。畏者畏其威，愛者愛其德；既折、攝並行，而畏愛兼抱；謂二者兼具，令人不能去諸懷抱也。求佛哀祐者：哀憐而攝授之，護祐而帡幪之。一心聽佛，無見頂相，放光如來，宣說神咒者：謂佛從無見頂相放光，光中化現如來，宣說神咒；正表無為心佛，無上心咒，以顯藏心微妙，不可思議也。咒者咒願，佛說此咒，正咒願眾生，令其斷惑證真，革凡成聖，具諸不測之威神，而有難思之妙用。二大眾欽聽竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三五</span><span class="ke-t">會神咒</span></li></ul></div>
+<div class="unit" id="zhou"><p class="jing">【大佛頂首楞嚴神咒】五會，凡四百二十七句。咒文依 CBETA 校錄，括號內為句數（點下方展開全文）。</p><details class="ann"><summary>楞嚴咒全文（五會·四百二十七句）</summary><div class="zhou-text">南無薩怛他蘇伽多耶阿羅訶帝三藐三菩陀寫(一)　薩怛他佛陀俱胝瑟尼釤(二)　南無薩婆勃陀勃地薩跢鞞弊(三)(毘迦切)　南無薩多南三藐三菩陀俱知南(四)　娑舍囉婆迦僧伽喃(五)　南無盧雞阿羅漢跢喃(六)　南無蘇盧多波那喃(七)　南無娑羯唎陀伽彌喃(八)　南無盧雞三藐伽跢喃(九)　三藐伽波囉底波多那喃(十)　南無提婆離瑟赧(十一)　南無悉陀耶毘地耶陀囉離瑟赧(十二)　舍波奴揭囉訶娑訶娑囉摩他喃(十三)　南無跋囉訶摩泥(十四)　南無因陀囉耶(十五)　南無婆伽婆帝(十六)　嚧陀囉耶(十七)　烏摩般帝(十八)　娑醯夜耶(十九)　南無婆伽婆帝(二十)　那囉野拏耶(二十一)　槃遮摩訶三慕陀囉(二十二)　南無悉羯唎多耶(二十三)　南無婆伽婆帝(二十四)　摩訶迦羅耶(二十五)　地唎般剌那伽囉(二十六)　毘陀囉波拏迦囉耶(二十七)　阿地目帝(二十八)　尸摩舍那泥婆悉泥(二十九)　摩怛唎伽拏(三十)　南無悉羯唎多耶(三十一)　南無婆伽婆帝(三十二)　多他伽跢俱囉耶(三十三)　南無般頭摩俱囉耶(三十四)　南無跋闍羅俱囉耶(三十五)　南無摩尼俱囉耶(三十六)　南無伽闍俱囉耶(三十七)　南無婆伽婆帝(三十八)　帝唎茶輸囉西那(三十九)　波囉訶囉拏囉闍耶(四十)跢他伽多耶(四十一)　南無婆伽婆帝(四十二)　南無阿彌多婆耶(四十三)　跢他伽多耶(四十四)　阿囉訶帝(四十五)　三藐三菩陀耶(四十六)　南無婆伽婆帝(四十七)　阿芻鞞耶(四十八)　跢他伽多耶(四十九)　阿囉訶帝(五十)　三藐三菩陀耶(五十一)　南無婆伽婆帝(五十二)　鞞沙闍耶俱盧吠柱唎耶(五十三)　般囉婆囉闍耶(五十四)　跢他伽多耶(五十五)　南無婆伽婆帝(五十六)　三補師毖多(五十七)　薩憐捺囉剌闍耶(五十八)　跢他伽多耶(五十九)　阿囉訶帝(六十)　三藐三菩陀耶(六十一)　南無婆伽婆帝(六十二)　舍雞野母那曳(六十三)　跢他伽多耶(六十四)　阿囉訶帝(六十五)　三藐三菩陀耶(六十六)　南無婆伽婆帝(六十七)　剌怛那雞都囉闍耶(六十八)　跢他伽多耶(六十九)　阿囉訶帝(七十)　三藐三菩陀耶(七十一)　帝瓢南無薩羯唎多(七十二)　翳曇婆伽婆多(七十三)　薩怛他伽都瑟尼釤(七十四)　薩怛多般怛㘕(七十五)　南無阿婆囉視躭(七十六)　般囉帝揚岐囉(七十七)薩囉婆部多揭囉訶(七十八)　尼羯囉訶揭迦囉訶尼(七十九)　跋囉毖地耶叱陀儞(八十)　阿迦囉蜜唎柱(八十一)　般唎怛囉耶儜揭唎(八十二)　薩囉婆槃陀那目叉尼(八十三)　薩囉婆突瑟吒(八十四)　突悉乏般那儞伐囉尼(八十五)　赭都囉失帝南(八十六)　羯囉訶娑訶薩囉若闍(八十七)　毘多崩娑那羯唎(八十八)　阿瑟吒氷舍帝南(八十九)　那叉剎怛囉若闍(九十)　波囉薩陀那羯唎(九十一)　阿瑟吒南(九十二)摩訶揭囉訶若闍(九十三)　毘多崩薩那羯唎(九十四)　薩婆舍都嚧儞婆囉若闍(九十五)　呼藍突悉乏難遮那舍尼(九十六)　毖沙舍悉怛囉(九十七)　阿吉尼烏陀迦囉若闍(九十八)　阿般囉視多具囉(九十九)摩訶般囉戰持(一百)　摩訶疊多(一百一)　摩訶帝闍(二)　摩訶稅多闍婆囉(三)　摩訶跋囉槃陀囉婆悉儞(四)　阿唎耶多囉(五)　毘唎俱知(六)　誓婆毘闍耶(七)　跋闍囉摩禮底(八)　毘舍嚧多(九)　勃騰罔迦(十)　跋闍囉制喝那阿遮(一百十一)　摩囉制婆般囉質多(十二)　跋闍囉擅持(十三)　毘舍囉遮(十四)　扇多舍鞞提婆補視多(十五)　蘇摩嚧波(十六)　摩訶稅多(十七)　阿唎耶多囉(十八)　摩訶婆囉阿般囉(十九)　跋闍囉啇羯囉制婆(二十)　跋闍囉俱摩唎(一百二十一)　俱藍陀唎(二十二)　跋闍囉喝薩多遮(二十三)　毘地耶乾遮那摩唎迦(二十四)　啒蘇母婆羯囉跢那(二十五)　鞞嚧遮那俱唎耶(二十六)　夜囉菟瑟尼釤(二十七)　毘折藍婆摩尼遮(二十八)　跋闍囉迦那迦波囉婆(二十九)　嚧闍那跋闍囉頓稚遮(三十)　稅多遮迦摩囉(一百三十一)　剎奢尸波囉婆(三十二)　翳帝夷帝(三十三)　母陀囉羯拏(三十四)　娑鞞囉懺(三十五)　掘梵都(三十六)　印兔那麼麼寫(三十七)　(誦呪者至此句稱弟子某甲受持)烏[合*牛](三十八)　唎瑟揭拏(三十九)　般剌舍悉多(四十)　薩怛他伽都瑟尼釤(一百四十一)　虎汼(四十二)　都嚧雍(四十三)　瞻婆那(四十四)　虎[合*牛](四十五)　都嚧雍(四十六)　悉耽婆那(四十七)　虎[合*牛](四十八)　都嚧雍(四十九)　波羅瑟地耶三般叉拏羯囉(五十)　虎[合*牛](一百五十一)　都嚧雍(五十二)　薩婆藥叉喝囉剎娑(五十三)　揭囉訶若闍(五十四)　毘騰崩薩那羯囉(五十五)　虎[合*牛](五十六)　都嚧雍(五十七)　者都囉尸底南(五十八)　揭囉訶娑訶薩囉南(五十九)　毘騰崩薩那囉(六十)　虎[合*牛](一百六十一)　都嚧雍(六十二)　囉叉(六十三)　婆伽梵(六十四)　薩怛他伽都瑟尼釤(六十五)　波囉點闍吉唎(六十六)　摩訶娑訶薩囉(六十七)　勃樹娑訶薩囉室唎沙(六十八)　俱知娑訶薩泥帝㘑(六十九)　阿弊提視婆唎多(七十)　吒吒甖迦(一百七十一)　摩訶跋闍嚧陀囉(七十二)　帝唎菩婆那(七十三)　曼茶囉(七十四)　烏[合*牛](七十五)　莎悉帝薄婆都(七十六)　麼麼(七十七)　印兔那麼麼寫(七十八)　(至此句準前稱名，若俗人稱弟子某甲)囉闍婆夜(七十九)　主囉跋夜(八十)　阿祇尼婆夜(一百八十一)　烏陀迦婆夜(八十二)　毘沙婆夜(八十三)　舍薩多囉婆夜(八十四)　婆囉斫羯囉婆夜(八十五)　突瑟叉婆夜(八十六)　阿舍儞婆夜(八十七)　阿迦囉蜜唎柱婆夜(八十八)　陀囉尼部彌劍波伽波陀婆夜(八十九)　烏囉迦婆多婆夜(九十)　剌闍壇茶婆夜(一百九十一)　那伽婆夜(九十二)　毘條怛婆夜(九十三)　蘇波囉拏婆夜(九十四)　藥叉揭囉訶(九十五)　囉叉私揭囉訶(九十六)　畢唎多揭囉訶(九十七)　毘舍遮揭囉訶(九十八)　部多揭囉訶(九十九)　鳩槃茶揭囉訶(二百)　補丹那揭囉訶(二百一)　迦吒補丹那揭囉訶(二)　悉乾度揭囉訶(三)　阿播悉摩囉揭囉訶(四)　烏檀摩陀揭囉訶(五)　車夜揭囉訶(六)　醯唎婆帝揭囉訶(七)　社多訶唎南(八)　揭婆訶唎南(九)　嚧地囉訶唎南(十)　忙娑訶唎南(二百十一)　謎陀訶唎南(十二)　摩闍訶唎南(十三)　闍多訶唎女(十四)　視比多訶唎南(十五)　毘多訶唎南(十六)婆多訶唎南(十七)　阿輸遮訶唎女(十八)　質多訶唎女(十九)　帝釤薩鞞釤(二十)　薩婆揭囉訶南(二百二十一)　毘陀耶闍瞋陀夜彌(二十二)　雞囉夜彌(二十三)　波唎跋囉者迦訖唎擔(二十四)　毘陀夜闍瞋陀夜彌(二十五)　雞囉夜彌(二十六)　茶演尼訖唎擔(二十七)　毘陀夜闍瞋陀夜彌(二十八)　雞囉夜彌(二十九)　摩訶般輸般怛夜(三十)　嚧陀囉訖唎擔(二百三十一)　毘陀夜闍瞋陀夜彌(三十二)　雞囉夜彌(三十三)　那囉夜拏訖唎擔(三十四)　毘陀夜闍瞋陀夜彌(三十五)　雞囉夜彌(三十六)　怛埵伽嚧茶西訖唎擔(三十七)　毘陀夜闍瞋陀夜彌(三十八)　雞囉夜彌(三十九)　摩訶迦囉摩怛唎伽拏訖唎擔(四十)　毘陀夜闍瞋陀夜彌(二百四十一)　雞囉夜彌(四十二)　迦波唎迦訖唎擔(四十三)　毘陀夜闍瞋陀夜彌(四十四)　雞囉夜彌(四十五)　闍耶羯囉摩度羯囉(四十六)　薩婆囉他娑達那訖唎擔(四十七)　毘陀夜闍瞋陀夜彌(四十八)　雞囉夜彌(四十九)　赭咄囉婆耆儞訖唎擔(五十)　毘陀夜闍瞋陀夜彌(二百五十一)　雞囉夜彌(五十二)　毘唎羊訖唎知(五十三)　難陀雞沙囉伽拏般帝(五十四)　索醯夜訖唎擔(五十五)　毘陀夜闍瞋陀夜彌(五十六)　雞囉夜彌(五十七)　那揭那舍囉婆拏訖唎擔(五十八)毘陀夜闍瞋陀夜彌(五十九)　雞囉夜彌(六十)　阿羅漢訖唎擔毘陀夜闍瞋陀夜彌(二百六十一)　雞囉夜彌(六十二)　毘多囉伽訖唎擔(六十三)　毘陀夜闍瞋陀夜彌(六十四)　雞囉夜彌跋闍囉波儞(六十五)　具醯夜具醯夜(六十六)　迦地般帝訖唎擔(六十七)　毘陀夜闍瞋陀夜彌(六十八)　雞囉夜彌(六十九)　囉叉罔(七十)　婆伽梵(二百七十一)　印兔那麼麼寫(七十二)　(至此依前稱弟子名)婆伽梵(七十三)　薩怛多般怛囉(七十四)　南無粹都帝(七十五)　阿悉多那囉剌迦(七十六)　波囉婆悉普吒(七十七)　毘迦薩怛多鉢帝唎(七十八)　什佛囉什佛囉(七十九)　陀囉陀囉(八十)　頻陀囉頻陀囉瞋陀瞋陀(二百八十一)　虎[合*牛](八十二)　虎[合*牛](八十三)　泮吒(八十四)　泮吒泮吒泮吒泮吒(八十五)　娑訶(八十六)　醯醯泮(八十七)　阿牟迦耶泮(八十八)　阿波囉提訶多泮(八十九)　婆囉波囉陀泮(九十)　阿素囉毘陀囉波迦泮(二百九十一)　薩婆提鞞弊泮(九十二)　薩婆那伽弊泮(九十三)　薩婆藥叉弊泮(九十四)　薩婆乾闥婆弊泮(九十五)　薩婆補丹那弊泮(九十六)迦吒補丹那弊泮(九十七)　薩婆突狼枳帝弊泮(九十八)　薩婆突澁比[口*犁]訖瑟帝弊泮(九十九)　薩婆什婆唎弊泮(三百)　薩婆阿播悉摩[口*犁]弊泮(三百一)　薩婆舍囉婆拏弊泮(二)　薩婆地帝雞弊泮(三)　薩婆怛摩陀繼弊泮(四)　薩婆毘陀耶囉誓遮[口*犁]弊泮(五)闍夜羯囉摩度羯囉(六)　薩婆羅他娑陀雞弊泮(七)　毘地夜遮唎弊泮(八)　者都囉縛耆儞弊泮(九)　跋闍囉俱摩唎(十)　毘陀夜囉誓弊泮(三百十一)　摩訶波囉丁羊乂耆唎弊泮(十二)　跋闍囉商羯囉夜(十三)　波囉丈耆囉闍耶泮(十四)　摩訶迦囉夜(十五)　摩訶末怛唎迦拏(十六)　南無娑羯唎多夜泮(十七)　毖瑟拏婢曳泮(十八)　勃囉訶牟尼曳泮(十九)　阿耆尼曳泮(二十)　摩訶羯唎曳泮(三百二十一)　羯囉檀遲曳泮(二十二)　蔑怛唎曳泮(二十三)　嘮怛唎曳泮(二十四)　遮文茶曳泮(二十五)　羯邏囉怛唎曳泮(二十六)　迦般唎曳泮(二十七)　阿地目質多迦尸摩舍那(二十八)　婆私儞曳泮(二十九)　演吉質(三十)　薩埵婆寫(三百三十一)　麼麼印兔那麼麼寫(三十二)　(至此句依前稱弟子某人)突瑟吒質多(三十三)　阿末怛唎質多(三十四)　烏闍訶囉(三十五)伽婆訶囉(三十六)　嚧地囉訶囉(三十七)　婆娑訶囉(三十八)　摩闍訶囉(三十九)　闍多訶囉(四十)　視毖多訶囉(三百四十一)　跋略夜訶囉(四十二)　乾陀訶囉(四十三)　布史波訶囉(四十四)　頗囉訶囉(四十五)　婆寫訶囉(四十六)　般波質多(四十七)　突瑟吒質多(四十八)　嘮陀囉質多(四十九)　藥叉揭囉訶(五十)　囉剎娑揭囉訶(三百五十一)閉㘑多揭囉訶(五十二)　毘舍遮揭囉訶(五十三)　部多揭囉訶(五十四)　鳩槃茶揭囉訶(五十五)　悉乾陀揭囉訶(五十六)　烏怛摩陀揭囉訶(五十七)　車夜揭囉訶(五十八)　阿播薩摩囉揭囉訶(五十九)　宅袪革茶耆尼揭囉訶(六十)　唎佛帝揭囉訶(三百六十一)　闍彌迦揭囉訶(六十二)　舍俱尼揭囉訶(六十三)　姥陀囉難地迦揭囉訶(六十四)　阿藍婆揭囉訶(六十五)　乾度波尼揭囉訶(六十六)　什伐囉堙迦醯迦(六十七)　墜帝藥迦(六十八)　怛隷帝藥迦(六十九)　者突託迦(七十)　昵提什伐囉毖釤摩什伐囉(三百七十一)　薄底迦(七十二)　鼻底迦(七十三)　室隷瑟蜜迦(七十四)　娑儞般帝迦(七十五)　薩婆什伐囉(七十六)　室嚧吉帝(七十七)　末陀鞞達嚧制劍(七十八)　阿綺嚧鉗(七十九)　目佉嚧鉗(八十)　羯唎突嚧鉗(三百八十一)　揭囉訶輸藍(八十二)　羯拏輸藍(八十三)　憚多輸藍(八十四)　迄唎夜輸藍(八十五)　末麼輸藍(八十六)　跋唎室婆輸藍(八十七)　毖栗瑟吒輸藍(八十八)　烏陀囉輸藍(八十九)　羯知輸藍(九十)　跋悉帝輸藍(三百九十一)　鄔嚧輸藍(九十二)　常伽輸藍(九十三)　喝悉多輸藍(九十四)　跋陀輸藍(九十五)　娑房盎伽般囉丈伽輸藍(九十六)　部多毖跢茶(九十七)　茶耆尼什婆囉(九十八)　陀突嚧迦建咄嚧吉知婆路多毘(九十九)　薩般嚧訶凌伽(四百)　輸沙怛囉娑那羯囉(四百一)　毘沙喻迦(二)　阿耆尼烏陀迦(三)　末囉鞞囉建跢囉(四)　阿迦囉蜜唎咄怛斂部迦(五)　地栗剌吒(六)　毖唎瑟質迦(七)　薩婆那俱囉(八)　肆引伽弊揭囉唎藥叉怛囉芻(九)　末囉視吠帝釤娑鞞釤(十)　悉怛多鉢怛囉(四百十一)　摩訶跋闍嚧瑟尼釤(十二)　摩訶般賴丈耆藍(十三)　夜波突陀舍喻闍那(十四)　辮怛隷拏(十五)　毘陀耶槃曇迦嚧彌(十六)　帝殊槃曇迦嚧彌(十七)　般囉毘陀槃曇迦嚧彌(十八)　跢姪他(十九)　唵(二十)　阿那隷(四百二十一)　毘舍提(二十二)　鞞囉跋闍囉陀唎(二十三)　槃陀槃陀儞(二十四)　跋闍囉謗尼泮(二十五)　虎[合*牛]都嚧甕泮(二十六)　莎婆訶(二十七)</div></details><details class="ann"><summary>圓瑛《講義》消文（五會分判）</summary><div>(上眼來諸神古咒本今勘依對紹考興正海)以上神咒，凡有五會，至一百三十七句止，是毘盧真法會；至一百七十八句止，是釋尊應化會；至二百七十二句止，是觀音合同會；至三百三十二句止，是剛藏折攝會；至四百十八句止，是文殊弘傳會；哆姪他起至咒終，共四百二十七句。長水云：哆姪他前，但是歸命諸佛、菩薩聖賢等，及敘咒願，加被、滅惡離難。至唵字下，方說咒心，即是秘密首楞嚴也。此咒是如來藏心所成，故曰心咒；而全咒是如來藏心，又曰咒心。今五會併此，共計二千六百二十字。末三字娑婆訶，或云薩婆訶，唐翻速成，令我所作速成就也。然此段既稱咒心，則是五會中，精要之義。如有力者，通前俱持，固為盡善；設或無力，則但持此段，確信功極，自收成效。然眾生之機，顯密不定，以有眾生，應從顯說，而獲益者；亦有眾生，應從密說，而獲益者。雖顯密互陳，然皆發明，大佛頂如來藏心，不思議體用也。諸經神咒，例皆不翻，即五種不翻中，秘密不翻。而於四例中，即翻字不翻音之例；字是華文，音是梵語，此方人不曉，而天竺之人，日用所共曉解者也。至於秘咒，非但常人不知，理應下位聖賢，不達上位之咒，故於顯部之外，另曰密部也。然在西域秘密部，類分東、西、南、北、中，凡有五部，此咒正當中央，遮那灌頂部也。天如曰：孤山所引天台四悉檀，悉徧也，檀施也。諸聖以四法，徧施眾生也。初世界悉檀者：隨方異說，令生歡喜益也。二、為人悉檀者：生善益也。三、對治悉檀者：破惡益也。四、第一義悉檀者：入理益也。此四悉普益也。如上根之人，誦之可得入理益；其次以誦咒除惡習，得破惡益；其次以誦咒，遠離雜念，得生善益；其次以誦咒，而能摧邪輔正，令生歡喜益也。《正脈》云：大端聖賢宏化，例有顯密二教，如醫療病，率有二途：一者授方，則顯說病源、藥性，及炮治之法，如佛顯教。二者授藥，則都不顯說，但惟與藥，令服愈病而已，不必求知何藥何治，如佛密教。故今授藥，不必求解，若解生則咒喪矣。持咒之法，但當深信不疑，一味持之，身、口、意三密相應，不要起心求解，如參話頭相似，只許參，不許解，一念不生，自能得益。如昔日有一浪人，遠奔他國，詐稱王子。彼國因以公主妻之，食時多瞋難事，其公主欲探其意，願善順之，一日往詢彼國商人，能通語言者。彼商人多智，知彼詐稱王子，未便與言，有關國恥。遂用本國語，作一偈曰：若當瞋時，則含笑念偈云：無親往他國，欺誑一切人，麤食是常食，何勞復作瞋？囑云：須學言音，不必求解。說是偈時，彼知事露，從此不敢生瞋。神咒之功，亦復如是。《正脈》云：秘咒少分應知，三義略盡：一、理法力：謂以一字含無邊妙理，而稱陀羅尼，謂總一切法，持無量義，斯之威力，全具所詮之理；如此方元、亨、利、貞，亦可避凶致祥矣。二者、威德力：謂諸佛菩薩，一切權實聖賢，威德深重，具大勢力，稱其名號，隨願如意；如今世間，有勢力人，亦可假其名聲，伏惡脫難也。三者、實語力：佛菩薩，一切聖賢，起大悲心，愍眾生故，出誠實語，咒願眾生，離苦得樂，革凡成聖，故誦之可以隨言成益；如世之實修行人，尚可咒願吉凶，隨言成就，何況證理，入位聖賢，真慈誓願，安可測度？略述由此三義，故持之得不測之神功。然須確信，專持功滿，方收成效，若猶豫間斷中輟，或壇戒不能如法，而謗斯咒無功者，招大罪苦也。須知放光如來，說此神咒，正為近下根機，最初方便，持之自可遠魔脫難，斷惑證真，轉煩惱以得菩提，出生死而入涅槃也。初正說神咒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">說咒利益</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">丑初</span><span class="ke-t">諸佛要用</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">眾生利賴子初分三寅初指示全名二備彰諸用三更明無盡</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難﹗是佛頂光聚，悉怛多般怛囉，秘密伽陀，微妙章句。此示咒之全名。佛頂光聚者：以咒原從佛頂光中，化佛說故。光而言聚者，謂燄網交羅，如大火聚。頂表尊勝，光表威靈，聚即神用。悉怛多般怛囉，前有摩訶二字，此云大；悉怛多，此云白；般怛囉，此云傘蓋，以是咒之名目耳。有謂哆姪他唵，下七句為咒心非也；以彼是五會神咒，都聚之處，結晶之義也。究之此咒，全如來藏心成咒，故曰心咒；全咒即是如來藏心，是名咒心。但此心不出體、相、用三義：體無對待曰大，即如來藏本妙圓心，如實空義；相離染垢曰白，即如來藏元明心妙，如實不空義；用覆一切曰傘蓋，即如來藏妙明心元，如實空不空義。秘密伽陀，微妙章句者；隱秘深密，謂咒中亦有伽陀頌也；精微奧妙。章謂大段，如分五會是也；細分曰句。一一皆不可思議也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">備彰諸用</span></li></ul></div>
+<div class="unit"><p class="jing">出生十方，一切諸佛，十方如來，因此咒心，得成無上正徧知覺。十方如來，執此咒心，降伏諸魔，制諸外道。十方如來，乘此咒心，坐寶蓮華，應微塵國。十方如來，含此咒心，於微塵國，轉大法輪。十方如來，持此咒心，能於十方，摩頂授記。自果未成，亦於十方，蒙佛授記。盲、聾、瘖、瘂、冤憎會苦、愛別離苦、求不得苦、五陰熾盛、大小諸橫，同時解脫。賊難、兵難、王難、獄難、風、火、水難，飢渴、貧窮，應念銷散。十方如來，隨此咒心，能於十方，事善知識。四威儀中，供養如意。恆沙如來，會中推為，大法王子。十方如來，行此咒心，能於十方，攝受親因，令諸小乘，聞秘密藏，不生驚怖。十方如來，誦此咒心，成無上覺﹔坐菩提樹，入大涅槃。十方如來，傳此咒心，於滅度後，付佛法事，究竟住持。嚴淨戒律，悉得清淨。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明十方如來，自利利他，皆此秘密咒心之功用也。十方一切諸佛，所以出現於世，示生成佛者何也？皆由十方如來因此咒心，以為密因，修證了義，諸菩薩萬行，然後圓成果地修證，所以得成無上菩提。正徧知覺：即是菩提智果。了知心生萬法，為正知；萬法唯心，為徧知。則諸佛因心果覺，始終無二也。此明降魔制外用。十方如來，將欲證真，多為魔外所擾，不能速成，遂執此秘密咒心，以為金剛王寶劍，降伏一切五陰諸魔，制伏斷常諸見外道。此明普現身雲用。十方如來，既證真已，現盧舍那身徧遊華藏世界，遂乘此秘密咒心，以此咒心，即是諸佛真法身，故坐寶蓮華，徧遊微塵國土，隨類現身。此明應機說法用。十方如來，欲轉法輪，必於無礙智中，含此秘密咒心，以此咒心，即是正法眼藏，以為德本，故能於微塵國土，以八音四辯，轉無上根本大法輪。此明授自他記用。十方如來，約由本垂迹，現應化身言之。持此秘密咒心，以此咒心，能為成佛之本，自成道後，能於十方，慈悲攝受，摩諸菩薩頂，授其當來成佛之記。設或自果未得圓成，亦能於彼十方，蒙佛親授菩提之記。十方如來，依此咒心，能於十方，拔濟羣苦。所謂地獄、餓鬼、畜生、此明拔苦濟難用。十方如來，依此秘密咒心，能於十方，拔濟羣苦。或教自持，或代咒願。仗神咒威力，得離苦難。所謂，指釋之辭，謂一地獄、二餓鬼、三畜生、四北洲、五盲聾瘖瘂、六佛前佛後、七世智辯聰、八長壽天。以此八種，不堪受教，難入佛法，故名為難。冤憎會苦，愛別離苦，求不得苦，五陰熾盛苦，併生、老、病、死四苦，合八苦。此中以難言之，則舉前以攝後；以苦言之，則舉後以該前；此苦難之所從分也。大小諸橫者：據《藥師經》言，大有九種，小無數量，難可具說。且九橫者，一病不服藥，橫殺眾生，信邪祀鬼，本不當死，由不服藥，傷生致死名為橫；二橫被王法之所誅戮；三非人奪其精氣；四橫為火焚；五橫為水溺；六橫為惡獸所噉；七橫墮山崖；八橫為毒藥，與夫厭禱咒詛，鬼害所中；九橫被飢渴所困，不得飲食。同時而得解脫。賊難，有劫財奪命等事；兵難，有衝鋒冒刃等事；王難，有委身致命等事；獄難，有枷鎖禁繫等事；風難，有凜寒飛沙等事；火難有焚燒炙熱等事；水難，有衝陷漂沉等事；飢難，有絕糧枵腹等事；渴難，有喉乾口燥等事；貧窮難，有困苦逼迫等事。如上諸難，應其所念，秘密咒心，而得銷散也。此明事師紹法用。十方如來，隨此秘密咒心威力，能於十方世界，事善知識。以彼具正知正見，能為學者，抽釘拔楔故。若非咒力，豈能十方遠到耶？四威儀中，供養如意者：行、住、坐、臥，一切時中，各有應供之物，各令隨心，故曰供養如意。若非咒力，豈能如意出生耶？恆沙如來，法會之中，助佛轉輪，弘揚法化，推為大法王子，承紹法王家業，若非咒力，豈能徧事諸佛耶？此明攝授親因用。十方如來，與歷劫親緣，互相因依。自雖成佛，念彼散在十方，亦常行此秘密咒心。行即持也，攝授護念，縱使墮在小乘，亦乘咒力加被，成就大志，堪受大法，如聞說秘密如來藏心，不生驚疑與怖畏也。此明智斷二果用。十方如來，誦此秘密咒心，以為成佛之本，轉煩惱而成智果，故曰成無上覺。坐菩提樹，一期弘化，轉生死而成斷果，故曰入大涅槃。足知此咒，為成始成終之大用也。此明付法護戒用。十方如來，傳此秘密咒心，化緣既畢，將欲歸真，於滅度時，最後遺言，付囑佛法，紹繼之事，令得究竟住持。至於護戒一事，佛雖臨涅槃，猶復叮嚀告誡，以戒為師，故曰嚴淨戒律，悉得清淨。嚴以治身，淨以治心，身心皎潔，有若冰霜，如是能正法長存，毘尼久住也。二備彰諸用竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅三</span><span class="ke-t">更明無盡</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>若我說是佛頂光聚，般怛囉咒，從旦至暮，音聲相聯，字句中間，</div></details></div>
+<div class="unit"><p class="jing">亦不重疊，經恆沙劫，終不能盡。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此更明無盡。若我說是佛頂光聚，般怛囉咒者，此略牒全名。雖從清旦，以至薄暮，音聲相聯，熾然說，無間歇，於其中間，字句亦不重疊。如是縱經恆河沙劫，極顯其字句之廣，說日之長，終不能演說得盡，此咒之功用也。如《華嚴》所謂，一字法門，海墨書而不盡者也。《正脈》云：此無盡乃約諸佛要用，並非眾生用也。初諸佛要用竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">眾生利賴</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">寅初</span><span class="ke-t">別指勝名</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">備彰威力</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">亦說此咒，名如來頂。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>不唯此咒，但名如來藏心，亦說此咒，名如來頂。表其至尊至妙，故能為眾生利賴也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">備彰威力</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">卯初</span><span class="ke-t">首示行人必賴以勸持</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">詳伸護生助道以出由</span></li><li><span class="ke-mk">三</span><span class="ke-t">承明行人必證以結勸寅初分二辰初正示誦方遠魔二開許書帶獲益</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">汝等有學，未盡輪迴，發心至誠，取阿羅漢，不持此咒，而坐道場，令其身心，遠諸魔事，無有是處。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>汝等有學，未盡輪迴者：三果以前，皆名有學。以未能盡分段生死，所以猶屬輪迴。若發至誠心，至極誠懇，取阿羅漢者，設若不持此佛頂神咒，而坐脩道之場，欲令身心清淨，遠離諸魔事業者，斷然無有此理也。不持下乃反顯，然持方遠魔耳。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">開許書帶獲益</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗若諸世界，隨所國土，所有眾生，隨國所生，樺皮貝葉，紙或書宅中，當知是人。盡其生年，一切諸毒。所不能害。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>素白，書寫此咒。貯於香囊，是人心昏，未能誦憶，或帶身上，阿難！若諸世界，隨所有國土，所有眾生，隨屬何國，所生樺皮：樺樹皮，治令薄軟，可以作書﹒貝葉，貝多羅樹葉，廣長可書；紙素，紙之素者，如此方抹竹為漿，而製成之；白，白華所織成，可作書寫之用。《正脈》云：白天竺物，紙類也，有價值無量者，此土無之。即用上樺皮等，書寫此咒，貯於香囊，以便帶持。是人心中昏昧，秉性暗鈍，無聞持力，未能誦憶，或帶身上，或書宅中，粉壁俱可。當知是人：即是身帶宅書之人。盡其生年者：謂從生至死。一切諸毒，所不能害者：一切諸毒，當分內外，內則貪、瞋、癡，稱為三毒，由持咒治習，漸以熏化；外則蚖、蛇、蝮、蠍，所有毒類，由神咒威靈，悉以遠遁，故所不能害。初首示行人必賴以勸持竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯二</span><span class="ke-t">詳伸護生助道以出由</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">總標</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">意二別列多功</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗我今為汝，更說此咒，救護世間，得大無畏，成就眾生，出</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>世間智。此詳伸此咒，有護生助道之功勳。阿難！我前說此咒，為諸佛要用，今則為汝更說此咒，為眾生利賴。一、救拔護念，世間眾生，於一切怖畏之中，能誦此咒，令魔鬼不擾，得大無畏。二、或遇有志修學圓通定慧者，令煩惱不侵，斷惑修證，成就出世間智，如觀世音，救世悉安寧，出世獲常住。初總標二意竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">別列多功</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">巳初</span><span class="ke-t">約眾生以顯各益</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">約國土以顯普益巳初分三午初救護災難二助成道業三稱遂願求巳初分二未初惡緣不能成害二惡生不害加護</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">若我滅後，末世眾生，有能自誦，若教他誦，當知如是誦持眾生，火不能燒，水不能溺，大毒小毒，所不能害。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>若我滅後，末法之世，魔強法弱，眾生修行，未免多障，欲免自障，誦此秘密神咒；欲免他障，教他誦此秘密神咒。當知如是持誦眾生，自行化他，均得其益。火不能燒，水不能溺者：火有內火、外火，水亦有內水、外水，內火如欲火等，外火則從緣而起，如天火等。內水如愛水等，外水如劫水等。仗此咒力，自然不致燒溺。大毒如瘟疫流行，小毒如蛇蚖等觸。如此諸毒，皆以神咒之力能迴，故曰所不能害。初惡緣不能成害竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未二</span><span class="ke-t">惡生不害加護</span></li></ul></div>
+<div class="unit"><p class="jing">如是乃至天龍鬼神，精祇魔魅，所有惡咒，皆不能著，心得正受。一切咒咀，厭蠱毒藥，金毒銀毒，草木蟲蛇，萬物毒氣，入此人口，成甘露味。一切惡星，並諸鬼神，磣心毒人，於如是人，不能起惡，頻那夜迦諸惡鬼王，並其眷屬，皆領深恩，常加守護。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>如是乃至下，惡咒不著。天龍舉八部之二。無福德曰鬼，有福德曰神，得天之靈曰精，得地之靈曰祇，專於障道曰魔，一於惑人曰魅；此等皆能用咒以害人，故云惡咒。如遇秘密神咒，則如以塵揚於順風，皆不能著。心得正受者：持咒持成三昧也。持至能所雙亡，不受諸受，名得正受。咒詛厭蠱毒藥：厭蠱者，屍毒也，又西南夷所畜，有鼠蝦蟆等類；毒藥者，物毒也，鴆毛瀝酒，沾脣即死。如上厭蠱毒藥，皆能毒害於人，加以咒詛之力，則百發百中矣！此以邪受不能動，惡咒不能著，即究竟堅固之三昧也。金毒銀毒者：溫陵曰：金銀入藥，便能發毒。草木蟲，舉此四類，餘以萬物毒氣該之。入此人口，成甘露味者：甘露為不死之神藥，飲之者，得益良多。《寶鏡疏》云：此如鼎有靈丹，而頑銅鈍鐵，入者成金也。一切災變惡星，並諸惡鬼惡神，磣心毒人，包藏禍心，常以暗箭傷人之輩，莫不覩德容而意銷，被慈風而心化，不但不能起惡，而且轉暴為良也。頻那、夜迦，諸惡鬼王，以誦咒饒益彼類；並其眷屬，皆領深恩者：謂素蒙佛化領佛深恩，為報佛恩，故於是咒，常加守護，為護咒故，並護持咒之人也。初救護災難竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">助成道業</span><span class="ke-div">分6</span><ul><li class="ke-cur"><span class="ke-mk">未初</span><span class="ke-t">資發通明</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">遠離雜趣</span></li><li><span class="ke-mk">三</span><span class="ke-t">常生佛前</span></li><li><span class="ke-mk">四</span><span class="ke-t">眾行成就</span></li><li><span class="ke-mk">五</span><span class="ke-t">諸罪消滅</span></li><li><span class="ke-mk">六</span><span class="ke-t">速證無生</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難當知：是咒常有八萬四千那由他，恆河沙俱胝，金剛藏王菩薩種族，一一皆有諸金剛眾，而為眷屬，晝夜隨侍。佛頂神咒，常有八萬四千那由他，恆河沙俱胝，金剛藏王菩薩：那由他，此云萬設有眾生，於散亂心，非三摩地，心憶口持，是金剛王，常隨從彼諸善男子，何況決定菩提心者，此諸金剛菩薩藏王，精心陰速，發是人應時，心能記憶，八萬四千恆河沙劫。周徧了知，得無疑惑。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此下至無生忍，皆明助道成智。前說離難遠魔，固是神王之力所及，此明助道須假菩薩。咒是諸佛心印，咒在之處，即為佛在，故常有聖眷隨侍；故囑當知：是億，俱胝，此云百億。言菩薩之數，百億不足以盡之，復以恆河沙計之；恆河沙百億不足以盡之，復以萬億計之。萬億恆河沙百億，不足以盡之，復以八萬四千計之；極言數目有如許之多。現威勇之形，具降魔之力，故名金剛。蘊秘密之德，攝金剛之眾，故稱藏王。種族者：謂此唯一類相聚，故曰種族。一一皆有諸金剛眾，而為眷屬，聽其驅策，如火頭金剛，青面金剛等。此諸聖眾，為護持咒故，併護衛持咒之人，晝夜恭隨侍衛，如慈母之護嬰兒，時刻不離也。彼神識。設若有眾生，於散心亂心之時，非有正定，常住三摩地，但能散心思憶神咒，亂心口持神咒。雖非定心憶持，而金剛王亦常隨從於彼，為報佛恩，格外施護也。通稱男子者，以能憶神咒，即具善根故也。何況反顯辭，彼邪定聚，及不定聚眾生，尚蒙金剛隨護，何況此等決定發菩提心者，是回小向大，修習耳根圓通，志在無上菩提也。此諸金剛菩薩藏王，執金剛杵，持秘密藏，或稱金剛菩薩，或稱菩薩藏王，或稱金剛藏王菩薩，或稱金剛菩薩藏王，或稱金剛王，或稱金剛藏，隨稱皆可。以此菩薩，既得如來藏心，去惑純精，而與行人，現具藏心，本來無二。聖凡雖異，心精通脗，故能以同體心精。陰者冥也，速者疾也，冥冥之中，如兩鏡相對，以心印心，速疾啟發彼持者之神識，應時得大開悟也。此神識通明。是人，即指精心陰速之人，應時心能記憶八萬四千恆河沙劫前事。一切妙理，周徧了知，得無疑惑，似涉三明。況河沙紀劫，迥超小乘八萬故能獲宿命，而得天眼也。溫陵曰：即所謂成就眾生出世間智也。初資發通明竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未二</span><span class="ke-t">遠離雜趣</span></li></ul></div>
+<div class="unit"><p class="jing">從第一劫，乃至後身，生生不生，藥叉羅剎，及富單那，迦吒富單那，鳩槃茶，毗舍遮等，並諸餓鬼，有形無形，有想無想，如是惡</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>處。此永離惡處。從第一劫：謂從初發心持咒時起，乃至超略中間，直至最後身。生生謂捨生趣生；不生下之諸趣，因得通明，有助道故。藥叉或云夜叉，捷疾鬼也。羅剎此云可畏，食人鬼也。富單那此云臭惡鬼，主熱病鬼也。迦吒富單那。此云奇臭惡鬼，主熱病之甚者。鳩槃茶此云甕形，魘魅鬼也。毘舍遮或云毗舍闍，此云噉精氣，以能噉人精氣，及噉五穀精氣。並諸餓鬼：如大腹、臭毛、針咽、炬口等。有形：即是有色，如休咎精明。無形：即是無色，如空散銷沉。有想：即靈通怪變，如鬼神精靈。無想：即凝滯堅頑，如精神化為土木金石等。如上諸處，各有自苦，遮障聖道，故曰惡處。然既生生不生，則聖道可修，宜乎因圓果滿，而至最後身矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未三</span><span class="ke-t">常生佛前</span></li></ul></div>
+<div class="unit"><p class="jing">是善男子若讀若誦，若書若寫，若帶若藏，諸色供養。劫劫不生，貧窮下賤，不可樂處。此諸眾生，縱其自身，不作福業，十方如來，所有功德，悉與此由是得於恆河沙阿僧祇，不可說不可說劫，常與諸佛同生一處。無量功德，如惡叉聚，同處熏修，永無分散。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是善男子：指決定發菩提心人。不唯不生雜趣，即於人中，不可樂處，亦復不生。若果將此神咒：對本曰讀；背本曰誦；敬寫為書；便書為寫；身佩名帶；器貯名藏。諸色供養：如香、花、燈、塗、果之類。劫劫不生，貧窮下賤：貧賤皆妨道業，為不可樂處。既不生此，則定生可樂處。以持尊勝頂法，故感尊勝果報也。人。此為生佛界之由。若果欲生佛界者，定必多修福德因緣方可。今此人自身不作福業，但能持咒，而十方如來，所有功德，悉與此人者，咒力使然也。由是下，得生佛前。且得於恆河沙阿僧祇，不可說不可說劫，與佛同生一處，所謂常在佛前是也。無量功德下，方是生後功德，既常在佛前，必常隨佛學，了知諸佛為眾生心內諸佛，眾生乃諸佛心內眾生，心佛及眾生，是三無差別。如惡叉聚之果，三果一蒂，不相捨離，同處熏煉修習，永無分別離散矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未四</span><span class="ke-t">眾行成就</span></li></ul></div>
+<div class="unit"><p class="jing">是故能令破戒之人，戒根清淨﹔未得戒者，令其得戒﹔未精進者，令其精進﹔無智慧者，令得智慧﹔不清淨者，速得清淨﹔不持齋戒，自成齋戒。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《指掌疏》云：承上神咒，以有如是利益，是故能令眾行成就。破戒之人：如阿難八萬行中，祗毀一戒。戒根清淨者：如阿難心清淨故，尚未淪溺。未得戒者：如登伽宿為淫女；令其得戒者：如登伽今為性尼。未精進者：如阿難專好多聞，登伽偏於淫愛。令得精進者：如阿難慇懃請定，登伽成精進林。無智慧者：如登伽纏眠貪愛，不知為苦。令得智慧者：如登伽與羅母，同悟宿因。不清淨者：如登伽未蒙咒前，欲燄飛揚；速得清淨者：如登伽蒙咒後，淫心頓歇。設或此人，縱有宿愆，不能持齋與持戒者，但能持此咒，日久月深，消除業障，自然成就，能令齋戒圓成。如上破戒之人，能令戒根清淨等，總指未持咒前，有種種諸事，自持咒之後，仗神咒功勳，自能成就。但舉阿難登伽二人，為證甚善。末後不持齋戒，自成齋戒者：並非謂不要持齋戒，自然能成齋戒，此種惡習，自當誡之。須知戒為無上菩提本，斯言信不誣也。四眾行成就竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">未五</span><span class="ke-t">諸罪消滅</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗是善男子，持此咒時，設犯禁戒，於未受時，持咒之後，眾破戒罪，無問輕重，一時銷滅。故無問輕重也。縱經飲酒，食噉五辛，種種不淨，一切諸佛，菩薩金剛，天仙鬼神，不將為過。設著不淨，破弊衣服，一行一住，悉同清淨。縱不作壇，不入道場，亦不行道，誦持此咒，還同入壇，行道功德，無有異也。若造五逆，無間重罪，及諸比丘、比丘尼，四棄八棄，誦此咒已，如是重業，猶如猛風，吹散沙聚，悉皆滅除，更無毫髮。阿難﹗若有眾生，從無量無數劫來，所有一切輕重罪障，從前世來，未及懺悔，若能讀誦，書寫此咒，身上帶持，若安住處，莊宅園館，如是積業，猶湯消雪。不久皆得，悟無生忍。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明持咒能滅現在諸罪也。阿難！是善男子，持此咒時，自應嚴持禁戒，以佛有明誨，故設有犯一切禁戒，於未受持此咒時，乃屬往。今既持咒自新，誓不更犯，則從前所有眾破戒罪，無問所犯輕重，一時消滅。重謂小乘初篇，大乘十重；輕謂小乘餘篇，大乘四十八輕。《指掌》云：羯磨云「前心作惡，如雲覆日，後心起善，似炬銷暗」。今既似炬銷暗，乃何罪不滅？縱使往日，曾經飲酒，酒雖非葷物，而無性命，然酒為起罪因緣，故宜禁戒。食噉五辛，如蔥、蒜、韮、薤、興渠，此五辛，熟食發淫，生噉增恚，以至種種葷腥，不淨之物。今既持咒之後，則諸佛菩薩，金剛天仙鬼神，不將為過，以既往不咎也。准前文，佛教著新淨衣，然香誦咒，又教六時行道，三七不寐。今云設著不淨者，則不局於淨衣；又云破弊者，則不局於新衣；又云凡一行動者，則不局於六時行道也；凡一住此者，則不局於三七不寐也。此為行頭陀行，清貧不備者，恐失誦咒利益，故特開許，悉同清淨也。准前文，如法建壇，依教行道，方合如來清淨軌則。今者此人既乏資財，縱不作壇，又不能入楞嚴道場，亦不能隨眾行道，所有功德，等無有異。此極重罪滅。設若未誦咒前，造此五逆：殺父、殺母、殺阿羅漢、破和合僧、出佛身血，當墮五無間地獄，故云無間重罪。及諸比丘四棄：即殺、盜、淫、妄，四波羅夷罪。梵語波羅夷，此云棄，謂犯此罪者，永棄佛法海外，猶如大海，不納死屍也。比丘尼八棄者，前四根本戒，與比丘同，再加觸、八、覆、隨；第五觸，謂與染心男子，身相觸，第六八，謂與染心男子，捉手捉衣，屏處共坐，共語、共行、相倚、相期等八事；第七覆，謂覆他重罪；第八隨，謂隨大僧供給衣食，即為僧所舉，未作共住法者，不得隨彼也。如是等罪，皆極重而不可懺者。若是知慚悔過，誦咒求懺，仗咒力故，應念消滅。如是重業，猶如沙聚，言沙已成聚，非猛風不能吹散。而密咒具不測之威神，故如猛風，一吹便散，悉皆消滅，更無毫髮之少留也。此極遠罪滅。阿難！若有眾生，從於無量無數劫來，無量無數，乃西域十大數之一二。百洛叉百洛叉，為一無數；無數無數，為一無量。所有一切輕重罪障：罪之所以稱障者，有礙正修故。從前世來，未及懺悔：懺具云懺摩，此翻悔過，懺是梵音，悔是華言，故稱華梵兼舉。懺者懺其前愆，悔者悔其後過，既未及懺悔，必障正修，欲修三摩，須假咒力，若能讀誦，書寫此咒，身上帶持：讀誦者，起坐不忘；書寫者，觸目驚心。若安住處，莊宅園館：莊宅，常時安住處也；園館，暫時遊憩處也。如是積業，猶湯銷雪：如是無量無數劫來，所有積聚罪業，仗神咒之功力，速能除滅，猶如沸湯銷雪相似。五諸罪消滅竟。未六速證無生《正脈》云：圓實初住，便證此忍，別教當在地上，詳前發通，乃是定心成就所發。今悟無生，乃是慧心成就所發。前但了知不昧，未必實證，萬法無生，應知後位，深於前位，況得此忍之後，罪福皆空，聖凡情盡，可以魔佛一如，方能徧涉惡苦諸趣，而無礙無擇。故知此科，超前諸科，而為助道之成功矣！又所謂出世間智者，發通成始，而無生成終也。按六科，前四即為人生善悉檀，第五對治破惡，第六第一義入理也。而前之救難，後之應求，乃世界歡喜悉檀也，餘可類知。《指掌疏》云：宿障既銷，三摩得成，故云不久得忍。準前俱空不生。按後乃當第三漸次，且不可作八地釋之。二助成道業竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">稱遂願求</span></li></ul></div>
+<div class="unit"><p class="jing">復次阿難﹗若有女人，未生男女，欲求孕者﹔若能至心，憶念斯求長命者，即得長命﹔欲求果報，速圓滿者，速得圓滿﹔身命色力，亦復如是。命終之後，隨願往生十方國土，必定不生邊地下賤，何況雜形﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>咒，或能身上帶此悉怛多般怛囉者，便生福德智慧男女。此稱遂願求。因不諳佛法，但求世間福樂。設若有女人，未曾生男育女，欲求孕者，孕即懷胎。若能以至誠心，憶念斯咒。憶，則常時記憶；念，則常時持念；自應所求皆遂。設或秉性稍鈍，不能憶念，祗能身上帶持此悉怛多般怛囉者，亦得同樣功效。昔以未生男女，恐為丈夫所棄，今則便生福德智慧男女。有福德，富而仁；有智慧，聰而賢；此遂男女求也。求長命者：貪生惡死，人之常情，無論富貴貧賤，皆求百年無病，永享遐齡。能持誦神咒者，即得長命。欲求果報，速圓滿者：果報有福利修行，二種分別，此中似是福利。而修行，上科中資發通明，速得無生，修行已得圓滿。身命色力，亦復如是：此福利果報。如謂身體健康，壽命延長，形色端正，筋力強壯。亦復如是者：指同上果報，速得圓滿也。此鈍根劣機，不知持咒，為當來成佛之因，惟求色身利益，故亦滿其願也。此求身後往生。命終者，前陰已壞，後陰未成也。隨願往生十方諸佛淨土，以持咒功力，得滿所願。決定不生邊地下賤，邊地下賤，尚且不生，何況地獄餓鬼等，雜形異報耶？《指掌疏》云：《大悲經》云：誦持大悲神咒，若不生諸佛國者，我誓不成正覺。蓋彼兼菩薩願力，此兼諸佛心力，以此咒是諸佛心咒，持此咒者，必為諸佛護念故。初約眾生以顯各益竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">巳二</span><span class="ke-t">約國土以顯普益</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">午初</span><span class="ke-t">諸難消除</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">兆民豐樂</span></li><li><span class="ke-mk">三</span><span class="ke-t">惡星不現</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難﹗若諸國土，州縣聚落，飢荒疫癘，或復刀兵，賊難諍，兼</div></details></div>
+<div class="unit"><p class="jing">餘一切，厄難之地。寫此神咒，安城四門，並諸支提，或脫闍上，令其國土，所有眾生，奉迎斯咒，禮拜恭敬，一心供養，令其人民，各各身佩，或各各安所居宅地，一切災厄，悉皆銷滅。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此正顯此咒，能護國安民，轉凶為吉也。若諸一國領土之內，州縣者國土之分治；聚落者，人煙聚集之村落，此又為州縣所轄也。飢荒者：即五穀草菜不生，為饑饉難；疫癘者：癘乃四時不正之氣，人得之而成疾疫，為疫癘難；刀兵者：邊疆不靖；賊難者：家國不寧；諍者：群小為亂，皆刀兵難也。兼餘一切厄難之地者：如久雨為患，旱魃成災，蝗蟲肆虐，風雹時至，凡有損於眾生者皆是。寫此神咒，安城四門：眾人往來，必經之處。並諸支提：此云可供養處，即清淨佛剎之都稱。或脫闍上，脫闍此云幢，如尊勝幢，陁羅尼幢之類。令其國土，所有眾生，禮拜恭敬。皆同一心，至誠供養。令其人民，各各身上，佩帶此咒，或各各安供於所居宅地；一切災害危厄之事，悉皆銷滅，自可化暴戾為祥和也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午二</span><span class="ke-t">兆民豐樂</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗在在處處，國土眾生，隨有此咒，天龍歡喜，風雨順時。五穀豐殷，兆庶安樂。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>隨在隨處，國土所有眾生，皆宜有咒，隨有此咒之地方，能信受奉持，方感天龍歡喜，則風雨順時。如古之盛時，五風十雨也。由是則五穀收成，必豐盛而殷實也。兆，十億為兆；庶，眾也，儒典以民為庶。今云兆庶者，即指民眾之多，非局定數也。安樂者，謂各安居樂業也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">午三</span><span class="ke-t">惡星不現</span></li></ul></div>
+<div class="unit"><p class="jing">亦復能鎮，一切惡星，隨方變怪，災障不起，人無橫夭，杻械枷銷，不著其身，晝夜安眠，常無惡夢。阿難﹗是娑婆界，有八萬四千，災變惡星，二十八大惡星，而為上首﹔復有八大惡星，以為其主。作種種形，出現世時，能生眾生種有此咒地，悉皆消滅。十二由旬，成結界地，諸惡災祥，永不能</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>鎮者壓也，以此神咒，亦復能鎮壓一切惡星。星各有方，故曰隨方。變怪者，反常曰變，異餘曰怪，如前彗孛飛流，隨其所感之方而現；彼國眾生，本所不見，亦復不聞；蓋人事作於下，天道應乎上，然變怪既已不興，災障自然不起。災不起，則各盡天年，故曰人無橫夭；障不起，則相安無事，故杻械枷鎖，不著其身。晝夜安眠，常無惡夢者：晝為覺時，夜為臥時，安眠者，無有夢想也，謂災障既無，自然臥安覺安，夢想亦安矣！種災異。娑婆界者，五濁惡世，故有惡星，淨土無之。八萬四千者，乃周列宿之總數，乃應眾生煩惱之數。災變惡星者，惡不自惡，因災而變，故云災變惡星。二十八者，為四方之經，八大星者，為循經之緯也。二十八星，佛經世典，大同小異，如東方七星，依《孔雀》，謂：昴、畢、觜、參、井、鬼、柳。而世典，則角、亢、氐、房、心、尾、箕也。南方七星，依《孔雀》，謂：星、張、翼、軫、角、亢、氐。而世典，則井、鬼、柳、星、張、翼、軫也。西方七星，依《孔雀》，謂：房、心、尾，箕、斗、牛、女。而世典，則奎、婁、胃、昴、畢、參、觜也。北方七星，依《孔雀》，謂：虛、危、室、壁、奎、婁、胃。而世典，則斗、牛、女、虛、危、室、壁也。或《孔雀》約災變，而世典約常度；言地方清寧，則四七各住本位，若災難將起，則四七遞互交錯，能統領八萬四千，而為上首。復有八大惡星。長水謂：金、木、水、火、土、羅、計都、彗，有謂五星與羅、計、孛也。以為其主者：以為八萬四千之主。二十八大惡星，以為其帥。上列天象，下應人事，順則為福應，逆則為災應。儒書所謂惠迪吉，從逆凶，作種種形，或商羊舞水，石燕飛風，如為小兒，幻出歌謠等。出現世時，能生一切眾生種種患變災異，非常不測之事。入。溫陵曰：以咒力叶乎百順，故惡變悉滅於天，災祥不入其境。有此秘咒之地，則能反凶為吉，所有災象，悉皆消滅。由旬者，正云踰善那，此云合，猶此之驛站也。乃輪王巡狩，一停之舍。由旬有三種：大者八十里，中者六十里，小者四十里。成結界地者：百靈呵護。諸惡災祥，永不能入：祥者，吉凶之先兆也；災祥當是凶兆，不取吉祥之義。二詳伸護生助道以出由竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯三</span><span class="ke-t">承明行人必證以結勸</span><span class="ke-div">分4</span><ul><li class="ke-cur"><span class="ke-mk">辰初</span><span class="ke-t">保護安隱</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">遠離魔冤</span></li><li><span class="ke-mk">三</span><span class="ke-t">不犯</span></li><li><span class="ke-mk">四</span><span class="ke-t">過四必得心通</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">是故如來，宣示此咒，於未來世，保護初學，諸修行者，入三摩地，身心泰然，得大安隱。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>承上持咒，能獲如上種種利益，由是之故，如來宣示此咒，留於未來之世，保護初心修學。而不言現在者，以現在佛世，魔不得便，故而不言。久修者，以久修之士，有力降魔故。入三摩地者：以從耳根圓通，入正定者。身心泰然；內外身心，解脫自在，得大安隱也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰二</span><span class="ke-t">遠離魔冤</span></li></ul></div>
+<div class="unit"><p class="jing">更無一切，諸魔鬼神，及無始來，冤橫宿殃，舊業陳債，來相惱</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>害。更無一切者：神咒保護之力。諸魔鬼神：如後陰魔中說。及無始劫而來，冤對橫禍之宿殃，陳舊未了之業債，來相惱害身心，令三摩不成也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辰三</span><span class="ke-t">不犯四過</span></li></ul></div>
+<div class="unit"><p class="jing">汝及眾中，諸有學人，及未來世，諸修行者，依我壇場，如法持戒，所受戒主，逢清淨僧，持此咒心，不生疑悔。是善男子，於此父母，所生之身，不得心通，十方如來，便為妄</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>汝及眾中，諸有學人：指三果以前之教。及未來世，諸修行者：未來尚資保護，現會益當信受，依我壇場，所定儀軌，如法持戒，皎如冰霜。所受戒主，逢清淨僧，持此咒心，不生疑悔。《正脈》云：不犯四過，一壇差，二戒缺，三師穢，四疑悔，犯一則難現生取證，惟種遠因而已。辰四必得心通語。是善男子，不犯四過，於此父母，現前所生五蘊之身，不待後身，若不能得心地，明了藏心，以獲圓通者，則十方如來，所說之法，便為妄語。《指掌疏》云：心通者，即是心地開通，果能如上所說，不犯四過，自然心地開通；設或自力未充，亦必蒙佛現助。如前略示定慧云：我自現身，至其人前，摩頂安慰，令其開悟是也。余謂設或自力現證，必得圓解大開；如前三七定後云：端坐安居，經一百日，有利根者，不起於座，得須陀洹果。既證初果，能斷見惑，如阿難位居初果，於本經三卷畢，大開圓解，謂不歷僧祇獲法身，即使其身心聖果未成，決定自知成佛不謬矣！設或心精通脗，決定必得宿命，如前圓證通明云：是人應時，心能記憶，八萬四千恆河沙劫，周徧了知，得無疑惑矣。二備彰威力竟。併前大科，二如來重說竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">會眾願護</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">子初</span><span class="ke-t">外眾護持</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">內聖護持子初分五丑初金剛力士眾二兩天統尊眾三八部統尊眾四照臨主宰眾五地祗天神眾</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">說是語已。會中無量百千金剛，一時佛前。合掌頂禮，而白佛言：如佛所說，我當誠心，保護如是修菩提者。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>金剛者：即手執金剛杵，乃力士眾也。無量百千，極言其多也。一時佛前，合掌頂禮，而白佛言：如佛所說神咒，有如是利益；我當至誠，保佑護持，如是修菩提者：謂修耳根圓通，乃得菩提之正定，由護咒所以護人，亦藏王眷屬之類，非是後文之菩薩也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">兩天統尊眾</span></li></ul></div>
+<div class="unit"><p class="jing">爾時梵王，並天帝釋，四天大王，亦於佛前，同時頂禮，而白佛言：審有如是，修學善人，我當盡心，至誠保護，令其一生，所作</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>如願。梵釋二天統尊，四天王為帝釋外臣，亦於佛前同時頂禮，而白佛言：審有，果有也。如是持咒修學耳根圓通者，即為純善之人，我當盡心至誠保持衛護，令其一生之中，凡有所作，悉皆如願也。《指掌疏》云：一生所作如願者：即於現身圓滿菩提，所謂不歷僧祗獲法身也。《正脈》云：一生如願謂令現生取證，及心通也。此入理悉檀。若作事事如願，即餘三悉檀矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三八</span><span class="ke-t">部統尊眾</span></li></ul></div>
+<div class="unit"><p class="jing">復有無量，藥叉大將，諸羅剎王，富單那王，鳩槃茶王，毗舍遮王，頻那夜迦，諸大鬼王，及諸鬼帥，亦於佛前，合掌頂禮，我亦誓願，護持是人，令菩提心，速得圓滿。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此曰大將、曰王，皆統尊之義。亦於佛前頂禮，而發誓願，護持是誦咒修習之人。令菩提心速得圓滿者：上求佛道之心，速得圓滿成就也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">照臨主宰眾</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>復有無量，日月天子，雨師、雲師、雷師、並電伯等，年歲巡</div></details></div>
+<div class="unit"><p class="jing">官，諸星眷屬，亦於會中，頂禮佛足，而白佛言：我亦保護是修行人，安立道場，得無所畏。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>日月為世界照臨之主，一四天下，一對日月，故云無量。風、雨、雲、雷而稱師者，電稱伯者：長也，即統尊之號。年歲巡官者：即司年值歲，監察人間所有善惡之巡官，如十二宮神之類。亦於會中，頂禮佛足，而白佛言：見賢思齊，亦願保護是修行耳根圓通之人。安立楞嚴道場，令其尅期取證，心安如海，得無所畏也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑五</span><span class="ke-t">地祗天神眾</span></li></ul></div>
+<div class="unit"><p class="jing">復有無量，山神、海神，一切土地，水、陸、空行，萬物精祇。並風神王，無色界天，於如來前，同時稽首，而白佛言：我亦保護是修行人，得成菩提，永無魔事。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>復有無量山神，即主山神，如五嶽之類；水神，即主水神，如四瀆之類；土地，即主地神，如堅牢地神之類。水陸空行者：此舉三居，以該一切神祇也。萬物精靈者：如藥草樹林，苗稼神等。以上乃有形之類，下屬無形之類。風神王：即主風神也；無色界天：即四空天也。於如來前，同時稽首，而白佛言：或云風神王，無色界天，憑何稽首？答：舜若多神，如來光中，映令暫現，亦得受樂。如《涅槃》云：非想等天若無色者，云何得有去來進止？《阿含》云：舍利弗滅，無色界天，淚下如雨，是皆顯其無麤色，有細色也。故《中陰經》云：無色界天，禮拜世尊，則今之稽首，即禮拜也。我亦保護，是修行人，得成無上菩提，中間永無魔事。初外眾護持竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">內聖護持</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">丑初</span><span class="ke-t">顯本久護</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">正明護持</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">爾時。八萬四千那由他。恆河沙俱胝，金剛藏王菩薩。在大會中，即從座起，頂禮佛足，而白佛言：世尊﹗如我等輩，所修功業，久成菩提，不取涅槃，常隨此咒。救</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明內聖，金剛藏王菩薩，發願護咒。《正脈》云：證究竟堅固之理，故稱金剛；秘迹護持，故稱藏；慈威特勝，折攝並行，故稱王。菩薩是其常儀，降魔則現持杵忿怒金剛之相。《寶鏡疏》云：金剛藏王者，依究竟堅固，如來藏心，全體大用，以立名也。蓋首楞嚴定，亦名金剛三昧，所以地上菩薩，破除無明，皆用金剛正智，以其根本無明，最細最堅，若非金剛正智，則不能破故。此咒心亦稱金剛者，以從如來金剛心內，所流出也。故能除宿障，破無明，翻轉塵勞，而成護法，即有八萬四千，金剛正智，常隨守護也。護末世，修三摩地，正修行者。世尊！如我等輩，指同行菩薩，所修功業，歷位斷證久矣！當成菩提，現在不取菩提，而證涅槃，而實圓住三秘密藏，常隨此咒，救護末世，修三摩提，指修習圓通之人。正修行者：謂持戒誦咒，方得遠魔離障，為正修行。此表其不捨眾生，帶果行因，以酬護生之本願也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">正明護持</span></li></ul></div>
+<div class="unit"><p class="jing">世尊﹗如是修心，求正定人，若在道場，及餘經行，乃至散心，遊戲聚落。我等徒眾，常當隨從，侍衛此人。縱令魔王，大自在天，求其方便，終不可得。諸小鬼神，去此善人，十由旬外﹔除彼發心，樂修禪者。世尊﹗如是惡魔，若魔眷屬，欲來侵擾，是善人者，我以寶杵，殞碎其首，猶如微塵﹔恆令此人，所作如願。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>世尊！如是修心，修三摩提，求得楞嚴正定之人，若使在道場靜坐，專修反聞工夫。及於餘處經行，持誦秘密咒心，此是正定聚者；乃至散心，遊戲聚落，謂欲求正定，不能攝心，乃至散心，雖然散心，不忘誦咒，此是不定聚者；閒遊嬉戲，於人煙集聚，村落之中，此是邪定聚者；我等徒眾，指所統領眷屬。如前云：一一菩薩，皆有諸金剛眾，而為眷屬是也。又前云：設有眾生，於散亂心，此不定聚也；非三摩地，此邪定聚也。心憶口持，是金剛王，常隨於彼，何況決定菩提心者，此正定聚也。此則直言俱護耳，故曰常當隨從侍衛此人，亦顯為法為人之深心也。縱令魔王：欲界頂天；大自在天：即色界頂天。摩醯首羅天王，三目八臂、騎白牛，執白拂。此二魔王天，貪戀塵勞，惱亂正修。求其方便，終不可得者：無隙可乘也，有菩薩救護故。諸小鬼神者：指魔民魔女等，去者離也，離此善人，十由旬外；前云，有此咒地，十二由旬，成結界地。除彼發心，樂修禪者：諸魔鬼神，亦有發菩提心，好樂修禪之者，願隨行人，親近修習，故不袪除，準許隨從也。世尊！如是惡魔：指上二魔王天，常欲惱害正修，故以惡魔稱之。若魔眷屬：指上諸小鬼神，是其伴侶，故以眷屬稱之。欲來侵惱擾害，修三摩提之善人者：我以寶杵，殞碎其首，猶如微塵：殞滅也，寶杵擬之，其首即碎，不待觸擊也。恆令此人，所作如願者：恆者常也，常時救護此人，凡所修為，悉皆如意，離諸障難，故云如願也。《指掌疏》云：問：菩薩以慈悲為本，十重以殺戒為先，況復四種明誨，言猶在耳，遽發是願，應為佛呵，若果杵碎其首，犯殺違慈，其如菩薩行何？答：如父母之於兒女，笑罵皆為教道，菩薩之於眾生，折攝俱屬拔濟。故孤山云：若涅槃殺闡提，仙預誅淨行，皆住無緣慈，得一子地，乃能如是。是知此之杵碎其首，本無瞋怒，而其恆令如願，亦非喜愛；必以如是之人，乃可發如是願，如來不呵，非為無故，幸勿以大鵬比�鷃也。《正脈》云：自初華屋請修，以至此文，當為巧修正助周。夫二修雖皆最初方便，而耳門深入、是為正修，而道場持咒，皆為助行。是知方便修人，自分利鈍二根。根稍利者，固不必道場等助，而自脫纏以入圓通，如阿難是也。根稍鈍，而不能促入者，方用後門助之。問：「此既一周，何無證悟之人？」答：「證悟在正行之末，此但助行，故無證悟。其於經題，四實法中，正屬修證了義耳」。壬二重請神咒竟。併上大科道場加行竟。再併前正宗大科，己三說三摩修法，令從耳根一門深入竟。(巧助修周正)楞嚴經講義第十八卷終己四說禪那證位，令住圓定，直趣菩提。此文乃答阿難妙禪那之請。佛為說禪那證位，令住圓定，直趣菩提，即題中諸菩薩萬行。因前阿難妙奢摩他之請，佛為說奢摩他路，令悟密因，大開圓解，即題中如來密因。次因阿難妙三摩之請，佛為說三摩修法，令依耳根，一門深入，即題中修證了義；佛敕文殊選擇。偈云：此方真教體，清淨在音聞，欲取三摩提，實以聞中入。又云：旋汝倒聞機，反聞聞自性，性成無上道，圓通實如是。而阿難心迹圓明，悲欣交集，是中修行，得無疑惑，復愍末世，請示道場加行。佛復為說四重律儀，道場定慧，併親聞神咒，則巧修正助已周。此下阿難請問位次，佛為說妙禪那，梵語禪那，此云靜慮，靜即是定，慮即是慧。雙躡前奢摩他，即定之慧，三摩中即慧之定，成一圓定；是已登圓教初住，令住在圓定之中，定慧均等，不偏空有二邊，中中流入，薩婆若海，帶果行因，經歷五十五位，真菩提路，任運修證，直趣無上菩提，方為一期修證事畢。此亦無修之修，無證之證。前修證了義，乃自利行，此為兩利行也。圓滿菩提，歸無所得。本科復分為二。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li class="ke-cur"><span class="ke-mk">庚初</span><span class="ke-t">阿難謝教請位二如來對示緣起</span><span class="ke-now">今</span></li></ul></div>
+<div class="unit"><p class="jing">阿難即從座起，頂禮佛足，而白佛言：我輩愚鈍，好為多聞，於諸漏心，未求出離，蒙佛慈誨，得正熏修，身心快然，獲大饒益。世尊﹗如是修證，佛三摩提，未到涅槃。云何名為乾慧之地﹖四十四心，至何漸次，得修行目﹖詣何方所，名入地中﹖云何名為等覺明，名為等覺菩薩？作是語已。五體投地，大眾一心，佇佛慈音，瞪瞢瞻仰。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>既悟圓通本根，又聞道場修法，欲謝佛恩，故即從座起，頂禮仰白。智不勝曰愚，根不利曰鈍，由智劣故，但好多聞，未能思修正定，得證圓通；由根鈍故，於諸漏心，未能進斷細惑，以求出離。現前蒙佛慈誨者：即選根加行，兩重深誨，得正助熏修，楞嚴大定，故身心快然安樂，今日獲大豐饒利益也。菩薩﹖此明當機已悟正助熏修之法，復請位次也。如是指法之詞，發心修證，十方諸佛，最初所修三摩提，從始至終，但未到極證涅槃之前，云何名為乾慧之地？四十四心，即十信、十住、十行、十迴向、四加行也。《楞嚴》十信，與他經不同，因開初住為十信也。況後初住，明言發此十心，又云十用涉入，圓成一心也。至何漸次，得修行目：此二句應在三摩提下，後再接未到涅槃，云何名為乾慧，與下正文，次序方合。漸次即三漸次：一者修習，除其助因；二者真修，刳其正性；三者增進，違其現業。得修行目者：即辦道之眼目也。詣何方所者：以十地地地斷障，地地證真，各有方所分劑，不相踰越，名為深入十地之中；云何修習，進斷生相無作是語已，五體投地者：請法之誠，五體並投於地。大眾一心，佇佛慈音者：大眾多人一心，佇待如來慈悲法音。瞪瞢瞻仰者：兩目直視於佛，瞻仰待教也。初阿難謝教請位竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">庚二</span><span class="ke-t">如來對示緣起</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>染淨二緣，皆由心起。心迷，則依本覺，而起不覺，即染緣起，徧成十二類生，輪迴諸趣。心悟，則依不覺，而起始覺，即淨緣起，上歷五十五位，究竟涅槃。此科即分為四：辛初如來許說大眾承聽二所依真如為諸法源三示染緣起徧成輪迴四示淨緣起歷成諸位今初</div></details></div>
+<div class="unit"><p class="jing">爾時世尊，讚阿難言：善哉善哉﹗汝等乃能，普為大眾，及諸末世，一切眾生，修三摩地，求大乘者，從於凡夫，終大涅槃，懸示無上正修行路。汝今諦聽，當為汝說。阿難大眾，合掌刳心，默然</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>受教。重讚阿難言，善哉，善哉者：一讚其自己，得正熏修；二復為大眾，及末世眾生，發利他心。凡修楞嚴正定，求大乘者，如前云，汝等若欲捐捨聲聞，修菩薩乘，入佛知見。始從凡夫，由三漸次，終至妙覺，大涅槃果海，其間經歷，所有五十五位，真菩提路。願其預先，懸為指示，無上菩提，正修行路；三漸是凡，涅槃果海是聖，而非是路，正令現未，修正定者，中中流入。從始洎終，中間永無諸委曲相，汝今諦實而聽，當為汝說。阿難與諸大眾，合掌刳心：刳剔去也，如刳木為舟，剔去其實，而虛其中也。即刳剔緣慮分別之心，一念不生，默然領受教法矣！初如來許說大眾承聽竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛二</span><span class="ke-t">所依真如為諸法源</span></li></ul></div>
+<div class="unit"><p class="jing">佛言：阿難當知，妙性圓明，離諸名相，本來無有，世界、眾生。因妄有生，因生有滅，生滅名妄。滅妄名真，是稱如來，無上菩提，及大涅槃，二轉依號。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此舉所依之真，要阿難起智觀察。真如為染淨諸法所依之源，而不為諸法所變，以真如具有不變、隨緣二義故。當知真如界內，絕生佛之假名，離染淨之諸相。妙性圓明：即妙真如性，圓滿十虛，明照無二，彌滿清淨，中不容他。其體本來離諸名相，名言未立，相狀未彰，豈有世界眾生，種種名相之可得？如四科總文云：性真常中，求於去來迷悟生死，了無所得。亦如六祖所云：本來無一物，何處惹塵埃。此說真如門，下說生滅門。上約其體，清淨不變，下約其用，隨緣自在。隨迷悟緣，循染淨業，故有生佛之名相。此三句，略示染緣起。因妄，即因最初一念無明妄動，此生相無明，而為諸妄之根源。有生者，即三細俄興，六麤競作，遂有無情之世界發生，有情之眾生受生。因有妄生，必有妄滅，生非真生，滅非真滅。故曰生滅皆名為妄。故有二種顛倒，乃至十二類生。此依染緣起，而立眾生世界之名相也。此略示淨緣起。由知生滅名妄，乃欲滅妄，方名為真，遂乃發心修行，故有三漸次，五十五位，正修行路，直趣妙覺果海，是稱如來；此依淨緣起，而立菩提涅槃之名相也。無上菩提：佛之智果，乃轉煩惱而成；大涅槃：佛之斷果，乃轉生死而得。是知煩惱生死，菩提涅槃，乃生佛迷悟，輾轉相依，二種名號而已。故曰二轉依號，亦非實有體性，即所謂涅槃生死等空華是也。二所依真如為諸法源竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛三</span><span class="ke-t">示染緣起徧成輪迴</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">壬初</span><span class="ke-t">勸識</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">倒二別明二倒</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗汝今欲修，真三摩地，直詣如來大涅槃者。先當識此眾生、世界，二顛倒因。顛倒不生，斯則如來真三摩地。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明須識二倒之因。故呼阿難而告之曰：汝今欲修真三摩地者，但向耳門，反聞照性，即是首楞嚴王，如幻三摩提，全性起修，全修在性，故名為真。由耳門下手，可以直詣(往到也也)如來大涅槃。從因至果，中間經歷，五十五位，真菩提路，不落支歧。故此耳門，即十方薄伽梵，一路涅槃門也。欲修此門，先當識此眾生、世界，二種顛倒，生起之因。此世界，是有情世界(即類十生二)，非器世界也。二顛倒因：即有情世界，有情眾生，分之為二，皆由最初一念顛倒，以為生起之因；倘若一念不生，即顛倒不生，斯則如來真三摩地。即所謂狂心若歇，歇即菩提，勝淨明心，本周法界，不從人得。初勸識二倒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">別明二倒</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">癸初</span><span class="ke-t">明眾生顛倒</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">明世界顛倒癸初分三子初從真起妄二迷本難復三成業感果</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗云何名為眾生顛倒﹖阿難﹗由性明心，性明圓故，因明發性，性妄見生，從畢竟無，成究竟有。此有所有，非因所因，住所住相，了無根本。本此無住，建立世界，及諸眾生。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明真如隨染緣，從真起妄。初句徵問，下釋顛倒之因。由性覺妙明之真心，性本自明，圓照法界，此依性明體中，圓具十法界之故。下起隨緣妄用。因明發性者：因妄加明於覺體之上，遂發生業識之性，此句即性覺必明，因明立所。明即能明之無明，性即所生之業相；亦即論云：依不覺故心動(即相業)。性妄見生者：業識之性，由無明力，轉本有之智光，為能見之妄見生焉；即所既妄立，生汝妄能，亦即論云：依動故能見(即相轉)。從畢竟無，成究竟有者：從畢竟無名無相之中，由妄見故，遂成究竟有相之境界，即無同異中，熾然成異；亦即論云：依能見故，境界妄現(即相現)。此妄相，惟以一念無明，虛妄而有也。首句，此有：即能有之無明；所有：即三細之諸相。二句，因者依也，無明為能有，似是所依，以能為三細諸相所依故；三細諸相為所有，似是能依，以依無明有故。其實無明，非真所依，諸相，非真能依，故曰：非因所因；以無明無自體故。住所住相者：以眾生為能住，無明為所住，既所住之無明本空，而能住之眾生，豈得實有哉？故曰：了無根本；以二皆虛妄故也。本此無住，建立世界，及諸眾生者：承上眾生世界，既同一虛妄，則惟有性覺妙明之真心耳。此心為無住本，不但為眾生之本，而山河大地之世界，及與一切之眾生，皆依之而得建立也。若是，生先界後，方是說有情世間，今界先生後，方是說器界世間。本科唯明眾生顛倒，世界二字，但順便帶言而已。初從真起妄竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">迷本難復</span></li></ul></div>
+<div class="unit"><p class="jing">迷本圓明，是生虛妄。妄性無體，非有所依。將欲復真，欲真已非，真真如性，非真求復，宛成非相。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《正脈》云：妄業不能虧曰本圓，妄惑不能蔽曰本明，此本圓明，即不變之性體。眾生特為迷此不變之性體，是生虛妄之惑業。而追窮妄性無體，亦無依據，總言真不變，而妄本空也。然妄既本空，則妄無可離；真既不變，則真無可復矣！圓頓行人，但要知真不變，達妄本空足矣！真不變則不須復，妄本空則不須離。如《圓覺》云：知幻即離，離幻即覺。一念回光，便同本得。首句，若久處輪迴，心生疲厭，將欲離妄復真，有欲復真，已非真真如性矣！前云：菩提心生，生滅心滅，此但生滅。以一真之性，不容起見，舉心即錯，動念即乖。如張拙《悟道偈》云：斷除妄想重增病，趣向真如亦是邪。非真求復，宛成非相者：非真，即生滅妄心也，以生滅之心，求復真常之性，則真常亦成生滅矣。即前頌云：言妄顯諸真，妄真同二妄，故曰：宛成非相；非相即妄也。以妄心起妄見，如《圓覺》云：未出輪迴，而辨圓覺，彼圓覺性，即同流轉。如雲駛月運，舟行岸移矣。二迷本難復竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">成業感果</span></li></ul></div>
+<div class="unit"><p class="jing">非生、非住、非心、非法，展轉發生，生力發明。熏以成業。同業相感，因有感業，相滅相生，由是故有，眾生顛倒。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明無明屬生相，業識屬住相，見分屬心相，相分屬法相，一一非真，故曰非生非住，非心非法，皆是虛妄。然妄上加妄，故曰展轉發生。此句雙貫上下，上則無明生三細，下則境界長六麤，由法相引起智相、相續相、執取相、計名字相。生力發明者：發明即顯著義，以展轉發生之力，漸漸顯著，生起七轉識之麤相，則諸惑備矣！熏以成業者：諸惑熏習，能成諸業，即起業相。同業相感，即業繫苦相。因彼業同，乃得相感潤生之惑；於父母有緣處，正當交遘之時，見有明相發現，此即見明色發，明見想成，異見成憎，同想成愛。父母感子女，以受生應之；子女感父母，以生身應之。因有相感之業、會合則中陰之相滅，胎中後陰之相生，由是在胎十月，出胎成人，故有眾生顛倒之相。初明眾生顛倒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">明世界顛倒</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">子初</span><span class="ke-t">釋世界之名</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">示熏變之相</span></li><li><span class="ke-mk">三</span><span class="ke-t">辯輪迴之狀</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗云何名為世界顛倒﹖是有所有，分段妄生，因此界立，非因所因，無住所住，遷流不住，因此世成。三世四方，和合相涉，變化眾生，成十二類。同上科，由性明心，性明圓故，因明發性，性妄見生，從畢竟無，成究竟有，下接</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此別明世界顛倒，屬有情之世界，亦從真起妄。初句徵問，下釋顛倒之因。應是有所有。此略而不敘者，因此世界，即眾生身中之世界，故以前妄因，雙貫此文，可不重敘，以是有所有，接成究竟下自明。是有：指能有之無明；所有：指眾生之根身，由無明妄力，攬塵結根，所以分段之妄身生焉。因此虛妄，前後左右之界相成立，究其所以，積妄相成故也。非因所因，無住所住者：無明本空，非是真因，而為世界所因；世界亦空，本來無住，而有所住之相；皆由眾生，妄執四大為身，從始洎終，念念生滅，所以過、現、未來，遷流不住，因此虛妄，而三世成矣。三世四方，和合相涉者：以三世涉入四方，四方各有三世，則四三成十二；以四方涉入三世，三世各有四方，則三四亦成十二；方世和合，即前云：身中貿遷，世界相涉。不思議熏，不思議變，故變化眾生，亦應其數，成十二類。是知十二類生，皆由一念無明，妄心之所熏變也。初釋世界之名竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">示熏變之相</span></li></ul></div>
+<div class="unit"><p class="jing">是故世界，因動有聲，因聲有色，因色有香，因香有觸，因觸有味，因味知法。六亂妄想，成業性故，十二區分，由此輪轉，是故世間。聲、香、味、觸，窮十二變。為一旋復。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此正示熏變之相，是由無明妄力之故，則有世界妄生。推原其故，因無明風動，動則有聲，故曰因動有聲。因此動念習氣熏變，故有狂華，於湛精明，無因亂起，無而忽有，故曰因聲有色。因此色境，返熏妄心，故曰因色有香。以香有能熏之義。因此返熏氣分，令心觸境，故曰因香有觸；觸即對也。因此心境相觸，而生愛著，故曰因觸有味；以味即愛著之義。因此緜愛味著，攬為法塵，故曰因味知法。觀知字屬意根，以後例前，必有聞聲見色等義。此總顯一念妄想，由習氣內熏，發為六塵，塵必對根，根塵相對，識生其中。六亂妄想，熏成業性：業性，即十二顛倒，以為十二類生，受生之因。業因既成，業果必隨，故感十二區分，受生之果。所謂熏以成業，業必感果。由此輪轉諸趣，生死不休，豈不可畏哉！此明循塵旋復，是依因感果之故。世間聲、香、味、觸，略舉四塵，仍具六塵。窮十二變，為一旋復，當作二釋：一如一聲塵，類之不同，對類變化，卵生聲，胎生聲，乃至非無想聲，色等諸塵，亦復如是，窮十二變為一週，旋復即輪迴義，亦十二類生，類類具十二顛倒，依最重者先感報，如想重，先感卵生果報。如是一一顛倒，依業種，先後成熟，先後感報，窮十二變，為一次旋復，再起第二旋復。然必約六塵變化者，以六塵為造業之緣，業性為輪迴之因。因緣和合，虛妄有生，輪迴不息，故類生所以常有也。二示熏變之相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">辨輪迴之狀</span><span class="ke-div">分2</span><ul><li class="ke-cur"><span class="ke-mk">丑初</span><span class="ke-t">列類生之名</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">示類生之果</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>乘此輪轉，顛倒相故，是有世界，卵生、胎生、濕生、化生、有色、</div></details></div>
+<div class="unit"><p class="jing">無色、有想、無想、若非有色、若非無色、若非有想、若非無想。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此顯染緣起，而徧成輪迴。如能返迷歸悟，則可成淨緣起，而上歷聖位。茲約迷位。乘此輪轉：乃有世界顛倒亦成十二類之故，此不獨惑現併由業招。若無十二顛倒，則惑不起業不作，十二輪轉，何自而來？是有世界：即十二類有情世界。下列其名，每以四生為一聚、三四十二，不出情想合離，更相變易。卵因想生，想性輕舉，故多能飛。胎因情有，情性沉重，故不離地。濕以合感，乃以業力，合濕成形。化以離應，但以業力，離異脫蛻。此四生以具緣多少，而為次第。卵生具四緣，父緣、母緣、自己業緣、與父母合，再加暖緣，而得受生。胎生具三緣與上同，不必暖緣。濕生二緣，但以業緣合濕，而得陽光暖相之緣，即便得生。化生只要業緣，厭故喜新，便得脫蛻。下八生，有色、無色、有想、無想、為一聚；非有色、非無色、非有想、非無想、為一聚。《灌頂》云：有色情而合，是休咎精明；無色情而離，是空散銷沉；有想想而合，是鬼神精靈；無想想而離，是土木金石；非有色情離而合，是水母等；非無色情合而離，是咒詛厭生；非有想想離而合，是蒲盧等；非無想想合而離，是土梟破鏡等。此且總標，下詳其相。初列類生之名竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">示類生之果</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">寅初</span><span class="ke-t">別列類生</span></li><li><span class="ke-mk">二</span><span class="ke-t">勒成名數</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>此十二類中，一一皆云，因世界者，以前文，世界顛倒文中云：三世四方，和合相涉，變化眾生，成十二類。正明皆由世界顛倒，虛妄有生也。共有十二顛倒、十二亂想。下文云：一一類中，各各具足，十二顛倒。又云：具足虛妄亂想，今每一類中，乃從重者，感報受生，非只此一種顛倒亂想也。此科即分十二。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯初</span><span class="ke-t">卵生</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗由因世界，虛妄輪迴，動顛倒故，和合氣成，八萬四千，飛沉亂想。如是故有，卵羯邏藍，流轉國土，魚、鳥、龜、蛇，其類充</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>塞。此卵生一類，由因世界顛倒，虛妄有生。卵惟想生，虛妄即是想，由虛妄想，展轉不息，故成輪迴性。動顛倒屬惑，以想性輕舉為動，與不動真心相背，是名顛倒之惑，有惑必定起業。和合氣成，八萬四千，飛沉亂想：此依惑起業。卵以氣交，如雄鳴上風，雌鳴下風，故名和合，氣即業也。八萬四千：按塵勞之數。氣有剛柔，剛者成飛揚之亂想，柔者成沉滯之亂想。如是故有，卵羯邏藍，流轉國土：此依業受報之相。如是，指上惑業為因；故有，即有因有果。卵羯邏藍：此云凝滑，在胎初位，胎卵未分之相，即所感之果，傳流展轉，徧諸國土。魚、鳥、龜、蛇：此出本類之名；氣剛飛揚者為鳥，氣柔沉滯者為魚等；其類充塞，極言其多也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯二</span><span class="ke-t">胎生</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，雜染輪迴，欲顛倒故，和合滋成，八萬四千，橫豎亂想。如是故有，胎遏蒲曇，流轉國土，人、畜、龍、仙，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此胎生一類，亦因世界顛倒，虛妄有生。胎因情有，雜染即是情，由是雜染愛情，展轉不息，故成輪迴性。欲顛倒屬惑，以色貪戀愛為欲，與清淨真心相背，是名顛倒之惑，有惑必定起業。和合滋成，八萬四千，橫豎亂想：此依惑起業；胎以精交，故名和合滋成。滋即精交滋潤，即業也。八萬四千，亦按塵勞之數。情有偏正，豎者為正，成人仙之亂想；橫者為偏，成龍畜之亂想。如是故有，胎遏蒲曇，流轉國土：此依業受報之相。如是，指上惑業為因；故有，即有因有果。胎遏蒲曇，此云皰，在胎二七，胎卵漸分之相。即所感之果，傳流展轉，徧諸國土。人畜龍仙：此出本類之名。情正而豎立者，為人仙；情偏而橫行者，為龍畜，其類充塞。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯三</span><span class="ke-t">濕生</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，執著輪迴，趣顛倒故，和合煖成，八萬四千，翻覆亂想。如是故有，濕相蔽尸，流轉國土。含蠢蝡動，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此濕生一類，由因世界顛倒，虛妄有生。濕以合感，執著即合也。由是執情貪著，展轉不息，故成輪迴性。趣顛倒屬惑，以趨勢附利為趣，與湛寂真心相背，是名顛倒之惑，有惑必定起業。和合煖成，八萬四千，翻覆亂想：此依惑起業，濕以聞香趨附，藉陽氣而生，故名和合煖成，即業也。趨勢之輩，惟利是圖，翻覆無定，故曰翻覆亂想。如是故有，濕相蔽尸，流轉國土：此依業受報之相。如是：指上惑業為因；故有：即有因有果。濕相蔽尸：此云軟肉，即濕生初相。既不入胎，故無前二位。即所感之果，傳流展轉，徧諸國土。含蠢蝡動，此出本類之名，覆為含蠢，翻為蝡動，其類充塞。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯四</span><span class="ke-t">化生</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，變易輪迴，假顛倒故，和合觸成，八萬四千，新故亂想。如是故有，化相羯南，流轉國土。轉蛻飛行，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此化生一類，由因世界顛倒，虛妄有生。化以離應，變易、即離也。由是變故易新，展轉不息，故成輪迴性。假顛倒屬惑，以假托因依為假，與不變真如相背，是名顛倒之惑，有惑必定起業。和合觸成，八萬四千，新故亂想：此依惑起業，觸以觸類而變，朝秦暮楚。愛此忘彼，故名和合觸成，即業也。隨情任意，厭故喜新，是為新故亂想。如是故有，化相羯南，流轉國土：此依業受報之相。如是：指上惑業為因；故有：即有因有果。化相羯南：此云硬肉，以蛻即成質，故無蝡相。自此以下，皆曰羯南，以是諸類通稱也。此即所感之果。傳流展轉，徧諸國土。轉蛻飛行：即脫故成新，此出本類之名，如蠶化為蛾，脫行為飛；雀化為蛤，脫飛為潛等，皆屬轉變，其類充塞。天、獄鬼等，亦皆化生，中陰趣果，速疾無難。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯五</span><span class="ke-t">有色</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，留礙輪迴，障顛倒故，和合著成，八萬四千，精耀亂想。如是故有，色相羯南，流轉國土。休咎精明，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此有色一類，由因世界顛倒，虛妄有生。色乃色質，性非通明，是為留礙，遂事日月水火，為求光明色相，展轉不息，故成輪迴性。障顛倒屬惑，以其障礙難通，堅執求明，與妙明真性相背，是名顛倒之惑。和合著成，八萬四千，精耀亂想：此依惑起業。著即顯著，或服日月之精華，或事星辰為父母，以求感格，而獲光明，故名和合著成，即業也。想托彼之光華，成己之精耀，是為精耀亂想。如是故有，色相羯南，流轉國土：此依業受報之相。如是：指上惑業為因；故有：即有因有果。色相羯南，流轉國土。休咎精明：此出本類之名，或為日月之精華，或作星辰之明耀。吉者曰休徵，凶者曰咎徵。在物而為螢火蚌珠，其類充塞。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯六</span><span class="ke-t">無色</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，銷散輪迴，惑顛倒故，和合暗成，八萬四千，陰隱亂想，如是故有，無色羯南，流轉國土，空散銷沉，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此無色一類，由因世界顛倒，虛妄有生。無色，乃滅色歸空，是為銷散。展轉不息，故成輪迴性。惑顛倒屬惑，以色身障礙為患。有欲銷礙入空，與性色真空相背，是名顛倒之惑。和合暗成，八萬四千，陰隱亂想：此依惑起業。暗即晦昧心靈，幽潛神識，故名和合暗成，即業也。思欲滅色，暗昧陰隱，是為陰隱亂想。如是故有，無色羯南，流轉國土：此依業感報之相。如是：指上惑業為因；故有：即有因有果。無色羯南，流轉國土：此類既是無色，何謂羯南？以雖無業果色，不妨依定果色立名也。空散銷沉：對四空天說，空指空處，滅色歸空故；散指識處，徧緣散亂故；銷指無所有處，銷除七轉識故；沉指非非想處，沉淪空海故。以至舜若多神，旋風魃鬼等，皆無色攝，其類充塞。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯七</span><span class="ke-t">有想</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，罔象輪迴，影顛倒故，和合憶成，八萬四千，潛結亂想。如是故有，想相羯南，流轉國土，神鬼精靈，其類充塞。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此名有想一類，謂但有想心，而無實色。罔象者：若有若無，彷彿不實。緣想不息，故成輪迴性。影顛倒屬惑，謬執影像，邪妄失真，與法身實相相背，是名顛倒之惑。和合憶成，八萬四千，潛結亂想：此依惑起業。憶即愛念憶想，然後托陰，故名和合憶成，即業也。如此世間，志慕靈通，潛神聖蹟，結想狀貌，是為潛結亂想。如是故有，想相羯南，流轉國土：此依業感報之相。神鬼精靈者：神鬼，如嶽瀆城隍，魑、魅、魍、魎；精靈，如山、海、風精，祠廟土地等，其類充塞。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">卯八</span><span class="ke-t">無想</span></li></ul></div>
+<div class="unit"><p class="jing">由因世界，愚鈍輪迴，癡顛倒故，和合頑成，八萬四千，枯槁亂想。如是故有，無想羯南，流轉國土，精神化為土、木、金、石，其卯九非有色由因世界，相待輪迴，偽顛倒故，和合染成，八萬四千，因依亂想。如是故有，非有色相，成色羯南，流轉國土。諸水母等，以蝦為目，其類充塞。卯十非無色由因世界，相引輪迴，性顛倒故，和合咒成，八萬四千，呼召亂想，由是故有，非無色相，無色羯南，流轉國土，咒咀厭生。其類為呼召亂想。由是故有，非無色相，無色羯南，流轉國土：此依業感報之相。故有由因世界，合妄輪迴，罔顛倒故，和合異成，八萬四千，迴互亂想。如是故有，非有想相，成想羯南，流轉國土。彼蒲盧等，異質相成，其類充塞。彼此迴互，是為迴互亂想。如是故有，非有想相，成想羯南，流轉國土：此依由因世界，怨(平聲)害輪迴，殺顛倒故，和合怪成，八萬四千，食父母想。如是故有，非無想相，無想羯南，流轉國土。如土梟等，附塊為兒，及破鏡鳥，以毒樹果，抱為其子。子成父母皆遭其食，其</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>類充塞。此無想一類，謂但有色，而無思想。愚昧暗鈍，毀棄聰明，屏除知識，展轉不息，故成輪迴性。癡顛倒屬惑，癡迷無智，謬計無情有命，金石堅牢，與妙明真心相背，是顛倒之惑。和合頑成，八萬四千，枯槁亂想：此依惑起業。冥頑無知，以無想為真修，將愚頑為至道，於無知覺處，妄生和合，故名頑成，即業也。念若死灰，心同槁木，是為枯槁亂想。如是故有，無想羯南，流轉國土：此依業感報之相。但有頑礙之色，而無思想之念，故有精化土木，神為金石，華表生精，望夫成石之類，充塞世界。當知此等，癡心凝結，但以頑念，化作頑物，如木枯槁，根性尚在。頑念力銷，依然流轉，如枯木逢春，依舊發芽，無想報盡入輪，亦此類攝。此非有色一類，謂本非有色，藉物以成色。互相假待，展轉不休，故有輪迴。偽顛倒屬惑，以虛偽為心，假托形勢，與真如實際相背，是顛倒之惑。和合染成，八萬四千，因依亂想：此依惑起業，迷昧天真，假藉浮偽，任運耽染，依附成形，故名和合染成，即業也。此如世間倚權藉勢，屈己從他，是為因依亂想。如是故有，非有色相，成色羯南，流轉國土：此依業感報之相。本來非色相，假借外物，成己之色，不能自用，待物有用。諸水母等，以水沫成身，體如荳粉，狀類裀褥，則非無色，以蝦為目，待他有用，不能自全，故非有色。又水母因蝦而得行，蝦因水母而有托，遞互因依；蟯蛔依人，亦此類攝。充塞。此非無色一類。謂本非有色，因聲呼召，引發神識，則非無色相，引之不已，故有輪迴。性顛倒屬惑，以迷惑自性，因隨符咒調遣，與不動真如相背，是顛倒之惑。和合咒成，八萬四千，呼召亂想：此依惑起業。多由邪咒呼召，而顯靈異，故名和合咒成，即業也。此如人間，不明正理，互相誘引，乃隨呼召，聽令從命，是隨咒咀而靈異者，稱仙稱道；隨厭禱而作祟者，為妖為怪，斯皆邪物，聽人驅役，報吉談凶；如乩壇樟柳鬼等，其類充塞。卯十一非有想此非有想一類。謂非同卵生，想中傳命者，乃二妄相合，展轉互取，故有輪迴。罔顛倒屬惑，以性情罔昧，與圓明妙性相背，是為顛倒之惑。和合異成，八萬四千，迴互亂想：此依惑起業。異者，將他作自，取異為同，故名和合異成，即業也。此如世間，背親向義，謬襲他宗，納彼從我，相承繼嗣，本無有子，乃稱有子，本非是父，竟認為父，同異難分。業感果之相。非有想相，成想羯南者：謂彼此異質，本非有想，欲成其相，但以二妄相合，竟成其想，流轉國土。彼蒲盧等，異質相成者：蒲盧，亦名踝蠃，細腰蜂也。《詩經》云：螟蛉有子，蜾蠃負之。螟蛉青桑蟲，蜾蠃運泥作房，負桑蟲納其中，咒祝曰：類我類我，七日化為其子。桑蟲本非有想，欲成蜾蠃之相，因其咒故，遂成其想，是為異質相成。此皆好為誣罔誘取他人財物，納為己有之報，其類充塞。卯十二非無想類充塞。此非無想一類。原為懷怨抱恨，圖害而來，怨結莫釋，故有輪迴。殺顛倒屬惑，殺心不止，殺業俱生，反托至親之父子，而行至怨之殺害，與慈悲忍辱之理相背，是顛倒之惑。和合怪成，八萬四千，食父母想：此依惑起業。怪者，怪誕，出人意外，罕見罕聞之事。父母至親，竟敢吞食，逆天背理，滅倫亂常，故名和合怪成，食父母想，即業也。如是故有，非無想相，無想羯南，流轉國土：此依因感果之相，必由前世受人至恩至愛，反而負恩讎害，怨對相值，報此仇恨，故有此生，非無想相，無想羯南者：初抱為其子，非無恩愛之想，後父母竟遭其食，恩愛斷絕，是為無想。出乎意外，流轉國土，如土梟等，附土塊以為兒，及破鏡鳥，以毒樹果，抱為其子，子成父母皆遭其食，此雖報怨，實屬逆罪。按《史記孝武本紀》云：祠黃帝用一梟，一破鏡。孟康註曰：梟鳥名食母，破鏡獸名食父。黃帝欲絕其類，使百祠皆用之。今云破鏡鳥，恐譯人之誤。《述異記》云：破鏡狀如虎豹而小，始生還食其母，此與孟康註，食父食母，又一不同也，錄以待考。初別列類生竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">勒成名數</span></li></ul></div>
+<div class="unit"><p class="jing">是名眾生，十二種類。</p></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛三</span><span class="ke-t">示染緣起徧成輪迴竟</span></li></ul></div>
+</div>
+          <a class="backlink" href="/study-group/shurangama/">← 回楞嚴經總覽</a>
+        </section>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(!tools)return;
+  tools.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-act]');if(!b)return;
+    var open=b.getAttribute('data-act')==='open';
+    document.querySelectorAll('.sutra details.ann').forEach(function(d){d.open=open;});
+  });
+})();
+
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！卷一重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

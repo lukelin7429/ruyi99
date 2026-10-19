@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《大佛頂首楞嚴經》卷十 導讀 · 如意精舍讀書會</title>
+  <meta name="description" content="《楞嚴經》卷十導讀與經文：序分、七處徵心、二種根本、十番顯見（顯見是心、顯見不動）。依圓瑛法師《講義》判科，附跨經論對讀地圖與 CBETA 經文。">
+  <style>
+    :root {
+      --ink: #24211d; --muted: #6c6256; --line: #ddd3c5; --paper: #fbfaf7;
+      --surface: #ffffff; --wash: #f1eee8; --saffron: #b96f27; --leaf: #4f7460;
+      --blue: #3d647c; --rose: #9c5a54; --shadow: 0 14px 35px rgba(58,49,37,0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--ink);
+      background: linear-gradient(180deg, rgba(241,238,232,.75), rgba(251,250,247,.5) 360px), var(--paper);
+      font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif; line-height:1.8; }
+    a { color: inherit; }
+    .page { display:grid; grid-template-columns:minmax(0,1fr); min-height:100vh; }
+    .hero { padding:48px 24px 28px; border-bottom:1px solid var(--line);
+      background: radial-gradient(circle at 15% 0%, rgba(185,111,39,.13), transparent 34%),
+      linear-gradient(135deg, rgba(79,116,96,.09), transparent 46%); }
+    .hero-inner, .content { width:min(1120px, calc(100vw - 40px)); margin:0 auto; }
+    .breadcrumb { margin:0 0 14px; font-size:.9rem; color:var(--muted); }
+    .breadcrumb a { text-decoration:none; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; margin:0 0 14px;
+      color:var(--leaf); font-size:.95rem; font-weight:700; }
+    .eyebrow::before { content:""; width:32px; height:1px; background:var(--leaf); }
+    h1 { margin:0; max-width:860px; font-size:clamp(2rem,5vw,4.2rem); line-height:1.15; font-weight:800; }
+    .subtitle { max-width:820px; margin:20px 0 0; color:var(--muted); font-size:1.14rem; line-height:1.9; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; padding:0; list-style:none; }
+    .meta li { border:1px solid var(--line); background:rgba(255,255,255,.64); padding:6px 12px;
+      border-radius:999px; color:#51493f; font-size:.92rem; }
+    .content { display:grid; grid-template-columns:260px minmax(0,1fr); gap:30px; padding:30px 0 72px; }
+    .toc { position:sticky; top:18px; align-self:start; padding:18px; border:1px solid var(--line);
+      border-radius:8px; background:rgba(255,255,255,.78); box-shadow:var(--shadow); }
+    .toc strong { display:block; margin-bottom:10px; color:var(--muted); font-size:.88rem; }
+    .toc a { display:block; padding:8px 0; color:var(--ink); text-decoration:none;
+      border-top:1px solid rgba(221,211,197,.7); font-size:.96rem; }
+    main { min-width:0; }
+    section { margin-bottom:26px; padding:28px; border:1px solid var(--line); border-radius:8px;
+      background:var(--surface); box-shadow:var(--shadow); }
+    h2 { margin:0 0 16px; font-size:1.55rem; line-height:1.35; }
+    h3 { margin:22px 0 10px; font-size:1.16rem; color:#3d342b; }
+    p { margin:0 0 14px; }
+    ul, ol { margin:0; padding-left:1.3rem; }
+    li + li { margin-top:6px; }
+    .lead { font-size:1.08rem; color:#39332d; }
+    .quote { margin:20px 0 0; padding:18px 20px; border-left:5px solid var(--saffron);
+      background:#fff7ea; color:#4f3a21; font-size:1.12rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .key-card { min-height:168px; padding:18px; border:1px solid var(--line); border-radius:8px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .key-card b { display:block; margin-bottom:8px; color:var(--saffron); font-size:1.05rem; }
+    .key-card p { margin:0; color:var(--muted); font-size:.96rem; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border:1px solid var(--line);
+      border-radius:8px; background:#fff; }
+    th, td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#eee7dc; color:#493e33; font-weight:800; }
+    tr:last-child td { border-bottom:0; }
+    td.n { white-space:nowrap; font-weight:800; color:var(--saffron); }
+    .note { padding:16px 18px; border-radius:8px; border:1px solid rgba(79,116,96,.35);
+      background:rgba(79,116,96,.08); margin-top:16px; }
+    .note strong { color:var(--leaf); }
+    details { border:1px solid var(--line); border-radius:8px; background:#fffdfa; overflow:hidden; margin-top:16px; }
+    summary { cursor:pointer; padding:15px 18px; background:#f5f0e8; font-weight:800; color:#3a332b; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    .detail-body { padding:18px; }
+    .terms { display:flex; flex-wrap:wrap; gap:9px; margin-top:12px; }
+    .terms span { border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff;
+      color:#4d453c; font-size:.92rem; }
+    .footer-note { color:var(--muted); font-size:.94rem; }
+    /* 經文 */
+    .sutra-sec { background:linear-gradient(180deg,#fffdf8,#fbf7ef); }
+    .sutra-meta { color:var(--muted); font-size:.94rem; margin-bottom:6px; }
+    .jing-credit { color:var(--muted); font-size:.95rem; margin:0 0 8px; }
+    .jing-subhead { margin:16px 0 6px; color:#3d342b; font-size:1.05rem; }
+    .sutra { margin-top:18px; padding:24px 26px; border:1px solid var(--line); border-radius:8px;
+      background:#fff; }
+    .sutra p { font-size:1.12rem; line-height:2.05; text-indent:2em; margin:0 0 16px; color:#2a2620; }
+    .sutra p:last-child { margin-bottom:0; }
+    /* 經文＋圓瑛《講義》消文 逐段 toggle */
+    .sutra-tools { display:flex; gap:10px; align-items:center; margin:0 0 14px; flex-wrap:wrap; }
+    .sutra-tools button { cursor:pointer; border:1px solid var(--line); background:#fff; color:var(--saffron);
+      font-size:.86rem; font-weight:700; padding:6px 13px; border-radius:999px; transition:background .15s,color .15s; }
+    .sutra-tools button:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    .sutra-tools .tools-note { color:var(--muted); font-size:.84rem; }
+    h4.ke { margin:30px 0 12px; color:var(--leaf); font-size:1rem; font-weight:700; text-indent:0;
+      padding:6px 0 6px 14px; border-left:3px solid var(--leaf);
+      background:linear-gradient(90deg,rgba(79,116,96,.09),transparent); }
+    h4.ke:first-child { margin-top:0; }
+    .ke-tree-wrap { margin:30px 0 14px; padding:12px 16px;
+      border-left:3px solid var(--leaf); border-radius:0 8px 8px 0;
+      background:linear-gradient(90deg,rgba(79,116,96,.08),rgba(79,116,96,.02)); }
+    .ke-tree-wrap:first-child { margin-top:0; }
+    ul.ke-tree, ul.ke-tree ul { list-style:none; margin:0; padding:0; }
+    ul.ke-tree { font-size:.95rem; line-height:1.7; }
+    ul.ke-tree ul { margin-left:.55em; padding-left:.9em; border-left:1px dashed #cdbfa6; }
+    ul.ke-tree li { position:relative; padding:2px 0; }
+    .ke-mk { font-weight:700; color:var(--leaf); letter-spacing:.02em; margin-right:.45em; }
+    .ke-t { color:var(--ink); }
+    .ke-div { margin-left:.5em; font-size:.78rem; color:var(--muted);
+      border:1px solid var(--line); border-radius:10px; padding:0 .5em; vertical-align:.06em; }
+    .ke-now { margin-left:.5em; font-size:.72rem; font-weight:700; color:#fff;
+      background:var(--saffron); border-radius:5px; padding:.5px .5em; }
+    li.ke-cur { background:rgba(185,111,39,.09); border-radius:5px; }
+    li.ke-cur > .ke-mk { color:var(--saffron); }
+    .unit { margin:0 0 14px; }
+    p.jing { font-size:1.16rem; line-height:2.0; text-indent:2em; margin:0; color:#221f1a;
+      padding:14px 18px; background:linear-gradient(180deg,#fffdf8,#fbf6ec);
+      border:1px solid #ece1cd; border-radius:10px; }
+    details.ann { margin:6px 0 0; }
+    details.ann > summary { cursor:pointer; list-style:none; color:var(--saffron); font-size:.9rem;
+      font-weight:700; padding:7px 14px; user-select:none; display:inline-flex; align-items:center; gap:6px; }
+    details.ann > summary::-webkit-details-marker { display:none; }
+    details.ann > summary::before { content:"▸"; transition:transform .18s; }
+    details.ann[open] > summary::before { transform:rotate(90deg); }
+    details.ann > summary:hover { color:#8a5010; }
+    details.ann > div { margin:2px 0 0; padding:14px 18px; background:#faf6ee;
+      border:1px dashed #e2d5bd; border-radius:10px; color:#4a4238; font-size:1rem;
+      line-height:2.0; text-align:justify; text-indent:2em; }
+    .backlink { display:inline-block; margin-top:8px; color:var(--leaf); text-decoration:none; font-weight:700; }
+    /* 學習考題 quiz */
+    .quiz-intro { color:var(--muted); margin:0 0 6px; }
+    .quiz-group-title { margin:26px 0 4px; color:var(--leaf); font-size:1.06rem; font-weight:800;
+      display:flex; align-items:center; gap:9px; }
+    .quiz-group-title::before { content:""; width:22px; height:2px; background:var(--leaf); border-radius:2px; }
+    .quiz-q { margin:14px 0 0; padding:18px 20px; border:1px solid var(--line); border-radius:10px;
+      background:linear-gradient(180deg,#fff,#faf7f1); }
+    .quiz-q > .q { margin:0 0 12px; font-weight:700; color:#33302a; line-height:1.7; }
+    .quiz-q > .q .qn { display:inline-block; min-width:1.9em; margin-right:.55em; padding:.05em .5em;
+      background:var(--saffron); color:#fff; border-radius:6px; font-size:.82rem; font-weight:800;
+      text-align:center; vertical-align:.1em; }
+    .opts { display:flex; flex-direction:column; gap:8px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; cursor:pointer;
+      border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:.98rem;
+      line-height:1.6; padding:11px 14px; border-radius:8px; transition:background .15s,border-color .15s; }
+    .opt:hover:not(:disabled) { border-color:var(--saffron); background:#fff7ea; }
+    .opt .mk { flex:none; width:1.7em; height:1.7em; border:1px solid var(--line); border-radius:50%;
+      display:inline-flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800;
+      color:var(--muted); background:#faf7f1; }
+    .opt:disabled { cursor:default; }
+    .opt.correct { border-color:var(--leaf); background:rgba(79,116,96,.12); }
+    .opt.correct .mk { border-color:var(--leaf); background:var(--leaf); color:#fff; }
+    .opt.wrong { border-color:var(--rose); background:rgba(156,90,84,.10); }
+    .opt.wrong .mk { border-color:var(--rose); background:var(--rose); color:#fff; }
+    .quiz-exp { margin:11px 0 0; padding:11px 15px; border-radius:8px; font-size:.95rem; line-height:1.8;
+      border:1px dashed #e2d5bd; background:#faf6ee; color:#4a4238; display:none; }
+    .quiz-q.answered .quiz-exp { display:block; }
+    .quiz-exp b { color:var(--leaf); }
+    .quiz-scorebar { margin:22px 0 4px; padding:14px 18px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.92);
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap; box-shadow:var(--shadow); }
+    .quiz-scorebar .score { font-weight:800; color:var(--saffron); font-size:1.02rem; }
+    .quiz-scorebar .score b { font-size:1.3rem; }
+    .quiz-scorebar .msg { color:var(--muted); font-size:.94rem; }
+    .quiz-reset { margin-left:auto; cursor:pointer; border:1px solid var(--line); background:#fff;
+      color:var(--saffron); font:inherit; font-size:.86rem; font-weight:700; padding:7px 14px;
+      border-radius:999px; transition:background .15s,color .15s; }
+    .quiz-reset:hover { background:var(--saffron); color:#fff; border-color:var(--saffron); }
+    details.reflect > summary { color:var(--leaf); }
+    @media (max-width:880px){ .content{grid-template-columns:1fr;} .toc{position:static;}
+      .grid{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .hero{padding:36px 18px 22px;}
+      .hero-inner,.content{width:min(100vw - 28px,1120px);} section{padding:20px;}
+      th,td{padding:10px;} .sutra{padding:18px;} .sutra p{font-size:1.06rem;text-indent:2em;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="breadcrumb"><a href="/">首頁</a> › <a href="/study-group/">讀書會</a> › <a href="/study-group/shurangama/">楞嚴經</a> › 卷十</p>
+        <p class="eyebrow">如來藏 · 大佛頂首楞嚴經 · 卷十</p>
+        <h1>《楞嚴經》卷十 導讀</h1>
+        <p class="subtitle">五十陰魔的最後二十境：行陰將破時，十種推度錯了方向，「墮落外道，惑菩提性」；識陰將破時，十種執取「違遠圓通，背涅槃城」。佛再說五陰本因同是妄想，並開示「理則頓悟，乘悟併銷；事非頓除，因次第盡」。最後流通分，校量此經功德，大眾皆大歡喜，作禮而去。</p>
+        <ul class="meta" aria-label="本卷資訊">
+          <li>判科依據：圓瑛《講義》</li>
+          <li>經文來源：CBETA T19n0945</li>
+          <li>科段：行陰十境 · 識陰十境 · 五陰本因 · 流通分</li>
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <nav class="toc" aria-label="頁面導覽">
+        <strong>本頁導覽</strong>
+        <a href="#overview">本卷定位</a>
+        <a href="#samskara">行陰十境 · 十種外道</a>
+        <a href="#vijnana">識陰十境</a>
+        <a href="#five">五陰本因 · 頓悟漸除</a>
+        <a href="#circulate">流通分</a>
+        <a href="#whole">全經回顧</a>
+        <a href="#practice">本卷修學重點</a>
+        <a href="#quiz">學習考題</a>
+        <a href="#crossref">對讀地圖</a>
+        <a href="#terms">名相索引</a>
+        <a href="#sutra">經文（卷十）</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>本卷定位</h2>
+          <p class="lead">卷九說完色、受、想三陰共三十境。<strong>卷十續說行陰、識陰二十境，五十陰魔至此說完。</strong>接著佛回答阿難：五陰是一時銷除還是次第而盡？佛說五陰本因同是妄想，理可頓悟、事須漸除。最後是全經的流通分。</p>
+          <div class="quote">理則頓悟，乘悟併銷；事非頓除，因次第盡。</div>
+          <div class="grid">
+            <article class="key-card"><b>行陰：十種外道</b><p>於細微生滅中錯起推度，各立一論，「墮落外道，惑菩提性」。</p></article>
+            <article class="key-card"><b>識陰：十種執</b><p>將近究竟時錯認所得，「違遠圓通，背涅槃城」。</p></article>
+            <article class="key-card"><b>流通：一念開示</b><p>以一念將此法門開示末劫未學，福超七寶供養微塵諸佛。</p></article>
+          </div>
+        </section>
+
+        <section id="samskara">
+          <h2>行陰十境 · 十種外道</h2>
+          <p>想陰盡者「平常夢想銷滅，寤寐恒一」，此時行陰顯露：</p>
+          <div class="quote">見諸十方十二眾生，畢殫其類。雖未通其各命由緒，見同生基，猶如野馬熠熠清擾，為浮根塵究竟樞穴；此則名為行陰區宇。</div>
+          <p>行陰盡則「超眾生濁。觀其所由，幽隱妄想以為其本」。在這之前，行人若於細微生滅之處起計度，便落入十種外道：</p>
+          <table>
+            <thead><tr><th>次第</th><th>所立之論（經文原名）</th></tr></thead>
+            <tbody><tr><td class="n">第一外道</td><td>立無因論</td></tr><tr><td class="n">第二外道</td><td>立圓常論</td></tr><tr><td class="n">第三外道</td><td>一分常論</td></tr><tr><td class="n">第四外道</td><td>立有邊論</td></tr><tr><td class="n">第五外道</td><td>四顛倒性不死矯亂遍計虛論</td></tr><tr><td class="n">第六外道</td><td>立五陰中死後有相心顛倒論</td></tr><tr><td class="n">第七外道</td><td>立五陰中死後無相心顛倒論</td></tr><tr><td class="n">第八外道</td><td>立五陰中死後俱非心顛倒論</td></tr><tr><td class="n">第九外道</td><td>立五陰中死後斷滅心顛倒論</td></tr><tr><td class="n">第十外道</td><td>立五陰中五現涅槃心顛倒論</td></tr></tbody>
+          </table>
+          <div class="note"><strong>導讀提醒：</strong>這十種「論」對應印度古代哲學的各種主張（無因、常住、有邊無邊、詭辯、死後有無等），也和《長阿含·梵動經》的六十二見有不少相通處。楞嚴的說明特別在於：它們都是禪修到深處時、在行陰的細微流動上起的錯誤推度。</div>
+        </section>
+
+        <section id="vijnana">
+          <h2>識陰十境</h2>
+          <p>行陰盡時，「如鷄後鳴；瞻顧東方已有精色」，六根虛靜，「此則名為識陰區宇」。識陰盡則「超越命濁。觀其所由，罔象虛無顛倒妄想以為其本」。在此之前的十種錯認：</p>
+          <table>
+            <thead><tr><th>次第</th><th>因心 · 果</th><th>所生之種</th></tr></thead>
+            <tbody><tr><td class="n">第一</td><td>立所得心，成所歸果</td><td>生外道種</td></tr><tr><td class="n">第二</td><td>立能為心，成能事果</td><td>生大慢天我遍圓種</td></tr><tr><td class="n">第三</td><td>立因依心，成妄計果</td><td>生倒圓種</td></tr><tr><td class="n">第四</td><td>計圓知心，成虛謬果</td><td>生倒知種</td></tr><tr><td class="n">第五</td><td>計著崇事迷心從物、立妄求因，求妄冀果</td><td>生顛化種</td></tr><tr><td class="n">第六</td><td>圓虛無心，成空亡果</td><td>生斷滅種</td></tr><tr><td class="n">第七</td><td>執著命元立固妄因，趣長勞果</td><td>生妄延種</td></tr><tr><td class="n">第八</td><td>發邪思因，立熾塵果</td><td>生天魔種</td></tr><tr><td class="n">第九</td><td>圓精應心，成趣寂果</td><td>生纏空種</td></tr><tr><td class="n">第十</td><td>圓覺㳷心，成湛明果</td><td>生覺圓明不化圓種</td></tr></tbody>
+          </table>
+          <p>十境都以同一句收束：<strong>「違遠圓通，背涅槃城。」</strong>第九、第十兩種，經文明說「是人則墮定性聲聞」「是人則墮定性辟支」，可見連二乘的寂滅也被視為未究竟。</p>
+        </section>
+
+        <section id="five">
+          <h2>五陰本因 · 頓悟漸除</h2>
+          <p>阿難請問：五陰是一時俱滅，還是次第而盡？佛說：</p>
+          <div class="quote">是故如來與汝發明，五陰本因同是妄想。</div>
+          <table>
+            <thead><tr><th>五陰</th><th>本因</th><th>陰盡所超之濁</th></tr></thead>
+            <tbody>
+              <tr><td class="n">色陰</td><td>堅固妄想</td><td>劫濁</td></tr>
+              <tr><td class="n">受陰</td><td>虛明妄想</td><td>見濁</td></tr>
+              <tr><td class="n">想陰</td><td>融通妄想</td><td>煩惱濁</td></tr>
+              <tr><td class="n">行陰</td><td>幽隱妄想</td><td>眾生濁</td></tr>
+              <tr><td class="n">識陰</td><td>罔象虛無顛倒妄想</td><td>命濁</td></tr>
+            </tbody>
+          </table>
+          <p>說到色陰的堅固妄想，佛重提卷二的例子：「心想醋味，口中涎生；心想登高，足心酸起」，證明身體也是想所成。至於五陰的生滅次第：</p>
+          <div class="quote">生因識有，滅從色除。理則頓悟，乘悟併銷；事非頓除，因次第盡。我已示汝劫波巾結，何所不明再此詢問？</div>
+          <div class="note"><strong>關鍵辨正：</strong>五陰生起是從識到色，破除是從色到識，方向相反。「我已示汝劫波巾結」直接回扣卷五綰巾示結：結由次第綰成，也須次第而解。</div>
+        </section>
+
+        <section id="circulate">
+          <h2>流通分</h2>
+          <p>佛以校量顯此經功德：</p>
+          <div class="quote">若復有人遍滿十方所有虛空盈滿七寶，持以奉上微塵諸佛，承事供養，心無虛度。</div>
+          <p>不及有人「能以一念將此法門於末劫中開示未學，是人罪障應念銷滅……得福超越前之施人，百倍、千倍、千萬億倍」。最後：</p>
+          <div class="quote">阿難！若有眾生能誦此經，能持此呪，如我廣說窮劫不盡。依我教言，如教行道，直成菩提，無復魔業。</div>
+          <p>「佛說此經已，比丘、比丘尼、優婆塞、優婆夷，一切世間、天、人、阿修羅，及諸他方菩薩、二乘、聖仙童子，并初發心大力鬼神，皆大歡喜，作禮而去。」</p>
+          <div class="note"><strong>導讀提醒：</strong>圓瑛消文解「作禮而去」為「要休去，歇去」，並引卷四「狂性自歇，歇即菩提」作結。全經從阿難「發心出家」開始，以「歇即菩提」收尾。</div>
+        </section>
+
+        <section id="whole">
+          <h2>全經回顧</h2>
+          <table>
+            <thead><tr><th>卷</th><th>主題</th></tr></thead>
+            <tbody>
+              <tr><td class="n"><a href="/study-group/shurangama/juan01/">一</a></td><td>序分 · 七處徵心 · 二種根本 · 十番顯見（前二番）</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan02/">二</a></td><td>十番顯見（後八番）· 二妄 · 會通五陰</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan03/">三</a></td><td>會通六入、十二處、十八界、七大 · 阿難讚佛偈</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan04/">四</a></td><td>三種相續 · 五大圓融 · 歇即菩提 · 二決定義</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan05/">五</a></td><td>綰巾示結 · 六解一亡 · 二十四聖圓通</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan06/">六</a></td><td>觀音耳根圓通 · 文殊揀選 · 四種清淨明誨</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan07/">七</a></td><td>持咒 · 建立道場 · 楞嚴神咒 · 十二類生</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan08/">八</a></td><td>三種漸次 · 五十五位 · 經名 · 七趣（至欲界天）</td></tr>
+              <tr><td class="n"><a href="/study-group/shurangama/juan09/">九</a></td><td>色界 · 無色界 · 修羅 · 色受想三陰三十境</td></tr>
+              <tr><td class="n">十</td><td>行識二陰二十境 · 五陰本因 · 流通分</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="practice">
+          <h2>本卷修學重點</h2>
+          <div class="grid">
+            <article class="key-card"><b>正知見護身</b><p>後二十境沒有外魔，都是見解走偏。經教與正知見是最後的防線。</p></article>
+            <article class="key-card"><b>頓悟漸修</b><p>理可一時明白，習氣須逐層斷除。既不自滿，也不氣餒。</p></article>
+            <article class="key-card"><b>傳示末法</b><p>佛囑將此法門傳示未學。讀懂之後，分享給同修也是修行。</p></article>
+          </div>
+        </section>
+
+        <section id="quiz">
+          <h2>學習考題 · 自我驗收</h2>
+          <p class="quiz-intro">讀完卷十導讀後，用以下考題自我檢驗。<strong>單選題</strong>與<strong>是非題</strong>即時對答、看解析並累計分數；<strong>思考題</strong>點開參考答案自行對照、不計分。</p>
+          <p class="quiz-group-title">一、單選題</p>
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">1</span>行陰盡時，此人能超越哪一濁？其根本是什麼妄想？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>劫濁 · 堅固妄想</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>見濁 · 虛明妄想</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>眾生濁 · 幽隱妄想</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>命濁 · 罔象虛無顛倒妄想</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>C。「名行陰盡，是人則能超眾生濁。觀其所由，幽隱妄想以為其本。」</p>
+          </div>
+          <div class="quiz-q" data-answer="3">
+            <p class="q"><span class="qn">2</span>行陰十境中，每一境的結局都是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>證得阿羅漢果</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>生於天上</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>得大神通</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>墮落外道，惑菩提性</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>D。行陰將破時，行人於細微生滅中起種種推度計執，十境都以「墮落外道，惑菩提性」作結，並各立一種論。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">3</span>行陰十種外道中，「第一外道」所立的是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>無因論</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>圓常論</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>有邊論</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>斷滅論</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>A。「是則名為第一外道，立無因論。」第二外道才是立圓常論。</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">4</span>識陰十境共同的過失，經文的說法是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>不作聖心，名善境界</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>違遠圓通，背涅槃城</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>悟則無咎，非為聖證</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>主人若迷，客得其便</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>B。識陰十境各「立……心，成……果」，皆「違遠圓通，背涅槃城」，生種種種性。</p>
+          </div>
+          <div class="quiz-q" data-answer="2">
+            <p class="q"><span class="qn">5</span>「理則頓悟，乘悟併銷；事非頓除，因次第盡」的意思是？</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">A</span><span>理和事都只能漸修</span></button><button type="button" class="opt" data-i="1"><span class="mk">B</span><span>理和事都可以頓悟頓除</span></button><button type="button" class="opt" data-i="2"><span class="mk">C</span><span>道理可以一時頓悟，習氣須依次第斷盡</span></button><button type="button" class="opt" data-i="3"><span class="mk">D</span><span>先斷事障，再悟道理</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>C。悟理可以頓，除習須漸。這呼應卷五綰巾示結「次第而解」。</p>
+          </div>
+          <p class="quiz-group-title">二、是非題</p>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">6</span>佛說五陰本因同是妄想。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>正確。「是故如來與汝發明，五陰本因同是妄想。」色陰堅固妄想、受陰虛明妄想、想陰融通妄想、行陰幽隱妄想、識陰罔象虛無顛倒妄想。</p>
+          </div>
+          <div class="quiz-q" data-answer="0">
+            <p class="q"><span class="qn">7</span>識陰盡時，此人能超越命濁。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>正確。「名識陰盡，是人則能超越命濁。觀其所由，罔象虛無顛倒妄想以為其本。」</p>
+          </div>
+          <div class="quiz-q" data-answer="1">
+            <p class="q"><span class="qn">8</span>流通分中，佛說以七寶遍滿虛空供養微塵諸佛的福德，勝過以一念將此法門開示末劫未學。</p>
+            <div class="opts"><button type="button" class="opt" data-i="0"><span class="mk">○</span><span>正確</span></button><button type="button" class="opt" data-i="1"><span class="mk">✕</span><span>錯誤</span></button></div>
+            <p class="quiz-exp"><b>答案：</b>錯誤。正好相反：能以一念將此法門於末劫中開示未學，「得福超越前之施人，百倍、千倍、千萬億倍」。</p>
+          </div>
+          <div class="quiz-scorebar">
+            <span class="score">得分 <b data-score>0</b> / 8</span>
+            <span class="msg" data-msg>作答後即時計分</span>
+            <button type="button" class="quiz-reset">重新作答</button>
+          </div>
+          <p class="quiz-group-title">三、思考題（不計分）</p>
+          <details class="reflect"><summary>思考題一：行陰、識陰的魔境已經沒有鬼神附體，為什麼反而更難察覺？</summary><div class="detail-body"><p>色受想三陰的境界還有身心的感覺可以覺察；到了行陰、識陰，境界是在極細的推度與執取中，表面看起來像是見地、像是證悟。外道的各種「論」都是這樣成立的：不是被魔附，而是自己的見解走偏。所以後二十境最考驗正知見，經教的重要也在這裡。</p></div></details>
+          <details class="reflect"><summary>思考題二：「理則頓悟，乘悟併銷；事非頓除，因次第盡」如何安頓你的修行節奏？</summary><div class="detail-body"><p>（開放題）明白道理可以一下子，習氣卻要一點一點斷。這可以避免兩種偏差：以為悟了就不必修，或因習氣難除而懷疑自己沒悟。對照卷四「歇即菩提」與卷五「次第而解」，楞嚴從頭到尾都在講這個頓與漸的平衡。</p></div></details>
+          <details class="reflect"><summary>思考題三：讀完十卷，你會怎麼用一句話說楞嚴經的主軸？</summary><div class="detail-body"><p>（開放題）一種說法是：從徵問心目所在開始，破妄顯真，證如來藏；再從如來藏起修，選耳根圓通，以戒為基、咒為助，歷五十五位，辨五十陰魔，直至究竟。可以試著用自己的話寫成一段，作為這一輪共讀的總結。</p></div></details>
+        </section>
+
+        <section id="crossref">
+          <h2>對讀地圖</h2>
+          <p>卷十的主題在其他經論中的對應，方便讀書會延伸閱讀。</p>
+          <details open>
+            <summary>展開／收合 · 跨經論對讀表</summary>
+            <div class="detail-body">
+              <table>
+                <thead><tr><th>卷十主題</th><th>可對讀的經論</th><th>對讀重點</th></tr></thead>
+                <tbody>
+                  <tr><td>十種外道論</td><td>《長阿含經》梵動經 · 六十二見</td><td>無因論、常論、有邊論、詭辯論、死後有無等，皆見於六十二見的分類。</td></tr>
+                  <tr><td>五陰五濁</td><td>《法華經》方便品 ·《阿彌陀經》</td><td>五濁惡世的名目；楞嚴把五濁和五陰逐一對應，最為具體。</td></tr>
+                  <tr><td>頓悟漸除</td><td>宗密《禪源諸詮集都序》· 禪宗頓漸之爭</td><td>「理則頓悟，事非頓除」常被引為頓悟漸修說的經證。</td></tr>
+                  <tr><td>識陰與阿賴耶</td><td>《成唯識論》·《瑜伽師地論》</td><td>識陰最後的執取，可對照唯識的第八識與轉依。</td></tr>
+                </tbody>
+              </table>
+              <div class="note"><strong>怎麼用這張表：</strong>對印度哲學有興趣的同修，梵動經六十二見一線最有收穫；修唯識的同修，識陰一線可接上成唯識論。</div>
+            </div>
+          </details>
+        </section>
+
+        <section id="terms">
+          <h2>名相索引</h2>
+          <p>本卷關鍵名相，日後可逐步做成可點選的詞彙頁。</p>
+          <div class="terms">
+            <span>行陰區宇</span><span>識陰區宇</span><span>十種外道</span><span>無因論</span><span>圓常論</span>
+            <span>不死矯亂</span><span>五現涅槃</span><span>違遠圓通</span><span>幽隱妄想</span><span>罔象虛無</span>
+            <span>五陰本因</span><span>頓悟漸除</span><span>劫波巾結</span><span>流通分</span><span>皆大歡喜</span>
+          </div>
+        </section>
+
+        <section id="sutra" class="sutra-sec">
+          <h2>經文 · 大佛頂首楞嚴經 卷第十</h2>
+          <p class="sutra-meta">經文依 CBETA《大正藏》T19n0945 校錄。本卷起「阿難！彼善男子修三摩提想陰盡者」，訖「皆大歡喜，作禮而去」。</p>
+          <p class="jing-credit">經文依圓瑛法師《大佛頂首楞嚴經講義》判科分段，每段經文下方均附圓瑛法師消文（點「圓瑛《講義》消文」即可展開）。</p>
+<div class="sutra-tools"><button type="button" data-act="open">＋ 全部展開消文</button><button type="button" data-act="close">－ 全部收合消文</button><span class="tools-note">共 125 段經文，每段附圓瑛法師消文</span></div>
+<div class="sutra">
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛四</span><span class="ke-t">行陰魔相</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">壬初</span><span class="ke-t">具示始終</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">中間十境</span></li><li><span class="ke-mk">三</span><span class="ke-t">結害囑護壬初分二癸初始修未破區宇二終破顯露妄源癸初分二子初攝前想陰盡相二狀示行陰區宇</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難﹗彼善男子，修三摩地，想陰盡者，是人平常，夢想消滅，寤寐恆一，覺明虛靜，猶如晴空，無復麤重前塵影事。觀諸世間，大</div></details></div>
+<div class="unit"><p class="jing">地山河，如鏡鑑明，來無所粘，過無蹤跡，虛受照應，了罔陳習，生滅根元，從此披露，見諸十方，十二眾生，畢殫其類，雖未通其各命由緒，見同生基，猶如野馬。熠熠清擾，為浮根塵，究竟樞穴，此則名為，行陰區宇。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>惟一精真。此通明行陰始終之境。彼善男子：攝前透過想陰十境之人；或始終不起愛求，常住性定；或魔來便能覺知，不壞本修。如是用心，想陰破，而仍復精研，故曰修三摩提。望想陰為終修，望行陰為始修；三摩增進，動念既盡，浮想銷除，名為想陰盡者。是人平常夢想消滅：如後云，寤即想心，寐為諸夢。今既無夢無想，則寤時無想，常同寐時之靜；寐時無夢，常同寤時之覺；故曰寤寐恆一。覺明虛靜者：本覺妙明真心，離諸夢想之擾亂，而得清虛寂靜矣！猶如晴明之空，迥無所有。無復麤重前塵影事者：以麤重塵影，即是法塵，全依想陰為體；想盡，塵自無依，故言無復等。此以上，約心之自體妙，獨影先虛也。觀諸下，約心之照境妙，性境亦虛也。世間山河大地是性境，今心照山河等，如鏡之光明洞鑒，應物而現，毫無分析。故物來影現鏡中，而鏡無所粘著；物過影滅鏡中，而鏡亦無蹤跡。據此，則境識中，不過虛受照應而已。境滅，識中了然罔有陳習之可言。陳者舊也，即舊時習氣也。惟一精真，惟是一個識精真體，即是第八本識，非究竟也。子二狀示行陰區宇生滅根元者：一切生滅，根本元由，乃第八識中，所含七識種子；以有微細生滅，為行陰根本，所有生滅，皆由此流出。前為想陰所覆，故不能見，今則想陰動念既盡，行陰生滅根元，從此披敷顯露。故得見諸十方，十二種類，眾生生滅，畢竟克殫其類。殫，猶盡也。各命由緒，為識陰；同分生基，為行陰；今為行陰所覆，故曰，雖未得通達十二類生，各各受命元由頭緒；而見七識種子，同分生基，猶如野馬，熠熠清擾。野馬非塵埃，即田間游氣，春晴伏地可見，其狀如水，其光如燄。莊生呼為野馬，佛經多稱陽燄，渴鹿逐陽燄，遠望如水，至近則無。此陰前於二卷，五陰科中，彼約迷位，取其麤相，譬如瀑流；此約修位，取其細相，喻同野馬。以喻行陰，幽隱微細動相。熠熠，小明也，以喻行陰動相，忽起忽滅也。清擾者：揀異前後之辭。清是輕清，非同前陰之重濁；擾是擾動，非同後陰之澄湛。為浮根塵，究竟樞穴者：浮根四塵，乃眾生根身；十二種類，各各不同；而究竟轉變之機，盡在行陰。樞者，門之軸；穴者，門之臼。由樞穴故，門得開關；由行陰故，根塵得以生滅。此相不盡，生死難脫，是則名為行陰區宇。初始修未破區宇竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">終破顯露妄源</span></li></ul></div>
+<div class="unit"><p class="jing">若此清擾，熠熠元性，性入元澄，一澄元習，如波瀾滅，化為澄水，名行陰盡。是人則能，超眾生濁，觀其所由，幽隱妄想，以為</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>其本。若此輕清擾動，熠熠生滅之根元體性，因定力轉深，此體性一入於元本澄清之際；後文所謂，湛不搖處是也。元性：生滅根元體性，即第七識。元澄：水浪停息曰澄，即第八識。一澄本元習氣，即第七識行陰。種習俱盡，而復還識精元明之體矣。故曰如波瀾滅，化為澄水。以想陰如洪波，行陰如細浪，識陰如無浪流水，真覺體性如湛然止水；今化為澄水，名行陰盡。《指掌疏》云：按耳根圓通，此當空所空滅。言前於覺所覺空時，宛爾有個能空心生，所空覺滅，仍屬細流，即是八識中，第七識種子，名為生滅根元。今於行陰盡時，性習都盡，故能空與所空，而俱滅矣。所以不能復真者，以猶為識陰所覆故。是人則能超眾生濁者：如前云，知見每欲留於世間，業運每常遷於國土，相織妄成，名眾生濁。以行陰生滅不停，業運常遷，遂成眾生知見，渾濁真性。今者，行陰既盡，則眾生濁自然超越，超越之後，反觀行陰之所由來，元從幽深隱微妄想，以為其本。初具示始終竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">中間十計</span><span class="ke-div">分10</span><ul><li class="ke-cur"><span class="ke-mk">癸初二</span><span class="ke-t">種無因至十五現涅槃癸初分三子初標由示墜</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">詳釋其相</span></li><li><span class="ke-mk">三</span><span class="ke-t">結成外論</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難當知：是得正知，奢摩他中，諸善男子，凝明正心，十類天魔，不得其便，方得精研，窮生類本。於本類中，生元露者，觀彼幽清，圓擾動元，於圓元中，起計度者，是人墜入，二無因論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此下別示，行陰十計，不言十境，而云十計者，但是想破行現，自緣定中所見，而生種種邪計，非有外境魔事之擾也。此第一、二種無因論。呼阿難而告之曰：當知，警令覺知也。是得正知者：即不遭邪慮也。奢摩他中者：即圓定發明也。凡能到此地位，俱有決定善根，故稱善男子。凝明正心者：凝：不動也，於想陰十境，不起愛求。明：不惑也，於飛精附人，便能覺知。正心：雙承不動（定也）不惑（慧也），定慧均等。十類天魔，不得其便，圓通妙行，乃可增修，方得精心研究，力破想陰。想陰既破，行陰即現，故得窮十二類生，生滅根本。此上歷敘，想破行現。於本類中，生元露者：此下方明，邪解起計，並非外魔，惟是自心作孽，是謂心魔。先窮十二類生，行陰深本，欲於本類中，研求生滅根元顯露者，即行陰顯現也。觀彼幽清，圓擾動元者：乃正觀行陰；彼即指行陰，幽隱輕清，非同前想陰，顯明重濁也。圓者：徧十二類生，一一皆然；即觀行陰遷流，微細動相，為圓擾群動之元，觀同分生基之總相，不起妄計，一味精研；自可進破行陰。今於圓元中，起計度者：於圓擾群動之元，為諸行之本，是生滅之元，如是觀察，執為勝性，故起計度。並不知有不擾不動之真如，亡失本修，以是墜入二無因論。《正脈疏》云：二無因論，乃先世外道，修心邪解，所立違理背正之惡見耳。今行現之解，適與之同，故即墜彼論中，如後車蹈前車之覆轍，故即同墮一坑壍地。後文諸論，皆倣此意。初標由示墜竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">丑初</span><span class="ke-t">本無因</span></li><li><span class="ke-mk">二</span><span class="ke-t">末無因丑初分三寅初據己見量</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">一者、是人，見本無因。何以故﹖是人既得生機全破，乘於眼根，八百功德，見八萬劫，所有眾生，業流灣環，死此生彼，祗見眾生，輪迴其處，八萬劫外，冥無所觀。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>首二句標定，下徵釋。一者、是人；即於圓元中，起計度之人。計執此圓元為勝性，並不知此但行現，尚未至於盡；行陰盡後，還有識陰，識陰盡後，方是本覺。便謂此行陰，為生滅之元，本來無有因起，故曰見本無因。何以故徵，下釋。是人既得生機全破者：生機：即行陰。破：即顯露義。前文所謂生滅根元，從此披露是也。乘於眼根清淨，獲得八百功德，極盡其見量，能見八萬劫內，所有眾生，業行遷流，灣轉迴環，莫能自止。死此生彼者：即捨生趣生也。亦即前文所謂，業運每常遷於國土是也。祗見眾生，隨業行以遷流，輪迴在八萬劫中之處，八萬劫外，冥然莫辨，毫無所觀也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">謬成邪計</span></li></ul></div>
+<div class="unit"><p class="jing">便作是解：此等世間，十方眾生，八萬劫來，無因自有。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>便作如是邪解妄計：此等世間，十方眾生，八萬劫來，無因自有。因八萬劫外，冥然無有所觀，遂計無因。拘舍離等，昧為冥諦，即同此見。儒宗所謂，鴻濛混沌者，皆此類也。殊不知自己見量有限，未至圓極，若如來見量，豎窮三際，橫徧十方，豈以八萬劫為限哉？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅三</span><span class="ke-t">失真墮外</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>由此計度，亡正徧知，墮落外道，惑菩提性。由此邪計籌度，亡失正知，執八萬劫，無因自有；亡失徧知，墮落外道邪見，惑亂菩提正覺之性矣。初本無因竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">末無因</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">寅初</span><span class="ke-t">據己見量</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">二者、是人，見末無因。何以故﹖是人於生，既見其根，知人生人，悟鳥生鳥，烏從來黑，鵠從來白，人天本豎，畜生本橫，白非洗成，黑非染造，從八萬劫，無復改移。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>首二句標定，下徵釋。二者、是人：於圓元中，起計度之人。計執此圓元為勝性，詳推過去，見本無因，例知未來，見末無因也。何以故徵，下釋云：是人於生，既見其根者：謂是人於諸眾生，既見劫前，本無其根，無因而有。蓋即以無因，為十二類生本元，自然而然，由此轉計，成為自然外道。知人還自然生人，悟鳥還自然生鳥，烏從來自然是黑，鵠從來自然是白。白非是洗成而白，黑非是染造而黑。人天二句，當在下，諒抄寫之誤。若是人天，本來是豎形而立，若是畜生，本來是橫行而走，此皆自然而然，本無有因。從八萬劫來，未嘗更改變移。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅二</span><span class="ke-t">謬成邪計</span></li></ul></div>
+<div class="unit"><p class="jing">今盡此形，亦復如是，而我本來，不見菩提，云何更有，成菩提事﹖當知今日，一切物象，皆本無因。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此下釋成，上科全推過去，此科列定未來。今盡此形者：盡，即盡未來際，而此形亦復如是，無有改移。而我本來，八萬劫前，不見十二類生，從菩提性起；云何更有，眾生於劫後，成菩提事乎？當知今日，一切物象，既皆劫前，本無有因，以此驗知劫後，末亦無因也。言八萬劫盡，終成斷滅，無有因果而已。蓋以從無因而起者，還復無因，返於冥初之意而已。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">寅三</span><span class="ke-t">失真墮外</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>由此計度，亡正徧知，墮落外道，惑菩提性。由此邪計籌度，亡失正知，皆謂一切自然，亡失徧知，不達循業發現，以致墮落外道惡見，反惑亂菩提正覺之性矣。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">是則名為，第一外道，立無因論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>初二種無因論竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二四</span><span class="ke-t">種徧常</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗是三摩中。諸善男子，凝明正心，魔不得便，窮生類本。觀彼幽清，常擾動元，於圓常中。起計度者，是人墜入，四徧常論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第二，四種徧常論。是三摩中：正修定慧之中。凝明正心者：凝然不動，於想陰十境，始終不起愛求；明照不惑，於飛精附人，魔來便能覺知；正心即不動不惑，定慧均等之心。魔不得便：圓通妙行，自可增修。想陰既破，行陰現前，窮十二類生，生滅根本，即觀察彼行陰幽隱輕清，常擾動元。於圓常中，起計度者：見周徧處，各之曰圓，見相續處，名之曰常；殊不知此周徧相續，乃行陰遷流，生滅之相。而於是中，妄起計度，圓徧常住者，是人墜入外道，四種徧常論矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span><span class="ke-div">分4</span><ul><li><span class="ke-mk">丑初</span><span class="ke-t">心境計常</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">一者、是人，窮心境性，二處無因，修習能知，二萬劫中，十方眾生，所有生滅，咸皆循環，不曾散失，計以為常。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>一者、是人欲窮行陰，但約心之與境二性，以求本元，何自而起。然窮之不遠，以見心境二處，於二萬劫前，無因自有。修習者：即窮心境之修習；能知者：以其見量有限，祗見二萬劫中，十方眾生，所有心境生滅。以心境皆屬行陰，皆有生滅；然生滅正是無常，而彼但見劫內，生滅滅生，咸皆循環，相續不斷，不曾散失。遂計心境二性，以為徧常，不計劫外無因，以為斷滅，與上科異也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二四</span><span class="ke-t">大計常</span></li></ul></div>
+<div class="unit"><p class="jing">二者、是人，窮四大元。四性常住，修習能知，四萬劫中，十方眾生，所有生滅，咸皆體恆，不曾散失，計以為常。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>二者、是人欲窮行陰，乘己見解，研窮四大，為變化之元。見一切萬法，皆從四大和合而成，遂計四大種性，本來常住。殊不知四大，亦屬唯識變現，其體本空，如虛空華。依之修習，能知四萬劫中，四萬劫外，則冥無所觀矣。其見量比前，增加一倍，十方眾生，所有生滅，皆從四大和合而成。而四大種性，既是常住，咸皆體性，周徧恆常，不曾散失。遂計四大之性為徧常。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三八</span><span class="ke-t">識計常</span></li></ul></div>
+<div class="unit"><p class="jing">三者、是人，窮盡六根，末那執受，心意識中，本元由處，性常恆故。修習能知，八萬劫中，一切眾生，循環不失，本來常住，窮不失性，計以為常。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>三者、是人窮盡六根之中，所具之六識，並及末那之七識，恆審思量故，執受之八識，執持根身、器界、種子故。此由行人，乘己見解，窮心（八識）意（七識）識（第識六）中，根本元由，生起之處。殊不知是乃行陰，相續之由，而反妄計識性恆常之故。依此修習，能觀八萬劫中，一切眾生，死此生彼，展轉循環，不曾散失。遂謂從本以來，周徧常住；即以窮此循環不失之性，計以為周徧常住。《正脈》謂：特以所窮八識，法門深廣詳切，倍前四大故，所知劫數，亦倍前人。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">想盡計常</span></li></ul></div>
+<div class="unit"><p class="jing">四者、是人，既盡想元，生理更無，流止運轉，生滅想心。今已永滅，理中自然，成不生滅，因心所度，計以為常。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>四者、是人計想盡為常，以其既盡想陰根元，謂根本想陰，即第八識中動相。今想破動相已盡，露出行陰，生滅根元。生理：即生滅根元，猶如野馬，熠熠清擾，非是無流，彼謬謂更無流止，運轉施為，意以生滅想心，今已永滅，理中自然，成一種不生滅。殊不知行陰，正是第七種子，微細流注，實非真不生滅；不過因心路籌度，計為周徧常住。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計常，亡正徧知，墮落外道，惑菩提性。是則名為，第二外道，立圓常論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由此之故，非是徧常，妄計徧常。亡正徧知者：不達行陰遷流，則亡正知；不悟萬法生滅，則亡徧知。墮落外道，執此為常；不知別有真常，菩提正覺之性。是則名為第二常見外道，立圓常論﹒二四種徧常竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三四</span><span class="ke-t">種顛倒</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便，窮生類本，觀彼幽清，常擾動元，於自他中，起計度者，是人墜入，四顛倒見，一分無常，一分常論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此雙計常與無常也。又三摩中，諸善男子堅凝正心者：前二科云凝明，足顯定慧相資，此云堅凝，似偏屬於定。然雖似偏屬，乃是即慧之定，定力愈深，而堅固凝然不動。想陰十境，始終不起愛求，故曰正心。魔不得便，故得想破行現。研究眾生，十二種類，生滅深本，深本既現，但依耳根妙修，一味反聞照性，自可進破行陰；而乃觀察行陰，幽隱輕清，常時擾動；生滅之根元，既為諸動之根元，則自他依正，皆依之建立。由此於自他法中，起諸妄計籌度者，是人墜入，四顛倒見；顛倒見中，一分無常，一分常義。《合轍》云：平等性中，本無自他，而妄計自他；中道了義，迥絕二邊，而謬執斷常，非倒見而何哉？《正脈》云：四種顛倒，合前二計觀之，二無因，似觀劫外斷處，而計無常；四徧常，似觀劫內續處，而計是常；各皆單計而已。今此乃是雙計，常與無常也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span><span class="ke-div">分4</span><ul><li><span class="ke-mk">丑初</span><span class="ke-t">雙約自他</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">一者、是人，觀妙明心，徧十方界，湛然以為，究竟神我。從是則計，我徧十方，凝明不動，一切眾生，於我心中，自生自死。則我心性，名之為常﹔彼生滅者，真無常性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>一者、是人觀彼幽清，常擾動元，此是行陰，生滅根元；而計為妙明真心，徧滿十方世界。且以幽清常擾，不覺妄謂湛然，即不動義，自計最勝曰究竟，名為神我，此即外道二十五諦之最後一諦也。彼有定力，能觀八萬劫；八萬劫外，則冥然莫辨，遂立為冥諦。從冥諦生覺大，覺大生我心，我心生五微，五微生五大，五大生十一根，最後立一神我。謬計冥諦為能生，中間二十三法為所生。神我為能受用，中間二十三法為所受用。如彼論云：神我有知，能思慮故，我以思為性，受用大等二十三法。蓋是以第八識中，所含第七識種子，為神我也。既立神我，從是則計神我，徧滿十方，凝明不動，無生無滅，以故是常。以一切眾生，於我心中，自生自死，故是無常。此於自他處計常無常也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">約他國土</span></li></ul></div>
+<div class="unit"><p class="jing">二者、是人，不觀其心，徧觀十方，恆沙國土。見劫壞處，名為究竟無常種性﹔劫不壞處，名究竟常。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>二者、是人前觀自心，已知是常，故不復觀，又前於眾生，知是無常；而於國土，未知是否常住？故運心徧觀，十方恆沙國土，成壞不一。彼但見劫壞之處，三災起時，壞後見空；不知成住壞空，乃世界之劫運，空後還有成，便名為究竟無常種性。若見劫不壞處，不知暫時而住，不過二十小劫，便名為究竟徧常種性。此以國土壞不壞，計為常無常也。《指掌疏》云：要知界性無二，成壞隨緣，若因有壞，而執無常，則菩薩灰嚴土之心；若因不壞，而執真常，則凡夫增戀世之志。邪見誤人，不可不知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三</span><span class="ke-t">約自身心</span></li></ul></div>
+<div class="unit"><p class="jing">三者、是人，別觀我心，精細微密，猶如微塵，流轉十方，性無移改，能令此身，即生即滅，其不壞性，名我性常。一切死生，從我流出，名無常性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>三者、是人捨他觀自，於自己身心二途，分別而觀。別觀我心等：此觀心也。能令此身等：此觀身也。言精細微密者：此想破行現，指行陰根本也。別觀我心，是七識種子故曰精，流注莫見故曰細，虛受照應故曰微，行相幽隱故曰密，猶如微塵，為十二類眾生根本。此即外道所計之微細我也。第一科中神我，即廣大我也。依此微細我，起惑造業，隨業受報，流轉十方，而性無移改，此即大小不定我也。所受之報，有大小不定故。以上觀心，次觀身；能令此身，即生即滅者：前云業運每常遷於國土，能令此身，剎那變滅，故云即生即滅，其不壞性，即無移改之心性，名我性常。至於一切生死之身，從我流出，名無常性。此以自己身心計為常無常也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">雙非自他</span></li></ul></div>
+<div class="unit"><p class="jing">四者、是人，知想陰盡，見行陰流，行陰常流，計為常性，色受想等，今已滅盡，名無常性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>四者、是人通觀四陰，知色、受、想三陰已盡，見行陰現在遷流，以行陰相續，不斷而常流者，便計以為常住性。色受想等三陰滅盡，而無有者，故計以為無常性。此於四陰中，計常無常也。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，一分無常，一分常故，墮落外道，惑菩提性，是則名為第三外道，一分常論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由此計度，自他依正，及陰等。各執不同，總不出一分無常，一分常論。以此雙計，故成顛倒。所以墮落外道，如僧佉論師等。《智論》云：諸法不應執常。常即無罪無福，無所傷殺，亦無施命，無縛無解，則無涅槃；若執無常，即是斷滅，亦無罪福，亦無增損功業，因緣果報亦失；是皆足以惑菩提性，是則名為第三外道一分常論。此偏言一分者，以二分中，以常為勝，顯獨重故。三四種顛倒竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸四四</span><span class="ke-t">種有邊</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便，窮生類本，觀彼幽清，常擾動元，於分位中，生計度者，是人墜入，四有邊論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>又三摩中，文同上可知。於分位中，生計度者：溫陵曰：分位有四，謂三際分位，見聞分位，彼我分位，生滅分位。於四種分位中，生計度者，是人墜入四有邊論。文雖雙計，有邊無邊，理實但是邪計。邊見而已，非真得無邊理體，故以正教判之，但名有邊。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span><span class="ke-div">分4</span><ul><li><span class="ke-mk">丑初</span><span class="ke-t">約三際</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">一者、是人，心計生元，流用不息。計過未者，名為有邊。計相續心，名為無邊。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>一者、是人約分位計有邊無邊也。心計生元者：謂見行陰為十二類生，生滅根元，而現在遷流業用，循環不息。計過去已滅，未來未至，名為有邊；計現在相續，曾無間斷，名為無邊。既取現心續處，為無限際者，為無邊；則必以過未斷處，有限際者，為有邊。然心無限際者，以當念觀心，浩渺無涯岸之謂也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">約見聞</span></li></ul></div>
+<div class="unit"><p class="jing">二者、是人，觀八萬劫，則見眾生，八萬劫前，寂無聞見，無聞見處，名為無邊，有眾生處，名為有邊。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>二者、是人約見聞以計有邊無邊也。以定力能觀八萬劫，則見眾生，生滅滅生，輪迴其處，八萬劫前，寂然無有聞見。彼但見無聞見處，冥然莫辨，邈無涯涘；不知惟是自己見聞不及，遂名為無邊之性。又但見有眾生處，生滅相續；不知惟是業緣，虛妄現起，遂名有邊之性。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三</span><span class="ke-t">約彼我</span></li></ul></div>
+<div class="unit"><p class="jing">三者、是人，計我徧知，得無邊性。彼一切人，現我知中，我曾不知，彼之知性﹔名彼不得，無邊之心，但有邊性。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>三者、是人約彼我以計有邊無邊也。此由行人，觀己行陰，執為真我。遂計我能周徧了知，於諸法之中，得無邊之性。而彼一切眾生，皆現我知之中，我曾不知，彼知之性；名彼不得，無邊心性，但名有邊心性耳。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">約生滅</span></li></ul></div>
+<div class="unit"><p class="jing">四者、是人，窮行陰空，以其所見，心路籌度，一切眾生，一身之中，計其咸皆半生半滅。明其世界，一切所有，一半有邊，一半無</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>邊。四者、是人約生滅以計有邊無邊也。窮行陰空者：謂想陰既盡，行陰遷流，今以定力研窮，欲求其空即滅也。以在定中，覺得行陰滅，出定之時，覺得行陰生，不知是定功未至，若定功至，則行陰自空。如波瀾滅，化為澄水。今以其所見，用妄想心路籌度，謬謂一切眾生，一身之中，咸皆半生半滅。以一例諸，明世界所有一切皆是一半有邊，一半無邊，以生時覺得有邊，滅時覺得無邊故。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，有邊無邊，墮落外道，惑菩提性，是則名為，第四外道，立有邊論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由此妄心計度，有邊無邊，墮落外道，成其伴侶，以其邊則非中，故迷惑中道，菩提正性。是則名為第四外道，立有邊論。四四種有邊竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸五四</span><span class="ke-t">種矯亂</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便。窮生類本，觀彼幽清，常擾動元，於知見中，生計度者，是人墜入，四種顛倒，不死</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>矯亂，徧計虛論。又三摩中，文同上可知。於知見中，生計度者：謂以彼定中，所知所見，不能決擇明了，而妄生周徧計度也。是人墜入四種顛倒之見。不死者：外道計無想天，為不死天。一生不亂答人，死後當生彼天。若實不知，而輒答者，恐成矯亂；故有問時，答言秘密言詞，不應皆說，或不定答。佛法訶云：此真矯亂。《灌頂》云：邪分別性，故名徧計；都無實義，故云虛論。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span><span class="ke-div">分4</span><ul><li><span class="ke-mk">丑初八</span><span class="ke-t">亦矯亂</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">一者、是人，觀變化元，見遷流處，名之為變。見相續處，名之為恆。見所見處，名之為生。不見見處，名之為滅。相續之因，性不斷處，名之為增。正相續中，中所離處，名之為減。各各生處，名之為有。互互亡處，名之為無。以理都觀，用心別見。有求法人，來問其義，答言我今，亦生亦滅，亦有亦無，亦增亦減，於一切時，皆亂其語，令彼前人，遺失章句。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>一者、是人以生滅行陰分別，而成八種邪見。觀變化元者：以想盡行現，進觀行陰，為變化之根元，其體即是遷流。既有遷變流轉，故即名為變。雖有遷變，而卻前後相續，有相續則無斷絕，故即名為恆即常也。此變恆一對也。見所見處，名之為生者：於八萬劫內，能見所見之處，似為眾生生，故即名為生。不見見處，名之為滅者：於八萬劫外，不能見所見之處，似是眾生滅，故即名為滅。此生滅一對也。相續之因，性不斷處者：此又於生滅之中，別起有因之計，如前行陰已滅，後行陰未生，中間必有相續之因，然相續即中有身，其體即是識陰，以彼不知，行陰之外，別有識陰，但見其性不斷處，似多出一法，名之為增。正相續中，必有缺乏之處，如出入之息，相續而缺中交是也，缺少即名為減。此增減一對也。又各各生處，名之為有者：因觀眾生，各各生處，以生為有，故遂名為有。見互互無處，以滅為無，故遂名為無。此有無一對也。如上八種，雖則以行陰之理，統而觀之，而行人用心，差別而見，前後不一，無有正知正見。有求法人來問修證之義，答言我今亦生亦滅，亦有亦無，亦增亦減。蓋亦者，兩可之詞，顯其不墮偏執。殊不知，中無主宰，於一切時，皆亂其語。正墮矯亂論議，文少亦變亦恆一對。令彼前人，遺失章句者：指前來問話之人；答者既兩可莫決，而聽者自然遺失章句也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑二</span><span class="ke-t">惟無矯亂</span></li></ul></div>
+<div class="unit"><p class="jing">二者、是人，諦觀其心，互互無處，因無得證，有人來問，惟答一字，但言其無，除無之餘，無所言說。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>二者、是人諦觀其心者：於生類中，諦觀行陰之心。互互無處，因無得證者：謂悟得一切法皆無也。有人來問，惟答其無，除無之外，無所言說也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑三</span><span class="ke-t">惟是嬌亂</span></li></ul></div>
+<div class="unit"><p class="jing">三者、是人，諦觀其心，各各有處，因有得證，有人來問，惟答一字。但言其是，除是之餘，無所言說。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>因有得證者：念生後必有滅相，滅後必有生相。從此證得，一切皆有；是即有也。餘可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丑四</span><span class="ke-t">有無矯亂</span></li></ul></div>
+<div class="unit"><p class="jing">四者、是人，有無俱見，其境枝故，其心亦亂，有人來問，答言亦有，即是亦無，亦無之中，不是亦有，一切矯亂，無容窮詰。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>四者、是人觀察行陰，有無俱見。既見其念念生處，又見其念念滅處；其境如木分為兩枝，其心亦復不定亂也。有人來問，即答，見亦有即是亦無者：以生者必歸於滅。亦無之中不是亦有者：以滅者不定更生。一切矯亂，無容窮詰者：矯者：執拗不順於理。亂者：心無主正。《寶鏡疏》云：此中第一、第四，言皆兩可，亂義為多，而終非順理，亦兼於矯也。第二、第三，言惟一偏，矯義為多，而終非主正，同歸於亂也。故總結云：一切矯亂，無容窮究詰問者也。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，矯亂虛無，墮落外道，惑菩提性。是則名為，第五外道，四顛倒性，不死矯亂，徧計虛論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>虛無者：虛妄邪計，無有實義。墮落外道，迷惑菩提真性，是則名為，第五外道。迷正知見，立邪知見，故曰四顛倒性。結名徧計虛論者：此人周徧計度，如執繩為蛇，皆至虛至妄之論也。五四種矯亂竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸六十六</span><span class="ke-t">有相</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便，窮生類本，觀彼幽清，常擾動元，於無盡流，生計度者，是人墜入，死後有相，發心</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>顛倒。又三摩中，文同上可知。於無盡流者：行陰相續無盡，遷流不息。生計度者：即計此行陰，為諸動之元，將來能生諸動，遂計色、受、想三，即現前已滅，將來必生，故曰是人墜入，死後有相，發心顛倒。《正脈》云：真悟無生，了知初生即有滅，是知生尚空洞無相，何說死後，豈可妄計有相耶？</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>或自固身，云色是我。或見我圓，含徧國土，云我有色。或彼前</div></details></div>
+<div class="unit"><p class="jing">緣，隨我迴復﹔云色屬我。或復我依，行中相續，云我在色。皆計度言，死後有相，如是循環，有十六相。從此或計，畢竟煩惱，畢竟菩提，兩性並驅，各不相觸。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此即外道，六十二見中四計也。一者：或自堅持，固守此身形，云四大之色，皆是我故，此計即色是我也。二者：或見我性圓融，含徧十方國土，云我有色，此計我大色小，色在我中也。三者：或彼前緣，即謂眼前之色。隨我迴復者：咸皆隨我迴旋往復，即運用也﹒云色屬我者：色既屬我，顯是我所，非即我矣，此計離色是我也。四者：或復我依行陰之中，遷流相續，云我即在色中；以行陰相續之相，即是色陰，此計色大我小，我在色中也。謂色身雖死，我猶現在，色陰既爾，餘三亦然。如是循環，四四共有十六相。上因見行陰無盡，遂計前三陰，亦復無盡，同成有相。此更轉計，一切諸法，無不皆然。煩惱攝盡染法，菩提攝盡淨法，則煩惱菩提，理亦如是。煩惱畢竟是煩惱，菩提畢竟是菩提，決無更改。由是真妄兩性並驅，即並行不悖，各各不相抵觸也。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，死後有故，墮落外道，惑菩提性，是則名為，第六外道，立五陰中，死後有相，心顛倒論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由此計度，死後有相，所以墮落外道，有十六相，真到底是真，妄到底是妄，真妄各立，無有轉煩惱之妄法，成菩提之教性，故曰惑菩提性，是則名為，第六外道。立五陰中，死後有相：通結五陰，惟在前四；雖在前四，義惟行陰耳﹒依斯立論，從心顛倒，正所謂心魔作祟，其奈之何？六十六有相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸七八</span><span class="ke-t">鍾種相</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便。窮生類本，觀彼幽清，常擾動元，於先除滅，色受想中，生計度者。是人墜入，死後無相，發心顛倒。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>又三魔中，文同上可知。於先除滅，色受想中者：見前三已滅，生妄計籌度，前三先有今無，例知行陰現有，將來亦應滅無。因計死後，終歸斷滅故，是人墜入，死後無相。《正脈》云：此與上敵體相翻，故變有成無，蓋上覩未滅之行陰，見其無盡，而因前三，並萬法，皆當無盡。此覩已滅之前三，見其無相，而因計行陰，並萬法，皆當無相也。發心顛倒者：違佛教修因證果之誠言，成外道虛無斷滅之妄論，故曰發心顛倒。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span></li></ul></div>
+<div class="unit"><p class="jing">見其色滅，形無所因﹔觀其想滅，心無所繫，知其受滅，無復連綴，陰性銷散，縱有生理，而無受想，與草木同。此質現前，猶不可得，死後云何，更有諸相﹖因之勘校，死後相無，如是循環，有八無相。從此或計，涅槃因果，一切皆空，徒有名字，究竟斷滅。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>色，四大之色；形，一身之形。形因色有，見其四大之色滅，則形無所因矣。想為意識之想，心為意根之心，心因想繫，觀其意識之想滅，則心無所繫矣。色居受陰之前，心居受陰之後。有受居中，則色心可以連綴；知其受陰一滅，則色心無復連綴矣。據此前三陰之性，既已銷亡散滅，縱有行陰，雖是生理，而無受想，則無知覺，與草木同。溫陵曰：陰性銷散，謂色、受、想滅也。生理即行，謂無受、想，則行亦滅也。此質指現陰色心，非獨指色陰也。今在定中，見四陰現在皆無相可得，死後云何更有諸相耶？因之勘驗已滅，而知現在未滅，比校將來，死後陰相，一定是無。如是循環，往復推檢，每一陰生前死後皆無相，而色、受、想、行四陰，共有八無相。現前質空無修因，死後相空無證果，從此或計涅槃因果，世出世法，一切皆空。徒有名字，終無實體，究竟皆歸於斷滅也。斷滅是大邪見，撥無因果。以一切諸法，皆不離因果。所謂豁達空，撥因果，莽莽蕩蕩招殃禍。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，死後無故，墮落外道，惑菩提性。是則名為，第七外道，立五陰中，死後無相，心顛倒論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>七八種無相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸八八</span><span class="ke-t">種俱非</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便，窮生類本，觀彼幽清，常擾動元，於行存中，兼受想滅，雙計有無，自體相破，是人墜入，死後俱非，起顛倒論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>又三摩中，至常擾動元，同上可知。《正脈》云：於行存中者：見行陰未滅，區宇宛在也。兼受想滅者：見前三已滅，體相全空也。雙計有無者：於存計有，於滅計無也。自體相破者：以行陰之有，破前三之無，以前三之無，破行陰之有也。末言墜俱非者：以破無則成非無，破有則成非有也。起顛倒之論矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span></li></ul></div>
+<div class="unit"><p class="jing">色受想中，見有非有，行遷流內，觀無不無。如是循環，窮盡陰界，八俱非相，隨得一緣，皆言死後，有相無又計諸行，性遷訛故，心發通悟，有無俱非，虛實失措。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此正釋成自體相破之義。謂前三已滅，故色、受、想中，見行陰之有，亦即同滅，而非有矣。後一猶存，故行遷流內，觀三陰之無，亦即同有，而非無矣。相。如是循環，窮盡陰界者：謂如是循環，由後觀前，由前觀後，窮盡色、受、想、行，四陰界限，有無俱非，成八俱非相；即非有色、受、想、行，非無色、受、想、行也。隨得一緣者：隨舉一陰，為所緣時，皆言死後非有相非無相也。諸行是指萬法，非獨指行陰，此下例成，萬法之性，悉皆遷變淆訛，有既非有，無亦非無，於此盡知盡見。心發通悟者：非真通悟，增長邪知見解，有無俱非。設有人問曰：孰虛孰實？亦莫能施對，故曰：虛實失措。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，死後俱非，後際昏瞢，無可道故，墮落外道，惑菩提性。是則名為，第八外道，立五陰中。死後俱非，心顛倒論。八俱非相竟。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由此計度，以生前例之死後，皆是非有非無。後際昏瞢，即是杳冥，無正理之可說，道有不得，道無不得，此明有無俱非，皆不可道之故，墮落外道，惑菩提之正性，是則名為，第八外道。立五陰中，死後俱非，真是從心顛倒，而立論矣。八</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸九七</span><span class="ke-t">際斷滅</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便。窮生類本，觀彼幽清，常擾動元，於後後無，生計度者，是人墜入，七斷滅論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>又三摩中，至常擾動元，同上可知。於後後無，生計度者：溫陵曰：見行陰念念滅處，名後後無；由是妄計，生人天七處，後皆斷滅。此與第七無相，而起計不同。彼由前三，此由行陰；又彼推過去，以定死後，此觀未來，念念成滅。故計處處，有斷滅處也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span></li></ul></div>
+<div class="unit"><p class="jing">或計身滅，或欲盡滅，或苦盡滅，或極樂滅，或極捨滅。如是循環，窮盡七際，現前消滅，滅已無復。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>七處斷滅：或計身滅，即四洲、六欲二處。或欲盡滅，即初禪，離生喜樂地，已離欲界之生，欲染已盡故。或苦盡滅，即二禪，定生喜樂地，極喜無憂故。或極樂滅，即三禪，離喜妙樂地，樂有終盡故。或極捨滅，即四禪，捨念清淨地，捨覺觀喜樂故。併四空天，捨色質之礙故。如是循環，推窮極盡七際，現前悉歸消滅，是七處皆現斷滅，則知死後未來，更無復生之事。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，死後斷滅，墮落外道，惑菩提性，是則名為，第九外道，立五陰中，死後斷滅，心顛倒論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>九七際斷滅竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸十五</span><span class="ke-t">現涅槃</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">標由示墜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又三摩中，諸善男子，堅凝正心，魔不得便，窮生類本，觀彼幽清，常擾動元，於後後有，生計度者，是人墜入，五涅槃論。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>又三摩中，至常擾動元，同上可知。於後後有者：此與上科相翻，前以行陰，念念遷流不住，因不住則後必有滅。此以行陰，念念相續無間，因無間，則後必是有，故曰於後後有。當有實果，必不滅無也。是人墜入，五涅槃論者：不待灰身泯智，而入涅槃，即於現在所計五處，即是涅槃。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">詳釋其相</span></li></ul></div>
+<div class="unit"><p class="jing">或以欲界，為正轉依，觀見圓明，生愛慕故﹔或以初禪，性無憂故﹔或以二禪，心無苦故﹔或以三禪，極悅隨故﹔或以四禪，苦樂二亡，不受輪迴，生滅性故。迷有漏天，作無為解，五處安隱，為勝淨依，如是循環，五處究</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此計五處，現在生處，即為涅槃。顯非一人，徧計五處，各隨所見，或計一處而已。欲界指六欲天，非指一天也。為正轉依者：妄計為真涅槃之境，以涅槃乃佛教，轉生死依涅槃之號也。此如仙家，計六欲天上，無生死耳。此句應通後之四處，每處皆當有之。何以欲界，為正轉依？觀見圓明，生愛慕故。以前想陰既破，圓定發明，以初得天眼，普觀天光，清淨莊嚴，迥超日月之明，且離人間之穢濁，以故心生愛慕，遂計此境，為現在涅槃也。或以初禪，離生喜樂地，苦惱不逼，計為現在涅槃也。或以二禪，定生喜樂地，憂愁不逼，計為現在涅槃也。今謂初禪無憂，二禪無苦者，疑翻譯之誤倒耳。或以三禪，離喜妙樂地，極悅隨者：謂極喜悅，得大隨順，計為現在涅槃也。或以四禪，捨念清淨地，修捨定，雙捨苦樂，二者皆亡。遂謂三災不到，不受輪迴，生滅性故，計為現在涅槃也。竟。五處，皆在有漏天中，今迷有漏天，竟作涅槃無為解。五處安隱者：以五處既誤作涅槃無為，遂以為安隱之家鄉矣！為勝淨依者：為最勝清淨者之所依處，最勝清淨，即佛也，佛依涅槃故。如是自下向上，展轉推觀，有循環義。五處究竟者：推觀五處，謬謂皆是無上極果也。《正脈》云：初於六欲，乍離人間之塵穢，而妄謂真淨。次於初禪、二禪。乍離下界之憂苦，而妄謂真樂。次於三禪，乍得隨順自在，而妄謂真我。次於四禪，暫得三災不壞，而妄謂真常，不生滅也。此正於無常、苦空、無我、不淨中，而妄計常、樂、我、淨也。二詳釋其相竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">結成外論</span></li></ul></div>
+<div class="unit"><p class="jing">由此計度，五現涅槃，墮落外道，惑菩提性，是則名為，第十外道，立五陰中，五現涅槃，心顛倒論。為妄，故曰惑菩提性，是則名為，第十外道。立五陰中，五現涅槃，乃是從心顛</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>五現涅槃者：計此五處，皆現在涅槃，現受寂滅之樂，不待將來者也。墮落外道，惑菩提性者：菩提、涅槃二種，是如來智、斷二果。今既認妄為真，將必以真倒，妄計而立論耳。二中間十計竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">結害囑護</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">示因交互</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗如是十種，禪那狂解，皆是行陰，用心交互，故現斯悟。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>溫陵曰：前云禪那現境，乃天魔候得其便；此云禪那狂解，乃心魔自起深孽；凡見道不真，多歧妄計，皆即狂解，是謂心魔，最宜深防也。皆是行陰，用心交互者：皆是想破行現，用定慧力，趣真斷妄，正當真妄交攻之時，互為勝負，故現斯悟。斯悟：即狂解也。《正脈疏》云：然通論十種狂解，不出斷、常、空、有，四字而已。且前五屬斷、常，後五屬空、有。第一斷見，第二常見，第三雙亦，第四、第五，皆充廣雙亦也。問：何無雙非？答：斷常皆過，若雙非，則為離過正見，非外道也。第六執有，第七執空，第八雙非。問：此何不為離過正見？答：有空不定是過，因偏方始生過，且此雙非，蓋指後陰昏瞢，不定有無，非是雙遮之中道，故非正見。第九推廣畢竟斷空，第十推廣畢竟滯有，若更以空有，攝入斷常，仍惟斷常二見而已。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">迷則成害</span></li></ul></div>
+<div class="unit"><p class="jing">眾生頑迷，不自忖量，逢此現前，以迷為解，自言登聖，大妄語成，墮無間獄。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>頑迷者：謂頑癡成性，難入正悟。迷惑覆心，易生狂解，由其不自己思忖量度，我何人斯，逢此現前，以迷惑為解悟，未證言證，自言登聖，僭稱果位，大妄語之業既成，其必墮無間地獄矣，誠為可惜！夫修行而至想破行現，外魔無可奈何，不知幾經歲月；如穿衣者，脫卻面上三層，只剩二層，功已過半，而乃妄言，登聖致墮，豈不悲哉！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">囑令保護</span></li></ul></div>
+<div class="unit"><p class="jing">汝等必須，將如來語，於我滅後，傳示末法，徧令眾生，覺了斯教其身心，開覺真義，於無上道，不遭枝岐，勿令心祈，得少為足，作大覺王，清淨標指。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>義，無令心魔，自起深孽，保持覆護，消息邪見。此囑作摧邪知識，蓋令未起者勿起，已起者速滅。囑阿難云：汝及在會眾等，必須將如來語，於我滅度之後，傳示末法，以去聖時遙，魔強法弱。徧令眾生，覺了斯義者：謂覺察了然明白斯十種狂解之義，既能覺了，自能辨識，邪正分明。妄念纔萌，即當以正定拒之。無令者：禁止之辭。心魔自起深孽，心魔：即十種狂解，謂外魔雖不能擾，無令自己心魔，自起深孽。孽者：禍之萌也，以能為地獄因故。書曰：「天作孽，猶可違；自作孽，不可活」。今云自起者，正是自作孽耳。上是教未起者勿起。保持覆護，消息邪見者：是教已起者速滅也。保持禪定，覆護進修，消息邊邪之見矣。此囑作趣真導師，是教其未生正智令生也。身心體察，真如實義，迴然不屬於斷常空有；但一念不生，迴光照性，中中流入，於無上佛道，不遭枝歧。木旁出曰枝，路曲分曰歧，皆非正直之本。勿令心中祈求，得少為足。蓋遭枝歧，即墮外道；得少為足，便入小乘。故囑當機，作大覺王，清淨標指。一念不生曰清淨，疾趣無上菩提，為大覺王，標榜人天，示作成佛指南而已。四行陰魔相竟。楞嚴經講義第二十三卷終</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛五</span><span class="ke-t">識陰魔相</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">壬初</span><span class="ke-t">具示始終</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">中間十境</span></li><li><span class="ke-mk">三</span><span class="ke-t">結害囑護壬初分二癸初始修未破區宇二終破顯露妄源癸初分二子初躡前行陰盡相二狀示識陰區宇</span></li></ul></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>阿難﹗彼善男子，修三摩地，行陰盡者，諸世間性，幽清擾動，同</div></details></div>
+<div class="unit"><p class="jing">分生機，倏然隳裂，沉細綱紐，補特伽羅，酬業深脈，感應懸絕。靜，無復馳逸，內外湛明，入無所入。深達十方，十二種類，受命元由﹔觀由執元，諸類不召，於十方界，已獲其同﹔精色不沉，發現幽秘。此則名為，識陰區宇。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此通明識陰，始終之相。彼善男子：即是行陰已盡之人，或始終不起狂解，或妄念便能覺知，常住圓定，故仍稱修三摩地；此中望行陰為終修，望識陰為始修也。行陰盡者，諸世間性，即行陰生滅性也；諸世間一切有為之法，無非流變生滅故。幽清擾動，同分生機者：觀幽隱輕清，擾動之根元，即十二類生。同分生機，即同生基也。基：表生之處；機：明動之始；其意則一而已。倏然隳裂，沉細綱紐者：倏然即忽然也。隳壞裂破，沉細綱紐，沉是深沉，細即微細，綱為網上之大綱，紐為衣中之紐扣；此狀生機之綱紐，為網衣之樞要也。功夫至此，忽然隳裂，沉細綱紐，則補特伽羅，此云數取趣，即中有身，眾生由此，能數數取著於諸趣，而受生也。且受生，所以酬答宿業，而酬業之深潛脈絡，即是行陰，為生滅根元也。感應懸絕者：感應即因果也，而言懸絕者，以行陰既盡，深潛脈絡已斷，因亡果喪，不復受生，故云懸絕。子二狀示識陰區宇於涅槃天，將大明悟，如雞後鳴，瞻顧東方，已有精色。六根虛於涅槃性天，為五陰所覆，輪轉生死，昏如長夜，將大明悟。言將者，謂纔有明悟之前兆耳。故下以喻顯之。前三陰盡，如雞初、二、三鳴，未見精色。今行陰既盡，如雞最後啼鳴；瞻顧性天，亦若東方已有精明之色，但未大明白，以其尚為識陰所覆故。工夫至此，行陰已盡，識陰已現時也。六根虛靜，無復馳逸四句，指掌疏約前四陰盡相言之。以受盡故虛，無領納故；想盡故靜，離分別故；行盡故無復馳逸，絕遷流故。內之六性，既已湛然明淨，況夫色陰先盡，而外之六塵，豈更昏擾乎？如是則內根外境，同歸湛明之一體也。既唯一體，內外相盡，故曰：入無所入。《正脈》云：亦即漸次中，塵既不緣，根無所偶，反流全一，六用不行之時也。內外湛明：言根塵化為一味，湛明之境。入無所入者：謂初心亡所，故言入流；既盡根塵，更何所入？深達十方，十二種類，受命元由者：至此根塵既銷，綱紐自破，則第八識，從此顯現。環師謂：受命元由，即是識陰，然亦即是類生別相；所謂各命由緒，顯異前之總相而見，故曰深達也。十方世界，十二種類，眾生投胎，受命根本元由，若知此是無明幻力所起，離於依他起性，則識陰自可頓超。其奈行人至此，觀此受命元由，執此為本元真心，故曰觀由執元，遂致識陰終不可破。雖不可破，而行陰已盡，果報不牽，故曰諸類不召，則盡十二類，皆不能牽引受生矣。唯見十方世界，同一識性，同是唯識，一體變現，更無別法之可得，故曰已獲其同。此即已得六銷，猶未亡一。精色不沉，發現幽秘者：謂識精元明，常得現前，如初見性天，已有精明之色，不復更沉。雖未大明，然已東方發白，顯現幽暗隱秘之處，言其具見暗中之物也。即是行盡識現，如脫外衣，方見最內貼體汗衫，此則名為識陰，未破之區宇。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">終破顯露妄源</span></li></ul></div>
+<div class="unit"><p class="jing">若於羣召，已獲同中，銷磨六門，合開成就，見、聞通鄰，互用清淨。十方世界，及與身心，如吠瑠璃，內外明徹，名識陰盡。是人則能，超越命濁，觀其所由，罔象虛無，顛倒妄想，以為其本。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>群召，謂群生果報，皆能牽召受生，故曰群召。已獲其同者：行陰已破，諸類不召，識陰現前，故觀十方唯識，一體變現，更無別法，是謂已獲同中，同即一體也。銷磨六門，合開成就者：即於同中，加功用行，銷鎔磨煉，六根門頭，合之則一，開之則六。以六根為一根用，以眼能見，耳、鼻、舌、身、意皆能見，名合成就；以一根為六根用，以眼不獨見色，而能聞、齅、嘗、觸、覺、知，名為開成就；一根如是，根根合開皆然。見聞通鄰，互用清淨者：《正脈》云：不唯情界脫纏，亦以情器交徹也。見聞者：略舉六根之二；通鄰者：其結已解，其體不隔也；互用者：體既無隔，用可互通也；謂眼家，作耳家佛事等。以其迴脫浮塵、勝義，二種根結，無障無礙，故曰清淨。此即情界脫纏。下則情器交徹。十方世界，此器世界；及與身心，此有情世界也。外器內根，全是自己心光，世界身心，蕩然不復更有，故云如吠瑠璃，內外明徹。即前所謂山河大地，應念化成無上知覺是也。至此一念不生，不生不滅，與生滅和合之相滅，故云名識陰盡。按耳圓通，此當寂滅現前。《指掌疏》云：前於空所空滅時，宛爾有箇能滅心，即是第八本識，然此乃是對生言滅，滅非真滅，正是識陰，今於識陰盡處，對生言滅之滅，亦復俱滅，故是寂滅現前時也。是人則能超越命濁：此經命濁，以一性六用，同異相織為體，如前命濁文云：汝等見聞，元無異性（一也性），眾塵隔越，無狀異生（六也用）。性中相知，用中相背，同異失準，相織妄成，名為命濁。今以合開成就，一六俱亡，無復相織，故能超越。至此反觀識陰之所由來，莫非幻妄，非有謂之罔；非無謂之象；體性空寂，故名虛無；迷背真性，名為顛倒；元無別法，惟此妄想，以為識陰之根本耳。但能達妄本空，則妄想尚無，識陰何有？故曰識陰虛妄，本如來藏也。初具示始終竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">中間十執</span><span class="ke-div">分10</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">因所因執至十定性辟支癸初分三子初行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難當知：是善男子，窮諸行空，於識還元，已滅生滅，而於寂滅，精妙未圓。盡識現，如前云：熠熠元性，性入元澄，一澄元習，如波瀾滅，化為澄水是也。於</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此示識陰十種邪執，第一因所因執也。先教以當知，以示警覺之意。是修圓通之善男子，窮諸行空者；謂研窮行陰，而至於空，即行陰已盡。於識還元者：指行八識反本還元矣！已滅七識遷流生滅之性，而於識陰，寂滅之性，精妙未圓。《指掌疏》云：寂即常德，離生死故；滅即淨德，滅煩惱故；精即我德，有真體故；妙即樂德，具神用故。總為一涅槃，蓋必透過識陰，始得圓滿也。《寶鏡疏》云：而於識陰，寂滅之性，雖已現前，但其真精妙明，尚未發光，猶為識陰所覆，未能圓照於法界也。《正脈疏》云：所言寂滅者，即圓通中解結，末後之滅結也。不帶纖毫生滅曰精，惟餘一味寂常曰妙，始是純真性體。此而未圓，正明識陰未破，尚為所覆，似一似常未精未妙也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">能令己身，根隔合開，亦與十方，諸類通覺，覺知通，能入圓元。若於所歸，立真常因，生勝解者，是人則墮，因所因執，娑毗迦羅，所歸冥諦，成其伴侶，迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《正脈疏》云：能令下，先舉起執之由。大凡起執，必覩大定中，殊勝之象，以發端耳。首二句：能令自己之身，六根隔礙銷鎔，合六根為一根之用，開一根為六根之用，躡前銷六入一之境。次三句：亦與十方，十二類生，通一見聞覺知，此為群心，通同合之境。覺知既已通同合，能入圓元。圓元：即識陰也。圓表諸類徧含，元表萬化托始。其言能入者，意明四陰蕩盡，歸宿於此而已。下方是所起法執。若於所歸：即是能入圓元；由不達即是識陰，遂妄立真常，堪可依住，因即依也，以為極果，生殊勝之解者。是人則墮因所因執者：本非可依，而謬執能依之心，所依之境，故曰因所因執。《正脈》云：識乃無明幻影，罔象虛無，畢竟無實，如人夢見依歸得托之地，妄生慶幸，豈有真實哉？下明所墮同類，娑毘迦羅，此云黃髮外道，師事梵天，以我為能歸，以冥諦為所歸，前云非色非空，拘舍黎等，昧為冥諦；然計此非只一人，前後異出耳。成其伴侶者，即同類也。迷佛菩提，亡失知見者：迷了佛果菩提無得之真道，亡失自己因地知見之妙心矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第一，立所得心，成所歸果，違遠圓通，背涅槃城，生外道</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。識陰十相，此居其首，故名第一。前能令此身，根隔合開，遂立此識有所得之心；亦與諸類，覺知通，遂執此識成所歸之果。殊不知，圓滿菩提，歸無所得。今以心有所得，果有所歸，如人夢見拾得金寶，歸於家中，所得所歸，皆非真實也。違遠圓通，背涅槃城，生外道種：《寶鏡疏》云：向者，行盡識現，根隔合開，圓通將近；今立能立所，則違而遠矣。向者，於涅槃性天，將大明悟；今則背之，而入生死路矣。向者，覺心欲發，堪為佛子，今則反生外道，斷佛種矣，可不悲哉！後皆倣此。初因所因執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">能非能執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第二，能非能執也，準前可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">若於所歸，覽為自體，盡虛空界，十二類內，所有眾生，皆我身中，一類流出。生勝解者，是人則墮，能非能執，摩醯首羅，現無邊身，成其伴侶。迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>若於所歸者：躡前章也。但前章，有乍現勝相之文，已將識陰，為所歸之果。今仍躡所歸二字，前但執為歸托之處，此則覽為自體，是其差別也。覽為自體者：即忘身觀識，久久觀成，唯見識體無邊，不見有身故，即以識心為自體也；遂謂盡虛空界，十二種類，所有眾生，皆我身中，一類流出。生殊勝解者，將必以我為能生彼，而彼非能生我，故曰是人則墮，能非能執。摩醯首羅，即色界頂天，乃三目八臂，騎白牛，執白拂，大自在天是也。竺法蘭云：西域梵志，常修梵行，事首羅天，以為天尊。今云現無邊身者：謂大自在天，自計於身中，能現無邊眾生之身；而此識陰行人，計我生彼十二類生，與彼計同，故云成其伴侶。不信別有因果，自應迷佛所證菩提之果覺，妄計彼天為勝，自應亡失正知正見之因心。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第二，立能為心，成能事果，違遠圓通，背涅槃城，生大慢</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>天，我徧圓種。立能為心，成能事果者：因見識陰，能攝能生，遂立為能為因心，十方眾生，皆我流出，遂謂成就能事之果。違遠圓通者：則失因地心；背涅槃城者：則亡果地證也。生大慢天，即大自在天，自計能生一切，起祖先慢，故以大慢為名。又計自體，周徧虛空，圓含一切；今行人謬計，既同於彼，成彼種類，故曰我徧圓種也。《正脈》問：此計識為自體，流出一切，何異佛說，萬法唯識？答：佛說萬法唯識，緣生如幻，生即無生；此計實生，安得一轍？又唯識正明無他心外之法，此計能生他法，宛爾顛倒，何疑之有！二能非能執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">常非常執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第三，常非常執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">若於所歸，有所歸依，自疑身心，從彼流出，十方虛空，咸其生起，即於都起，所宣流地，作真常身，無生滅解。在生滅中，早計非常執﹔計自在天，成其伴侶。迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>常住，既惑不生，亦迷生滅，安住沉迷。生勝解者，是人則墮，常若於所歸，有所歸依者：此與上科差別也。上科於所歸識元，覽為自體。此科於所歸識元，為我所歸依處。自疑我之身心，從彼流出。不僅彼能生我，即十方虛空，咸其生起，況空中所有一切耶？即於都起，所宣流地者：地即處也，然識陰即為虛空等，所都起處，為身心等，所宣流處也。作真常身，無生滅解者：於彼所歸識陰，始終不見生滅，故即作真常之身，無有生滅解也。在生滅中，早計常住者：識陰，由真如不生不滅，與生滅和合，名和合識，非是不生不滅，要必破和合識，滅相續心，方為常住真心。今識陰未盡，在生滅中，早計常住者，不亦惑乎？此正不了真如為不生滅性，亦兼不了識陰猶屬微細生滅，故曰既惑不生，猶迷生滅。且真妄雙迷，安心住著，故曰沉迷。反生勝解者：是以識陰，而作常住解；我及萬物，皆是非常；故曰則墮常非常執。計自在天，即欲界頂，魔王天。涅槃經迦旃延說：一切眾生悉是自在天作。《楞伽經》塗灰外道說：計自在天，為萬物因。今以識陰，為身心從彼流出，及虛空萬物，皆其生起，正與此天相似，故曰成其伴侶。然既惑不生滅性，則必迷佛果菩提之道，亦迷生滅識陰，則必亡失，正知正見，而墮邪知邪見也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第三，立因依心，成妄計果，違遠圓通，背涅槃城，生倒圓</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。立因依心者：計識能生我身心為因，又計是我歸依之處為依。成妄計果者：謂以生滅識陰，作真常身，成就妄計之果。亡失本修，自與圓通相違遠，流入外道，正與涅槃，相反背矣。此與上科，同一識陰，而所執則異。前執我圓，能生萬物；此執彼圓，生我身心；故曰倒圓種。三常非常執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸四</span><span class="ke-t">知無知執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第四，知無知執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">若於所知，知徧圓故，因知立解，十方草木，皆稱有情，與人無異。草木為人，人死還成十方草樹，無擇徧知。生勝解者，是人則墮，知無知執，婆吒、霰尼，執一切覺，成其伴侶。迷佛菩提，亡失</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>知見。溫陵曰：所知，即所觀識陰也。謂識有知，而一切法，由知變起，因計知體，圓徧諸法，遂立異解，謂無情皆有知也。十方草木，本屬無情，以異解故，皆稱有情，與人無異。草木為人，人死還成十方草樹，互為輪轉，無所揀擇，有情無情，而徧皆有知也。《正脈》問：此與佛說，山河化為無上知覺，有何簡別？答：今詳內所明，見、相二分，本惟一心，迷之為二，故妄見無情，不通知覺，大悟復歸一心，則通一知覺，更無外物，非謂各各有知，同他心量也。今以無情有知，生勝解者，是人則墮，謬計無情有知，實本無知，故曰知無知執。婆吒、霰尼二外道名；婆吒，名義集云：跋闍，此云避去，善見律云：初為牧童，毘舍離王，未登位時，共同遊戲，童為王蹋，泣訴父母。父母曰：汝應避去，因此立名。霰尼或云先尼，此翻有軍，立名之意未詳。執一切覺者：二外道執一切有情無情，皆有知覺，此計徧知，竟同於彼，故曰成其伴侶。迷佛菩提，亡失知見。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第四，計圓知心，成虛謬果，違遠圓通，背涅槃城，生倒知</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。是名第四，計圓徧一切有知為因心，成虛無謬誤之果，則違遠圓通之因地心，迷背涅槃之果地覺，生倒知種；以無情無知為有知，謂倒知種。問：世有依草附木，以顯靈異，詎非有知耶？答：是能依能附之精靈有知，非彼無情之草木有知也。四知無知執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸五</span><span class="ke-t">生無生執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第五生無生執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">若於圓融，根互用中，已得隨順，便於圓化，一切發生，求火光明，樂水清淨，愛風周流，觀塵成就，各各崇事，以此羣塵，發作本因，立常住解，是人則墮，生無生執。諸迦葉波。並婆羅門，勤心役身，事火崇水，求出生死，成其伴侶，迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>環師謂：識陰盡者，銷磨六門，諸根互用，今識陰未盡，則纔得隨順而已。若於圓滿無礙，融通不隔，六根互用之中，觀「中」一字，足見互用之妙，含而未發也。已得隨順者：雖然互用之妙，含而未發而已；得隨心順意，略無隔礙而已。即便於此，圓融化理，妄生計度，一切諸法，莫不由此四大發生。於是求火之光明，樂水之清淨，愛風之周流，觀塵之成就，塵即地大，以地大能成就諸事故。各各崇事：崇即尊崇，事即供事，或尊供於火，或尊供於水等，各隨所見，而偏執也。為欲增進其圓化之妙，以此群塵，發作本因者，群塵即指四大，如前云：四大和合，發明世間，種種諸相，以此為發生造作本因。一切所作，皆屬無常，惟此常住，故立常住解，以為常司造化之真宰也。並謬計能生聖果，一切聖凡因果，莫不由之而生；實則不能生，故曰生無生執。諸迦葉波，別姓也，如優樓頻螺迦葉等，婆羅門總姓，共有十八，迦葉其一也，乃指一類，事四大之外道。勤勞其心，役使其身，供事於火，尊崇於水，事風崇土，可以例知。以此崇事，求出生死，以求徧常之果，成其伴侶。所立既非真常，所修寧有實果？故曰迷佛菩提。崇事無情，立常住解，故曰亡失知見。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第五，計著崇事，迷心從物，立妄求因，求妄冀果，違遠圓通，背涅槃城，生顛化種。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《正脈》云：計著：邪惑也。崇事：邪業也。迷心者：迷己一真靈覺之心；從物者：從四大無知之物。妄求因者：非因計因也；妄冀果者：非果望果也。認無情之物為真因，故曰違遠圓通；將有漏之果為實證，故曰背涅槃城。生顛化種者：謂生顛倒化理之種類。佛說應觀法界性，一切唯心造。是心為能造，而一切為所造，此是生物之正理。今既顛倒化理，故墮外道種類。五生無生執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸六</span><span class="ke-t">歸無歸執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第六歸無歸執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>若於圓明，計明中虛，非滅羣化，以永滅依，為所歸依。生勝解</div></details></div>
+<div class="unit"><p class="jing">者，是人則墮，歸無歸執，無想天中，諸舜若多，成其伴侶。迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>圓明，即是識陰，見前四陰皆盡，露出識陰，圓徧湛明，猶如止水。，而不知仍是罔象，虛無妄想，即便計此，圓明中虛無體性，為究竟地。非滅群化者：非即毀也，要毀滅群塵所化，一切身土，即欲灰身滅土，纖塵不立。以永滅依，為所歸依者：以永滅群化所依之空，為所歸之處，常處虛空，永為依托，更不前進。豈知乃是虛無不實之境，非是實有可歸之處也。以此生勝解者，是人則墮歸無歸執，以此為托之處，實無可歸托也。無想天中，諸舜若多，成其伴侶者：《正脈》云：無想天，略舉非非想，以該四空，非取四禪無想也。諸舜若多，總舉趣空天眾，為同類也。既以斷滅為果，自應迷佛菩提，以虛無為因，自應亡失知見。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第六，圓虛無心，成空亡果，違遠圓通，背涅槃城，生斷滅</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。於圓明中，以虛無之心為因，成就空亡之果，謂縱使修到非非想天，八萬劫終是落空亡。違遠圓通，以不生不滅為因地心；背涅槃城，以不生不滅為果地覺也。現在既以斷滅居心，將來必墮斷滅之種。《正脈》問：此與後二何別？答：棄有取空，見解志願皆同，但先心各別，此凡外種伏惑取空，彼聖性種斷惑取空也。六歸無歸執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸七</span><span class="ke-t">貪非貪執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識空</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第七貪非貪執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>若於圓常，固身常住，同於精圓，長不傾逝。生勝解者，是人則</div></details></div>
+<div class="unit"><p class="jing">墮，貪非貪執﹔諸阿斯陀，求長命者，成其伴侶。迷佛菩提，亡失</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>知見。《正脈》云：圓常亦識陰區宇。歷觀上來，於此一境，稱圓元、圓融、圓明、圓常，義各有表。元表諸法統歸，融表萬化含蓄，明表徹體虛朗，常表究竟堅牢。各與本文關涉，細尋可見。由彼觀見，前四陰盡滅，而識陰現前，識體精明，湛不搖動，而妄計為圓滿常住也。又見識為一身之主，有欲堅固此身，令得常住，同於識精圓明，長不傾逝。傾逝即死也，即所謂長生不死也。不知此身，終是無常生滅，妄生貪著。以此生勝解者，是人則墮，貪非貪執，謂妄生貪著長生，而實非可貪也。諸阿斯陀，此云無比，即長壽仙也。言諸者，以仙非一人，凡求長命者，成其伴侶。不知更求真常之果，故曰迷佛菩提；但知堅固幻妄之軀，故曰亡失知見。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第七，執著命元，立固妄因，趣長勞果，違遠圓通，背涅槃城，生妄延種。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>執著命元者：執著識陰，為受命之根元也。立固妄因者：立堅固幻妄之色身，以圓常識陰為因心。趣長勞果者：趣向長戀塵勞之果報，而不求出離之道也。亡失本修，故曰違遠圓通；不出生死，故曰背涅槃城。生妄延種者：謂不達自性真實常住，存想固形，妄冀延長壽命，以成長壽仙之種類也。七貪非貪執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸八</span><span class="ke-t">真無真執</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第八真無真執，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">觀命互通，卻留塵勞，恐其銷盡，便於此際，坐蓮華宮，廣化七珍，多增寶媛，恣縱其心。生勝解者，是人則墮，真無真執，吒枳、迦羅，成其伴侶。迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>觀命：即觀受命元由，乃是識陰，與諸類通覺，故曰互通。是知一切身命，咸以識陰為本，一切塵勞，悉與命元有關；於是卻留住世間塵勞，祗恐其銷盡，則我之身命，無所依託。且行盡識現，一切圓融變化，莫不隨心自在。便於此際，正卻留塵勞之相。塵勞以貪欲為本，即於此際，現坐蓮華宮，取其莊嚴美麗，微妙香潔。廣化七珍，多增寶媛者：七珍即七寶，媛是美女也。使七寶羅列於華宮，俾美女橫陳於左右，窮奢極欲，恣縱其心，以為妙樂。生勝解者，是人則墮，真無真執，妄執業識，命元為真常，而實非真常。吒枳迦羅，即天魔之異名，吒枳此云結縛，迦羅此云我所作，此魔自謂三界結縛，惟我所作，以能變化欲境，結縛眾生故。今卻留塵勞，略同彼計，故云成其伴侶。迷佛菩提，亡失知見，不知更有無上菩提，亡失正知正見也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第八，發邪思因，立熾塵果，違遠圓通，背涅槃城，生天魔</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。發邪思因者：謂發邪思縱欲，以為因心。立熾塵果者：謂立熾盛塵勞，以為果覺也。違遠圓通，本修之因心；背涅槃城，寂滅之果覺也。不斷欲而修禪，必落魔道，故曰天魔種。八真無真執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸九</span><span class="ke-t">定性聲聞</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第九定性聲聞，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>於命明中，分別精麤，疏決真偽，因果相酬，惟求感應，背清淨</div></details></div>
+<div class="unit"><p class="jing">道：所謂見苦斷集，證滅修道，居滅已休，更不前進。生勝解者，是人則墮定性聲聞。諸無聞僧，增上慢者，成其伴侶。迷佛菩提，</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>亡失知見。於命明中者：謂識陰顯露，已能通達，各命由緒，了然明白也。便知此中，識陰徧含，漏無漏種子，為一切凡聖所依。由是分別精麤者：分析辨別，而聖位則精，謂變易精微故；凡位則麤，謂分段麤顯故。疏決真偽者：疏通決擇，而聖道則真，謂修證真實故；外道則偽，謂斷常偽妄故。因果相酬者：世出世間，皆是依因感果，自相酬答。而欲易麤為精，捨偽從真，故惟求感應。感即是修，應即是證，惟求真修實證，速出三界也。背清淨道者：謂背棄一乘實相，清淨之道，以雙離二邊垢故。所謂見苦、斷集、證滅、修道者：躡解惟求感應之事。苦、集，是世間因果。滅、道，是出世間因果。見世間苦諦苦果，皆由集諦煩惱苦因所招；見出世間滅諦樂果，皆由道諦樂因所感。厭苦斷集，慕滅修道。居滅已休，更不前進者：居滅諦涅槃之樂，則心滿意足，自謂所作已辦，生死已了，更不求進大乘之道，中止化城，不求寶所，得少為足。生勝解者：於菩薩所修大乘，不生一念好樂之心，是人則墮，定性聲聞。定性：即不發回小向大之心，鈍阿羅漢是也。諸無聞僧者：四禪無聞比丘，及增上慢者，略同此計，故曰成其伴侶。沉空滯寂，故迷佛果，菩提之道，灰身泯智，是以亡失大乘知見。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第九，圓精應心，成趣寂果，違遠圓通，背涅槃城。生纏空</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>種。圓精應心者：圓滿易麤為精，求應之因心，成就沉空趣寂，定性之小果。不得圓通之因心，故曰違遠。莫獲涅槃之極果，故稱迷背。生纏空種：謂永纏於空，而無超脫之志。九定性聲聞竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸十</span><span class="ke-t">定性辟支</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">子初</span><span class="ke-t">行盡識現</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又善男子，窮諸行空，已滅生滅，而於寂滅，精妙未圓。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此第十定性辟支，準上可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子二</span><span class="ke-t">謬解成咎</span></li></ul></div>
+<div class="unit"><p class="jing">若於圓融，清淨覺明，發研深妙，即立涅槃，而不前進。生勝解者，是人則墮，定性辟支。諸緣獨倫，不迴心者，成其伴侶。迷佛菩提，亡失知見。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>六根互用曰圓融，諸塵不染曰清淨，照見命元曰覺明。發研深妙者：發心研究有二種：一獨覺，寂居觀化，無師自悟。二緣覺，觀察因緣，悟明無性，此二人俱得深妙之悟，即以悟境，立為涅槃，以為歸息之處。不知更求真如不動，寂滅場地，及性海圓融，緣起無礙，故云而不前進。以是生勝解者，是人則墮入定性辟支，辟支梵語，具含緣、獨二覺義。定性，以不復前進，亦即不迴心者，成其同伴等侶。迷佛菩提，亡失知見者：迷了佛果，無上菩提之道，此寶所也；亡失本修，正知正見之心，此因心也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">子三</span><span class="ke-t">出名警覺</span></li></ul></div>
+<div class="unit"><p class="jing">是名第十，圓覺心，成湛明果，違遠圓通，背涅槃城，生覺圓明，不化圓種。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>圓徧諸類，覺知通，此是識陰境界，即以悟境為因心，成湛明果。寂靜名湛，成獨覺，得自然慧之果；洞徹曰明，成緣覺，究竟無生之果。違遠圓通，背涅槃城者：謂圓通依不生滅為因地心，然後圓成果地修證。今乃依識陰悟境，即立涅槃，得少為足，中止化城，故曰違遠，曰背。生覺圓明，不化圓種者：覺，即獨覺、緣覺，生此二種果位；圓明即悟證之境。獨覺無師自悟，緣覺緣生無性，遂計其理圓，其智明，即認為涅槃真境；而不能融化透過，所悟所執，空淨圓影，依然為一定性種耳。問：識陰十境，前八是外道、天、仙、魔王，錯修妄本，貪戀塵勞，不出三界，枉受生死，判屬為魔，固其宜矣；而聲聞、緣覺、斷惑證真，已出三界，而了生死，何亦判屬魔境，令人不敢修習；倘遇鈍根，有失接引，豈慈悲心者之所為耶？答：准《華嚴經》，忘失菩提心，修諸善法，皆為魔業。況此經乃修楞嚴大定，圓滿無上菩提，聲聞、緣覺，得少為足，中止化城，非魔業而何哉？二中間十執竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">結害囑護</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">示因交互</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗如是十種禪那，中途成狂，因依迷惑，於未足中，生滿足證，皆是識陰，用心交互，故生斯位。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>如是十種禪那：謂透過行陰十境，識陰未曾起執，總屬禪那善境。中途成狂，因依迷惑者：未至圓通中間，或遭枝歧，如前八種各起狂解，因依顛狂見解，不自覺知，故曰迷惑。又於未足中，生滿足證者：未至寂滅現前，即生滿足證，保果不前，自謂已足；如後二種，定性聲聞、辟支是也。然究其所以，實非外魔來擾，皆是識陰將破未破，用心不純。妄念與正念，交互而起。若妄念勝時，故生斯位。斯位即前十執。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">迷則成害</span></li></ul></div>
+<div class="unit"><p class="jing">眾生頑迷，不自忖量，逢此現前，各以所愛，先習迷心，而自休息，將為畢竟，所歸寧地。自言滿足，無上菩提，大妄語成。外道邪魔，所感業終，墮無間獄。聲聞、緣覺，不成增進。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此警惕顯害。眾生頑而無知，迷而無識，不自思忖量度，逢此境界現前，各以所愛而取。先習迷心者：積劫熏習，偏愛邪種，迷暗自心。今於定中，所現境界，適與先心相似，投彼病根，發其痼疾，即便欣取，而自休息。前八種，於自所計果，擬是畢竟所歸寧地，將謂即是安身立命之處，如第一所歸果，第八熾塵果是也。後二種於自所證果，自言滿足，無上菩提，妄言究竟極證，如第九趣寂果，第十湛明果是也。然此等，未得言得，未證言證，故云大妄語成。雖皆為妄語，而害分輕重，外道邪魔八種，所感有漏，禪福之業終盡，必墮無間之獄，此約害之重者言之。聲聞緣覺二種，現前所證，乃是無漏所感，必無墮獄之事。惟是不成增進，永閉化城，不達寶所，此約害之輕者言之。其害雖分輕重，而於圓通中，皆為魔障耳。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">囑令保護</span></li></ul></div>
+<div class="unit"><p class="jing">汝等存心，秉如來道，將此法門，於我滅後，傳示末世，普令眾身心，入佛知見，從始成就，不遭歧路。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>生，覺了斯義。無令見魔，自作沉孽，保綏哀救，消息邪緣。令其汝等，存大悲救世之心，秉如來覺他之道，將此辨魔法門，於我滅度之後，正法寖衰，邪法增熾，傳示末法之世，普令眾生，覺了斯義。斯義：即中途成狂等，十種差別之義。既經覺了，顛狂知見自息。前七是見，第八具見愛，以卻留塵勞故。二乘，於界內見愛雖盡，而界外見愛猶存。其於涅槃，則迷真執似；於諦理，則厭有著空，不達法空，但求自利等，皆顛倒分別見也。以上諸見不生，故云無令見魔，自作沉孽。自作者：顯非外魔來擾，乃是心中見魔之自作耳。沉孽：謂沉重罪孽，如外道邪魔，報終墮獄；聲聞辟支，永閉化城皆是也。保綏哀救，消息邪緣者：綏安也，保綏禪定，哀救行人，消磨息滅邪見之緣。邪緣，即前顛倒分別見愛，全障真正知見。今既息滅，則障盡理現，令其身心，自然得入佛之知見，從此為始，成就圓通，中中流入薩婆若海，直至成佛，不遭歧路；所謂終始地位，中間永無諸委曲相也。二詳分五魔境相，一大科竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">庚三</span><span class="ke-t">結示超證護持</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">辛初</span><span class="ke-t">先示超證</span></li><li><span class="ke-mk">二</span><span class="ke-t">後示護持辛初分三壬初諸佛先證</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">如是法門，先過去世，恆沙劫中，微塵如來，乘此心開，得無上</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>道。如是，指法之詞。法門，近指識陰，辨魔法門，遠該前四陰。先過去世，恆沙劫中：遠指多劫也。微塵如來者：極言其佛之多也。前云：此是微塵佛，一路涅槃門。乘此心開者：每於一陰未開之時，須要依此法門，而辨別之，不為十種魔境所惑，方得透過。一陰如是，諸陰皆然，識陰若盡，則任運得成無上佛道矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">識盡所超</span></li></ul></div>
+<div class="unit"><p class="jing">識陰若盡，則汝現前，諸根互用，從互用中，能入菩薩，金剛乾慧，圓明精心，於中發化。如淨瑠璃，內含寶月，如是乃超十信、十住、十行、十迴向、四加行心，菩薩所行，金剛十地，等覺圓明。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>識陰若盡者：將齊此以明超證也。則汝現前諸根互相為用，六根之體，固屬圓融，六根之用，亦復不隔，每一根中，皆兼具五根之用，此當圓教初住，圓通之位；五陰既盡，解六結，越三空，生滅既滅，寂滅現前時也。從互用中者：此即從初住位中，便能入於菩薩金剛乾慧，此乾慧即前之乾慧地，初住已證。耳根圓通，名為金剛三昧，乾慧親依而立，故特稱金剛之名。此即一超直入，等覺後心，蓋促舉始終也。下圓明精心，於中發化者：略表中間，廓周法界曰圓，寂照無邊曰明，前偈云：現在諸菩薩，今各入圓明，此即圓通體也，故號精心，謂純真無妄之妙心。於中即於初住至等覺，兩楹之中，發起神通變化。如觀世音，獲二種殊勝，發三種妙用也。首二句以喻明。瑠璃：喻圓明精心；含月：喻於中發化。謂圓明精心，性具神化，不礙發揮運用，洞照近遠。如論悟證，已齊佛果。如是乃超十信、十住等，意以初住為能超，中間諸位為所超，下入於如來，妙莊嚴海；亦即以初住為能入，妙莊嚴海為所入也。此中復超十信者：全顯此經十信，乃初住開出。於地特言菩薩所行者：意表入地，乃真修聖位耳。皆以金剛利智修斷，故言金剛十地，與前乾慧位中，金剛不同，彼指耳根圓通，是諸位通依，故置諸位之初，此顯地上金剛，堅利之智，能斷微細無明，故標十地之首。《正脈》云：於等覺復言圓明者：見始終惟此一心，但至等覺，則發化之極也。按天台言：圓教有利根者，一生超登十地。清涼言：解行在躬，一生圓曠劫之果，皆從初住超之。蓋初住名發心住，以是義言，從初發心，即成正覺。舊註謂從七信超之，未敢聞命；大抵詳究圓家，只有二位：一斷前通惑，從滿觀行，一超直入初住，中間更不取證。二斷後別惑，從入初住，一超直至等覺，中間亦不取證。而佛於圓家，仍列多位者，有二意：一者、為引漸機，令欣從圓頓也。二者、見佛眼明，極能於至迅速者，見而分析也。譬於飛隼上山，雖至迅疾，然亦自下歷上；但眼鈍者，終不能徹見，而分析之，故須佛眼也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">圓證極果</span></li></ul></div>
+<div class="unit"><p class="jing">入於如來，妙莊嚴海，圓滿菩提，歸無所得。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>入於究竟如來，圓極之果。妙莊嚴海者：以萬德莊嚴果海，各盡其妙，是為福究竟。圓滿菩提者：以證得一切種智，圓滿無餘，是智究竟。歸無所得者：以契合性真本有，不從外得，是理究竟。上二句顯修成，後一句顯性具，蓋從性起修，修還契性，離性真外，無有少法可得矣！前云狂性自歇，歇即菩提，勝淨明心，不從人得也。初先示超證竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛二</span><span class="ke-t">後示護持</span><span class="ke-div">分3</span><ul><li><span class="ke-mk">壬初</span><span class="ke-t">首明遵古辨析</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">此是過去，先佛世尊，奢摩他中，毗婆舍那，覺明分析，微細魔</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>事。此是舉古佛辨魔法門，先佛授受，修習大定，增進聖位之心要也。奢摩他止定之中，用毘婆舍那觀慧，定慧均等，因中始覺智明，分析微細魔事。先佛是過來人，古語云：欲知山下路，須問過來人，自然不錯。則今之所說，亦唯遵先佛儀範也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">正令諳識護持</span></li></ul></div>
+<div class="unit"><p class="jing">魔境現前，汝能諳識，心垢洗除，不落邪見。陰魔銷滅，天魔摧碎，大力鬼神，褫魄逃逝，魑、魅、魍、魎，無復直至菩提，無諸少乏，下劣增進，於大涅槃，心不迷悶。若諸末世，愚鈍眾生，未識禪那，不知說法，樂修三昧，汝恐同邪，一心勸令，持我佛頂，陀羅尼咒，若未能誦，寫於禪堂，或帶身上，一切諸魔，所不能動。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>果能如我所說，則諸魔境，一切現前，汝便能諳識。致魔雖然由定，實乃由心。但要心中不生勝解，則心垢洗除。主人不迷，則彼魔事，無奈汝何，自不落於邪見網中。此正令諳識諸魔。出生。陰魔，即心見二魔；由心垢洗除，則陰魔銷滅。內魔既銷，則外之天魔，自應摧碎其膽。大力鬼神，見其王尚爾摧碎，自應褫(喪也)魄逃逝，於十二由旬之外；魑魅魍魎，諸小鬼神，自應潛蹤匿迹，無復出生。此上先舉古佛辨魔法門，如是內魔外魔，一併潛銷，故能超諸位，直至無上菩提智果。雖然能超，而於諸位功德，無諸少乏，所謂一悟一切悟，一證一切證也。縱是下劣二乘，亦能回小向大，勵志增進。於如來所證，無餘大涅槃斷果，心不迷悶，於寶所矣！此轉令咒護眾生。特約末法之世，去聖時遙，足深憂慮。況愚迷暗鈍眾生，智不明，而根不利。以智不明，未識禪那中，差別境相；根不利，不知佛所說，辨魔法要；自力法力，二緣俱缺。而乃樂修耳根三昧，直修反聞之定。汝恐同邪者：汝恐未能諳識魔境，誤入邪網，即同於邪也。自當勸令，一心持我佛頂陀羅尼咒：無庸他術，但專持咒，此咒既稱佛頂，即最尊最勝之法，又稱陀羅尼，即總一切法，持無量義，一切法義，皆在其中。設或無讀誦性。而未能誦，寫於禪堂，及其住處，或帶身上；一切諸魔，所不能動者：以此咒常有，金剛藏王菩薩種族，併其眷屬，晝夜隨侍故也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">叮囑欽古教範</span></li></ul></div>
+<div class="unit"><p class="jing">汝當恭欽，十方如來，究竟修進，最後垂範。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《指掌疏》云：既示辨魔之法，又申結勸之義，末復教以，汝當恭欽，則如來反覆叮嚀之意，已深切矣！然教以恭欽者有二義：一者、此是十方如來，從始至終，究竟修進之法，當恭敬欽承，而修習之，此囑以依法，成自利行也。二者、此是十方如來，憐愍最後末世，垂留儀範，當恭敬欽承，而宣傳之，此囑以依教，成利他行也。《寶鏡疏》云：最後垂範者：以當機慇懃啟請，十方如來，得成菩提，妙奢摩他，三摩、禪那，最初方便；是以如來，令其生信開解，乃至示以三如來藏，耳根圓通，正助雙修，發行證入，則最初方便，能事畢矣。而更迴身再來凭倚，重詳七趣，以勵精修，復辨五魔，而防惑亂，此於性定，垂示初心，修習儀範，乃在後之又後，故云：最後垂範，正與最初方便，相照應耳。大科初無問自說五陰魔境竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">戊二</span><span class="ke-t">因請重明五陰生滅</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">己初</span><span class="ke-t">躡前請問</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">具答</span></li><li><span class="ke-mk">三</span><span class="ke-t">問三結勸傳示</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難即從座起，聞佛示誨，頂禮欽奉，憶持無失。於大眾中，重復白佛：如佛所言，五陰相中，五種虛妄，為本想心，我等平常，未蒙如來，微細開示。又此五陰，為併銷除，為次第盡﹖如是五重，詣何為界﹖惟願如來，發宣大慈，為此大眾，清明心目，以為末世，一切眾生，作將來眼。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>當機即從座起，聞佛最後曲垂遺範，開示教誨，頂禮接受，欽敬奉承法旨，仰體慈悲聖意，記憶受持，而不忘失，傳示於末法也。於大眾中下：具陳三問，先問生起妄想，重復白佛，如佛所言，五陰相中，五種妄想，如色陰中堅固妄想，受陰中虛明妄想，想陰中融通妄想，行陰中幽隱妄想，識陰中虛無妄想，以為根本想心。我等平常，只知五陰相妄，當體全空；並未蒙如來，微細開示，五種妄想，以為根本。此第一問，請細說妄源也。此次問滅除頓漸。又此五陰，既總是妄想，今欲破除，為當一併頓除，為當次第漸盡耶？此第二問，請指示頓漸也。如是五重，詣何為界者：此三問陰界淺深，又如是五陰五重。若欲破除，須至何等界限，為色陰邊際？何等界限，為識陰邊際？此第三問，請因界淺深也。如上三問，乃為進修法要。惟願如來，大慈不倦，一一詳示。不獨為此現前大眾，清明心目，心地清淨，目光明朗，辨識前程，進修無礙；乘願入彼末法，將如來語，傳示後世，令一切修定眾生，作將來正法眼也。初躡前請問竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">己二</span><span class="ke-t">具答三問</span><span class="ke-div">分3</span><ul><li class="ke-cur"><span class="ke-mk">庚初</span><span class="ke-t">答生起妄想</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">答陰界淺深</span></li><li><span class="ke-mk">三</span><span class="ke-t">答滅除頓漸庚初分三辛初標說妄想之由二詳示五重妄想三總結妄想所成辛初分三壬初推原生起元虛二判決倒計非是三結歸故說妄想</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">佛告阿難：精真妙明，本覺圓淨，非留死生，及諸塵垢，乃至虛空，皆因妄想，之所生起。斯元本覺，妙明真精，妄以發生，諸器世間，如演若多，迷頭認</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總明五陰，皆以妄想為本。佛告阿難：我說五陰，皆是妄想，以為其本者，豈無故哉？夫精真妙明，本覺圓淨者：謂純一無雜，至真無妄，此指純真之心，體也。妙者寂義，明是照義，此指寂照雙融，用也。名曰本覺者，揀非修成，特言圓淨者，即彌滿清淨，中不容他也。非留生死者：即無界內分段生死。及諸塵垢者：即無界外所證涅槃。如前云：想相為塵，識情為垢。二俱遠離，則汝法眼，應時清明。乃至虛空者：乃至超略，世界眾生，極於虛空。前云：漚滅空本無，況復諸三有，總之生死涅槃，及諸眾生世界，而至虛空，皆因妄想之所生起。蓋界內分段生死，即受、想、行三陰；界外變易涅槃，即是識陰；依正乃至虛空，即色陰也。但是本覺妙明心中，元無五陰，如《心經》云；空中無色，無受、想、行、識，真空實相中本無也。影。此喻妄生非實。斯即指五陰，皆是妄想所生。元是本覺，即指本有覺性。妙明精真，即指一真法界，意顯體用互融耳。既元是一真，何有五陰？蓋以一念妄動，而成業識；依動故能見，發生見分；依能見故境界妄現，發生相分；既有見相二分，遂發生有情世間，及器界世間。如是空見不分，色陰與劫濁並起。性搏四大，受陰與見濁並起。根塵相織，想陰與煩惱濁並起。知見欲留，業運常遷，行陰與生濁並起。性中相知，用中相背，識陰與命濁並起。總以不了惟心，用諸妄想，展轉妄成五陰。故曰如演達多，迷頭認影。以演若迷頭，喻眾生不了惟心；認影狂走，喻眾生用諸妄想；究竟真本有，而妄本空。由眾生不知真本有，而妄迷如失，如演若頭本在，而妄驚其失也。不達妄本空，而誤迷為有，如演若影非實，而認為真也。意表五陰，從本虛妄不實矣。初推原生起元虛竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">判決倒計非是</span></li></ul></div>
+<div class="unit"><p class="jing">妄元無因，於妄想中，立因緣性，迷因緣者，稱為自然，彼虛空性，猶實幻生，因緣、自然，皆是眾生，妄心計度。阿難﹗知妄所起，說妄因緣。若妄元無，說妄因緣，元無所有。何況不知，推自然者﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>《正脈》云：此中所以必斥二計者：良以五陰，始從妄想而生，雖有恆無；終依倒計而住，雖無恆有；所謂「從畢竟無，成究竟有」。是故二計不亡，則五陰牢不可破矣。所以如來欲掘妄想之原，先斥所依之計也。妄元無因者：承上妄以發生而來，則本無所有，元無有因；如前云：若有所因，云何名妄？是知現前五陰，唯是妄想。以其展轉相因，遞相為種；內教學者，因立因緣，故云於妄想中，立因緣性，已是方便，非有實義，何況外道邪見，撥無因果；復迷因緣者，而稱五陰，為自然性也。其實因緣、自然，皆為戲論，故舉虛空之喻，以況顯之。彼虛空之性，雖似不動不壞，猶實幻妄所生。前云：迷妄有虛空，依空立世界是也。何況因緣、自然，二計皆是眾生妄心，顛倒分別，妄生計度，都無實義也。又阿難！汝果能知妄想有所起處，可說妄想以為因緣，此縱許也。若妄想元無起處可得，當體全空，則說妄想因緣者，元無所有矣，此即奪也。因緣，乃內教小乘，以為不了義而非真，何況外宗，並不知因緣，而謬推自然者，則愈妄之甚也。二判決倒計非是竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">結歸故說妄想</span></li></ul></div>
+<div class="unit"><p class="jing">是故如來，與汝發明，五陰本因，同是妄想。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是因緣、自然，二計俱非之故，如來與汝發明，五陰五重蓋覆，根本生因，雖有堅固、虛明等，五種差別，同是妄想，更無他物也。斯正如來，欲令眾生，了妄無因，知真有本也。蓋佛自第一卷，普判眾生誤認文云：一切眾生，從無始來，皆由不知，常住真心，性淨明體(此真迷也)，用諸妄想(此妄認也)；此想不真，故有輪轉。遂將妄想二字，重重開示，至此五陰，說出五種妄想，以為其本，分作五重，一一詳示，乃見為人一片婆心，成始成終之至意也。亦見本經，十卷文字，起結脈絡，勢若迴龍，首尾相顧也。初標說妄想之由竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛二</span><span class="ke-t">詳示五重妄想</span><span class="ke-div">分5</span><ul><li><span class="ke-mk">壬初</span><span class="ke-t">色陰妄想至五識陰妄想壬初分三癸初示體因想</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">汝體先因，父母想生，汝心非想，則不能來，想中傳命。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此別示五重妄想，先明色陰妄想，五根六塵，皆為色陰，今特顯其與妄想相應者，且就內身五根而言。我雖然為汝發明，五陰本因，汝猶不知，色陰為堅固妄想。故云，汝之形體，有質礙可見者，先因父母，俱動愛欲妄想而生。愛欲妄想動，而後有赤白二渧，若汝中陰心中，非有憎愛之想，自不能攬為自體。前云流愛為種，納想成胎，務必父母與己，三想感應和合，而來想中，傳續命根也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">引喻詳釋</span></li></ul></div>
+<div class="unit"><p class="jing">如我先言：心想醋味，口中涎生﹔心想登高，足心酸起﹔懸崖不有，醋物未來，汝體必非，虛妄通倫，口水如何，因談醋出﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此引喻顯妄。如我先於想陰文中，曾言二喻，今復引之也。心想醋味，口中涎生；心想登高，足心酸起；然懸崖不有，醋物未來。但憑虛想，而口水足酸，虛妄而應。而汝現前身體，必非與虛妄，通為一類者，口水如何因談醋出？足酸如何因思崖生？此句影略也。是知口水足酸，既然由想而生，汝體虛妄，亦應同於口水足酸也。現前色陰既爾，而前之根本色陰，例此可知。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">結名妄想</span></li></ul></div>
+<div class="unit"><p class="jing">是故當知，汝現色身，名為堅固，第一妄想。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>是故者：是汝體口水，虛妄通倫之故。應當得知，汝現在色身之體，名為堅固，第一妄想：謂取著有力，堅固而不可解也。如父母交遘，欲愛妄想，與自己投胎，流愛妄想，其堅固有力，自不待言矣！《正脈》問：內根固然，若兼外器，何關妄想？答：如前世界相續中，言堅明立礙，及堅覺寶成等，亦堅固妄想也。初色陰妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬二</span><span class="ke-t">受陰妄想</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">轉想成受</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">即此所說，臨高想心，能令汝形，真受酸澀。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明受陰，即虛明妄想也。即此色陰中所說前喻，臨高虛想之心，以發起受陰者。想以取像為義，受以領納為義，前色陰即五根，此受陰即五識，而想陰即第六意識。臨高想心，即六識，曾經懸崖險處，落卸影子，在想心中。今聞懸崖，則起臨高虛想之心，能令汝之形體，真受酸澀。受酸澀處，即受陰，於三受中，是苦受，所謂轉想成受也。懸崖不有，想雖無實，而酸澀忽形，受乃是真；如是諸受，皆可例知其妄也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">推廣結名</span></li></ul></div>
+<div class="unit"><p class="jing">由因受生，能動色體，汝今現前，順益違損，二現驅馳，名為虛明，第二妄想。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>由想心為因，所以受陰生起，能動色陰之形體，真受酸澀之妄境。此由因受生句，合臨高想心；能動色體之句，合能令汝形，真受酸澀。汝今現前，正示受陰也。所謂順之則益，即樂受；違之則損，即苦受。二現驅馳者：即苦樂二者，現在能驅役自心，馳流不息。文中不言不苦不樂受者，因捨受不顯，苦樂二受，現前分別，容易明白也。溫陵曰：臨高空想，而酸澀真發，違順皆妄，而損益現馳，則受陰無體，虛有所明，故名為虛明，第二妄想。二受陰妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬三</span><span class="ke-t">想陰妄想</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">身念相應</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">由汝念慮，使汝色身，身非念倫，汝身何因，隨念所使，種種取像，心生形取，與念相應。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明想陰，即融通妄想，全以想陰之虛，能使色身之實，虛實相應，以見想陰之妄也。由汝念慮者：念慮，即想陰也，亦即前所謂，浮想是也。謂由於汝之第六意識，想念與思慮，所以能使役汝之現前色身。而身是色法，念是心法，色法本非心法同一倫類；既非念類，不應隨念，故難以汝身之色法，何因緣故，隨心法之念所使耶？即今現前，根塵相對，種種取像，想陰以取像為義，然皆因想念心生，而後諸根之形方取；則知根身，所取之像，必定與想念而相應也。此約體通五識，故能令色身，時時與念慮相應；前難云：隨念所使者此也。《寶鏡疏》取喻如歌舞工伎之人，隨他拍轉，拍緩則步緩，拍急則步急，而身與念，亦若是矣。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">推廣結名</span></li></ul></div>
+<div class="unit"><p class="jing">寤即想心，寐為諸夢，則汝想念，搖動妄情，名為融通，第三妄</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>想。寤即想心，寐為諸夢者：寤即醒也，寐即睡也。醒時即是想心，乃通於散位獨頭；睡時即為亂夢，又通於夢中獨頭。不言定中獨頭者，以此經三摩，非思惟影像之定，獨頭不起現行故。則汝身汝想，無時無處，而不相應；良由汝之想念不息，以故搖動妄情，或寤或寐，紛燃無間也。則知想陰，與前五根，並五識，互融互通，為第三妄想。不惟互融色身，隨念所使，而且互通夢寐，搖動妄情。則知此陰，雙融色心兩處，俱通寤寐兩境，故名融通妄想也。三想陰妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬四</span><span class="ke-t">行陰妄想</span><span class="ke-div">分2</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">體遷不覺</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">化理不住，運運密移，甲長髮生，氣銷容皺，日夜相代，曾無覺阿難﹗此若非汝，云何體遷，如必是真，汝何無覺﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>悟。此明行陰，即幽隱妄想也。化理不住者：指行陰為變化之理體，有遷流之事用，體屬生滅，故云不住。運運密移者：謂念念遷變，秘密推移，表其幽深隱微之動相。《莊子》喻以夜壑負舟，正此密移之意；但彼謂造化，此言行陰也。此下乃釋密移之事，能遷實體。意謂行陰，生、住、異、滅，四相遷流，念念不停，能遷實體；如初生之時，甲漸漸長，及其壯也，髮漸漸生，逮乎垂老之年，氣漸漸銷，容漸漸皺，其誰使之耶？殆行陰為之。日夜相代，曾無覺悟者：此皆日夜生、住、異、滅，無有少停，互相更代，從古及今，曾無一人，能覺悟也。波斯匿王云：變化密移，我誠不覺者此也。此雙詰是非，顯體虛妄。故呼阿難，此遷流之行陰，若果非汝心者，云何能遷變汝之實體耶？以見不非汝也。如必此遷流之行陰，是真汝心者，汝何不念念覺知耶？以見不即汝也。是汝非汝，兩不可定，足知虛妄非真矣！初體遷不覺竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">結名妄想</span></li></ul></div>
+<div class="unit"><p class="jing">則汝諸行，念念不停，名為幽隱，第四妄想。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>幽隱者：幽深隱微。則汝諸行：指現在行陰，念念遷流，不得停住。《仁王般若經》云：一念之中，有九十剎那，一剎那中，有九百生滅，其幽隱難知，是非莫辨，徹體虛妄，故以妄想名之。又以密移不覺故，冠幽隱之號。《正脈》云：大抵受、想、行之三陰，雖皆屬心，而文中皆顯與色身通貫；受則能令色身領境，想則能驅使於身，行則能遷變乎體。又雖說三陰通貫色身，而實要顯身為念倫，非真實有也。四行陰妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">壬五</span><span class="ke-t">識陰妄想</span><span class="ke-div">分4</span><ul><li><span class="ke-mk">癸初</span><span class="ke-t">縱奪真妄</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">又汝精明，湛不搖處，名恆常者，於身不出，見、聞、覺、知，若實精真，不容習妄。何因汝等，曾於昔年，覩一奇物，經歷年歲，憶忘俱無﹖於後忽然，覆覩前異，記憶宛然，曾不遺失，則此精了，湛不搖中，念念受熏，有何籌算﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此明識陰，即微細精想也。純一無雜，橫豎洞照，曰精明，所謂似一也。浮想已盡，遷擾俱停，曰湛不搖處，所謂似常也。即此似一似常，元是根本識陰，體通如來藏性，眾生迷位之中，離此無別真體可得，第一卷云：識精元明是也。若以此精明不搖之識，為恆常不變之性者，於身不出見、聞、覺、知，所謂元依一精明，分成六和合也。此固以根本難知，指出現前六用，令凡小之人，知現前見、耳、覺、知，與識精同體故。若實精一無雜，真實無妄者，自不容習種之妄染；譬如真金，不應混雜泥沙也。何因反難之詞。既云若實精真，不容習妄，下正明習妄之事，故反難云：何因緣之故，汝等曾於疇昔之年，覩一奇異之物，既見奇物，必先留心，經歷年深歲久，初時猶憶，久則斯忘，久之又久，則憶忘俱無。於後忽然，覆覩前異者：於後來忽然之間，覆覩從前奇異之物，而記憶宛然如昔日。由前六熏習之力，熏成種子，在八識田中，曾不遺失，故以何因反難之。六識如聚斂之吏，七識似出納之官，八識猶庫藏之使，故知此論收執不忘，惟約第八也。理實此識，尚能憶持多劫，無量種習，次第成熟，豈止現生之覩物耶？則此下，顯妄非真，精了即精明也，亦即現前見、聞、覺、知，同一無分別性，名湛不搖中。念念受熏，有何籌算者：前念後念，受彼妄習所熏，無有停息，分劑頭數，無量無邊，有何可籌量計算也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸二</span><span class="ke-t">正申喻示</span></li></ul></div>
+<div class="unit"><p class="jing">阿難當知：此湛非真，如急流水，望如恬靜，流急不見，非是無流，若非想元，寧受妄習。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>阿難！應當了知，此八識，湛不搖者，熏之以真則真，熏之以妄則妄，亦非真常不可動搖之性也。但如急流水，《正脈》云：須取無波，平流之急水。望如恬（安也）靜者：以其無波之參差，無飛湍之上下也。次二句，明其正因流急，故不可見，非真無流也。嘗驗其流，拋一草葉，於其水面，草葉迅疾而去，方覺其流之最急，非無流也。若非想元者：謂此若非前四陰，妄想根元，寧受妄習所熏，此決言其猶有微細妄想故也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸三</span><span class="ke-t">的指滅時</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>非汝六根，互用開合，此之妄想，無時得滅。然此微細妄想，直待何時，方得銷滅？除非汝之六根，互用之時，根隔開合之際，此之妄想，亦無時而得滅也。但經用反言以顯，故云：若非根解入圓通，此妄終無滅時也。六根互用開合，正當寂滅現前時也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">癸四</span><span class="ke-t">推廣結名</span></li></ul></div>
+<div class="unit"><p class="jing">故汝現在，見、聞、覺、知，中串習幾，則湛了內，罔象虛無，第五</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>顛倒，微細精想。此承上文，未得六根互用，未盡想元，故汝現在，見、聞、齅、嘗、覺、知六精之性，即第八識中，念念受熏，互相串穿。雖習氣幾微，令不散失，則湛然了知之內，即精明湛不搖中，一分無明為能串，而六根習幾為所串耳。故罔象虛無，若無不無，似有非有，凡夫計為命根，二乘認作涅槃，虛而作實，無而為有，是為顛倒，微細精想。謂迷真執似，迷真如藏性，執相似藏識，豈非顛倒乎？前四麤，顯此識微細，又此識雖非妙精明心，如第二月，故名精想，但多一揑而已，放手即是真月矣！二詳示五重妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">辛三</span><span class="ke-t">總結妄想所成</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗是五受陰，五妄想成。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總結五陰，即五種妄想所成也。此五種，即是眾生所受報法。受此五種，蓋覆真性，故名五受陰，又名五取蘊。一切眾生，莫不取此以為自體，故名此身為五蘊幻軀，又名五陰身也。由是而觀，五陰，雖淺深麤細之不同，而要之皆妄想所成，悉非真心本有也。《寶鏡疏》云：良以眾生，自迷如來藏性，而有妄色妄心，依此色心，而成五陰，故有世間凡、聖差別也。若以眾生知見，執此五陰，為實有者，即世間法。若以二乘知見，執此五陰，為空寂者，即出世法。若在諸佛菩薩，善得中道，了色即空，達空即色，即為出世上上法，乃第一義諦，不思議境界也。設若離此五陰之法，則五乘聖教，亦無安立之處也。以故，迷之則凡，悟之則聖，皆不出此。凡修定者，苟能於是，用金剛觀智，蕩滌空有情計，掃除斷常知見，了一真之本具，達諸妄以本空，則其五陰妄想之心，當體清淨，即是本如來藏，妙真如性矣！初答生起妄想竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">庚二</span><span class="ke-t">答陰界淺深</span></li></ul></div>
+<div class="unit"><details class="ann" open><summary>圓瑛《講義》消文</summary><div>汝今欲知，因界淺深：惟色與空，是色邊際。惟觸及離，是受邊際。惟記與忘，是想邊際。惟滅與生﹔是行邊際。湛入合湛，歸識邊際。阿難前第三問，如是五重，詣何為界？佛今於第二超答云：汝現今欲知，因界淺深者，此一科之文，披閱諸家疏釋，惟交光法師，研究有得於心，詳釋邊際之淺深，超千估而獨最，故悉依之。交光法師云：今考古訓，十八界，乃云界者因義；謂出生諸法，如地生物，而地為物因也。今五陰即界之開合，故名因界，但是陰之別名而已。淺深，即是邊際之淺深，歷五陰而各有也。如色陰中，有相為色，無相為空，若離諸色相，而棲心空淨；祖家，謂之一色邊，唯識，謂為空一顯色，是知盡色，而不盡空；皆未出乎色陰邊際，而一切空忍，皆非究竟也。受陰中，取著曰觸，厭捨曰離，斷諸取著，而不忘厭捨，是猶住捨受之中。故佛於離幻之後，復教離離，是知盡觸，而不盡離；亦未出乎受陰邊際，而一切背捨，皆非究竟也。想陰中，有念為記，無念為忘，除諸念而不忘無念，是仍住於靜念之中。故佛言：有念無念，同歸迷悶。祖云：莫謂無心便是道，無心猶隔一重關。是知盡記，而不盡忘，亦未出乎想陰邊際，而一切無想，皆非究竟也。行陰中，以迷位，散心麤行為生相，如二卷喻如瀑流者是也。以修位，定心細行為滅相，如此卷喻如野馬者是也。然此細行，似滅非滅，仍是清擾細遷，如定中人，不免爪生髮長，足以驗之。是知盡生，而不盡滅，亦未出乎行陰邊際，而一切滅定，皆非究竟也。識陰中，以有入為湛入，蓋泯行流，而滅歸識海。經云：性入元澄，一澄元習，如波瀾滅，化為澄水是也。以無入為合湛，經云：內外湛明，入無所入是也。蓋合字有不動之意，即流急不見其流也。然此合湛境界，分劑非淺，良以始言湛入，特表行陰方消，識海初入；按位已當七信，齊於四果。而圓通正在聞所聞盡，終言合湛，更名識海久停，湛明淨極，雖視湛入有加，居然仍在識境，咸不免於最細四相所遷，是知盡湛入，而不盡合湛，終未出乎識陰邊際；所謂清光照眼，猶似迷家，而一切明白法身，猶未究竟也。問：識陰盡時，畢竟何位？答：入初住，證圓通也。經云：非汝六根，互用開合，此之妄想，無時得滅；是其明徵也。問：此之識陰，既惟第八，即是業識，而別經論，皆謂無明生相，等覺後心方盡，今言初住即盡，而後位依何住持耶？答：彼是漸教所談，初住等覺，尚隔天淵，豈遽說盡？此是圓頓之旨，經文從互用中，頓超諸位，能入金剛乾慧，非等覺後心而何？應知勝義中，真勝義性，大不思議，不應以漸而難圓也。然以此總較，因界之淺深者，若但知色為色，而不知空亦是色者，知色界之淺者也；知空色之皆色者，知色界之深者也。如是乃至但知湛入為識，而不知合湛亦識者，知識界之淺者也；知湛入合湛皆識者，知識界之深者也。是則發揮五重妄想，可謂極盡其境界矣！</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">庚三</span><span class="ke-t">答滅除頓漸</span></li></ul></div>
+<div class="unit"><p class="jing">此五陰元，重疊生起，生因識有，滅從色除。理則頓悟，乘悟併銷﹔事非頓除，因次第盡。我已示汝，劫波巾結，何所不明，再此詢問﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>阿難前第二問云：又此五陰，為併銷除，為次第盡？故如來在此第三，而追答之。此五陰生滅次第，即六根結解次第，故先明五陰，生起滅除，二重次第。此五陰元，是從細向麤，一重疊一重，次第生起也。生則從細向麤，因迷藏性，以為識性，故曰生因識有。由識而行，由行而想，由想而受，由受而色；如人著衣，必自內向外，而漸著故。滅則從麤向細﹒須從色陰先除。則受、想、行、識，次第漸除；如人脫衣，必自外向內，而漸脫也。此單陳滅除次第，而仍兼始悟則無次第，而終修須次第也。蓋此五陰，以理推究，如前所云：五陰本因，同是妄想。既唯妄想，妄性本空，一念頓悟，乘此心開，則五重妄想，如紅爐點雪，一併銷除，有何淺深次第之可得耶？《正脈》舉喻，夜暗驚杌為鬼，奔馳荒越，一被他人說破，鬼想全銷。若就事相而論，事，謂修斷之事，色心諸法，非能頓除，務必自淺而深，因五陰之次第而漸除以盡也。《正脈》云：鬼想雖已全銷，而馳途豈能遽返，要須歷返前途，方歸舊處矣！總是頓悟，漸修之意而已。此乃斥問。取第五卷，綰巾以示倫次之文云。六結不同，一巾所造，令其雜亂，終不得成；是結解，定有倫次，故云：我已示汝，劫波巾結。前阿難亦云：是結本以次第綰生，今日當須次第而解。於彼既知，于此即應理會。故責云：何所不明，再此詢問。此處破陰之文，與解六結而入圓通比之，破五陰而登初住，法數五六參差，如何會合？答：初於聞中，入流亡所(解結動)，所入既寂，動靜二相，了然不生(解結靜)，初解動靜二結，破色陰。如是漸增，聞所聞盡，解根結，破受陰。盡聞不住，覺所覺空，解覺結破想陰。空覺極圓，空所空滅，解空結，破行陰。生滅既滅，寂滅現前，解滅結，破識陰。如是解結破陰，若合符節矣。《寶鏡疏》問：如何是頓悟漸除之義乎？答：如大海猛風頓息，是頓悟也；波浪漸停，是漸除也；如嬰兒諸根頓生，是頓悟也；力量漸備，是漸除也；如太陽頓出，是頓悟也；霜露漸消，是漸除也；如春筍頓長，即與母齊，是頓悟也；枝葉分敷，節節而上，是漸除也。若但頓悟，而不漸除，則有解無行，執理迷事；若但漸除，而不頓悟，則有行無解，執事迷理；均非正修真三摩地也。二具答三問竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">己三</span><span class="ke-t">結勸傳示</span></li></ul></div>
+<div class="unit"><p class="jing">汝應將此，妄想根元，心得開通，傳示將來，末法之中，諸修行者，令識虛妄，深厭自生，知有涅槃。不戀三界。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>此總結五陰，勸令傳示將來也。故囑云：汝應將此五陰妄想根本元由，一一研究，色陰堅固妄想，受陰虛明妄想，想陰融通妄想，行陰幽隱妄想，識陰微細精想。心得開通者：謂妄想之名，雖淺深次第有異，了達同一虛妄，更無根緒；此勸其自利不迷也。傳示將來下，勸其利他普益也。徧言末法之中者：以眾生根基淺薄，執心太重，五陰難除。諸修行者，若不思修行，則姑勿論耳。如要修行，則當令識五陰體性，虛妄根元，既是虛妄，五陰豈有真實，認妄為真，故有輪轉。深厭自生者：謂既達五陰全妄，其體本空，則深切厭離之志，自然發生矣！知有涅槃者：知本有不生不滅，真性全在，依此為本修因地心，然後圓成果地修證，不復更戀三界，有漏生死因果矣。戀字與厭字，敵體相反，既厭而豈戀哉？二因請重明五陰生滅竟。併上大科，談五魔令識，以護墮落竟。自阿難請談七趣以來，至此說法，更為一周，名為超有出魔周。《指掌疏》云：首楞嚴，翻為究竟堅固，以不動不壞為義。今經精研七趣，唯是自業所招；詳辨五魔，都緣邪思所致；重明五陰，總以妄想為根。自業所招，七趣成而密因壞；邪思所致，五魔起而了義亡；妄想為根，五陰覆而萬行頹。密因壞，則正信不堅；了義亡，則正解不固；萬行頹，則真修必墜；是始終不堅，而有壞也。今知自業所招，業不造，而七趣空；邪思所致，思無邪，而五魔遁；妄想為根，想離妄，而五陰銷。七趣空，則密因本具，而正信堅矣！五魔遁，則了義現前，而正解固矣！五陰銷，則萬行無滯，而真修成矣！真修既成，妙證必剋，據此則生信、發解、起行、證果，從始至終，究竟堅固，不動不壞；題中首楞嚴三字，義統乎此。自阿難請定以來，歷談至此，為正宗分竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">乙三</span><span class="ke-t">流通分</span><span class="ke-div">分5</span><ul><li class="ke-cur"><span class="ke-mk">丙初</span><span class="ke-t">較供佛之福</span><span class="ke-now">今</span></li><li><span class="ke-mk">二</span><span class="ke-t">答獲福之多</span></li><li><span class="ke-mk">三</span><span class="ke-t">歎滅惡之功</span></li><li><span class="ke-mk">四</span><span class="ke-t">舉兩利之勝</span></li><li><span class="ke-mk">五</span><span class="ke-t">結大眾法喜</span></li></ul></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗若復有人，徧滿十方，所有虛空，盈滿七寶，持以奉上微塵諸佛，承事供養，心無虛度，於意云何，是人以此施佛因緣，得福得福多不多耶？</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>多不﹖此明流通分。流者：流傳後世；通者：通達十方。經分三分，譬如一人：初序分如首，五官具存，觀之便知善惡，亦如經中序分，一觀便知，是大乘小乘。二正宗分如身，五臟全在，以為一身之要。三流通分如足，以便行走。經有流通分，能成法益，流傳無盡，通達無邊也。此以財施較定供佛之福。阿難！設若復有一人，徧滿十方虛空，則虛空無盡可知；如是虛空，盈滿七寶，則七寶無邊可知；以此滿空七寶，供養一佛二佛，則財施之勝，福田之廣可知；何況持以奉上微塵數諸佛，一一悉皆，欽承奉事。心無虛度者：即無有一佛，而空過者，則福田之廣，愈可知矣！又以滿空七寶供養，是廣大心；供養諸佛，是第一心；微塵諸佛，心無空過，是常時心；如是三心並發，在汝阿難之意，以為云何？是人以此施佛，殊勝因緣，</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丙二</span><span class="ke-t">答獲福之多</span></li></ul></div>
+<div class="unit"><p class="jing">阿難答言：虛空無盡，珍寶無邊，昔有眾生，施佛七錢，捨身猶獲，轉輪王位，況復現前，虛空既窮，佛土充徧。皆施珍寶，窮劫思議，尚不能及，是福云何，更有邊際﹖</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>阿難答言：虛空徧滿十方，故言無盡；珍寶盈滿虛空，故言無邊。昔有下，舉例較量，昔有眾生，施佛七錢，獲轉輪王位者：據達磨顯宗論云；無滅尊者（即那阿律）。昔於殊勝福田（諸為福殊田勝中福。田佛），因以七錢，施設食供，後異熟報，七返生於三十三天，七生人中，為轉輪王，最後生於大貴釋種，餘如《阿含》等經不錄。轉輪聖王，統領四大部洲所有國土，人中福報第一；七寶具足，千子圍繞。七寶者：金輪寶、馬寶、象寶、主兵臣寶、主藏臣寶、女寶、寶藏瓶。況復現前有人，虛空既窮，十方佛土，又充徧珍寶，持以奉上，微塵諸佛，縱使窮劫，以第六意識，思量擬議，尚不能及。如是福報，云何更有邊際。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丙三</span><span class="ke-t">歎滅惡之功</span></li></ul></div>
+<div class="unit"><p class="jing">佛告阿難：諸佛如來，語無虛妄。若復有人，身具四重，十波羅夷，瞬息即經此方他方，阿鼻地獄，乃至窮盡十方無間，靡不經能以一念，將此法門，於末劫中，開示未學，是人罪障，應念消滅，變其所受，地獄苦因，成安樂國。得福超越，前之施人，百倍千倍，千萬億倍，如是乃至，算數譬喻，所不能及。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>歷。欲顯滅惡之功，先示真實之語。因以下：弘經之時至少，而滅惡獲福甚多，恐難生信。故先舉諸佛如來，所有語言，無有虛而不實，妄而不真，汝當諦信也。若復有人，身具小乘，淫、殺、盜、妄，四根本重罪；十波羅夷：大乘十種重罪。波羅夷：義當極惡，亦譯名棄。謂若犯此罪之一者，即應墮獄，況復俱犯？即應速墮；故云瞬息即經此方他方，阿鼻地獄等。瞬息時之極短，猶言臨墮迅速也。先墮此方阿鼻地獄，具足一劫；更墮他方，阿鼻地獄，具足一劫，乃至展轉，窮盡十方無間。無間者：即阿鼻之華言也。靡(即也無)不經歷者：顯十方俱經，諸獄備歷也。此舉暫爾弘經，即指將要墮獄之人。能以一念者：謂能以一念，迴光返照，背塵合覺，頓悟圓通法門；深入一門，彼六知根，一時清淨。既頓悟已，又將此法門，於末劫中，開示未學，修禪那者，令其各得開悟，續佛慧命，紹隆佛種。然而弘經之功雖少，惟以一念，其所得之益甚多，不可為喻。是人罪障，應念消滅者：是人罪障，即小乘四重、大乘十棄。應念者：應其弘經之一念，頓悟真如本有，妄想本空，則何罪不消，何障不滅？所謂千年暗室，一燈能破；又如一星之火，便可燎原，頓成灰燼。變其所受地獄苦因，成安樂國者：不惟只消罪障，且能變苦為樂，其故何也？以能將此法門，於末劫中，開示未學。此法門，即圓頓法門，圓彰法界，極顯一心，此一念心，即十方如來，成佛真體，故能變苦因成樂國，化魔界成佛界矣！此不僅離苦得樂，仍當得福無量，超越無比。前之施人者：即超越前以盈空珍寶，奉上塵數諸佛之人。超越百倍、千倍、千萬億倍，如是展轉乃至算數譬喻，所不能及倍。總之前人之福，任說無有邊際，回不能及於此福之少分耳。超越前人，略有三義：一、約佛，不以財施為重，惟以法施為重，以能一念，悟此圓頓法門故。二、約行，不以自行為要，惟以化他為要，以能於末劫中，開示未學故。三、約福，前是有漏之福，此是無漏之福，以能出離生死，永脫輪迴故。譬如摩尼一顆，勝似海寶千般，阿伽陀藥，壓倒醫方萬品，則超越前福，固其宜矣！三歎滅惡之功竟。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丙四</span><span class="ke-t">舉兩利之勝</span></li></ul></div>
+<div class="unit"><p class="jing">阿難﹗若有眾生，能誦此經，能持此咒，如我廣說，窮劫不盡，依我教言，如教行道，直成菩提，無復魔業。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>弘經利益，轉苦為樂，已如上說。今舉無惡，誦經持咒之人言之。能誦此經者：能誦持顯文，一心不亂，若文若義，了解分明。能持此咒者：能加持密咒，三業相應，有正有助，自能得益。如我廣說，窮劫不盡者：此誦持之福，如我以四無礙辯才，廣為宣說，窮劫說其所得之福，所受之報，尚不能盡。然而自利之行，尚且如此，何況更能利他乎？依我教言，如教行道者：如前文言，汝等必須，將如來語，於我滅後，傳示末法，徧令眾生，覺了斯義。此首二句，即依我教言。下於我滅後，宣傳開示，徧令末法，一切未學眾生，覺了如斯辨魔之義，此即如教而行利他之道。誦經持咒，既是顯密雙修，而自行化他，仍復自他兩利也。直成菩提，無復魔業者：況無上菩提，必須兩利圓滿，方克證入。從初發心住，一超直入，妙覺果海，圓滿菩提，於其中間，中中流入，更無魔業肆擾，諸委曲相。《指掌疏》云：此經顯密雙修，自他兩利，如風帆揚於順水，若獅絃奏於群音，自然直成菩提，無復魔業。此功德所以無盡，而稱讚所以靡窮也。</div></details></div>
+<div class="ke-tree-wrap"><ul class="ke-tree"><li><span class="ke-mk">丙五</span><span class="ke-t">結大眾法喜</span></li></ul></div>
+<div class="unit"><p class="jing">佛說此經已。比丘、比丘尼、優婆塞、優婆夷，一切世間，天人阿修歡喜，作禮而去。</p><details class="ann"><summary>圓瑛《講義》消文</summary><div>羅，及諸他方，菩薩二乘，聖仙童子，並初發心，大力鬼神，皆大佛說此經已者：自阿難請定之後，如來初示佛定總名，令知諸佛，修因剋果；次說奢摩他路，令悟密因，大開圓解；三說三摩修法，令依耳根，一門深入；四說禪那證位，令住圓定，疾趣菩提；正說妙定始終已竟。復詳初心緊要，初談七趣勸離，以警淹留；次辨五魔令識，以護墮落；三請重明五陰，生滅之相，正宗已竟。復說流通，較量持福，滅惡之功，兩利之勝，至此所應說者，皆已說竟。比丘、比丘尼、優婆塞、優婆夷，解見在前。序分，唯列比丘，餘三或是後來，今則俱列，以如來凡說法處，必有四眾，為內護故。一切世間，天、人、阿修羅、八部列三，餘亦應有；以如來說法處，必有八部，為外護故。序分不列，非所急也。及諸他方，菩薩、二乘者：他方菩薩，序分中，咨決先來眾，及音感後至眾。他方二乘，序分中，唯列辟支無學，並未列羅漢，或亦後來，故以俱列。聖仙童子者：內修聖道，外現仙身，不壞童真，故稱聖仙童子。或因聞法而來，或因護咒而至，故序分不列。並初發心，大力鬼神者：鬼神特加發心；大力者：表其立志護法，具大神力，可以降魔制外，而為外護之眾。皆大歡喜者：合會大眾，法喜充滿，既聞正宗，而獲本妙圓心；復聞流通，而知究竟弘益。依如來之密因，起了義之修證，發菩薩之萬行，一超直入，妙莊嚴海；自慶成佛有分，皆大歡喜也。作禮而去者：進而聞法於師，退而修法於己；作禮：表謝法之儀；而去：為自修之行。又去不徒去，要休去，歇去，冷湫湫地去，正所謂狂性自歇，歇即菩提，勝淨明心，本周法界，不從人得也。全部正文，講解已竟。首楞嚴經講義第二十四卷</div></details></div>
+</div>
+          <a class="backlink" href="/study-group/shurangama/">← 回楞嚴經總覽</a>
+        </section>
+      </main>
+    </div>
+  </div>
+<script>
+(function(){
+  var tools=document.querySelector('.sutra-tools');
+  if(!tools)return;
+  tools.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-act]');if(!b)return;
+    var open=b.getAttribute('data-act')==='open';
+    document.querySelectorAll('.sutra details.ann').forEach(function(d){d.open=open;});
+  });
+})();
+
+(function(){
+  var sec=document.getElementById('quiz');
+  if(!sec)return;
+  var scoreEl=sec.querySelector('[data-score]');
+  var msgEl=sec.querySelector('[data-msg]');
+  var scored=[].slice.call(sec.querySelectorAll('.quiz-q[data-answer]'));
+  var total=scored.length;
+  function tally(){
+    var correct=0, done=0;
+    scored.forEach(function(q){
+      if(q.classList.contains('answered')){ done++;
+        if(q.getAttribute('data-picked')===q.getAttribute('data-answer')) correct++; }
+    });
+    if(scoreEl) scoreEl.textContent=correct;
+    if(!msgEl)return;
+    if(done===0){ msgEl.textContent='作答後即時計分'; return; }
+    if(done<total){ msgEl.textContent='已完成 '+done+' / '+total+' 題'; return; }
+    var pct=correct/total;
+    msgEl.textContent='全部完成：'+(
+      pct===1   ? '滿分！卷一重點已牢牢掌握 🎉' :
+      pct>=0.75 ? '大致掌握，回頭複習答錯處即可' :
+      pct>=0.5  ? '基礎已有，建議重讀導讀再作答' :
+                  '別氣餒，回到上面導讀重讀一遍再來');
+  }
+  sec.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt'); if(!btn)return;
+    var q=btn.closest('.quiz-q'); if(!q||q.classList.contains('answered'))return;
+    var ans=q.getAttribute('data-answer');
+    q.setAttribute('data-picked',btn.getAttribute('data-i'));
+    q.classList.add('answered');
+    [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+      o.disabled=true;
+      if(o.getAttribute('data-i')===ans) o.classList.add('correct');
+      else if(o===btn) o.classList.add('wrong');
+    });
+    tally();
+  });
+  var reset=sec.querySelector('.quiz-reset');
+  if(reset) reset.addEventListener('click',function(){
+    scored.forEach(function(q){
+      q.classList.remove('answered'); q.removeAttribute('data-picked');
+      [].slice.call(q.querySelectorAll('.opt')).forEach(function(o){
+        o.disabled=false; o.classList.remove('correct','wrong');
+      });
+    });
+    tally();
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+</html>
