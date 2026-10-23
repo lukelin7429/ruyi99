@@ -274,6 +274,7 @@ HANDMADE_PAGES=[
     "/column/Lucien/life-in-breath/",
     "/column/Lucien/four-siddhantas/",
     "/column/Lucien/no-ledger/",
+    "/column/Lucien/digital-detox/",
     "/study-group/perfection-of-wisdom/life-topics/",
     "/column/Yi-cheng/iced-latte/",
     "/column/Yi-cheng/six-animals/",
