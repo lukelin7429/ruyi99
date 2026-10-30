@@ -324,6 +324,11 @@ HANDMADE_PAGES=[
     "/column/Da-Hui/making-time-count/",
     "/column/Da-Hui/four-hearts-of-dharma/",
     "/column/Da-Hui/life-and-faith/",
+    "/column/Da-Hui/renounce-suffering/",
+    "/column/Da-Hui/wisdom-and-health/",
+    "/column/Da-Hui/right-faith/",
+    "/column/Da-Hui/levels-of-life/",
+    "/column/Da-Hui/on-practice/",
     "/news/shuwen/",
     "/news/ulambana-2026/",
 ]
