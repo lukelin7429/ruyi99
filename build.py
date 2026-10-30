@@ -329,6 +329,7 @@ HANDMADE_PAGES=[
     "/column/Da-Hui/right-faith/",
     "/column/Da-Hui/levels-of-life/",
     "/column/Da-Hui/on-practice/",
+    "/column/Da-Hui/power-of-change/",
     "/news/shuwen/",
     "/news/ulambana-2026/",
 ]
