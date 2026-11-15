@@ -334,6 +334,7 @@ HANDMADE_PAGES=[
     "/column/Da-Hui/power-of-change/",
     "/news/shuwen/",
     "/news/ulambana-2026/",
+    "/news/buddhist-wedding-2026/",
 ]
 
 out2path={}
