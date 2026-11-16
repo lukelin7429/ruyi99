@@ -1,0 +1,28 @@
+{
+ "name": "無量壽經四十八品讀書會",
+ "short_name": "無量壽經",
+ "lang": "zh-Hant",
+ "start_url": "/study-group/wuliangshou/lessons/",
+ "scope": "/study-group/wuliangshou/lessons/",
+ "display": "browser",
+ "background_color": "#fbf9f5",
+ "theme_color": "#8c5a1e",
+ "icons": [
+  {
+   "src": "/study-group/wuliangshou/lessons/icons/wuliangshou-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/study-group/wuliangshou/lessons/icons/wuliangshou-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/study-group/wuliangshou/lessons/icons/wuliangshou-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

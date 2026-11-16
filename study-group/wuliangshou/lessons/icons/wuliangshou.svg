@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#8c5a1e"/>
+  <rect x="86" y="86" width="340" height="340" rx="18" fill="none" stroke="#f6e3bf" stroke-width="7"/>
+  <text x="256" y="318" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, Noto Sans CJK TC, Microsoft JhengHei, sans-serif" font-weight="600" font-size="200" fill="#fdf5e6">壽</text>
+  <text x="256" y="392" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, Noto Sans CJK TC, Microsoft JhengHei, sans-serif" font-weight="500" font-size="40" letter-spacing="6" fill="#f6e3bf">無量壽經</text>
+</svg>
