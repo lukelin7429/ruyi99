@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>應成派的難處</h3><p><span class="tag tag-lun">論文明說</span>「雖於名言亦破自性，故名言諸義極難安立」。</p><p><span class="tag tag-zhu">助讀</span>自續派以下，名言中都還留著一點自相可以撐住因果；應成派連這一點也不留，只靠「唯名言假立」安立一切。所以前面從第13天到今天，宗大師花這麼多篇幅講名言量、錯亂、三條件，就是為了這件事。</p><p>行品＝道次第中屬於方便、行持的部分（布施、持戒、業果等）；對「見」而說。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day21"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．論文說世間無始共許的義，若被正理所害，名言中也一定沒有。舉的是哪些例子？</legend><div class="qz-opts"><button type="button">A．外道所說的神我、大自在天，以及數論所立的自性</button><button type="button">B．鏡中的影像、空谷的回聲，以及陽燄所現的水</button><button type="button">C．無明增益的自性、薩迦耶見所執的我、執昨日山為今日山</button><button type="button">D．執五蘊為無常、苦、無我、不淨的四種心</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「雖是無始共許之義，若理所害則於名言亦定非有，如由無明於諸法上增益自性，及薩迦耶見執有自性我及我所，及執昨日山為今日山等」。〔0744a09〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．宗大師引《六十正理論釋》的四倒、四不倒，主要是要說明什麼？</legend><div class="qz-opts"><button type="button">A．凡是分別心所執取的境，在名言中都是顛倒的</button><button type="button">B．常等四倒只在勝義中是顛倒，在世俗中仍是無倒</button><button type="button">C．無常等四是世間普遍承許的，所以在名言中是有</button><button type="button">D．世間共不共許，不是判斷名言中倒或不倒的標準</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「常、恆等四，雖於世間共同稱許，然執是為彼雖於世俗亦說為倒，無常等四，雖於世間未徧稱許，然執是彼則不顛倒。」〔0744a15〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．執五蘊為無常的分別心，為什麼可以稱為「不倒」或「不錯亂」？</legend><div class="qz-opts"><button type="button">A．雖在現境上有所錯亂，但它所執取的境沒有量能違害</button><button type="button">B．它是世間普遍共許的看法，所以不被量所違害</button><button type="button">C．它是觀察自性的正理所成立，所以勝義中也有</button><button type="button">D．它的現境與執境都不錯亂，如實現見諸法無自性</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「雖於現境有所錯亂，然於執境無量能害，故名不倒或不錯亂。」〔0744a16〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．有人問：色等由無明立為世俗諦，正理破無明所執，豈不連色等也破了？宗大師怎麼回答？</legend><div class="qz-opts"><button type="button">A．無明只在凡夫位安立色等，聖者位另有安立</button><button type="button">B．無明安立的是「諦實」這層，色聲本身是無損六識所安立</button><button type="button">C．正理只破分別的無明，色、聲是俱生故不破</button><button type="button">D．色、聲在勝義中有自性，所以正理破不到它們</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「雖由無明立為諦實，然非由無明立色、聲等」，「其能安立色、聲等之心，謂無損害眼等六識」。〔0744b03〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．論文說「俱生心有二境」，意思是什麼？</legend><div class="qz-opts"><button type="button">A．俱生貪瞋所執正理能破，俱生無明所執則只能靠修止伏</button><button type="button">B．凡是俱生的都要破，連名言量所見的色、聲也一起破除</button><button type="button">C．俱生無明、貪瞋所執的，正理能破；名言量所立的色聲，正理不能破</button><button type="button">D．凡是俱生的都不必破，只有宗派分別所立的才要用正理破</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：煩惱「雖是無始俱生而轉，然彼行相正理能破」；「是故俱生心有二境，謂以正理能不能破」。〔0744b10〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0744b15〕「第三、觀察是否四句所生而為破除，顯不能破」讀起：破太過者的第三種問難——破了自、他、共、無因四句生，到底有沒有把「生」破掉？</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

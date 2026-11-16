@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>羊、馬、象的比喻</h3><p><span class="tag tag-lun">論文明說</span>「不可以觀察有無自性之理而為觀察，以未許彼義堪忍正理觀察故」。</p><p><span class="tag tag-zhu">助讀</span>這不是說不准對色、聲做空性觀察；而是說，不能以「正理找不到它」作為破除它的理由——就像有人說「這是羊」，你去查它是不是馬、是不是象，查不到馬也查不到象，跟「這是羊」毫不相干。以原文為準。</p><p><span class="tag tag-zhu">助讀</span>今天三條件的關鍵在此：實事師的徧計是在「觀察所得」的層次上立的，所以用正理檢驗；色、聲是在「無觀察識共許」的層次上立的，所以只要求正理無害。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day20"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．宗大師說，一法要在名言中許為有，須符合哪幾個條件？</legend><div class="qz-opts"><button type="button">A．世間多數人承認、經論中有記載、勝義中也能找到它</button><button type="button">B．名言識共許、其餘名言量不違害、觀察自性的正理也不違害</button><button type="button">C．名言識共許、有自相能起作用、觀察自性的正理能成立它</button><button type="button">D．名言識共許、名言量能成立、觀察自性的理智能尋獲它</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若有一於名言識是所共許，如所許義，餘名言量無能違害，及能如理觀察真實或有無自性，以此正理亦無違害，則於名言許彼為有」。〔0743b09〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．論文所說的「名言識」（又叫世許、無觀察識）是指什麼樣的識？</legend><div class="qz-opts"><button type="button">A．對任何事都完全不作觀察、心中一片空白的無分別識</button><button type="button">B．只有沒學過宗派、心未被宗派改變的世間常人才有的識</button><button type="button">C．隨所顯現而轉，不追問只是心中這樣現、還是境實際如此的識</button><button type="button">D．依世間多數人共同同意而安立、可以投票決定的見解</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：名言識「唯如所顯隨順而轉，不更觀察其所現義，為唯於心如是現耶、抑為彼義實如是耶」，且「非是一切全無觀察」。〔0743b11〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．把繩子執為蛇、把陽燄執為水，也是未觀實理的識所執取。為什麼在名言中仍是沒有？</legend><div class="qz-opts"><button type="button">A．名言中本來有，只是在勝義中被觀察自性的正理破除</button><button type="button">B．它們沒有自相、不能起作用，所以不算有</button><button type="button">C．名言識上從來不曾顯現，世間沒有任何人共許</button><button type="button">D．它所執取的義，能被其他名言量所違害</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「雖是未觀實理識所執取，然彼所取義，由名言量而能違害，故於名言亦無彼等。」走近一看就知道是繩。〔0743b19〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．「善惡感生苦樂」與「自在天、自性造生苦樂」，宗大師怎麼分辨兩者？</legend><div class="qz-opts"><button type="button">A．兩者都非正理所成，但正理不害前者、卻能違害後者</button><button type="button">B．前者是觀察自性的正理所成立的，後者則不是</button><button type="button">C．兩者都非正理所成，所以名言中是則俱是、非則俱非</button><button type="button">D．前者是世間普遍承許的，後者只有外道相信</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「二雖俱非觀察有無自性正理之所成立，然以正理違不違害，於一切種不相等故。」不可把理智無害與理智所成執為一事。〔0743b23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．為什麼實事師的無方分極微、神我等可用自性正理觀察而破，色、聲卻不可這樣觀察？</legend><div class="qz-opts"><button type="button">A．色、聲是現量所見，正理只能觀察比量所知的境</button><button type="button">B．前者是他們自稱經正理觀察而得的，色聲只依名言識共許而立</button><button type="button">C．前者是外道的邪見，色、聲則是佛陀親口宣說的法</button><button type="button">D．色、聲在勝義中有自性，前者連在名言中也沒有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文說實事師「自亦謂是由如是觀察正理，已得彼義而後安立」；色、聲則「唯於無內外亂緣所損名言諸識，如其共許而為安立」。〔0744a02〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0744a09〕「又於世間，雖是無始共許之義」讀起：世間無始以來共許的，若被正理所害，名言中也沒有——例如無明增益的自性、薩迦耶見執的我、「昨日山為今日山」。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

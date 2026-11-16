@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>芭蕉無心</h3><p><span class="tag tag-zhu">助讀</span>芭蕉一層層剝開，到最後沒有樹心——這和七相推求相應：一層層找，找不到一個實在的我或車，但芭蕉還是芭蕉。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day55"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．有人答：凡夫已現證影像無自性，只是少分法空，所以還不是聖者。宗大師為何不接受？</legend><div class="qz-opts"><button type="button">A．見一法的空性就是見一切法的空性，沒有證少分可說</button><button type="button">B．聖者的標準是斷煩惱，不在證空性的多或少</button><button type="button">C．影像本是虛妄之物，根本談不上證它無自性</button><button type="button">D．現證無自性必須在定中，看影像時並不在定中</button></div><p class="qz-why" hidden><b>答案：A</b>　《四百論》：「說見一法者，即見一切者，以一法空性，即一切空性。」論文說此舊答「不應理」。〔0764a21〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．已善言說的成年人看鏡中影像，依論文，他的心是怎樣的？</legend><div class="qz-opts"><button type="button">A．執影像就是真實的臉，所以和小孩的錯亂相同</button><button type="button">B．知道影像沒有真實的臉，卻仍執現似臉的影像有自性</button><button type="button">C．既不執影像也不執臉，因此已離開了諦實執</button><button type="button">D．知道影像沒有真實的臉，因此已通達影像無自性</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「雖知彼等實無本質，本質所空，然即執彼現似本質影像有性，是諦實執。」〔0764a23〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．了知影像空既然不是通達無性，影像為什麼仍能作無自性的譬喻？</legend><div class="qz-opts"><button type="button">A．影像依鏡與本質而生，能直接證明緣起有</button><button type="button">B．影像喻是佛在經中說過的，有經教作依據</button><button type="button">C．影像所現即彼性空，現臉而無臉，現量就能成立</button><button type="button">D．影像無自性這一點，凡夫用現量就能證到</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「謂隨所現即彼性空，故所顯現實無彼性，現量可成，即彼為喻」；在芽上以量成立這點，才是通達無性。〔0764b01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．夢醒後知道夢中所見都是虛妄的，依論文，這算通達了什麼？</legend><div class="qz-opts"><button type="button">A．已經通達法無我，因為夢中一切都是心所現</button><button type="button">B．已經通達補特伽羅無我，因為夢中無真實人</button><button type="button">C．已經通達夢無自性，只是還沒通達其他的法</button><button type="button">D．只知夢中男女為真實男女所空，不是通達夢無自性</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「然此皆是執其夢中所現男、女，為餘真實男、女所空，非是通達夢無自性，如同了解影像無質。」〔0764b06〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．對實事師以瓶等作為無性的譬喻，論文說這個喻取的是什麼？</legend><div class="qz-opts"><button type="button">A．也像影像一樣只取少分空，不是取瓶的無自性空</button><button type="button">B．取瓶的無自性空，因為實事師已承認瓶無自性</button><button type="button">C．取瓶的支分無自性，瓶本身在名言中有自性</button><button type="button">D．取瓶雖世間共許有，在勝義中仍有自性的部分</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「對實事師安立瓶等為無性喻，亦如影等取少分空，非取瓶等無自性空」。〔0764b03〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0764b21〕「第二、合由名差別成就義」讀起：依蘊立我為取者、蘊為所取；接著顯示由此也破我所，再把觀我的正理推到瓶、衣等一切法，讀完卷二十二。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

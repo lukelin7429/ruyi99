@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>共生不必另破</h3><p><span class="tag tag-lun">論文明說</span>「自生分以破自生正理而破，從他生分以破他生正理而破」。</p><p><span class="tag tag-zhu">助讀</span>共生只是自生加他生，兩部分各自已被破，合起來也不能成立——「從各各生未成故」。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day57"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．為什麼說破了自、他、共、無因四生，就遣除了其餘一切自性生？</legend><div class="qz-opts"><button type="button">A．因為佛在經中只說過這四種生，所以不必再考慮其他的生</button><button type="button">B．因為四生是當時各派的全部主張，歷史上沒有第五種說法</button><button type="button">C．四生由待不待因、因果一異、各別或共等兩關推出，窮盡一切</button><button type="button">D．因為四生同時包含勝義生與世俗生，二諦已全部涵蓋在內</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「待不待因兩關决斷，其待因中，因果二性一、異兩關，亦能决斷……唯破四生即遣餘邊，道理即爾。」〔0765b08〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．論文破「芽從自生」，理由是什麼？</legend><div class="qz-opts"><button type="button">A．芽要依水土等外緣才能長出，所以不可能只從自己生</button><button type="button">B．芽與種子形狀、顏色都不同，所以不可能是種子自己</button><button type="button">C．芽是剎那無常的法，自己不能同時成為自己的因</button><button type="button">D．芽若已由自體成立，再生就沒有意義，而且會生生不已</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若諸苗、芽從芽體生，生應無義，生是為得所生體故」；「其生又當無窮」。〔0765b11〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．破「從他生」時，論文說「當從火燄亦生黑暗」。這個難題的要點是什麼？</legend><div class="qz-opts"><button type="button">A．種、芽若自性相異，芽與種子的異，就和芽與火燄的異完全一樣</button><button type="button">B．經中說從四緣生是不了義，所以不能依此主張從他生</button><button type="button">C．芽與種子既然不同，就不能在同一時間裡同時存在</button><button type="button">D．世間所說「種子與芽不同」本身就錯，所以種子不能生芽</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若許種、芽有性，則諸稻芽與非自因火燄等事，由自性門性異之理，及與自因稻種子性性異之理，二種性異一切相同。」〔0765b17〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．對方答：種子與芽是同一相續，或現見生與不生有決定。論文說這為什麼救不了他生？</legend><div class="qz-opts"><button type="button">A．相續在名言中也不存在，所以任何說法都不能拿相續作為理由</button><button type="button">B．自性相異的他是一相續並不成立，而所說的異是境上自性，非名言所立</button><button type="button">C．同一相續的法之間本來沒有異，所以從他生的說法自己就不成立</button><button type="button">D．現見決定只是名言識所見，在勝義觀察時一律不許作為依據</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「以異性他是一相續，非是極成，與前等故」；「其異非由名言心立，現是觀察境上自性，云見决定如何應理。」〔0766a02〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．主張「共生」者說：瓶由泥成是自生，由陶師成是他生。論文怎麼破？</legend><div class="qz-opts"><button type="button">A．共生兼有自他兩邊的長處，必須另立新理才能破它</button><button type="button">B．共生其實就是無因生，所以要用破無因生的理來破</button><button type="button">C．自生的部分用破自生的理破，他生的部分用破他生的理破</button><button type="button">D．共生在名言中可以成立，只要在勝義上破除就夠了</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「以前正理即能破彼，謂自生分以破自生正理而破，從他生分以破他生正理而破。」〔0766a07〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0766a09〕「自然生者作是說云」讀起：破無因生，四生破完；接著宗大師說明為什麼「緣起」是成立無自性最好的理由——自性就是「自在」，而依仗因緣就不自在。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

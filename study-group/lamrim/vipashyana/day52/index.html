@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>根本在現量，所立不靠現量</h3><p>拆開看：①因（如「所作」）的成立，最後要落在現量→②由這個因推出的宗（如「無常」），是比量成立，不是現量成立。</p><p><span class="tag tag-zhu">助讀</span>對到這裡：「蘊之外見不到我」是名言識能確認的，但「補特伽羅無自性」是由此推出的，是理智所成立，不是名言識成立。所以不會有「名言識證得空性」的過失。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day52"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．若我與蘊自性是異，《中論》第十八品指出的過失是什麼？</legend><div class="qz-opts"><button type="button">A．我應與蘊同時生滅，不能離開蘊而另外存在</button><button type="button">B．我應不具蘊的生、住、滅相，如馬異於牛就不具牛相</button><button type="button">C．我只是蘊的另一個名稱，計執有我毫無義利</button><button type="button">D．蘊有五種而我與之各異，我也應當成為五個</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若我自性異蘊而有，應不具蘊生、住、滅相，如馬異牛不具牛相。」〔0762b10〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．佛護論師說，我若自性異蘊、不具生滅之相，會有什麼過失？</legend><div class="qz-opts"><button type="button">A．應是無常，剎那壞滅，前後的業果就不能相續</button><button type="button">B．應是無為，因此只能作為我執所緣的境而已</button><button type="button">C．應是常，常則無變、無所作為，流轉還滅都不能成立</button><button type="button">D．應如虛空花，連名言中的我也都無法安立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「我若不具生滅之相，即應是常，常則無變，全無作為，計執有我，毫無義利，流轉還滅皆不成故。」〔0762b13〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．外道所說離蘊而有的我，宗大師說它是怎麼來的？</legend><div class="qz-opts"><button type="button">A．是世間共許的我，只是外道給它加上常的性質</button><button type="button">B．是他們修定時現量見到的，只是錯認它是常住</button><button type="button">C．是他們意識正確見到的，只是名稱與佛教不同</button><button type="button">D．由邪宗的力量增益而來，不是他們名言識所見到的</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「由邪宗力妄興增益，非彼相續名言諸識見如是我。」〔0762b17〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．若沒有對一、異兩邊的過失引生清淨定解，就算自己決斷「補特伽羅無自性」，會怎樣？</legend><div class="qz-opts"><button type="button">A．那只是立了一個宗，終究得不到清淨的見</button><button type="button">B．那只是名言量，還須以勝義量再確認一次</button><button type="button">C．那仍然能斷除我執，只是斷得比較慢一些</button><button type="button">D．那已經是比量所得的正見，只是還不夠堅固</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若未於此一、異品過，引生清淨决定了解，縱自决斷補特伽羅皆無自性亦唯有宗，終不能得清淨見故。」〔0762b17〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．論文說能破能立的根本要至無損的名言識，又舉「現量能成立聲是所作」為喻。這要說明什麼？</legend><div class="qz-opts"><button type="button">A．名言識在觀察真實義時不許為量，不能作為過難</button><button type="button">B．根本雖要至現量，無自性等所立卻不是由現量成立</button><button type="button">C．名言識既是根本，無自性也就由名言識直接成立</button><button type="button">D．現量只能成立所作，所以中觀不許用現量作過難</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「然名言識亦無成立無性等過，猶如現量雖能成立聲是所作，然非現量成立無常」；「根本所立豈須由於現量而成？」〔0763a05〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0763a07〕「第三、由此亦能破諸餘品」讀起：既然一、異都破了，能依、所依、具有、合集、形狀這些說法也就站不住；接著進入「補特伽羅猶如幻化」。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

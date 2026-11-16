@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>佛護也分兩個層次</h3><p><span class="tag tag-lun">論文明說</span>「以世間世俗諦故，可說有瓶」｜「若時意依真實，爾時瓶、席唯是假名且不應理」。</p><p><span class="tag tag-zhu">助讀</span>開頭的偈子出自《中論》〈觀四諦品〉，佛護引來作綱領。</p><p><span class="tag tag-zhu">助讀</span>佛護是應成派的先驅。他說瓶、如來「不應理」，前面都限定了「意依真實」「意樂依於勝義」——這正是勝義簡別。所以應成派的祖師也加。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day31"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．破某法時，論文說哪一類可以直接說「無」，不需要加簡別？</legend><div class="qz-opts"><button type="button">A．石女兒、兔角等畢竟無，以及某時某處沒有的東西</button><button type="button">B．一切有為法，因為它們本來就是無常的</button><button type="button">C．中觀師在名言中自己也安立的瓶、衣等法</button><button type="button">D．名言量所見、世間共同承許的色、聲等法</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：石女兒、兔角等「諸畢竟無，直可云無，不須簡別」；依時處有無的，「若說彼時處無，亦不須簡別」。〔0750a04〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．破實事諸宗不共增益的東西（如自在天、無方分極微）時，為什麼不必新加「自性」簡別？</legend><div class="qz-opts"><button type="button">A．那些東西名言中是有的，加了簡別反而會誤破</button><button type="button">B．那些宗派本來就許它們經得起觀察、是自性有</button><button type="button">C．那些都是外道所立，中觀師根本不必去理會</button><button type="button">D．那些東西只在勝義中沒有，所以只加勝義簡別</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「雖就意樂有時須加，然實無須新加自性簡別，以彼諸宗已許彼義故。」〔0750a05〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．中觀師在名言中所立的法，若破時不加簡別，論文說會有什麼過失？</legend><div class="qz-opts"><button type="button">A．對方會聽不懂破的是什麼，所以要加簡別才能溝通</button><button type="button">B．只會破到勝義中的法，而破不到名言中的法</button><button type="button">C．能破的正理會同樣轉到自己所立的法上，只成似破</button><button type="button">D．名言中的法本來有自性，不加簡別就破不到它們</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若不簡別，則於能破之正理，過失同轉，唯成似破。」又說「若量無害而欲破彼，是為智者輕笑之處」。〔0750a07〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．論中常說「觀察非有」。依宗大師，這句話的意思是什麼？</legend><div class="qz-opts"><button type="button">A．這是自續派的說法，應成派並不這樣說</button><button type="button">B．只是暫時觀察不到，將來證悟後就能見到</button><button type="button">C．經過觀察後，名言中也沒有，就像兔角一樣</button><button type="button">D．與說「無有自性」同一宗要：若有自性，正理應能得到</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若有自性，須許觀察實性正理之所能得，由未得故，則無自性，當知與說無有自性，同一宗要。」〔0750a15〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．有人說在所破上加「勝義」簡別只是自續派的做法。宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．不對，《般若經》與龍猛、佛護的論都在所破上加勝義</button><button type="button">B．對，應成派破生時都直接說無生，從來不加簡別</button><button type="button">C．對，月稱所引加勝義簡別的經，都屬自續派的經</button><button type="button">D．不對，但只有《般若經》加過，龍猛的論都沒加</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「說於所破加勝義簡別，唯是中觀自續派者，極不應理。」並引《佛母》、《七十空性論》、《寶鬘論》、《佛護論》為證。〔0750a19〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0750b06〕「月稱論師說破實生，非破有生」讀起：月稱破的是實生而不是有生；應成與自續的分界，不在加不加勝義簡別，而在名言中破不破自性；接著講「勝義」的三種意思。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

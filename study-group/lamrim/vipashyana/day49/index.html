@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>五相</h3><p><span class="tag tag-zhu">助讀</span>這裡說「五相觀察」，應是《中論》觀如來品的五求（一、異、能依、所依、具），不含「聚」「形」兩相。以原文為準。</p></div><div class="lr-note"><h3>旋火輪</h3><p><span class="tag tag-zhu">助讀</span>火把快速旋轉，看起來像一個火輪；輪並無自性，但看得到。用來比喻無自性而可以顯現、可以得到。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day49"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．自部有人只許支聚、不許有支，只許有業、不許作者。宗大師怎麼評論這種說法？</legend><div class="qz-opts"><button type="button">A．這在勝義上是正確的，只是不合世間的說話習慣</button><button type="button">B．這合於應成派，因為有支、作者都是假立而沒有</button><button type="button">C．這是倒說世間世俗；世俗中支與有支都有，勝義中都無</button><button type="button">D．只許支聚是對的，但作者與受者在名言中應當承許</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「彼皆倒說世間世俗」；又說「如於世俗支等可有，有支亦有，作如是說不壞二諦」。〔0761a05〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．論文說，為什麼用七相來推察車有無自性「極為相稱」？</legend><div class="qz-opts"><button type="button">A．七相不須對所破加簡別，所以不落入斷見</button><button type="button">B．七相能同時破人我和法我，五求只破人我</button><button type="button">C．七相是佛親口所說，比五求更有經教依據</button><button type="button">D．只破一、異太略難以通達，廣推又太勞累</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「唯破一、異而破有性，此理太略，難以通達，廣則太勞，七相推察極為相稱。」〔0761a19〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．車喻的第二種功德是「易破斷見」。論文說它是怎麼做到的？</legend><div class="qz-opts"><button type="button">A．一開始就對所破加簡別，破自性而不壞名言中的能作所作</button><button type="button">B．只破有部所許的實有，不破經部所許的自相，所以不落斷</button><button type="button">C．先在名言中破除車，然後再到勝義中重新安立車的作用</button><button type="button">D．承許車在勝義中仍有作用，所以破車時不會落入斷見</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「從初破時即於所破簡別而破，由此門中雖破自性，不壞名言有能、所作。」〔0761a19〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．依論文，修觀行者用車喻推察的次第是什麼？</legend><div class="qz-opts"><button type="button">A．先修止得輕安，再於七相觀察，最後在名言上把車也遮止掉</button><button type="button">B．先知若有自性必不出七相，再逐一見其違害，然後對無性引定解</button><button type="button">C．先破除所遍的自性，再由此推出能遍的七相也都不能成立</button><button type="button">D．先在七相中找到車的自相，再分辨它屬於假有還是實有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若有自性，决定不出一、異等七相，次於彼等一一逐次顯其違害……由破能徧，所徧亦破。先知此已，次於無性多引定解。」〔0761a20〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．論文說修觀者最後會覺得「極為希有」。他是對什麼感到希有？</legend><div class="qz-opts"><button type="button">A．車在名言中沒有，卻能在勝義中起盛水載物的作用</button><button type="button">B．正理觀察終於找到車的真實自相，超越世間所見</button><button type="button">C．車沒有自性，卻依各自因緣而生，作用一點也不紊亂</button><button type="button">D．七相推求後車完全消失，連名言也一起遮止掉了</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此後觀見如是無性，然車名言不可遮止，便覺甚奇……以從各各因緣而生，無少紊亂，各各自性亦非有故。」〔0761a22〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第50天）從〔0761b03〕「第二、合義」讀起：把車喻合到我上，先破「我與蘊自性是一」——佛護說的三個過失，以及我若剎那生滅會有的問題。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

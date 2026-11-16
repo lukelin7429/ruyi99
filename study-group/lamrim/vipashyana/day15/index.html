@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>各宗的共同底線</h3><p><span class="tag tag-lun">論文明說</span>「許勝義理破世俗義，我敢斷言定無一人。」</p><p><span class="tag tag-zhu">助讀</span>有部、經部、唯識、中觀各宗的二諦內容差很多，彼此也互相指出對方的二諦有矛盾；但沒有一宗會自己承認「我的勝義理破我的世俗」。破太過者的主張，連這條共同底線都越過了。</p><p><span class="tag tag-zhu">助讀</span>「堪不堪忍正理觀察」這一種問難到這裡結束；明天讀第二種：觀察是否由量成立。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day15"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．有人說「名言中不破色等」，意思是牧童等世人不破，觀察實性的正理則能破。宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．不對：若觀察實性的正理真能破，名言中也就必須跟著破</button><button type="button">B．正確：牧童不懂宗派，只有正理觀察的判斷才算數</button><button type="button">C．正確：世人未經觀察所以不破，經正理觀察後才破除</button><button type="button">D．不對：因為世人其實也能用正理破除色等諸法</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「極不應理」；「若觀實性正理能破，須於名言而破除故」。〔0740b09〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．月稱為什麼用「如幻」而不用「如石女兒」來比喻有為法？</legend><div class="qz-opts"><button type="button">A．因為如幻表示諸法全無，石女兒則表示諸法實有</button><button type="button">B．為了不破一切生：幻化有作用而無實，石女兒連作用也沒有</button><button type="button">C．因為石女兒在名言中有，幻化在名言中則完全沒有</button><button type="button">D．因為幻化比石女兒常見，用來比喻較容易讓人理解</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「恐犯斷無緣起之過，故不同彼，永離一切作用功能石女兒等之無生，當如幻等，破除實有或自性生。」〔0740b15〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．依《四百論釋》，正理觀察所破的是什麼？</legend><div class="qz-opts"><button type="button">A．破眼等的名言安立，只保留勝義的空性</button><button type="button">B．破眼等業異熟體，因為它們不堪正理觀察</button><button type="button">C．破有自性的諸法，不破眼等所作的緣起業異熟</button><button type="button">D．破一切生，凡是有生的法都在所破之內</button></div><p class="qz-why" hidden><b>答案：C</b>　《四百論釋》：「我等觀察唯為尋求自性故，我等於此破除有性諸法，非破眼等所作緣起業異熟體。」〔0740b17〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．對於眼等業異熟，論文說中觀師應採什麼態度？</legend><div class="qz-opts"><button type="button">A．存而不論，既不承許也不否定業果的存在</button><button type="button">B．以正理觀察後破除，只是暫時隨順世人承許</button><button type="button">C．勝義中承許業果實有，名言中則不加承許</button><button type="button">D．不但不破，還必須承許為不可思議的業異熟</button></div><p class="qz-why" hidden><b>答案：D</b>　論文說「非但不破如斯業果，說中觀師定須受許」，引文：「應當受許不可思議諸業異熟」。〔0740b22〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．若以抉擇勝義的正理去破自己建立的世俗，宗大師說會怎樣？</legend><div class="qz-opts"><button type="button">A．二諦建立自內相違，不能稱為善立二諦的智者</button><button type="button">B．這只是自續派才有的過失，應成派不會有這問題</button><button type="button">C．這樣反而更能顯示勝義諦比世俗諦殊勝</button><button type="button">D．這正是應成派的特色，勝義理可以破一切世俗</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若以决擇勝義之理，妨害自所建立世俗，建立二諦自內相違，豈可稱為安立二諦殊勝智者。」〔0740b24〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0741a09〕「第二、觀察由量成不成立而為破除」讀起：中觀師許色等由量成立，那麼論中「世間皆非量」又怎麼講？</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

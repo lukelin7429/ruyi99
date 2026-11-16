@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -186,6 +201,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>唯於無性彼等乃成</h3><p><span class="tag tag-lun">論文明說</span>「於有自性不可成立，唯於無性彼等乃成。」</p><p><span class="tag tag-zhu">助讀</span>這與第7天「若誰可有空，於彼一切成」、第8天「若待因緣，定無自性」是同一個意思：不只不相違，而且只有無自性，因果才可能。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day10"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．有人說「若無自性，餘更何有」。宗大師說他是沒有分清什麼？</legend><div class="qz-opts"><button type="button">A．沒分清應成與自續，把自續的所破當成應成的所破</button><button type="button">B．沒分清人無我與法無我，以為破人我就破了法我</button><button type="button">C．沒分清了義與不了義，把方便說當成了究竟說</button><button type="button">D．沒分清苗無自性與苗全無，也沒分清苗有自性與苗有</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「顯然未分苗無自性與苗全無二者差別，亦未能分苗有自性與苗、芽有。」〔0737b19〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．不分「有無自性與有無法」四者的人，怎樣會墮常邊？</legend><div class="qz-opts"><button type="button">A．以為有法必有自性，就不能把因果立為無性而現似有性的如幻</button><button type="button">B．以為無自性就等於全無，於是說因果都不存在，全無作用</button><button type="button">C．以為勝義中沒有自性，名言中也全無，所以一切都不成立</button><button type="button">D．以為因果只是心識所現，離開心識之外沒有任何外境</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若許有法，必許有性，則不能立因果如幻，實無自性，現似有性，故墮常邊。」〔0737b24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．依論文，怎樣才能同時遠離有邊與無邊？</legend><div class="qz-opts"><button type="button">A．說勝義中有、名言中無，就同時遠離有無二邊</button><button type="button">B．通達無塵許自性離有邊；苗等仍能作各自所作離無邊</button><button type="button">C．通達無自性離無邊；許苗等有自性離有邊</button><button type="button">D．說既非有也非無，不作任何承許就遠離二邊</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若達一切法，本無自性如微塵許，不墮有邊……有力能作各各所作，引决定智，遠離無邊。」〔0738a03〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．在「破因果」這件事上，哪一點是中觀師與實事師共同承許的？</legend><div class="qz-opts"><button type="button">A．名言中的因果需要有自性來支撐</button><button type="button">B．破除自性的正理，一定也會破除因果</button><button type="button">C．凡是破除因果的，就成為斷見之主</button><button type="button">D．因果唯有在無自性中才能成立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若破因果即成斷見之主，雖中觀師與實事師共同許可，然中觀師自不許為破除因果，而實事師覺破自性，亦定破因果。」〔0738a09〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．實事師說「若無自性，能作、所作不應理，過失仍在」。月稱怎麼回答？</legend><div class="qz-opts"><button type="button">A．無自性只是在勝義中說，名言中諸法仍有自性</button><button type="button">B．業果是唯識所現，所以無自性也能有作用</button><button type="button">C．能作所作本來不需成立，只是隨順世間這樣說</button><button type="button">D．有自性反而見不到作用，唯有無自性才見得到作用</button></div><p class="qz-why" hidden><b>答案：D</b>　《明顯句論》：「此過非有，唯有自性不見作用故，唯無自性見有作用故。」〔0738a04〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0738a18〕同一行「《四百論釋》云：「我非說無事」讀起：月稱說「我非說無事，是說緣起」——緣起如何同時遮除有事論與無事論，以及「非有非無」為什麼是亂說。</p>
@@ -212,6 +228,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>不了義的兩種情形</h3><p><span class="tag tag-lun">論文明說</span>(甲)「此義不可如言而取，須引餘義釋其密意」；(乙)「雖可如言而取，然彼非是究竟真實，除彼更須求彼真實」。</p><p>白話：(甲) 字面不能照取，要解出背後的密意；(乙) 字面可以照取、說的也是事實，但還不是最後的真相。</p><p><span class="tag tag-zhu">助讀</span>(乙) 是中觀與唯識判法分歧之處。唯識的判準是「能否如言而取」，所以字面可取的就算了義；宗大師把 (乙) 也列為不了義——例如講業果的經，字面完全正確，但講的是世俗，還要再追問它的真實（業果也無自性）。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day02"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．論文說什麼是「必不可少毘缽舍那正因資糧」？</legend><div class="qz-opts"><button type="button">A．專讀了義經的文字，不必依止釋論與智者的講解</button><button type="button">B．廣修福德、懺除罪障，正見自然會在心中顯現出來</button><button type="button">C．先成就奢摩他，於定中直接觀察諸法，不必先求正見</button><button type="button">D．親近智者、聽聞清淨經論，由聞思引發通達真實的正見</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「親近無倒了達佛語宗要智者，聽聞無垢清淨經論，由聞、思慧引發通達真實正見，是必不可少毘缽舍那正因資糧。」又說「若於實義無决定見，必不能生通達如所有性毘缽舍那」。〔0732b23〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．了義經與不了義經，宗大師說是依什麼來區分的？</legend><div class="qz-opts"><button type="button">A．就所詮安立：詮顯勝義是了義，詮顯世俗是不了義</button><button type="button">B．就聽者根器：為利根說是了義，為鈍根說是不了義</button><button type="button">C．就文字表面：字面可照取是了義，不可照取是不了義</button><button type="button">D．就說法時期：佛晚年說的是了義，早期說的是不了義</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此就所詮安立。詮顯勝義是名了義，詮顯世俗應知即為不了義經。」是看經講的內容，不是看聽眾或說法時間。〔0733a08〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．經中用種種名言宣說「有我、有情、作者、受者」，依《無盡慧經》應判為什麼？</legend><div class="qz-opts"><button type="button">A．了義經，因為名言中確實可以安立補特伽羅</button><button type="button">B．不了義經，因為是在無我之中顯似有我</button><button type="button">C．不了義經，因為這些名言在世俗中也不存在</button><button type="button">D．了義經，因為凡是佛親口所說的都如實無誤</button></div><p class="qz-why" hidden><b>答案：B</b>　經云：「宣說有我、有情、命者」等，「於無我中顯似有我，此等名為不了義經」。判為不了義是因為所詮是世俗，不是說名言中沒有補特伽羅。〔0733a13〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．了義又叫「義定了」，論文說理由是什麼？</legend><div class="qz-opts"><button type="button">A．所說的內容在世俗名言中都能完全照著字面成立</button><button type="button">B．文字淺顯明白，任何人一讀都能了解其中的意思</button><button type="button">C．所說是真實性義，抉擇已到究竟，不能再引向別的意思</button><button type="button">D．直接記載佛陀的話語，沒有經過後人轉述或增刪</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此義即是真實性義，過此已去不可引轉，所决擇事到究竟故。」並引《中觀光明論》說了義要「有正量，依於勝義增上而說」。〔0733a22〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．依論文，「不了義」包括哪兩種情形？</legend><div class="qz-opts"><button type="button">A．字面不可照取須另解密意，或為聲聞根器所說的戒律</button><button type="button">B．字面不可照取的經才算，字面可照取的一律都是了義</button><button type="button">C．宣說世俗諦的佛經，或論師自己所造而非佛說的論典</button><button type="button">D．字面不可照取須另解密意，或字面可取但仍非究竟真實</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若此義不可如言而取，須引餘義釋其密意，或雖可如言而取，然彼非是究竟真實，除彼更須求彼真實，故非了義或義未了。」〔0733b01〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0733b03〕同一行「有作是說」讀起：有人主張了義經必須字字照取，宗大師怎麼回答——「勝義簡別」一處加了，各處都要例加。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

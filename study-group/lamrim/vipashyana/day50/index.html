@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>常、斷兩邊</h3><p><span class="tag tag-lun">論文明說</span>「或是一性，爾時應常，或是異性，則成斷見」。</p><p><span class="tag tag-zhu">助讀</span>這把常、斷兩邊都歸到「我有自性」上：有自性，前後不是一（常）就是異（斷）。無自性，才能說前後不一不異、相續而有。這也是應成派說「依無自性破二邊」的一個具體例子。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day50"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．論文說「有對無對即一、多故」。這裡的「有對、無對」是指什麼？</legend><div class="qz-opts"><button type="button">A．指色法有質礙、心法無質礙的分別</button><button type="button">B．指心識有所緣境與無所緣境的分別</button><button type="button">C．指勝義有與世俗有兩種存在方式</button><button type="button">D．指一與多的分別：凡是一法，不是一就是多</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「總於一、異或於一、多，遣第三聚。有對無對即一、多故。」〔0761b06〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．為什麼觀察「我」有沒有自性，只要看它與蘊是一還是異？</legend><div class="qz-opts"><button type="button">A．一、多之外沒有第三聚，我若有自性必不出與蘊一或異</button><button type="button">B．因為七相中只有一、異兩相是佛護論師所說過的</button><button type="button">C．因為能依、所依、具等五相在「我」上都不適用</button><button type="button">D．因為車喻已經破了其餘五相，我上不必再破一次</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若能總於一、多决斷，別於自性若一若異，亦能决斷。如是若我或數取趣有自性者，亦不能出若一若異」。〔0761b07〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．許我與蘊自性是一的第一過「計我無義」，論文怎麼解釋？</legend><div class="qz-opts"><button type="button">A．我若是蘊，就不能作為設我名言之處</button><button type="button">B．我只成了蘊的另一個名稱，如同月與「有兔」</button><button type="button">C．蘊有生有滅，我也就應當隨蘊剎那生滅</button><button type="button">D．蘊有很多個，我也就應當成為很多個我</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若許我、蘊二性是一，妄計有我全無義利，以是蘊異名故，如月及有兔。」〔0761b10〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．佛說「爾時我是我乳大王」。依月稱所許，這句經主要表示什麼？</legend><div class="qz-opts"><button type="button">A．佛與我乳大王是同一人，所以我是常一不變</button><button type="button">B．佛以神通見到前世，並不是自己真的經歷過</button><button type="button">C．遮除是別的相續，不是說佛與我乳是同一個</button><button type="button">D．前後兩者自相各別，只是借用同一個稱呼</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「彼經唯是遮他相續，非顯是一」，並說「此即月稱論師所許」。執二者是一，是前際四惡見的第一見。〔0761b21〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．論文最後說，若我有實自性，前後諸人的關係會落入什麼過失？</legend><div class="qz-opts"><button type="button">A．前後無論一異，都仍可在名言中安立憶念</button><button type="button">B．前後若是一性落有部見，異性落經部見</button><button type="button">C．前後若是一性就成斷，若是異性就成常見</button><button type="button">D．前後若是一性就成常，若是異性就成斷見</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若我有性，前、後諸人或是一性，爾時應常，或是異性，則成斷見。故諸智者不當許我有實自性。」〔0762a02〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第51天）從〔0762a03〕「二過、作業失壞者」讀起：我若剎那自相生滅的另兩過——造業失壞、未作會遇；以及應成派自己怎麼說憶念宿命（鴿足與酪瓶）。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

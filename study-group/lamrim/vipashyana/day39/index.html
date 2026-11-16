@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>月稱說「此宗」「受許」</h3><p><span class="tag tag-lun">論文明說</span>「定當受許」「他亦應當受許此宗」——月稱不只自己許，還要別人也許「此宗」。</p><p><span class="tag tag-zhu">助讀</span>「唯有此緣」指緣起的定式「此有故彼有」：只許依緣，不許自性；「唯許依緣假立」，所以名言不墮斷滅。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day39"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．月稱以日影為喻，說明無自性的能立之因如何能成立所立。重點是什麼？</legend><div class="qz-opts"><button type="button">A．影像雖全無自性，依緣現前可得，確實能令人通達所要了解的事</button><button type="button">B．影像只在名言中無，在勝義中仍然有，所以能夠成立所立</button><button type="button">C．影像是由日輪與鏡會合而生的，所以能立之因也必須有自性</button><button type="button">D．影像本來就不存在，所以中觀師只破他宗，不用任何能立之因</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「於一切種雖全非有，然由色緣現前影像可得，决定能令達所樂義。」〔0754b22〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．許因果有自性者，以「會或不會」觀察來破因生果，這過失卻不轉到中觀師。宗大師說理由是什麼？</legend><div class="qz-opts"><button type="button">A．中觀師自己無宗，所以任何推察都無從加到他身上</button><button type="button">B．中觀師以自許無性為因而離此過，不是因為無宗而遠離</button><button type="button">C．中觀師承認因果有自相，但不承認會合的推察有效</button><button type="button">D．中觀師只在名言中說因果，勝義中不必回答這個問題</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「亦以自許無性為因而離其過，非謂無宗而能遠離。」〔0755a01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．《入中論釋》說過失會轉到他宗、不轉到自宗。宗大師歸納的理由是什麼？</legend><div class="qz-opts"><button type="button">A．他宗有所承許；中觀自宗在名言中也什麼都不許</button><button type="button">B．他宗只用現量；中觀自宗兼用現量與比量來觀察</button><button type="button">C．他宗許能生、所生有自相；中觀自宗許一切法如幻</button><button type="button">D．他宗許勝義有；中觀自宗許名言中有自相的成立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此說過失於他轉之理，謂許自相，自無過理，謂許如幻。」〔0755a06〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．月稱說如幻之法「無可思察」，原文怎麼說明？</legend><div class="qz-opts"><button type="button">A．因為它們全然沒有，所以連名言中也不能談論它</button><button type="button">B．因為它們是聖者定中所見，凡夫的分別無法觸及</button><button type="button">C．因為它們有自相，所以經得起任何正理的觀察</button><button type="button">D．雖然沒有自性，卻是分別之境，就像眩翳者見毛輪</button></div><p class="qz-why" hidden><b>答案：D</b>　《入中論釋》：「若如誰宗諸法如幻，徧計所生是無生性，雖無自性，是分別境，無可思察，如眩翳者見毛、輪等。」〔0755a04〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．了義經與中觀論中，凡說「此為如是、此非如是，此有、此無」，宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．這些都是造者自己所許，不需另外引用「許」字的教證</button><button type="button">B．這些都是隨順世間的說法，造者自宗其實並不承許</button><button type="button">C．這些必須另有「許」「受」等字樣，才算造者的宗</button><button type="button">D．這些只是破他宗時的應成語，不代表造者的主張</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此等皆是造者所許，無須特外引教成立。」〔0755a07〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0755a18〕「《入中論釋》云：「已說四宗」讀起：月稱自己說「四宗」，可見有自宗；接著破第四家，然後進入「安立自宗」——從《明顯句論》「聲是無常」的例子講起，什麼叫有法要兩家共許。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

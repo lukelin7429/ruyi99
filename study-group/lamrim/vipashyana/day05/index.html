@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -186,6 +201,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>破得不夠 → 常見；破太過 → 斷見</h3><p>量齊＝界限、分寸。</p><p><span class="tag tag-lun">論文明說</span>不從「究竟微細所破樞要」破除 → 有所剩餘 → 墮有邊、耽著實事 → 不能解脫三有。</p><p><span class="tag tag-lun">論文明說</span>不知「所破量齊」而破太過 → 失壞因果緣起次第 → 墮斷滅邊 → 引入惡趣。</p><p><span class="tag tag-zhu">助讀</span>這兩種錯誤就是接下來兩科的主題：「遮破太過」（破得太多）與「遮破太狹」（破得不夠）。後面宗大師會說，各派之間的分歧，很多就出在所破劃得粗細不同。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day05"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．《入中論釋》說，未通達蘊無自性就不能通達補特伽羅無我。理由是什麼？</legend><div class="qz-opts"><button type="button">A．補特伽羅就是五蘊本身，兩者完全是同一件事，所以要一起證</button><button type="button">B．通達人無我的慧與通達蘊無性的慧本來就是同一個慧</button><button type="button">C．補特伽羅是依諸蘊施設的，只要還執蘊有自性，就仍有我執</button><button type="button">D．蘊比補特伽羅粗顯，修行必須由粗到細，先觀蘊再觀我</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「亦不能達補特伽羅無我，以於諸蘊施設我事而緣執故。如云：『乃至有蘊執，爾時有我執。』」至於兩種慧是否同一，宗大師說「初問非許」。〔0734b13〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．正通達補特伽羅無自性的慧，與「諸蘊無自性」的關係，宗大師怎麼說？</legend><div class="qz-opts"><button type="button">A．它就是通達蘊無自性的慧，兩種無我是由同一個慧同時證得</button><button type="button">B．它與蘊無自性毫無關係，之後必須另外重新觀察才能通達</button><button type="button">C．它直接以諸蘊為所緣，同時執取蘊無自性與補特伽羅無我</button><button type="button">D．它不直接執蘊無自性，但不待餘緣能引生決定蘊無自性的定解</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「雖不即執蘊無自性，然即由此慧不待餘緣能引定智，决定諸蘊皆無自性，能斷蘊上增益自性諸增益執。」〔0734b18〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．論文舉「定知無石女兒」的例子，要說明什麼？</legend><div class="qz-opts"><button type="button">A．確定沒有真實的我，就能滅除執眼等真實有的增益執</button><button type="button">B．石女兒雖然沒有，他的耳朵等仍可在名言中加以安立</button><button type="button">C．通達無我之後，眼等諸根就會隨之消失而不再存在</button><button type="button">D．要先一一確定石女兒沒有耳朵，才能確定沒有石女兒</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「譬如定知無石女兒，雖不即由此慧執云無彼耳等，然能斷除計有耳等增益妄執。故若定知無真實我，則能滅除執彼眼等真實有故。」〔0734b22〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．實事師也說補特伽羅是假有，月稱為什麼說他們沒有通達補特伽羅無我？</legend><div class="qz-opts"><button type="button">A．他們其實許補特伽羅為勝義有，口頭說假有只是隨順世間說法</button><button type="button">B．他們的假有仍以實有的蘊為所依，與月稱所說的假有名同義異</button><button type="button">C．他們的假有與月稱完全相同，只是缺少止的力量而未能現證</button><button type="button">D．他們連名言中也不許有補特伽羅，因此墮入斷邊而非通達無我</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「二名雖同，其義各異」；「許其乃至未捨諸蘊實有之宗，亦執補特伽羅實有，彼宗諸師未能通達補特伽羅勝義無故」。〔0735a06〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．宗大師為什麼說「應善明所破為要」？</legend><div class="qz-opts"><button type="button">A．所破就是一切法，不需分辨，全部破除就是正見</button><button type="button">B．不認識所破也能修空，只是證悟的速度會比較慢一些</button><button type="button">C．所破沒破到最細會墮有邊，破得超過分寸會失壞因果墮斷邊</button><button type="button">D．所破只要大略認得即可，認得太細反而會讓人墮入斷見</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若不從究竟微細所破樞要而滅除者，有所餘存便墮有邊……若未了知所破量齊破太過者，失壞因果緣起次第，墮斷滅邊。」〔0735a15〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0735a20〕「遮遣餘派未明所破而妄破除」讀起：先看破得太過的一派——說正理連因果緣起都破掉了。</p>
@@ -212,6 +228,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>輪本身也是有支</h3><p><span class="tag tag-zhu">助讀</span>輪對車是支，對它自己的輻、輞來說又是有支。有支與支，是相對而立的，沒有哪一層是最後實有的支分。</p></div><div class="lr-note"><h3>燒車喻</h3><p><span class="tag tag-zhu">助讀</span>第4、5天讀過：燒車的時候，輪子等支分也一起燒毀。正理之火燒車的自性，也燒盡支分的自性。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day48"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．論文破「支聚的總形是車」時，指出實事師會被自己的哪一條原則所違？</legend><div class="qz-opts"><button type="button">A．形狀屬於色法，一定要在極微上才能夠成立</button><button type="button">B．一切假有所施設的事要實有，而支聚本身並非實有</button><button type="button">C．支聚與形狀是同一體性，不能分開各立為車</button><button type="button">D．車是實有的法，不能依假的形狀來安立為車</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「依支聚之形名車非理，聚非實故，依假支聚施設形狀不應理故，一切假有所施設事要實有故。」〔0760a23〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．應成派自宗對「假有的所依」是怎麼主張的？</legend><div class="qz-opts"><button type="button">A．假有所依在勝義中無，但在名言中須有自相才行</button><button type="button">B．假有所依就是車本身，所依與所立的車是同一個</button><button type="button">C．假有所依不必實有，依無實的聚立無實的形也合理</button><button type="button">D．假有所依必須是極微等實法，否則假有無處安立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「然於自宗假有所依不許實有」；「依無實聚，立無實形，無不應理」，因果也同樣是無實因生無實果。〔0760b01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．實事師難：七相求車不可得，世間說「車來」就不成立。論文說這過失為什麼只有實事師才有？</legend><div class="qz-opts"><button type="button">A．他們只承許勝義諦，不承許世俗諦，所以世間名言都無法安立</button><button type="button">B．他們以為名言識都有錯亂，所以世間名言不能作為依據</button><button type="button">C．他們認為車是支聚，支分一散開，世間說的車就消失了</button><button type="button">D．他們要以觀察自性的正理找到才安立為有，又不許別的安立方法</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「以汝安立諸法為有，要以正理尋求有無自性而後安立……汝又不許有餘方便安立事故，故車應無。」〔0760b11〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．七相求車不可得，為什麼不能因此破除車？依論文，車是由什麼成立的？</legend><div class="qz-opts"><button type="button">A．由捨去正理觀察、世間尋常無損的名言識所成立</button><button type="button">B．由勝義中雖無而名言中有自相，二者合起來成立</button><button type="button">C．由瑜伽師現量親見車的自相，然後才能安立為有</button><button type="button">D．由觀察有無自性的正理，在七相之一中找到而成立</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「以許有車，非由觀察有無自性正理所立，是捨正理觀察，唯以世間尋常無損諸名言識之所成立」。〔0760b16〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．有人想：車雖找不到，車的支分總該有自性。論文以「燒布灰中尋求縷線」要說明什麼？</legend><div class="qz-opts"><button type="button">A．支分比車更細，所以要先另外破支分才能破車</button><button type="button">B．有支既然沒有，支也就沒有；破車時支分也一起破了</button><button type="button">C．支分在名言中也找不到，所以世間說車輪也是錯</button><button type="button">D．支分是車的施設事，所以支分應當承許為實有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若時其車且非有，有支無故支亦無」；又說「慧火燒有支無支」。〔0760b19〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第49天）從〔0761a02〕「第三、由名差別皆得成立」讀起：車也可以叫「有支」「作者」「受者」；以及七相推求的三種功德。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

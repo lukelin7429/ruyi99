@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -172,6 +187,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>支那堪布</h3><p><span class="tag tag-zhu">助讀</span>支那堪布指唐代入藏的漢地禪僧摩訶衍。依藏地史傳，他主張一切分別（善的、惡的）都是繫縛，什麼都不思惟才能解脫，在桑耶寺與蓮華戒辯論後敗退。宗大師在止觀兩卷中多次以他作為反面例子。</p><p><span class="tag tag-lun">論文明說</span>問題在「善惡分別悉破」：通達無自性的觀察也是分別，若一概破除，就沒有引生正見的方法。</p><p><span class="tag tag-zhu">助讀</span>「破所破太過」從第6天讀到今天結束；明天開始另一頭的錯誤：所破認得太狹。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day24"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．《中論》「若復見於空，說彼無可治」。依宗大師，這裡的「見於空」是指什麼？</legend><div class="qz-opts"><button type="button">A．修觀時心中生起任何對空性的了解</button><button type="button">B．把性空之空執為諦實，或見為實事</button><button type="button">C．只見空而不見緣起，因而毀謗業果</button><button type="button">D．凡是見到諸法自性空的，都已落入空見</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「此說見於空者，非說凡見自性為空，是說於性空之空執為諦實，或見為實事。」〔0745b22〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．依宗大師對佛護「乞無所有」之喻的解釋，下列哪一種才是過失？</legend><div class="qz-opts"><button type="button">A．聽到「諸法無自性」，心中執取諸法無自性</button><button type="button">B．聽到「沒有財物」，心想「這個人沒有財物」</button><button type="button">C．聽到「沒有財物」，反把「沒有財物」當財物來要</button><button type="button">D．聽到「諸法無自性」，就想通達無自性的道理</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若執無性，說者實欲令起是解，彼豈是過？然於無性反執有性，是為過失。」〔0746a03〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．論文說一切衰損的根本是什麼？能拔除它的又是什麼？</legend><div class="qz-opts"><button type="button">A．根本是無明；但通達無性的慧也是相執，還要再破</button><button type="button">B．根本是一切分別；唯有什麼都不作意，才能拔除</button><button type="button">C．根本是貪愛；唯有修止令心不動，才能將它拔除</button><button type="button">D．根本是增益自性的無明；唯有通達無性的慧與它行相正反</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「一切衰損根本，即是增益自性無明，而能與彼行相正反，拔除彼者，唯達無性或無我慧。」〔0746a11〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．經中說有空、無相、無願三解脫門，論文卻說「無二寂靜門」。宗大師怎麼會通？</legend><div class="qz-opts"><button type="button">A．三門都歸到無我正見，無我是唯一的寂靜之門</button><button type="button">B．無我只是三門之一，無相門比空門更加殊勝</button><button type="button">C．三門各有不同的見，要依次修完三門才能解脫</button><button type="button">D．空門是聲聞所修，無相、無願門才是菩薩所修</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「雖亦有空、無相、無願三解脫門，然唯無我正見最勝……故唯無我是無第二寂靜之門。」〔0746a15〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．論文最後說有人「顯然欲樹支那堪布所遺教規」，是指哪一種做法？</legend><div class="qz-opts"><button type="button">A．主張無自性的空性在勝義中是實有的</button><button type="button">B．把通達無性的分別也看成過患，善惡分別一概破除</button><button type="button">C．主張只依經教聽聞，不必再觀察思惟無我</button><button type="button">D．主張先修止，等止成就後才可以開始修觀</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若於如此分別亦見過患，善惡分別悉破除者，顯然欲樹支那堪布所遺教規。」〔0746a19〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0746a21〕「第二、破所破太狹」讀起：另一個方向的錯誤——把所破只認成「非因緣生、不變、不待他」三種差別的自性。</p>
@@ -198,6 +214,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

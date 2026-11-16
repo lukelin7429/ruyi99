@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>法性自性的地位</h3><p><span class="tag tag-lun">論文明說</span>火的本性「亦非由自性有，亦非全無」；「增益強說世俗中有」。</p><p><span class="tag tag-lun">論文明說</span>宗大師的結論：「即於此性亦破自性，說名言有」。</p><p><span class="tag tag-zhu">助讀</span>這句的斷句不太好讀：「如火熱性，或彼此岸，或長與短」，有一種讀法是：這三個例子都是觀待而立的（火熱待因緣、此岸待彼岸、長待短），用來和「非待因緣」的法性自性相對照；法尊譯文沒有標明，以原文為準。</p><p><span class="tag tag-zhu">助讀</span>「增益強說」會引起下一個疑問：那是不是只是方便說、其實不許？明天開頭就談。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day25"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．有人說所破的自性具三差別：非因緣生、時位不變、不待他立。宗大師為什麼說它不是根本所破？</legend><div class="qz-opts"><button type="button">A．三差別的自性在名言中是有的，只在勝義中才需要破除</button><button type="button">B．三差別的自性只有外道才立，佛教各部派都不曾承許過</button><button type="button">C．有為法因緣生、會變壞，自部實事師早已共許，不成中觀不共所破</button><button type="button">D．三差別的自性世間本來就沒有人執著，所以根本不必去破</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「諸有為法是因緣生及有變壞，自部諸師皆共極成，對彼不應更成無性，彼亦應達諸法無性。」〔0746b01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．中觀論典常難「若有自性，應不待因緣」。宗大師用「瓶與無常」為喻，是要說明什麼？</legend><div class="qz-opts"><button type="button">A．瓶是無常所以無自性，凡是無常的都不是所破</button><button type="button">B．只要證得一切法無常，就已證得諸法無自性</button><button type="button">C．不待因緣就是勝義有的定義，如同無常是瓶的定義</button><button type="button">D．不待因緣只是所破的能徧，不是所破本身的意義</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「是就能徧說彼過失，非就所破當體而明」；「於瓶雖徧無常，然非無常即是瓶義」。〔0746b02〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．若只破常一自在之我、無分極微、無分剎那等宗派假立的法，論文說問題在哪裡？</legend><div class="qz-opts"><button type="button">A．那些不是繫縛生死的根本，修到究竟也斷不了俱生煩惱</button><button type="button">B．那些在名言中其實是有的，破了反而會墮入斷見</button><button type="button">C．那些是唯識才破的對象，中觀並不需要另外去破</button><button type="button">D．那些是勝義有的法，觀察自性的正理破不了它們</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：這些「唯是宗派妄執不共假立，此執非諸有情繫縛生死之本」，即使究竟現證，「然終不能遣除俱生諸煩惱故」。〔0746b06〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．月稱「見自室有蛇，除畏云無象」的比喻，是要說明什麼？</legend><div class="qz-opts"><button type="button">A．我見像蛇一樣危險，必須立刻以正見斷除</button><button type="button">B．證無常我與拔除俱生我見互不相干，破錯了對象</button><button type="button">C．人我執像蛇、法我執像象，要先破人我</button><button type="button">D．要先除粗的恐懼，再除細的恐懼，次第而修</button></div><p class="qz-why" hidden><b>答案：B</b>　《釋論》：「為以喻門顯示此義互無係屬」；《入中論》說證無我時斷常我，「非許此為我執依」。〔0746b12〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．月稱說「非新作、不待他」的自性是有的。依論文，這個自性是什麼？</legend><div class="qz-opts"><button type="button">A．就是所破的那種自性，月稱只是假設地說，實際上並不承許</button><button type="button">B．是像火的熱性那樣觀待因緣而有、世俗中的一般性質</button><button type="button">C．是諸法的法性，非新作、不待他而有，但它也不是由自性而有</button><button type="button">D．是勝義中由自性而有的真如，就像唯識所說的圓成實性</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「說彼即是諸法法性，即於彼上立為自性，非是新作、非依仗他。彼性是有」；又說「即於此性亦破自性，說名言有」。〔0746b17〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0747a03〕「若謂此說為斷聞者恐怖故」讀起：法性自性是真的有，還是只為安慰聽者而說？由此談到勝義諦怎麼安立；明天讀完卷十九。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

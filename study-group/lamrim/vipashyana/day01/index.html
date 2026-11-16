@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -172,6 +187,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>慧度與靜慮；無自性性</h3><p>六度中第五是靜慮（禪定），第六是般若（慧度）。<span class="tag tag-lun">論文明說</span>「莫於靜慮誤為慧度」。</p><p>無自性性＝一切法沒有自性這件事。《解深密經》說：菩薩是用般若波羅蜜多來「取」（把握、通達）它。</p></div><div class="lr-note"><h3>「若諸菩薩不住般若信解大乘」怎麼讀</h3><p>這句沒有標點，可以讀成「不住般若、〔不〕信解大乘」，也可以讀成「信解大乘，〔而〕不住般若」。</p><p><span class="tag tag-zhu">助讀</span>白話採後一種讀法：下半句說「於大乘中隨修何行」，說的是已經在大乘中修行的菩薩；重點是「不住般若」——就算信大乘、修大乘行，沒有般若就不能出離。這是斷句上的推論，以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day01"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．宗大師說，即使得到具足無分別、明顯、喜樂的正奢摩他，仍「不應喜足」。論文給的理由是什麼？</legend><div class="qz-opts"><button type="button">A．這種三摩地只能伏欲界煩惱，伏不了色界、無色界的煩惱</button><button type="button">B．這種三摩地容易退失，必須再修觀才能保住不退</button><button type="button">C．這種三摩地與外道共，只修它不能斷煩惱種子、解脫三有</button><button type="button">D．這種三摩地帶有喜樂，會讓人貪著禪味而墮入惡趣</button></div><p class="qz-why" hidden><b>答案：C</b>　論文說「若不爾者，其三摩地與外道共……終不能斷煩惱種子，解脫三有」。問題不在止不好，而在只有止不能斷根。〔0732a18〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．經文「世人雖修三摩地，然彼不能壞我想，其後仍為煩惱惱」，宗大師怎麼解釋「其後仍為煩惱惱」？</legend><div class="qz-opts"><button type="button">A．因為三摩地本身就是一種細微的煩惱</button><button type="button">B．因為沒有持戒，三摩地的功德被煩惱破壞</button><button type="button">C．因為定力不夠深，出定以後才又生起煩惱</button><button type="button">D．因為我執沒有斷，之後仍會生起種種煩惱</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「由其我執未能斷故，其後仍當生諸煩惱。」關鍵在我執未斷，不在定力深淺。〔0732a21〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．論文說「從他聞」解脫生死，這句話主要是要破什麼看法？</legend><div class="qz-opts"><button type="button">A．以為不必向善知識聽聞、思惟無我，自己在內心就能生起無我慧</button><button type="button">B．以為只要聽聞經論，不必修止觀也能解脫</button><button type="button">C．以為無我的道理只能從佛陀親口聽聞，不能從弟子的論典得到</button><button type="button">D．以為聲聞弟子聽法解脫，菩薩則不需要聽法</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此定為破除邪執，謂外不從善知識所聽聞、思惟無我深義，內自能生」，所以說要從他聞。〔0732b08〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．宗大師引《修次中篇》說明「真實」是什麼。下列哪一項符合引文？</legend><div class="qz-opts"><button type="button">A．無分別心所證得、本來清淨無染的光明心性</button><button type="button">B．勝義中一切有事都由補特伽羅我、法我二我空的空性</button><button type="button">C．遠離能取與所取兩種執取的圓成實性</button><button type="button">D．心專注一境、明顯安住、遠離一切分別雜念的狀態</button></div><p class="qz-why" hidden><b>答案：B</b>　引文：「云何真實？謂於勝義，一切有事由補特伽羅及法二我空性。」心一境性是止的特點，不是所證的真實。〔0732b16〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．論文為什麼引《解深密經》觀自在菩薩的問答？</legend><div class="qz-opts"><button type="button">A．說明唯識宗也承認一切法無自性，與中觀完全相同</button><button type="button">B．說明修止的當下就已經同時通達了一切法無自性</button><button type="button">C．通達無自性是般若度所證，不能把靜慮誤當成慧度</button><button type="button">D．說明六度之中靜慮最殊勝，般若要依靜慮才能生起</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此真實是諸度中慧度所證，非靜慮等所能通達。莫於靜慮誤為慧度」；經中答「以般若波羅蜜多取」。〔0732b17〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0732b21〕「第二、學習毘缽舍那之法」讀起：毗缽舍那四科與資糧。</p>
@@ -198,6 +214,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>有自性反而沒有緣起</h3><p><span class="tag tag-lun">論文明說</span>「說諸法有自性者，無有緣起成常、斷見而為過失」。</p><p><span class="tag tag-zhu">助讀</span>有自性的東西不依緣，就不能變化——許它常住，是常見；許它後來滅了，有自性的東西一滅就全無，是斷見。所以只有許無自性，緣起才安立得起來。</p><p><span class="tag tag-zhu">助讀</span>結論句：「應當受許無性如幻染、淨緣起」——無性與緣起合在一起，就是中觀的離二邊。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day58"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．論文破「無因生」（自然生），指出什麼過失？</legend><div class="qz-opts"><button type="button">A．蓮瓣柔軟、孔雀彩色都是業力所成，所以無因的說法不能解釋</button><button type="button">B．無因生否定了業果，與佛經相違，所以只能依至教量來破除</button><button type="button">C．無因生在名言中可以成立，只有在勝義觀察時才會被正理破除</button><button type="button">D．一時一處有就應一切時處都有或全無，世人勤作其因也無意義</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若無因生，則於一時一處有者，一切時、處皆當為有或全非有」；又說「世人不應為果故，多方攝集種子等」。〔0766a10〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．破四生之後，對諸法無自性的定解是怎麼生起的？</legend><div class="qz-opts"><button type="button">A．依應成的作用引生比量，不是一開始就立論式親成所立</button><button type="button">B．由聽聞經中「非自非從他」的教言而直接生信</button><button type="button">C．一開始就對敵者立自續論式，直接成立諸法無自性</button><button type="button">D．由現量直接見到四生都不存在，因而生起定解</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此是依止應成作用引生比量，非有論式親成所立」；「非從最初便對敵者安立如是他許比量」。〔0766a15〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．緣起因所破的「自在」，依宗大師是什麼意思？</legend><div class="qz-opts"><button type="button">A．能自主作主宰，不受其他任何人所支配</button><button type="button">B．不由心安立，在境上由自性能自己立得住</button><button type="button">C．不依因緣而生，不靠他法自己就能存在</button><button type="button">D．常住不變，不隨剎那生滅而有所改變</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「言自在者，義謂現似有自性時，所現實有，覺非依仗諸識而現」；「故於境上，若由自性能自立性，是自在義。」〔0766b04〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．宗大師為什麼不把「自在」解作「不依因緣」？</legend><div class="qz-opts"><button type="button">A．虛空等無為法不依因緣，破了不依因緣就會違背世間</button><button type="button">B．依因緣生的法在勝義中也有自在，所以這個解釋太窄</button><button type="button">C．佛教各部本就許依因緣生，破它不必再成立，也不算得中觀見</button><button type="button">D．不依因緣的法在名言中仍然有，所以不能把它當作所破</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「然以不依因緣為自在義，則破彼義對自部師不須更成，又破彼義不能立為得中觀見。」〔0766b04〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．依論文，「性空」與「無作用」、「有自性」之間是什麼關係？</legend><div class="qz-opts"><button type="button">A．見全無作用只是斷見，見有自性才是真正的顛倒見</button><button type="button">B．性空就是一切都沒有作用，見有作用的才是顛倒見</button><button type="button">C．見有自性是顛倒，見全無作用則已經接近證得空性</button><button type="button">D．性空是離自在之性；見全無作用、見有自性兩者都是顛倒</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「故性空義，即是離彼自在之性，非謂全無作用之事」；「故見全無作用事者，是謗如幻染、淨緣起，是顛倒見。又若見有自性之事，亦是顛倒」。〔0766b07〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0766b12〕「若作是念：作用緣起破自在性」讀起：實事師問「我也許緣起有作用，你我有何差別？」月稱答：你在緣起上增益自性，就像小孩把影像當真；接著讀《象力經》，然後進入「修習此見斷障之理」。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

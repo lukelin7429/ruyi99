@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>慶喜的判準</h3><p><span class="tag tag-lun">論文明說</span>「若用量成三相是自續派，畢竟唯用他許三相是應成派」。</p><p><span class="tag tag-zhu">助讀</span>這是第一家的核心。宗大師後天破它的兩點：①「立者不知敵者量成」不能成為不許量成的理由；②在灶上成立的周遍，本來就是「有火徧有烟」這個普遍關係，不是只取灶上一分。</p><p><span class="tag tag-zhu">助讀</span>比較：宗大師自己的分法，是看「有沒有在名言中許自相、以自相成立的三相」，不是看「有沒有量」。這要到「安立自宗」才正式講。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day33"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．清辨回答「若無自性，云何是事」的諍難時說「非許勝義諸事有性」。宗大師從這裡看出什麼？</legend><div class="qz-opts"><button type="button">A．清辨認為事物既有作用就有自性，所以根本不許說無自性</button><button type="button">B．清辨只在破外道時說無自性，對佛弟子的主張則不加破斥</button><button type="button">C．清辨的無自性是勝義中無；若在名言中說無自性，他會認為是毀謗</button><button type="button">D．清辨和月稱一樣，名言中也不許有自性，只是用語比較謹慎</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「謂許諸法勝義無性，非毀謗故。若於名言謂無自性，許為毀謗極為明顯。」〔0751a14〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．「勝義無」的意思，應成、自續諸論師之間是怎樣的情形？</legend><div class="qz-opts"><button type="button">A．諸師不同：應成派指聖者定中所見，自續派指凡夫比量所知</button><button type="button">B．諸師相同：都是指空性這個東西裡面沒有任何法存在</button><button type="button">C．諸師不同：應成派指名言中也無，自續派只指勝義中無</button><button type="button">D．諸師相同：都是以如理觀察實性的正理觀察時，見它非有</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「言勝義無者，義謂若以如理觀察之正理，觀實性時，見彼非有。此諸論師一切皆同。」〔0751a17〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．佛護、月稱與清辨等人在「勝義無」上意思相同，那麼真正的分歧在哪裡？</legend><div class="qz-opts"><button type="button">A．有自性的東西，是否必須經得起觀察實性的正理推察</button><button type="button">B．破自性的時候，究竟能不能用正理觀察來說它是無</button><button type="button">C．世俗法要不要依隨順見真實的觀察來安立才算成立</button><button type="button">D．觀察實性的正理，凡夫能不能用、是否只限於聖者</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「然凡有性堪忍觀察實性正理推察，許否不同。此二論師，若有自性，則定須忍觀察實性正理推察，故亦定成勝義中有。」〔0751a19〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．佛護解釋「不自生」等破四生，清辨批評他，月稱替他辯護。月稱的主張是什麼？</legend><div class="qz-opts"><button type="button">A．佛護其實也用了自續比量，只是沒有明白地寫出來而已</button><button type="button">B．中觀師要在自身生起中觀見，必須用應成，用自續不合理</button><button type="button">C．清辨的批評對，但佛護的破法在辯論時仍然可以權宜使用</button><button type="button">D．應成與自續各有所長，破他宗用應成，立自宗用自續</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「月稱論師廣為解釋，謂中觀師自身發生中觀方便，須用應成，自續非理，破他宗已，顯應成宗。」〔0751b02〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．慶喜《入中論疏》一家，用什麼來區分自續派與應成派？</legend><div class="qz-opts"><button type="button">A．破自性時加勝義簡別是自續派，不加勝義簡別是應成派</button><button type="button">B．在名言中許有自性是自續派，名言中也不許自性是應成派</button><button type="button">C．用量所成立的三相是自續派，畢竟只用他許的三相是應成派</button><button type="button">D．觀察勝義時立無自性宗是自續派，只破他宗是應成派</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此說若用量成三相是自續派，畢竟唯用他許三相是應成派。」〔0751b18〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0751b21〕「彼之弟子諸譯師云」讀起：慶喜的弟子說中觀師在觀察勝義時無宗，只破他許；又有人說中觀師連名言中也無自宗；還有昔日藏地的中觀智者的說法。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

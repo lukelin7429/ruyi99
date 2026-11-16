@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>實事師破外境</h3><p><span class="tag tag-zhu">助讀</span>例如唯識師以極微不可分等理由，論證沒有心外的外境。應成派則在名言中承許外境。依宗大師這一句，唯識師的那些正理，只表示他們沒有找到（實有的）外境，並不能破名言中的外境。這是依上下文的推論，以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day14"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．觀察實性的理智找不到色等的生滅，為什麼不算破了它？</legend><div class="qz-opts"><button type="button">A．理智其實找得到色等生滅，只是凡夫的心粗而看不出來</button><button type="button">B．色等生滅在勝義中有，理智觀察的範圍只限於名言之中</button><button type="button">C．理智只能破外道所計的法，不能破佛法所說的名相</button><button type="button">D．色等生滅由名言識成立，不由理智成立，如眼不見聲不能破聲</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「色等生滅是由名言識所成立，色等雖有，非由理智所成，故彼未得如何名破？譬如眼識雖不得聲，非眼能破。」〔0740a05〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．「東方尋瓶」的比喻要說明什麼？</legend><div class="qz-opts"><button type="button">A．若有自性之生理智必能找到；找不到就破了自性生，卻不破生</button><button type="button">B．理智找不到生，就證明生在名言中也同樣不存在</button><button type="button">C．在東方找不到瓶，就證明世上任何地方都沒有這個瓶</button><button type="button">D．在東方找不到瓶，只是尋找得不夠仔細，應該再找一遍</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若有自性之生，則中觀理决定能得，若尋求時彼未得生，由彼能破自體或自性之生，然生是有如何能破？」〔0740a08〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．根本聖智「未見生滅」，宗大師說應該怎麼理解？</legend><div class="qz-opts"><button type="button">A．沒看見生滅，就等於確定見到生滅是無</button><button type="button">B．只是沒看見生滅，並不是見到生滅是無</button><button type="button">C．聖智見到的是生滅的自性，所以生滅實有</button><button type="button">D．聖智見到生滅是無，名言識見到生滅是有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「如是根本聖智，是未能見色等生滅，豈彼是見生滅等無？」並說把這兩者「混執為一」，連先覺都有誤解。〔0740a17〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．關於名言識與勝義量的關係，下列哪一項符合宗大師的說法？</legend><div class="qz-opts"><button type="button">A．名言識與勝義量互不相干，彼此都不能妨害對方的所見</button><button type="button">B．勝義量能破名言識所見的一切，名言識完全無力加以反駁</button><button type="button">C．不是說名言識勝過勝義量，而是名言量能妨害破世俗的相似正理</button><button type="button">D．名言識的勢力比勝義量強大，所以名言識能夠破除勝義量</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「我非是說較勝義量諸名言識勢力強大，及非是許諸名言識破勝義量。」又說「由名言識能害如是相似正理，故較彼等亦許力大」。〔0740a21〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．月稱說「我為破除世間世俗住極艱辛」，宗大師怎麼解釋？</legend><div class="qz-opts"><button type="button">A．眼識等是錯亂的，以正理一觀察就能當下把它們破除</button><button type="button">B．中觀師要以正理一一破除世間色聲等法，所以非常艱辛</button><button type="button">C．世間人執著世俗太深，要很辛苦地用正理說服他們放下</button><button type="button">D．眼識等錯亂心與錯亂境，要靠精勤修道淨除，不是被正理所破</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「是說為淨此眼識等錯亂心故，及色塵等錯亂境故，策勵修道，不許彼是正理所破，是由修道所破之事。」〔0740b02〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0740b08〕「有說於名言中」讀起：「名言中不破」是不是只是說牧童不破？月稱怎樣劃出正理「破到哪裡為止」。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

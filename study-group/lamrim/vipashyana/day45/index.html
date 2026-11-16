@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>為什麼要依他許</h3><p><span class="tag tag-zhu">助讀</span>這段文字較繞，我的讀法是：相違雖由量成，但要讓實事師見到相違，必須從他承許的前提出發；若要先讓他接受一個「不量自性」的中觀式的量，那他已經通達無性，根本不需要再破了。所以他許量式，正是引導尚未得正見的人的方法。以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day45"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．若許自續比量，依宗大師的說明，成立所立需要什麼條件？</legend><div class="qz-opts"><button type="button">A．只要敵者口頭承許三相，立者便可以依此成立所立</button><button type="button">B．只要立者自己以量成立三相，敵者是否成立並不重要</button><button type="button">C．先要有立、敵極成的量自相之量，再由它成立三相與所立</button><button type="button">D．只要有聖言量作根據，三相便不必再以量加以成立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若許自續，則立自相之量先須立、敵極成，次以彼量立、敵二家成立三相，再成所立。」〔0758a12〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．《明顯句論》說「我等不用自續比量」。宗大師由此說明應成派對「立量」的態度是什麼？</legend><div class="qz-opts"><button type="button">A．全然不立任何量式，只舉對方的過失令其自行捨宗</button><button type="button">B．只在名言中立量，觀察勝義時則一切量式都不許</button><button type="button">C．對外道才立量，對佛弟子實事師則只用聖言破斥</button><button type="button">D．所立的量都不是自續，而且只為破他宗，並非全不立量</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「此許立量皆非自續，及許唯為破除他宗，故非全不立量。」〔0758a17〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．「他許」「他已成」，宗大師說不是指有法、因等自宗不許。那麼是指什麼？</legend><div class="qz-opts"><button type="button">A．成立它們的「量自性之量」，自宗連名言中也不許</button><button type="button">B．有法、因等是對方以現量成立，自宗則以比量成立</button><button type="button">C．有法、因等在勝義中不成立，只在名言中才成立</button><button type="button">D．有法、因等只是對方所許，自宗在名言中也不許</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「彼等自宗亦許，然能成立彼等之量，若量自性雖於名言自宗亦無……故非共許，唯名他許或唯他成。」〔0758a23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．他比量的有法、法與因，宗大師說需要具備什麼條件？</legend><div class="qz-opts"><button type="button">A．必須在勝義中有，否則就無法真正破除他宗</button><button type="button">B．必須在名言中有，不是只要對方許有就足夠</button><button type="button">C．只要對方許有就足夠，名言中有沒有都無妨</button><button type="button">D．必須立、敵雙方都以量自相之量共同成立</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「故他比量之有法及法、因等須名言有，非唯由他許有便足。」〔0758b08〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．以他許量式破實事師時，正理所破的是什麼？</legend><div class="qz-opts"><button type="button">A．對方用來推理的比量本身，名言中也不成立</button><button type="button">B．對方所許的一切有法、因、喻，名言中也不留</button><button type="button">C．對方把有法等執為由量自性之量成立的那個執境</button><button type="button">D．對方身中無損名言識所成立的眼、瓶等有法</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「然由敵者未辨彼等有與有性二者差別，故執彼等由量自性量所成立。於彼執境正理違害，豈以正理破他身中無損名言諸識所成。」〔0758b04〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第46天）從同一行〔0758b20〕「若爾，云何依他自許」讀起：佛護的水、火、蔻花三喻與《四百論》火不自燒之難，說明他許量式怎樣引生通達無性的比量；最後回答「應隨應成還是自續」，讀完卷二十一。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>石女之女</h3><p><span class="tag tag-lun">論文明說</span>「若未曾見石女之女，諸貪欲者緣彼戲論即不生起」：根本沒有的東西，就不會對它起戲論、起貪。</p><p><span class="tag tag-zhu">助讀</span>同理，一旦以正見見到所執的自性根本沒有，緣它而起的戲論、分別、煩惱、業、生死就一環一環斷掉。《明顯句論》是月稱解釋《中論》的論。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day59"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．實事師說：「我也許緣起、許作用，你我有什麼差別？」月稱怎麼回答？</legend><div class="qz-opts"><button type="button">A．你在緣起上增益自性，所以不如實知、不如實說緣起</button><button type="button">B．你許緣起只在勝義，我許緣起只在名言，所以不同</button><button type="button">C．你我其實沒有差別，只是使用的名稱各不相同</button><button type="button">D．你根本不許緣起，只許諸法常住，所以與我不同</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「然如愚兒見質影像執為實質，即於緣起增益自性，說為諸法實有自性，故於緣起非如實知，非如實說。」〔0766b13〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．有人說應成與自續爭「名言中有無自相」只是爭名稱。宗大師以數論為喻，要說明什麼？</legend><div class="qz-opts"><button type="button">A．名言中有自相是正確的，只是自續派說得不夠清楚</button><button type="button">B．爭的是實質有無，不是名稱；就像破數論聲常不是只爭名</button><button type="button">C．兩派確實只是名稱不同，在實質上的主張完全一樣</button><button type="button">D．數論與佛教都許聲是常，只是彼此的說法不同而已</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「以自續師說名言中有自相故，此諸妄執顯然亦破」；說是爭名，猶如說破數論聲常「唯瞋於名」。〔0766b20〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．論文說緣起因成立無性，是「最希有善權方便」。理由是什麼？</legend><div class="qz-opts"><button type="button">A．緣起因能直接成立勝義中有，所以在諸理中最殊勝</button><button type="button">B．緣起因不必觀察，只要信受就能直接斷除煩惱</button><button type="button">C．同依因緣生，有情依此執實被縛，智者依此破自性斷邊見</button><button type="button">D．緣起因只有佛能使用，弟子只能依經教來了解它</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「諸餘有情許因緣生，依此反執實有自性，故成繫縛。餘諸智者依彼因緣破有自性，於無自性引生定解，斷邊見縛。」〔0766b24〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．依《象力經》，若諸法有自性，會有什麼結果？</legend><div class="qz-opts"><button type="button">A．佛及弟子不必觀察，只要修止就能證得解脫</button><button type="button">B．只在勝義中有，名言中仍然會照常顯現與作用</button><button type="button">C．諸法就會剎那無常，緣起作用才能夠真正成立</button><button type="button">D．佛及弟子應當能見到，而且戲論網斷不了，就無解脫</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若有自性，佛及弟子當能觀見，然未曾見。又彼自性非緣能改，則執有實相諸戲論網，應不可斷，故無解脫。」〔0767a05〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．從「生」一路往回追生死的因，論文說最根本的是什麼？怎麼滅？</legend><div class="qz-opts"><button type="button">A．執諦實的戲論，要以見一切法空來滅</button><button type="button">B．非理作意，要以正念正知來對治它</button><button type="button">C．不善的業，要以持戒懺悔來淨除它</button><button type="button">D．貪瞋等煩惱，要以修止的定力來伏</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「業惑從分別，分別從戲論，戲論以空滅」；又說「故彼分別從執諦實戲論而生」。〔0767a12〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第60天）從〔0767a22〕「由達空性滅彼之理」讀起：《明顯句論》續說空性如何滅戲論；接著說聲聞、獨覺也證法無性，大小乘的差別在所知障與廣大妙行；最後以宗大師的讚頌結束「決擇空性正見」。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

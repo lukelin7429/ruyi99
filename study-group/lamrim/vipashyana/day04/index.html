@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -179,6 +194,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>預告：同一個慧，還是引生另一個定解？</h3><p><span class="tag tag-zhu">助讀</span>明天宗大師會追問：這是說通達人無我的那一個慧，就直接執蘊無自性嗎？若是，人、法兩種無我的慧就成了一個；若不是，又怎麼說「亦能通達」？可以先想想這兩種說法的差別。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day04"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．論文說此中「所應證得實性法身」是什麼？</legend><div class="qz-opts"><button type="button">A．現證內外諸法在勝義中真實存在的本性，從此不再被遮蔽</button><button type="button">B．內外諸法實非真實而現似真實，連同習氣寂滅，盡滅我、我所執</button><button type="button">C．在心中現證一個本自清淨、恆常不變的光明真我，永不退失</button><button type="button">D．只斷除現行煩惱、不再受生三界，但是煩惱的習氣仍然存在</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若內若外種種諸法，實非真實，現似真實，即此一切並諸習氣永寂滅故，於一切種悉皆滅盡我、我所執，是為此中所應證得實性法身。」〔0734a11〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．悟入真實的次第中，思惟生死過患、尋求生死根本之後，要確定什麼是生死之本？</legend><div class="qz-opts"><button type="button">A．對欲樂的貪愛，所以必須先修不淨觀斷除貪</button><button type="button">B．過去所造的惡業，所以必須先懺淨一切罪業</button><button type="button">C．薩迦耶見（無明），所以必須破除它所執的我</button><button type="button">D．五蘊身心本身，所以必須先滅除五蘊的相續</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「便於薩迦耶見或曰無明，為受生死根本之理，須由至心引生定解」，接著「見若滅薩迦耶見，必賴發生智慧通達無彼所執之我，故見必須破除其我」。〔0734a12〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．依《明顯句論》，修觀行者悟入真實時，最初應該觀察什麼？</legend><div class="qz-opts"><button type="button">A．先觀察十二緣起的流轉次第，再觀察還滅次第</button><button type="button">B．先觀察心的明了本性，認得心性後再觀察外境</button><button type="button">C．先遍觀一切外境諸法無自性，然後再回觀內心</button><button type="button">D．唯應審察我：我執所緣的境是什麼，什麼叫做我</button></div><p class="qz-why" hidden><b>答案：D</b>　引文：「故於最初唯應於我諦審觀察：何為我執所緣之境？何等名我？」因為「我是薩迦耶見所緣境界」。〔0734a21〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．有人質疑只滅我、我所執不算大乘真實。宗大師說「於一切種永滅我、我所執」有哪兩種？</legend><div class="qz-opts"><button type="button">A．煩惱不再生起的斷（小乘也有），與永斷內外諸法戲論之相（法身）</button><button type="button">B．只在入定時暫滅，出定後仍會生起；以及出定後也永遠滅盡</button><button type="button">C．斷現行煩惱屬於小乘，斷煩惱種子屬於大乘，所以分為兩種</button><button type="button">D．斷人我執屬於小乘，斷法我執屬於大乘，兩者所證的空性不同</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若以煩惱更不生理而永斷者，雖於小乘亦容共有，然由永斷內外諸法戲論之相，皆無可得，即是法身。」〔0734b05〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．論文用「燒車則亦燒毀輪等支分」比喻什麼？</legend><div class="qz-opts"><button type="button">A．我與五蘊是一體的，滅了我執五蘊也就不存在了</button><button type="button">B．通達我無自性時，也能滅除對支分諸蘊的自性執</button><button type="button">C．證得無我之後，五蘊身心就會像車被燒般消失</button><button type="button">D．必須先一一破除五蘊的自性，才能證得我無自性</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若通達我無自性，於彼支分諸蘊，亦能滅除有自性執，譬如燒車則亦燒毀輪等支分。」又說「於我達無性時，亦能通達我所諸蘊無我、無性」。〔0734b07〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0734b13〕同一行「《入中論釋》云」讀起：通達人無我的那一個慧，是不是直接就執蘊無自性？宗大師怎麼回答「亦能通達」。</p>
@@ -205,6 +221,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

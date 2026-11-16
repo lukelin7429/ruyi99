@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>「顯然自說非中觀師」</h3><p><span class="tag tag-lun">論文明說</span>自宗不許中觀之義、只是就他而說，就不能算中觀師——就像只替別人講唯識、自己不許唯識的人，不能叫唯識師。</p><p><span class="tag tag-zhu">助讀</span>卷二十到此結束。第三家所引的《迴諍論》「若我有少宗」等經論，宗大師要到卷二十一才逐一解釋。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day36"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．宗大師說，第三家主張中觀師連名言中也無所許，病根在哪裡？</legend><div class="qz-opts"><button type="button">A．只學了自續派的論典，沒有讀過月稱的《入中論》</button><button type="button">B．沒有認清正理所破，以為破他宗的理路也打到自宗</button><button type="button">C．把應成派的「無宗」誤解為觀察勝義時才無所許</button><button type="button">D．太重視名言量，把世間共許的事都當成了勝義有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「是如前說未善明了正理所破，以彼理性破除他宗，翻難自時，便見自宗亦如是轉。」〔0752b23〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．依宗大師，一位中觀師必須承許的是什麼？</legend><div class="qz-opts"><button type="button">A．勝義中有清淨的空性實體，名言中一切法都是虛妄</button><button type="button">B．勝義中與名言中都無所許，只隨順世間的說法而說</button><button type="button">C．勝義中全無塵許的有，以及名言中緣起之義一切如幻</button><button type="button">D．勝義中一切法無自性，名言中一切法則有自相成立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「須許通達全無塵許勝義中有，及許名言緣起之義一切如幻，故有所許。」〔0753a01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．宗大師說中觀宗「最極清淨」，理由是什麼？</legend><div class="qz-opts"><button type="button">A．中觀師只破他宗而不立自宗，所以沒有自語相違</button><button type="button">B．中觀師的主張都出自龍猛父子，不必再加以觀察</button><button type="button">C．中觀師自己什麼都不許，敵者無從提出任何質難</button><button type="button">D．所立的建立，沒有一個敵者能如法找到少分過失</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「建立此等，無一敵者而能如法求少分過，是故此宗最極清淨。」〔0753a04〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．對方把宗大師的質難比作「乞求無財之財」。宗大師的回答是什麼？</legend><div class="qz-opts"><button type="button">A．不是要你把無許當一件事來許，而是說「無許」已漸有許</button><button type="button">B．沒有錢財與沒有所許不同，前者是事實，後者只是言說</button><button type="button">C．中觀師本來就許「無許」，所以這個比喻並沒有問題</button><button type="button">D．無財之財的比喻是犢子部的說法，中觀師不應引用</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「我非總說令許無許。若爾云何？汝云無許，實漸有許，顯示汝言須許無許，故不能斷自語相違。」〔0753a17〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．若說應成也只是「就他而立」、自宗並不承許，宗大師指出會有什麼問題？</legend><div class="qz-opts"><button type="button">A．那應成派就只能破外道，不能破佛弟子中的實事師</button><button type="button">B．那就他所須也可許自續，沒有理由破自續、信月稱的宗</button><button type="button">C．那就必須改用自續比量，才能在名言中安立一切法</button><button type="button">D．那應成派就和唯識派相同，都只承認依他起的實事</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若說應成亦說他立，自宗不許，則亦何須破自續派，樹應成教，信月稱宗」；「如是就他所須增上，亦須許自續故」。〔0753b02〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第37天）從卷二十一開頭〔0753b16〕「又云：『果故此雖無，我就世說有。』」讀起：宗大師開始解釋第三家所引的那些經論，說明「就世說有」並不是說一切建立都只是就他而立。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

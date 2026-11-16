@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>「我等無宗」</h3><p><span class="tag tag-lun">論文明說</span>對方以「無宗」為擋箭牌。宗大師說：「此答不能斷彼諸過」。</p><p><span class="tag tag-zhu">助讀</span>「中觀應成無自宗」是常見的說法，宗大師並不接受這種理解。後面「破所破時應成、自續以誰而破」一科會詳細討論應成派有沒有自己的立宗。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day22"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．宗大師說，只承許「依此因緣有此生起」的人，不必接受「從四句中哪一句生」的觀察。理由是什麼？</legend><div class="qz-opts"><button type="button">A．四句觀察只用來破外道，不用來觀察佛教的生</button><button type="button">B．依緣而生在名言中有自相，四句觀察破不到它</button><button type="button">C．依緣而生就是四句中的他生，本來已經承許了</button><button type="button">D．他沒有承許勝義生，就不須承許它經得起正理觀察</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若僅受許依此因緣有此生起，未許實生……以不須許堪忍正理所觀察故。」許勝義生的，才「定須許四句隨一觀察」。〔0744b18〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．同樣是「不從四句生」，月稱的結論和破太過者有什麼不同？</legend><div class="qz-opts"><button type="button">A．月稱以依緣而生破四句生；破太過者卻推出全無生</button><button type="button">B．月稱只破外道的生；破太過者連佛教的生也破</button><button type="button">C．月稱只破自生、無因生；破太過者四句全破</button><button type="button">D．月稱推出全無生；破太過者則許依緣而生</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「故月稱論師，許依緣生破四句生，汝若許不從四句生則全無生，故違月稱所許而說。」〔0744b21〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．《入中論》說觀從自他生「名言亦非理」。依宗大師，這是破什麼？</legend><div class="qz-opts"><button type="button">A．破名言中的一切生，所以名言中也全無生可說</button><button type="button">B．破自相生或實有生，名言中也破，但不是破生本身</button><button type="button">C．只破勝義中的生，名言中仍許有自相的生</button><button type="button">D．只破外道所說的大自在天生，不破他生</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「此顯若許自相之生或實有生，則於名言由彼正理亦能破除，然非破生。」〔0744b24〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．月稱呵斥某些人「無耳、無心」，是在說哪一種人？</legend><div class="qz-opts"><button type="button">A．聽到「緣生」就執為有自性生、不肯破自性的人</button><button type="button">B．把緣起與空性分成兩事，主張先證空再學緣起的人</button><button type="button">C．把「無自性生」聽成全無生，反說緣生與無性生相違的人</button><button type="button">D．不向善知識聽聞，只靠自己在內心思惟空性的人</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「說無性生，未聞所說自性，妄執無生，意謂無耳，及說自性未解其義，意謂無心。」〔0745a06〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．《無熱惱請問經》「若從緣生即無生，於彼非有生自性」，第二句的作用是什麼？</legend><div class="qz-opts"><button type="button">A．說明緣生只在勝義中有，名言中則無</button><button type="button">B．說明緣生法在名言中也完全沒有生</button><button type="button">C．說明證得無生之後，就不必再依緣而修</button><button type="button">D．解釋第一句的「無生」，是指沒有自性的生</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：第二句「於彼非有生自性」是解釋第一句的無生，「是於所破加簡別，言謂無性生」。〔0745a12〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0745a22〕「第四、破除有事、無事四句無能妨害」讀起：破太過者的最後一種問難——有、無、俱、俱非四句把一切都破了，那「無自性」本身要不要破？</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

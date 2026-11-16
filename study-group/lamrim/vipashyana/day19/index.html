@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>修得越久越遠</h3><p><span class="tag tag-lun">論文明說</span>「非但不能略近正見，反漸遙遠」。</p><p><span class="tag tag-zhu">助讀</span>理由很直接：中觀的正道是「緣起」——能安立生死、涅槃一切因果。把一切名言都破掉的見解，與緣起正道方向相反，修越久越背離。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day19"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．青等色與影像在名言中都有、都是虛妄，為什麼青等立為世間的世俗諦，影像卻不立？</legend><div class="qz-opts"><button type="button">A．影像的虛妄世間識就能了達，青等的虛妄世間識不能證知</button><button type="button">B．青等有自相所成之體，影像只是分別假立而有</button><button type="button">C．青等在名言中是有，影像在名言中則完全沒有</button><button type="button">D．青等能起作用而為實有，影像不能起任何作用</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「影像等由世間識能達為妄，故不立為世間俗諦，青等雖妄，然其為妄由世間識不能證知，故安立為世間俗諦。」〔0743a08〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．說根識「於名言中錯亂」，又說它「待名言識不顛倒」，宗大師為什麼說不相違？</legend><div class="qz-opts"><button type="button">A．錯亂是說凡夫位，不顛倒是說證空性後的後得位</button><button type="button">B．兩處的名言各別：一是破自性時的名言識，一是通常名言識</button><button type="button">C．錯亂是說第六意識，不顛倒是說眼等五根識</button><button type="button">D．一是就勝義說它錯亂，一是就名言說它不顛倒</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「然彼二種名言各別，有何相違？」又說破自性時「非就勝義，須就名言，於此名言識，則諸根識皆是錯亂」。〔0743a11〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．論文說以正理破除色等有自性時，是在哪一個層次上破？</legend><div class="qz-opts"><button type="button">A．是就世間通常名言識破，世人都知根識錯亂</button><button type="button">B．是就勝義破，所以根識只在勝義中才算錯亂</button><button type="button">C．不是就勝義破，而是就名言破；對這種名言識，根識是錯亂</button><button type="button">D．不在任何層次破，只是遮止戲論、不立一切法</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「謂以正理破除色等有自性體時，非就勝義，須就名言，於此名言識，則諸根識皆是錯亂。」〔0743a12〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．月稱說「於世俗中現虛妄者非世俗諦」。依宗大師，這裡的「現虛妄者」指什麼？</legend><div class="qz-opts"><button type="button">A．凡在名言中是虛妄的，連青色也包括在內</button><button type="button">B．在勝義中觀察時成為虛妄的一切世俗法</button><button type="button">C．只有理智才能了達是虛妄的，如根識所現自相</button><button type="button">D．用名言量就能了達是虛妄的，例如影像</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「謂以名言量能達虛妄者，非說凡於名言為虛妄者。」否則青等也不能立為世俗諦了。〔0743a19〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．宗大師批評有人把正見與邪見「錯則俱錯，不錯則俱不錯」。這是在說哪種看法？</legend><div class="qz-opts"><button type="button">A．以為正理若破實事師的妄計，自己的色等也同樣被破，兩者相等</button><button type="button">B．以為破自性的正理只能破外道，不能破佛教內部的部派</button><button type="button">C．以為中觀的世俗諦就是經部、婆沙所說的勝義諦</button><button type="button">D．以為正見要靠長時修止才能生起，不必依正理觀察</button></div><p class="qz-why" hidden><b>答案：A</b>　論文說他們見自宗世俗法與實事師徧計所執「若正理害二俱妨害，若不妨害二俱不害」，於是什麼都不可說。〔0743a23〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0743b06〕「《入中論》云：「無知睡擾」讀起：外道與實事師的徧計，世俗中也沒有；那麼名言中有、無依什麼標準判定？宗大師提出三個條件，並說明什麼叫「世間共許」。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

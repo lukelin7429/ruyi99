@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>今天的總結：自相與實有</h3><p><span class="tag tag-lun">論文明說</span>佛護、月稱：有自相所成實體 ＝ 實有。清辨等：有自相所成實體，只是不許為勝義有。</p><p><span class="tag tag-zhu">助讀</span>四家排一排：唯識——依他、圓成有自相，勝義有。清辨（經部行）——名言有自相，勝義無。蓮華戒（瑜伽行）——名言有自相，勝義無。佛護、月稱（應成）——名言中也無自相，因為有自相就等於實有。</p><p><span class="tag tag-zhu">助讀</span>自續與應成最細的差別就在這裡：自續派認為「勝義有」比「自相有」更進一層，只破前者；應成派認為兩者是同一件事，一起破。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day17"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．月稱在《明顯句論》說「能量、所量非有自性」，又立現、比、教、喻四量。他所破的是什麼？</legend><div class="qz-opts"><button type="button">A．破一切名言識是量，只許聖者根本定的智慧是量</button><button type="button">B．破所量的外境，只許能量的心識在名言中是有</button><button type="button">C．破有自性的能量、所量，不破緣起觀待所立的能量、所量</button><button type="button">D．破現量與比量，只保留世間通行的聖教量與譬喻量</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「又破有性能量、所量，不破緣起觀待所立能量、所量」。能量、所量互相觀待而立，所以無自性，卻不是沒有。〔0741b16〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．沒有翳病等損根因緣、只因無明而把無自性的境現為有自性的根識，論文怎麼判它？</legend><div class="qz-opts"><button type="button">A．凡夫未證空性前的根識，名言中都無法分正倒</button><button type="button">B．在名言中屬於顛倒識，與翳病眼見二月同屬一類</button><button type="button">C．在勝義中是無倒的，只是在名言中才算錯亂</button><button type="button">D．仍不妨害它是無倒的名言識，無明不算這裡說的違害因緣</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「唯無明力錯亂，執取實無自性現有性境，此不能害無倒名言」；又說無明的損害「非此所說違害因緣」。〔0741b17〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．論文說到損害「意識」的因緣，除了前面那些眼病、鏡影等事之外，還特別舉出什麼？</legend><div class="qz-opts"><button type="button">A．種種邪宗，以及看似正確、其實有過失的似比量</button><button type="button">B．無始以來使境顯現為有自性的俱生無明</button><button type="button">C．修止時沒有對治好的昏沈與掉舉</button><button type="button">D．對三寶與業果的懷疑和猶豫不決</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此說邪宗及諸似因，皆是損害意識因緣。」學了錯誤宗義，在名言中就是意識受損。〔0741b24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．唯識師說依他起「無性」，依論文，他們的意思是什麼？</legend><div class="qz-opts"><button type="button">A．依他起名言中有自相，但勝義中沒有，所以說無性</button><button type="button">B．依他起有自相、有自性，只因從他而生、無自然性才說無性</button><button type="button">C．依他起和徧計執一樣沒有自相，所以說相無自性</button><button type="button">D．依他起連名言中也無自相，只是觀待假立而有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「於依他起有彼自相，故有自性。然從他生無自然性，說名無性。」唯識的「無性」和應成的「無自性」名同義異。〔0742a11〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．下列哪一項符合論文對佛護、月稱與清辨在「自相」上的分判？</legend><div class="qz-opts"><button type="button">A．兩家都許名言中有自相，只在勝義有無上看法不同</button><button type="button">B．清辨認為有自相所成實體就是實有；佛護、月稱只不許它勝義有</button><button type="button">C．佛護、月稱認為有自相所成實體就是實有；清辨只不許它勝義有</button><button type="button">D．清辨名言中也不許自相；月稱只在勝義中不許自相</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「佛護論師、月稱論師，謂若有自相所成實體，則是實有；清辨論師等，唯爾不許是勝義有。」〔0742a21〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0742b04〕「又唯識師云」讀起（卷十九開始）：清辨怎麼答唯識的極微難，月稱與清辨安立根、境有何不同，然後宗大師正式回答：根識雖錯亂，為何仍是名言的量。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

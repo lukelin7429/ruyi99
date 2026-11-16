@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>組合後輪子變形了嗎</h3><p><span class="tag tag-zhu">助讀</span>這是破 ①b：裝上車的輪子，和放在地上的輪子，形狀並沒有改變；若說組合後各支另有新形狀，應當看得到，但看不到。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day47"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．論文說，用一、異等七相推求，車在七相中都找不到。由此得出的結論是什麼？</legend><div class="qz-opts"><button type="button">A．車沒有自性，只是依自己的支分假立而有</button><button type="button">B．車根本不存在，世間說有車只是一場錯覺</button><button type="button">C．車與支分非一非異，是不可說的實有之法</button><button type="button">D．車在勝義中沒有，但車的支分仍有自性可得</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「如車與自支，於一、異等七中皆無故唯假有」；又說「然於彼七皆非有故，定無自性」。破的是自性，不是車。〔0759b24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．論文說車與支分自性不是一。如果自性是一，會有什麼過失？</legend><div class="qz-opts"><button type="button">A．車的名稱應當可以安立在每一個輪、軸之上</button><button type="button">B．支分眾多車也應眾多，車是一個支分也應只有一個</button><button type="button">C．車與支分應像瓶與衣那樣，可以各別分開取得</button><button type="button">D．車壞了以後，拆下的輪子也應該同時消失不見</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若性一者，如支眾多車當亦多，如車是一支亦當一，作者、作業皆當成一」。「如瓶、衣各別可得」是破自性異時說的。〔0760a01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．論文破「車依支」「支依車」這兩相時，說明所破的範圍是什麼？</legend><div class="qz-opts"><button type="button">A．破名言中車依支而有，車與支其實互不相依</button><button type="button">B．只破車依支分，支分依車在名言中仍可成立</button><button type="button">C．不是破車與支互相依存，而是破有實自相的能依所依</button><button type="button">D．只破有部所說的能依所依，經部所說的仍可成立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此中非破互有，是破能依、所依有實自相」，並說「如此一切，當知皆爾」。〔0760a04〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．對「天授有耳」「車有支」這種「具」的說法，宗大師怎麼處理？</legend><div class="qz-opts"><button type="button">A．這也是所破，因為一說「具」就成了自性各異</button><button type="button">B．只在世間不觀察時可說，觀察後名言中也沒有</button><button type="button">C．天授有耳可以成立，車是無情物所以不能說有支</button><button type="button">D．這種具在名言中有，不是所破；所破的是自相的具</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「天授有耳，於名言有，此非所破，車亦許爾，故是破除自相之具。」〔0760a07〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．月稱破「支聚是車」時，不必加「勝義」簡別。論文給的理由是什麼？</legend><div class="qz-opts"><button type="button">A．支聚只是車的施設事，不是車；如同蘊是我的施設事而非我</button><button type="button">B．支聚在名言中也不存在，所以怎麼破都不會破過頭</button><button type="button">C．支聚為車是外道的主張，破外道時一律不必加簡別</button><button type="button">D．應成派破他宗都用應成論式，所以從來不加簡別</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「破支聚為車，是此論師所許，不須簡別，聚合是車施設事故。說蘊是我所施設事，非是我故。」〔0760a13〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第48天）從〔0760a21〕「若各支形不許為車」讀起：再破「支聚總形是車」，接著看實事師的反問——七相找不到車，世間怎麼還說「車來了」？</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

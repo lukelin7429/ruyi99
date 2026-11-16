@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -186,6 +201,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>宗大師對清辨的態度</h3><p><span class="tag tag-lun">論文明說</span>「以彼為本，更多采取清辨論師所有善說，略有非理亦為破除」。</p><p><span class="tag tag-zhu">助讀</span>不是全盤否定清辨，而是「多采善說、略破非理」。自續派在破外道、破小乘實有上的大量論證，應成派也照用；分歧集中在「自續因」這一點。</p></div><div class="lr-note"><h3>第二科的結論</h3><p><span class="tag tag-lun">論文明說</span>「故今當隨行佛護論師、月稱論師，决擇聖者所有密意。」</p><p><span class="tag tag-zhu">助讀</span>到此，求正見的三個依靠都說完了：依了義經、依龍猛父子、隨佛護與月稱的解釋。明天進入第三科，真正開始抉擇空性正見。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day03"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．有人說了義經說「無生」，就應執為全無有生，否則不算了義。宗大師怎麼回應？</legend><div class="qz-opts"><button type="button">A．許多了義經遮生時加勝義簡別，未加的地方也應照例補上</button><button type="button">B．了義經都只是方便說，任何一句都不必照字面來理解</button><button type="button">C．加了勝義簡別的經反成不了義，未加的才是真正了義</button><button type="button">D．無生指名言中也全無有生，這才是了義經的真正意思</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「現見眾多了義之經，遮生等時加勝義簡別。若有一處已加簡別，於未加者亦應例加，是共法故。」所以經說無生，要理解為在勝義中無生。〔0733b05〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．判斷一部經論是不是了義，論文說應該怎麼看？</legend><div class="qz-opts"><button type="button">A．只要其中有一句不能照字面取，整部經就應判為不了義</button><button type="button">B．看前後所說的總體道理，不因少分語句不可照取就判為不了義</button><button type="button">C．看經題或經文中有沒有自稱「了義」，依此來判定了義</button><button type="button">D．看是否曾經龍猛菩薩解釋過，解釋過的就判定為了義經</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若不就其前後所說總體之理，唯由其中少分語句不可如言而取義者，應知不壞為了義經。」〔0733b07〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．有人就勝義把中觀分成「理成如幻」與「極無所住」，宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．認為極無所住才合月稱之意，理成如幻則屬於自續派</button><button type="button">B．認為兩者都對，只是各側重現空雙聚與斷絕戲論不同</button><button type="button">C．贊同大譯師所說「令愚者覺其希有」，認為這不是善說</button><button type="button">D．認為這是印度論師共許的正確分法，應依此判中觀宗派</button></div><p class="qz-why" hidden><b>答案：C</b>　論文引大譯師：「就勝義門所立二宗，是令愚者覺其希有。」並說「此說極善」；因為諸大中觀師「不許唯以正理斷除戲論便為勝義諦，故非善說」。〔0733b18〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．「應成師」與「自續師」這兩個名稱，是就什麼來區分的？</legend><div class="qz-opts"><button type="button">A．就勝義諦是現空雙聚還是唯斷戲論來立名</button><button type="button">B．就主要依據《中論》或《迴諍論》來立名</button><button type="button">C．就名言中許不許有外境來立名，與經部行相當</button><button type="button">D．就如何在自心引發定解勝義空性的正見來立名</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「就名言許不許外境定為二類，若就自心引發定解勝義空性之正見而立名，亦定為應成、自續之二。」兩種分法的依據不同。〔0734a01〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．月稱論師在名言中也許有外境，為什麼不能稱他為「經部行中觀師」？</legend><div class="qz-opts"><button type="button">A．他雖許外境，但不隨順經部等其他宗派的理路</button><button type="button">B．經部行之名只用於清辨之前的早期中觀論師</button><button type="button">C．他許外境的方式與婆沙師相同，應稱婆沙行者</button><button type="button">D．他只在勝義中許有外境，名言中並不許有外境</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「月稱論師雖於名言許外境有，然不隨順餘宗門徑，故不可名經部行者。如是有說同婆沙師，亦極非理。」〔0733b24〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0734a09〕「第三、决擇空性正見之法」讀起：先講悟入真實的次第——所要證得的是什麼，以及如何從厭離生死、找到生死根本（薩迦耶見），一步步走到必須破我。</p>
@@ -212,6 +228,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

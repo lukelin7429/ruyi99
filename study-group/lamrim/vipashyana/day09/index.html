@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -186,6 +201,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>前所未有的中觀師</h3><p><span class="tag tag-lun">論文明說</span>破縛脫「非於勝義而能破除，須於世俗中破」。</p><p><span class="tag tag-zhu">助讀</span>依上下文的推讀，以原文為準：破太過者既不加勝義簡別，又說破自性的理能破縛脫，那麼這個破就不只是「勝義中無縛脫」，而是落到世俗、名言中去破——結果就是在名言中把生死、涅槃全破掉。</p><p><span class="tag tag-zhu">助讀</span>「誠為先所未有者」是帶諷刺的結語：從來沒有一位中觀論師這樣主張。明天進入第三小科：諸中觀師如何回答實事師的質難。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day09"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．論文說，若見諸法無塵許自性而生定解，卻在自宗對因果全無定解，這樣的人會怎麼處理因果？</legend><div class="qz-opts"><button type="button">A．把因果說成另有密意，不可照字面理解</button><button type="button">B．把因果安立為勝義中真實存在的法</button><button type="button">C．只好把因果說成是就他人的承許而安立的</button><button type="button">D．在自宗中把因果安立為如幻的緣起</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若見無有塵許自性引生定解，則就自宗於因果系全無引生定解之處，須就他許。」另一種人則是「於無性取密意」，兩種都「未得中觀正見」。〔0737a02〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．論文說中觀正見極難得，主要原因是什麼？</legend><div class="qz-opts"><button type="button">A．中觀論典多已失傳，現存論典不足以抉擇</button><button type="button">B．空性只能由佛親自傳授，聞思無法趣入</button><button type="button">C．必須先證四禪八定，才有資格思惟空性</button><button type="button">D．能對現、空二事同時引生定解的人極少</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「能於如是現、空二事，雙引定解者，至極少際，故極難得中觀正見。」〔0737a05〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．有人觀察瓶與嘴、項等支分找不到瓶，就說瓶沒有，再說觀者也沒有，最後說「非有非無」。宗大師怎麼評？</legend><div class="qz-opts"><button type="button">A．這是以相似正理引生顛倒解，若這樣算得正見就太容易了</button><button type="button">B．這是自續派的修法，應成派不用一異觀察來抉擇無性</button><button type="button">C．這種見只是還沒加勝義簡別，加上簡別就成為正見</button><button type="button">D．這正是龍猛一異觀察的正確修法，所得的就是中觀正見</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「由是便謂非有非無，以相似理引顛倒解。若安立此為得正見，誠乃易事。」〔0737a10〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．破太過者說「我在名言中也許縛脫，所以沒有過失」。宗大師為什麼說這不成立？</legend><div class="qz-opts"><button type="button">A．月稱名言中許有自性，所以名言中不能用破自性的理來觀察</button><button type="button">B．月稱名言中也許無自性，破自性的理名言中也用，名言縛脫也被破</button><button type="button">C．名言中的縛脫只是世間共許，根本不必以正理來加以成立</button><button type="button">D．只要在勝義中破除縛脫，名言中的縛脫自然就能保留下來</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「月稱論師於名言中，亦許諸法全無自性，汝亦共許……故於名言亦破繫縛及解脫等，極為明顯。」〔0737a20〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．宗大師說，若以破自性的正理來破因果，就和什麼沒有差別？</legend><div class="qz-opts"><button type="button">A．龍猛在《中論》第二十四品中所建立的自宗主張</button><button type="button">B．月稱在《明顯句論》中對自續派所作的破斥</button><button type="button">C．實事師在《中論》、《迴諍論》中對中觀師提出的質難</button><button type="button">D．唯識師以三自性解釋空性時所提出的主張</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：若以破自性之理而破因果，則與二十四品及《迴諍論》中「實事師宗所起諍論顯然無別」。〔0737b02〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0737b16〕「第三、諸中觀師如何答覆」讀起，卷十八開始：龍猛如何把實事師的質難「擲回」給對方，以及月稱所分的「有自性、無自性、有、無」四者差別。</p>
@@ -212,6 +228,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

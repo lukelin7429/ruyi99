@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>不是應成派的特法</h3><p><span class="tag tag-lun">論文明說</span>若「觀真義時無」＝「勝義無」，那是「凡中觀師」共許，自續派也一樣。</p><p><span class="tag tag-zhu">助讀</span>第二家原本想用「觀察勝義時無宗」來區分應成與自續；宗大師指出，照這樣講就分不出兩派了。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day35"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．慶喜說：立者不知道敵者是否以量成立，所以因不是量成。宗大師怎麼破這個理由？</legend><div class="qz-opts"><button type="button">A．主張因須量成的人要求的是敵者以量成，不是要立者先知道</button><button type="button">B．只要立者自己以量成立就足夠，敵者成不成立並不重要</button><button type="button">C．敵者口頭上說「我許」，就可以確定他已經以量成立了</button><button type="button">D．立者可以藉現量直接看見敵者的心，所以其實是知道的</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「非由立者未知敵成便不許因。故汝彼理不能破，須敵者以量成故。」〔0752a24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．宗大師說，若以「不知他心」為理由說不知敵者量成，會帶出什麼後果？</legend><div class="qz-opts"><button type="button">A．那就只能改用自續比量，因為自續不必知道對方的心</button><button type="button">B．那也同樣不能知道對方許什麼，「就他許而破」也就不成</button><button type="button">C．那就只能破外道，不能破同樣是佛弟子的實事師各部</button><button type="button">D．那就必須先修得他心通，才能夠對敵者提出任何破斥</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「亦不應知他許彼義，則以他許而破他等，亦非理故。」又說「如所說非定許故，及不知他心故」。〔0752b02〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．慶喜說現量只在灶房見到火與煙相隨，所以周遍只成一分。宗大師的回答是什麼？</legend><div class="qz-opts"><button type="button">A．灶上只能成立灶中有火徧灶有烟，周遍要另用比量成立</button><button type="button">B．灶上所見的火煙只是現量，必須再經聖言量才能成立</button><button type="button">C．灶是通達之處，在灶上所通達的就是「有火徧於有烟」本身</button><button type="button">D．周遍本來就只能成立一分，所以應成派只依世間所許</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「其上所達之義，唯取有火徧於有烟，非取灶中有火徧灶有烟，豈取時、處一分之徧？」〔0752b04〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．第二家若說：以理智觀察時不能成立無自性宗，所以不立宗。宗大師怎麼破？</legend><div class="qz-opts"><button type="button">A．理智本來就只能破他宗，所以第二家的說法是正確的</button><button type="button">B．理智只能立無自性宗，破有自性要另靠名言量來破</button><button type="button">C．理智觀察的是勝義，立宗是名言的事，二者互不相干</button><button type="button">D．那理智也同樣不能破有自性宗；而破有性就是立無性</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若以理智不能成立無性宗義，則以理智亦不能破有性宗義，因相等故」；又說「破有性即立無性……於此更無第三聚故」。〔0752b12〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．第二家說「觀察真實之時」不可有所立，否則就成勝義有。宗大師怎麼看「觀察真實之時」？</legend><div class="qz-opts"><button type="button">A．那是名言中的時位，有能觀之人、所觀之事等，不必都勝義有</button><button type="button">B．那是勝義中的時位，所以那時一切所見都是勝義有的法</button><button type="button">C．那是聖者入定的時位，凡夫思惟空性不算觀察真實之時</button><button type="button">D．那是既非勝義也非名言的時位，所以不能談有無所許</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「爾時，所有何須一切皆勝義有」；又說「其觀真實時，非於勝義，須於名言」。〔0752b18〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0752b23〕「破第三家」讀起：「中觀師連名言中也無所許」是誹謗中觀最鄙惡的說法；中觀師一定要有所許，而且此宗最極清淨。明天就讀完卷二十。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

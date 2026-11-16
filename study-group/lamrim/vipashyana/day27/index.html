@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>破立的目的</h3><p><span class="tag tag-lun">論文明說</span>破＝「遮遣顛倒錯亂之分別」；立＝「引發無倒定解之方便」。</p><p><span class="tag tag-zhu">助讀</span>這把今天的主線收起來：破立不是為了贏辯論，而是修道的方法。下一句就接著問：既然破是為了破倒執，那要破的是哪一個心的境？</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day27"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．論文說道所破（煩惱、所知二障）「於所知有」。給的理由是什麼？</legend><div class="qz-opts"><button type="button">A．二障若本來沒有，一切有情不用功力就應該解脫了</button><button type="button">B．二障是心的實體，斷除之後心也就隨之消失</button><button type="button">C．二障在勝義中有自性，所以要靠修道才斷得掉</button><button type="button">D．二障是正理所破，正理只能破所知中有的東西</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此所破事於所知有，此若無者，應一切有情不加功用而得解脫故。」〔0747b18〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．理所破有邪執與邪執所執的自性兩種。依論文，「正所破」是哪一個？為什麼？</legend><div class="qz-opts"><button type="button">A．化女本身，因為化女被破除後邪執自然消失</button><button type="button">B．邪執所執的實有自性，因為破顛倒心須先破它所執的境</button><button type="button">C．煩惱障與所知障，因為二障滅盡了才能得解脫</button><button type="button">D．能執的邪執本身，因為真正束縛眾生的是那個心</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「然正所破厥為後者，以破顛倒心須先破彼所執境故。」〔0747b23〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．論文說理所破「須所知中無」。這句話的意思是什麼？</legend><div class="qz-opts"><button type="button">A．沒有的東西才能靠修道漸斷，有的東西只能用正理破</button><button type="button">B．理所破在名言中是有的，只在勝義中才說它是無</button><button type="button">C．有的東西正理破不掉；它雖然沒有，卻能令人增益執有</button><button type="button">D．理所破既然本來沒有，修行時就不必再特別去破它</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此所破須所知中無，有則不能破故。雖如是無，然能發生增益執有，故定須破。」〔0748a01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．《迴諍論自釋》用「天授原未在家」作比喻，是要說明什麼？</legend><div class="qz-opts"><button type="button">A．說「無自性」的話本身無自性，所以沒有作用</button><button type="button">B．說「無自性」能使原本有自性的法變成無自性</button><button type="button">C．諸法本來無自性，所以根本不需要再說出來</button><button type="button">D．說「無自性」只是令人了解，不是令諸法變成無自性</button></div><p class="qz-why" hidden><b>答案：D</b>　《自釋》：「此語非令天授成無，唯顯天授家中非有。」說諸法無性，「唯為令解自性非有」。〔0748a05〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．有人說「有不能破，無不須破，離諸破立」。宗大師指出它的根本問題是什麼？</legend><div class="qz-opts"><button type="button">A．他用這個理由去破別人的破立，卻又說不應破立，自相矛盾</button><button type="button">B．他承許有自性，所以正理對他根本無從破斥起</button><button type="button">C．他把道所破與理所破弄反了，其餘的說法並沒有錯</button><button type="button">D．這句話本身沒錯，只是不應拿來批評自續派的觀察</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「自現宣說有不能破、無不須破之因，破斥他人破立觀察，而謂不應破立故。」〔0748a12〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0748a16〕「如是以正理破，若是由破倒執」讀起：正理要破的是哪一個心的境？——一切過失的根本：無明。接著辨析無明與薩迦耶見哪一個才是生死根本。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

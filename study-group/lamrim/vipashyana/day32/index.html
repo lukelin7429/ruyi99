@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>出處</h3><p><span class="tag tag-zhu">助讀</span>《中觀莊嚴論》是靜命（寂護）所造；這裡的釋，一般認為是蓮花戒的《中觀莊嚴論難處釋》。以原文為準。</p></div><div class="lr-note"><h3>「真智意樂增上，名無自性」</h3><p><span class="tag tag-lun">論文明說</span>無自性是「於真實」說的；就真智的增上說無自性，「非由世俗無智增上」。</p><p>隨事勢轉＝依事物本身的力量而起的正理（事勢正理），比量依此成立。</p><p><span class="tag tag-zhu">助讀</span>這也是自續派在「無自性」上加「真實」簡別的例子：世俗識前，他們仍許有自性。對照應成派：說無自性時不必加真實，因為名言中也沒有自性。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day32"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．月稱說「緣生」與「性無生」二者不相違。論文給的理由是什麼？</legend><div class="qz-opts"><button type="button">A．緣生是世俗諦的說法，性無生是勝義諦的說法，只是言說方便不同</button><button type="button">B．兩者的境不同：說生是就虛妄如幻的緣起，說無生是就實自性</button><button type="button">C．緣生只對實事師而說，性無生才是中觀自宗真正承許的道理</button><button type="button">D．緣生是凡夫所見，性無生是聖者入定所見，兩者的見者不同</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「生與無生二境異故，有何相違？」又說「此說不破虛妄幻生唯破實生」。〔0750b09〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．有人引《明顯句論》批評在所破上加勝義簡別，主張應成派不加簡別。宗大師怎麼回應？</legend><div class="qz-opts"><button type="button">A．那段批評是針對生滅、繫縛、解脫說的，不包括破自性的時候</button><button type="button">B．那段批評是針對唯識宗說的，與中觀內部兩派的分判沒有關係</button><button type="button">C．那段批評是在破自生的脈絡裡說的，不是一概反對加勝義簡別</button><button type="button">D．月稱後來在《入中論》裡改變了看法，所以應以後說為準</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「《明顯句論》破於所破加勝義之簡別者，是就破自生，非唯破生，釋中極顯。」〔0750b16〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．宗大師說，中觀自續師與應成師真正的分界在哪裡？</legend><div class="qz-opts"><button type="button">A．在承不承認二諦：自續派承認二諦，應成派只說勝義諦</button><button type="button">B．在所破上加不加勝義簡別：自續派加，應成派一概不加</button><button type="button">C．在勝義中破不破自性：自續派只破名言自性，應成派兼破勝義</button><button type="button">D．在名言中破不破自性，而不在所破上加不加勝義簡別</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「非就於所破加不加勝義簡別判之為二，然於名言破不破自性則有差別。」〔0750b18〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．破內外諸法的自性時，應成派為什麼不須新加「勝義」「真實」或「諦實」的簡別？</legend><div class="qz-opts"><button type="button">A．因為依應成派，「有自性」本身就已經成為勝義有了</button><button type="button">B．因為應成派認為勝義簡別只是清辨所立，龍猛論中沒有</button><button type="button">C．因為應成派破的只是外道的自性，不涉及佛弟子的主張</button><button type="button">D．因為應成派只隨順世間而說，自宗本來就沒有任何承許</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「如應成派則不須新加或勝義或真實或諦實之簡別，以有自性即已成為勝義等故。」〔0750b19〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．說「於勝義非有」時，這裡的「勝義」取三義中的哪一種？</legend><div class="qz-opts"><button type="button">A．所知之中最殊勝的空性本身，勝與義是同一件事</button><button type="button">B．隨順無分別智、聞思以上如理觀察真實義的慧</button><button type="button">C．聖者出定後所得的後得智，凡夫的聞思之慧不包括</button><button type="button">D．無分別智所現證的境，所以只有聖者入定才能見到</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「如云於勝義非有，或說云無，彼說之勝義即最後者」；又說「此取聞思以上，如理觀察真實義慧，不應唯取聖後得智」。〔0751a03〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0751a12〕「於無自性加真等簡別」讀起：清辨在破自性時也加勝義簡別，與前面諸師同在何處、不同在何處；接著進入新的一大科——應成、自續之名從何而立，先看慶喜的說法。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

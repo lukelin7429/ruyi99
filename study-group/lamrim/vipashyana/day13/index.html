@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>未得與破</h3><p><span class="tag tag-lun">論文明說</span>「非唯彼理所未能得，便名彼破。若是有法須由彼成，彼所未成乃名彼破。」</p><p><span class="tag tag-zhu">助讀</span>判準：先問這個東西若存在，是不是該由這個正理來成立。自性若有，應由觀察實性的正理找到——找不到，自性就被破了。色等的生滅本來就不是由觀察實性的正理成立的——找不到，並不表示被破。明天會用眼不見聲、東方尋瓶兩個比喻說明。</p><p><span class="tag tag-zhu">助讀</span>這也是應成派和其他派一個細微的分界：各實事宗多半認為，一法若真的存在，仔細尋求它的所施設處時，總該找到某個能承擔它的東西；應成派則說找不到也照樣在名言中有。以上是概略說法，細節以後文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day13"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．月稱說中觀與斷見不同，是不同在哪裡？</legend><div class="qz-opts"><button type="button">A．斷見者有所承許，中觀師則完全沒有任何承許</button><button type="button">B．斷見者否定前後世，中觀師則許業果有自性</button><button type="button">C．中觀說無自性、以緣起為因，並於世俗安立諸建立</button><button type="button">D．斷見者說無，中觀師不說無，而是說非有</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「論師未說彼有所許，我無所許，又未曾說，彼等許無，我不說無，是許非有，而許是說無性及立為緣起因，並於世俗許諸建立。」〔0739b01〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．竊賊的比喻要說明什麼？</legend><div class="qz-opts"><button type="button">A．斷見者說的是實語，中觀師只是轉述別人的話</button><button type="button">B．兩人說得一樣、事實也一樣，所以兩者其實沒有差別</button><button type="button">C．只要結論符合事實，怎麼得到結論並不是重點</button><button type="button">D．說法雖同，一是親見一是亂猜，所以中觀師與斷見者不同</button></div><p class="qz-why" hidden><b>答案：D</b>　《明顯句論》：「其事雖無異，然由覺者異故，應說前人是說妄語，餘是實語。」〔0739b05〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．有人說「了解無性時以為正理破業果，於自宗不立因果，雖世俗有誤，仍得無謬空見」。宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．這也被破了，因為空不是作用空，無自性中須能安立因果</button><button type="button">B．認可這種說法，認為空見無誤，只是世俗的行持有欠缺</button><button type="button">C．認為只要破生時加上勝義簡別，這種說法就能成立</button><button type="button">D．認為這是自續派的見解，只有應成派才不許這種說法</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此亦善破」；「是故空者，非作用所空之空，雖無自性，須可安立因果緣起」。〔0739b09〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．論文說「堪不堪忍正理觀察」是什麼意思？</legend><div class="qz-opts"><button type="button">A．以眼識等名言量檢驗某法，看它能不能被見到</button><button type="button">B．以觀察真實的正理去尋求自性，看是有得還是無得</button><button type="button">C．在辯論時，看該法的立論能否抵擋對方的問難</button><button type="button">D．以正理觀察之後，看是否證明該法完全不存在</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「堪不堪忍正理觀察之義，謂以觀察真實之理有得、無得。」並引《四百論釋》：「我等觀察唯為尋求自性故。」〔0740a01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．「不堪正理觀察」與「被正理所破」有什麼不同？</legend><div class="qz-opts"><button type="button">A．不堪觀察只用於勝義法，被正理所破只用於世俗法</button><button type="button">B．不堪觀察是就名言量說，被正理所破是就根本智說</button><button type="button">C．理找不到不等於被破；本應由此理成立的找不到，才算被破</button><button type="button">D．兩者是同一件事，正理找不到，就等於被正理所破除</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「非唯彼理所未能得，便名彼破。若是有法須由彼成，彼所未成乃名彼破。」〔0740a04〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0740a05〕「色等生滅是由名言識所成立」讀起：眼識不見聲音，不等於破了聲音；在東方找不到瓶，不等於沒有瓶。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

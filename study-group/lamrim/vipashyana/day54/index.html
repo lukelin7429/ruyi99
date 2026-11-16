@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>影像喻</h3><p><span class="tag tag-lun">論文明說</span>影像中的眼、耳「皆悉是空」，但「依鏡、質緣合則生，若此眾緣有缺則滅」——空與緣起在影像上同時成立。</p><p><span class="tag tag-zhu">助讀</span>明天就要處理這個喻引出的問難：既然人人都知道影像是空的，是不是人人都證了空性？</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day54"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．關於理智與「如幻」，下列哪一項符合宗大師的說法？</legend><div class="qz-opts"><button type="button">A．如幻只能由名言識引生，理智破自性後無法引生如幻定解</button><button type="button">B．理智本身就能成立如幻有，所以觀察時執有幻義也不是過</button><button type="button">C．理智破自性後引生如幻也是過，因為取如幻仍是一種執取</button><button type="button">D．理智觀察時把幻義當作所得是過，破自性後引生如幻則不是過</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「尋求有無自性之理智，執有幻義雖亦是過，然以彼理觀察破除自性之後，於諸法上定當引生執有幻義，非是過咎。」〔0763b12〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．對「無自性」與「如幻」的執取，宗大師怎麼分辨？</legend><div class="qz-opts"><button type="button">A．把它們執為諦實要破，但只取如幻、不執為實，不可捨棄</button><button type="button">B．凡是對如幻的取著都是執著，應當全部捨棄才能證空</button><button type="button">C．只要不執苗芽有自性，對其他怎麼執都不算過失</button><button type="button">D．無自性是究竟真實，執它為諦實正是證得了空性</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若不執實，但取有幻，决不當謂取幻亦復有執著故，應當棄捨。若不爾者，緣起定解一切皆無」。〔0763b17〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．把境、觀者、能決定者都一路破成非有，覺得現境杳茫無實。論文說這是什麼空？</legend><div class="qz-opts"><button type="button">A．證得勝義諦時的現象，也就是如幻的空性本身</button><button type="button">B．沒分清自性有無與有無，破過頭而成的破壞緣起之空</button><button type="button">C．定中所修的如虛空空性，出定後自然轉成如幻</button><button type="button">D．中觀見最難得的境界，只有極少數人能夠生起</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「由是未分自性有無與僅有無，以諸正理盡破一切之所引生。如此之空，是為破壞緣起之空。」又說這種杳茫顯現「并非難事」。〔0763b19〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．論文說中觀見「最極難得」，最難的地方是什麼？</legend><div class="qz-opts"><button type="button">A．在定中長時安住於無自性，不起任何一絲分別</button><button type="button">B．了解影像、夢境等譬喻都只是名言中所空</button><button type="button">C．破盡自性，又能在無性的補特伽羅上安立造業受果</button><button type="button">D．以正理觀察，使現境顯得杳茫無實、無所執取</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「然最難處，謂盡破自性，及以無性補特伽羅立為造業、受果者等，至心定解，而能雙立此二事者，至最少際」。〔0763b24〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．修習時若覺得「無自性」與「造業受果」相違，論文教人怎麼做？</legend><div class="qz-opts"><button type="button">A．再用七相推求，直到業果的顯現也一併遮止</button><button type="button">B．暫時放下緣起，先專修空品直到定解堅固為止</button><button type="button">C．退回名言層次，只承認業果，暫時不觀察自性</button><button type="button">D．用影像喻：影像所現皆空，卻依鏡、質緣合而生</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「若覺彼二現相違時，當善攝取影像等喻，思不違理。謂如形質所現影像……然依鏡、質緣合則生」。〔0764a14〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0764a18〕「若爾，了知彼影像等」讀起：有人問，知道鏡中影像是空的，是不是就通達了無性？宗大師說明影像喻只取「少分空」，以及幻、夢、陽燄等喻同理；最後讀《三摩地王經》一串如幻偈。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

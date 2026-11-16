@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>出處</h3><p><span class="tag tag-zhu">助讀</span>《迴諍論》與《迴諍論自釋》都是龍猛造。</p></div><div class="lr-note"><h3>「莫言」之喻</h3><p><span class="tag tag-zhu">助讀</span>對方以為：說「無自性」的那句話也無自性，就像說「不要出聲」本身也是聲音，會自我取消。龍猛回答：「莫言」之喻只適用於用無自性的話去破「無自性」；中觀是用無自性的話去破「自性」，方向不同，所以不會自我取消。</p><p><span class="tag tag-lun">論文明說</span>「破無性故諸法有性，有自性故即非是空」——這就是前一列「破無性之空，則當有自性」的經證。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day23"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．破太過者說中觀破一切事。宗大師說「事有二種」，要怎麼分辨？</legend><div class="qz-opts"><button type="button">A．自性所成之事二諦中都要破；能起作用之事名言中不破</button><button type="button">B．能起作用之事要破，自性所成之事名言中留下</button><button type="button">C．有為的事一律都破，只有無為的無事才不破</button><button type="button">D．勝義中破一切事，名言中則許自性所成之事</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若以自性所成之事，隨於二諦許何諦有皆當破除，能作用事於名言中非能破除。」〔0745a23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．若不加「有自性」的簡別而破有、無、俱、俱非四句，宗大師說會有什麼過失？</legend><div class="qz-opts"><button type="button">A．破完四句後無法安立勝義諦，反而落入有邊</button><button type="button">B．先破有無說「俱非彼二」，又說「亦非非二」，自許相違</button><button type="button">C．只把四句用來破外道，卻不用來觀察自宗</button><button type="button">D．只破了有和無兩句，漏掉俱和俱非兩句沒有破</button></div><p class="qz-why" hidden><b>答案：B</b>　論文說破有事、無事時先云「俱非彼二」，次又云「亦非非二」，這「是自許相違」。〔0745b01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．宗大師說決定「苗無自性」的慧，它的境不能破。依論文，理由是什麼？</legend><div class="qz-opts"><button type="button">A．那個慧是無分別智，沒有任何所緣境可以破</button><button type="button">B．那個慧屬於名言量，正理只破分別心的境</button><button type="button">C．那個慧只執苗的自性非有，並不執無自性是有是無</button><button type="button">D．那個慧所緣的無自性是勝義有，正理找得到它</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此决定解唯於苗、芽執性非有，俱不執云，其無自性為有為無，應當閉目向內觀之極易明了。」〔0745b09〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．關於「空性」，論文說真正要用正理破除的是什麼？</legend><div class="qz-opts"><button type="button">A．通達苗無自性的智慧，它所緣的那個無自性</button><button type="button">B．另一個心認為空性在名言中是有，那個心的境</button><button type="button">C．一切緣空性的心，無論執空性是有或無都要破</button><button type="button">D．另一個心把苗的無自性執為有自性，那個心所執的境</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「次由餘心縱執無性是有，然所執境亦非正理所破。若許空性是有自性，則當破除。」〔0745b12〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．宗大師引《迴諍論》，是要說明什麼？</legend><div class="qz-opts"><button type="button">A．若破除無自性之空，就成了有自性，也就不是空了</button><button type="button">B．中觀只破他宗、自己不立無自性，所以沒有過失</button><button type="button">C．無自性與有自性兩邊都要破，才是遠離二邊的中道</button><button type="button">D．說無自性的話也無自性，所以像「莫言」一樣自我取消</button></div><p class="qz-why" hidden><b>答案：A</b>　論文引《迴諍論》：「若即無自性，能遣無自性，遮無自性已，即成有自性。」〔0745b19〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0745b22〕「故前所引《中觀論》云」讀起：「若復見於空，說彼無可治」的「見空」是指什麼；以及為什麼說無自性見是「無二寂靜門」。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

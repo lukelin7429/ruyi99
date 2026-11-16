@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -172,6 +187,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>順行、逆返</h3><p><span class="tag tag-zhu">助讀</span>順行、逆返＝流轉與還滅，呼應昨天讀過的十二緣起「順轉生起次第及逆轉還滅之次第」。這是依上下文的解讀，以原文為準。</p></div><div class="lr-note"><h3>兩層：不相違，而且相助</h3><p><span class="tag tag-lun">論文明說</span>第一層：緣起與無自性「隨順和合，固不待言」——不矛盾。</p><p><span class="tag tag-lun">論文明說</span>第二層：「即此緣起，為達無性最無上因」——緣起不只與無自性不相違，還是證明無自性最好的理由。</p><p><span class="tag tag-zhu">助讀</span>對實事師，緣起是有自性的證據；對破太過者，無自性就要破掉緣起；對中觀，緣起正是通達無自性的因。這三者的差別，是這幾天的主線。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day08"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．宗大師說，「若誰可有空，於彼一切成」顯示緣起因果是在哪裡安立的？</legend><div class="qz-opts"><button type="button">A．因果在勝義中安立，空性則只在名言中加以安立</button><button type="button">B．就在承許無自性的同一宗中安立，不是推給他人的承許</button><button type="button">C．因果由實事師安立，空性由中觀師安立，兩宗互補</button><button type="button">D．無性是就自宗說，因果則只隨他人世間的承許而假立</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「此說何宗許無自性，即於彼宗生死、涅槃一切緣起，皆應理故。」並破「就他而假立」的說法。〔0736b02〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．在性空之宗中，苦諦為什麼能夠成立？</legend><div class="qz-opts"><button type="button">A．苦諦屬於世俗諦，世俗中的法本來就是真實存在的</button><button type="button">B．苦是眾生親身感受到的，所以苦必然有它的自性</button><button type="button">C．苦是依因緣而建立的緣起，若沒有緣起，苦就不成</button><button type="button">D．苦是佛親口宣說的，依聖教量便可直接成立苦諦</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「故於此宗緣起成立，此成立故苦亦成立，苦依因緣緣起建立，若無緣起，苦不成故。」〔0736b06〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．論文說，這裡講的「成、不成」應該怎麼理解？</legend><div class="qz-opts"><button type="button">A．說的是那些法是否為聖者根本智所見到</button><button type="button">B．說的是那些法能否在辯論中被對方承認</button><button type="button">C．說的是那些法能否經得起勝義正理的觀察</button><button type="button">D．說的是那些法是有還是無，也就是存不存在</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「言成不成，應知是說彼等有無。」〔0736b15〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．《迴諍論自釋》說諸緣起法無自性，理由是什麼？</legend><div class="qz-opts"><button type="button">A．因為待因緣；若有自性，沒有因緣也應恆常存在</button><button type="button">B．因為是心識所現，離開心識之外並沒有外境</button><button type="button">C．因為正理觀察時找不到，所以名言中也沒有</button><button type="button">D．因為剎那生滅，沒有任何一刻能停住不變</button></div><p class="qz-why" hidden><b>答案：A</b>　《自釋》：「何故無性？待因緣故。若法有性，則無因緣亦應恆有。」宗大師說：「此極顯說若有自性，不待因緣，若待因緣，定無自性。」〔0736b17〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．《迴諍論自釋》舉瓶、衣能盛水、遮風的例子，要說明什麼？</legend><div class="qz-opts"><button type="button">A．言語只是隨順對方的方便，本身成立不了任何道理</button><button type="button">B．言語雖無自性，但因為是緣起，仍能成立諸法無自性</button><button type="button">C．言語必須有自性，才能真正破除對方所執取的自性</button><button type="button">D．瓶、衣在名言中有自性，所以才能盛水與遮蔽風寒</button></div><p class="qz-why" hidden><b>答案：B</b>　《自釋》：「如瓶、衣等，是緣起故，自性雖空，然能受取蜜、水、乳麋，及能遮蔽風寒日曝，如是我語，是緣起故，雖無自性，然能善成諸法無性。」〔0736b20〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0737a01〕「若執緣起生滅定有自性」讀起：為什麼中觀正見極難得、哪種「找不到就說沒有」的觀察是相似正理，以及破太過者如何破壞了中觀唯一的勝法。</p>
@@ -198,6 +214,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

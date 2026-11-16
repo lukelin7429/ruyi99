@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>兩種識的境不相通</h3><p><span class="tag tag-lun">論文明說</span>「顛倒亂識與無顛倒不錯亂識，自境互異，趣異境故」。</p><p><span class="tag tag-zhu">助讀</span>這裡的「無錯亂識」，宗大師明天會說：總的來說是指現證勝義諦的根本智。它所見只有空性，看不到色等；色等只在錯亂識前成立。所以要找一個「兩種識都能成立」的有法，是找不到的。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day41"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．《明顯句論》答自續派：清辨若許「破生」為所立法，所依的有法會變成怎樣？</legend><div class="qz-opts"><button type="button">A．所依有法不受影響，因為立、敵雙方都共同承許</button><button type="button">B．真實的所依有法成立，因為已在勝義中破除了生</button><button type="button">C．真實的所依有法失壞，只剩顛倒識所得的「我事」</button><button type="button">D．所依有法變成畢竟無，連名言中也不能再安立</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若許破生為所立法，爾時真實所依有法，唯是顛倒所得我事，悉皆失壞，是此自許。」〔0755b18〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．月稱說找不到一個兩家共許、不帶真妄差別的「眼」作有法。根本的理由是什麼？</legend><div class="qz-opts"><button type="button">A．眼在勝義中不存在，所以連總的眼都無法取為有法</button><button type="button">B．眼是內處，只有自己能見，別人無法共同觀察它</button><button type="button">C．實事師只許外處，不許眼等內處可以作為有法</button><button type="button">D．顛倒的亂識與不顛倒的無亂識，所緣之境互不相同</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「顛倒亂識與無顛倒不錯亂識，自境互異，趣異境故」；《明顯句論》：「倒與非倒互相異故。」〔0756a15〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．這一段所說「有法不能極成」的「敵者」，宗大師說範圍包括誰？</legend><div class="qz-opts"><button type="button">A．許勝義有性的實事師，以及名言中許自相的自續師</button><button type="button">B．只限於外道各派，佛弟子之間不會有這個問題</button><button type="button">C．只限於主張自生的數論，其他各派都不算在內</button><button type="button">D．只限於許勝義有性的實事師，不包括中觀自續師</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「然總許諸法勝義有性諸實事師，及於名言許彼諸法有自相性自續諸師，皆是敵者。」〔0755b24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．本論後文說「無性師」「有性師」，宗大師說各指什麼？</legend><div class="qz-opts"><button type="button">A．無性師指自續派；有性師指實事師與應成師</button><button type="button">B．無性師指應成派；有性師指實事諸師與自續師</button><button type="button">C．無性師指所有中觀師；有性師只指實事諸師</button><button type="button">D．無性師指唯識與中觀；有性師指有部與經部</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「言無性師當知是說應成派師，言有性師當知是說實事諸師及自續師。」〔0756a03〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．自續派要求成立有法的現量必須「無錯亂」。宗大師說應成派為什麼不許這樣的量？</legend><div class="qz-opts"><button type="button">A．現量只能緣自相，不能緣共相，所以成不了有法</button><button type="button">B．無亂的現量只有聖者才有，凡夫的現量全都錯亂</button><button type="button">C．無亂須所現自相如現而有，而名言中任何法都無自相</button><button type="button">D．應成派只許比量，不許任何現量可以成立有法</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「定須觀待現彼自相，如現而有」；「因於名言任隨何法皆無自相所成自性，故無能成彼性之量」。〔0756a06〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第42天）從同一行〔0756a17〕「又釋此義，從曰「若時」」讀起：宗大師繼續逐句解釋眩翳見毛輪的比喻，然後進入「喻不相同」——為什麼「總聲」可以、「總眼」不行。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

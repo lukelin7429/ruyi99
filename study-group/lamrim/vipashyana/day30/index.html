@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>讀中觀論的一把鑰匙</h3><p><span class="tag tag-lun">論文明說</span>「若自性有」「若自體有」「若自相有」「若是實有」——在這四家論中意思相同，都是無明所執的那個。</p><p><span class="tag tag-zhu">助讀</span>「此二論師」依上下文是佛護、月稱；以原文為準。</p><p><span class="tag tag-zhu">助讀</span>今天讀完「正明所破義」：所破就是無明所執的自性。下一科處理：說「無」的時候，什麼情況要加「自性」「勝義」等簡別，什麼情況不必。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day30"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．依論文，無明所增益、正理所要破的「自性」，它的相（定義）是什麼？</legend><div class="qz-opts"><button type="button">A．不依因緣而生、時位不會改變的常住體性</button><button type="button">B．外道所立能生萬物的原質與神我之性</button><button type="button">C．名言中如所顯現、能起作用的自相之體</button><button type="button">D．不由自心增上安立，各從自體就有的本住性</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「非由自心增上安立，執彼諸法各從自體，有本住性，即是其相。」〔0749a23〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．《四百論釋》以「不仗他性」作為自性的異名。這裡的「他」是指什麼？</legend><div class="qz-opts"><button type="button">A．有境的名言之識，不是指因緣</button><button type="button">B．勝義的法性，即不依真如而有</button><button type="button">C．其他的補特伽羅，即不依他人而有</button><button type="button">D．因與緣，即不依因緣而生</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「不仗他者，非謂不仗因緣，是說有境名言之識為他，非由彼增上安立為不仗他。」〔0749b02〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．宗大師用「計繩為蛇」比喻諸法，這個比喻要說明的重點是什麼？</legend><div class="qz-opts"><button type="button">A．諸法就像繩上的蛇一樣，在名言中也完全沒有</button><button type="button">B．諸法只在名言識上如所顯現安立，到境上找本性一無所有</button><button type="button">C．繩子是真的、只有蛇是假的，所以諸法仍有自性</button><button type="button">D．蛇會被其他名言量違害，諸法也同樣會被違害</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「如是諸法，亦唯於名言識，如所顯現觀察安立，若於境上觀察諸法本性如何，全無所有。」〔0749b03〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．緣其他補特伽羅而執他有自性，依論文應怎麼判？</legend><div class="qz-opts"><button type="button">A．是薩迦耶見，因為它屬於人我執</button><button type="button">B．是法我執，因為他人屬於外法</button><button type="button">C．是補特伽羅我執，但不是薩迦耶見</button><button type="button">D．不是人我執，只是不染汙的無知</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「執補特伽羅有自性者，理應許為補特伽羅我執……然非補特伽羅我執，皆是薩迦耶見。」〔0749b14〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．宗大師以「執聲為常」為喻，說明正理對薩迦耶見破的是什麼？</legend><div class="qz-opts"><button type="button">A．只破分別薩迦耶見的所緣，俱生的所緣不必破</button><button type="button">B．所緣與行相都要破，連名言中的我也不能留下</button><button type="button">C．不破執自性的行相，只破緣五蘊為我的所緣</button><button type="button">D．不破念「我」之心所緣的名言我，只破所執的自性之我</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「此顯不破薩迦耶見俱生所緣，然非不破彼執行相自性之我。譬如不破執聲為常所緣之聲，然破彼執境之聲常。」〔0749b23〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第31天）從〔0750a04〕「第二、於餘所破加不加之理」讀起：石女兒、兔角這類畢竟無的東西，說「無」不需加簡別；那對色、聲等，什麼時候要加「勝義」「自性」等簡別？</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

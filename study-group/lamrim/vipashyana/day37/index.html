@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>這段釋文是誰的話</h3><p><span class="tag tag-zhu">助讀</span>這段是《迴諍論》本釋（龍猛自釋）中轉述的對方難詞，不是龍猛自己的主張；龍猛接著才作答。宗大師引它，是要說明「現量全無」這句出自對方的問難脈絡。以原文為準。</p><p><span class="tag tag-zhu">助讀</span>所以第三家拿這句當「中觀師無量」的證據，是把問難當成了主張。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day37"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．《入中論》「果故此雖無，我就世說有」的「就世」，宗大師怎麼解釋？</legend><div class="qz-opts"><button type="button">A．依唯識宗所許的依他起實事，來安立色等世俗的有</button><button type="button">B．依世間多數人的看法而說有，不需要任何量來成立它</button><button type="button">C．依無損的名言識安立世俗有，中觀師自身也有這種名言量</button><button type="button">D．只是隨順別人的說法而說有，中觀師自宗並不承許世俗</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「言就世者，非說就他而非自宗，是於無損名言諸識，安立一切世俗義有，皆就此故，諸中觀師自身亦有此諸安立名言量故。」〔0753b21〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．「如汝依他事，我不許世俗」，宗大師說月稱「不許」的是什麼？</legend><div class="qz-opts"><button type="button">A．凡夫名言識所見的一切法，因為它們都是錯亂的</button><button type="button">B．一切世俗法，因為中觀自宗只承許勝義諦而已</button><button type="button">C．世間共許的色等法，因為它們只是就他而安立的</button><button type="button">D．像唯識宗所許、堪忍正理觀察的依他起那樣的世俗</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「言不許世俗者，謂如唯識宗所許依他，自不許之義，非說自宗不許世俗」；又說「如汝所許依他實事，堪忍正理之所觀察，我諸世俗未如是許」。〔0753b18〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．「果故此雖無」的「雖無」，宗大師說應當怎麼理解？</legend><div class="qz-opts"><button type="button">A．是自相無；不能解作「雖自相無，然於彼有」或「雖無而有」</button><button type="button">B．是隨順對方而說無，中觀師自己對有無都不作承許</button><button type="button">C．是指畢竟無，像石女兒一樣，世間名言中也不存在</button><button type="button">D．是勝義中無，所以在名言中仍然可以有自相的存在</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「言雖無者，是自相無，不可釋為雖自相無，然於彼有，及雖無而有」，因為自相有「雖於名言亦非有故」。〔0753b23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．《迴諍論》「我無所宗，故我唯無過」，依宗大師，龍猛的意思是什麼？</legend><div class="qz-opts"><button type="button">A．中觀師只舉對方的過失，自己從來不說一切法無自性</button><button type="button">B．不許「一切法無自性」這句立宗之言有自性，並不是說無宗</button><button type="button">C．中觀師在名言中也沒有任何主張，所以敵者無從質難</button><button type="button">D．中觀師只在觀察勝義時不立宗，平常說法才有所主張</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若於如斯立宗之言許有自性，則與立一切法皆無自性，我有相違之過。然我不許爾，故無彼過。是顯此義，非立無宗。無與無性二者差別，極重要故。」〔0754a09〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．《迴諍論》說「若由現等義，有少法可緣」，現量等「無少可緣」，宗大師說是什麼意思？</legend><div class="qz-opts"><button type="button">A．現量只能緣一處一時，所以不能成立普遍的周遍關係</button><button type="button">B．中觀師只依對方所許的量來破，自己並不承許有量</button><button type="button">C．能量、所量沒有自性，並不是連緣起的能量、所量也沒有</button><button type="button">D．現量都是錯亂識，所以中觀師不依任何量來破他宗</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「是顯能量、所量無自性之能緣、所緣，非顯全無緣起之能量、所量。」〔0754a11〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0754a17〕「《四百論》說「有無及二俱」等者」讀起：繼續解釋對方所引的《四百論》《六十正理論》《明顯句論》，以及《迴諍論》「所破無所有，故我全無破」。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

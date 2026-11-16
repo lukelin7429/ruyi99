@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>六過</h3><p>拆開看：①許我無義 ②我當成多 ③作者與業成一 ④造業失壞 ⑤未造會遇 ⑥憶宿生不應理。</p><p><span class="tag tag-zhu">助讀</span>佛護三過中的「有生滅」並沒有單獨列為一過，而是展開成④⑤⑥三過；再加上「取者與取成一」，合為六過。</p></div><div class="lr-note"><h3>各派的「我」與這六過</h3><p><span class="tag tag-zhu">助讀</span>凡是在蘊中找出一法當作我的說法（如以意識或阿賴耶為我的例子），都屬廣義的「我、蘊一」這一邊，都得面對這些推理。下面「破異品」則針對主張我離蘊而有的一邊（如外道的常我）。以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day51"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．我若一一剎那自相生滅，會有「作業失壞」的過失。論文的理由是什麼？</legend><div class="qz-opts"><button type="button">A．造業的我在受果前已滅，前後我自性各異，果無人受</button><button type="button">B．後我不記得前我造過的業，所以業果無從成熟</button><button type="button">C．業本身剎那就滅了，滅了以後沒有感果的力量</button><button type="button">D．造業時的心是無記心，所以業不能牽引果報</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「先造業果應無人受，作業之我未受果前已滅壞故，無餘我故。前後諸法其自性異，故除前我別無後來異性之我」。〔0762a03〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．若說「前我雖滅，由後我受果」，論文說會有「未作會遇」的過失。這是什麼意思？</legend><div class="qz-opts"><button type="button">A．前我已入涅槃，後我卻仍要承受前我未盡的業果</button><button type="button">B．前後我自性各異，後我能受前我的果，別人也應受我造的業果</button><button type="button">C．一切眾生的業果都應合在一處，由同一個我來受用</button><button type="button">D．後我若受果，前我也應同時受果，一個業會有兩次果報</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「亦當受餘補特伽羅作業之果，以此自性補特伽羅所作業果，由彼異性補特伽羅而受用故。」〔0762a06〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．對方說：前後我體性雖別，但是一個相續，所以沒有業壞等過。宗大師怎麼回答？</legend><div class="qz-opts"><button type="button">A．一相續只能安立在心識上，不能安立在我上</button><button type="button">B．一相續可以成立，但前後我在勝義中必須是一</button><button type="button">C．自性各異的兩法不能是一相續，就像彌勒與近護</button><button type="button">D．相續本身也不存在，所以根本不必討論業果</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若自性異是一相續，不應道理，猶如彌勒、鄔波笈多。」〔0762a14〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．應成派自己也說前後非一，怎麼能憶念宿命？論文用鴿足與酪瓶的譬喻說明什麼？</legend><div class="qz-opts"><button type="button">A．鴿足確實進入了酪中，正如我確實從前世來到今生</button><button type="button">B．憶念宿命只是錯覺，好比酪上的痕跡並非鴿足所留</button><button type="button">C．前後的我自性相同，所以能在心中留下記憶痕跡</button><button type="button">D．今生的人雖沒有去到前世，憶念前世所受也不相違</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「是一相續此宗無違，唯於他宗是一相續不應理故」；「如是現法補特伽羅未往前世，然憶宿受亦無相違。」〔0762a21〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．「云何所取法，而成能取者？」這句指出許我、蘊是一會有什麼大過？</legend><div class="qz-opts"><button type="button">A．蘊是所取、我是能取，二者若是一，作者與業也成一</button><button type="button">B．能取與所取若是一，就成了唯識所說的能所不二</button><button type="button">C．所取的蘊有生滅，能取的我卻是常，所以不能是一</button><button type="button">D．蘊是能取、我是所取，二者若是一，取者就無所取</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「蘊是所取，我是能取。若許彼二是一，作業、作者亦當成一。能斫、所斫，瓶及陶師，火與薪等，皆當成一。」〔0762b04〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第52天）從〔0762b10〕「第二、破異品」讀起：若我與蘊自性相異，又有什麼過失？</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

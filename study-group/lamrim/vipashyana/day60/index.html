@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>頌的後半</h3><p><span class="tag tag-lun">論文明說</span>佛護、月稱的「無垢清淨宗」：於「無性如幻法」，「生死涅槃緣起理，作用皆成」。</p><p><span class="tag tag-zhu">助讀</span>「汝心雖覺全無性，因果緣起難安立，然彼乃是中觀宗」：讀者心裡會覺得「全無自性」與「因果成立」難以並存——宗大師說，能把兩者合起來，正是中觀宗的獨到之處。這是整個「決擇空性正見」的總結。</p><p><span class="tag tag-zhu">助讀</span>「願謂無宗尚應學」一句，我讀作：想主張「中觀師無宗」的人更應該學這個（呼應卷二十破「中觀師無自宗」，第37–40天）。這一句的語法較難斷，以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day60"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．依龍猛諸論，聲聞、獨覺也證什麼？理由是什麼？</legend><div class="qz-opts"><button type="button">A．只證能取所取異體空，不證一切法都沒有自性</button><button type="button">B．也證一切法無自性，因為解脫生死要由無性空見成辦</button><button type="button">C．只證補特伽羅無我，法無我只有大乘菩薩才能證</button><button type="button">D．只證粗分人無我，細分人無我要到大乘才會證得</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「龍猛菩薩諸論，明顯宣說聲聞、獨覺亦證一切諸法無性，以說解脫生死要由無性空見乃成辦故。」〔0767b01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．聲聞、獨覺也有空性正見，為什麼斷不了所知障？</legend><div class="qz-opts"><button type="button">A．所知障要另用一種不同於空見的對治才能夠斷除</button><button type="button">B．他們的空見只是比量，從來不能成為現量的證悟</button><button type="button">C．煩惱盡了就以此為足、不長時修，也無廣大妙行輔助</button><button type="button">D．他們沒有空性正見，只有補特伽羅無我的見而已</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若煩惱盡，以此便足不長時修，故不能斷諸所知障」；又說斷所知障「亦必觀待學餘眾多廣大妙行」。〔0767b02〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．論文以「同一個無我見，斷見惑快、斷修惑要長時修」為喻，要說明什麼？</legend><div class="qz-opts"><button type="button">A．煩惱障用空見來斷，所知障則要用菩提心來斷</button><button type="button">B．二障的對治不同，所以大小乘的見地也就不同</button><button type="button">C．見惑用空見來斷，修惑則要用奢摩他來伏除</button><button type="button">D．二障的真對治同是空見，差在修得長短與圓不圓滿</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「如是拔除二障種子，真能對治，雖是前說空性正見，然由長時修不修故，有唯能斷諸煩惱障而不能斷所知障者。」〔0767b04〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．其他中觀師所說的「法我執」，月稱把它歸在哪裡？</legend><div class="qz-opts"><button type="button">A．歸為染污無明，屬煩惱障，不是所知障</button><button type="button">B．歸為所知障，只有菩薩才需要斷除它</button><button type="button">C．歸為無記無明，不障解脫只障成佛</button><button type="button">D．歸為分別煩惱，見道時就一次斷盡</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「由是因緣，餘中觀師許為法我執者，在此論師許為染污無明。」〔0767b10〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．依應成派這裡的說法，「所知障」是指什麼？</legend><div class="qz-opts"><button type="button">A．色、聲等現境的一切顯現，本身都是所知障</button><button type="button">B．執自性熏成的習氣，令實無自性的法錯亂現為有自性</button><button type="button">C．不知一切所知的無知，和執自性的心沒有關係</button><button type="button">D．執一切法有自性的那個心，本身就是所知障</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「謂從無始來著有自性，由彼耽著熏習內心，安立令成堅固習氣，由彼習氣增上力故，實無自性，錯亂顯現，名所知障。」〔0767b11〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第61天）從〔0768a05〕「第二、觀之差別」讀起：決擇空性正見到今天讀完，接下來講毘缽舍那的種類與修法——依《修次中篇》，具足三種資糧、有了正見之後，所修的毘缽舍那總共有幾種。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

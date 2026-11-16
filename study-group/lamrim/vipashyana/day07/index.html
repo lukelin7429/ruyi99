@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -193,6 +208,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>龍猛不共之宗</h3><p>拆句：由緣起因｜故自性空｜緣起義現為無性空性之義。</p><p><span class="tag tag-zhu">助讀</span>以「緣起」當理由（因）來成立「自性空」——這叫「緣起因」。對實事師而言，緣起正好是有自性的證據；對中觀而言，緣起正好是無自性的證據。同一個理由，結論相反，就看能不能分清「有」與「有自性」。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day07"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．宗大師大聲宣告，「性空」的「空」是什麼意思？</legend><div class="qz-opts"><button type="button">A．是緣起的意思，不是作用空無、什麼都沒有</button><button type="button">B．是心中不起分別、對一切都不作意的意思</button><button type="button">C．是諸法連名言中也不存在、只剩假名的意思</button><button type="button">D．是外境不存在、一切唯是心識所現的意思</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「諸具慧者應知性空之空義，是緣起義，非作用空無事之義。」〔0735b23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．論文說，實事師與中觀師真正爭論的「不共之事」是什麼？</legend><div class="qz-opts"><button type="button">A．補特伽羅究竟是假有，還是勝義中實有</button><button type="button">B．在自性空之中，能不能安立生死、涅槃一切建立</button><button type="button">C．佛說的經，哪些是了義、哪些是不了義</button><button type="button">D．名言中是否許有外境，還是一切都唯識所現</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「故實事師與中觀師，諍論二宗不共之事，唯諍性空可否安立生死、涅槃一切建立。」〔0736a06〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．龍猛說「若誰可有空，於彼一切成，若誰不許空，於彼皆不成」，意思是什麼？</legend><div class="qz-opts"><button type="button">A．只有證得空性的聖者才能成辦一切，凡夫則一切都不成</button><button type="button">B．在勝義中一切都能成立，在名言中則一切都不能成立</button><button type="button">C．許性空的宗一切建立都成立，不許空的宗反而都不成</button><button type="button">D．中觀師只是辯解自己沒有過失，並沒有反指對方的過失</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「且於性空之宗，有生滅等，於自性非空之宗反皆不成。」〔0736a09〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．有人自稱講中觀，卻說「無自性中一切因果都不得成」。宗大師說這其實是什麼？</legend><div class="qz-opts"><button type="button">A．說的是應成派的究竟見，自續派不能接受</button><button type="button">B．說的是龍猛為破常見而暫時施設的方便語</button><button type="button">C．說的是唯識宗所主張的依他起無自性</button><button type="button">D．說的是實事師的宗義，不是龍猛的主張</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「故現自許講中觀義者，說無性中能生、所生等一切因果悉不得成，乃說實事之宗。」〔0736a15〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．下列哪一項是論文所說的「龍猛菩薩不共之宗」？</legend><div class="qz-opts"><button type="button">A．由緣起的理由故自性空，緣起義顯現為無自性的空性義</button><button type="button">B．緣起屬於世俗、空性屬於勝義，兩者彼此互不相干</button><button type="button">C．雖然是緣起而生，但緣起之物各自仍有它自己的自性</button><button type="button">D．必須先破除緣起，才能顯出遠離一切戲論的空性</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此等唯說，由緣起因故自性空，故緣起義現為無性空性之義，即是龍猛菩薩不共之宗。」並說「莫違說，凡因緣生定有自性」。〔0736b01〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0736b02〕「若謂無性之空」讀起：緣起因果是否只能「就他人」假立？看《明顯句論》怎麼從「有空」一路推到四諦、三寶成立，以及龍猛在《迴諍論》怎麼說「無自性的話也能破、能立」。</p>
@@ -219,6 +235,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

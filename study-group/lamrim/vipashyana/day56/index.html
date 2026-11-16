@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>由一知一切</h3><p><span class="tag tag-zhu">助讀</span>和昨天《四百論》「說見一法者，即見一切者」呼應：通達一法空性的理路，適用於一切法。</p><p><span class="tag tag-zhu">助讀</span>「於說不生慢」：通達了根本，說再多法也不覺得自己了不起——因為所說的都只是同一個道理的展開。這是讀頌的理解，以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day56"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="1"><legend>1．「合由名差別成就義」中，我與蘊等的關係是怎麼安立的？</legend><div class="qz-opts"><button type="button">A．我是取者但不是作者，作者只能是五蘊中的行蘊</button><button type="button">B．依蘊、界、處假名為我；我是取者、作者，蘊等是所取、所作</button><button type="button">C．我與蘊都是取者，彼此互相以對方為所取而成立</button><button type="button">D．蘊是取者、作者，我是被蘊所取、所作的所取與業</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「依於五蘊、六界及以六處假名為我，彼為所取，我為取者」；「我取蘊等有作用故，名為作者，蘊等是我所取業，故名為所作。」〔0764b21〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>2．論文說，破了我的自性，「我所」也無自性。理由是什麼？</legend><div class="qz-opts"><button type="button">A．眼等在名言中也不屬於任何人，所以本來不是我所</button><button type="button">B．我所是依我而生的果，因既然是假，果也就是無</button><button type="button">C．以正理找不到我，就不可能以正理找到「這是我的眼」</button><button type="button">D．我所是我執的對象，斷了我執，我所自然也就消失</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「破我自性，爾時云何能以正理得此即是我之眼等，由是我所亦無自性。」〔0765a02〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>3．論文引《三律儀經》「我不與世間諍論」，要說明什麼？</legend><div class="qz-opts"><button type="button">A．佛不評論世間的看法，只講勝義諦</button><button type="button">B．世間共許的事在勝義中也能成立</button><button type="button">C．世間所說都錯，只是暫時隨順不說</button><button type="button">D．自宗的正理不破世間共許的名言有</button></div><p class="qz-why" hidden><b>答案：D</b>　經說「以於世間許有許無，我亦許爾」；論文說「自許正理不破世間共許事故」。〔0765a09〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>4．把觀車、觀我的方法用到瓶、衣上，論文說結果是什麼？</legend><div class="qz-opts"><button type="button">A．七相推求就二諦都不可得，只在不觀察的名言識前安立為有</button><button type="button">B．瓶、衣是法而不是補特伽羅，必須改用破四生才能觀察</button><button type="button">C．七相推求在勝義中不可得，在名言中可在七相之一找到瓶</button><button type="button">D．七相推求只適用於車與我，瓶、衣只能用一、異來觀察</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「觀瓶、衣等與自色等為一、異等七相尋求，於七相中雙就二諦，俱不可得，然就名言無觀察識安立為有。」〔0765a07〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>5．論文引「依業名作者，依作者名業」，由此要人了知什麼？</legend><div class="qz-opts"><button type="button">A．作者先有，業依作者後生，所以作者較為根本</button><button type="button">B．能生所生、能量所量等一切，都只是互相觀待而立</button><button type="button">C．業與作者在勝義中相依，在名言中各自獨立</button><button type="button">D．作者與業本是同一體，只是在名稱上有所不同</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「謂當了知能生、所生……能量、所量，此等一切皆無自性，唯是互相觀待而立。」〔0765a18〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第57天）進入卷二十三，從〔0765b04〕「第二、抉擇法無我」讀起：法無我的决擇有多種，《入中論》以破四生為主，宗大師依此略說「非自非從他」。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（2）</summary><div class="lr-note"><h3>聖父子</h3><p><span class="tag tag-zhu">助讀</span>聖者父子＝龍猛（父）與聖天（子）。</p></div><div class="lr-note"><h3>為什麼隨應成</h3><p><span class="tag tag-lun">論文明說</span>名言中破除自性，又能善立生死、涅槃一切建立。</p><p><span class="tag tag-zhu">助讀</span>「此二論師論中數說」，前文一直以佛護、月稱為應成派代表，這裡我讀作指他們二位。以原文為準。</p><p><span class="tag tag-zhu">助讀</span>呼應第5天：所破抓不到最細，會墮常邊；破得過頭，會壞因果。應成派兩邊都守住——所破最細（連名言中的自相也破），而名言建立完整保留。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day46"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．佛護以水潤地、火熱水、蔻花香衣為喻，要說明的道理是什麼？</legend><div class="qz-opts"><button type="button">A．水、火、花的作用都是名言假立，所以眼也不能見色</button><button type="button">B．眼與色相合才能見，所以見的作用只在勝義中成立</button><button type="button">C．眼必須依靠光、色等外緣才能見，所以眼本身沒有作用</button><button type="button">D．若有自性應先在自身上有；眼不自見，所以沒有見他之性</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「如是諸法若有自性，自性於自理當先有，次於餘法乃見有彼。若先於自不見有者，云何於餘而見有彼？」〔0758b21〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．對方說：火不自燒而能燒他，眼不自見也能見他。宗大師怎麼回答？</legend><div class="qz-opts"><button type="button">A．所破的是眼有見他之性，以火為喻須有燒之自性，便等同所立</button><button type="button">B．火燒薪是現量所見，眼見色則只是推論，兩者不能相比</button><button type="button">C．火其實也能自燒，只是燒得很慢，所以這個比喻不能成立</button><button type="button">D．眼和火都不能見、不能燒，一切作用在名言中也不成立</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「非是總破火能燒木，眼能見色，是破眼有見他之性。若如是者，須以火有燒木自性而為同喻，爾時引喻等同所立。」〔0759a03〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．若火與薪有自性，宗大師以「一、異」來觀察。若說兩者是「一」，會有什麼過失？</legend><div class="qz-opts"><button type="button">A．火與薪應當同時生起，也應當同時一起滅去</button><button type="button">B．火應當自燒，而且分不出誰是能燒、誰是所燒</button><button type="button">C．沒有薪的時候也應該能見到火，如無馬時見牛</button><button type="button">D．火的熱性應當轉到薪上，薪就不再是所燒</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「若是一者火當自燒，復云何成火是能燒木是所燒？」若性異，則「無木時火當可得」。〔0759a05〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．依宗大師，應成與自續的分界在哪裡？</legend><div class="qz-opts"><button type="button">A．用量所成立的三相是自續，畢竟只用他許、不用任何量是應成</button><button type="button">B．觀察勝義時立無自性宗是自續，觀察勝義時無宗只破他是應成</button><button type="button">C．以立、敵共成量自相之量的因成立所立是自續，只依敵者所許三相是應成</button><button type="button">D．破自性時加勝義簡別是自續，不加勝義簡別、直接說無自性是應成</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若以前說之量，立、敵共成之因，成立所立，名自續因。若不以彼，唯由敵者所許三相，成立所立名為應成。」〔0759a24〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．在自身生起正見時，宗大師說應當隨應成派。理由是什麼？</legend><div class="qz-opts"><button type="button">A．應成派不用任何量，只依對方所許就能破除一切邪見</button><button type="button">B．應成派自宗無所許，所以敵者永遠找不到可以質難之處</button><button type="button">C．應成派是佛護、月稱所立，年代比清辨更早也更可信</button><button type="button">D．能在名言中破除自性，破了之後又能善立生死涅槃一切建立</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「於名言中破除自性，破自性後，須善安立生死、湼槃一切建立，於彼二理，當獲定解。」〔0759b03〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第47天）從〔0759b16〕「第三、依此能破於相續中生見之理」讀起，進入卷二十二：前面決定了要用應成的方式，接下來看實際怎麼用正理破自性，在相續中生起正見。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

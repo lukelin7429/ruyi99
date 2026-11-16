@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -200,6 +215,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>三家同一口徑</h3><p><span class="tag tag-zhu">助讀</span>《佛護論》是佛護為《中論》所作的註釋。龍猛的偈、月稱的《明顯句論》、佛護的註，宗大師一併列出，說明常斷見的關鍵在「自性」這一點，是應成派祖師一貫的讀法。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day11"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．《四百論釋》說緣起義是「自性無生」，又是「能生如幻之果」。這兩點各遮除什麼？</legend><div class="qz-opts"><button type="button">A．自性無生遮有實事論，能生如幻之果遮無事論</button><button type="button">B．自性無生遮無事論，能生如幻之果遮有實事論</button><button type="button">C．自性無生遮外道常見，如幻之果遮小乘斷見</button><button type="button">D．兩點都在遮有實事論，無事論另以聖教來破</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此由說緣起義是自性無生，故能除有實事論。顯說能生如幻等果為緣起義，故能除無事論。」〔0738a20〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．「有事」一詞有兩種意思。實事師說的有事、無事論者說的事，各指什麼？</legend><div class="qz-opts"><button type="button">A．實事師的有事指有作用，無事論所說的事指有自性</button><button type="button">B．實事師的有事指有自性，無事論所說的事指有作用</button><button type="button">C．兩者都指有自性，只是實事師許有、無事論不許</button><button type="button">D．兩者都指有作用，只是實事師許有、無事論不許</button></div><p class="qz-why" hidden><b>答案：B</b>　論文說有事「略有二義，謂自性義及作用義」；「實事師之有事，是有自性義；無事論之事，是有作用義」。〔0738a22〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．依論文，怎樣才算是「實事論」、墮有邊？</legend><div class="qz-opts"><button type="button">A．凡說諸法存在、能起作用的，都是實事論墮有邊</button><button type="button">B．凡是許有外境的才是，不許外境就不墮有邊</button><button type="button">C．許諸法有自性才是；只說有法，並不就是實事論</button><button type="button">D．凡是承許有業果、前後世的，都屬於實事論者</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「故許諸法有自性者是實事論，或墮有邊，非說唯有法者，即實事論及實有師。」同理，「非說彼無性者即墮無邊」。〔0738b05〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．宗大師為什麼說，不加簡別而說「非有非無」是相違語？</legend><div class="qz-opts"><button type="button">A．有與無之間另有第三類，只是凡夫難以了知所以不能說</button><button type="button">B．說非有非無容易被誤會成唯識的依他起，所以不能說</button><button type="button">C．非有非無只適用於勝義，在名言中說才成為相違語</button><button type="button">D．有與無直接相違，要決斷有無就須遮第三聚，沒有俱非之法</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「能如是决斷者，須能遮第三聚，故許有俱非之法，實屬亂說。」〔0738b11〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．《中論》「說有是執常，言無是斷見」，月稱、佛護怎麼解釋？</legend><div class="qz-opts"><button type="button">A．是說若許法由自性而有，才成常見或斷見，不是單說有無</button><button type="button">B．說勝義中有是常見，說名言中無才成為斷見</button><button type="button">C．智者對一切法都不作有無判斷，才能遠離常斷</button><button type="button">D．只要說任何法是有就是常見，說任何法是無就是斷見</button></div><p class="qz-why" hidden><b>答案：A</b>　《佛護論》：「言有言無成常、斷見者，是說彼法若有自性。」宗大師說「非說有與壞」。〔0738b22〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0738b23〕「總若有說無自性之空」讀起：謗空的兩種方式都會墮落；中觀師和斷見者（順世派）到底差在哪裡。</p>
@@ -226,6 +242,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

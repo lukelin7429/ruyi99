@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>名言量仍在</h3><p><span class="tag tag-lun">論文明說</span>「非說立、敵二者身中無名言量緣眼色等」。</p><p><span class="tag tag-zhu">助讀</span>這一句守住底線：應成派破的是「能量自相的量」，不是破名言量本身。明天接著說敵者身中的名言量如何成立色等。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day42"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．宗大師說，無分別的根識「所執」是什麼？</legend><div class="qz-opts"><button type="button">A．就是色等勝義有的實體，所以根識不會錯亂</button><button type="button">B．就是色等的總相，由分別心加上名言而執取的</button><button type="button">C．就是色等的空性，根識在見色的當下同時緣到</button><button type="button">D．就是它的顯現：色等現似自相，而這顯現是錯亂的</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「無分別識之所執者，是顯現義，謂即色等現似自相。」〔0756a18〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．依月稱的意思，名言根識因為是錯亂的，所以不能成立什麼？</legend><div class="qz-opts"><button type="button">A．不能成立色、聲等境由自相而有</button><button type="button">B．不能成立色、聲等境有生滅的作用</button><button type="button">C．不能成立色、聲等境在名言中存在</button><button type="button">D．不能成立色、聲等境是眼識的所緣</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此等是說，彼諸根識現色、聲等，是錯亂故，不能成立境有自相。」〔0756a21〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．《明顯句論》「豈有世俗眼為有法」這一句，宗大師說它的意思是什麼？</legend><div class="qz-opts"><button type="button">A．世俗的眼只在勝義中存在，所以不能拿來作為有法</button><button type="button">B．由自相有或無亂現量所立的眼，名言中也無，不是全無世俗眼</button><button type="button">C．世俗的眼根本不存在，所以中觀師不能以眼作為有法</button><button type="button">D．世俗的眼只是對方所許，中觀師自宗名言中也不承許</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「非為顯示全無世俗眼等有法，義如前說，由自相有或無錯亂現量所立色等有法，名言亦無。」〔0756b02〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．「聲是無常」可以取總聲，為什麼中觀師與實事師之間卻不能取「總眼」？</legend><div class="qz-opts"><button type="button">A．總眼在勝義中不存在，總聲則在勝義中仍然可以存在</button><button type="button">B．總聲是外處，可以共同聽到；總眼是內處，只有自己知道</button><button type="button">C．總眼若由錯亂識成立，敵者不許；由無亂識所得，立者不許</button><button type="button">D．總聲是因明師所立，總眼是中觀師所立，兩者的來源不同</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「若由錯亂識所成立，敵者不成，由無錯亂識所得者，則為立者量所不成。故說其喻非可相同。」〔0756b13〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．這裡說「無錯亂」的「自相」，宗大師特別說明它指什麼？</legend><div class="qz-opts"><button type="button">A．共相之外的個別特徵，所以只有現量才能緣到它</button><button type="button">B．勝義諦的空性本身，所以只有根本智才能現證它</button><button type="button">C．因明師所說能起作用的法，所以只限於有為的事物</button><button type="button">D．隨有事、無事所許的各各自性，不是因明所說有作用之法</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「此言自相者，非同因明師所許有作用法，是如前說，隨於有事、無事許各各自性之性。」〔0756b18〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第43天）從同一行〔0756b21〕「敵者身中如前所說」讀起：執芽有三種方式——執實有、執如幻有、只執總有；未生正見的人只有第一、第三兩種。宗大師藉此說明自續派「至此極細的所破」在哪裡。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

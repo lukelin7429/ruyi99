@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -207,6 +222,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>不必追到現量</h3><p><span class="tag tag-zhu">助讀</span>上一段從「根本能立歸於現量」來推；這一段說：不推到現量也可以。因為有性師的任何量，都要成立境上有各自的實性（自相），而正理能破這一點，所以兩宗之間沒有共許的能立量。這一句文字較簡略，以原文為準。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day43"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="0"><legend>1．還沒生起通達無自性正見的人，執芽「有」的心有哪幾種？</legend><div class="qz-opts"><button type="button">A．只有執總有與執實有兩種，不起執無性如幻而有</button><button type="button">B．執實有、執妄有、執總有三種都會生起</button><button type="button">C．只有執實有一種，凡是執有的心都是實執</button><button type="button">D．只有執總有一種，因為還不能分辨實妄</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若有情身未生正見，通達諸法無自性者，唯有二執，一、執總有，二、執實有，不起如幻無性之執。」〔0756b24〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>2．有人說：未見諸法如幻的人，凡是執「有」的分別心都是實執。宗大師怎麼看？</legend><div class="qz-opts"><button type="button">A．大致合理，所以修空性時應先斷除一切分別心</button><button type="button">B．一切種都不合理，這種顛倒見是證中觀義最大的障礙</button><button type="button">C．只對凡夫合理，對已入見道的聖者則不適用</button><button type="button">D．只在名言中合理，在勝義中則一切分別皆非實執</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「凡執為有諸分別心，說彼一切皆執實有，於一切種不應道理」；又說「此顛倒見，是證中觀義最大障礙故」。〔0757a01〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>3．相續中已生起無性正見、見力未失的人，以正理觀察自性有無時，實執的情形如何？</legend><div class="qz-opts"><button type="button">A．實執與正見同時生起，兩者在心中並行不悖</button><button type="button">B．一切實執都已永斷，此後執芽的心都是執如幻</button><button type="button">C．許有自性的實執暫不生起，但俱生實執仍會生起</button><button type="button">D．俱生實執暫不生起，但許有自性的實執仍會生起</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「許有自性妄執實有，則暫不生，非彼不起俱生實執。」〔0757a11〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>4．清辨等中觀師在自宗中許自續之因，宗大師說根本原因是什麼？</legend><div class="qz-opts"><button type="button">A．因為他們在勝義中許諸法有自性、自相</button><button type="button">B．因為他們只許現量，不許比量能成立宗</button><button type="button">C．因為他們認為應成只能破他、不能立宗</button><button type="button">D．因為他們在名言中許諸法有自性、自相</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「清辨師等諸中觀師，於自宗中許自續之因者，亦因於名言許有自性、自相。」〔0757a14〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>5．靜命等論師不許外境，那麼他們在根識是否錯亂上怎麼主張？</legend><div class="qz-opts"><button type="button">A．許顯現青等的根識，觀待青等自相是不錯亂的</button><button type="button">B．許根識只在勝義中無錯亂，名言中則錯亂</button><button type="button">C．許顯現青等的根識，觀待青等自相全是錯亂</button><button type="button">D．許根識只緣自心，所以對外境無所謂錯不錯</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「靜命師等，許諸外境名言都無……顯現青等所有根識，觀待青等是取自相義，故待青相是不錯亂。」〔0757a20〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天（第44天）從〔0757b04〕「第二、由此過顯因亦不成」讀起：有法不能共成，因也一樣；月稱指出這是清辨「自己所許」——清辨曾以「二諦為何」質問對方的因。宗大師逐一駁斥兩種錯誤解釋。</p>
@@ -233,6 +249,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

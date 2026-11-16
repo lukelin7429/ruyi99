@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -179,6 +194,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>根識不被正理所破</h3><p><span class="tag tag-lun">論文明說</span>「根識等無分別識，一切行相，終非正理之所能破」；「正理所破之心，唯屬分別意識」。</p><p><span class="tag tag-zhu">助讀</span>這要和第17、18天配合看：應成派說凡夫的根識有「錯亂」——境上顯現有自相；但錯亂不等於「執」。根識只是現起，並不執取「這是有自性的」；執取是分別意識的作用。所以正理破的是分別意識的執，不是根識的顯現。</p><p><span class="tag tag-zhu">助讀</span>「增益差別諸分別心」：例如執我為有自性之後，再進一步計它是常、是一、是自在等等。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day29"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="2"><legend>1．宗大師說龍猛在《中論》等所說破除所破的一切正理，目的是什麼？</legend><div class="qz-opts"><button type="button">A．為了破除一切分別，讓心不再生起任何念頭</button><button type="button">B．為了訓練辯才，在論辯中勝過其他宗派的論師</button><button type="button">C．唯為破無明在諸法上增益自性，而顯示諸法無自性</button><button type="button">D．為了破外道與各部派的宗義，與修行沒有直接關係</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「一切皆為破除愚癡，於諸法上增益自性，而顯諸法皆無自性。故所說種種正理，皆是唯為破無明執。」〔0748b22〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>2．論文說聲聞、獨覺證法無性，「最大能立」是什麼？</legend><div class="qz-opts"><button type="button">A．佛護說二乘的智慧與佛相同，所以證法無我</button><button type="button">B．二乘也發菩提心，所以必須兼證法無我</button><button type="button">C．法我執是所知障，二乘要斷它才能出生死</button><button type="button">D．法我執就是十二支初支無明，二乘出生死也必須斷它</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「是故聲聞獨覺證法無性，最大能立，當知即此以法我執為十二支無明之理。」〔0749a06〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>3．《四百論》「縛為分別見，彼是此所破」，這裡的「分別」是指什麼？</legend><div class="qz-opts"><button type="button">A．增益諸法自性的分別，不是一切分別</button><button type="button">B．根識等無分別識上的一切錯亂顯現</button><button type="button">C．學了宗派、經推求而生的分別而已</button><button type="button">D．一切「念此為此」的分別，要全部離開</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「其分別者，非說一切分別，是說增益諸法自性之分別。」《釋論》：「分別者，謂增益非真自性之義。」〔0749a08〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>4．若說一切分別的境都是正理所破，宗大師指出會有什麼過失？</legend><div class="qz-opts"><button type="button">A．根識也會跟著被破，名言中就看不見色、聲等境</button><button type="button">B．凡夫只能靠分別了解空義，證空的定解也會被破，聞思白費</button><button type="button">C．二乘就無法證法無我，只能證得補特伽羅無我</button><button type="button">D．俱生無明就不必破，只須破宗派所起的分別</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「其真實義，於諸異生非現見故，除分別外無餘方便能解空義」；否則「於中觀等論勤聞、思等一切無果」。〔0749a11〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>5．依論文，所破的根本是什麼？</legend><div class="qz-opts"><button type="button">A．根識所現的自相，因為根識本身就是錯亂的</button><button type="button">B．宗派分別所執的境，因為俱生的執著無法用正理破</button><button type="button">C．俱生無明所執的境，宗派的種種假立都以它為根本</button><button type="button">D．一切分別意識的境，因為所有分別都是繫縛</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「當知俱生無明所執之境，為所破之根本，不應專樂破除宗派妄計分別。」又說根識等無分別識「終非正理之所能破」。〔0749a14〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0749a21〕「由彼無明如何增益自性之理者」讀起：無明增益的「自性」究竟長什麼樣子——不是由心增上安立、從自體就有的本住性；以及薩迦耶見的所緣與行相。</p>
@@ -205,6 +221,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

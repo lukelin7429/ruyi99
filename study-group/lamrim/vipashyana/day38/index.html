@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -214,6 +229,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>觀察找不到，不等於沒有</h3><p><span class="tag tag-lun">論文明說</span>「於彼二中雖俱無破，然彼不能遮其有破，故於名言許破他宗」。</p><p><span class="tag tag-zhu">助讀</span>這是第13天「不堪正理觀察不等於被正理所破」用在「能破」本身：能破經不起會、未會的觀察，但名言中仍能破。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day38"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．《四百論》「若有無二俱，誰全非有宗」，依宗大師所引的釋，說的是什麼？</legend><div class="qz-opts"><button type="button">A．實事師與無事師互相攻擊，中觀師在旁不必提出主張</button><button type="button">B．中觀師對有、無、二俱都不承許，所以在名言中也無宗</button><button type="button">C．對什麼都不承許的人，任何敵者都找不到可以破的地方</button><button type="button">D．對說空、許假有的中觀師，許自性與斷作用的兩邊都破不了</button></div><p class="qz-why" hidden><b>答案：D</b>　釋說：「於說空者，雖經長時，不能破責。」宗大師說：「汝說雖空亦復不許，云何能於全無許者，而資佐證。」〔0754a17〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．《六十正理論釋》「若時由見無事無自他宗」的「事」，宗大師說指什麼？</legend><div class="qz-opts"><button type="button">A．以自相或自性安立的事；若解作作用，便與見無事能斷煩惱相違</button><button type="button">B．外道所許的自在天等常法；所以只要破外道就能斷除煩惱</button><button type="button">C．一切有作用的事物；所以見到諸法沒有作用就能斷除煩惱</button><button type="button">D．名言識所見的一切法；所以中觀師在名言中也沒有任何宗</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「此以自相或以自性安立為事，若以作用為事，說見無彼能滅煩惱成相違故。故以不許自性法宗，說為無宗。」〔0754a23〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．《迴諍論》「所破無所有，故我全無破」，依宗大師的解釋，「無」的是什麼？</legend><div class="qz-opts"><button type="button">A．沒有任何能破與所破，所以中觀師對他宗全然不破</button><button type="button">B．沒有自相的能破與所破，並不是不許能破、所破如幻</button><button type="button">C．沒有名言中的能破，只有勝義中才有真實的能破</button><button type="button">D．沒有外在的所破境，只有能增益的心才是真實的有</button></div><p class="qz-why" hidden><b>答案：B</b>　論文：「彼二無者，是說無自相之能破、所破，汝妄執有，謂以彼破此而興誹謗。然非不許彼二如幻。」〔0754b05〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．《明顯句論》「自無宗故」，宗大師說這句話的意思是什麼？</legend><div class="qz-opts"><button type="button">A．是說中觀師在名言中也全然沒有任何承許</button><button type="button">B．是說中觀師只在觀察勝義時沒有所立之宗</button><button type="button">C．是說沒有自續的宗，不是說中觀師全無自宗</button><button type="button">D．是說中觀師只能破他宗，不能立任何主張</button></div><p class="qz-why" hidden><b>答案：C</b>　論文說《明顯句論》的「自無宗故」，「亦非全無自宗之據，此是說無自續之宗故」。〔0754b09〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．實事師以「能破與所破是會而破、還是不會而破」來推察，這推察為什麼不轉到中觀師身上？</legend><div class="qz-opts"><button type="button">A．因為這個推察是外道的方法，佛弟子之間不必採用</button><button type="button">B．因為中觀師在名言中也不承許有能破與所破這兩件事</button><button type="button">C．因為中觀師只隨順對方所許，自己對會不會不作判斷</button><button type="button">D．因為中觀師許能破、所破都無自性，不是因為中觀師無所許</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「謂實事師所設正理推徵不轉之理，是無自性，未立無許故」；又說「於名言許破他宗」。〔0754b12〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0754b20〕「又非唯此，亦許以因成立所立」讀起：月稱不只許名言中能破，也許以因成立所立——日蝕時的影像、淨面的鏡像，雖無實，卻能令人通達所要了解的義。</p>
@@ -240,6 +256,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>

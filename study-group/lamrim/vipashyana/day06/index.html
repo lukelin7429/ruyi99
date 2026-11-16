@@ -65,6 +65,21 @@
   .lr-daynav a{flex:1;min-height:52px;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-radius:12px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);text-decoration:none;line-height:1.4}
   .lr-daynav a small{color:var(--lr-muted)}
   .lr-daynav a.nx{text-align:right}
+  .lr-quiz{margin:28px 0 0;padding:20px;border-radius:14px;background:var(--lr-card);border:1px solid var(--lr-line);font-size:calc(1.05rem*var(--lr-fs));line-height:1.75}
+  .lr-quiz h2{margin:0 0 4px;font-size:1.2rem}
+  .lr-quiz .qz-sub{margin:0 0 14px;color:var(--lr-muted);font-size:.9em}
+  .qz{border:0;margin:0 0 22px;padding:0}
+  .qz legend{font-weight:700;margin-bottom:8px;padding:0}
+  .qz-opts{display:grid;gap:8px}
+  .qz-opts button{display:block;width:100%;text-align:left;min-height:48px;padding:10px 14px;border-radius:10px;border:1px solid var(--lr-line);background:#fff;color:var(--lr-ink);font:inherit;line-height:1.6;cursor:pointer}
+  .qz-opts button[disabled]{cursor:default}
+  .qz-opts button.ok{border-color:var(--lr-leaf);background:#e9f2ec}
+  .qz-opts button.ng{border-color:#b5523b;background:#f8e9e5}
+  .qz-opts button.ok::before{content:'✓ ';color:var(--lr-leaf);font-weight:700}
+  .qz-opts button.ng::before{content:'✗ ';color:#b5523b;font-weight:700}
+  .qz-why{margin:10px 0 0;padding:10px 14px;border-radius:10px;background:var(--lr-wash);font-size:.95em}
+  .qz-score{font-weight:700;color:var(--lr-leaf)}
+  .qz-reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--lr-line);background:#fff;font:inherit;cursor:pointer}
   .lr-license{margin-top:22px;font-size:.9rem;color:var(--lr-muted);line-height:1.7}
   @media(min-width:900px){
     .lr-pair{grid-template-columns:1fr 1fr}
@@ -179,6 +194,7 @@
       </div>
       <details class="lr-notes" open><summary>詳解（1）</summary><div class="lr-note"><h3>二諦無違＝中觀的殊勝</h3><p><span class="tag tag-lun">論文明說</span>「除中觀師，任何補特伽羅皆見相違」；唯有中觀智者「决擇令無相違氣息」。</p><p>白話：一般都覺得「無自性」和「有因果」互相矛盾：說空就沒有因果，說有因果就不空。只有中觀師能說明兩者連一點矛盾的氣味都沒有。</p><p><span class="tag tag-zhu">助讀</span>這就是「中觀不共勝法」的核心：在無自性中安立因果。明天會讀到：實事師因為覺得兩者相違，所以不許無自性；破太過者也覺得兩者相違，所以乾脆連因果一起破——方向相反，前提卻相同。</p></div></details>
     </article>
+    <section class="lr-quiz" id="lrQuiz" data-day="day06"><h2>今日自我檢測</h2><p class="qz-sub">五題，點選答案即顯示對錯與說明；只在這支手機上記錄，不會送出。</p><fieldset class="qz" data-ans="3"><legend>1．破太過者主張，以正理觀察真實時，哪些法可以被破除？</legend><div class="qz-opts"><button type="button">A．只破遍計所執性，依他起與圓成實則不在所破之內</button><button type="button">B．只破煩惱與業，佛果的一切功德不在所破之內</button><button type="button">C．只破外道所計的常一自在之我，佛法名相不在其內</button><button type="button">D．從色乃至一切種智一切諸法，沒有塵許能忍觀察</button></div><p class="qz-why" hidden><b>答案：D</b>　論文敘述他們的主張：「從色乃至一切種智一切諸法，皆能破除。隨許何法，若以正理而正觀察，皆無塵許能忍觀察。」〔0735a22〕</p></fieldset><fieldset class="qz" data-ans="0"><legend>2．破太過者用哪一個兩難，論證生等不能成立？</legend><div class="qz-opts"><button type="button">A．若能忍正理觀察就成實事，不能忍就是被理所破，怎能說有</button><button type="button">B．若許有生就違背佛說，若不許有生就違背世間共許</button><button type="button">C．若生在勝義中有就成為常，若生在名言中有就成為無常</button><button type="button">D．若是自生就生生無窮，若是他生就一切能生一切</button></div><p class="qz-why" hidden><b>答案：A</b>　論文：「若能忍者，則有堪忍正理所觀之事，應成實事；若不堪忍，則理所破義而云是有，如何應理？」〔0735b01〕</p></fieldset><fieldset class="qz" data-ans="1"><legend>3．關於破生時要不要加「勝義」簡別，破太過者的看法是什麼？</legend><div class="qz-opts"><button type="button">A．加不加勝義簡別都可以，只是表達的方式不同而已</button><button type="button">B．破生不應加勝義簡別，加簡別只是中觀自續師的做法</button><button type="button">C．只在名言中破生時才要加簡別，勝義中破生則不必加</button><button type="button">D．破生必須加勝義簡別，否則會連名言中的生也一起破掉</button></div><p class="qz-why" hidden><b>答案：B</b>　論文敘述他們說：「故破生時不應更加勝義簡別」，又說「故於所破冠加勝義簡別語者，唯是中觀自續師軌」。〔0735b10〕</p></fieldset><fieldset class="qz" data-ans="2"><legend>4．大乘道上要方便、智慧不分離，論文說這要依靠哪兩種至心定解？</legend><div class="qz-opts"><button type="button">A．對補特伽羅無我的定解，以及對諸法唯識的定解</button><button type="button">B．對心性本來清淨的定解，以及對業果不虛的定解</button><button type="button">C．對世俗因果的定解，以及對諸法無微塵許自性的定解</button><button type="button">D．對三寶功德的定解，以及對生死輪迴過患的定解</button></div><p class="qz-why" hidden><b>答案：C</b>　論文：「此復觀待至心定解世俗因果……及由至心定解諸法皆無自性如微塵許，即於如所有性獲得定解。」〔0735b17〕</p></fieldset><fieldset class="qz" data-ans="3"><legend>5．下列哪一項符合論文所說的「中觀不共勝法」？</legend><div class="qz-opts"><button type="button">A．不作任何觀察，只修無分別的止而契入空性</button><button type="button">B．勝義中一切皆無，世俗中一切則都是真實存在</button><button type="button">C．以正理破除一切法，讓心中不再執取任何事物</button><button type="button">D．雙於二諦得定解，能抉擇因果與無自性之間毫無相違</button></div><p class="qz-why" hidden><b>答案：D</b>　論文：「除中觀師，任何補特伽羅皆見相違」；唯有中觀智者「决擇令無相違氣息能得諸佛究竟密意」。〔0735b20〕</p></fieldset><p class="qz-result" hidden><span class="qz-score"></span>　<button type="button" class="qz-reset">重新作答</button></p></section>
     <section class="lr-end">
       <h2>明天接著讀</h2>
       <p>明天從〔0735b23〕同一行「由此因緣，於自大師」讀起：宗大師由此讚嘆「性空之空義，是緣起義」；再看實事師怎麼以「若一切空，應無生滅」質難中觀，龍猛又怎麼回答。</p>
@@ -205,6 +221,19 @@
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
       if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+    document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
+      try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
+      if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    var qz=document.getElementById('lrQuiz');
+    if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
+      qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
+        bs.forEach(function(b,i){b.onclick=function(){bs.forEach(function(x){x.disabled=true});
+          bs[ans].classList.add('ok');if(i!==ans)b.classList.add('ng');else good++;
+          f.querySelector('.qz-why').hidden=false;done++;
+          if(done===qs.length){out.hidden=false;out.querySelector('.qz-score').textContent='答對 '+good+'／'+qs.length;
+            try{localStorage.setItem(K,good)}catch(e){}}}})});
+      qz.querySelector('.qz-reset').onclick=function(){qs.forEach(function(f){f.querySelectorAll('button').forEach(function(b){b.disabled=false;b.classList.remove('ok','ng')});
+        f.querySelector('.qz-why').hidden=true});done=0;good=0;out.hidden=true;qs[0].scrollIntoView({behavior:'smooth',block:'center'})}}
   })();
   </script>
   <script>window.RS_INDEX="/search.json"</script><script src="/assets/js/site.js"></script><script src="/assets/js/search.js"></script>
