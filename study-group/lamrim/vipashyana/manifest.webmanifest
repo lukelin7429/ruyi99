@@ -1,0 +1,28 @@
+{
+ "name": "《廣論》毗缽舍那每日研讀",
+ "short_name": "廣論毗缽舍那",
+ "lang": "zh-Hant",
+ "start_url": "/study-group/lamrim/vipashyana/",
+ "scope": "/study-group/lamrim/vipashyana/",
+ "display": "browser",
+ "background_color": "#fbf9f5",
+ "theme_color": "#34436e",
+ "icons": [
+  {
+   "src": "/study-group/lamrim/icons/vipashyana-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/study-group/lamrim/icons/vipashyana-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/study-group/lamrim/icons/vipashyana-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
