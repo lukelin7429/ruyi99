@@ -90,6 +90,11 @@
     .lr-notes{padding:4px 24px 16px}
     .lr-hero{padding:42px 0 30px}
   }
+  .lr-row,#lrQuiz{scroll-margin-top:130px}
+  .lr-pos-pill{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));width:max-content;text-align:center;transform:translateX(-50%);z-index:40;max-width:calc(100% - 32px);
+    min-height:48px;padding:10px 20px;border:0;border-radius:999px;background:var(--lr-leaf);color:#fff;font:inherit;font-weight:700;
+    font-size:1rem;line-height:1.4;box-shadow:0 6px 18px rgba(0,0,0,.22);cursor:pointer}
+  .lr-pos-pill small{display:block;font-weight:400;font-size:.82em;opacity:.9}
   @media(prefers-reduced-motion:reduce){.lr-row{animation:none}}
   </style>
 </head>
@@ -215,10 +220,24 @@
     try{if(m)localStorage.setItem('lr-last',m[1]);last=localStorage.getItem('lr-last')}catch(e){}
     var go=document.getElementById('lrResume');
     if(go&&last&&!m){var a=document.querySelector('a[href="day'+last+'/"]');
-      if(a){go.href='day'+last+'/';go.querySelector('b').textContent='第 '+last+' 天';go.hidden=false}}
+      if(a){var ps=null;try{ps=localStorage.getItem('lr-pos-'+last)}catch(e){}
+        go.href='day'+last+'/'+(ps&&ps!=='p1'?'#'+ps:'');
+        go.querySelector('b').textContent='第 '+last+' 天'+(ps&&/^p\d+$/.test(ps)&&ps!=='p1'?' §'+ps.slice(1):(ps==='lrQuiz'?' 自我檢測':''));go.hidden=false}}
     document.querySelectorAll('.lr-days a').forEach(function(a){var k=a.getAttribute('href').replace(/\W/g,''),sc=null;
       try{sc=localStorage.getItem('lr-quiz-'+k)}catch(e){}
       if(sc!==null){var t=document.createElement('span');t.className='qz-done';t.textContent='✓ 自我檢測 '+sc+'／5';a.appendChild(t)}});
+    if(m){var PK='lr-pos-'+m[1],rows=[].slice.call(document.querySelectorAll('.lr-row,#lrQuiz')),tm=null,pill=null,y0=0;
+      function off(){return (tl?(parseFloat(tl.style.top)||0)+tl.offsetHeight:0)+12}  // 固定列（頂欄＋工具列）黏住時的高度
+      function cur(){var y=off()+60,c=null;for(var i=0;i<rows.length;i++){if(rows[i].getBoundingClientRect().top<=y)c=rows[i];else break}return c}
+      window.addEventListener('scroll',function(){clearTimeout(tm);tm=setTimeout(function(){var c=cur();try{if(c)localStorage.setItem(PK,c.id)}catch(e){}},500);
+        if(pill&&Math.abs(scrollY-y0)>400){pill.remove();pill=null}},{passive:true});
+      var sv=null;try{sv=localStorage.getItem(PK)}catch(e){}
+      var el=sv&&document.getElementById(sv);
+      if(el&&sv!=='p1'&&!location.hash){pill=document.createElement('button');pill.type='button';pill.className='lr-pos-pill';
+        var ln=el.querySelector('.ln');
+        pill.innerHTML=(sv==='lrQuiz'?'上次讀到：自我檢測':'上次讀到 §'+sv.slice(1)+(ln?'　'+ln.textContent:''))+'　→<small>點這裡接著讀</small>';
+        pill.onclick=function(){window.scrollTo({top:el.getBoundingClientRect().top+scrollY-off(),behavior:'instant'});pill.remove();pill=null};
+        document.body.appendChild(pill);y0=scrollY;setTimeout(function(){if(pill)pill.classList.add('on')},400)}}
     var qz=document.getElementById('lrQuiz');
     if(qz){var qs=qz.querySelectorAll('.qz'),out=qz.querySelector('.qz-result'),K='lr-quiz-'+qz.dataset.day,done=0,good=0;
       qs.forEach(function(f){var ans=+f.dataset.ans,bs=f.querySelectorAll('button');
