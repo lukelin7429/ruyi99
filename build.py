@@ -280,6 +280,8 @@ HANDMADE_PAGES=[
     "/study-group/perfection-of-wisdom/life-topics/",
     "/column/Yi-cheng/iced-latte/",
     "/column/Yi-cheng/six-animals/",
+    "/column/Dom/",
+    "/column/Dom/open-hands/",
     "/column/Cai-Ling/",
     "/column/Cai-Ling/notification/",
     "/column/Cai-Ling/neural-pathway/",
