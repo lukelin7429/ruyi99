@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="#6b3e26"/>
   <rect x="86" y="86" width="340" height="340" rx="18" fill="none" stroke="#f3e2c4" stroke-width="7"/>
-  <text x="256" y="318" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="600" font-size="200" fill="#fbf3e4">道</text>
+  <text x="256" y="302" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="600" font-size="148" letter-spacing="4" fill="#fbf3e4">廣論</text>
   <text x="256" y="392" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="500" font-size="40" letter-spacing="6" fill="#f3e2c4">每日讀</text>
 </svg>
